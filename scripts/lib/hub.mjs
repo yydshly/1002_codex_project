@@ -110,7 +110,7 @@ function markdown(value) {
 }
 
 function markdownUrl(value) {
-  return value.replace(/[\s<>()[\]"']/gu, character => encodeURIComponent(character));
+  return value.replace(/[\s<>()[\]"']/gu, character => encodeURIComponent(character).replace(/[()']/gu, literal => `%${literal.charCodeAt(0).toString(16).toUpperCase()}`));
 }
 
 export function demoUrl(catalog, project) {

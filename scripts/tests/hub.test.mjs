@@ -87,7 +87,7 @@ test('cover and multiple Web outputs use independent project paths', async t => 
   const root = await fixture(t);
   await createProject(root, options('first'));
   await createProject(root, options('second', { name: '<script>alert(1)</script>' }));
-  const coverPath = 'projects/001-first/assets/cover.svg';
+  const coverPath = 'projects/001-first/assets/cover (draft).svg';
   await writeFile(path.join(root, coverPath), '<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"></svg>');
   for (const directory of ['001-first', '002-second']) {
     await writeFile(path.join(root, 'projects', directory, 'web/index.html'), `<h1>${directory}</h1>`);
@@ -101,6 +101,7 @@ test('cover and multiple Web outputs use independent project paths', async t => 
     first.demo = 'https://example.com/demo';
   });
   await synchronize(root);
+  assert.match(await readFile(path.join(root, 'README.md'), 'utf8'), /cover%20%28draft%29\.svg/u);
   const catalog = await readCatalog(root);
   assert.deepEqual(catalog.projects.map(project => project.id), ['001', '002']);
   await buildSite(root);
