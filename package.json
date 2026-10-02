@@ -1,0 +1,15 @@
+{
+  "name": "github-project-research-hub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "按固定编号组织 GitHub 项目研究、图片与 Web 演示",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "new": "node scripts/new-project.mjs",
+    "sync": "node scripts/catalog.mjs sync",
+    "check": "node scripts/catalog.mjs check",
+    "build": "node scripts/catalog.mjs build",
+    "test": "node --test scripts/tests/*.test.mjs"
+  }
+}

@@ -1,0 +1,20 @@
+# Dependencies and build output
+node_modules/
+_site/
+coverage/
+dist/
+build/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.log
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+__pycache__/
+*.pyc
