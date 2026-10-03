@@ -1,0 +1,302 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="4438" viewBox="0 0 1560 4438" role="img" aria-labelledby="map-title map-description" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<title id="map-title">Cult UI 全能力地图</title>
+<desc id="map-description">137 个有效 React UI 组件的完整分类、名称、底层实现、应用场景、个人价值和选用路径。统计基于固定版本 67a66c6。</desc>
+<rect width="100%" height="100%" fill="#F2F5F1"/>
+<rect x="0.0" y="0.0" width="1560.0" height="254.0" rx="0" fill="#173B3D"/>
+<rect x="56.0" y="40.0" width="12.0" height="22.0" rx="3" fill="#EACB85"/>
+<text x="83.0" y="37.0" dominant-baseline="text-before-edge" fill="#DCEADC" font-size="24" font-weight="400">CULT UI / 能力 · 原理 · 场景 · 选用</text>
+<text x="56.0" y="84.0" dominant-baseline="text-before-edge" fill="#FFFFFF" font-size="62" font-weight="600">Cult UI 全能力地图</text>
+<text x="56.0" y="171.0" dominant-baseline="text-before-edge" fill="#FFFFFF" font-size="29" font-weight="400">可按需复制、直接修改的 React 组件与视觉效果源码集合</text>
+<text x="1286.0" y="65.0" dominant-baseline="text-before-edge" fill="#EACB85" font-size="72" font-weight="600">137</text>
+<text x="1286.0" y="151.0" dominant-baseline="text-before-edge" fill="#DCEADC" font-size="26" font-weight="400">个有效 UI 组件</text>
+<text x="1212.0" y="199.0" dominant-baseline="text-before-edge" fill="#DCEADC" font-size="23" font-weight="400">134 文档项 + 3 补充项</text>
+<rect x="56.0" y="290.0" width="52.0" height="44.0" rx="12" fill="#173B3D"/>
+<text x="66.0" y="298.0" dominant-baseline="text-before-edge" fill="#FFFFFF" font-size="25" font-weight="600">01</text>
+<text x="126.0" y="294.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="34" font-weight="600">底层怎么工作</text>
+<rect x="56.0" y="356.0" width="260.8" height="100.0" rx="14" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="73.0" y="374.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="24" font-weight="600">shadcn Registry</text>
+<text x="73.0" y="411.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="400">声明源码与依赖</text>
+<path d="M323.8,406.0 H345.8 M336.8,400.0 L345.8,406.0 L336.8,412.0" fill="none" stroke="#173B3D" stroke-width="3"/>
+<rect x="352.8" y="356.0" width="260.8" height="100.0" rx="14" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="369.8" y="374.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="24" font-weight="600">复制到 React 项目</text>
+<text x="369.8" y="411.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="400">TSX / CSS 可自行修改</text>
+<path d="M620.6,406.0 H642.6 M633.6,400.0 L642.6,406.0 L633.6,412.0" fill="none" stroke="#173B3D" stroke-width="3"/>
+<rect x="649.6" y="356.0" width="260.8" height="100.0" rx="14" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="666.6" y="374.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="24" font-weight="600">参数 · 数据 · 状态</text>
+<text x="666.6" y="411.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="400">事件驱动界面变化</text>
+<path d="M917.4,406.0 H939.4 M930.4,400.0 L939.4,406.0 L930.4,412.0" fill="none" stroke="#173B3D" stroke-width="3"/>
+<rect x="946.4" y="356.0" width="260.8" height="100.0" rx="14" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="963.4" y="374.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="24" font-weight="600">按组件选择技术</text>
+<text x="963.4" y="411.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="400">浏览器绘制与执行动效</text>
+<path d="M1214.2,406.0 H1236.2 M1227.2,400.0 L1236.2,406.0 L1227.2,412.0" fill="none" stroke="#173B3D" stroke-width="3"/>
+<rect x="1243.2" y="356.0" width="260.8" height="100.0" rx="14" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="1260.2" y="374.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="24" font-weight="600">组成自己的产品</text>
+<text x="1260.2" y="411.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="400">接入真实 API 与业务</text>
+<rect x="56.0" y="481.0" width="344.0" height="212.0" rx="16" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<rect x="56.0" y="481.0" width="344.0" height="6.0" rx="2" fill="#7EAD96"/>
+<text x="76.0" y="505.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">结构与行为</text>
+<text x="76.0" y="551.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">React / TypeScript</text>
+<text x="76.0" y="583.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">Props、State、Context、事件</text>
+<text x="76.0" y="615.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">Radix / Base UI 等提供</text>
+<text x="76.0" y="647.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">控件、浮层、焦点与键盘行为</text>
+<rect x="424.0" y="481.0" width="344.0" height="212.0" rx="16" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<rect x="424.0" y="481.0" width="344.0" height="6.0" rx="2" fill="#7EAD96"/>
+<text x="444.0" y="505.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">样式与几何</text>
+<text x="444.0" y="551.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">Tailwind CSS / CSS / SVG</text>
+<text x="444.0" y="583.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">布局、主题、渐变、纹理</text>
+<text x="444.0" y="615.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">阴影、滤镜、遮罩、路径</text>
+<text x="444.0" y="647.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">二维变换与 CSS 三维透视</text>
+<rect x="792.0" y="481.0" width="344.0" height="212.0" rx="16" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<rect x="792.0" y="481.0" width="344.0" height="6.0" rx="2" fill="#7EAD96"/>
+<text x="812.0" y="505.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">动效与交互</text>
+<text x="812.0" y="551.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">Motion、CSS 动画等</text>
+<text x="812.0" y="583.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">弹簧、错峰、进入退出</text>
+<text x="812.0" y="615.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">共享布局、指针、拖拽</text>
+<text x="812.0" y="647.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">滚动观察与计时状态</text>
+<rect x="1160.0" y="481.0" width="344.0" height="212.0" rx="16" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<rect x="1160.0" y="481.0" width="344.0" height="6.0" rx="2" fill="#7EAD96"/>
+<text x="1180.0" y="505.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">像素与 GPU 渲染</text>
+<text x="1180.0" y="551.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">Canvas 2D / WebGL / Shader</text>
+<text x="1180.0" y="583.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">帧绘制、像素采样、材质</text>
+<text x="1180.0" y="615.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">Paper Design、COBE</text>
+<text x="1180.0" y="647.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">Three.js 等专项渲染依赖</text>
+<text x="56.0" y="713.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">实例：Dock = 指针距离 + 弹簧；3D 轮播 = CSS 透视 + 拖拽；镜头模糊 = Three.js + Shader。</text>
+<rect x="56.0" y="773.0" width="52.0" height="44.0" rx="12" fill="#173B3D"/>
+<text x="66.0" y="781.0" dominant-baseline="text-before-edge" fill="#FFFFFF" font-size="25" font-weight="600">02</text>
+<text x="126.0" y="777.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="34" font-weight="600">有哪些方向、效果与用途</text>
+<text x="56.0" y="830.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">完整列出 137 个组件名称；各类“原理”概括该方向的代表实现，并非每项都使用同一技术。</text>
+<rect x="56.0" y="886.0" width="466.7" height="470.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="78.0" y="909.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">AI 输入</text>
+<text x="443.9" y="913.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">06 项</text>
+<text x="78.0" y="966.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">提示词编辑器 · 光晕搜索框 · 提示词库</text>
+<text x="78.0" y="1000.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">AI 指令选择器 · AI 流体头像</text>
+<text x="78.0" y="1034.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">光晕文件拖放区</text>
+<text x="78.0" y="1090.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">原理</text>
+<text x="78.0" y="1120.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">状态与输入事件；部分用 Base UI、Paper </text>
+<text x="78.0" y="1152.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">Warp 和原生文件拖放</text>
+<text x="78.0" y="1200.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">场景</text>
+<text x="78.0" y="1230.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">AI 聊天、附件上传、提示词复用</text>
+<rect x="546.7" y="886.0" width="466.7" height="470.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="568.7" y="909.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">AI 生成界面</text>
+<text x="934.6" y="913.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">11 项</text>
+<text x="568.7" y="966.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">选项投票 · 功能偏好投票 · 投票容器</text>
+<text x="568.7" y="1000.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">功能投票列表 · 点赞计票列表</text>
+<text x="568.7" y="1034.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">Agent 建议卡片堆叠 · 对话气泡</text>
+<text x="568.7" y="1068.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">可排序列表 · 代码块 · 终端动画</text>
+<text x="568.7" y="1102.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">文件类型图标</text>
+<text x="568.7" y="1158.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">原理</text>
+<text x="568.7" y="1188.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">受控状态、SVG、Motion 切换；代码高亮</text>
+<text x="568.7" y="1220.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">与剪贴板等专项实现</text>
+<text x="568.7" y="1268.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">场景</text>
+<text x="568.7" y="1298.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">结构化回答、投票、代码与执行过程展示</text>
+<rect x="1037.3" y="886.0" width="466.7" height="470.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="1059.3" y="909.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">应用与工作台</text>
+<text x="1425.2" y="913.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">05 项</text>
+<text x="1059.3" y="966.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">分析折线图 · 拖拽看板 · 计时器</text>
+<text x="1059.3" y="1000.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">协作头像 · 协作工具栏</text>
+<text x="1059.3" y="1056.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">原理</text>
+<text x="1059.3" y="1086.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">React 数据状态、原生拖放、SVG 图表与 </text>
+<text x="1059.3" y="1118.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">Motion 布局过渡</text>
+<text x="1059.3" y="1166.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">场景</text>
+<text x="1059.3" y="1196.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">项目管理、指标面板、编辑器工具栏</text>
+<rect x="56.0" y="1380.0" width="466.7" height="470.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="78.0" y="1403.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">表单控件</text>
+<text x="443.9" y="1407.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">08 项</text>
+<text x="78.0" y="1460.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">颜色选择器 · 光晕输入框 · 光晕字段布局</text>
+<text x="78.0" y="1494.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">光晕选择框 · 光晕开关 · 光晕分段控件</text>
+<text x="78.0" y="1528.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">光晕切换按钮组 · 流光边框输入框</text>
+<text x="78.0" y="1584.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">原理</text>
+<text x="78.0" y="1614.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">Base UI 等控件原语处理行为；CSS 与部分</text>
+<text x="78.0" y="1646.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">Motion 呈现反馈</text>
+<text x="78.0" y="1694.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">场景</text>
+<text x="78.0" y="1724.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">设置、筛选、资料编辑、模型选择</text>
+<rect x="546.7" y="1380.0" width="466.7" height="470.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="568.7" y="1403.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">反馈与状态</text>
+<text x="934.6" y="1407.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">05 项</text>
+<text x="568.7" y="1460.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">光晕徽标 · 光晕进度条 · 光晕全局提示</text>
+<text x="568.7" y="1494.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">光晕内联通知 · 灵动岛</text>
+<text x="568.7" y="1550.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">原理</text>
+<text x="568.7" y="1580.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">进度状态、Sonner 消息队列；Motion 进</text>
+<text x="568.7" y="1612.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">入退出与尺寸过渡</text>
+<text x="568.7" y="1660.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">场景</text>
+<text x="568.7" y="1690.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">上传等待、成功失败通知、任务进度</text>
+<rect x="1037.3" y="1380.0" width="466.7" height="470.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="1059.3" y="1403.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">导航与浮层</text>
+<text x="1425.2" y="1407.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">11 项</text>
+<text x="1059.3" y="1460.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">方向感知标签页 · 光晕标签页</text>
+<text x="1059.3" y="1494.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">渐变按钮组 · 桌面式 Dock</text>
+<text x="1059.3" y="1528.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">变形 Popover · 弹出表单 · 浮动面板</text>
+<text x="1059.3" y="1562.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">多视图抽屉 · 展开侧栏 · 变形输入面板</text>
+<text x="1059.3" y="1596.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">可展开全屏</text>
+<text x="1059.3" y="1652.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">原理</text>
+<text x="1059.3" y="1682.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">状态与浮层原语；方向判断、尺寸测量、指</text>
+<text x="1059.3" y="1714.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">针距离映射与弹簧</text>
+<text x="1059.3" y="1762.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">场景</text>
+<text x="1059.3" y="1792.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">快捷入口、内容切换、移动抽屉、快速输入</text>
+<rect x="56.0" y="1874.0" width="466.7" height="436.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="78.0" y="1897.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">引导与流程</text>
+<text x="443.9" y="1901.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">05 项</text>
+<text x="78.0" y="1954.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">分步引导组件 · 产品引导弹层</text>
+<text x="78.0" y="1988.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">展开式向导 · 可展开工具栏</text>
+<text x="78.0" y="2022.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">浮动展开按钮</text>
+<text x="78.0" y="2078.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">原理</text>
+<text x="78.0" y="2108.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">Context 同步步骤；校验、Dialog / </text>
+<text x="78.0" y="2140.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">Drawer 与 Motion 视图切换</text>
+<text x="78.0" y="2188.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">场景</text>
+<text x="78.0" y="2218.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">首次使用、注册、个性化设置、功能导览</text>
+<rect x="546.7" y="1874.0" width="466.7" height="436.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="568.7" y="1897.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">按钮</text>
+<text x="934.6" y="1901.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">09 项</text>
+<text x="568.7" y="1954.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">拟物按钮 · 触感纹理按钮 · 动态背景按钮</text>
+<text x="568.7" y="1988.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">流光边框按钮 · 金属按钮 · 宇宙渐变按钮</text>
+<text x="568.7" y="2022.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">有机曲线按钮 · 光晕按钮 · 复制按钮</text>
+<text x="568.7" y="2078.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">原理</text>
+<text x="568.7" y="2108.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">CSS 叠层、阴影和 SVG 轮廓；部分依赖 </text>
+<text x="568.7" y="2140.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">border-beam / metal-fx</text>
+<text x="568.7" y="2188.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">场景</text>
+<text x="568.7" y="2218.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">主要操作、升级入口、提交与复制</text>
+<rect x="1037.3" y="1874.0" width="466.7" height="436.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="1059.3" y="1897.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">卡片</text>
+<text x="1425.2" y="1901.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">11 项</text>
+<text x="1059.3" y="1954.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">简洁图片卡片 · 切角卡片 · 触感纹理卡片</text>
+<text x="1059.3" y="1988.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">悬停展开卡片 · 折角卡片 · 立体阴影卡片</text>
+<text x="1059.3" y="2022.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">有机营销卡片 · 紧凑有机卡片 · 光晕卡片</text>
+<text x="1059.3" y="2056.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">流光边框卡片 · 可展开卡片</text>
+<text x="1059.3" y="2112.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">原理</text>
+<text x="1059.3" y="2142.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">React 组合插槽、分层装饰；部分用 </text>
+<text x="1059.3" y="2174.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">Motion 悬停、展开与过渡</text>
+<text x="1059.3" y="2222.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">场景</text>
+<text x="1059.3" y="2252.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">产品列表、作品集、模板资源、结果面板</text>
+<rect x="56.0" y="2334.0" width="466.7" height="538.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="78.0" y="2357.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">落地页</text>
+<text x="443.9" y="2361.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">12 项</text>
+<text x="78.0" y="2414.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">抖色首屏 · 色彩面板首屏 · 热力图首屏</text>
+<text x="78.0" y="2448.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">液态金属首屏 · 静态径向渐变首屏</text>
+<text x="78.0" y="2482.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">媒体背景 · 分析产品首屏 · 代码功能区</text>
+<text x="78.0" y="2516.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">滚动吸附功能区 · 功能步骤轮播</text>
+<text x="78.0" y="2550.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">品牌标志轮播 · 推文网格</text>
+<text x="78.0" y="2606.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">原理</text>
+<text x="78.0" y="2636.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">部分用 Paper WebGL；sticky 与滚动观察</text>
+<text x="78.0" y="2668.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">，轮播状态与媒体渲染</text>
+<text x="78.0" y="2716.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">场景</text>
+<text x="78.0" y="2746.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">产品官网、发布页、长页功能介绍</text>
+<rect x="546.7" y="2334.0" width="466.7" height="538.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="568.7" y="2357.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">插画</text>
+<text x="934.6" y="2361.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">15 项</text>
+<text x="568.7" y="2414.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">网关端点插图 · 网关路由插图</text>
+<text x="568.7" y="2448.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">网关汇聚插图 · 插图功能网格</text>
+<text x="568.7" y="2482.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">多人光标插图 · 评论气泡插图</text>
+<text x="568.7" y="2516.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">流式渲染插图 · 部署地球插图 · 图表插图</text>
+<text x="568.7" y="2550.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">自动插图标签页 · 电路板插图</text>
+<text x="568.7" y="2584.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">AI 工作负载插图 · 安全检查插图</text>
+<text x="568.7" y="2618.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">融合气泡 · WebGL 地球</text>
+<text x="568.7" y="2674.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">原理</text>
+<text x="568.7" y="2704.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">SVG 节点、连线与路径动画；COBE 渲染</text>
+<text x="568.7" y="2736.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">可旋转的 WebGL 地球</text>
+<text x="568.7" y="2784.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">场景</text>
+<text x="568.7" y="2814.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">架构说明、基础设施、部署区域、能力介绍</text>
+<rect x="1037.3" y="2334.0" width="466.7" height="538.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="1059.3" y="2357.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">媒体与设备模型</text>
+<text x="1425.2" y="2361.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">10 项</text>
+<text x="1059.3" y="2414.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">浏览器窗口模型 · iPhone 设备模型</text>
+<text x="1059.3" y="2448.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">Apple 键盘插图 · Apple Watch 模型</text>
+<text x="1059.3" y="2482.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">复古 Mac 模型 · Pro Display XDR 模型</text>
+<text x="1059.3" y="2516.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">三维图片轮播 · 悬停视频预览</text>
+<text x="1059.3" y="2550.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">YouTube 视频播放器 · 加载提示轮播</text>
+<text x="1059.3" y="2606.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">原理</text>
+<text x="1059.3" y="2636.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">内容插槽、CSS 设备外壳与三维透视；</text>
+<text x="1059.3" y="2668.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">Motion 拖动、video / API</text>
+<text x="1059.3" y="2716.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">场景</text>
+<text x="1059.3" y="2746.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">产品截图、移动应用、作品集、视频图库</text>
+<rect x="56.0" y="2896.0" width="466.7" height="538.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="78.0" y="2919.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">背景与视觉效果</text>
+<text x="443.9" y="2923.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">14 项</text>
+<text x="78.0" y="2976.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">网格光束 · 分形点阵背景</text>
+<text x="78.0" y="3010.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">Canvas 分形网格 · 条纹网格背景</text>
+<text x="78.0" y="3044.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">镜头模糊着色器 · SVG 几何形状</text>
+<text x="78.0" y="3078.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">动态 SVG 几何 · SVG 分隔带</text>
+<text x="78.0" y="3112.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">纹理覆盖层 · 扭曲玻璃分隔</text>
+<text x="78.0" y="3146.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">纹理背景容器 · 边缘渐进模糊 · 抖色图片</text>
+<text x="78.0" y="3180.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">长虹玻璃效果</text>
+<text x="78.0" y="3236.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">原理</text>
+<text x="78.0" y="3266.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">按组件使用 CSS 滤镜 / 遮罩、Canvas 帧绘</text>
+<text x="78.0" y="3298.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">制、WebGL 像素采样</text>
+<text x="78.0" y="3346.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">场景</text>
+<text x="78.0" y="3376.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">首屏背景、视觉分区、图库、导航遮罩</text>
+<rect x="546.7" y="2896.0" width="466.7" height="538.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="568.7" y="2919.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">文字排版</text>
+<text x="934.6" y="2923.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">12 项</text>
+<text x="568.7" y="2976.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">文字进入动画 · 打字机文字 · 滚动数字</text>
+<text x="568.7" y="3010.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">逐字像素标题 · 逐词像素标题</text>
+<text x="568.7" y="3044.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">像素关键词段落 · 反向像素段落</text>
+<text x="568.7" y="3078.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">GIF 文字 · 渐变标题 · 拟物眉题标签</text>
+<text x="568.7" y="3112.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">LED 灯板 · 手绘箭头</text>
+<text x="568.7" y="3168.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">原理</text>
+<text x="568.7" y="3198.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">文字拆分与 Motion 错峰 / 弹簧；时间状态</text>
+<text x="568.7" y="3230.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">、像素字体与遮罩</text>
+<text x="568.7" y="3278.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">场景</text>
+<text x="568.7" y="3308.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">标题强调、欢迎文案、指标变化、品牌表达</text>
+<rect x="1037.3" y="2896.0" width="466.7" height="538.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="1059.3" y="2919.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="28" font-weight="600">补充注册项</text>
+<text x="1425.2" y="2923.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">03 项</text>
+<text x="1059.3" y="2976.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">动态径向渐变 · 基础选择框 · 基础提示框</text>
+<text x="1059.3" y="3032.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">原理</text>
+<text x="1059.3" y="3062.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">Motion 渐变关键帧；Base UI 选择与提示</text>
+<text x="1059.3" y="3094.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">原语</text>
+<text x="1059.3" y="3142.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="600">场景</text>
+<text x="1059.3" y="3172.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="22" font-weight="400">动态背景、下拉筛选、工具栏提示</text>
+<rect x="56.0" y="3492.0" width="52.0" height="44.0" rx="12" fill="#173B3D"/>
+<text x="66.0" y="3500.0" dominant-baseline="text-before-edge" fill="#FFFFFF" font-size="25" font-weight="600">03</text>
+<text x="126.0" y="3496.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="34" font-weight="600">对你的意义：研究成果如何变成开发资产</text>
+<rect x="56.0" y="3566.0" width="712.0" height="294.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<rect x="792.0" y="3566.0" width="712.0" height="294.0" rx="17" fill="#FFFFFF" stroke="#D3DDD6" stroke-width="1"/>
+<text x="80.0" y="3590.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="29" font-weight="600">现在得到什么</text>
+<text x="816.0" y="3590.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="29" font-weight="600">以后什么情况下用</text>
+<text x="80.0" y="3643.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="24" font-weight="600">选型地图</text>
+<text x="210.0" y="3645.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">从页面任务找到效果、原理与源码。</text>
+<text x="80.0" y="3693.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="24" font-weight="600">开发素材</text>
+<text x="210.0" y="3695.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">复用外观与交互，再改成自己的主题和内容。</text>
+<text x="80.0" y="3743.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="24" font-weight="600">学习样本</text>
+<text x="210.0" y="3745.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">理解状态如何变成动画、反馈与图形。</text>
+<text x="80.0" y="3793.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="24" font-weight="600">研究资产</text>
+<text x="210.0" y="3795.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">本地演示可持续比较，积累自己的组件经验。</text>
+<text x="816.0" y="3643.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="24" font-weight="600">官网 / 作品集</text>
+<text x="998.0" y="3645.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">首屏、卡片、文字、插画、设备展示。</text>
+<text x="816.0" y="3693.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="24" font-weight="600">AI / SaaS 产品</text>
+<text x="998.0" y="3695.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">输入、建议、回答、进度与通知。</text>
+<text x="816.0" y="3743.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="24" font-weight="600">管理工作台</text>
+<text x="998.0" y="3745.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">表单、标签、浮层、看板与指标。</text>
+<text x="816.0" y="3793.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="24" font-weight="600">原型 / 交互学习</text>
+<text x="998.0" y="3795.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="23" font-weight="400">快速验证效果，读取并改造真实源码。</text>
+<rect x="56.0" y="3892.0" width="52.0" height="44.0" rx="12" fill="#173B3D"/>
+<text x="66.0" y="3900.0" dominant-baseline="text-before-edge" fill="#FFFFFF" font-size="25" font-weight="600">04</text>
+<text x="126.0" y="3896.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="34" font-weight="600">后期选用路径</text>
+<rect x="56.0" y="3964.0" width="260.8" height="82.0" rx="12" fill="#DCEADC"/>
+<text x="71.0" y="3977.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="600">1</text>
+<text x="71.0" y="4009.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="21" font-weight="600">已有 React 页面任务</text>
+<path d="M323.8,4004.0 H345.8 M336.8,3998.0 L345.8,4004.0 L336.8,4010.0" fill="none" stroke="#173B3D" stroke-width="3"/>
+<rect x="352.8" y="3964.0" width="260.8" height="82.0" rx="12" fill="#DCEADC"/>
+<text x="367.8" y="3977.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="600">2</text>
+<text x="367.8" y="4009.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="21" font-weight="600">找到匹配的组件</text>
+<path d="M620.6,4004.0 H642.6 M633.6,3998.0 L642.6,4004.0 L633.6,4010.0" fill="none" stroke="#173B3D" stroke-width="3"/>
+<rect x="649.6" y="3964.0" width="260.8" height="82.0" rx="12" fill="#DCEADC"/>
+<text x="664.6" y="3977.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="600">3</text>
+<text x="664.6" y="4009.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="21" font-weight="600">看示例 / 源码 / 依赖</text>
+<path d="M917.4,4004.0 H939.4 M930.4,3998.0 L939.4,4004.0 L930.4,4010.0" fill="none" stroke="#173B3D" stroke-width="3"/>
+<rect x="946.4" y="3964.0" width="260.8" height="82.0" rx="12" fill="#DCEADC"/>
+<text x="961.4" y="3977.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="600">4</text>
+<text x="961.4" y="4009.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="21" font-weight="600">按需复制并接业务</text>
+<path d="M1214.2,4004.0 H1236.2 M1227.2,3998.0 L1236.2,4004.0 L1227.2,4010.0" fill="none" stroke="#173B3D" stroke-width="3"/>
+<rect x="1243.2" y="3964.0" width="260.8" height="82.0" rx="12" fill="#DCEADC"/>
+<text x="1258.2" y="3977.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="600">5</text>
+<text x="1258.2" y="4009.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="21" font-weight="600">验收后维护本地源码</text>
+<text x="56.0" y="4071.0" dominant-baseline="text-before-edge" fill="#243C3E" font-size="24" font-weight="400">适合：界面与效果恰好匹配，想提高产品细节；优先挑少量组件，调整配色、内容、行为与动效强度。</text>
+<text x="56.0" y="4112.0" dominant-baseline="text-before-edge" fill="#526565" font-size="23" font-weight="400">接入时关注：素材与字体、移动端与触屏、键盘操作、减少动效偏好，以及 Canvas / WebGL 的运行成本。</text>
+<rect x="56.0" y="4162.0" width="1448.0" height="122.0" rx="16" fill="#173B3D"/>
+<text x="80.0" y="4181.0" dominant-baseline="text-before-edge" fill="#EACB85" font-size="27" font-weight="600">能力边界</text>
+<text x="80.0" y="4220.0" dominant-baseline="text-before-edge" fill="#FFFFFF" font-size="24" font-weight="400">AI 组件交付输入与结果界面；模型调用、Agent 执行、数据保存、权限及多人同步需要应用接入。</text>
+<text x="80.0" y="4255.0" dominant-baseline="text-before-edge" fill="#DCEADC" font-size="23" font-weight="400">整体视觉与叙事需要设计和组合；沉浸式全屏 3D、粒子场景、游戏等还需要专门的图形开发能力。</text>
+<text x="56.0" y="4314.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="400">统计口径：固定版本 67a66c6；134 个官方文档项 + 3 个补充注册项 = 137；17 个旧别名不重复计数。</text>
+<text x="56.0" y="4348.0" dominant-baseline="text-before-edge" fill="#526565" font-size="21" font-weight="400">来源：nolly-studio/cult-ui 的组件导航、Registry 与真实源码 · MIT · 2026-10-03 核对</text>
+<text x="56.0" y="4384.0" dominant-baseline="text-before-edge" fill="#173B3D" font-size="22" font-weight="600">阅读方式：先看定位与原理，再按方向找组件，最后按自己的页面任务决定是否使用。</text>
+</svg>

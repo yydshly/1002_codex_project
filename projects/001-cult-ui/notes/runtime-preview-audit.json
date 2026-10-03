@@ -1,0 +1,1269 @@
+{
+  "schemaVersion": 1,
+  "commit": "67a66c6ac1cd240914ba688a907611b3437a7a2b",
+  "date": "2026-10-03T09:05:29.573Z",
+  "baseUrl": "http://localhost:4187/projects/001-cult-ui/component.html",
+  "scope": "Initial browser rendering of all canonical official examples and two labeled API integrations; targeted retest after asset path fixes. This is not an exhaustive interaction or device compatibility test.",
+  "summary": {
+    "total": 138,
+    "ready": 138,
+    "errors": 0,
+    "correctedAndRetested": 12
+  },
+  "results": [
+    {
+      "name": "text-animate-demo",
+      "checkedAt": "2026-10-03T08:58:38.605Z",
+      "content": "Roll InRollInWhip InWhipInfade InFade InPop InPop InFade In UpFade In UpShift In UpShift In UpWhip In UpWhip In UpCalm In UpCalm I",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "cosmic-button-demo",
+      "checkedAt": "2026-10-03T08:58:38.747Z",
+      "content": "Cosmic button goes brrr",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "texture-button-demo",
+      "checkedAt": "2026-10-03T08:58:38.986Z",
+      "content": "PrimaryPrimaryPrimaryAccentAccentAccentSecondarySecondarySecondaryDestructiveDestructiveDestructiveMinimalMinimalMinimal",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "texture-card-demo",
+      "checkedAt": "2026-10-03T08:58:39.271Z",
+      "content": "Create your accountWelcome! Please fill in the details to get started.GoogleGithuborFirst nameLast NameUsernameEmailPasswordContin",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "timer-demo",
+      "checkedAt": "2026-10-03T08:58:39.620Z",
+      "content": "Basic Timer00.12Variants00.1200.1200.1200.12Sizes00.1200.1200.12Compound Components01:23Custom Timer with Controls00:00",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "shift-card-demo",
+      "checkedAt": "2026-10-03T09:04:36.439Z",
+      "canvasCount": 0,
+      "imageCount": 1,
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "minimal-card-demo",
+      "checkedAt": "2026-10-03T09:04:37.053Z",
+      "canvasCount": 0,
+      "imageCount": 5,
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "cutout-card-demo",
+      "checkedAt": "2026-10-03T09:04:37.454Z",
+      "canvasCount": 0,
+      "imageCount": 1,
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "dynamic-island-demo",
+      "checkedAt": "2026-10-03T08:58:40.979Z",
+      "content": "Click to cycle statesprev - emptycur -defaultcycle states",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "direction-aware-tabs-demo",
+      "checkedAt": "2026-10-03T08:58:41.488Z",
+      "content": "oceanforestdefaultsunsetButtonButtonButton",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "bg-animate-button-demo",
+      "checkedAt": "2026-10-03T08:58:41.924Z",
+      "content": "fullxl2xl3xlsmspinpulsespin-slowspin-fast",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "border-beam-button-demo",
+      "checkedAt": "2026-10-03T08:58:42.263Z",
+      "content": "Border beamButton + traveling glowclassName targets the shadcn Button; borderBeamClassName styles the beam wrapper. Use colorVaria",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "family-button-demo",
+      "checkedAt": "2026-10-03T08:59:05.105Z",
+      "content": "",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "side-panel-demo",
+      "checkedAt": "2026-10-03T08:59:05.461Z",
+      "content": "videoopen",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "bg-media-demo",
+      "checkedAt": "2026-10-03T08:59:05.790Z",
+      "content": "Your browser does not support the video tag.Pause",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "bg-image-texture-demo",
+      "checkedAt": "2026-10-03T08:59:06.101Z",
+      "content": "Texture ControlsSelect a texture variant and adjust the opacityTexture Variantfabric-of-sq",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "three-d-carousel-demo",
+      "checkedAt": "2026-10-03T08:59:06.364Z",
+      "content": "",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "tweet-grid-demo",
+      "checkedAt": "2026-10-03T08:59:06.682Z",
+      "content": "Join the clubTTwitter User@userThis is a mock tweet placeholder. Tweet ID: 174298397534032",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "gradient-heading-demo",
+      "checkedAt": "2026-10-03T08:59:06.968Z",
+      "content": "Variant: defaultHeading - lgHeading - lgHeading - lgHeading - lgHeading - lgHeading - xlHe",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "typewriter-demo",
+      "checkedAt": "2026-10-03T08:59:07.295Z",
+      "content": "iMessageToday 11:29Hey!Whats up bretheren?!Delivered",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "rolling-number-demo",
+      "checkedAt": "2026-10-03T08:59:07.621Z",
+      "content": "Custom Spring Properties1,000IncreaseDecreaseMass: 1Stiffness: 100Damping: 40Precision14.5",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "sortable-list-demo",
+      "checkedAt": "2026-10-03T08:59:07.972Z",
+      "content": "Agent workflowInspired by  @mrncst1 Gather Data2 Analyze Copy3 Create Suggestions4 Recomme",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "dock-demo",
+      "checkedAt": "2026-10-03T08:59:08.306Z",
+      "content": "        ",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "lightboard-demo",
+      "checkedAt": "2026-10-03T08:59:08.655Z",
+      "content": "LightBoard DemoControlled LightBoard with draw supportTry drawing on this board by clickin",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "canvas-fractal-grid-demo",
+      "checkedAt": "2026-10-03T08:59:08.985Z",
+      "content": "Configurable CanvasFractalGridCopy ConfigConfigurationGeneralGradientsDotsWavesEffectsPerf",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "bg-animated-fractal-dot-grid-demo",
+      "checkedAt": "2026-10-03T08:59:09.316Z",
+      "content": "Copy ConfigConfigurationDotsWavesEffectsPerformance",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "bg-animated-gradient-demo",
+      "checkedAt": "2026-10-03T08:59:09.671Z",
+      "content": "Configurable GradientAnimationCopy ConfigConfigurationGeneralGradientsAnimation",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "popover-demo",
+      "checkedAt": "2026-10-03T08:59:10.031Z",
+      "content": "Add FeedbackChoose ColorQuick ActionsPreview Image",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "floating-panel-demo",
+      "checkedAt": "2026-10-03T08:59:10.434Z",
+      "content": "FloatingPanel ExamplesAdd NoteChoose ColorQuick ActionsPreview Image",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "color-picker-demo",
+      "checkedAt": "2026-10-03T08:59:10.792Z",
+      "content": "Generate Harmonious ColorsReset Colorsbackgroundhsl(0, 0%, 100%)foregroundhsl(240, 10%, 4%",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "shader-lens-blur-demo",
+      "checkedAt": "2026-10-03T08:59:11.122Z",
+      "content": "Inverted mouse interaction using mouse or touchShader ConfigurationVariation- TriangleColo",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "edge-blur-demo",
+      "checkedAt": "2026-10-03T08:59:11.743Z",
+      "content": "Edge blurStacked backdrop-blur layers with a gradient mask. Blurs sit outside the scroll l",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "dither-image-demo",
+      "checkedAt": "2026-10-03T09:04:37.857Z",
+      "canvasCount": 0,
+      "imageCount": 19,
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "dither-image-demo-upload",
+      "checkedAt": "2026-10-03T09:04:38.289Z",
+      "canvasCount": 0,
+      "imageCount": 2,
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "popover-form-demo",
+      "checkedAt": "2026-10-03T08:59:25.724Z",
+      "content": "FeedbackClick HereNewsletter SignupChoose theme",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "expandable-demo",
+      "checkedAt": "2026-10-03T08:59:26.105Z",
+      "content": "In 15 minsDesign Sync1:30PM → 2:30PMNew Arrival$129.99Sony Headphones(128)Today's Weather7",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "logo-carousel-demo",
+      "checkedAt": "2026-10-03T08:59:26.420Z",
+      "content": "The best are already hereJoin new cult",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "loading-carousel-demo",
+      "checkedAt": "2026-10-03T09:04:38.709Z",
+      "canvasCount": 0,
+      "imageCount": 30,
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "hover-video-player-demo",
+      "checkedAt": "2026-10-03T09:04:39.161Z",
+      "canvasCount": 0,
+      "imageCount": 1,
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "neumorph-eyebrow-demo",
+      "checkedAt": "2026-10-03T08:59:27.337Z",
+      "content": "A milestone in scrapingPrimary variantSecondary variant",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "neumorph-button-demo",
+      "checkedAt": "2026-10-03T08:59:27.653Z",
+      "content": "Button VariantsDefaultPrimarySecondaryDangerButton SizesSmallMediumLargeFull Width ButtonF",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "feature-carousel-demo",
+      "checkedAt": "2026-10-03T09:04:40.468Z",
+      "canvasCount": 0,
+      "imageCount": 2,
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "choice-poll-demo",
+      "checkedAt": "2026-10-03T08:59:28.340Z",
+      "content": "Single SelectionVote for Next IntegrationHelp us prioritize which integration to build nex",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "feature-poll-demo",
+      "checkedAt": "2026-10-03T08:59:28.698Z",
+      "content": "BasicWhich feature matters most?Pick one option to help us prioritize the roadmap.Faster b",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "feature-voting-demo",
+      "checkedAt": "2026-10-03T08:59:29.062Z",
+      "content": "Sorted with vote counts203API AccessPublic API for third-party integrations156Mobile AppNa",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "vote-tally-demo",
+      "checkedAt": "2026-10-03T08:59:29.386Z",
+      "content": "203API AccessPublic API for third-party integrations156Mobile AppNative iOS and Android ap",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "poll-widget-demo",
+      "checkedAt": "2026-10-03T08:59:29.724Z",
+      "content": "Inline (default)Which feature matters most?Pick one, then submit to see results and succes",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "prompt-library-demo",
+      "checkedAt": "2026-10-03T08:59:30.082Z",
+      "content": "Browse and insert prompt templates. Click a prompt to copy it to clipboard, or pass onInse",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "ai-instructions-demo",
+      "checkedAt": "2026-10-03T08:59:30.420Z",
+      "content": "Configure AI behavior with custom instructions. Click the button below to manage your acti",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "intro-disclosure-demo",
+      "checkedAt": "2026-10-03T08:59:30.663Z",
+      "content": "IntroDisclosure DemoExperience our feature introduction component in both desktop and mobi",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "text-gif-demo",
+      "checkedAt": "2026-10-03T08:59:30.998Z",
+      "content": "TextGifTextGIF BackgroundGIF 1Text SizexlFont WeightboldExamplesHeadings$49per month",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "stripe-bg-guides-demo",
+      "checkedAt": "2026-10-03T08:59:31.329Z",
+      "content": "Stripe Background GuidesAnimated background guides with glowing effects, inspired by Strip",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "svg-shapes-demo",
+      "checkedAt": "2026-10-03T08:59:31.661Z",
+      "content": "SVG shapesWide viewBox line-art panels for landing pages: polygons, architectural silhouet",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "svg-shapes-animated-demo",
+      "checkedAt": "2026-10-03T08:59:31.997Z",
+      "content": "SVG shapes (animated)Same wide viewBox geometry as the static set, with paths drawn via mo",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "svg-bands-demo",
+      "checkedAt": "2026-10-03T08:59:32.368Z",
+      "content": "SVG bandsWide (2400-based) section ornaments: battlement and zigzag trims, steep hero head",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "grid-beam-demo",
+      "checkedAt": "2026-10-03T08:59:32.694Z",
+      "content": "GridBeamSoft glowing beams along grid dividerscolorfulmonooceansunset● dark⏸ pause~ breath",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "youtube-video-player-demo",
+      "checkedAt": "2026-10-03T08:59:49.754Z",
+      "content": "YouTube Video Player ExamplesA collection of YouTube video player examples showcasing diff",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "toolbar-expandable-demo",
+      "checkedAt": "2026-10-03T08:59:50.105Z",
+      "content": "Component DemoDynamic Toolbar ExpandableSophisticated expandable toolbar with smooth anima",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "texture-overlay-demo",
+      "checkedAt": "2026-10-03T08:59:50.413Z",
+      "content": "Texture Overlay ShowcaseExplore different texture patterns using CSS gradients for adding ",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "squiggle-arrow-demo",
+      "checkedAt": "2026-10-03T08:59:50.683Z",
+      "content": "VariantsWavySquiggly arrowBouncySquiggly arrowSmoothSquiggly arrowDirectionsRightSquiggly ",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "code-block-demo",
+      "checkedAt": "2026-10-03T08:59:50.961Z",
+      "content": "Package Manager InstallationnpmpnpmyarnbunCopynpm install @acme/uiSingle Code BlockCopyimp",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "metal-button-demo",
+      "checkedAt": "2026-10-03T08:59:51.272Z",
+      "content": "Liquid metalButton + animated metal ringclassName targets the shadcn Button; metalFxClassN",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "mock-browser-window-demo",
+      "checkedAt": "2026-10-03T08:59:52.471Z",
+      "content": "PreviewSecurehttps://example.com/dashboardOverviewUsers12AnalyticsnewSettingsWindow Settin",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "morph-surface-demo",
+      "checkedAt": "2026-10-03T08:59:52.744Z",
+      "content": "Default UsageThe component works out of the box with no configuration neededMorph SurfaceF",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "distorted-glass-demo",
+      "checkedAt": "2026-10-03T08:59:53.036Z",
+      "content": "Distorted Glass\n        .glass-effect {\n          background: rgba(0, 0, 0, 0.2);\n        ",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "family-drawer-demo",
+      "checkedAt": "2026-10-03T08:59:53.404Z",
+      "content": "FamilyDrawer ExamplesVarious usage patterns for the composable FamilyDrawer componentCusto",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "expandable-screen-demo",
+      "checkedAt": "2026-10-03T08:59:53.756Z",
+      "content": "Join the waitlistBe among the first to experience our next-generation platform. Get early ",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "pixel-heading-character-demo",
+      "checkedAt": "2026-10-03T08:59:54.187Z",
+      "content": "Pixel FontsWaveTextModeuniformmultiwaverandomHeading Levelh1h2h3h4h5h6Cycle Interval: 340m",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "pixel-heading-word-demo",
+      "checkedAt": "2026-10-03T08:59:54.462Z",
+      "content": "Pixel FontssquareTextInitial FontsquaregridcircletrianglelineHover Behaviorcycle allsquare",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "pixel-paragraph-words-inverse-demo",
+      "checkedAt": "2026-10-03T08:59:54.792Z",
+      "content": "54+ animated components and effects. Free, open source, and built to drop into any shadcn/",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "pixel-paragraph-words-demo",
+      "checkedAt": "2026-10-03T08:59:55.053Z",
+      "content": "54+ animated components and effects. Free, open source, and built to drop into any shadcn/",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "onboarding-demo",
+      "checkedAt": "2026-10-03T08:59:55.478Z",
+      "content": "Open Headless Onboarding",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "gradient-button-group-demo",
+      "checkedAt": "2026-10-03T08:59:55.764Z",
+      "content": "",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "terminal-animation-demo",
+      "checkedAt": "2026-10-03T08:59:56.140Z",
+      "content": "RefreshDownload BG$installbuilddeploytest",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "hero-dithering-demo",
+      "checkedAt": "2026-10-03T08:59:56.549Z",
+      "content": "DefaultAI SDK AgentsAI SDK Agents Copy and PasteFull-stack vercel ai sdk patterns for work",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "hero-color-panels-demo",
+      "checkedAt": "2026-10-03T08:59:57.708Z",
+      "content": "DefaultAI SDK AgentsAI SDK Agents Copy and PasteFull-stack vercel ai sdk patterns for work",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "hero-static-radial-gradient-demo",
+      "checkedAt": "2026-10-03T08:59:58.953Z",
+      "content": "DefaultAI SDK AgentsAI SDK Agents Copy and PasteFull-stack vercel ai sdk patterns for work",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "hero-heatmap-demo",
+      "checkedAt": "2026-10-03T09:04:40.855Z",
+      "canvasCount": 6,
+      "imageCount": 0,
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "hero-liquid-metal-demo",
+      "checkedAt": "2026-10-03T09:04:44.814Z",
+      "canvasCount": 6,
+      "imageCount": 0,
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "gateway-endpoint-illustration-demo",
+      "checkedAt": "2026-10-03T09:00:10.662Z",
+      "content": "",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "gateway-route-illustration-demo",
+      "checkedAt": "2026-10-03T09:01:25.130Z",
+      "content": "",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "gateway-svg-illustration-demo",
+      "checkedAt": "2026-10-03T09:01:25.531Z",
+      "content": "Gateway Overhead",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "illustration-card-grid-demo",
+      "checkedAt": "2026-10-03T09:01:25.853Z",
+      "content": "One API key, hundreds of modelsUnified billing and observability across your entire AI sta",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "illustration-cursor-demo",
+      "checkedAt": "2026-10-03T09:01:26.193Z",
+      "content": "Live collaborators6 onlineJohnJaneJimJillJackMina",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "illustration-comment-bubble-demo",
+      "checkedAt": "2026-10-03T09:01:26.534Z",
+      "content": "JaneCan we ship this behind beta first and roll out to everyone next week?",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "illustration-fluid-rendering-demo",
+      "checkedAt": "2026-10-03T09:01:26.888Z",
+      "content": "Fluid rendering flow illustrationVercel StoreContentfulBigCommerceShopify",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "illustration-globe-vercel-demo",
+      "checkedAt": "2026-10-03T09:01:27.260Z",
+      "content": "StatusdeployingdeployederrorIconsDotsVercelInfraCustomColordeployed",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "illustration-graph-demo",
+      "checkedAt": "2026-10-03T09:01:27.540Z",
+      "content": "API error rate graphInvestigate 12h ago / now5xxapi / api/error rate / error rate40%20%0%n",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "tabs-illustration-vercel-demo",
+      "checkedAt": "2026-10-03T09:01:27.862Z",
+      "content": "\n        [data-generate-anything] {\n          --ga-bg: #fafafa;\n          --ga-surface: #f",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "circuit-board-demo",
+      "checkedAt": "2026-10-03T09:01:28.095Z",
+      "content": "\n        @keyframes pulse-glow {\n          0%, 65%, 100% { opacity: 0; }\n          12%, 28",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "fluid-ai-workloads-demo",
+      "checkedAt": "2026-10-03T09:01:28.490Z",
+      "content": "Fluid AI workloads illustration",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "security-checkpoint-demo",
+      "checkedAt": "2026-10-03T09:01:28.839Z",
+      "content": "Vercel Security CheckpointTo ensure a smooth and safe experience, we're taking a few momen",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "merging-bubbles-demo",
+      "checkedAt": "2026-10-03T09:01:29.190Z",
+      "content": "SmallOuter glow/shadow+Next LogoVercel LogoMediumOuter glow/shadow+Next LogoVercel LogoLar",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "ai-blob-warp-demo",
+      "checkedAt": "2026-10-03T09:01:29.516Z",
+      "content": "AI blob warpCircular avatar with Paper's Warp shader. Size via className, tuning via warpP",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "folded-card-demo",
+      "checkedAt": "2026-10-03T09:01:29.991Z",
+      "content": "ChatbotNext.jsA Next.js chatbot template featuring streaming text responses and a chat UI.",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "shadow-card-demo",
+      "checkedAt": "2026-10-03T09:01:30.432Z",
+      "content": "Where Design And Product TeamsBuild The Future Of SoftwareTHE DESIGNZEPXENWhere Design And",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "organic-card-demo",
+      "checkedAt": "2026-10-03T09:01:30.744Z",
+      "content": "Product updateNorthPowered by Command A, Compass, Embed, and Rerank - secure AI agents, se",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "organic-card-small-demo",
+      "checkedAt": "2026-10-03T09:01:31.056Z",
+      "content": "Engineering — Apr 2, 2026Building scalable AI infrastructure for enterpriseCard footer cut",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "organic-button-demo",
+      "checkedAt": "2026-10-03T09:01:31.391Z",
+      "content": "Anchor-based control with fixed SVG end caps and shared surface colors via CSS variables o",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "fluted-glass-demo",
+      "checkedAt": "2026-10-03T09:01:31.592Z",
+      "content": "ImageFlowersMountainsAbstractForestOceanCustom image URLLoad URLReset defaultsLibrary pres",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "speech-bubble-demo",
+      "checkedAt": "2026-10-03T09:01:31.850Z",
+      "content": "Hello, how are you?No cursor variant",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "apple-iphone-17-pro-demo",
+      "checkedAt": "2026-10-03T09:01:32.518Z",
+      "content": "9:41iPhone 17 Pro MaxTap the Screen to cycle  through dynamic island sizesCurrent: default",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "apple-keyboard-demo",
+      "checkedAt": "2026-10-03T09:01:32.828Z",
+      "content": "escF1F2F3F4F5F6F7F8F9F10F11F12~`!1@2#3$4%5^6&7*8(9)0_-+=deletetabQWERTYUIOP{]}]| \\caps loc",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "apple-watch-ultra-demo",
+      "checkedAt": "2026-10-03T09:01:33.065Z",
+      "content": "N3060E120150S210240W30033010:09TUESDAY, APR 13UV72°NW315°1,247ft",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "mac-screen-demo",
+      "checkedAt": "2026-10-03T09:04:51.216Z",
+      "canvasCount": 0,
+      "imageCount": 2,
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "apple-pro-display-xdr-demo",
+      "checkedAt": "2026-10-03T09:04:52.963Z",
+      "canvasCount": 0,
+      "imageCount": 1,
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "marketing-hero-analytics-demo",
+      "checkedAt": "2026-10-03T09:01:52.327Z",
+      "content": "Visitors chartUnderstand production from the inside out.With real-time infrastructure and ",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "marketing-feature-code-demo",
+      "checkedAt": "2026-10-03T09:01:52.573Z",
+      "content": "Enterprise-grade securityNetwork Firewall with Credentials BrokeringControl egress traffic",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "feature-sticky-section-demo",
+      "checkedAt": "2026-10-03T09:01:52.912Z",
+      "content": "OverviewDetailsSummaryOverviewThis is the first section. Scroll or click the list to switc",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "analytics-chart-demo",
+      "checkedAt": "2026-10-03T09:01:53.243Z",
+      "content": "ClicksSignupsRevenueClicksConversion analytics7 pointsSun, Sep 10, 2023buy-it-now8,420 cli",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "kanban-board-demo",
+      "checkedAt": "2026-10-03T09:01:53.620Z",
+      "content": "Backlog3CampaignDraft Q2 nurture email seriesJan 8TrackingFix broken UTMs on paid search a",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "agent-suggest-card-stack-demo",
+      "checkedAt": "2026-10-03T09:01:53.919Z",
+      "content": "Agent suggestion card stack3Suggestions#5347Update auth configbotFix type errorsbotnowAppl",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "collab-avatar-demo",
+      "checkedAt": "2026-10-03T09:01:54.244Z",
+      "content": "JGAKSTJOSMMELA",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "collab-toolbar-demo",
+      "checkedAt": "2026-10-03T09:01:54.474Z",
+      "content": "",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "halo-dropzone-demo",
+      "checkedAt": "2026-10-03T09:01:54.758Z",
+      "content": "Animated dropzoneDrag in files or use the file picker: images can preview inside the zone,",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "halo-search-demo",
+      "checkedAt": "2026-10-03T09:01:55.127Z",
+      "content": "Component demoAnimated searchPress Enter to run a mock search — loading state matches how ",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "globe-demo",
+      "checkedAt": "2026-10-03T09:01:55.504Z",
+      "content": "San FranciscoNew YorkTokyoLondonSydneyCape TownDubaiSão PauloSF → TokyoNYC → London",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "file-icons-demo",
+      "checkedAt": "2026-10-03T09:01:55.951Z",
+      "content": "IconslogotwittergitHubradixarianpmyarnpnpmreacttailwindgoogleapplepaypalspinnerjsontscssba",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "halo-button-demo",
+      "checkedAt": "2026-10-03T09:01:56.296Z",
+      "content": "Default (translucent)ContinueSolid surfaceLoading state (async)Guard the click while loadi",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "copy-button-demo",
+      "checkedAt": "2026-10-03T09:01:56.650Z",
+      "content": "npm install @radix-ui/react-slothttps://github.com/vercel/next.js",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "halo-card-demo",
+      "checkedAt": "2026-10-03T09:01:56.982Z",
+      "content": "Composable cardHeader, content, and footer slots share the same gradient rim and frosted s",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "border-beam-card-demo",
+      "checkedAt": "2026-10-03T09:01:57.342Z",
+      "content": "Border beam cardBorderBeamCard wraps Card with the same header / content slots. Effect lay",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "halo-tabs-demo",
+      "checkedAt": "2026-10-03T09:01:57.583Z",
+      "content": "Tabs — underlineOverviewUsageBillingProject summary, health metrics, and rollouts for the ",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "halo-segmented-demo",
+      "checkedAt": "2026-10-03T09:01:58.010Z",
+      "content": "Segmented controlSingle-select control: one option is active at a time, with a spring-anim",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "halo-toggle-group-demo",
+      "checkedAt": "2026-10-03T09:01:58.367Z",
+      "content": "Segmented controlSingle-select toggle group with a spring-driven thumb (same constants as ",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "halo-notification-demo",
+      "checkedAt": "2026-10-03T09:01:58.666Z",
+      "content": "Local notificationBrief status or alert messages with a frosted surface, icon, title, and ",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "halo-toast-demo",
+      "checkedAt": "2026-10-03T09:01:58.968Z",
+      "content": "Animated toastStackable notifications with a gradient rim, frosted panel, and optional sta",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "halo-switch-demo",
+      "checkedAt": "2026-10-03T09:01:59.191Z",
+      "content": "DefaultToggles on and off with a spring-animated thumb and an enlarged tap target for easi",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "halo-input-demo",
+      "checkedAt": "2026-10-03T09:02:29.586Z",
+      "content": "Animated inputSingle-line and multiline controls with the same frosted rim polish as the r",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "halo-field-demo",
+      "checkedAt": "2026-10-03T09:02:29.940Z",
+      "content": "Field + inputGroups a label with an input, helper text, and optional validation messages i",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "halo-progress-demo",
+      "checkedAt": "2026-10-03T09:02:30.235Z",
+      "content": "DeterminateShows a known completion percentage with an optional label and numeric value — ",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "border-beam-input-demo",
+      "checkedAt": "2026-10-03T09:02:30.525Z",
+      "content": "Border beam inputBorderBeamInput and BorderBeamInputGroup default to beamSize=\"line\" (bott",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "halo-badge-demo",
+      "checkedAt": "2026-10-03T09:02:30.850Z",
+      "content": "Counts & layoutTabular figures keep digit width steady when the count changes; the label c",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "halo-select-demo",
+      "checkedAt": "2026-10-03T09:02:31.157Z",
+      "content": "SelectOpens a frosted listbox from a trigger: pick one option, show a loading state on the",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "prompt-composer-demo",
+      "checkedAt": "2026-10-03T09:02:31.453Z",
+      "content": "Animated composerMulti-line message field with send on ⌘ or Ctrl+Enter, loading line anima",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "wizard-expandable-demo",
+      "checkedAt": "2026-10-03T09:02:31.796Z",
+      "content": "Validated wizardFive steps with footer navigation, canNavigateToStep, and onNavigateBlocke",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "base-select-integration",
+      "checkedAt": "2026-10-03T09:02:32.056Z",
+      "content": "本项目接入示例 · 原始 Base Select API灵感整理当前：灵感整理",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    },
+    {
+      "name": "base-tooltip-integration",
+      "checkedAt": "2026-10-03T09:02:32.392Z",
+      "content": "本项目接入示例 · 原始 Base Tooltip API悬停或用 Tab 聚焦按 Escape 可关闭提示",
+      "images": [],
+      "state": "ready",
+      "failure": null,
+      "console": []
+    }
+  ]
+}

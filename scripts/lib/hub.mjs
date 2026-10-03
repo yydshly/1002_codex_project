@@ -154,7 +154,7 @@ function renderSite(catalog) {
     const demo = project.demo ?? (project.publishDir ? `projects/${directory}/` : null);
     const cover = project.cover ? `assets/${directory}${path.extname(project.cover).toLowerCase()}` : null;
     return `<article class="project-card">
-      ${cover ? `<a class="cover" href="${html(catalog.repository)}/blob/HEAD/projects/${directory}/README.md"><img src="${html(cover)}" alt="${html(project.coverAlt)}" loading="lazy"></a>` : `<div class="number-cover" aria-hidden="true"><span>${project.id}</span></div>`}
+      ${cover ? `<a class="cover" href="${html(demo ?? `${catalog.repository}/blob/HEAD/projects/${directory}/README.md`)}"><img src="${html(cover)}" alt="${html(project.coverAlt)}" loading="lazy"></a>` : `<div class="number-cover" aria-hidden="true"><span>${project.id}</span></div>`}
       <div class="card-content"><div class="card-meta"><span>PROJECT ${project.id}</span><span class="status">${html(project.status)}</span></div>
       <h2>${html(project.name)}</h2><p>${html(project.summary)}</p>
       ${project.tags.length ? `<ul class="tags" aria-label="项目标签">${project.tags.map(tag => `<li>${html(tag)}</li>`).join('')}</ul>` : ''}

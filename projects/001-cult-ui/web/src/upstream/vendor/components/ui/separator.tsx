@@ -1,0 +1,34 @@
+// @ts-nocheck
+// Vendored from Cult UI 67a66c6ac1cd240914ba688a907611b3437a7a2b: apps/www/components/ui/separator.tsx
+// Integration edits: relative imports/public asset URLs and explicit Next adapters.
+"use client";
+
+import * as SeparatorPrimitive from "@radix-ui/react-separator";
+import * as React from "react";
+
+import { cn } from "../../lib/utils.ts";
+
+const Separator = React.forwardRef<
+  React.ElementRef<typeof SeparatorPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
+>(
+  (
+    { className, orientation = "horizontal", decorative = true, ...props },
+    ref
+  ) => (
+    <SeparatorPrimitive.Root
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+      className={cn(
+        "bg-border shrink-0",
+        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+Separator.displayName = SeparatorPrimitive.Root.displayName;
+
+export { Separator };

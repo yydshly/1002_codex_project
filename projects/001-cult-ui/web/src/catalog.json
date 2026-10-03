@@ -1,0 +1,3320 @@
+{
+  "sourceInfo": {
+    "repo": "https://github.com/nolly-studio/cult-ui",
+    "commit": "67a66c6ac1cd240914ba688a907611b3437a7a2b",
+    "date": "2026-10-03",
+    "license": "MIT",
+    "upstreamCount": "150+（官方标注）"
+  },
+  "categories": [
+    "全部",
+    "AI 输入",
+    "AI 生成界面",
+    "应用与工作台",
+    "表单控件",
+    "反馈与状态",
+    "导航与浮层",
+    "引导与流程",
+    "按钮",
+    "卡片",
+    "落地页",
+    "插画",
+    "媒体与设备模型",
+    "背景与视觉效果",
+    "文字排版",
+    "补充注册项"
+  ],
+  "capabilities": [
+    {
+      "id": "prompt-composer",
+      "english": "Prompt Composer",
+      "category": "AI 输入",
+      "name": "提示词编辑器",
+      "description": "AI 输入栏包含附件、发送、加载和流体头像。",
+      "mechanism": "Base UI 负责输入行为，Paper Design Warp 渲染助手头像，React 连接输入、附件与发送事件。",
+      "scenario": "AI 聊天、Agent 控制台和消息输入。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/prompt-composer.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/prompt-composer",
+      "registryName": "prompt-composer",
+      "dependencies": [
+        "@base-ui/react",
+        "@paper-design/shaders-react",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "WebGL",
+        "Shader",
+        "Paper Design",
+        "Base UI"
+      ]
+    },
+    {
+      "id": "halo-search",
+      "english": "Halo Search",
+      "category": "AI 输入",
+      "name": "光晕搜索框",
+      "description": "搜索输入带清空、加载和流体助手头像。",
+      "mechanism": "输入状态管理文本和清空操作，渐变外壳与 Paper Design Warp 头像呈现活动反馈。",
+      "scenario": "站内搜索、命令栏和 AI 提问。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/halo-search.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/halo-search",
+      "registryName": "halo-search",
+      "dependencies": [
+        "@paper-design/shaders-react",
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "WebGL",
+        "Shader",
+        "Paper Design",
+        "CSS"
+      ]
+    },
+    {
+      "id": "prompt-library",
+      "english": "Prompt Library",
+      "category": "AI 输入",
+      "name": "提示词库",
+      "description": "按分类检索、保存和插入提示词。",
+      "mechanism": "Command 执行列表搜索，Popover 展示模板，Dialog 新增内容，Hover Card 呈现预览；选择通过回调输出。",
+      "scenario": "AI 聊天模板和团队常用提示词。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/prompt-library.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/prompt-library",
+      "registryName": "prompt-library",
+      "dependencies": [
+        "@hugeicons/core-free-icons",
+        "@hugeicons/react",
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-hover-card",
+        "class-variance-authority",
+        "clsx",
+        "cmdk",
+        "lucide-react",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Radix UI",
+        "Clipboard API"
+      ]
+    },
+    {
+      "id": "ai-instructions",
+      "english": "AI Instructions",
+      "category": "AI 输入",
+      "name": "AI 指令选择器",
+      "description": "搜索、启用与创建自定义指令。",
+      "mechanism": "Popover 放置 Command 搜索列表，React 管理指令选中状态，Dialog 承载新增指令输入。",
+      "scenario": "助手系统指令、回答风格和 Agent 规则设置。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/ai-instructions.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/ai-instructions",
+      "registryName": "ai-instructions",
+      "dependencies": [
+        "@hugeicons/core-free-icons",
+        "@hugeicons/react",
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-hover-card",
+        "class-variance-authority",
+        "clsx",
+        "cmdk",
+        "lucide-react",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Radix UI"
+      ]
+    },
+    {
+      "id": "ai-blob-warp",
+      "english": "AI Blob Warp",
+      "category": "AI 输入",
+      "name": "AI 流体头像",
+      "description": "把持续变化的流体图案放进圆形助手头像。",
+      "mechanism": "Paper Design Warp WebGL 着色器填充圆形遮罩；离屏或减少动态效果时暂停渲染。",
+      "scenario": "聊天助手头像、语音 Agent 活动指示和品牌形象。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/ai-blob-warp.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/ai-blob-warp",
+      "registryName": "ai-blob-warp",
+      "dependencies": [
+        "@paper-design/shaders-react",
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "WebGL",
+        "Shader",
+        "Paper Design"
+      ]
+    },
+    {
+      "id": "halo-dropzone",
+      "english": "Halo Dropzone",
+      "category": "AI 输入",
+      "name": "光晕文件拖放区",
+      "description": "支持键盘、文件类型标记与动态虚线边缘。",
+      "mechanism": "原生文件选择和拖放产生文件列表，Motion 反馈悬停与拖入，文件类型映射为图标。",
+      "scenario": "附件表单、文档上传和 AI 输入。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/halo-dropzone.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/halo-dropzone",
+      "registryName": "halo-dropzone",
+      "dependencies": [
+        "clsx",
+        "lucide-react",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "原生拖放"
+      ]
+    },
+    {
+      "id": "choice-poll",
+      "english": "Choice Poll",
+      "category": "AI 生成界面",
+      "name": "选项投票",
+      "description": "支持单选、多选、结果百分比与键盘导航。",
+      "mechanism": "受控或非受控选择状态记录答案，票数换算结果条宽度；组合组件组织选项与结果。",
+      "scenario": "意见反馈、社区投票和应用问卷。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/choice-poll.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/choice-poll",
+      "registryName": "choice-poll",
+      "dependencies": [
+        "@radix-ui/react-use-controllable-state",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Radix UI"
+      ]
+    },
+    {
+      "id": "feature-poll",
+      "english": "Feature Poll",
+      "category": "AI 生成界面",
+      "name": "功能偏好投票",
+      "description": "让用户选择希望优先开发的功能。",
+      "mechanism": "组合选项维护单选或多选状态，结果票数映射成进度条；支持键盘切换与选择。",
+      "scenario": "更新日志、路线图和产品调研。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/feature-poll.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/feature-poll",
+      "registryName": "feature-poll",
+      "dependencies": [
+        "@radix-ui/react-use-controllable-state",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Radix UI"
+      ]
+    },
+    {
+      "id": "poll-widget",
+      "english": "Poll Widget",
+      "category": "AI 生成界面",
+      "name": "投票容器",
+      "description": "投票可内联、弹出或对话框展示。",
+      "mechanism": "组合投票根状态、选项与结果组件，容器模式决定挂载位置，Motion 提供切换反馈和键盘支持。",
+      "scenario": "文章反馈、社区问卷和应用内调研。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/poll-widget.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/poll-widget",
+      "registryName": "poll-widget",
+      "dependencies": [
+        "@radix-ui/react-use-controllable-state",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "Radix UI"
+      ]
+    },
+    {
+      "id": "feature-voting",
+      "english": "Feature Voting",
+      "category": "AI 生成界面",
+      "name": "功能投票列表",
+      "description": "按赞成票数排序用户需求。",
+      "mechanism": "受控或非受控票数状态决定排序，组合按钮提供增减票反馈；保存与防重复投票交给业务。",
+      "scenario": "公开路线图、反馈社区和更新页面。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/feature-voting.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/feature-voting",
+      "registryName": "feature-voting",
+      "dependencies": [
+        "@radix-ui/react-use-controllable-state"
+      ],
+      "tags": [
+        "React",
+        "Radix UI"
+      ]
+    },
+    {
+      "id": "vote-tally",
+      "english": "Vote Tally",
+      "category": "AI 生成界面",
+      "name": "点赞计票列表",
+      "description": "可投票列表按票数排序。",
+      "mechanism": "受控或非受控根状态记录票数，可访问按钮更新结果，排序函数决定列表次序。",
+      "scenario": "需求板、路线图和社区点子收集。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/vote-tally.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/vote-tally",
+      "registryName": "vote-tally",
+      "dependencies": [
+        "@radix-ui/react-use-controllable-state"
+      ],
+      "tags": [
+        "React",
+        "Radix UI"
+      ]
+    },
+    {
+      "id": "agent-suggest-card-stack",
+      "english": "Agent Suggest Card Stack",
+      "category": "AI 生成界面",
+      "name": "Agent 建议卡片堆叠",
+      "description": "用卡片堆叠插图展示代码审查、进度与成功失败状态。",
+      "mechanism": "SVG 组织多张建议卡、进度条和操作按钮，以 React 属性切换展示状态；呈现工作流而不执行 Agent。",
+      "scenario": "AI 代码审查产品官网、Agent 工作流说明和产品导览。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/agent-suggest-card-stack.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/agent-suggest-card-stack",
+      "registryName": "agent-suggest-card-stack",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "speech-bubble",
+      "english": "Speech Bubble",
+      "category": "AI 生成界面",
+      "name": "对话气泡",
+      "description": "消息容器带 SVG 尾巴和可选光标。",
+      "mechanism": "复合内容区与 SVG 尾巴拼接气泡轮廓，cursor 装饰呈现人物或助手说话位置。",
+      "scenario": "AI 消息、导览提示和角色对话。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/speech-bubble.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/speech-bubble",
+      "registryName": "speech-bubble",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "sortable-list",
+      "english": "Sortable List",
+      "category": "AI 生成界面",
+      "name": "可排序列表",
+      "description": "拖动重排任务，支持勾选和删除。",
+      "mechanism": "Motion Reorder 维护列表顺序与拖动布局，React 更新完成状态和删除结果。",
+      "scenario": "任务、播放列表和引导清单。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/sortable-list.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/sortable-list",
+      "registryName": "sortable-list",
+      "dependencies": [
+        "@radix-ui/react-checkbox",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "react-use-measure",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Radix UI",
+        "Motion Reorder"
+      ]
+    },
+    {
+      "id": "code-block",
+      "english": "Code Block",
+      "category": "AI 生成界面",
+      "name": "代码块",
+      "description": "展示包管理器标签、安装命令与复制按钮。",
+      "mechanism": "React 切换代码标签，Motion 处理方向过渡；复制控件把当前片段写入剪贴板。",
+      "scenario": "SDK 安装指南、开发文档与营销代码示例。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/code-block.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/code-block",
+      "registryName": "code-block",
+      "dependencies": [
+        "clsx",
+        "lucide-react",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Clipboard API"
+      ]
+    },
+    {
+      "id": "terminal-animation",
+      "english": "Terminal Animation",
+      "category": "AI 生成界面",
+      "name": "终端动画",
+      "description": "播放键入命令和输出，支持多场景标签。",
+      "mechanism": "受控或非受控播放状态驱动字符与输出时间线，复合命令部件组织场景；不执行 shell 命令。",
+      "scenario": "CLI 文档、安装指南和开发工具首屏。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/terminal-animation.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/terminal-animation",
+      "registryName": "terminal-animation",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "@radix-ui/react-use-controllable-state",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Radix UI",
+        "IntersectionObserver"
+      ]
+    },
+    {
+      "id": "file-icons",
+      "english": "File Icons",
+      "category": "AI 生成界面",
+      "name": "文件类型图标",
+      "description": "提供语言、包管理器和工具的 SVG 图标。",
+      "mechanism": "内联 SVG 渲染不同文件标记，扩展名辅助函数把文件名称映射到对应图标。",
+      "scenario": "文件树、安装命令和代码文档。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/file-icons.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/file-icons",
+      "registryName": "file-icons",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "analytics-chart",
+      "english": "Analytics Chart",
+      "category": "应用与工作台",
+      "name": "分析折线图",
+      "description": "以渐变折线和浮动卡片呈现时间序列指标。",
+      "mechanism": "SVG 路径绘制曲线、网格与数据点，指针进入数据点时定位详情卡片。",
+      "scenario": "流量趋势、产品使用量与监控指标。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/analytics-chart.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/analytics-chart",
+      "registryName": "analytics-chart",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "kanban-board",
+      "english": "Kanban Board",
+      "category": "应用与工作台",
+      "name": "拖拽看板",
+      "description": "跨列移动任务并显示标签、头像与状态。",
+      "mechanism": "原生 HTML 拖放更新任务所属列，Motion layout/layoutId 连接位置变化，next/image 展示头像。",
+      "scenario": "项目管理、问题跟踪和迭代计划。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/kanban-board.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/kanban-board",
+      "registryName": "kanban-board",
+      "dependencies": [
+        "motion",
+        "next"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "Next.js 适配",
+        "原生拖放"
+      ],
+      "demo": "kanban"
+    },
+    {
+      "id": "timer",
+      "english": "Timer",
+      "category": "应用与工作台",
+      "name": "计时器",
+      "description": "可组合的时间显示支持格式和计时 Hook。",
+      "mechanism": "useTimer 记录经过时间，格式化函数转换显示单位，复合部件组合标签、数值与状态。",
+      "scenario": "生成进度、录音、运动和运行时长。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/timer.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/timer",
+      "registryName": "timer",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React"
+      ]
+    },
+    {
+      "id": "collab-avatar",
+      "english": "Collab Avatar",
+      "category": "应用与工作台",
+      "name": "协作头像",
+      "description": "用姓名首字母和色彩渐变表示参与者。",
+      "mechanism": "React 派生首字母和头像颜色，Motion 入场并读取减少动态效果偏好；在线状态由业务传入。",
+      "scenario": "协作编辑器、白板和共享文档。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/collab-avatar.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/collab-avatar",
+      "registryName": "collab-avatar",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ]
+    },
+    {
+      "id": "collab-toolbar",
+      "english": "Collab Toolbar",
+      "category": "应用与工作台",
+      "name": "协作工具栏",
+      "description": "把操作图标与参与者头像分组呈现。",
+      "mechanism": "组合工具按钮、分隔线和头像插槽，data-slot 标记支持一致样式；动作由外部回调实现。",
+      "scenario": "编辑器顶栏、设计画布和协作白板。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/collab-toolbar.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/collab-toolbar",
+      "registryName": "collab-toolbar",
+      "dependencies": [],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "color-picker",
+      "english": "Color Picker",
+      "category": "表单控件",
+      "name": "颜色选择器",
+      "description": "用 HSL 滑块、文本输入与色板选择颜色。",
+      "mechanism": "Popover 容器组合色相、饱和度、亮度滑块；颜色转换保持十六进制和 HSL 输入同步。",
+      "scenario": "主题编辑器、品牌配置和设计工具。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/color-picker.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/color-picker",
+      "registryName": "color-picker",
+      "dependencies": [
+        "@radix-ui/react-label",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Radix UI"
+      ]
+    },
+    {
+      "id": "halo-input",
+      "english": "Halo Input",
+      "category": "表单控件",
+      "name": "光晕输入框",
+      "description": "单行或多行输入带渐变边缘和错误状态。",
+      "mechanism": "Base UI 提供输入行为，Motion 处理渐变外壳与状态反馈，invalid 属性改变错误样式。",
+      "scenario": "联系表单、个人设置和多行输入。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/halo-input.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/halo-input",
+      "registryName": "halo-input",
+      "dependencies": [
+        "@base-ui/react",
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Shader",
+        "Base UI",
+        "CSS"
+      ]
+    },
+    {
+      "id": "halo-field",
+      "english": "Halo Field",
+      "category": "表单控件",
+      "name": "光晕字段布局",
+      "description": "统一标签、说明、错误与输入框间距。",
+      "mechanism": "组合 shadcn Field 原语，把标签、说明和错误插槽绑定到输入控件布局。",
+      "scenario": "设置表单、注册和资料编辑。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/halo-field.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/halo-field",
+      "registryName": "halo-field",
+      "dependencies": [
+        "@radix-ui/react-label",
+        "@radix-ui/react-separator",
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Radix UI"
+      ]
+    },
+    {
+      "id": "halo-select",
+      "english": "Halo Select",
+      "category": "表单控件",
+      "name": "光晕选择框",
+      "description": "带动态边缘、文字和加载状态的下拉框。",
+      "mechanism": "Base UI Select 管理弹层、选择与键盘行为，Motion 编排标签和触发器加载反馈。",
+      "scenario": "设置、筛选和模型选择。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/halo-select.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/halo-select",
+      "registryName": "halo-select",
+      "dependencies": [
+        "@base-ui/react",
+        "@hugeicons/core-free-icons",
+        "@hugeicons/react",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "Base UI"
+      ]
+    },
+    {
+      "id": "halo-switch",
+      "english": "Halo Switch",
+      "category": "表单控件",
+      "name": "光晕开关",
+      "description": "滑块弹簧运动并扩大触屏点击区域。",
+      "mechanism": "Base UI Switch 提供 checked 状态与语义，Motion 驱动圆形滑块，外壳形成渐变边缘。",
+      "scenario": "通知、深色模式和功能设置。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/halo-switch.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/halo-switch",
+      "registryName": "halo-switch",
+      "dependencies": [
+        "@base-ui/react",
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Base UI",
+        "CSS"
+      ]
+    },
+    {
+      "id": "halo-segmented",
+      "english": "Halo Segmented",
+      "category": "表单控件",
+      "name": "光晕分段控件",
+      "description": "小组选项带磨砂轨道和滑动选中块。",
+      "mechanism": "Base UI Toggle Group 管理单选行为，Motion 弹簧移动选中滑块到活动项。",
+      "scenario": "视图模式、计费周期和时间范围。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/halo-segmented.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/halo-segmented",
+      "registryName": "halo-segmented",
+      "dependencies": [
+        "@base-ui/react",
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Base UI"
+      ]
+    },
+    {
+      "id": "halo-toggle-group",
+      "english": "Halo Toggle Group",
+      "category": "表单控件",
+      "name": "光晕切换按钮组",
+      "description": "少量单选按钮带共享滑动选中块。",
+      "mechanism": "Base UI Toggle Group 处理选择，Motion 根据选中项布局平滑移动背景滑块。",
+      "scenario": "列表网格、对齐和紧凑模式切换。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/halo-toggle-group.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/halo-toggle-group",
+      "registryName": "halo-toggle-group",
+      "dependencies": [
+        "@base-ui/react",
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Base UI"
+      ]
+    },
+    {
+      "id": "border-beam-input",
+      "english": "Border Beam Input",
+      "category": "表单控件",
+      "name": "流光边框输入框",
+      "description": "在输入框底边或整圈边框展示移动光效。",
+      "mechanism": "Base UI 提供输入行为，border-beam 包在独立外壳生成底边或全边框光带。",
+      "scenario": "AI 提问、搜索和邮件订阅输入。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/border-beam-input.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/border-beam-input",
+      "registryName": "border-beam-input",
+      "dependencies": [
+        "@base-ui/react",
+        "border-beam",
+        "class-variance-authority",
+        "clsx",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Base UI",
+        "border-beam"
+      ]
+    },
+    {
+      "id": "halo-badge",
+      "english": "Halo Badge",
+      "category": "反馈与状态",
+      "name": "光晕徽标",
+      "description": "渐变边缘、脉冲状态点与稳定数字宽度。",
+      "mechanism": "Motion 控制边缘和状态点动画，tabular-nums 保持计数更新时宽度稳定。",
+      "scenario": "通知数、在线状态和 AI 任务标签。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/halo-badge.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/halo-badge",
+      "registryName": "halo-badge",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG"
+      ]
+    },
+    {
+      "id": "halo-progress",
+      "english": "Halo Progress",
+      "category": "反馈与状态",
+      "name": "光晕进度条",
+      "description": "确定进度与未知时长加载共用一套外观。",
+      "mechanism": "Base UI Progress 提供语义，Motion 弹簧更新确定进度宽度；未知进度使用循环移动条纹。",
+      "scenario": "上传、分步表单和生成等待。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/halo-progress.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/halo-progress",
+      "registryName": "halo-progress",
+      "dependencies": [
+        "@base-ui/react",
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Base UI"
+      ]
+    },
+    {
+      "id": "halo-toast",
+      "english": "Halo Toast",
+      "category": "反馈与状态",
+      "name": "光晕全局提示",
+      "description": "统一弹出保存、失败等通知并支持动作按钮。",
+      "mechanism": "根布局挂载 Sonner toaster，helper 推送消息；自定义 rim 和关闭控件统一通知样式。",
+      "scenario": "全局保存反馈、请求失败和可撤销操作。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/halo-toast.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/halo-toast",
+      "registryName": "halo-toast",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "radix-ui",
+        "sonner",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ]
+    },
+    {
+      "id": "halo-notification",
+      "english": "Halo Notification",
+      "category": "反馈与状态",
+      "name": "光晕内联通知",
+      "description": "可关闭的状态卡片带边框变体和错开文字。",
+      "mechanism": "通知内容由 React 本地状态显示，AnimatePresence 管理挂载退出，Motion 编排图标与文字反馈。",
+      "scenario": "页面内提示、任务消息和局部错误。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/halo-notification.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/halo-notification",
+      "registryName": "halo-notification",
+      "dependencies": [
+        "@base-ui/react",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Base UI"
+      ]
+    },
+    {
+      "id": "dynamic-island",
+      "english": "Dynamic Island",
+      "category": "反馈与状态",
+      "name": "灵动岛",
+      "description": "状态条在通知、播放控制等尺寸之间变形。",
+      "mechanism": "复合 React 组件传递内容与尺寸状态，Motion 动画连接小型状态条和展开面板。",
+      "scenario": "通知、计时、媒体控制和任务状态。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/dynamic-island.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/dynamic-island",
+      "registryName": "dynamic-island",
+      "dependencies": [
+        "motion"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ]
+    },
+    {
+      "id": "direction-aware-tabs",
+      "english": "Direction Aware Tabs",
+      "category": "导航与浮层",
+      "name": "方向感知标签页",
+      "description": "内容按选项切换方向进入并适配高度。",
+      "mechanism": "比较新旧选项顺序得到方向，AnimatePresence 管理进入退出，测量内容高度后动画调整外壳。",
+      "scenario": "设置面板、价格切换和功能讲解。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/direction-aware-tabs.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/direction-aware-tabs",
+      "registryName": "direction-aware-tabs",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "react-use-measure",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ],
+      "demo": "tabs"
+    },
+    {
+      "id": "halo-tabs",
+      "english": "Halo Tabs",
+      "category": "导航与浮层",
+      "name": "光晕标签页",
+      "description": "活动标签带滑动下划线或胶囊标记。",
+      "mechanism": "Base UI Tabs 管理选中和面板语义，CSS 过渡移动渐变指示器到当前选项。",
+      "scenario": "仪表盘、设置和代码预览切换。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/halo-tabs.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/halo-tabs",
+      "registryName": "halo-tabs",
+      "dependencies": [
+        "@base-ui/react",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Base UI",
+        "CSS"
+      ]
+    },
+    {
+      "id": "gradient-button-group",
+      "english": "Gradient Button Group",
+      "category": "导航与浮层",
+      "name": "渐变按钮组",
+      "description": "活动按钮带动画圆环与主题切换。",
+      "mechanism": "Motion 让活动标记在按钮之间过渡，next-themes 切换亮暗主题，分层背景生成渐变质感。",
+      "scenario": "仪表盘工具栏和应用区段切换。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/gradient-button-group.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/gradient-button-group",
+      "registryName": "gradient-button-group",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "next-themes",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "next-themes",
+        "CSS"
+      ]
+    },
+    {
+      "id": "dock",
+      "english": "MacOS Dock",
+      "category": "导航与浮层",
+      "name": "桌面式 Dock",
+      "description": "指针附近的图标及邻近图标平滑放大。",
+      "mechanism": "MotionValue 保存指针位置，useTransform 把距离映射为尺寸，useSpring 平滑图标宽度。",
+      "scenario": "应用入口、作品集导航和快捷工具栏。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/dock.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/dock",
+      "registryName": "dock",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ],
+      "demo": "dock"
+    },
+    {
+      "id": "popover",
+      "english": "Popover",
+      "category": "导航与浮层",
+      "name": "变形 Popover",
+      "description": "触发按钮展开表单、文本框或菜单。",
+      "mechanism": "React 复合部件共享开关状态，Motion layout 过渡按钮与面板尺寸，点击外部关闭。",
+      "scenario": "快速笔记、菜单和内联反馈。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/popover.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/popover",
+      "registryName": "popover",
+      "dependencies": [
+        "clsx",
+        "lucide-react",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ]
+    },
+    {
+      "id": "popover-form",
+      "english": "Popover Form",
+      "category": "导航与浮层",
+      "name": "弹出表单",
+      "description": "按钮展开输入表单并切换成功状态。",
+      "mechanism": "Motion layout 动画连接触发器与表单，点击外部关闭，提交状态控制成功反馈。",
+      "scenario": "反馈、候补名单和快速联系。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/popover-form.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/popover-form",
+      "registryName": "popover-form",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG"
+      ]
+    },
+    {
+      "id": "floating-panel",
+      "english": "Floating Panel",
+      "category": "导航与浮层",
+      "name": "浮动面板",
+      "description": "从触发器变形展开的表单或文本面板。",
+      "mechanism": "上下文共享开关状态，Motion 连接触发器和面板布局；Escape 关闭，内容由组合插槽提供。",
+      "scenario": "快速笔记、内联反馈和工具栏操作。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/floating-panel.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/floating-panel",
+      "registryName": "floating-panel",
+      "dependencies": [
+        "clsx",
+        "lucide-react",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ]
+    },
+    {
+      "id": "family-drawer",
+      "english": "Family Drawer",
+      "category": "导航与浮层",
+      "name": "多视图抽屉",
+      "description": "同一底部抽屉内切换视图并调整高度。",
+      "mechanism": "Vaul 管理底部抽屉与手势，Motion 过渡不同视图和测量后的内容高度。",
+      "scenario": "移动设置、账户操作和连续确认步骤。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/family-drawer.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/family-drawer",
+      "registryName": "family-drawer",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "clsx",
+        "motion",
+        "react-use-measure",
+        "tailwind-merge",
+        "vaul"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "Radix UI",
+        "Vaul"
+      ]
+    },
+    {
+      "id": "side-panel",
+      "english": "Side Panel",
+      "category": "导航与浮层",
+      "name": "展开侧栏",
+      "description": "打开侧面内容或产品视频。",
+      "mechanism": "开关状态控制侧栏宽度与内容挂载，Motion 编排展开过程，自定义 toggle 连接用户操作。",
+      "scenario": "产品视频、了解更多和次级详情。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/side-panel.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/side-panel",
+      "registryName": "side-panel",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "react-use-measure",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ]
+    },
+    {
+      "id": "morph-surface",
+      "english": "Morph Surface",
+      "category": "导航与浮层",
+      "name": "变形输入面板",
+      "description": "按钮弹簧变形为文本输入区。",
+      "mechanism": "受控或非受控开关决定表面形态，Motion 连接按钮与 textarea；Escape 关闭，Cmd+Enter 提交。",
+      "scenario": "快速反馈、笔记和内联表单。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/morph-surface.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/morph-surface",
+      "registryName": "morph-surface",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG"
+      ]
+    },
+    {
+      "id": "expandable-screen",
+      "english": "Expandable Screen",
+      "category": "导航与浮层",
+      "name": "可展开全屏",
+      "description": "卡片或按钮平滑扩展为全屏内容。",
+      "mechanism": "触发器和全屏面板共享 Motion layoutId，React 开关状态决定挂载哪种布局。",
+      "scenario": "商品详情、注册表单和产品引导。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/expandable-screen.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/expandable-screen",
+      "registryName": "expandable-screen",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ]
+    },
+    {
+      "id": "onboarding",
+      "english": "Onboarding",
+      "category": "引导与流程",
+      "name": "分步引导组件",
+      "description": "步骤指示、功能轮播、选项组与提示列表。",
+      "mechanism": "根组件通过 Context 共享步骤状态，复合子组件根据当前步骤更新指示器、选项和提示。",
+      "scenario": "注册、首次设置和账户个性化。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/onboarding.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/onboarding",
+      "registryName": "onboarding",
+      "dependencies": [
+        "@radix-ui/react-use-controllable-state",
+        "class-variance-authority",
+        "clsx",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Radix UI"
+      ]
+    },
+    {
+      "id": "intro-disclosure",
+      "english": "Intro Disclosure",
+      "category": "引导与流程",
+      "name": "产品引导弹层",
+      "description": "桌面 Dialog 与移动 Drawer 展示分步引导。",
+      "mechanism": "响应式切换 Dialog/Drawer，步骤状态驱动内容和进度，localStorage 记录已关闭提示。",
+      "scenario": "新用户导览和功能更新公告。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/intro-disclosure.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/intro-disclosure",
+      "registryName": "intro-disclosure",
+      "dependencies": [
+        "@radix-ui/react-aspect-ratio",
+        "@radix-ui/react-checkbox",
+        "@radix-ui/react-progress",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "next",
+        "radix-ui",
+        "react-use-measure",
+        "tailwind-merge",
+        "vaul"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "Radix UI",
+        "Vaul",
+        "Next.js 适配",
+        "localStorage",
+        "媒体"
+      ]
+    },
+    {
+      "id": "wizard-expandable",
+      "english": "Wizard Expandable",
+      "category": "引导与流程",
+      "name": "展开式向导",
+      "description": "带步骤校验和键盘操作的多步表单。",
+      "mechanism": "步骤状态配合校验函数限制前进，Motion 连接不同表单布局，键盘事件处理导航。",
+      "scenario": "注册、账户设置和结算引导。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/wizard-expandable.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/wizard-expandable",
+      "registryName": "wizard-expandable",
+      "dependencies": [
+        "@base-ui/react",
+        "@radix-ui/react-use-controllable-state",
+        "class-variance-authority",
+        "clsx",
+        "motion",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Base UI",
+        "Radix UI"
+      ]
+    },
+    {
+      "id": "toolbar-expandable",
+      "english": "Toolbar Expandable",
+      "category": "引导与流程",
+      "name": "可展开工具栏",
+      "description": "紧凑工具栏展开为可滚动分步面板。",
+      "mechanism": "Motion 过渡工具栏与面板布局，Radix Scroll Area 承载长内容，步骤状态控制当前提示。",
+      "scenario": "功能导览、首次引导和紧凑设置。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/toolbar-expandable.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/toolbar-expandable",
+      "registryName": "toolbar-expandable",
+      "dependencies": [
+        "@radix-ui/react-scroll-area",
+        "class-variance-authority",
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Radix UI"
+      ]
+    },
+    {
+      "id": "family-button",
+      "english": "Family Button",
+      "category": "引导与流程",
+      "name": "浮动展开按钮",
+      "description": "加号按钮展开为自定义内容面板。",
+      "mechanism": "按钮与展开面板共享布局形态，Motion 在图标和内容容器之间执行尺寸与透明度过渡。",
+      "scenario": "快捷创建、浮动操作和移动分享菜单。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/family-button.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/family-button",
+      "registryName": "family-button",
+      "dependencies": [
+        "clsx",
+        "lucide-react",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ]
+    },
+    {
+      "id": "neumorph-button",
+      "english": "Neumorph Button",
+      "category": "按钮",
+      "name": "拟物按钮",
+      "description": "柔和阴影、按压反馈和加载指示。",
+      "mechanism": "阴影与背景叠层产生凹凸质感，Motion 模拟按压，intent/size 状态选择外观与加载反馈。",
+      "scenario": "表单提交、工具栏和触感界面。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/neumorph-button.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/neumorph-button",
+      "registryName": "neumorph-button",
+      "dependencies": [
+        "class-variance-authority",
+        "lucide-react",
+        "motion"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "CSS"
+      ]
+    },
+    {
+      "id": "texture-button",
+      "english": "Texture Button",
+      "category": "按钮",
+      "name": "触感纹理按钮",
+      "description": "多层边缘与渐变产生可按压外观。",
+      "mechanism": "CSS 边框、渐变和阴影构成表面，Radix Slot 支持 asChild，variant/size 选择按钮配置。",
+      "scenario": "表单、对话框和仪表盘动作。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/texture-button.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/texture-button",
+      "registryName": "texture-button",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Radix UI",
+        "CSS"
+      ]
+    },
+    {
+      "id": "bg-animate-button",
+      "english": "Bg Animate Button",
+      "category": "按钮",
+      "name": "动态背景按钮",
+      "description": "带旋转锥形渐变的按钮，支持多种外观。",
+      "mechanism": "CSS 锥形渐变构成背景层，CVA 选择样式变体，Radix Slot 的 asChild 复用调用方元素。",
+      "scenario": "注册、订阅和营销页面的主要操作。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/bg-animate-button.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/bg-animate-button",
+      "registryName": "bg-animate-button",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Radix UI",
+        "CSS"
+      ]
+    },
+    {
+      "id": "border-beam-button",
+      "english": "Border Beam Button",
+      "category": "按钮",
+      "name": "流光边框按钮",
+      "description": "按钮外沿带持续移动光带，支持文字和图标形式。",
+      "mechanism": "border-beam 包提供边框动效，外壳包裹 shadcn Button 并保持内部按钮交互。",
+      "scenario": "AI 输入栏、升级提示和引导流程的主要操作。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/border-beam-button.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/border-beam-button",
+      "registryName": "border-beam-button",
+      "dependencies": [
+        "border-beam",
+        "class-variance-authority",
+        "clsx",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "border-beam"
+      ]
+    },
+    {
+      "id": "metal-button",
+      "english": "Metal Button",
+      "category": "按钮",
+      "name": "金属按钮",
+      "description": "液态金属圆环包裹文字或图标按钮。",
+      "mechanism": "metal-fx 库渲染动态金属边缘，内层保留 shadcn Button 语义及点击行为。",
+      "scenario": "首屏重点操作和产品发布。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/metal-button.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/metal-button",
+      "registryName": "metal-button",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "metal-fx",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "WebGL",
+        "Shader",
+        "metal-fx"
+      ]
+    },
+    {
+      "id": "cosmic-button",
+      "english": "Cosmic Button",
+      "category": "按钮",
+      "name": "宇宙渐变按钮",
+      "description": "悬停时发光渐变边框增大。",
+      "mechanism": "独立渐变边框层随悬停扩张，多态 as 属性决定渲染链接还是按钮。",
+      "scenario": "发布公告和产品首屏操作。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/cosmic-button.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/cosmic-button",
+      "registryName": "cosmic-button",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "CSS"
+      ]
+    },
+    {
+      "id": "organic-button",
+      "english": "Organic Button",
+      "category": "按钮",
+      "name": "有机曲线按钮",
+      "description": "SVG 弯曲端帽形成柔和按钮轮廓。",
+      "mechanism": "SVG 端部与中间内容拼接外形，主题变量决定颜色，Radix Slot 支持 asChild 链接。",
+      "scenario": "营销行动按钮和导航链接。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/organic-button.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/organic-button",
+      "registryName": "organic-button",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG",
+        "Radix UI"
+      ]
+    },
+    {
+      "id": "halo-button",
+      "english": "Halo Button",
+      "category": "按钮",
+      "name": "光晕按钮",
+      "description": "磨砂填充、渐变边缘与加载反馈。",
+      "mechanism": "按钮外壳叠加动态渐变边缘，Motion 错开文字进入；loading 状态切换指示器与操作状态。",
+      "scenario": "表单提交、对话框和 AI 发送操作。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/halo-button.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/halo-button",
+      "registryName": "halo-button",
+      "dependencies": [
+        "@base-ui/react",
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "Base UI",
+        "CSS"
+      ]
+    },
+    {
+      "id": "copy-button",
+      "english": "Copy Button",
+      "category": "按钮",
+      "name": "复制按钮",
+      "description": "复制内容后显示动画勾选反馈。",
+      "mechanism": "优先调用 Clipboard API，旧环境用回退复制方式；成功状态通过 Motion 切换复制与勾选图标。",
+      "scenario": "代码片段、API Key 和分享链接。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/copy-button.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/copy-button",
+      "registryName": "copy-button",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Clipboard API"
+      ]
+    },
+    {
+      "id": "minimal-card",
+      "english": "Minimal Card",
+      "category": "卡片",
+      "name": "简洁图片卡片",
+      "description": "图像、标题和说明组成紧凑内容卡。",
+      "mechanism": "复合卡片插槽组织图片与文字，Next.js Image 处理图像尺寸和加载。",
+      "scenario": "博客预览、商品网格和作品画廊。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/minimal-card.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/minimal-card",
+      "registryName": "minimal-card",
+      "dependencies": [
+        "clsx",
+        "next",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Next.js 适配"
+      ]
+    },
+    {
+      "id": "cutout-card",
+      "english": "Cutout Card",
+      "category": "卡片",
+      "name": "切角卡片",
+      "description": "图像卡片带切角、嵌入标签与悬停操作。",
+      "mechanism": "复合卡片将切角、标记和内容分层，Motion 控制悬停时的操作显露与位移。",
+      "scenario": "作品集、图片画廊和模板展示。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/cutout-card.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/cutout-card",
+      "registryName": "cutout-card",
+      "dependencies": [
+        "@radix-ui/react-use-controllable-state",
+        "clsx",
+        "motion",
+        "next",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "Radix UI",
+        "Next.js 适配"
+      ]
+    },
+    {
+      "id": "texture-card",
+      "english": "Texture Card",
+      "category": "卡片",
+      "name": "触感纹理卡片",
+      "description": "带分层边缘与复合标题内容页脚。",
+      "mechanism": "复合 Card 插槽组织分区，边框、内阴影与渐变模拟拟物表面，separator 分隔内容。",
+      "scenario": "设置面板、登录、定价和数据卡片。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/texture-card.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/texture-card",
+      "registryName": "texture-card",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "CSS"
+      ]
+    },
+    {
+      "id": "shift-card",
+      "english": "Shift Card",
+      "category": "卡片",
+      "name": "悬停展开卡片",
+      "description": "标题和次级内容在悬停时移动显露。",
+      "mechanism": "isHovered 切换内容高度目标值，Motion 插值高度，AnimatePresence 管理摘要与详情出现退出。",
+      "scenario": "商品、团队和功能列表。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/shift-card.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/shift-card",
+      "registryName": "shift-card",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ],
+      "demo": "shift"
+    },
+    {
+      "id": "folded-card",
+      "english": "Folded Card",
+      "category": "卡片",
+      "name": "折角卡片",
+      "description": "模板卡片包含折角、虚线网格与徽标。",
+      "mechanism": "复合 React 卡片插槽分离预览、徽标和页脚，装饰图层生成折角及虚线网格。",
+      "scenario": "模板画廊、博客索引和资源目录。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/folded-card.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/folded-card",
+      "registryName": "folded-card",
+      "dependencies": [
+        "clsx",
+        "next",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG",
+        "Next.js 适配"
+      ]
+    },
+    {
+      "id": "shadow-card",
+      "english": "Shadow Card",
+      "category": "卡片",
+      "name": "立体阴影卡片",
+      "description": "凸出边缘、斜面、竖排文字与像素网格。",
+      "mechanism": "复合卡片用多层背景与边缘叠层模拟厚度，装饰插槽加入竖排标签和网格视觉。",
+      "scenario": "功能卡、价格方案和营销区域。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/shadow-card.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/shadow-card",
+      "registryName": "shadow-card",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Radix UI"
+      ]
+    },
+    {
+      "id": "organic-card",
+      "english": "Organic Card",
+      "category": "卡片",
+      "name": "有机营销卡片",
+      "description": "图片、眉题、曲线色带和 CTA 组合成卡片。",
+      "mechanism": "复合插槽拼接图片与 SVG 色带，可选 Next.js Link 让整卡成为链接。",
+      "scenario": "案例、功能亮点和营销内容网格。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/organic-card.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/organic-card",
+      "registryName": "organic-card",
+      "dependencies": [
+        "clsx",
+        "lucide-react",
+        "next",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG",
+        "Next.js 适配"
+      ]
+    },
+    {
+      "id": "organic-card-small",
+      "english": "Organic Card Small",
+      "category": "卡片",
+      "name": "紧凑有机卡片",
+      "description": "带曲线切口的图片链接卡片。",
+      "mechanism": "SVG 切口装饰图像边缘，Motion 控制卡片反馈并遵循减少动态效果，组合分类和日期。",
+      "scenario": "新闻、博客和相关文章网格。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/organic-card-small.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/organic-card-small",
+      "registryName": "organic-card-small",
+      "dependencies": [
+        "clsx",
+        "lucide-react",
+        "motion",
+        "next",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "Next.js 适配"
+      ]
+    },
+    {
+      "id": "halo-card",
+      "english": "Halo Card",
+      "category": "卡片",
+      "name": "光晕卡片",
+      "description": "磨砂表面配合渐变边框和复合内容区。",
+      "mechanism": "独立 rim 与 surface 分层显示边缘和内容，header/content/footer 插槽保留卡片组合能力。",
+      "scenario": "推荐套餐、公告与 AI 结果面板。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/halo-card.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/halo-card",
+      "registryName": "halo-card",
+      "dependencies": [
+        "@base-ui/react",
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Base UI"
+      ]
+    },
+    {
+      "id": "border-beam-card",
+      "english": "Border Beam Card",
+      "category": "卡片",
+      "name": "流光边框卡片",
+      "description": "以流动光带突出推荐套餐、任务或公告。",
+      "mechanism": "border-beam 包围绕 Card 复合结构生成光带；外壳轨道、圆角和 overflow 控制光效范围。",
+      "scenario": "推荐价格方案、活跃任务和重点公告。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/border-beam-card.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/border-beam-card",
+      "registryName": "border-beam-card",
+      "dependencies": [
+        "border-beam",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "border-beam"
+      ],
+      "demo": "beam"
+    },
+    {
+      "id": "expandable",
+      "english": "Expandable Card",
+      "category": "卡片",
+      "name": "可展开卡片",
+      "description": "紧凑卡片展开更多详情。",
+      "mechanism": "组合上下文管理展开状态，react-use-measure 测量内容，Motion 插值尺寸和细节显露。",
+      "scenario": "活动卡、商品卡和仪表盘摘要。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/expandable.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/expandable",
+      "registryName": "expandable",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "react-use-measure",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ]
+    },
+    {
+      "id": "hero-dithering",
+      "english": "Hero Dithering",
+      "category": "落地页",
+      "name": "抖色首屏",
+      "description": "文字与抖色图形分栏展示。",
+      "mechanism": "Paper Design Dithering WebGL shader 生成点阵抖色视觉，桌面和移动布局分别提供视觉容器。",
+      "scenario": "开发工具和产品主页首屏。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/hero-dithering.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/hero-dithering",
+      "registryName": "hero-dithering",
+      "dependencies": [
+        "@paper-design/shaders-react",
+        "class-variance-authority",
+        "clsx",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG",
+        "WebGL",
+        "Shader",
+        "Paper Design"
+      ]
+    },
+    {
+      "id": "hero-color-panels",
+      "english": "Hero Color Panels",
+      "category": "落地页",
+      "name": "色彩面板首屏",
+      "description": "分栏内容配合 WebGL 色彩面板。",
+      "mechanism": "Paper Design ColorPanels shader 绘制视觉区，React 组合正文、CTA 与技术徽标。",
+      "scenario": "产品发布页和品牌官网首屏。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/hero-color-panel.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/hero-color-panels",
+      "registryName": "hero-color-panel",
+      "dependencies": [
+        "@paper-design/shaders-react",
+        "class-variance-authority",
+        "clsx",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG",
+        "WebGL",
+        "Shader",
+        "Paper Design"
+      ]
+    },
+    {
+      "id": "hero-heatmap",
+      "english": "Hero Heatmap",
+      "category": "落地页",
+      "name": "热力图首屏",
+      "description": "发光热力图视觉搭配行动按钮与徽标。",
+      "mechanism": "Paper Design Heatmap WebGL shader 绘制发光热区，React 分栏布局容纳正文和按钮。",
+      "scenario": "SaaS 官网、数据产品和发布页面。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/hero-heatmap.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/hero-heatmap",
+      "registryName": "hero-heatmap",
+      "dependencies": [
+        "@paper-design/shaders-react",
+        "class-variance-authority",
+        "clsx",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG",
+        "WebGL",
+        "Shader",
+        "Paper Design"
+      ]
+    },
+    {
+      "id": "hero-liquid-metal",
+      "english": "Hero Liquid Metal",
+      "category": "落地页",
+      "name": "液态金属首屏",
+      "description": "铬色流体视觉搭配产品介绍。",
+      "mechanism": "Paper Design LiquidMetal WebGL shader 通过图形采样产生金属反射，首屏插槽组合 CTA 与徽标。",
+      "scenario": "创意产品发布、品牌首页和活动首屏。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/hero-liquid-metal.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/hero-liquid-metal",
+      "registryName": "hero-liquid-metal",
+      "dependencies": [
+        "@paper-design/shaders-react",
+        "class-variance-authority",
+        "clsx",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG",
+        "WebGL",
+        "Shader",
+        "Paper Design"
+      ]
+    },
+    {
+      "id": "hero-static-radial-gradient",
+      "english": "Hero Static Radial Gradient",
+      "category": "落地页",
+      "name": "静态径向渐变首屏",
+      "description": "柔和渐变背景避免持续动态。",
+      "mechanism": "Paper Design StaticRadialGradient shader 绘制固定径向配色，React 布局组合标题、CTA 和技术徽标。",
+      "scenario": "需要柔和背景的产品官网。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/hero-static-radial-gradient.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/hero-static-radial-gradient",
+      "registryName": "hero-static-radial-gradient",
+      "dependencies": [
+        "@paper-design/shaders-react",
+        "class-variance-authority",
+        "clsx",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG",
+        "WebGL",
+        "Shader",
+        "Paper Design"
+      ]
+    },
+    {
+      "id": "bg-media",
+      "english": "Bg Media Hero",
+      "category": "落地页",
+      "name": "媒体背景",
+      "description": "全屏图片或视频配合遮罩与播放暂停控制。",
+      "mechanism": "媒体元素负责图像或视频播放，覆盖层调节正文对比度，React 状态连接播放控件。",
+      "scenario": "活动页、影像作品集与媒体主导的首屏。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/bg-media.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/bg-media",
+      "registryName": "bg-media",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "媒体"
+      ]
+    },
+    {
+      "id": "marketing-hero-analytics",
+      "english": "Marketing Hero Analytics",
+      "category": "落地页",
+      "name": "分析产品首屏",
+      "description": "交互曲线、来源列表与日志构成产品视觉。",
+      "mechanism": "SVG 图表与 React 数据列表组成首屏，指针触发图表详情，日志面板模拟分析工作台。",
+      "scenario": "分析、监控和开发工具官网。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/marketing-hero-analytics.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/marketing-hero-analytics",
+      "registryName": "marketing-hero-analytics",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "marketing-feature-code",
+      "english": "Marketing Feature Code",
+      "category": "落地页",
+      "name": "代码功能区",
+      "description": "功能列表与可复制的代码片段并排。",
+      "mechanism": "复合区域插槽组合功能说明与代码面板，复制按钮读取片段，样式突出代码和具体功能关系。",
+      "scenario": "SDK、API 配置和开发者功能说明。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/marketing-feature-code.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/marketing-feature-code",
+      "registryName": "marketing-feature-code",
+      "dependencies": [
+        "clsx",
+        "lucide-react",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Clipboard API"
+      ]
+    },
+    {
+      "id": "feature-sticky-section",
+      "english": "Feature Sticky Section",
+      "category": "落地页",
+      "name": "滚动吸附功能区",
+      "description": "固定导航随当前可见内容同步高亮。",
+      "mechanism": "IntersectionObserver 记录面板进入视区，触发器滚动到对应内容，sticky 布局固定导航。",
+      "scenario": "长页面功能讲解和开源项目展示。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/feature-sticky-section.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/feature-sticky-section",
+      "registryName": "feature-sticky-section",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "@radix-ui/react-use-controllable-state",
+        "clsx",
+        "next",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG",
+        "Radix UI",
+        "Next.js 适配",
+        "IntersectionObserver"
+      ]
+    },
+    {
+      "id": "feature-carousel",
+      "english": "Feature Carousel",
+      "category": "落地页",
+      "name": "功能步骤轮播",
+      "description": "用亮暗主题截图分步讲解功能流程。",
+      "mechanism": "步骤状态连接标题与截图，Motion 编排切换，next/image 承载响应式演示图片。",
+      "scenario": "产品落地页、流程教学和功能导览。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/feature-carousel.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/feature-carousel",
+      "registryName": "feature-carousel",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "next",
+        "react-wrap-balancer",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "Next.js 适配"
+      ]
+    },
+    {
+      "id": "logo-carousel",
+      "english": "Logo Carousel",
+      "category": "落地页",
+      "name": "品牌标志轮播",
+      "description": "客户图标在错开的多列中交替出现。",
+      "mechanism": "SVG 标志按列排列，Motion 错开入场与轮换，周期更新每列当前标志。",
+      "scenario": "客户墙、合作伙伴和集成展示。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/logo-carousel.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/logo-carousel",
+      "registryName": "logo-carousel",
+      "dependencies": [
+        "motion"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG"
+      ]
+    },
+    {
+      "id": "tweet-grid",
+      "english": "Tweet Grid",
+      "category": "落地页",
+      "name": "推文网格",
+      "description": "按推文 ID 显示瀑布流社交内容。",
+      "mechanism": "网格或多列布局排布嵌入推文，外部 tweet 组件按 ID 获取展示数据；网络请求并非静态内容。",
+      "scenario": "客户评价、社区和社交证明。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/tweet-grid.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/tweet-grid",
+      "registryName": "tweet-grid",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React"
+      ]
+    },
+    {
+      "id": "gateway-endpoint-illustration",
+      "english": "Gateway Endpoint Illustration",
+      "category": "插画",
+      "name": "网关端点插图",
+      "description": "显示单一 API 端点连接多个模型提供方。",
+      "mechanism": "SVG 端点与扇出连线组成拓扑，颜色属性统一模型节点和连接线；不发送 API 请求。",
+      "scenario": "多模型 API 网关介绍和产品官网。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/gateway-endpoint-illustration.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/gateway-endpoint-illustration",
+      "registryName": "gateway-endpoint-illustration",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "gateway-route-illustration",
+      "english": "Gateway Route Illustration",
+      "category": "插画",
+      "name": "网关路由插图",
+      "description": "用弧线和环形布局说明模型请求路由。",
+      "mechanism": "SVG 弧线把模型节点围绕网关排布，复合节点与颜色属性呈现不同路由关系。",
+      "scenario": "AI 网关、模型路由和服务说明。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/gateway-route-illustration.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/gateway-route-illustration",
+      "registryName": "gateway-route-illustration",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "gateway-svg-illustration",
+      "english": "Gateway SVG Illustration",
+      "category": "插画",
+      "name": "网关汇聚插图",
+      "description": "多条线路汇入中心节点呈现请求流。",
+      "mechanism": "SVG hub 布局连接外围线路和中心网关，通过主题颜色区分路径与节点。",
+      "scenario": "请求流程、网关开销和延迟说明。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/gateway-svg-illustration.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/gateway-svg-illustration",
+      "registryName": "gateway-svg-illustration",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "illustration-card-grid",
+      "english": "Illustration Card Grid",
+      "category": "插画",
+      "name": "插图功能网格",
+      "description": "图文卡片内组合 AI 网关主题插图。",
+      "mechanism": "网格容器排列标题和说明，内置 SVG 插图组件放入卡片视觉区，属性定制图文内容。",
+      "scenario": "网关产品、故障转移和功能营销区。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/illustration-card-grid.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/illustration-card-grid",
+      "registryName": "illustration-card-grid",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "illustration-cursor",
+      "english": "Illustration Cursor",
+      "category": "插画",
+      "name": "多人光标插图",
+      "description": "带名称和颜色的光标自动移动。",
+      "mechanism": "requestAnimationFrame 按帧更新 SVG 光标位置，标签跟随游标；仅模拟多人协作视觉。",
+      "scenario": "编辑器、白板和设计工具官网。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/illustration-cursor.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/illustration-cursor",
+      "registryName": "illustration-cursor",
+      "dependencies": [],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "illustration-comment-bubble",
+      "english": "Illustration Comment Bubble",
+      "category": "插画",
+      "name": "评论气泡插图",
+      "description": "头像、行内代码与光标组合成评论视觉。",
+      "mechanism": "SVG 绘制头像、代码片段和评论气泡，通过布局叠加光标；不连接实时消息服务。",
+      "scenario": "协作、代码审查和消息产品功能区。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/illustration-comment-bubble.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/illustration-comment-bubble",
+      "registryName": "illustration-comment-bubble",
+      "dependencies": [],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "illustration-fluid-rendering",
+      "english": "Illustration Fluid Rendering",
+      "category": "插画",
+      "name": "流式渲染插图",
+      "description": "浏览器连接电商和 CMS 平台。",
+      "mechanism": "SVG 浏览器与平台节点通过连线组合，主题颜色和图标插槽允许替换品牌与内容。",
+      "scenario": "无头电商、CMS 和内容渲染说明。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/illustration-fluid-rendering.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/illustration-fluid-rendering",
+      "registryName": "illustration-fluid-rendering",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "illustration-globe-vercel",
+      "english": "Illustration Globe Vercel",
+      "category": "插画",
+      "name": "部署地球插图",
+      "description": "地球视觉显示部署中、成功与失败状态。",
+      "mechanism": "SVG 地球与部署状态按时间或按钮切换，重播控件重新触发展示序列；不执行部署。",
+      "scenario": "托管、边缘网络和部署产品介绍。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/illustration-globe-vercel.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/illustration-globe-vercel",
+      "registryName": "illustration-globe-vercel",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "illustration-graph",
+      "english": "Illustration Graph",
+      "category": "插画",
+      "name": "图表插图",
+      "description": "坐标、数据点与错误区域呈现监控视觉。",
+      "mechanism": "SVG 轴线和曲线路径描绘图形，强调区域与标记叠层展示异常位置。",
+      "scenario": "监控、可观察性和分析产品官网。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/illustration-graph.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/illustration-graph",
+      "registryName": "illustration-graph",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "tabs-illustration-vercel",
+      "english": "Tabs Illustration Vercel",
+      "category": "插画",
+      "name": "自动插图标签页",
+      "description": "按时间切换功能插图并显示进度。",
+      "mechanism": "标签状态与定时进度连接，SVG 动态插图随活动项切换，用户操作可以改变当前视图。",
+      "scenario": "AI 产品首屏和功能介绍。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/tabs-illustration-vercel.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/tabs-illustration-vercel",
+      "registryName": "tabs-illustration-vercel",
+      "dependencies": [],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "circuit-board",
+      "english": "Circuit Board",
+      "category": "插画",
+      "name": "电路板插图",
+      "description": "中央芯片周围出现发光线路。",
+      "mechanism": "SVG 路径定义芯片和电路轨迹，Motion 与 CSS keyframes 让线路高亮沿路径移动。",
+      "scenario": "AI、硬件、基础设施与开发工具官网。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/circuit-board.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/circuit-board",
+      "registryName": "circuit-board",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "CSS"
+      ]
+    },
+    {
+      "id": "fluid-ai-workloads",
+      "english": "Fluid AI Workloads",
+      "category": "插画",
+      "name": "AI 工作负载插图",
+      "description": "用分支连线连接卡片与算力节点。",
+      "mechanism": "SVG 定义卡片、分支连接线和节点，填充与描边属性调整主题；只说明拓扑不调度算力。",
+      "scenario": "AI 基础设施、算力定价和产品文档。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/fluid-ai-workloads.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/fluid-ai-workloads",
+      "registryName": "fluid-ai-workloads",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "security-checkpoint",
+      "english": "Security Checkpoint",
+      "category": "插画",
+      "name": "安全检查插图",
+      "description": "验证卡与多层线条表现安全检查过程。",
+      "mechanism": "React 插槽组织标题、信息和验证卡，装饰线层执行动画；不会真正验证机器人或用户权限。",
+      "scenario": "防护产品介绍、检查中页面和营销安全区。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/security-checkpoint.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/security-checkpoint",
+      "registryName": "security-checkpoint",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React"
+      ]
+    },
+    {
+      "id": "merging-bubbles",
+      "english": "Merging Bubbles",
+      "category": "插画",
+      "name": "融合气泡",
+      "description": "两个品牌图标被连接成一组气泡。",
+      "mechanism": "SVG 轮廓绘制相交气泡与连接部位，图标插槽和尺寸属性表现两种产品结合。",
+      "scenario": "集成能力、伙伴公告和联合方案。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/merging-bubbles.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/merging-bubbles",
+      "registryName": "merging-bubbles",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "globe",
+      "english": "Globe (COBE)",
+      "category": "插画",
+      "name": "WebGL 地球",
+      "description": "可拖动旋转的三维地球展示标记与弧线。",
+      "mechanism": "COBE 在 Canvas WebGL 中绘制球体，指针拖动改变旋转参数，next-themes 提供主题配色。",
+      "scenario": "CDN 地图、部署区域、航线与全球业务。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/globe.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/globe",
+      "registryName": "globe",
+      "dependencies": [
+        "clsx",
+        "cobe",
+        "motion",
+        "next-themes",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "Canvas",
+        "WebGL",
+        "COBE",
+        "next-themes"
+      ]
+    },
+    {
+      "id": "mock-browser-window",
+      "english": "Browser Window",
+      "category": "媒体与设备模型",
+      "name": "浏览器窗口模型",
+      "description": "Chrome、Safari 或通用外框呈现产品。",
+      "mechanism": "React 组合地址栏、侧栏与内容插槽，主题和窗口样式属性替换外壳细节。",
+      "scenario": "应用截图、嵌入演示和文档预览。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/mock-browser-window.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/mock-browser-window",
+      "registryName": "mock-browser-window",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "apple-iphone-17-pro",
+      "english": "Apple iPhone 17 Pro Max",
+      "category": "媒体与设备模型",
+      "name": "iPhone 设备模型",
+      "description": "用手机外框、状态栏与灵动岛包装应用界面。",
+      "mechanism": "React 内容插槽嵌入设备屏幕，框体颜色及灵动岛尺寸属性控制装饰结构。",
+      "scenario": "移动应用发布页、作品集与产品案例。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/apple-iphone-17-pro.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/apple-iphone-17-pro",
+      "registryName": "apple-iphone-17-pro",
+      "dependencies": [
+        "clsx",
+        "lucide-react",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG"
+      ]
+    },
+    {
+      "id": "apple-keyboard",
+      "english": "Apple Keyboard",
+      "category": "媒体与设备模型",
+      "name": "Apple 键盘插图",
+      "description": "展示可按压的键帽、标签与媒体控制图标。",
+      "mechanism": "网格排布键帽，按压状态改变键帽外观，Tabler 图标表示媒体键功能。",
+      "scenario": "快捷键指南、效率工具和开发工具宣传。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/apple-keyboard.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/apple-keyboard",
+      "registryName": "apple-keyboard",
+      "dependencies": [
+        "@tabler/icons-react",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React"
+      ]
+    },
+    {
+      "id": "apple-watch-ultra",
+      "english": "Apple Watch Ultra",
+      "category": "媒体与设备模型",
+      "name": "Apple Watch 模型",
+      "description": "带可点击复杂功能、旋转表冠与指南针的手表演示。",
+      "mechanism": "局部状态驱动表盘内容，Motion 连续旋转和过渡模拟表冠与指南针响应。",
+      "scenario": "运动、户外和可穿戴应用展示。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/apple-watch-ultra.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/apple-watch-ultra",
+      "registryName": "apple-watch-ultra",
+      "dependencies": [
+        "clsx",
+        "lucide-react",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ]
+    },
+    {
+      "id": "mac-screen",
+      "english": "Mac Screen",
+      "category": "媒体与设备模型",
+      "name": "复古 Mac 模型",
+      "description": "把图片或 GIF 放入经典 CRT 屏幕。",
+      "mechanism": "响应式框体保持设备比例，屏幕插槽裁切媒体到 CRT 内部，装饰层形成复古机身。",
+      "scenario": "复古产品演示、作品集和动图展示。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/mac-screen.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/mac-screen",
+      "registryName": "mac-screen",
+      "dependencies": [],
+      "tags": [
+        "React"
+      ]
+    },
+    {
+      "id": "apple-pro-display-xdr",
+      "english": "Apple Pro Display XDR",
+      "category": "媒体与设备模型",
+      "name": "Pro Display XDR 模型",
+      "description": "铝制显示器外框展示桌面屏幕与 Dock。",
+      "mechanism": "React 屏幕插槽与显示模式组成设备外壳，Motion 控制内置 macOS Dock 的反馈。",
+      "scenario": "桌面应用发布页和产品功能演示。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/apple-pro-display-xdr.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/apple-pro-display-xdr",
+      "registryName": "apple-pro-display-xdr",
+      "dependencies": [
+        "@base-ui/react",
+        "@radix-ui/react-slot",
+        "@tabler/icons-react",
+        "clsx",
+        "motion",
+        "next",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "Base UI",
+        "Radix UI",
+        "Next.js 适配"
+      ]
+    },
+    {
+      "id": "three-d-carousel",
+      "english": "3D Carousel",
+      "category": "媒体与设备模型",
+      "name": "三维图片轮播",
+      "description": "图片围绕圆柱排列，拖动惯性旋转并展开。",
+      "mechanism": "CSS perspective/rotateY/translateZ 将图片放入三维环，Motion 将拖动距离映射为旋转并处理展开布局。",
+      "scenario": "摄影、产品图片和视觉作品集。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/three-d-carousel.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/three-d-carousel",
+      "registryName": "three-d-carousel",
+      "dependencies": [
+        "motion"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "CSS"
+      ]
+    },
+    {
+      "id": "hover-video-player",
+      "english": "Hover Video Player",
+      "category": "媒体与设备模型",
+      "name": "悬停视频预览",
+      "description": "悬停播放、懒加载、缩略图与画中画。",
+      "mechanism": "鼠标或触屏事件控制 video 播放，按需要加载媒体；Motion 切换覆盖层，浏览器 API 提供画中画。",
+      "scenario": "视频图库、课程封面和产品演示缩略图。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/hover-video-player.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/hover-video-player",
+      "registryName": "hover-video-player",
+      "dependencies": [
+        "@radix-ui/react-slider",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "next",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Radix UI",
+        "Next.js 适配",
+        "IntersectionObserver",
+        "媒体"
+      ]
+    },
+    {
+      "id": "youtube-video-player",
+      "english": "YouTube Video Player",
+      "category": "媒体与设备模型",
+      "name": "YouTube 视频播放器",
+      "description": "缩略图播放按钮展开动画视频弹层。",
+      "mechanism": "点击后挂载 YouTube iframe，Motion 过渡缩略图与模态面板，关闭时卸载媒体。",
+      "scenario": "教程、产品演示和视频评价。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/youtube-video-player.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/youtube-video-player",
+      "registryName": "youtube-video-player",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "媒体"
+      ]
+    },
+    {
+      "id": "loading-carousel",
+      "english": "Loading Carousel",
+      "category": "媒体与设备模型",
+      "name": "加载提示轮播",
+      "description": "等待时播放图片提示并显示时间进度。",
+      "mechanism": "Embla 管理轮播位置和导航，定时器控制自动前进，Motion 呈现进度与内容过渡。",
+      "scenario": "加载屏、首次引导和长任务等待。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/loading-carousel.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/loading-carousel",
+      "registryName": "loading-carousel",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "embla-carousel-autoplay",
+        "embla-carousel-react",
+        "lucide-react",
+        "motion",
+        "next",
+        "radix-ui",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Embla",
+        "Next.js 适配"
+      ]
+    },
+    {
+      "id": "grid-beam",
+      "english": "Grid Beam",
+      "category": "背景与视觉效果",
+      "name": "网格光束",
+      "description": "光束沿网格穿行，支持颜色与分隔图形。",
+      "mechanism": "Canvas 按帧绘制网格光束，useGridBeam 抽出渲染逻辑；SVG 分隔器可组合页面边缘。",
+      "scenario": "价格表、功能网格和首屏背景。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/grid-beam.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/grid-beam",
+      "registryName": "grid-beam",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG",
+        "Canvas"
+      ]
+    },
+    {
+      "id": "bg-animated-fractal-grid",
+      "english": "Fractal Grid",
+      "category": "背景与视觉效果",
+      "name": "分形点阵背景",
+      "description": "带悬停波纹、噪声与指针光晕的点阵。",
+      "mechanism": "Canvas 绘制网格点，以指针距离改变波动和光晕；噪声叠层丰富背景。",
+      "scenario": "产品首屏、功能区域和交互背景。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/bg-animated-fractal-dot-grid.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/bg-animated-fractal-grid",
+      "registryName": "bg-animated-fractal-dot-grid",
+      "dependencies": [
+        "motion"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "Canvas"
+      ]
+    },
+    {
+      "id": "canvas-fractal-grid",
+      "english": "Canvas Fractal Grid",
+      "category": "背景与视觉效果",
+      "name": "Canvas 分形网格",
+      "description": "带渐变、噪声、光晕和性能配置的点阵背景。",
+      "mechanism": "Canvas 按帧绘制点阵与噪声，Motion 连接交互状态；质量预设调节绘制密度和效果。",
+      "scenario": "首屏背景、产品页面和创意交互区。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/canvas-fractal-grid.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/canvas-fractal-grid",
+      "registryName": "canvas-fractal-grid",
+      "dependencies": [
+        "motion"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG",
+        "Canvas"
+      ]
+    },
+    {
+      "id": "stripe-bg-guides",
+      "english": "Stripe Bg Guides",
+      "category": "背景与视觉效果",
+      "name": "条纹网格背景",
+      "description": "纵向网格线随机出现发光高亮。",
+      "mechanism": "按列构建背景轨迹，Motion 根据方向、随机延迟和 easing 沿网格移动亮段。",
+      "scenario": "首屏、营销功能区和文档页头。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/stripe-bg-guides.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/stripe-bg-guides",
+      "registryName": "stripe-bg-guides",
+      "dependencies": [
+        "motion"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ]
+    },
+    {
+      "id": "shader-lens-blur",
+      "english": "Shader Lens Blur",
+      "category": "背景与视觉效果",
+      "name": "镜头模糊着色器",
+      "description": "指针移动扭曲形状和渐变。",
+      "mechanism": "Three.js 创建 WebGL 场景，shader 读取指针与时间参数，进行颜色混合、模糊和折射采样。",
+      "scenario": "创意作品集、产品背景和交互首屏。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/shader-lens-blur.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/shader-lens-blur",
+      "registryName": "shader-lens-blur",
+      "dependencies": [
+        "jotai",
+        "motion",
+        "next-themes",
+        "three"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "Canvas",
+        "WebGL",
+        "Shader",
+        "Three.js",
+        "next-themes"
+      ]
+    },
+    {
+      "id": "svg-shapes",
+      "english": "SVG Shapes",
+      "category": "背景与视觉效果",
+      "name": "SVG 几何形状",
+      "description": "多边形、神圣几何和多面体线框。",
+      "mechanism": "静态 SVG paths/lines 组成几何轮廓，currentColor 继承文本颜色并允许缩放。",
+      "scenario": "首屏艺术、背景和装饰边框。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/svg-shapes.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/svg-shapes",
+      "registryName": "svg-shapes",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "svg-shapes-animated",
+      "english": "SVG Shapes Animated",
+      "category": "背景与视觉效果",
+      "name": "动态 SVG 几何",
+      "description": "滚动进入视区时几何线条逐步绘出。",
+      "mechanism": "Motion 连接 SVG 路径长度与视区状态，逐步绘制描边，并响应减少动态效果偏好。",
+      "scenario": "滚动叙事、页面背景和几何首屏。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/svg-shapes-animated.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/svg-shapes-animated",
+      "registryName": "svg-shapes-animated",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "SVG"
+      ]
+    },
+    {
+      "id": "svg-bands",
+      "english": "SVG Bands",
+      "category": "背景与视觉效果",
+      "name": "SVG 分隔带",
+      "description": "锯齿、波浪、缺口等宽幅分隔边缘。",
+      "mechanism": "SVG 路径定义不同边带轮廓，flip 属性改变朝向，颜色跟随当前主题。",
+      "scenario": "首屏下沿、章节分隔和页脚装饰。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/svg-bands.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/svg-bands",
+      "registryName": "svg-bands",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "texture-overlay",
+      "english": "Texture Overlay",
+      "category": "背景与视觉效果",
+      "name": "纹理覆盖层",
+      "description": "点阵、网格、交叉线、半色调和纸纹。",
+      "mechanism": "纯 CSS gradients 生成重复图案，透明度和图案变体控制纹理叠加程度。",
+      "scenario": "卡片、首屏背景和章节分区。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/texture-overlay.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/texture-overlay",
+      "registryName": "texture-overlay",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "CSS"
+      ]
+    },
+    {
+      "id": "distorted-glass",
+      "english": "Distorted Glass",
+      "category": "背景与视觉效果",
+      "name": "扭曲玻璃分隔",
+      "description": "以噪声折射模拟磨砂玻璃过渡。",
+      "mechanism": "SVG feTurbulence 生成分形噪声，feDisplacementMap 用噪声偏移背景像素形成折射。",
+      "scenario": "吸顶页头下沿和页面分区过渡。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/distorted-glass.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/distorted-glass",
+      "registryName": "distorted-glass",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "bg-image-texture",
+      "english": "Background Texture",
+      "category": "背景与视觉效果",
+      "name": "纹理背景容器",
+      "description": "把布料、纸张或网格噪声放在内容背后。",
+      "mechanism": "独立背景层承载纹理图片，通过透明度混合到内容容器且保持正文层独立。",
+      "scenario": "卡片表面、首屏背景和报价区。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/bg-image-texture.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/bg-image-texture",
+      "registryName": "bg-image-texture",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React"
+      ]
+    },
+    {
+      "id": "edge-blur",
+      "english": "Edge Blur",
+      "category": "背景与视觉效果",
+      "name": "边缘渐进模糊",
+      "description": "内容靠近固定边缘时逐渐模糊。",
+      "mechanism": "叠加多个 backdrop-filter 图层，mask-image 决定各层覆盖范围和渐进模糊强度。",
+      "scenario": "吸顶导航、底部工具栏和长滚动页面。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/edge-blur.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/edge-blur",
+      "registryName": "edge-blur",
+      "dependencies": [],
+      "tags": [
+        "React",
+        "CSS"
+      ]
+    },
+    {
+      "id": "dither-image",
+      "english": "Dither Image",
+      "category": "背景与视觉效果",
+      "name": "抖色图片",
+      "description": "图片支持全幅或局部 Bayer 抖色显露。",
+      "mechanism": "包装 next/image，以 dither-plugin 的 Tailwind 工具应用 CSS Bayer 图案，遮罩控制受影响区域。",
+      "scenario": "编辑照片、作品集网格和复古首屏。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/dither-image.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/dither-image",
+      "registryName": "dither-image",
+      "dependencies": [
+        "clsx",
+        "dither-plugin",
+        "next",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG",
+        "Next.js 适配",
+        "CSS",
+        "媒体"
+      ]
+    },
+    {
+      "id": "fluted-glass",
+      "english": "Fluted Glass",
+      "category": "背景与视觉效果",
+      "name": "长虹玻璃效果",
+      "description": "图片表面出现竖向玻璃肋条折射。",
+      "mechanism": "Paper Design FlutedGlass WebGL 着色器按肋条方向与参数采样图片，形成扭曲和玻璃纹理。",
+      "scenario": "视觉首屏、产品图片和分区背景。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/fluted-glass.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/fluted-glass",
+      "registryName": "fluted-glass",
+      "dependencies": [
+        "@paper-design/shaders-react",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "WebGL",
+        "Shader",
+        "Paper Design"
+      ]
+    },
+    {
+      "id": "text-animate",
+      "english": "Text Animate",
+      "category": "文字排版",
+      "name": "文字进入动画",
+      "description": "标题提供淡入、滚入和逐字预设。",
+      "mechanism": "字符或单词拆成 motion.span，容器 staggerChildren 设置先后次序，variants 控制位移和透明度。",
+      "scenario": "首屏标题、章节标题和公告横幅。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/text-animate.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/text-animate",
+      "registryName": "text-animate",
+      "dependencies": [
+        "motion"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ],
+      "demo": "text"
+    },
+    {
+      "id": "typewriter",
+      "english": "Typewriter",
+      "category": "文字排版",
+      "name": "打字机文字",
+      "description": "逐字显示短语并循环替换词语。",
+      "mechanism": "React 时间状态推进字符和短语索引，Motion 显示键入与闪烁光标反馈。",
+      "scenario": "首屏标语、AI 产品介绍和欢迎文字。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/typewriter.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/typewriter",
+      "registryName": "typewriter",
+      "dependencies": [
+        "motion"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ]
+    },
+    {
+      "id": "rolling-number",
+      "english": "Rolling Number",
+      "category": "文字排版",
+      "name": "滚动数字",
+      "description": "数值变化时平滑滚动并支持格式化。",
+      "mechanism": "Motion 弹簧将旧值插值到新值，格式函数把连续数值转换成精度、货币或自定义文字。",
+      "scenario": "指标、价格、计数与实时统计。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/rolling-number.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/rolling-number",
+      "registryName": "rolling-number",
+      "dependencies": [
+        "motion"
+      ],
+      "tags": [
+        "React",
+        "Motion"
+      ]
+    },
+    {
+      "id": "pixel-heading-character",
+      "english": "Pixel Heading (Char)",
+      "category": "文字排版",
+      "name": "逐字像素标题",
+      "description": "字符在多种 Geist 像素字体间循环变化。",
+      "mechanism": "逐字符拆分标题并按动画模式切换 Geist pixel font-family，产生像素字形变化。",
+      "scenario": "开发工具首屏、复古视觉和品牌标题。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/pixel-heading-character.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/pixel-heading-character",
+      "registryName": "pixel-heading-character",
+      "dependencies": [
+        "clsx",
+        "geist",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Geist 字体",
+        "CSS"
+      ]
+    },
+    {
+      "id": "pixel-heading-word",
+      "english": "Pixel Heading (Word)",
+      "category": "文字排版",
+      "name": "逐词像素标题",
+      "description": "悬停时整词切换像素字体。",
+      "mechanism": "按词拆分标题，指针悬停改变该词 font-family；无需额外动画库。",
+      "scenario": "产品标题、章节标题和文字标志。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/pixel-heading-word.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/pixel-heading-word",
+      "registryName": "pixel-heading-word",
+      "dependencies": [
+        "clsx",
+        "geist",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Geist 字体",
+        "CSS"
+      ]
+    },
+    {
+      "id": "pixel-paragraph-words",
+      "english": "Pixel Paragraph",
+      "category": "文字排版",
+      "name": "像素关键词段落",
+      "description": "普通段落中的指定词使用像素字体。",
+      "mechanism": "按词匹配内容，将关键词包装进 Geist 像素字体 span，正文保持普通字体。",
+      "scenario": "首屏文案、产品标语和功能关键词。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/pixel-paragraph-words.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/pixel-paragraph-words",
+      "registryName": "pixel-paragraph-words",
+      "dependencies": [
+        "clsx",
+        "geist",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Geist 字体"
+      ]
+    },
+    {
+      "id": "pixel-paragraph-words-inverse",
+      "english": "Pixel Paragraph Inv",
+      "category": "文字排版",
+      "name": "反向像素段落",
+      "description": "像素正文中用普通字体强调指定词。",
+      "mechanism": "匹配选定词语，将其 font-family 改为 sans 或 mono，其余正文保留 Geist 像素字体。",
+      "scenario": "介绍文字、短标语和重点提示。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/pixel-paragraph-words-inverse.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/pixel-paragraph-words-inverse",
+      "registryName": "pixel-paragraph-words-inverse",
+      "dependencies": [
+        "clsx",
+        "geist",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Geist 字体",
+        "CSS"
+      ]
+    },
+    {
+      "id": "text-gif",
+      "english": "Text Gif",
+      "category": "文字排版",
+      "name": "GIF 文字",
+      "description": "动画图片被裁进文字字形。",
+      "mechanism": "background-clip:text 让 GIF 只在文字轮廓内可见，颜色回退与尺寸字重属性控制显示。",
+      "scenario": "活动宣传、趣味品牌标题和视觉首屏。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/text-gif.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/text-gif",
+      "registryName": "text-gif",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "next",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG",
+        "Next.js 适配"
+      ]
+    },
+    {
+      "id": "gradient-heading",
+      "english": "Gradient Heading",
+      "category": "文字排版",
+      "name": "渐变标题",
+      "description": "标题支持颜色、尺寸、字重与元素替换。",
+      "mechanism": "bg-clip-text 把 CSS 渐变裁入文字，CVA 管理预设外观，asChild 允许复用语义元素。",
+      "scenario": "产品首屏和营销章节标题。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/gradient-heading.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/gradient-heading",
+      "registryName": "gradient-heading",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Radix UI",
+        "CSS"
+      ]
+    },
+    {
+      "id": "neumorph-eyebrow",
+      "english": "Neumorph Eyebrow",
+      "category": "文字排版",
+      "name": "拟物眉题标签",
+      "description": "内凹胶囊标签强调章节属性。",
+      "mechanism": "CSS 内阴影构造凹陷表面，颜色 intent 与文本插槽生成标题上方的小型标签。",
+      "scenario": "发布标签、产品分类和章节眉题。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/neumorph-eyebrow.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/neumorph-eyebrow",
+      "registryName": "neumorph-eyebrow",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "tags": [
+        "React",
+        "CSS"
+      ]
+    },
+    {
+      "id": "lightboard",
+      "english": "LightBoard",
+      "category": "文字排版",
+      "name": "LED 灯板",
+      "description": "点阵灯珠滚动文字，也可交互绘制。",
+      "mechanism": "Canvas 把字符字体映射成亮暗网格，逐帧移动绘制窗口，指针输入改变灯点。",
+      "scenario": "状态横幅、文字滚动条和趣味首屏。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/lightboard.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/lightboard",
+      "registryName": "lightboard",
+      "dependencies": [],
+      "tags": [
+        "React",
+        "Canvas"
+      ]
+    },
+    {
+      "id": "squiggle-arrow",
+      "english": "Squiggle Arrow",
+      "category": "文字排版",
+      "name": "手绘箭头",
+      "description": "波浪、弹跳或平滑曲线指向重点。",
+      "mechanism": "SVG path 定义不同手绘曲线，variant 和方向参数选择形态并调整箭头位置。",
+      "scenario": "截图标注、CTA 指引和产品导览。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/squiggle-arrow.tsx",
+      "docs": "https://www.cult-ui.com/docs/components/squiggle-arrow",
+      "registryName": "squiggle-arrow",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "SVG"
+      ]
+    },
+    {
+      "id": "bg-animated-gradient",
+      "english": "bg-animated-gradient",
+      "category": "补充注册项",
+      "name": "动态径向渐变",
+      "description": "在多个径向渐变配方之间持续往返变化。",
+      "mechanism": "useAnimation 将渐变色点和中心坐标转换为 background 关键帧，Motion 以 reverse 模式无限循环。",
+      "scenario": "产品背景、品牌视觉和柔和动态区域。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/bg-animated-gradient.tsx",
+      "registryName": "bg-animated-gradient",
+      "dependencies": [
+        "motion"
+      ],
+      "tags": [
+        "React",
+        "Motion",
+        "CSS"
+      ]
+    },
+    {
+      "id": "base-select",
+      "english": "base-select",
+      "category": "补充注册项",
+      "name": "基础选择框",
+      "description": "Base UI 选择原语的主题外观包装。",
+      "mechanism": "Select Root/Trigger/Popup/Item 组合选择逻辑与弹层定位，Hugeicons 绘制箭头和选中标记。",
+      "scenario": "设置和筛选下拉框，以及其他组件的基础依赖。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/base-select.tsx",
+      "registryName": "base-select",
+      "dependencies": [
+        "@base-ui/react",
+        "@hugeicons/core-free-icons",
+        "@hugeicons/react",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Base UI"
+      ]
+    },
+    {
+      "id": "base-tooltip",
+      "english": "base-tooltip",
+      "category": "补充注册项",
+      "name": "基础提示框",
+      "description": "基于 Base UI 的轻量悬停或焦点提示。",
+      "mechanism": "Tooltip Provider 统一延迟，Trigger 与 Popup 处理锚点提示，Radix Slot 支持 asChild 复用按钮。",
+      "scenario": "图标按钮说明、工具栏提示和内部组件依赖。",
+      "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/base-tooltip.tsx",
+      "registryName": "base-tooltip",
+      "dependencies": [
+        "@base-ui/react",
+        "@radix-ui/react-slot",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "tags": [
+        "React",
+        "Base UI",
+        "Radix UI"
+      ]
+    }
+  ],
+  "counts": {
+    "documentedComponents": 134,
+    "docsFiles": 134,
+    "officialTopCategories": 13,
+    "officialLeafCategories": 14,
+    "registryUiEntries": 154,
+    "canonicalRegistryUiEntries": 137,
+    "undocumentedCanonicalUiEntries": 3,
+    "deprecatedUiAliases": 17,
+    "registryExampleEntries": 153,
+    "canonicalExampleEntries": 136,
+    "deprecatedExampleAliases": 17,
+    "examplesAssignedToDocs": 152,
+    "canonicalExamplesAssignedToDocs": 135,
+    "examplesWithoutDocAssignment": 1,
+    "generatedRegistryEntries": 307,
+    "blocksInPublishedRegistry": 0,
+    "declaredBlocks": 1,
+    "unregisteredUiSourceFiles": 4,
+    "uiSourceFilesInDefaultDirectory": 141
+  },
+  "aliases": [
+    {
+      "name": "animated-badge",
+      "type": "registry:ui",
+      "canonicalRegistryName": "halo-badge",
+      "registryDependencies": [
+        "https://cult-ui.com/r/halo-badge.json"
+      ],
+      "description": "Deprecated alias for halo-badge. Prefer npx shadcn add https://cult-ui.com/r/halo-badge.json",
+      "files": []
+    },
+    {
+      "name": "animated-button",
+      "type": "registry:ui",
+      "canonicalRegistryName": "halo-button",
+      "registryDependencies": [
+        "https://cult-ui.com/r/halo-button.json"
+      ],
+      "description": "Deprecated alias for halo-button. Prefer npx shadcn add https://cult-ui.com/r/halo-button.json",
+      "files": []
+    },
+    {
+      "name": "animated-card",
+      "type": "registry:ui",
+      "canonicalRegistryName": "halo-card",
+      "registryDependencies": [
+        "https://cult-ui.com/r/halo-card.json"
+      ],
+      "description": "Deprecated alias for halo-card. Prefer npx shadcn add https://cult-ui.com/r/halo-card.json",
+      "files": []
+    },
+    {
+      "name": "animated-composer",
+      "type": "registry:ui",
+      "canonicalRegistryName": "prompt-composer",
+      "registryDependencies": [
+        "https://cult-ui.com/r/prompt-composer.json"
+      ],
+      "description": "Deprecated alias for prompt-composer. Prefer npx shadcn add https://cult-ui.com/r/prompt-composer.json",
+      "files": []
+    },
+    {
+      "name": "animated-dropzone",
+      "type": "registry:ui",
+      "canonicalRegistryName": "halo-dropzone",
+      "registryDependencies": [
+        "https://cult-ui.com/r/halo-dropzone.json"
+      ],
+      "description": "Deprecated alias for halo-dropzone. Prefer npx shadcn add https://cult-ui.com/r/halo-dropzone.json",
+      "files": []
+    },
+    {
+      "name": "animated-field",
+      "type": "registry:ui",
+      "canonicalRegistryName": "halo-field",
+      "registryDependencies": [
+        "https://cult-ui.com/r/halo-field.json"
+      ],
+      "description": "Deprecated alias for halo-field. Prefer npx shadcn add https://cult-ui.com/r/halo-field.json",
+      "files": []
+    },
+    {
+      "name": "animated-input",
+      "type": "registry:ui",
+      "canonicalRegistryName": "halo-input",
+      "registryDependencies": [
+        "https://cult-ui.com/r/halo-input.json"
+      ],
+      "description": "Deprecated alias for halo-input. Prefer npx shadcn add https://cult-ui.com/r/halo-input.json",
+      "files": []
+    },
+    {
+      "name": "animated-notification",
+      "type": "registry:ui",
+      "canonicalRegistryName": "halo-notification",
+      "registryDependencies": [
+        "https://cult-ui.com/r/halo-notification.json"
+      ],
+      "description": "Deprecated alias for halo-notification. Prefer npx shadcn add https://cult-ui.com/r/halo-notification.json",
+      "files": []
+    },
+    {
+      "name": "animated-number",
+      "type": "registry:ui",
+      "canonicalRegistryName": "rolling-number",
+      "registryDependencies": [
+        "https://cult-ui.com/r/rolling-number.json"
+      ],
+      "description": "Deprecated alias for rolling-number. Prefer npx shadcn add https://cult-ui.com/r/rolling-number.json",
+      "files": []
+    },
+    {
+      "name": "animated-progress",
+      "type": "registry:ui",
+      "canonicalRegistryName": "halo-progress",
+      "registryDependencies": [
+        "https://cult-ui.com/r/halo-progress.json"
+      ],
+      "description": "Deprecated alias for halo-progress. Prefer npx shadcn add https://cult-ui.com/r/halo-progress.json",
+      "files": []
+    },
+    {
+      "name": "animated-search",
+      "type": "registry:ui",
+      "canonicalRegistryName": "halo-search",
+      "registryDependencies": [
+        "https://cult-ui.com/r/halo-search.json"
+      ],
+      "description": "Deprecated alias for halo-search. Prefer npx shadcn add https://cult-ui.com/r/halo-search.json",
+      "files": []
+    },
+    {
+      "name": "animated-segmented",
+      "type": "registry:ui",
+      "canonicalRegistryName": "halo-segmented",
+      "registryDependencies": [
+        "https://cult-ui.com/r/halo-segmented.json"
+      ],
+      "description": "Deprecated alias for halo-segmented. Prefer npx shadcn add https://cult-ui.com/r/halo-segmented.json",
+      "files": []
+    },
+    {
+      "name": "animated-select",
+      "type": "registry:ui",
+      "canonicalRegistryName": "halo-select",
+      "registryDependencies": [
+        "https://cult-ui.com/r/halo-select.json"
+      ],
+      "description": "Deprecated alias for halo-select. Prefer npx shadcn add https://cult-ui.com/r/halo-select.json",
+      "files": []
+    },
+    {
+      "name": "animated-switch",
+      "type": "registry:ui",
+      "canonicalRegistryName": "halo-switch",
+      "registryDependencies": [
+        "https://cult-ui.com/r/halo-switch.json"
+      ],
+      "description": "Deprecated alias for halo-switch. Prefer npx shadcn add https://cult-ui.com/r/halo-switch.json",
+      "files": []
+    },
+    {
+      "name": "animated-tabs",
+      "type": "registry:ui",
+      "canonicalRegistryName": "halo-tabs",
+      "registryDependencies": [
+        "https://cult-ui.com/r/halo-tabs.json"
+      ],
+      "description": "Deprecated alias for halo-tabs. Prefer npx shadcn add https://cult-ui.com/r/halo-tabs.json",
+      "files": []
+    },
+    {
+      "name": "animated-toast",
+      "type": "registry:ui",
+      "canonicalRegistryName": "halo-toast",
+      "registryDependencies": [
+        "https://cult-ui.com/r/halo-toast.json"
+      ],
+      "description": "Deprecated alias for halo-toast. Prefer npx shadcn add https://cult-ui.com/r/halo-toast.json",
+      "files": []
+    },
+    {
+      "name": "animated-toggle-group",
+      "type": "registry:ui",
+      "canonicalRegistryName": "halo-toggle-group",
+      "registryDependencies": [
+        "https://cult-ui.com/r/halo-toggle-group.json"
+      ],
+      "description": "Deprecated alias for halo-toggle-group. Prefer npx shadcn add https://cult-ui.com/r/halo-toggle-group.json",
+      "files": []
+    }
+  ],
+  "unregisteredSourceFiles": [
+    {
+      "path": "apps/www/registry/default/ui/expandable-card.tsx",
+      "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/expandable-card.tsx",
+      "status": "Source file exists but is not a registry:ui item in registry/ui.ts; not counted as independently documented component"
+    },
+    {
+      "path": "apps/www/registry/default/ui/glow-button.tsx",
+      "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/glow-button.tsx",
+      "status": "Source file exists but is not a registry:ui item in registry/ui.ts; not counted as independently documented component"
+    },
+    {
+      "path": "apps/www/registry/default/ui/shader-shape-lens-blur copy.tsx",
+      "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/shader-shape-lens-blur copy.tsx",
+      "status": "Source file exists but is not a registry:ui item in registry/ui.ts; not counted as independently documented component"
+    },
+    {
+      "path": "apps/www/registry/default/ui/type-animate.tsx",
+      "sourceUrl": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/type-animate.tsx",
+      "status": "Source file exists but is not a registry:ui item in registry/ui.ts; not counted as independently documented component"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "sha": "67a66c6ac1cd240914ba688a907611b3437a7a2b",
+  "uiCount": 154,
+  "officialExamples": 136,
+  "integrationExamples": 2,
+  "deprecatedExampleAliases": 17,
+  "previewEntries": 138,
+  "docs": 134,
+  "canonicalUiKeys": 137,
+  "copiedFiles": 305,
+  "packageCount": 48,
+  "adaptedImports": [
+    "next/image",
+    "next/link",
+    "next/dynamic",
+    "next/navigation"
+  ],
+  "missing": []
+}

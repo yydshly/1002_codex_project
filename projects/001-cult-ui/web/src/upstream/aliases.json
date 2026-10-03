@@ -1,0 +1,19 @@
+{
+  "animated-badge-demo": "halo-badge-demo",
+  "animated-button-demo": "halo-button-demo",
+  "animated-card-demo": "halo-card-demo",
+  "animated-composer-demo": "prompt-composer-demo",
+  "animated-dropzone-demo": "halo-dropzone-demo",
+  "animated-field-demo": "halo-field-demo",
+  "animated-input-demo": "halo-input-demo",
+  "animated-notification-demo": "halo-notification-demo",
+  "animated-number-demo": "rolling-number-demo",
+  "animated-progress-demo": "halo-progress-demo",
+  "animated-search-demo": "halo-search-demo",
+  "animated-segmented-demo": "halo-segmented-demo",
+  "animated-select-demo": "halo-select-demo",
+  "animated-switch-demo": "halo-switch-demo",
+  "animated-tabs-demo": "halo-tabs-demo",
+  "animated-toast-demo": "halo-toast-demo",
+  "animated-toggle-group-demo": "halo-toggle-group-demo"
+}

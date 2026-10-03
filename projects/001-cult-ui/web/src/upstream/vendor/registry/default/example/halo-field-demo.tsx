@@ -1,0 +1,90 @@
+// @ts-nocheck
+// Vendored from Cult UI 67a66c6ac1cd240914ba688a907611b3437a7a2b: apps/www/registry/default/example/halo-field-demo.tsx
+// Integration edits: relative imports/public asset URLs and explicit Next adapters.
+"use client"
+
+import { useId, useState } from "react"
+import { Mail } from "lucide-react"
+
+import {
+  HaloField,
+  HaloFieldContent,
+  HaloFieldDescription,
+  HaloFieldError,
+  HaloFieldLabel,
+} from "../ui/halo-field.tsx"
+import { HaloInput, HaloTextarea } from "../ui/halo-input.tsx"
+
+const EMAIL_LIKE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+export default function HaloFieldDemo() {
+  const emailId = useId()
+  const bioId = useId()
+  const [email, setEmail] = useState("")
+  const [showEmailError, setShowEmailError] = useState(false)
+  const emailInvalid = showEmailError && !EMAIL_LIKE.test(email)
+
+  return (
+    <main className="flex w-full flex-col items-center justify-center">
+      <div className="flex w-full max-w-md flex-col gap-12">
+        <section className="space-y-3">
+          <h2 className="font-semibold text-foreground text-lg tracking-tight">
+            Field + input
+          </h2>
+          <p className="text-pretty text-muted-foreground text-sm">
+            Groups a label with an input, helper text, and optional validation
+            messages in a frosted shell with an animated rim.
+          </p>
+          <HaloField>
+            <HaloFieldLabel htmlFor={emailId}>Email</HaloFieldLabel>
+            <HaloFieldContent>
+              <HaloInput
+                aria-invalid={emailInvalid}
+                autoComplete="email"
+                id={emailId}
+                invalid={emailInvalid}
+                leadingSlot={<Mail aria-hidden />}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@example.com"
+                type="email"
+                value={email}
+              />
+              <HaloFieldDescription>
+                We’ll only use this for account updates.
+              </HaloFieldDescription>
+              {emailInvalid ? (
+                <HaloFieldError>Enter a valid email address.</HaloFieldError>
+              ) : null}
+            </HaloFieldContent>
+          </HaloField>
+          <button
+            className="rounded-md border border-border px-3 py-1.5 font-medium text-foreground text-sm fine-hover:hover:bg-muted"
+            onClick={() => setShowEmailError((v) => !v)}
+            type="button"
+          >
+            Toggle validation (demo)
+          </button>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="font-semibold text-foreground text-lg tracking-tight">
+            Textarea
+          </h2>
+          <HaloField>
+            <HaloFieldLabel htmlFor={bioId}>Bio</HaloFieldLabel>
+            <HaloFieldContent>
+              <HaloTextarea
+                id={bioId}
+                placeholder="A few lines about you…"
+                rows={5}
+              />
+              <HaloFieldDescription>
+                Optional — shown on your profile.
+              </HaloFieldDescription>
+            </HaloFieldContent>
+          </HaloField>
+        </section>
+      </div>
+    </main>
+  )
+}

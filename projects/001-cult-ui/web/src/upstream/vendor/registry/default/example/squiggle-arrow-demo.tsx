@@ -1,0 +1,73 @@
+// @ts-nocheck
+// Vendored from Cult UI 67a66c6ac1cd240914ba688a907611b3437a7a2b: apps/www/registry/default/example/squiggle-arrow-demo.tsx
+// Integration edits: relative imports/public asset URLs and explicit Next adapters.
+import SquigglyArrow from "../ui/squiggle-arrow.tsx"
+
+function SquigglyArrowDemo() {
+  return (
+    <main className="flex w-full flex-col items-center justify-center gap-12">
+      <div className="flex flex-col items-center gap-12">
+        <div className="flex flex-col gap-6">
+          <h2 className="text-center text-2xl font-semibold">Variants</h2>
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-4">
+              <span className="text-foreground w-24">Wavy</span>
+              <SquigglyArrow variant="wavy" />
+            </div>
+            <div className="flex items-center gap-4">
+              <span className="text-foreground w-24">Bouncy</span>
+              <SquigglyArrow variant="bouncy" className="text-blue-500" />
+            </div>
+            <div className="flex items-center gap-4">
+              <span className="text-foreground w-24">Smooth</span>
+              <SquigglyArrow variant="smooth" className="text-purple-600" />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          <h2 className="text-center text-2xl font-semibold">Directions</h2>
+          <div className="flex flex-wrap justify-center gap-8 p-4">
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-foreground">Right</span>
+              <SquigglyArrow direction="right" className="text-green-600" />
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-foreground">Left</span>
+              <SquigglyArrow direction="left" className="text-orange-600" />
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-foreground">Down</span>
+              <SquigglyArrow direction="down" className="text-pink-600" />
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-foreground">Up</span>
+              <SquigglyArrow direction="up" className="text-cyan-600" />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          <h2 className="text-center text-2xl font-semibold">Sizes</h2>
+          <div className="flex items-center gap-8 overflow-x-auto p-4">
+            <SquigglyArrow width={150} height={75} strokeWidth={2} />
+            <SquigglyArrow
+              width={250}
+              height={125}
+              strokeWidth={3}
+              className="text-blue-500"
+            />
+            <SquigglyArrow
+              width={300}
+              height={150}
+              strokeWidth={4}
+              className="text-purple-600"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+  )
+}
+
+export default SquigglyArrowDemo

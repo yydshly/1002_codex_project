@@ -1,0 +1,31 @@
+/* Preview-shell styles only. Official examples keep their authentic utilities. */
+:root {
+  color-scheme: light;
+  --font-geist-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-geist-mono: "Geist Mono", ui-monospace, monospace;
+  --font-geist-pixel-square: "Geist Pixel Square", monospace;
+  --font-geist-pixel-grid: "Geist Pixel Grid", monospace;
+  --font-geist-pixel-circle: "Geist Pixel Circle", monospace;
+  --font-geist-pixel-triangle: "Geist Pixel Triangle", monospace;
+  --font-geist-pixel-line: "Geist Pixel Line", monospace;
+}
+:root.dark { color-scheme: dark; }
+html, body, #root { margin: 0; min-height: 100%; }
+body { background: var(--background); color: var(--foreground); font-family: var(--font-geist-sans); }
+.upstream-preview { position: relative; min-height: 100vh; padding: 24px; }
+.upstream-content { display: flex; justify-content: center; align-items: center; min-height: calc(100vh - 48px); width: 100%; }
+.preview-message { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; min-height: 260px; width: 100%; padding: 24px; text-align: center; font-size: 13px; color: var(--muted-foreground); }
+.preview-message strong { font-size: 16px; color: var(--foreground); }
+.preview-message pre { max-width: 100%; white-space: pre-wrap; overflow-wrap: anywhere; font: 12px/1.6 var(--font-geist-mono); }
+.preview-message a { color: var(--primary); text-decoration: underline; }
+.preview-message button { padding: 8px 18px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer; color: var(--foreground); background: var(--secondary); }
+.preview-spinner { width: 24px; height: 24px; border: 2px solid var(--border); border-top-color: var(--foreground); border-radius: 50%; animation: preview-spin 1s linear infinite; }
+.preview-integration-label, .preview-route { position: relative; z-index: 100; padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--muted); color: var(--muted-foreground); font: 12px/1.6 var(--font-geist-sans); }
+.preview-route { margin-top: 16px; }
+.preview-runtime-issue { position: relative; z-index: 100; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 16px; padding: 12px 16px; border: 1px solid var(--border); border-radius: 10px; color: var(--muted-foreground); background: var(--muted); font: 12px/1.6 var(--font-geist-sans); }
+.preview-runtime-issue strong { color: var(--foreground); }
+.preview-runtime-issue p { flex: 1; min-width: 180px; overflow-wrap: anywhere; }
+.preview-runtime-issue button { border: 1px solid var(--border); border-radius: 6px; padding: 5px 10px; cursor: pointer; color: var(--foreground); background: var(--background); }
+@keyframes preview-spin { to { transform: rotate(360deg); } }
+@media (max-width: 640px) { .upstream-preview { padding: 12px; } .upstream-content { min-height: calc(100vh - 24px); } }
+@media (prefers-reduced-motion: reduce) { .preview-spinner { animation: none; } }

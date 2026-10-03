@@ -20,10 +20,10 @@ jobs:
         with:
           node-version: 22
       - uses: actions/configure-pages@v5
+      - run: npm --prefix projects/001-cult-ui/web ci
+      - run: npm run build
       - run: npm run check
       - run: npm test
-      # Add each framework application's install/build steps here before aggregation.
-      - run: npm run build
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site

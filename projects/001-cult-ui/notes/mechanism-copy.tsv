@@ -1,0 +1,138 @@
+slug	name	description	mechanism	scenario
+agent-suggest-card-stack	Agent 建议卡片堆叠	用卡片堆叠插图展示代码审查、进度与成功失败状态。	SVG 组织多张建议卡、进度条和操作按钮，以 React 属性切换展示状态；呈现工作流而不执行 Agent。	AI 代码审查产品官网、Agent 工作流说明和产品导览。
+ai-blob-warp	AI 流体头像	把持续变化的流体图案放进圆形助手头像。	Paper Design Warp WebGL 着色器填充圆形遮罩；离屏或减少动态效果时暂停渲染。	聊天助手头像、语音 Agent 活动指示和品牌形象。
+ai-instructions	AI 指令选择器	搜索、启用与创建自定义指令。	Popover 放置 Command 搜索列表，React 管理指令选中状态，Dialog 承载新增指令输入。	助手系统指令、回答风格和 Agent 规则设置。
+analytics-chart	分析折线图	以渐变折线和浮动卡片呈现时间序列指标。	SVG 路径绘制曲线、网格与数据点，指针进入数据点时定位详情卡片。	流量趋势、产品使用量与监控指标。
+apple-iphone-17-pro	iPhone 设备模型	用手机外框、状态栏与灵动岛包装应用界面。	React 内容插槽嵌入设备屏幕，框体颜色及灵动岛尺寸属性控制装饰结构。	移动应用发布页、作品集与产品案例。
+apple-keyboard	Apple 键盘插图	展示可按压的键帽、标签与媒体控制图标。	网格排布键帽，按压状态改变键帽外观，Tabler 图标表示媒体键功能。	快捷键指南、效率工具和开发工具宣传。
+apple-pro-display-xdr	Pro Display XDR 模型	铝制显示器外框展示桌面屏幕与 Dock。	React 屏幕插槽与显示模式组成设备外壳，Motion 控制内置 macOS Dock 的反馈。	桌面应用发布页和产品功能演示。
+apple-watch-ultra	Apple Watch 模型	带可点击复杂功能、旋转表冠与指南针的手表演示。	局部状态驱动表盘内容，Motion 连续旋转和过渡模拟表冠与指南针响应。	运动、户外和可穿戴应用展示。
+bg-animate-button	动态背景按钮	带旋转锥形渐变的按钮，支持多种外观。	CSS 锥形渐变构成背景层，CVA 选择样式变体，Radix Slot 的 asChild 复用调用方元素。	注册、订阅和营销页面的主要操作。
+bg-animated-fractal-grid	分形点阵背景	带悬停波纹、噪声与指针光晕的点阵。	Canvas 绘制网格点，以指针距离改变波动和光晕；噪声叠层丰富背景。	产品首屏、功能区域和交互背景。
+bg-image-texture	纹理背景容器	把布料、纸张或网格噪声放在内容背后。	独立背景层承载纹理图片，通过透明度混合到内容容器且保持正文层独立。	卡片表面、首屏背景和报价区。
+bg-media	媒体背景	全屏图片或视频配合遮罩与播放暂停控制。	媒体元素负责图像或视频播放，覆盖层调节正文对比度，React 状态连接播放控件。	活动页、影像作品集与媒体主导的首屏。
+border-beam-button	流光边框按钮	按钮外沿带持续移动光带，支持文字和图标形式。	border-beam 包提供边框动效，外壳包裹 shadcn Button 并保持内部按钮交互。	AI 输入栏、升级提示和引导流程的主要操作。
+border-beam-card	流光边框卡片	以流动光带突出推荐套餐、任务或公告。	border-beam 包围绕 Card 复合结构生成光带；外壳轨道、圆角和 overflow 控制光效范围。	推荐价格方案、活跃任务和重点公告。
+border-beam-input	流光边框输入框	在输入框底边或整圈边框展示移动光效。	Base UI 提供输入行为，border-beam 包在独立外壳生成底边或全边框光带。	AI 提问、搜索和邮件订阅输入。
+canvas-fractal-grid	Canvas 分形网格	带渐变、噪声、光晕和性能配置的点阵背景。	Canvas 按帧绘制点阵与噪声，Motion 连接交互状态；质量预设调节绘制密度和效果。	首屏背景、产品页面和创意交互区。
+choice-poll	选项投票	支持单选、多选、结果百分比与键盘导航。	受控或非受控选择状态记录答案，票数换算结果条宽度；组合组件组织选项与结果。	意见反馈、社区投票和应用问卷。
+circuit-board	电路板插图	中央芯片周围出现发光线路。	SVG 路径定义芯片和电路轨迹，Motion 与 CSS keyframes 让线路高亮沿路径移动。	AI、硬件、基础设施与开发工具官网。
+code-block	代码块	展示包管理器标签、安装命令与复制按钮。	React 切换代码标签，Motion 处理方向过渡；复制控件把当前片段写入剪贴板。	SDK 安装指南、开发文档与营销代码示例。
+collab-avatar	协作头像	用姓名首字母和色彩渐变表示参与者。	React 派生首字母和头像颜色，Motion 入场并读取减少动态效果偏好；在线状态由业务传入。	协作编辑器、白板和共享文档。
+collab-toolbar	协作工具栏	把操作图标与参与者头像分组呈现。	组合工具按钮、分隔线和头像插槽，data-slot 标记支持一致样式；动作由外部回调实现。	编辑器顶栏、设计画布和协作白板。
+color-picker	颜色选择器	用 HSL 滑块、文本输入与色板选择颜色。	Popover 容器组合色相、饱和度、亮度滑块；颜色转换保持十六进制和 HSL 输入同步。	主题编辑器、品牌配置和设计工具。
+copy-button	复制按钮	复制内容后显示动画勾选反馈。	优先调用 Clipboard API，旧环境用回退复制方式；成功状态通过 Motion 切换复制与勾选图标。	代码片段、API Key 和分享链接。
+cosmic-button	宇宙渐变按钮	悬停时发光渐变边框增大。	独立渐变边框层随悬停扩张，多态 as 属性决定渲染链接还是按钮。	发布公告和产品首屏操作。
+cutout-card	切角卡片	图像卡片带切角、嵌入标签与悬停操作。	复合卡片将切角、标记和内容分层，Motion 控制悬停时的操作显露与位移。	作品集、图片画廊和模板展示。
+direction-aware-tabs	方向感知标签页	内容按选项切换方向进入并适配高度。	比较新旧选项顺序得到方向，AnimatePresence 管理进入退出，测量内容高度后动画调整外壳。	设置面板、价格切换和功能讲解。
+distorted-glass	扭曲玻璃分隔	以噪声折射模拟磨砂玻璃过渡。	SVG feTurbulence 生成分形噪声，feDisplacementMap 用噪声偏移背景像素形成折射。	吸顶页头下沿和页面分区过渡。
+dither-image	抖色图片	图片支持全幅或局部 Bayer 抖色显露。	包装 next/image，以 dither-plugin 的 Tailwind 工具应用 CSS Bayer 图案，遮罩控制受影响区域。	编辑照片、作品集网格和复古首屏。
+dock	桌面式 Dock	指针附近的图标及邻近图标平滑放大。	MotionValue 保存指针位置，useTransform 把距离映射为尺寸，useSpring 平滑图标宽度。	应用入口、作品集导航和快捷工具栏。
+dynamic-island	灵动岛	状态条在通知、播放控制等尺寸之间变形。	复合 React 组件传递内容与尺寸状态，Motion 动画连接小型状态条和展开面板。	通知、计时、媒体控制和任务状态。
+edge-blur	边缘渐进模糊	内容靠近固定边缘时逐渐模糊。	叠加多个 backdrop-filter 图层，mask-image 决定各层覆盖范围和渐进模糊强度。	吸顶导航、底部工具栏和长滚动页面。
+expandable-screen	可展开全屏	卡片或按钮平滑扩展为全屏内容。	触发器和全屏面板共享 Motion layoutId，React 开关状态决定挂载哪种布局。	商品详情、注册表单和产品引导。
+expandable	可展开卡片	紧凑卡片展开更多详情。	组合上下文管理展开状态，react-use-measure 测量内容，Motion 插值尺寸和细节显露。	活动卡、商品卡和仪表盘摘要。
+family-button	浮动展开按钮	加号按钮展开为自定义内容面板。	按钮与展开面板共享布局形态，Motion 在图标和内容容器之间执行尺寸与透明度过渡。	快捷创建、浮动操作和移动分享菜单。
+family-drawer	多视图抽屉	同一底部抽屉内切换视图并调整高度。	Vaul 管理底部抽屉与手势，Motion 过渡不同视图和测量后的内容高度。	移动设置、账户操作和连续确认步骤。
+feature-carousel	功能步骤轮播	用亮暗主题截图分步讲解功能流程。	步骤状态连接标题与截图，Motion 编排切换，next/image 承载响应式演示图片。	产品落地页、流程教学和功能导览。
+feature-poll	功能偏好投票	让用户选择希望优先开发的功能。	组合选项维护单选或多选状态，结果票数映射成进度条；支持键盘切换与选择。	更新日志、路线图和产品调研。
+feature-sticky-section	滚动吸附功能区	固定导航随当前可见内容同步高亮。	IntersectionObserver 记录面板进入视区，触发器滚动到对应内容，sticky 布局固定导航。	长页面功能讲解和开源项目展示。
+feature-voting	功能投票列表	按赞成票数排序用户需求。	受控或非受控票数状态决定排序，组合按钮提供增减票反馈；保存与防重复投票交给业务。	公开路线图、反馈社区和更新页面。
+file-icons	文件类型图标	提供语言、包管理器和工具的 SVG 图标。	内联 SVG 渲染不同文件标记，扩展名辅助函数把文件名称映射到对应图标。	文件树、安装命令和代码文档。
+floating-panel	浮动面板	从触发器变形展开的表单或文本面板。	上下文共享开关状态，Motion 连接触发器和面板布局；Escape 关闭，内容由组合插槽提供。	快速笔记、内联反馈和工具栏操作。
+fluid-ai-workloads	AI 工作负载插图	用分支连线连接卡片与算力节点。	SVG 定义卡片、分支连接线和节点，填充与描边属性调整主题；只说明拓扑不调度算力。	AI 基础设施、算力定价和产品文档。
+fluted-glass	长虹玻璃效果	图片表面出现竖向玻璃肋条折射。	Paper Design FlutedGlass WebGL 着色器按肋条方向与参数采样图片，形成扭曲和玻璃纹理。	视觉首屏、产品图片和分区背景。
+folded-card	折角卡片	模板卡片包含折角、虚线网格与徽标。	复合 React 卡片插槽分离预览、徽标和页脚，装饰图层生成折角及虚线网格。	模板画廊、博客索引和资源目录。
+gateway-endpoint-illustration	网关端点插图	显示单一 API 端点连接多个模型提供方。	SVG 端点与扇出连线组成拓扑，颜色属性统一模型节点和连接线；不发送 API 请求。	多模型 API 网关介绍和产品官网。
+gateway-route-illustration	网关路由插图	用弧线和环形布局说明模型请求路由。	SVG 弧线把模型节点围绕网关排布，复合节点与颜色属性呈现不同路由关系。	AI 网关、模型路由和服务说明。
+gateway-svg-illustration	网关汇聚插图	多条线路汇入中心节点呈现请求流。	SVG hub 布局连接外围线路和中心网关，通过主题颜色区分路径与节点。	请求流程、网关开销和延迟说明。
+globe	WebGL 地球	可拖动旋转的三维地球展示标记与弧线。	COBE 在 Canvas WebGL 中绘制球体，指针拖动改变旋转参数，next-themes 提供主题配色。	CDN 地图、部署区域、航线与全球业务。
+gradient-button-group	渐变按钮组	活动按钮带动画圆环与主题切换。	Motion 让活动标记在按钮之间过渡，next-themes 切换亮暗主题，分层背景生成渐变质感。	仪表盘工具栏和应用区段切换。
+gradient-heading	渐变标题	标题支持颜色、尺寸、字重与元素替换。	bg-clip-text 把 CSS 渐变裁入文字，CVA 管理预设外观，asChild 允许复用语义元素。	产品首屏和营销章节标题。
+grid-beam	网格光束	光束沿网格穿行，支持颜色与分隔图形。	Canvas 按帧绘制网格光束，useGridBeam 抽出渲染逻辑；SVG 分隔器可组合页面边缘。	价格表、功能网格和首屏背景。
+halo-badge	光晕徽标	渐变边缘、脉冲状态点与稳定数字宽度。	Motion 控制边缘和状态点动画，tabular-nums 保持计数更新时宽度稳定。	通知数、在线状态和 AI 任务标签。
+halo-button	光晕按钮	磨砂填充、渐变边缘与加载反馈。	按钮外壳叠加动态渐变边缘，Motion 错开文字进入；loading 状态切换指示器与操作状态。	表单提交、对话框和 AI 发送操作。
+halo-card	光晕卡片	磨砂表面配合渐变边框和复合内容区。	独立 rim 与 surface 分层显示边缘和内容，header/content/footer 插槽保留卡片组合能力。	推荐套餐、公告与 AI 结果面板。
+halo-dropzone	光晕文件拖放区	支持键盘、文件类型标记与动态虚线边缘。	原生文件选择和拖放产生文件列表，Motion 反馈悬停与拖入，文件类型映射为图标。	附件表单、文档上传和 AI 输入。
+halo-field	光晕字段布局	统一标签、说明、错误与输入框间距。	组合 shadcn Field 原语，把标签、说明和错误插槽绑定到输入控件布局。	设置表单、注册和资料编辑。
+halo-input	光晕输入框	单行或多行输入带渐变边缘和错误状态。	Base UI 提供输入行为，Motion 处理渐变外壳与状态反馈，invalid 属性改变错误样式。	联系表单、个人设置和多行输入。
+halo-notification	光晕内联通知	可关闭的状态卡片带边框变体和错开文字。	通知内容由 React 本地状态显示，AnimatePresence 管理挂载退出，Motion 编排图标与文字反馈。	页面内提示、任务消息和局部错误。
+halo-progress	光晕进度条	确定进度与未知时长加载共用一套外观。	Base UI Progress 提供语义，Motion 弹簧更新确定进度宽度；未知进度使用循环移动条纹。	上传、分步表单和生成等待。
+halo-search	光晕搜索框	搜索输入带清空、加载和流体助手头像。	输入状态管理文本和清空操作，渐变外壳与 Paper Design Warp 头像呈现活动反馈。	站内搜索、命令栏和 AI 提问。
+halo-segmented	光晕分段控件	小组选项带磨砂轨道和滑动选中块。	Base UI Toggle Group 管理单选行为，Motion 弹簧移动选中滑块到活动项。	视图模式、计费周期和时间范围。
+halo-select	光晕选择框	带动态边缘、文字和加载状态的下拉框。	Base UI Select 管理弹层、选择与键盘行为，Motion 编排标签和触发器加载反馈。	设置、筛选和模型选择。
+halo-switch	光晕开关	滑块弹簧运动并扩大触屏点击区域。	Base UI Switch 提供 checked 状态与语义，Motion 驱动圆形滑块，外壳形成渐变边缘。	通知、深色模式和功能设置。
+halo-tabs	光晕标签页	活动标签带滑动下划线或胶囊标记。	Base UI Tabs 管理选中和面板语义，CSS 过渡移动渐变指示器到当前选项。	仪表盘、设置和代码预览切换。
+halo-toast	光晕全局提示	统一弹出保存、失败等通知并支持动作按钮。	根布局挂载 Sonner toaster，helper 推送消息；自定义 rim 和关闭控件统一通知样式。	全局保存反馈、请求失败和可撤销操作。
+halo-toggle-group	光晕切换按钮组	少量单选按钮带共享滑动选中块。	Base UI Toggle Group 处理选择，Motion 根据选中项布局平滑移动背景滑块。	列表网格、对齐和紧凑模式切换。
+hero-color-panels	色彩面板首屏	分栏内容配合 WebGL 色彩面板。	Paper Design ColorPanels shader 绘制视觉区，React 组合正文、CTA 与技术徽标。	产品发布页和品牌官网首屏。
+hero-dithering	抖色首屏	文字与抖色图形分栏展示。	Paper Design Dithering WebGL shader 生成点阵抖色视觉，桌面和移动布局分别提供视觉容器。	开发工具和产品主页首屏。
+hero-heatmap	热力图首屏	发光热力图视觉搭配行动按钮与徽标。	Paper Design Heatmap WebGL shader 绘制发光热区，React 分栏布局容纳正文和按钮。	SaaS 官网、数据产品和发布页面。
+hero-liquid-metal	液态金属首屏	铬色流体视觉搭配产品介绍。	Paper Design LiquidMetal WebGL shader 通过图形采样产生金属反射，首屏插槽组合 CTA 与徽标。	创意产品发布、品牌首页和活动首屏。
+hero-static-radial-gradient	静态径向渐变首屏	柔和渐变背景避免持续动态。	Paper Design StaticRadialGradient shader 绘制固定径向配色，React 布局组合标题、CTA 和技术徽标。	需要柔和背景的产品官网。
+hover-video-player	悬停视频预览	悬停播放、懒加载、缩略图与画中画。	鼠标或触屏事件控制 video 播放，按需要加载媒体；Motion 切换覆盖层，浏览器 API 提供画中画。	视频图库、课程封面和产品演示缩略图。
+illustration-card-grid	插图功能网格	图文卡片内组合 AI 网关主题插图。	网格容器排列标题和说明，内置 SVG 插图组件放入卡片视觉区，属性定制图文内容。	网关产品、故障转移和功能营销区。
+illustration-comment-bubble	评论气泡插图	头像、行内代码与光标组合成评论视觉。	SVG 绘制头像、代码片段和评论气泡，通过布局叠加光标；不连接实时消息服务。	协作、代码审查和消息产品功能区。
+illustration-cursor	多人光标插图	带名称和颜色的光标自动移动。	requestAnimationFrame 按帧更新 SVG 光标位置，标签跟随游标；仅模拟多人协作视觉。	编辑器、白板和设计工具官网。
+illustration-fluid-rendering	流式渲染插图	浏览器连接电商和 CMS 平台。	SVG 浏览器与平台节点通过连线组合，主题颜色和图标插槽允许替换品牌与内容。	无头电商、CMS 和内容渲染说明。
+illustration-globe-vercel	部署地球插图	地球视觉显示部署中、成功与失败状态。	SVG 地球与部署状态按时间或按钮切换，重播控件重新触发展示序列；不执行部署。	托管、边缘网络和部署产品介绍。
+illustration-graph	图表插图	坐标、数据点与错误区域呈现监控视觉。	SVG 轴线和曲线路径描绘图形，强调区域与标记叠层展示异常位置。	监控、可观察性和分析产品官网。
+intro-disclosure	产品引导弹层	桌面 Dialog 与移动 Drawer 展示分步引导。	响应式切换 Dialog/Drawer，步骤状态驱动内容和进度，localStorage 记录已关闭提示。	新用户导览和功能更新公告。
+kanban-board	拖拽看板	跨列移动任务并显示标签、头像与状态。	原生 HTML 拖放更新任务所属列，Motion layout/layoutId 连接位置变化，next/image 展示头像。	项目管理、问题跟踪和迭代计划。
+lightboard	LED 灯板	点阵灯珠滚动文字，也可交互绘制。	Canvas 把字符字体映射成亮暗网格，逐帧移动绘制窗口，指针输入改变灯点。	状态横幅、文字滚动条和趣味首屏。
+loading-carousel	加载提示轮播	等待时播放图片提示并显示时间进度。	Embla 管理轮播位置和导航，定时器控制自动前进，Motion 呈现进度与内容过渡。	加载屏、首次引导和长任务等待。
+logo-carousel	品牌标志轮播	客户图标在错开的多列中交替出现。	SVG 标志按列排列，Motion 错开入场与轮换，周期更新每列当前标志。	客户墙、合作伙伴和集成展示。
+mac-screen	复古 Mac 模型	把图片或 GIF 放入经典 CRT 屏幕。	响应式框体保持设备比例，屏幕插槽裁切媒体到 CRT 内部，装饰层形成复古机身。	复古产品演示、作品集和动图展示。
+marketing-feature-code	代码功能区	功能列表与可复制的代码片段并排。	复合区域插槽组合功能说明与代码面板，复制按钮读取片段，样式突出代码和具体功能关系。	SDK、API 配置和开发者功能说明。
+marketing-hero-analytics	分析产品首屏	交互曲线、来源列表与日志构成产品视觉。	SVG 图表与 React 数据列表组成首屏，指针触发图表详情，日志面板模拟分析工作台。	分析、监控和开发工具官网。
+merging-bubbles	融合气泡	两个品牌图标被连接成一组气泡。	SVG 轮廓绘制相交气泡与连接部位，图标插槽和尺寸属性表现两种产品结合。	集成能力、伙伴公告和联合方案。
+metal-button	金属按钮	液态金属圆环包裹文字或图标按钮。	metal-fx 库渲染动态金属边缘，内层保留 shadcn Button 语义及点击行为。	首屏重点操作和产品发布。
+minimal-card	简洁图片卡片	图像、标题和说明组成紧凑内容卡。	复合卡片插槽组织图片与文字，Next.js Image 处理图像尺寸和加载。	博客预览、商品网格和作品画廊。
+mock-browser-window	浏览器窗口模型	Chrome、Safari 或通用外框呈现产品。	React 组合地址栏、侧栏与内容插槽，主题和窗口样式属性替换外壳细节。	应用截图、嵌入演示和文档预览。
+morph-surface	变形输入面板	按钮弹簧变形为文本输入区。	受控或非受控开关决定表面形态，Motion 连接按钮与 textarea；Escape 关闭，Cmd+Enter 提交。	快速反馈、笔记和内联表单。
+neumorph-button	拟物按钮	柔和阴影、按压反馈和加载指示。	阴影与背景叠层产生凹凸质感，Motion 模拟按压，intent/size 状态选择外观与加载反馈。	表单提交、工具栏和触感界面。
+neumorph-eyebrow	拟物眉题标签	内凹胶囊标签强调章节属性。	CSS 内阴影构造凹陷表面，颜色 intent 与文本插槽生成标题上方的小型标签。	发布标签、产品分类和章节眉题。
+onboarding	分步引导组件	步骤指示、功能轮播、选项组与提示列表。	根组件通过 Context 共享步骤状态，复合子组件根据当前步骤更新指示器、选项和提示。	注册、首次设置和账户个性化。
+organic-button	有机曲线按钮	SVG 弯曲端帽形成柔和按钮轮廓。	SVG 端部与中间内容拼接外形，主题变量决定颜色，Radix Slot 支持 asChild 链接。	营销行动按钮和导航链接。
+organic-card-small	紧凑有机卡片	带曲线切口的图片链接卡片。	SVG 切口装饰图像边缘，Motion 控制卡片反馈并遵循减少动态效果，组合分类和日期。	新闻、博客和相关文章网格。
+organic-card	有机营销卡片	图片、眉题、曲线色带和 CTA 组合成卡片。	复合插槽拼接图片与 SVG 色带，可选 Next.js Link 让整卡成为链接。	案例、功能亮点和营销内容网格。
+pixel-heading-character	逐字像素标题	字符在多种 Geist 像素字体间循环变化。	逐字符拆分标题并按动画模式切换 Geist pixel font-family，产生像素字形变化。	开发工具首屏、复古视觉和品牌标题。
+pixel-heading-word	逐词像素标题	悬停时整词切换像素字体。	按词拆分标题，指针悬停改变该词 font-family；无需额外动画库。	产品标题、章节标题和文字标志。
+pixel-paragraph-words-inverse	反向像素段落	像素正文中用普通字体强调指定词。	匹配选定词语，将其 font-family 改为 sans 或 mono，其余正文保留 Geist 像素字体。	介绍文字、短标语和重点提示。
+pixel-paragraph-words	像素关键词段落	普通段落中的指定词使用像素字体。	按词匹配内容，将关键词包装进 Geist 像素字体 span，正文保持普通字体。	首屏文案、产品标语和功能关键词。
+poll-widget	投票容器	投票可内联、弹出或对话框展示。	组合投票根状态、选项与结果组件，容器模式决定挂载位置，Motion 提供切换反馈和键盘支持。	文章反馈、社区问卷和应用内调研。
+popover-form	弹出表单	按钮展开输入表单并切换成功状态。	Motion layout 动画连接触发器与表单，点击外部关闭，提交状态控制成功反馈。	反馈、候补名单和快速联系。
+popover	变形 Popover	触发按钮展开表单、文本框或菜单。	React 复合部件共享开关状态，Motion layout 过渡按钮与面板尺寸，点击外部关闭。	快速笔记、菜单和内联反馈。
+prompt-composer	提示词编辑器	AI 输入栏包含附件、发送、加载和流体头像。	Base UI 负责输入行为，Paper Design Warp 渲染助手头像，React 连接输入、附件与发送事件。	AI 聊天、Agent 控制台和消息输入。
+prompt-library	提示词库	按分类检索、保存和插入提示词。	Command 执行列表搜索，Popover 展示模板，Dialog 新增内容，Hover Card 呈现预览；选择通过回调输出。	AI 聊天模板和团队常用提示词。
+rolling-number	滚动数字	数值变化时平滑滚动并支持格式化。	Motion 弹簧将旧值插值到新值，格式函数把连续数值转换成精度、货币或自定义文字。	指标、价格、计数与实时统计。
+security-checkpoint	安全检查插图	验证卡与多层线条表现安全检查过程。	React 插槽组织标题、信息和验证卡，装饰线层执行动画；不会真正验证机器人或用户权限。	防护产品介绍、检查中页面和营销安全区。
+shader-lens-blur	镜头模糊着色器	指针移动扭曲形状和渐变。	Three.js 创建 WebGL 场景，shader 读取指针与时间参数，进行颜色混合、模糊和折射采样。	创意作品集、产品背景和交互首屏。
+shadow-card	立体阴影卡片	凸出边缘、斜面、竖排文字与像素网格。	复合卡片用多层背景与边缘叠层模拟厚度，装饰插槽加入竖排标签和网格视觉。	功能卡、价格方案和营销区域。
+shift-card	悬停展开卡片	标题和次级内容在悬停时移动显露。	isHovered 切换内容高度目标值，Motion 插值高度，AnimatePresence 管理摘要与详情出现退出。	商品、团队和功能列表。
+side-panel	展开侧栏	打开侧面内容或产品视频。	开关状态控制侧栏宽度与内容挂载，Motion 编排展开过程，自定义 toggle 连接用户操作。	产品视频、了解更多和次级详情。
+sortable-list	可排序列表	拖动重排任务，支持勾选和删除。	Motion Reorder 维护列表顺序与拖动布局，React 更新完成状态和删除结果。	任务、播放列表和引导清单。
+speech-bubble	对话气泡	消息容器带 SVG 尾巴和可选光标。	复合内容区与 SVG 尾巴拼接气泡轮廓，cursor 装饰呈现人物或助手说话位置。	AI 消息、导览提示和角色对话。
+squiggle-arrow	手绘箭头	波浪、弹跳或平滑曲线指向重点。	SVG path 定义不同手绘曲线，variant 和方向参数选择形态并调整箭头位置。	截图标注、CTA 指引和产品导览。
+stripe-bg-guides	条纹网格背景	纵向网格线随机出现发光高亮。	按列构建背景轨迹，Motion 根据方向、随机延迟和 easing 沿网格移动亮段。	首屏、营销功能区和文档页头。
+svg-bands	SVG 分隔带	锯齿、波浪、缺口等宽幅分隔边缘。	SVG 路径定义不同边带轮廓，flip 属性改变朝向，颜色跟随当前主题。	首屏下沿、章节分隔和页脚装饰。
+svg-shapes-animated	动态 SVG 几何	滚动进入视区时几何线条逐步绘出。	Motion 连接 SVG 路径长度与视区状态，逐步绘制描边，并响应减少动态效果偏好。	滚动叙事、页面背景和几何首屏。
+svg-shapes	SVG 几何形状	多边形、神圣几何和多面体线框。	静态 SVG paths/lines 组成几何轮廓，currentColor 继承文本颜色并允许缩放。	首屏艺术、背景和装饰边框。
+tabs-illustration-vercel	自动插图标签页	按时间切换功能插图并显示进度。	标签状态与定时进度连接，SVG 动态插图随活动项切换，用户操作可以改变当前视图。	AI 产品首屏和功能介绍。
+terminal-animation	终端动画	播放键入命令和输出，支持多场景标签。	受控或非受控播放状态驱动字符与输出时间线，复合命令部件组织场景；不执行 shell 命令。	CLI 文档、安装指南和开发工具首屏。
+text-animate	文字进入动画	标题提供淡入、滚入和逐字预设。	字符或单词拆成 motion.span，容器 staggerChildren 设置先后次序，variants 控制位移和透明度。	首屏标题、章节标题和公告横幅。
+text-gif	GIF 文字	动画图片被裁进文字字形。	background-clip:text 让 GIF 只在文字轮廓内可见，颜色回退与尺寸字重属性控制显示。	活动宣传、趣味品牌标题和视觉首屏。
+texture-button	触感纹理按钮	多层边缘与渐变产生可按压外观。	CSS 边框、渐变和阴影构成表面，Radix Slot 支持 asChild，variant/size 选择按钮配置。	表单、对话框和仪表盘动作。
+texture-card	触感纹理卡片	带分层边缘与复合标题内容页脚。	复合 Card 插槽组织分区，边框、内阴影与渐变模拟拟物表面，separator 分隔内容。	设置面板、登录、定价和数据卡片。
+texture-overlay	纹理覆盖层	点阵、网格、交叉线、半色调和纸纹。	纯 CSS gradients 生成重复图案，透明度和图案变体控制纹理叠加程度。	卡片、首屏背景和章节分区。
+three-d-carousel	三维图片轮播	图片围绕圆柱排列，拖动惯性旋转并展开。	CSS perspective/rotateY/translateZ 将图片放入三维环，Motion 将拖动距离映射为旋转并处理展开布局。	摄影、产品图片和视觉作品集。
+timer	计时器	可组合的时间显示支持格式和计时 Hook。	useTimer 记录经过时间，格式化函数转换显示单位，复合部件组合标签、数值与状态。	生成进度、录音、运动和运行时长。
+toolbar-expandable	可展开工具栏	紧凑工具栏展开为可滚动分步面板。	Motion 过渡工具栏与面板布局，Radix Scroll Area 承载长内容，步骤状态控制当前提示。	功能导览、首次引导和紧凑设置。
+tweet-grid	推文网格	按推文 ID 显示瀑布流社交内容。	网格或多列布局排布嵌入推文，外部 tweet 组件按 ID 获取展示数据；网络请求并非静态内容。	客户评价、社区和社交证明。
+typewriter	打字机文字	逐字显示短语并循环替换词语。	React 时间状态推进字符和短语索引，Motion 显示键入与闪烁光标反馈。	首屏标语、AI 产品介绍和欢迎文字。
+vote-tally	点赞计票列表	可投票列表按票数排序。	受控或非受控根状态记录票数，可访问按钮更新结果，排序函数决定列表次序。	需求板、路线图和社区点子收集。
+wizard-expandable	展开式向导	带步骤校验和键盘操作的多步表单。	步骤状态配合校验函数限制前进，Motion 连接不同表单布局，键盘事件处理导航。	注册、账户设置和结算引导。
+youtube-video-player	YouTube 视频播放器	缩略图播放按钮展开动画视频弹层。	点击后挂载 YouTube iframe，Motion 过渡缩略图与模态面板，关闭时卸载媒体。	教程、产品演示和视频评价。
+bg-animated-gradient	动态径向渐变	在多个径向渐变配方之间持续往返变化。	useAnimation 将渐变色点和中心坐标转换为 background 关键帧，Motion 以 reverse 模式无限循环。	产品背景、品牌视觉和柔和动态区域。
+base-select	基础选择框	Base UI 选择原语的主题外观包装。	Select Root/Trigger/Popup/Item 组合选择逻辑与弹层定位，Hugeicons 绘制箭头和选中标记。	设置和筛选下拉框，以及其他组件的基础依赖。
+base-tooltip	基础提示框	基于 Base UI 的轻量悬停或焦点提示。	Tooltip Provider 统一延迟，Trigger 与 Popup 处理锚点提示，Radix Slot 支持 asChild 复用按钮。	图标按钮说明、工具栏提示和内部组件依赖。

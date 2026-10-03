@@ -9,12 +9,20 @@
 编号按加入顺序递增，归档后保留编号。目录、README 和展示网站使用同一份 [项目清单](projects/catalog.json)。
 
 <!-- PROJECTS:START -->
-暂未添加研究项目。添加第一个项目后，这里会自动生成按编号排序的摘要、文档与演示索引。
+| 编号 | 子项目 / 研究文档 | 摘要 | 状态 | 上游 | Web |
+| --- | --- | --- | --- | --- | --- |
+| 001 | [Cult UI · 组件能力与原理实验室](projects/001-cult-ui/README.md) | 可复制和修改的 React 界面与动效源码库，137 个组件覆盖 AI 输入/结果、工作台、表单、导航、反馈、引导、按钮卡片、官网、插画、设备媒体、文字与背景。通过 React 状态、Tailwind/CSS/SVG，结合 Motion、Canvas/WebGL 实现；用于 React 官网、作品集、AI/SaaS 与后台，帮助快速搭界面、复用交互和学习原理，业务后端需自行接入。 | 已完成 | [源码](https://github.com/nolly-studio/cult-ui) | [演示](https://yydshly.github.io/1002_codex_project/projects/001-cult-ui/) |
+
+### 001 · Cult UI · 组件能力与原理实验室
+
+可复制和修改的 React 界面与动效源码库，137 个组件覆盖 AI 输入/结果、工作台、表单、导航、反馈、引导、按钮卡片、官网、插画、设备媒体、文字与背景。通过 React 状态、Tailwind/CSS/SVG，结合 Motion、Canvas/WebGL 实现；用于 React 官网、作品集、AI/SaaS 与后台，帮助快速搭界面、复用交互和学习原理，业务后端需自行接入。
+
+[![Cult UI 全能力地图：137 个组件、源码分发、底层技术、效果方向、应用场景、个人价值与选用路径](projects/001-cult-ui/assets/cult-ui-capability-map.png)](projects/001-cult-ui/README.md)
 <!-- PROJECTS:END -->
 
 ## 添加项目
 
-需要 Node.js 22 或更新版本；管理脚本无需安装依赖。
+需要 Node.js 22.12 或更新版本；管理脚本无需安装依赖，框架子项目需要先安装各自依赖。
 
 ```bash
 npm run new -- --slug example-repo --name "项目名称" --repo "https://github.com/owner/repo" --summary "一句话说明研究价值"
@@ -28,6 +36,7 @@ npm run new -- --slug example-repo --name "项目名称" --repo "https://github.
 npm run sync   # 更新 README 的摘要、图片与索引
 npm run check  # 检查编号、路径、图片和索引一致性
 npm run build  # 生成展示入口与各子项目静态 Web 到 _site/
+npm run preview # 启动本地总站预览（默认端口 4173）
 ```
 
 ## 目录结构
@@ -50,7 +59,19 @@ _site/                     # 构建产物，不提交
 
 ## Web 展示
 
-已准备 GitHub Pages 发布工作流。启用后，总入口地址为 `https://yydshly.github.io/1002_codex_project/`，子项目使用 `projects/001-project-slug/` 等独立子路径。当前仅完成初始化，尚未发布网站。
+首个 Cult UI 子项目提供能力图、完整组件目录、真实预览，以及原理、使用场景和选用判断。总索引与子项目通过同一 GitHub Pages 工作流发布，上方 Web 链接指向对应子项目。
+
+首次运行 Cult UI 展示：
+
+```bash
+npm --prefix projects/001-cult-ui/web ci
+npm run build
+npm run preview
+```
+
+打开 `http://localhost:4173/projects/001-cult-ui/`。端口被占用时可运行 `node scripts/serve.mjs --port 4187`；本次验证使用 [4187 本地预览](http://localhost:4187/projects/001-cult-ui/)。开发模式可运行 `npm run dev:cult`。
+
+总入口：[GitHub 项目研究库](https://yydshly.github.io/1002_codex_project/)。子项目：[Cult UI 能力与原理实验室](https://yydshly.github.io/1002_codex_project/projects/001-cult-ui/)，各项目使用独立子路径。
 
 支持项目内静态 Web 和外部演示链接。添加应用时再确定技术栈和构建命令，详见 [部署指南](docs/deployment.md)。
 

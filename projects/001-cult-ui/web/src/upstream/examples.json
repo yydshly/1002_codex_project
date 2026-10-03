@@ -1,0 +1,2085 @@
+[
+  {
+    "name": "text-animate-demo",
+    "kind": "official",
+    "path": "registry/default/example/text-animate-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/text-animate-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "text-animate"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/text-animate-demo.tsx"
+  },
+  {
+    "name": "cosmic-button-demo",
+    "kind": "official",
+    "path": "registry/default/example/cosmic-button-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/cosmic-button-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "cosmic-button"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/cosmic-button-demo.tsx"
+  },
+  {
+    "name": "texture-button-demo",
+    "kind": "official",
+    "path": "registry/default/example/texture-button-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/texture-button-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "texture-button"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/texture-button-demo.tsx"
+  },
+  {
+    "name": "texture-card-demo",
+    "kind": "official",
+    "path": "registry/default/example/texture-card-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/texture-card-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "texture-card",
+      "texture-button"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/texture-card-demo.tsx"
+  },
+  {
+    "name": "timer-demo",
+    "kind": "official",
+    "path": "registry/default/example/timer-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/timer-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "timer",
+      "texture-button"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/timer-demo.tsx"
+  },
+  {
+    "name": "shift-card-demo",
+    "kind": "official",
+    "path": "registry/default/example/shift-card-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/shift-card-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "shift-card",
+      "texture-button"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/shift-card-demo.tsx"
+  },
+  {
+    "name": "minimal-card-demo",
+    "kind": "official",
+    "path": "registry/default/example/minimal-card-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/minimal-card-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "minimal-card"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/minimal-card-demo.tsx"
+  },
+  {
+    "name": "cutout-card-demo",
+    "kind": "official",
+    "path": "registry/default/example/cutout-card-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/cutout-card-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "cutout-card"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/cutout-card-demo.tsx"
+  },
+  {
+    "name": "dynamic-island-demo",
+    "kind": "official",
+    "path": "registry/default/example/dynamic-island-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/dynamic-island-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "dynamic-island"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/dynamic-island-demo.tsx"
+  },
+  {
+    "name": "direction-aware-tabs-demo",
+    "kind": "official",
+    "path": "registry/default/example/direction-aware-tabs-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/direction-aware-tabs-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "direction-aware-tabs"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/direction-aware-tabs-demo.tsx"
+  },
+  {
+    "name": "bg-animate-button-demo",
+    "kind": "official",
+    "path": "registry/default/example/bg-animate-button-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/bg-animate-button-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "bg-animate-button"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/bg-animate-button-demo.tsx"
+  },
+  {
+    "name": "border-beam-button-demo",
+    "kind": "official",
+    "path": "registry/default/example/border-beam-button-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/border-beam-button-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "border-beam-button"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/border-beam-button-demo.tsx"
+  },
+  {
+    "name": "family-button-demo",
+    "kind": "official",
+    "path": "registry/default/example/family-button-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/family-button-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "family-button"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/family-button-demo.tsx"
+  },
+  {
+    "name": "side-panel-demo",
+    "kind": "official",
+    "path": "registry/default/example/side-panel-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/side-panel-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "side-panel"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/side-panel-demo.tsx"
+  },
+  {
+    "name": "bg-media-demo",
+    "kind": "official",
+    "path": "registry/default/example/bg-media-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/bg-media-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "bg-media"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/bg-media-demo.tsx"
+  },
+  {
+    "name": "bg-image-texture-demo",
+    "kind": "official",
+    "path": "registry/default/example/bg-image-texture-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/bg-image-texture-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "bg-image-texture"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/bg-image-texture-demo.tsx"
+  },
+  {
+    "name": "three-d-carousel-demo",
+    "kind": "official",
+    "path": "registry/default/example/three-d-carousel-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/three-d-carousel-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "three-d-carousel"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/three-d-carousel-demo.tsx"
+  },
+  {
+    "name": "tweet-grid-demo",
+    "kind": "official",
+    "path": "registry/default/example/tweet-grid-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/tweet-grid-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "tweet-grid",
+      "gradient-heading"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/tweet-grid-demo.tsx"
+  },
+  {
+    "name": "gradient-heading-demo",
+    "kind": "official",
+    "path": "registry/default/example/gradient-heading-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/gradient-heading-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "gradient-heading"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/gradient-heading-demo.tsx"
+  },
+  {
+    "name": "typewriter-demo",
+    "kind": "official",
+    "path": "registry/default/example/typewriter-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/typewriter-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "typewriter"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/typewriter-demo.tsx"
+  },
+  {
+    "name": "rolling-number-demo",
+    "kind": "official",
+    "path": "registry/default/example/rolling-number-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/rolling-number-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "rolling-number"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/rolling-number-demo.tsx"
+  },
+  {
+    "name": "sortable-list-demo",
+    "kind": "official",
+    "path": "registry/default/example/sortable-list-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/sortable-list-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "sortable-list"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/sortable-list-demo.tsx"
+  },
+  {
+    "name": "dock-demo",
+    "kind": "official",
+    "path": "registry/default/example/dock-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/dock-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "dock"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/dock-demo.tsx"
+  },
+  {
+    "name": "lightboard-demo",
+    "kind": "official",
+    "path": "registry/default/example/lightboard-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/lightboard-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "lightboard"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/lightboard-demo.tsx"
+  },
+  {
+    "name": "canvas-fractal-grid-demo",
+    "kind": "official",
+    "path": "registry/default/example/canvas-fractal-grid-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/canvas-fractal-grid-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "canvas-fractal-grid"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/canvas-fractal-grid-demo.tsx"
+  },
+  {
+    "name": "bg-animated-fractal-dot-grid-demo",
+    "kind": "official",
+    "path": "registry/default/example/bg-animated-fractal-dot-grid-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/bg-animated-fractal-dot-grid-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "bg-animated-fractal-dot-grid"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/bg-animated-fractal-dot-grid-demo.tsx"
+  },
+  {
+    "name": "bg-animated-gradient-demo",
+    "kind": "official",
+    "path": "registry/default/example/bg-animated-gradient-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/bg-animated-gradient-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "bg-animated-gradient"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/bg-animated-gradient-demo.tsx"
+  },
+  {
+    "name": "popover-demo",
+    "kind": "official",
+    "path": "registry/default/example/popover-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/popover-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "popover"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/popover-demo.tsx"
+  },
+  {
+    "name": "floating-panel-demo",
+    "kind": "official",
+    "path": "registry/default/example/floating-panel-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/floating-panel-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "floating-panel"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/floating-panel-demo.tsx"
+  },
+  {
+    "name": "color-picker-demo",
+    "kind": "official",
+    "path": "registry/default/example/color-picker-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/color-picker-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "color-picker"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/color-picker-demo.tsx"
+  },
+  {
+    "name": "shader-lens-blur-demo",
+    "kind": "official",
+    "path": "registry/default/example/shader-lens-blur-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/shader-lens-blur-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "shader-lens-blur",
+      "color-picker"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/shader-lens-blur-demo.tsx"
+  },
+  {
+    "name": "edge-blur-demo",
+    "kind": "official",
+    "path": "registry/default/example/edge-blur-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/edge-blur-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "edge-blur"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/edge-blur-demo.tsx"
+  },
+  {
+    "name": "dither-image-demo",
+    "kind": "official",
+    "path": "registry/default/example/dither-image-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/dither-image-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "dither-image"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/dither-image-demo.tsx"
+  },
+  {
+    "name": "dither-image-demo-upload",
+    "kind": "official",
+    "path": "registry/default/example/dither-image-demo-upload.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/dither-image-demo-upload.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "dither-image"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/dither-image-demo-upload.tsx"
+  },
+  {
+    "name": "popover-form-demo",
+    "kind": "official",
+    "path": "registry/default/example/popover-form-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/popover-form-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "popover-form"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/popover-form-demo.tsx"
+  },
+  {
+    "name": "expandable-demo",
+    "kind": "official",
+    "path": "registry/default/example/expandable-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/expandable-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "expandable"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/expandable-demo.tsx"
+  },
+  {
+    "name": "logo-carousel-demo",
+    "kind": "official",
+    "path": "registry/default/example/logo-carousel-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/logo-carousel-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "logo-carousel",
+      "gradient-heading"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/logo-carousel-demo.tsx"
+  },
+  {
+    "name": "loading-carousel-demo",
+    "kind": "official",
+    "path": "registry/default/example/loading-carousel-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/loading-carousel-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "loading-carousel"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/loading-carousel-demo.tsx"
+  },
+  {
+    "name": "hover-video-player-demo",
+    "kind": "official",
+    "path": "registry/default/example/hover-video-player-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/hover-video-player-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "hover-video-player"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/hover-video-player-demo.tsx"
+  },
+  {
+    "name": "neumorph-eyebrow-demo",
+    "kind": "official",
+    "path": "registry/default/example/neumorph-eyebrow-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/neumorph-eyebrow-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "neumorph-eyebrow"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/neumorph-eyebrow-demo.tsx"
+  },
+  {
+    "name": "neumorph-button-demo",
+    "kind": "official",
+    "path": "registry/default/example/neumorph-button-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/neumorph-button-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "neumorph-button"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/neumorph-button-demo.tsx"
+  },
+  {
+    "name": "feature-carousel-demo",
+    "kind": "official",
+    "path": "registry/default/example/feature-carousel-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/feature-carousel-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "feature-carousel"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/feature-carousel-demo.tsx"
+  },
+  {
+    "name": "choice-poll-demo",
+    "kind": "official",
+    "path": "registry/default/example/choice-poll-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/choice-poll-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "choice-poll"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/choice-poll-demo.tsx"
+  },
+  {
+    "name": "feature-poll-demo",
+    "kind": "official",
+    "path": "registry/default/example/feature-poll-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/feature-poll-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "feature-poll"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/feature-poll-demo.tsx"
+  },
+  {
+    "name": "feature-voting-demo",
+    "kind": "official",
+    "path": "registry/default/example/feature-voting-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/feature-voting-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "feature-voting"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/feature-voting-demo.tsx"
+  },
+  {
+    "name": "vote-tally-demo",
+    "kind": "official",
+    "path": "registry/default/example/vote-tally-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/vote-tally-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "vote-tally"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/vote-tally-demo.tsx"
+  },
+  {
+    "name": "poll-widget-demo",
+    "kind": "official",
+    "path": "registry/default/example/poll-widget-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/poll-widget-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "poll-widget"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/poll-widget-demo.tsx"
+  },
+  {
+    "name": "prompt-library-demo",
+    "kind": "official",
+    "path": "registry/default/example/prompt-library-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/prompt-library-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "prompt-library"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/prompt-library-demo.tsx"
+  },
+  {
+    "name": "ai-instructions-demo",
+    "kind": "official",
+    "path": "registry/default/example/ai-instructions-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/ai-instructions-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "ai-instructions"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/ai-instructions-demo.tsx"
+  },
+  {
+    "name": "intro-disclosure-demo",
+    "kind": "official",
+    "path": "registry/default/example/intro-disclosure-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/intro-disclosure-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "intro-disclosure"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/intro-disclosure-demo.tsx"
+  },
+  {
+    "name": "text-gif-demo",
+    "kind": "official",
+    "path": "registry/default/example/text-gif-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/text-gif-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "text-gif"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/text-gif-demo.tsx"
+  },
+  {
+    "name": "stripe-bg-guides-demo",
+    "kind": "official",
+    "path": "registry/default/example/stripe-bg-guides-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/stripe-bg-guides-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "stripe-bg-guides"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/stripe-bg-guides-demo.tsx"
+  },
+  {
+    "name": "svg-shapes-demo",
+    "kind": "official",
+    "path": "registry/default/example/svg-shapes-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/svg-shapes-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "svg-shapes"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/svg-shapes-demo.tsx"
+  },
+  {
+    "name": "svg-shapes-animated-demo",
+    "kind": "official",
+    "path": "registry/default/example/svg-shapes-animated-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/svg-shapes-animated-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "svg-shapes-animated"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/svg-shapes-animated-demo.tsx"
+  },
+  {
+    "name": "svg-bands-demo",
+    "kind": "official",
+    "path": "registry/default/example/svg-bands-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/svg-bands-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "svg-bands"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/svg-bands-demo.tsx"
+  },
+  {
+    "name": "grid-beam-demo",
+    "kind": "official",
+    "path": "registry/default/example/grid-beam-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/grid-beam-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "grid-beam"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/grid-beam-demo.tsx"
+  },
+  {
+    "name": "youtube-video-player-demo",
+    "kind": "official",
+    "path": "registry/default/example/youtube-video-player-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/youtube-video-player-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "youtube-video-player"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/youtube-video-player-demo.tsx"
+  },
+  {
+    "name": "toolbar-expandable-demo",
+    "kind": "official",
+    "path": "registry/default/example/toolbar-expandable-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/toolbar-expandable-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "toolbar-expandable",
+      "button",
+      "input",
+      "label",
+      "textarea"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/toolbar-expandable-demo.tsx"
+  },
+  {
+    "name": "texture-overlay-demo",
+    "kind": "official",
+    "path": "registry/default/example/texture-overlay-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/texture-overlay-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "texture-overlay"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/texture-overlay-demo.tsx"
+  },
+  {
+    "name": "squiggle-arrow-demo",
+    "kind": "official",
+    "path": "registry/default/example/squiggle-arrow-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/squiggle-arrow-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "squiggle-arrow"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/squiggle-arrow-demo.tsx"
+  },
+  {
+    "name": "code-block-demo",
+    "kind": "official",
+    "path": "registry/default/example/code-block-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/code-block-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "code-block"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/code-block-demo.tsx"
+  },
+  {
+    "name": "metal-button-demo",
+    "kind": "official",
+    "path": "registry/default/example/metal-button-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/metal-button-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "metal-button"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/metal-button-demo.tsx"
+  },
+  {
+    "name": "mock-browser-window-demo",
+    "kind": "official",
+    "path": "registry/default/example/mock-browser-window-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/mock-browser-window-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "mock-browser-window",
+      "button",
+      "input",
+      "label",
+      "select",
+      "switch"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/mock-browser-window-demo.tsx"
+  },
+  {
+    "name": "morph-surface-demo",
+    "kind": "official",
+    "path": "registry/default/example/morph-surface-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/morph-surface-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "morph-surface"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/morph-surface-demo.tsx"
+  },
+  {
+    "name": "distorted-glass-demo",
+    "kind": "official",
+    "path": "registry/default/example/distorted-glass-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/distorted-glass-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "distorted-glass"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/distorted-glass-demo.tsx"
+  },
+  {
+    "name": "family-drawer-demo",
+    "kind": "official",
+    "path": "registry/default/example/family-drawer-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/family-drawer-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "family-drawer"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/family-drawer-demo.tsx"
+  },
+  {
+    "name": "expandable-screen-demo",
+    "kind": "official",
+    "path": "registry/default/example/expandable-screen-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/expandable-screen-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "expandable-screen",
+      "button",
+      "input",
+      "label",
+      "select",
+      "textarea"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/expandable-screen-demo.tsx"
+  },
+  {
+    "name": "pixel-heading-character-demo",
+    "kind": "official",
+    "path": "registry/default/example/pixel-heading-character-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/pixel-heading-character-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "pixel-heading-character"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/pixel-heading-character-demo.tsx"
+  },
+  {
+    "name": "pixel-heading-word-demo",
+    "kind": "official",
+    "path": "registry/default/example/pixel-heading-word-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/pixel-heading-word-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "pixel-heading-word"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/pixel-heading-word-demo.tsx"
+  },
+  {
+    "name": "pixel-paragraph-words-inverse-demo",
+    "kind": "official",
+    "path": "registry/default/example/pixel-paragraph-words-inverse-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/pixel-paragraph-words-inverse-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "pixel-paragraph-words-inverse"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/pixel-paragraph-words-inverse-demo.tsx"
+  },
+  {
+    "name": "pixel-paragraph-words-demo",
+    "kind": "official",
+    "path": "registry/default/example/pixel-paragraph-words-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/pixel-paragraph-words-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "pixel-paragraph-words"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/pixel-paragraph-words-demo.tsx"
+  },
+  {
+    "name": "onboarding-demo",
+    "kind": "official",
+    "path": "registry/default/example/onboarding-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/onboarding-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "onboarding"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/onboarding-demo.tsx"
+  },
+  {
+    "name": "gradient-button-group-demo",
+    "kind": "official",
+    "path": "registry/default/example/gradient-button-group-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/gradient-button-group-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "gradient-button-group"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/gradient-button-group-demo.tsx"
+  },
+  {
+    "name": "terminal-animation-demo",
+    "kind": "official",
+    "path": "registry/default/example/terminal-animation-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/terminal-animation-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "terminal-animation"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/terminal-animation-demo.tsx"
+  },
+  {
+    "name": "hero-dithering-demo",
+    "kind": "official",
+    "path": "registry/default/example/hero-dithering-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/hero-dithering-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "hero-dithering"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/hero-dithering-demo.tsx"
+  },
+  {
+    "name": "hero-color-panels-demo",
+    "kind": "official",
+    "path": "registry/default/example/hero-color-panels-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/hero-color-panels-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "hero-color-panel"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/hero-color-panels-demo.tsx"
+  },
+  {
+    "name": "hero-static-radial-gradient-demo",
+    "kind": "official",
+    "path": "registry/default/example/hero-static-radial-gradient-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/hero-static-radial-gradient-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "hero-static-radial-gradient"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/hero-static-radial-gradient-demo.tsx"
+  },
+  {
+    "name": "hero-heatmap-demo",
+    "kind": "official",
+    "path": "registry/default/example/hero-heatmap-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/hero-heatmap-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "hero-heatmap"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/hero-heatmap-demo.tsx"
+  },
+  {
+    "name": "hero-liquid-metal-demo",
+    "kind": "official",
+    "path": "registry/default/example/hero-liquid-metal-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/hero-liquid-metal-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "hero-liquid-metal"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/hero-liquid-metal-demo.tsx"
+  },
+  {
+    "name": "gateway-endpoint-illustration-demo",
+    "kind": "official",
+    "path": "registry/default/example/gateway-endpoint-illustration-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/gateway-endpoint-illustration-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "gateway-endpoint-illustration"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/gateway-endpoint-illustration-demo.tsx"
+  },
+  {
+    "name": "gateway-route-illustration-demo",
+    "kind": "official",
+    "path": "registry/default/example/gateway-route-illustration-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/gateway-route-illustration-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "gateway-route-illustration"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/gateway-route-illustration-demo.tsx"
+  },
+  {
+    "name": "gateway-svg-illustration-demo",
+    "kind": "official",
+    "path": "registry/default/example/gateway-svg-illustration-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/gateway-svg-illustration-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "gateway-svg-illustration"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/gateway-svg-illustration-demo.tsx"
+  },
+  {
+    "name": "illustration-card-grid-demo",
+    "kind": "official",
+    "path": "registry/default/example/illustration-card-grid-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/illustration-card-grid-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "illustration-card-grid"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/illustration-card-grid-demo.tsx"
+  },
+  {
+    "name": "illustration-cursor-demo",
+    "kind": "official",
+    "path": "registry/default/example/illustration-cursor-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/illustration-cursor-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "illustration-cursor"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/illustration-cursor-demo.tsx"
+  },
+  {
+    "name": "illustration-comment-bubble-demo",
+    "kind": "official",
+    "path": "registry/default/example/illustration-comment-bubble-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/illustration-comment-bubble-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "illustration-comment-bubble"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/illustration-comment-bubble-demo.tsx"
+  },
+  {
+    "name": "illustration-fluid-rendering-demo",
+    "kind": "official",
+    "path": "registry/default/example/illustration-fluid-rendering-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/illustration-fluid-rendering-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "illustration-fluid-rendering"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/illustration-fluid-rendering-demo.tsx"
+  },
+  {
+    "name": "illustration-globe-vercel-demo",
+    "kind": "official",
+    "path": "registry/default/example/illustration-globe-vercel-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/illustration-globe-vercel-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "illustration-globe-vercel"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/illustration-globe-vercel-demo.tsx"
+  },
+  {
+    "name": "illustration-graph-demo",
+    "kind": "official",
+    "path": "registry/default/example/illustration-graph-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/illustration-graph-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "illustration-graph"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/illustration-graph-demo.tsx"
+  },
+  {
+    "name": "tabs-illustration-vercel-demo",
+    "kind": "official",
+    "path": "registry/default/example/tabs-illustration-vercel-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/tabs-illustration-vercel-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "tabs-illustration-vercel"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/tabs-illustration-vercel-demo.tsx"
+  },
+  {
+    "name": "circuit-board-demo",
+    "kind": "official",
+    "path": "registry/default/example/circuit-board-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/circuit-board-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "circuit-board"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/circuit-board-demo.tsx"
+  },
+  {
+    "name": "fluid-ai-workloads-demo",
+    "kind": "official",
+    "path": "registry/default/example/fluid-ai-workloads-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/fluid-ai-workloads-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "fluid-ai-workloads"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/fluid-ai-workloads-demo.tsx"
+  },
+  {
+    "name": "security-checkpoint-demo",
+    "kind": "official",
+    "path": "registry/default/example/security-checkpoint-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/security-checkpoint-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "security-checkpoint"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/security-checkpoint-demo.tsx"
+  },
+  {
+    "name": "merging-bubbles-demo",
+    "kind": "official",
+    "path": "registry/default/example/merging-bubbles-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/merging-bubbles-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "merging-bubbles"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/merging-bubbles-demo.tsx"
+  },
+  {
+    "name": "ai-blob-warp-demo",
+    "kind": "official",
+    "path": "registry/default/example/ai-blob-warp-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/ai-blob-warp-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "ai-blob-warp"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/ai-blob-warp-demo.tsx"
+  },
+  {
+    "name": "folded-card-demo",
+    "kind": "official",
+    "path": "registry/default/example/folded-card-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/folded-card-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "folded-card"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/folded-card-demo.tsx"
+  },
+  {
+    "name": "shadow-card-demo",
+    "kind": "official",
+    "path": "registry/default/example/shadow-card-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/shadow-card-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "shadow-card"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/shadow-card-demo.tsx"
+  },
+  {
+    "name": "organic-card-demo",
+    "kind": "official",
+    "path": "registry/default/example/organic-card-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/organic-card-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "organic-card"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/organic-card-demo.tsx"
+  },
+  {
+    "name": "organic-card-small-demo",
+    "kind": "official",
+    "path": "registry/default/example/organic-card-small-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/organic-card-small-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "organic-card-small"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/organic-card-small-demo.tsx"
+  },
+  {
+    "name": "organic-button-demo",
+    "kind": "official",
+    "path": "registry/default/example/organic-button-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/organic-button-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "organic-button"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/organic-button-demo.tsx"
+  },
+  {
+    "name": "fluted-glass-demo",
+    "kind": "official",
+    "path": "registry/default/example/fluted-glass-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/fluted-glass-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "fluted-glass",
+      "button",
+      "input",
+      "label",
+      "select",
+      "slider"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/fluted-glass-demo.tsx"
+  },
+  {
+    "name": "speech-bubble-demo",
+    "kind": "official",
+    "path": "registry/default/example/speech-bubble-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/speech-bubble-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "speech-bubble"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/speech-bubble-demo.tsx"
+  },
+  {
+    "name": "apple-iphone-17-pro-demo",
+    "kind": "official",
+    "path": "registry/default/example/apple-iphone-17-pro-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/apple-iphone-17-pro-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "apple-iphone-17-pro"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/apple-iphone-17-pro-demo.tsx"
+  },
+  {
+    "name": "apple-keyboard-demo",
+    "kind": "official",
+    "path": "registry/default/example/apple-keyboard-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/apple-keyboard-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "apple-keyboard"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/apple-keyboard-demo.tsx"
+  },
+  {
+    "name": "apple-watch-ultra-demo",
+    "kind": "official",
+    "path": "registry/default/example/apple-watch-ultra-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/apple-watch-ultra-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "apple-watch-ultra"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/apple-watch-ultra-demo.tsx"
+  },
+  {
+    "name": "mac-screen-demo",
+    "kind": "official",
+    "path": "registry/default/example/mac-screen-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/mac-screen-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "mac-screen"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/mac-screen-demo.tsx"
+  },
+  {
+    "name": "apple-pro-display-xdr-demo",
+    "kind": "official",
+    "path": "registry/default/example/apple-pro-display-xdr-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/apple-pro-display-xdr-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "apple-pro-display-xdr"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/apple-pro-display-xdr-demo.tsx"
+  },
+  {
+    "name": "marketing-hero-analytics-demo",
+    "kind": "official",
+    "path": "registry/default/example/marketing-hero-analytics-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/marketing-hero-analytics-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "marketing-hero-analytics"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/marketing-hero-analytics-demo.tsx"
+  },
+  {
+    "name": "marketing-feature-code-demo",
+    "kind": "official",
+    "path": "registry/default/example/marketing-feature-code-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/marketing-feature-code-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "marketing-feature-code"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/marketing-feature-code-demo.tsx"
+  },
+  {
+    "name": "feature-sticky-section-demo",
+    "kind": "official",
+    "path": "registry/default/example/feature-sticky-section-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/feature-sticky-section-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "feature-sticky-section"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/feature-sticky-section-demo.tsx"
+  },
+  {
+    "name": "analytics-chart-demo",
+    "kind": "official",
+    "path": "registry/default/example/analytics-chart-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/analytics-chart-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "analytics-chart"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/analytics-chart-demo.tsx"
+  },
+  {
+    "name": "kanban-board-demo",
+    "kind": "official",
+    "path": "registry/default/example/kanban-board-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/kanban-board-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "kanban-board"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/kanban-board-demo.tsx"
+  },
+  {
+    "name": "agent-suggest-card-stack-demo",
+    "kind": "official",
+    "path": "registry/default/example/agent-suggest-card-stack-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/agent-suggest-card-stack-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "agent-suggest-card-stack"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/agent-suggest-card-stack-demo.tsx"
+  },
+  {
+    "name": "collab-avatar-demo",
+    "kind": "official",
+    "path": "registry/default/example/collab-avatar-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/collab-avatar-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "collab-avatar"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/collab-avatar-demo.tsx"
+  },
+  {
+    "name": "collab-toolbar-demo",
+    "kind": "official",
+    "path": "registry/default/example/collab-toolbar-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/collab-toolbar-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "collab-toolbar"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/collab-toolbar-demo.tsx"
+  },
+  {
+    "name": "halo-dropzone-demo",
+    "kind": "official",
+    "path": "registry/default/example/halo-dropzone-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/halo-dropzone-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "halo-dropzone"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/halo-dropzone-demo.tsx"
+  },
+  {
+    "name": "halo-search-demo",
+    "kind": "official",
+    "path": "registry/default/example/halo-search-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/halo-search-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "halo-search",
+      "button"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/halo-search-demo.tsx"
+  },
+  {
+    "name": "globe-demo",
+    "kind": "official",
+    "path": "registry/default/example/globe-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/globe-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "globe"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/globe-demo.tsx"
+  },
+  {
+    "name": "file-icons-demo",
+    "kind": "official",
+    "path": "registry/default/example/file-icons-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/file-icons-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "file-icons"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/file-icons-demo.tsx"
+  },
+  {
+    "name": "halo-button-demo",
+    "kind": "official",
+    "path": "registry/default/example/halo-button-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/halo-button-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "halo-button"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/halo-button-demo.tsx"
+  },
+  {
+    "name": "copy-button-demo",
+    "kind": "official",
+    "path": "registry/default/example/copy-button-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/copy-button-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "copy-button"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/copy-button-demo.tsx"
+  },
+  {
+    "name": "halo-card-demo",
+    "kind": "official",
+    "path": "registry/default/example/halo-card-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/halo-card-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "halo-card"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/halo-card-demo.tsx"
+  },
+  {
+    "name": "border-beam-card-demo",
+    "kind": "official",
+    "path": "registry/default/example/border-beam-card-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/border-beam-card-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "border-beam-card"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/border-beam-card-demo.tsx"
+  },
+  {
+    "name": "halo-tabs-demo",
+    "kind": "official",
+    "path": "registry/default/example/halo-tabs-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/halo-tabs-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "halo-tabs"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/halo-tabs-demo.tsx"
+  },
+  {
+    "name": "halo-segmented-demo",
+    "kind": "official",
+    "path": "registry/default/example/halo-segmented-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/halo-segmented-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "halo-segmented"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/halo-segmented-demo.tsx"
+  },
+  {
+    "name": "halo-toggle-group-demo",
+    "kind": "official",
+    "path": "registry/default/example/halo-toggle-group-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/halo-toggle-group-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "halo-toggle-group"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/halo-toggle-group-demo.tsx"
+  },
+  {
+    "name": "halo-notification-demo",
+    "kind": "official",
+    "path": "registry/default/example/halo-notification-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/halo-notification-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "halo-notification"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/halo-notification-demo.tsx"
+  },
+  {
+    "name": "halo-toast-demo",
+    "kind": "official",
+    "path": "registry/default/example/halo-toast-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/halo-toast-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "halo-toast"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/halo-toast-demo.tsx"
+  },
+  {
+    "name": "halo-switch-demo",
+    "kind": "official",
+    "path": "registry/default/example/halo-switch-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/halo-switch-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "halo-switch"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/halo-switch-demo.tsx"
+  },
+  {
+    "name": "halo-input-demo",
+    "kind": "official",
+    "path": "registry/default/example/halo-input-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/halo-input-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "halo-input"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/halo-input-demo.tsx"
+  },
+  {
+    "name": "halo-field-demo",
+    "kind": "official",
+    "path": "registry/default/example/halo-field-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/halo-field-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "halo-field"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/halo-field-demo.tsx"
+  },
+  {
+    "name": "halo-progress-demo",
+    "kind": "official",
+    "path": "registry/default/example/halo-progress-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/halo-progress-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "halo-progress"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/halo-progress-demo.tsx"
+  },
+  {
+    "name": "border-beam-input-demo",
+    "kind": "official",
+    "path": "registry/default/example/border-beam-input-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/border-beam-input-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "border-beam-input"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/border-beam-input-demo.tsx"
+  },
+  {
+    "name": "halo-badge-demo",
+    "kind": "official",
+    "path": "registry/default/example/halo-badge-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/halo-badge-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "halo-badge"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/halo-badge-demo.tsx"
+  },
+  {
+    "name": "halo-select-demo",
+    "kind": "official",
+    "path": "registry/default/example/halo-select-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/halo-select-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "halo-select",
+      "button"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/halo-select-demo.tsx"
+  },
+  {
+    "name": "prompt-composer-demo",
+    "kind": "official",
+    "path": "registry/default/example/prompt-composer-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/prompt-composer-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "prompt-composer"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/prompt-composer-demo.tsx"
+  },
+  {
+    "name": "wizard-expandable-demo",
+    "kind": "official",
+    "path": "registry/default/example/wizard-expandable-demo.tsx",
+    "files": [
+      {
+        "path": "registry/default/example/wizard-expandable-demo.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "dependencies": [
+      "wizard-expandable",
+      "button",
+      "input",
+      "label",
+      "textarea"
+    ],
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/example/wizard-expandable-demo.tsx"
+  },
+  {
+    "name": "base-select-integration",
+    "kind": "integration",
+    "path": "integrations/base-select.tsx",
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/base-select.tsx"
+  },
+  {
+    "name": "base-tooltip-integration",
+    "kind": "integration",
+    "path": "integrations/base-tooltip.tsx",
+    "source": "https://github.com/nolly-studio/cult-ui/blob/67a66c6ac1cd240914ba688a907611b3437a7a2b/apps/www/registry/default/ui/base-tooltip.tsx"
+  }
+]

@@ -16,9 +16,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Install Cult UI research app dependencies
+        run: npm --prefix projects/001-cult-ui/web ci
+      - name: Build projects and catalog preview
+        run: npm run build
       - name: Validate catalog and README
         run: npm run check
       - name: Test project management scripts
         run: npm test
-      - name: Build catalog preview
-        run: npm run build

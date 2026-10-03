@@ -1,0 +1,1242 @@
+{
+  "agent-suggest-card-stack": {
+    "examples": [
+      {
+        "name": "agent-suggest-card-stack-demo",
+        "title": "agent suggest card stack demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "ai-blob-warp": {
+    "examples": [
+      {
+        "name": "ai-blob-warp-demo",
+        "title": "ai blob warp demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "ai-instructions": {
+    "examples": [
+      {
+        "name": "ai-instructions-demo",
+        "title": "ai instructions demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "analytics-chart": {
+    "examples": [
+      {
+        "name": "analytics-chart-demo",
+        "title": "analytics chart demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "apple-iphone-17-pro": {
+    "examples": [
+      {
+        "name": "apple-iphone-17-pro-demo",
+        "title": "apple iphone 17 pro demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "apple-keyboard": {
+    "examples": [
+      {
+        "name": "apple-keyboard-demo",
+        "title": "apple keyboard demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "apple-pro-display-xdr": {
+    "examples": [
+      {
+        "name": "apple-pro-display-xdr-demo",
+        "title": "apple pro display xdr demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "apple-watch-ultra": {
+    "examples": [
+      {
+        "name": "apple-watch-ultra-demo",
+        "title": "apple watch ultra demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "bg-animate-button": {
+    "examples": [
+      {
+        "name": "bg-animate-button-demo",
+        "title": "bg animate button demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "bg-animated-fractal-grid": {
+    "examples": [
+      {
+        "name": "bg-animated-fractal-dot-grid-demo",
+        "title": "bg animated fractal dot grid demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "bg-image-texture": {
+    "examples": [
+      {
+        "name": "bg-image-texture-demo",
+        "title": "bg image texture demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "bg-media": {
+    "examples": [
+      {
+        "name": "bg-media-demo",
+        "title": "bg media demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "border-beam-button": {
+    "examples": [
+      {
+        "name": "border-beam-button-demo",
+        "title": "border beam button demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "border-beam-card": {
+    "examples": [
+      {
+        "name": "border-beam-card-demo",
+        "title": "border beam card demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "border-beam-input": {
+    "examples": [
+      {
+        "name": "border-beam-input-demo",
+        "title": "border beam input demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "canvas-fractal-grid": {
+    "examples": [
+      {
+        "name": "canvas-fractal-grid-demo",
+        "title": "canvas fractal grid demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "choice-poll": {
+    "examples": [
+      {
+        "name": "choice-poll-demo",
+        "title": "choice poll demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "circuit-board": {
+    "examples": [
+      {
+        "name": "circuit-board-demo",
+        "title": "circuit board demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "code-block": {
+    "examples": [
+      {
+        "name": "code-block-demo",
+        "title": "code block demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "collab-avatar": {
+    "examples": [
+      {
+        "name": "collab-avatar-demo",
+        "title": "collab avatar demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "collab-toolbar": {
+    "examples": [
+      {
+        "name": "collab-toolbar-demo",
+        "title": "collab toolbar demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "color-picker": {
+    "examples": [
+      {
+        "name": "color-picker-demo",
+        "title": "color picker demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "copy-button": {
+    "examples": [
+      {
+        "name": "copy-button-demo",
+        "title": "copy button demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "cosmic-button": {
+    "examples": [
+      {
+        "name": "cosmic-button-demo",
+        "title": "cosmic button demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "cutout-card": {
+    "examples": [
+      {
+        "name": "cutout-card-demo",
+        "title": "cutout card demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "direction-aware-tabs": {
+    "examples": [
+      {
+        "name": "direction-aware-tabs-demo",
+        "title": "direction aware tabs demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "distorted-glass": {
+    "examples": [
+      {
+        "name": "distorted-glass-demo",
+        "title": "distorted glass demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "dither-image": {
+    "examples": [
+      {
+        "name": "dither-image-demo",
+        "title": "dither image demo",
+        "kind": "official"
+      },
+      {
+        "name": "dither-image-demo-upload",
+        "title": "dither image demo upload",
+        "kind": "official"
+      }
+    ]
+  },
+  "dock": {
+    "examples": [
+      {
+        "name": "dock-demo",
+        "title": "dock demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "dynamic-island": {
+    "examples": [
+      {
+        "name": "dynamic-island-demo",
+        "title": "dynamic island demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "edge-blur": {
+    "examples": [
+      {
+        "name": "edge-blur-demo",
+        "title": "edge blur demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "expandable-screen": {
+    "examples": [
+      {
+        "name": "expandable-screen-demo",
+        "title": "expandable screen demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "expandable": {
+    "examples": [
+      {
+        "name": "expandable-demo",
+        "title": "expandable demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "family-button": {
+    "examples": [
+      {
+        "name": "family-button-demo",
+        "title": "family button demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "family-drawer": {
+    "examples": [
+      {
+        "name": "family-drawer-demo",
+        "title": "family drawer demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "feature-carousel": {
+    "examples": [
+      {
+        "name": "feature-carousel-demo",
+        "title": "feature carousel demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "feature-poll": {
+    "examples": [
+      {
+        "name": "feature-poll-demo",
+        "title": "feature poll demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "feature-sticky-section": {
+    "examples": [
+      {
+        "name": "feature-sticky-section-demo",
+        "title": "feature sticky section demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "feature-voting": {
+    "examples": [
+      {
+        "name": "feature-voting-demo",
+        "title": "feature voting demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "file-icons": {
+    "examples": [
+      {
+        "name": "file-icons-demo",
+        "title": "file icons demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "floating-panel": {
+    "examples": [
+      {
+        "name": "floating-panel-demo",
+        "title": "floating panel demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "fluid-ai-workloads": {
+    "examples": [
+      {
+        "name": "fluid-ai-workloads-demo",
+        "title": "fluid ai workloads demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "fluted-glass": {
+    "examples": [
+      {
+        "name": "fluted-glass-demo",
+        "title": "fluted glass demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "folded-card": {
+    "examples": [
+      {
+        "name": "folded-card-demo",
+        "title": "folded card demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "gateway-endpoint-illustration": {
+    "examples": [
+      {
+        "name": "gateway-endpoint-illustration-demo",
+        "title": "gateway endpoint illustration demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "gateway-route-illustration": {
+    "examples": [
+      {
+        "name": "gateway-route-illustration-demo",
+        "title": "gateway route illustration demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "gateway-svg-illustration": {
+    "examples": [
+      {
+        "name": "gateway-svg-illustration-demo",
+        "title": "gateway svg illustration demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "globe": {
+    "examples": [
+      {
+        "name": "globe-demo",
+        "title": "globe demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "gradient-button-group": {
+    "examples": [
+      {
+        "name": "gradient-button-group-demo",
+        "title": "gradient button group demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "gradient-heading": {
+    "examples": [
+      {
+        "name": "gradient-heading-demo",
+        "title": "gradient heading demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "grid-beam": {
+    "examples": [
+      {
+        "name": "grid-beam-demo",
+        "title": "grid beam demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "halo-badge": {
+    "examples": [
+      {
+        "name": "halo-badge-demo",
+        "title": "halo badge demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "halo-button": {
+    "examples": [
+      {
+        "name": "halo-button-demo",
+        "title": "halo button demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "halo-card": {
+    "examples": [
+      {
+        "name": "halo-card-demo",
+        "title": "halo card demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "halo-dropzone": {
+    "examples": [
+      {
+        "name": "halo-dropzone-demo",
+        "title": "halo dropzone demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "halo-field": {
+    "examples": [
+      {
+        "name": "halo-field-demo",
+        "title": "halo field demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "halo-input": {
+    "examples": [
+      {
+        "name": "halo-input-demo",
+        "title": "halo input demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "halo-notification": {
+    "examples": [
+      {
+        "name": "halo-notification-demo",
+        "title": "halo notification demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "halo-progress": {
+    "examples": [
+      {
+        "name": "halo-progress-demo",
+        "title": "halo progress demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "halo-search": {
+    "examples": [
+      {
+        "name": "halo-search-demo",
+        "title": "halo search demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "halo-segmented": {
+    "examples": [
+      {
+        "name": "halo-segmented-demo",
+        "title": "halo segmented demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "halo-select": {
+    "examples": [
+      {
+        "name": "halo-select-demo",
+        "title": "halo select demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "halo-switch": {
+    "examples": [
+      {
+        "name": "halo-switch-demo",
+        "title": "halo switch demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "halo-tabs": {
+    "examples": [
+      {
+        "name": "halo-tabs-demo",
+        "title": "halo tabs demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "halo-toast": {
+    "examples": [
+      {
+        "name": "halo-toast-demo",
+        "title": "halo toast demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "halo-toggle-group": {
+    "examples": [
+      {
+        "name": "halo-toggle-group-demo",
+        "title": "halo toggle group demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "hero-color-panels": {
+    "examples": [
+      {
+        "name": "hero-color-panels-demo",
+        "title": "hero color panels demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "hero-dithering": {
+    "examples": [
+      {
+        "name": "hero-dithering-demo",
+        "title": "hero dithering demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "hero-heatmap": {
+    "examples": [
+      {
+        "name": "hero-heatmap-demo",
+        "title": "hero heatmap demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "hero-liquid-metal": {
+    "examples": [
+      {
+        "name": "hero-liquid-metal-demo",
+        "title": "hero liquid metal demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "hero-static-radial-gradient": {
+    "examples": [
+      {
+        "name": "hero-static-radial-gradient-demo",
+        "title": "hero static radial gradient demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "hover-video-player": {
+    "examples": [
+      {
+        "name": "hover-video-player-demo",
+        "title": "hover video player demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "illustration-card-grid": {
+    "examples": [
+      {
+        "name": "illustration-card-grid-demo",
+        "title": "illustration card grid demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "illustration-comment-bubble": {
+    "examples": [
+      {
+        "name": "illustration-comment-bubble-demo",
+        "title": "illustration comment bubble demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "illustration-cursor": {
+    "examples": [
+      {
+        "name": "illustration-cursor-demo",
+        "title": "illustration cursor demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "illustration-fluid-rendering": {
+    "examples": [
+      {
+        "name": "illustration-fluid-rendering-demo",
+        "title": "illustration fluid rendering demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "illustration-globe-vercel": {
+    "examples": [
+      {
+        "name": "illustration-globe-vercel-demo",
+        "title": "illustration globe vercel demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "illustration-graph": {
+    "examples": [
+      {
+        "name": "illustration-graph-demo",
+        "title": "illustration graph demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "intro-disclosure": {
+    "examples": [
+      {
+        "name": "intro-disclosure-demo",
+        "title": "intro disclosure demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "kanban-board": {
+    "examples": [
+      {
+        "name": "kanban-board-demo",
+        "title": "kanban board demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "lightboard": {
+    "examples": [
+      {
+        "name": "lightboard-demo",
+        "title": "lightboard demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "loading-carousel": {
+    "examples": [
+      {
+        "name": "loading-carousel-demo",
+        "title": "loading carousel demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "logo-carousel": {
+    "examples": [
+      {
+        "name": "logo-carousel-demo",
+        "title": "logo carousel demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "mac-screen": {
+    "examples": [
+      {
+        "name": "mac-screen-demo",
+        "title": "mac screen demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "marketing-feature-code": {
+    "examples": [
+      {
+        "name": "marketing-feature-code-demo",
+        "title": "marketing feature code demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "marketing-hero-analytics": {
+    "examples": [
+      {
+        "name": "marketing-hero-analytics-demo",
+        "title": "marketing hero analytics demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "merging-bubbles": {
+    "examples": [
+      {
+        "name": "merging-bubbles-demo",
+        "title": "merging bubbles demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "metal-button": {
+    "examples": [
+      {
+        "name": "metal-button-demo",
+        "title": "metal button demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "minimal-card": {
+    "examples": [
+      {
+        "name": "minimal-card-demo",
+        "title": "minimal card demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "mock-browser-window": {
+    "examples": [
+      {
+        "name": "mock-browser-window-demo",
+        "title": "mock browser window demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "morph-surface": {
+    "examples": [
+      {
+        "name": "morph-surface-demo",
+        "title": "morph surface demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "neumorph-button": {
+    "examples": [
+      {
+        "name": "neumorph-button-demo",
+        "title": "neumorph button demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "neumorph-eyebrow": {
+    "examples": [
+      {
+        "name": "neumorph-eyebrow-demo",
+        "title": "neumorph eyebrow demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "onboarding": {
+    "examples": [
+      {
+        "name": "onboarding-demo",
+        "title": "onboarding demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "organic-button": {
+    "examples": [
+      {
+        "name": "organic-button-demo",
+        "title": "organic button demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "organic-card-small": {
+    "examples": [
+      {
+        "name": "organic-card-small-demo",
+        "title": "organic card small demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "organic-card": {
+    "examples": [
+      {
+        "name": "organic-card-demo",
+        "title": "organic card demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "pixel-heading-character": {
+    "examples": [
+      {
+        "name": "pixel-heading-character-demo",
+        "title": "pixel heading character demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "pixel-heading-word": {
+    "examples": [
+      {
+        "name": "pixel-heading-word-demo",
+        "title": "pixel heading word demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "pixel-paragraph-words-inverse": {
+    "examples": [
+      {
+        "name": "pixel-paragraph-words-inverse-demo",
+        "title": "pixel paragraph words inverse demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "pixel-paragraph-words": {
+    "examples": [
+      {
+        "name": "pixel-paragraph-words-demo",
+        "title": "pixel paragraph words demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "poll-widget": {
+    "examples": [
+      {
+        "name": "poll-widget-demo",
+        "title": "poll widget demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "popover-form": {
+    "examples": [
+      {
+        "name": "popover-form-demo",
+        "title": "popover form demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "popover": {
+    "examples": [
+      {
+        "name": "popover-demo",
+        "title": "popover demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "prompt-composer": {
+    "examples": [
+      {
+        "name": "prompt-composer-demo",
+        "title": "prompt composer demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "prompt-library": {
+    "examples": [
+      {
+        "name": "prompt-library-demo",
+        "title": "prompt library demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "rolling-number": {
+    "examples": [
+      {
+        "name": "rolling-number-demo",
+        "title": "rolling number demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "security-checkpoint": {
+    "examples": [
+      {
+        "name": "security-checkpoint-demo",
+        "title": "security checkpoint demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "shader-lens-blur": {
+    "examples": [
+      {
+        "name": "shader-lens-blur-demo",
+        "title": "shader lens blur demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "shadow-card": {
+    "examples": [
+      {
+        "name": "shadow-card-demo",
+        "title": "shadow card demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "shift-card": {
+    "examples": [
+      {
+        "name": "shift-card-demo",
+        "title": "shift card demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "side-panel": {
+    "examples": [
+      {
+        "name": "side-panel-demo",
+        "title": "side panel demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "sortable-list": {
+    "examples": [
+      {
+        "name": "sortable-list-demo",
+        "title": "sortable list demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "speech-bubble": {
+    "examples": [
+      {
+        "name": "speech-bubble-demo",
+        "title": "speech bubble demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "squiggle-arrow": {
+    "examples": [
+      {
+        "name": "squiggle-arrow-demo",
+        "title": "squiggle arrow demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "stripe-bg-guides": {
+    "examples": [
+      {
+        "name": "stripe-bg-guides-demo",
+        "title": "stripe bg guides demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "svg-bands": {
+    "examples": [
+      {
+        "name": "svg-bands-demo",
+        "title": "svg bands demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "svg-shapes-animated": {
+    "examples": [
+      {
+        "name": "svg-shapes-animated-demo",
+        "title": "svg shapes animated demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "svg-shapes": {
+    "examples": [
+      {
+        "name": "svg-shapes-demo",
+        "title": "svg shapes demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "tabs-illustration-vercel": {
+    "examples": [
+      {
+        "name": "tabs-illustration-vercel-demo",
+        "title": "tabs illustration vercel demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "terminal-animation": {
+    "examples": [
+      {
+        "name": "terminal-animation-demo",
+        "title": "terminal animation demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "text-animate": {
+    "examples": [
+      {
+        "name": "text-animate-demo",
+        "title": "text animate demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "text-gif": {
+    "examples": [
+      {
+        "name": "text-gif-demo",
+        "title": "text gif demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "texture-button": {
+    "examples": [
+      {
+        "name": "texture-button-demo",
+        "title": "texture button demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "texture-card": {
+    "examples": [
+      {
+        "name": "texture-card-demo",
+        "title": "texture card demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "texture-overlay": {
+    "examples": [
+      {
+        "name": "texture-overlay-demo",
+        "title": "texture overlay demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "three-d-carousel": {
+    "examples": [
+      {
+        "name": "three-d-carousel-demo",
+        "title": "three d carousel demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "timer": {
+    "examples": [
+      {
+        "name": "timer-demo",
+        "title": "timer demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "toolbar-expandable": {
+    "examples": [
+      {
+        "name": "toolbar-expandable-demo",
+        "title": "toolbar expandable demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "tweet-grid": {
+    "examples": [
+      {
+        "name": "tweet-grid-demo",
+        "title": "tweet grid demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "typewriter": {
+    "examples": [
+      {
+        "name": "typewriter-demo",
+        "title": "typewriter demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "vote-tally": {
+    "examples": [
+      {
+        "name": "vote-tally-demo",
+        "title": "vote tally demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "wizard-expandable": {
+    "examples": [
+      {
+        "name": "wizard-expandable-demo",
+        "title": "wizard expandable demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "youtube-video-player": {
+    "examples": [
+      {
+        "name": "youtube-video-player-demo",
+        "title": "youtube video player demo",
+        "kind": "official"
+      }
+    ]
+  },
+  "bg-animated-gradient": {
+    "examples": [
+      {
+        "name": "bg-animated-gradient-demo",
+        "title": "官方默认示例",
+        "kind": "official"
+      }
+    ]
+  },
+  "base-select": {
+    "examples": [
+      {
+        "name": "base-select-integration",
+        "title": "本项目接入示例",
+        "kind": "integration"
+      }
+    ],
+    "status": "上游无独立 demo；使用原始组件 API 接入"
+  },
+  "base-tooltip": {
+    "examples": [
+      {
+        "name": "base-tooltip-integration",
+        "title": "本项目接入示例",
+        "kind": "integration"
+      }
+    ],
+    "status": "上游无独立 demo；使用原始组件 API 接入"
+  }
+}

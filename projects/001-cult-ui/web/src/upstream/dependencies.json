@@ -1,0 +1,378 @@
+{
+  "@base-ui/react": {
+    "version": "^1.3.0",
+    "usedBy": [
+      "registry/default/ui/base-tooltip.tsx",
+      "registry/default/ui/halo-button.tsx",
+      "registry/default/ui/halo-card.tsx",
+      "registry/default/ui/halo-tabs.tsx",
+      "registry/default/ui/halo-segmented.tsx",
+      "registry/default/ui/halo-toggle-group.tsx",
+      "registry/default/ui/halo-notification.tsx",
+      "registry/default/ui/halo-switch.tsx",
+      "registry/default/ui/halo-input.tsx",
+      "registry/default/ui/halo-progress.tsx",
+      "registry/default/ui/border-beam-input.tsx",
+      "registry/default/ui/halo-select.tsx",
+      "registry/default/ui/base-select.tsx",
+      "registry/default/ui/prompt-composer.tsx",
+      "registry/default/ui/wizard-expandable.tsx"
+    ]
+  },
+  "@hugeicons/core-free-icons": {
+    "version": "^3.1.1",
+    "usedBy": [
+      "registry/default/example/choice-poll-demo.tsx",
+      "registry/default/ui/prompt-library.tsx",
+      "registry/default/ui/ai-instructions.tsx",
+      "registry/default/ui/base-select.tsx"
+    ]
+  },
+  "@hugeicons/react": {
+    "version": "^1.1.5",
+    "usedBy": [
+      "registry/default/example/choice-poll-demo.tsx",
+      "registry/default/ui/prompt-library.tsx",
+      "registry/default/ui/ai-instructions.tsx",
+      "registry/default/ui/base-select.tsx"
+    ]
+  },
+  "@paper-design/shaders-react": {
+    "version": "^0.0.72",
+    "usedBy": [
+      "registry/default/ui/hero-dithering.tsx",
+      "registry/default/ui/hero-color-panel.tsx",
+      "registry/default/ui/hero-static-radial-gradient.tsx",
+      "registry/default/ui/hero-heatmap.tsx",
+      "registry/default/ui/hero-liquid-metal.tsx",
+      "registry/default/ui/ai-blob-warp.tsx",
+      "registry/default/example/fluted-glass-demo.tsx",
+      "registry/default/ui/fluted-glass.tsx",
+      "registry/default/ui/halo-search.tsx",
+      "registry/default/ui/prompt-composer.tsx"
+    ]
+  },
+  "@radix-ui/react-accordion": {
+    "version": "^1.2.12",
+    "usedBy": [
+      "components/ui/accordion.tsx"
+    ]
+  },
+  "@radix-ui/react-aspect-ratio": {
+    "version": "^1.1.7",
+    "usedBy": [
+      "components/ui/aspect-ratio.tsx"
+    ]
+  },
+  "@radix-ui/react-avatar": {
+    "version": "^1.1.10",
+    "usedBy": [
+      "components/ui/avatar.tsx"
+    ]
+  },
+  "@radix-ui/react-checkbox": {
+    "version": "^1.3.3",
+    "usedBy": [
+      "components/ui/checkbox.tsx"
+    ]
+  },
+  "@radix-ui/react-collapsible": {
+    "version": "^1.1.12",
+    "usedBy": [
+      "components/ui/collapsible.tsx"
+    ]
+  },
+  "@radix-ui/react-dialog": {
+    "version": "^1.1.15",
+    "usedBy": [
+      "components/ui/command.tsx"
+    ]
+  },
+  "@radix-ui/react-hover-card": {
+    "version": "^1.1.15",
+    "usedBy": [
+      "components/ui/hover-card.tsx"
+    ]
+  },
+  "@radix-ui/react-icons": {
+    "version": "^1.3.2",
+    "usedBy": [
+      "registry/default/example/intro-disclosure-demo.tsx"
+    ]
+  },
+  "@radix-ui/react-label": {
+    "version": "^2.1.7",
+    "usedBy": [
+      "components/ui/label.tsx"
+    ]
+  },
+  "@radix-ui/react-progress": {
+    "version": "^1.1.7",
+    "usedBy": [
+      "components/ui/progress.tsx"
+    ]
+  },
+  "@radix-ui/react-scroll-area": {
+    "version": "^1.2.10",
+    "usedBy": [
+      "registry/default/ui/toolbar-expandable.tsx"
+    ]
+  },
+  "@radix-ui/react-select": {
+    "version": "^2.2.6",
+    "usedBy": [
+      "components/ui/select.tsx"
+    ]
+  },
+  "@radix-ui/react-separator": {
+    "version": "^1.1.7",
+    "usedBy": [
+      "components/ui/separator.tsx"
+    ]
+  },
+  "@radix-ui/react-slider": {
+    "version": "^1.3.6",
+    "usedBy": [
+      "components/ui/slider.tsx"
+    ]
+  },
+  "@radix-ui/react-slot": {
+    "version": "^1.2.3",
+    "usedBy": [
+      "registry/default/ui/texture-button.tsx",
+      "registry/default/ui/bg-animate-button.tsx",
+      "registry/default/ui/gradient-heading.tsx",
+      "registry/default/ui/family-drawer.tsx",
+      "registry/default/ui/terminal-animation.tsx",
+      "registry/default/ui/shadow-card.tsx",
+      "registry/default/ui/organic-button.tsx",
+      "registry/default/ui/base-tooltip.tsx",
+      "registry/default/ui/feature-sticky-section.tsx"
+    ]
+  },
+  "@radix-ui/react-switch": {
+    "version": "^1.2.6",
+    "usedBy": [
+      "components/ui/switch.tsx"
+    ]
+  },
+  "@radix-ui/react-tabs": {
+    "version": "^1.1.13",
+    "usedBy": [
+      "components/ui/tabs.tsx"
+    ]
+  },
+  "@radix-ui/react-toast": {
+    "version": "^1.2.15",
+    "usedBy": [
+      "components/ui/toast.tsx"
+    ]
+  },
+  "@radix-ui/react-tooltip": {
+    "version": "^1.2.8",
+    "usedBy": [
+      "components/ui/tooltip.tsx"
+    ]
+  },
+  "@radix-ui/react-use-controllable-state": {
+    "version": "^1.2.2",
+    "usedBy": [
+      "registry/default/ui/cutout-card.tsx",
+      "registry/default/ui/choice-poll.tsx",
+      "registry/default/ui/feature-poll.tsx",
+      "registry/default/ui/feature-voting.tsx",
+      "registry/default/ui/vote-tally.tsx",
+      "registry/default/ui/poll-widget.tsx",
+      "registry/default/ui/onboarding.tsx",
+      "registry/default/ui/terminal-animation.tsx",
+      "registry/default/ui/feature-sticky-section.tsx",
+      "registry/default/ui/wizard-expandable.tsx"
+    ]
+  },
+  "@tabler/icons-react": {
+    "version": "^3.34.1",
+    "usedBy": [
+      "registry/default/ui/apple-keyboard.tsx",
+      "registry/default/ui/apple-pro-display-xdr.tsx"
+    ]
+  },
+  "border-beam": {
+    "version": "^1.0.1",
+    "usedBy": [
+      "registry/default/ui/border-beam-button.tsx",
+      "registry/default/ui/border-beam-card.tsx",
+      "registry/default/ui/border-beam-input.tsx"
+    ]
+  },
+  "class-variance-authority": {
+    "version": "^0.7.1",
+    "usedBy": [
+      "registry/default/ui/texture-button.tsx",
+      "components/ui/label.tsx",
+      "components/ui/button.tsx",
+      "registry/default/ui/timer.tsx",
+      "components/ui/badge.tsx",
+      "registry/default/ui/bg-animate-button.tsx",
+      "registry/default/ui/bg-media.tsx",
+      "registry/default/ui/gradient-heading.tsx",
+      "registry/default/ui/tweet-grid.tsx",
+      "components/ui/toast.tsx",
+      "registry/default/ui/neumorph-eyebrow.tsx",
+      "registry/default/ui/neumorph-button.tsx",
+      "registry/default/ui/choice-poll.tsx",
+      "registry/default/ui/feature-poll.tsx",
+      "registry/default/ui/poll-widget.tsx",
+      "registry/default/ui/text-gif.tsx",
+      "registry/default/ui/metal-button.tsx",
+      "registry/default/ui/onboarding.tsx",
+      "registry/default/ui/organic-button.tsx",
+      "components/ui/field.tsx",
+      "components/ui/input-group.tsx"
+    ]
+  },
+  "clsx": {
+    "version": "^2.1.1",
+    "usedBy": [
+      "lib/utils.ts",
+      "registry/default/ui/feature-carousel.tsx"
+    ]
+  },
+  "cmdk": {
+    "version": "^1.1.1",
+    "usedBy": [
+      "components/ui/command.tsx"
+    ]
+  },
+  "cobe": {
+    "version": "^2.0.1",
+    "usedBy": [
+      "registry/default/example/globe-demo.tsx",
+      "registry/default/ui/globe.tsx"
+    ]
+  },
+  "embla-carousel-autoplay": {
+    "version": "8.0.0-rc15",
+    "usedBy": [
+      "registry/default/ui/loading-carousel.tsx"
+    ]
+  },
+  "embla-carousel-react": {
+    "version": "8.0.0-rc15",
+    "usedBy": [
+      "components/ui/carousel.tsx"
+    ]
+  },
+  "jotai": {
+    "version": "^2.1.0",
+    "usedBy": [
+      "registry/default/example/shader-lens-blur-demo.tsx",
+      "registry/default/ui/shader-lens-blur.tsx"
+    ]
+  },
+  "metal-fx": {
+    "version": "^1.0.4",
+    "usedBy": [
+      "registry/default/ui/metal-button.tsx"
+    ]
+  },
+  "next-themes": {
+    "version": "0.4.6",
+    "usedBy": [
+      "registry/default/ui/shader-lens-blur.tsx",
+      "registry/default/example/grid-beam-demo.tsx",
+      "registry/default/ui/gradient-button-group.tsx",
+      "registry/default/example/globe-demo.tsx",
+      "registry/default/ui/globe.tsx"
+    ]
+  },
+  "poline": {
+    "version": "^0.7.0",
+    "usedBy": [
+      "registry/default/example/color-picker-demo.tsx"
+    ]
+  },
+  "radix-ui": {
+    "version": "^1.4.3",
+    "usedBy": [
+      "components/ui/button.tsx",
+      "components/ui/popover.tsx",
+      "components/ui/dialog.tsx"
+    ]
+  },
+  "react-player": {
+    "version": "^2.16.0",
+    "usedBy": [
+      "registry/default/example/side-panel-demo.tsx"
+    ]
+  },
+  "react-use-measure": {
+    "version": "^2.1.1",
+    "usedBy": [
+      "registry/default/ui/direction-aware-tabs.tsx",
+      "registry/default/example/family-button-demo.tsx",
+      "registry/default/example/side-panel-demo.tsx",
+      "registry/default/ui/side-panel.tsx",
+      "registry/default/ui/sortable-list.tsx",
+      "registry/default/ui/expandable.tsx",
+      "registry/default/ui/family-drawer.tsx"
+    ]
+  },
+  "react-wrap-balancer": {
+    "version": "^0.4.1",
+    "usedBy": [
+      "registry/default/ui/feature-carousel.tsx"
+    ]
+  },
+  "sonner": {
+    "version": "^2.0.0",
+    "usedBy": [
+      "registry/default/example/rolling-number-demo.tsx",
+      "registry/default/example/sortable-list-demo.tsx",
+      "registry/default/example/intro-disclosure-demo.tsx",
+      "registry/default/ui/halo-toast.tsx"
+    ]
+  },
+  "tailwind-merge": {
+    "version": "^3.5.0",
+    "usedBy": [
+      "lib/utils.ts"
+    ]
+  },
+  "three": {
+    "version": "^0.168.0",
+    "usedBy": [
+      "registry/default/ui/shader-lens-blur.tsx"
+    ]
+  },
+  "vaul": {
+    "version": "^1.1.2",
+    "usedBy": [
+      "components/ui/drawer.tsx",
+      "registry/default/ui/family-drawer.tsx"
+    ]
+  },
+  "geist": {
+    "version": "^1.7.0",
+    "usedBy": [
+      "preview shell / upstream globals.css"
+    ]
+  },
+  "dither-plugin": {
+    "version": "^1.1.1",
+    "usedBy": [
+      "preview shell / upstream globals.css"
+    ]
+  },
+  "@tailwindcss/typography": {
+    "version": "^0.5.16",
+    "usedBy": [
+      "preview shell / upstream globals.css"
+    ]
+  },
+  "tailwindcss-animate": {
+    "version": "^1.0.5",
+    "usedBy": [
+      "preview shell / upstream globals.css"
+    ]
+  }
+}
