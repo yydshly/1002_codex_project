@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-03",
+  "status": "pass",
+  "method": "Generated snapshots with cadgen step snapshot, then opened each PNG with view_image; PDF rendered with Poppler and the complete page visually reviewed",
+  "snapshots": [
+    {"source": "STEP/mounting_plate.step", "image": "assets/mounting_plate.png", "review": "Four holes, rounded corners, complete plate silhouette visible"},
+    {"source": "STEP/mounting_plate_wide.step", "image": "assets/mounting_plate_wide.png", "review": "Longer plate and expanded hole pattern visible"},
+    {"source": "STEP/plate_assembly.step", "image": "assets/plate_assembly.png", "review": "Four separate pins aligned with the four holes"},
+    {"source": "STEP/enclosure_base.step", "image": "assets/enclosure_base.png", "review": "Open cavity, floor, four bosses and both five-slot vent patterns visible"},
+    {"source": "STEP/enclosure_lid.step", "image": "assets/enclosure_lid.png", "review": "Independent rounded rectangular lid with four holes visible"},
+    {"source": "STEP/enclosure_assembly.step", "image": "assets/enclosure_assembly.png", "review": "Lid placed above the base; side vents and lid/base separation visible"}
+  ],
+  "drawing": {
+    "source": "PDF/mounting_plate_drawing.pdf",
+    "render": "assets/mounting_plate_drawing.png",
+    "pages": 1,
+    "review": "A3 landscape; top/front/right/isometric views, dimensions, hole callout, corner radius, notes and title block legible without clipping or overlapping text"
+  },
+  "geometric_evidence": ["notes/validation.json", "notes/enclosure-validation.json"],
+  "limits": "Snapshots are visual evidence; exact dimensions, topology and clearances are established by independent saved STEP checks. Structural performance, production tolerances and physical printability were not evaluated."
+}

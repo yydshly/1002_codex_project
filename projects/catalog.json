@@ -87,6 +87,48 @@
       ]
     },
     {
+      "id": "003",
+      "slug": "sprite-gen",
+      "name": "sprite-gen · 精灵素材能力实验室",
+      "summary": "2D 动画素材生产与整理工具：支持角色图调用视频模型生成动作、代码形变与已有帧编排、图像模型直接生成多姿势，再做抠图、对齐、循环、换色和图集导出。以 Python、Pillow、NumPy、FFmpeg 加工资源，可把动画与背景按位置、速度和镜头合成 GIF / MP4；用于 2D 游戏、网页与桌面角色、贴纸、短场景和素材库，帮助复用素材、减少批量整理并学习 AI 工作流，复杂动作仍需验收。",
+      "source": "https://github.com/aldegad/sprite-gen",
+      "sourceName": "sprite-gen",
+      "status": "已完成",
+      "tags": [
+        "2D动画素材",
+        "AI与代码合成",
+        "图像后处理",
+        "场景与个人价值",
+        "能力原理研究"
+      ],
+      "cover": "projects/003-sprite-gen/assets/capabilities-principles-map.png",
+      "coverAlt": "sprite-gen 能力与原理全景图：三种动作来源、输入输出、图像算法、背景场景、技术底座与需开发的扩展方向",
+      "publishDir": "projects/003-sprite-gen/web",
+      "demo": null,
+      "summarySections": [
+        {
+          "title": "能力",
+          "text": "制作与整理透明动图、精灵图集和帧数据；支持抠图、切帧、对齐、循环选择、换色、导出，以及动画与背景合成。"
+        },
+        {
+          "title": "原理",
+          "text": "动作来自外部视频模型、多姿势图像模型，或已有帧与有限代码形变；Python、Pillow、NumPy、FFmpeg 加工资源，按时间、位置和图层合成。"
+        },
+        {
+          "title": "使用场景",
+          "text": "2D 游戏原型、网页与桌面角色、贴纸、视频包装、短场景和素材库整理。"
+        },
+        {
+          "title": "价值",
+          "text": "复用素材、减少批量整理，并学习“模型生成—算法加工—人工整理—资源交付”的制作流程，为后续角色动效与素材工具提供参考。"
+        },
+        {
+          "title": "边界",
+          "text": "复杂动作仍需验收；本机验证了已有素材的后处理，未调用 AI 生成或运行场景渲染，网页提供研究与效果展示。"
+        }
+      ]
+    },
+    {
       "id": "005",
       "slug": "jianying-headless",
       "name": "Jianying Headless · 配置驱动的初步剪辑",
@@ -129,6 +171,48 @@
       ]
     },
     {
+      "id": "006",
+      "slug": "text-to-cad",
+      "name": "text-to-cad · 参数化 CAD 能力实验室",
+      "summary": "以一张图和详细网页整理 text-to-cad 的能力、原理、效果与个人价值：语言模型按需求和真实配件设计、写代码，插件组织执行与交付，OpenCascade 计算几何，再回读验收与修正。实测安装板、外壳、工程图及 11 实体望远镜的三种运动；记录扩展工作流、配件输入模板和复杂产品瓶颈，区分几何通过与产品功能验证。",
+      "source": "https://github.com/earthtojake/text-to-cad",
+      "sourceName": "text-to-cad",
+      "status": "已完成",
+      "tags": [
+        "Codex 插件",
+        "参数化 CAD",
+        "build123d",
+        "装配验证",
+        "工程图"
+      ],
+      "cover": "projects/006-text-to-cad/assets/text-to-cad-understanding.png",
+      "coverAlt": "text-to-cad 完整理解总览：用户、语言模型、插件与内核职责，技术链路，核心和扩展能力，三组实测，真实配件输入，个人价值与复杂产品瓶颈",
+      "publishDir": "projects/006-text-to-cad/web/telescope-demo/overview",
+      "demo": null,
+      "summarySections": [
+        {
+          "title": "能力",
+          "text": "参数化建模、零件装配、运动声明、文件交换、图纸与几何验收；制造、打印和机器人相关扩展均标明实测状态。"
+        },
+        {
+          "title": "原理",
+          "text": "用户给需求与配件；语言模型设计并写 Python；cadgen / build123d 经 OCP 调用 OpenCascade，保存结果后测量、判定与修正。"
+        },
+        {
+          "title": "效果",
+          "text": "已生成安装板、外壳、A3 工程图与 11 实体望远镜；演示 20 mm 调焦、方位和仰角，保留干涉修正与验收报告。"
+        },
+        {
+          "title": "价值",
+          "text": "围绕真实配件设计外壳、支架和接口，复用参数与模型工厂，学习工程建模，积累可修改、可测量、可交接的项目资产。"
+        },
+        {
+          "title": "边界",
+          "text": "复杂度增加会增加几何稳定性、接口与运动约束、制造和专业性能验证的难度；本次未证明望远镜成像或完整产品可用。"
+        }
+      ]
+    },
+    {
       "id": "007",
       "slug": "x-twitter-downloader",
       "name": "X-Twitter-Downloader · 视频下载产品参考",
@@ -166,48 +250,6 @@
         {
           "title": "当前结论",
           "text": "基础解析与下载技术已成熟，当前不继续深入研究，按产品参考归档。"
-        }
-      ]
-    },
-    {
-      "id": "003",
-      "slug": "sprite-gen",
-      "name": "sprite-gen · 精灵素材能力实验室",
-      "summary": "2D 动画素材生产与整理工具：支持角色图调用视频模型生成动作、代码形变与已有帧编排、图像模型直接生成多姿势，再做抠图、对齐、循环、换色和图集导出。以 Python、Pillow、NumPy、FFmpeg 加工资源，可把动画与背景按位置、速度和镜头合成 GIF / MP4；用于 2D 游戏、网页与桌面角色、贴纸、短场景和素材库，帮助复用素材、减少批量整理并学习 AI 工作流，复杂动作仍需验收。",
-      "source": "https://github.com/aldegad/sprite-gen",
-      "sourceName": "sprite-gen",
-      "status": "已完成",
-      "tags": [
-        "2D动画素材",
-        "AI与代码合成",
-        "图像后处理",
-        "场景与个人价值",
-        "能力原理研究"
-      ],
-      "cover": "projects/003-sprite-gen/assets/capabilities-principles-map.png",
-      "coverAlt": "sprite-gen 能力与原理全景图：三种动作来源、输入输出、图像算法、背景场景、技术底座与需开发的扩展方向",
-      "publishDir": "projects/003-sprite-gen/web",
-      "demo": null,
-      "summarySections": [
-        {
-          "title": "能力",
-          "text": "制作与整理透明动图、精灵图集和帧数据；支持抠图、切帧、对齐、循环选择、换色、导出，以及动画与背景合成。"
-        },
-        {
-          "title": "原理",
-          "text": "动作来自外部视频模型、多姿势图像模型，或已有帧与有限代码形变；Python、Pillow、NumPy、FFmpeg 加工资源，按时间、位置和图层合成。"
-        },
-        {
-          "title": "使用场景",
-          "text": "2D 游戏原型、网页与桌面角色、贴纸、视频包装、短场景和素材库整理。"
-        },
-        {
-          "title": "价值",
-          "text": "复用素材、减少批量整理，并学习“模型生成—算法加工—人工整理—资源交付”的制作流程，为后续角色动效与素材工具提供参考。"
-        },
-        {
-          "title": "边界",
-          "text": "复杂动作仍需验收；本机验证了已有素材的后处理，未调用 AI 生成或运行场景渲染，网页提供研究与效果展示。"
         }
       ]
     }

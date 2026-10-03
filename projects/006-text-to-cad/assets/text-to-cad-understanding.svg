@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="3380" viewBox="0 0 1920 3380" role="img" aria-labelledby="title desc">
+<title id="title">text-to-cad 能力、原理、效果、价值与边界总览</title>
+<desc id="desc">用户提供真实需求；语言模型设计和写代码；插件调用 OpenCascade；保存并验收。涵盖核心能力、扩展工作流、三组实测、配件输入、个人价值与复杂产品瓶颈。</desc>
+<style>text{font-family:"Microsoft YaHei",Arial,sans-serif}</style>
+<rect x="0" y="0" width="1920" height="3380" rx="18" fill="#f3f6f5"/>
+<rect x="0" y="0" width="1920" height="220" rx="0" fill="#18354a"/>
+<text x="60" y="32" font-size="27" font-weight="400" fill="#aacfcf" dominant-baseline="text-before-edge">TEXT → CAD  /  006 能力与原理研究</text>
+<text x="60" y="85" font-size="60" font-weight="700" fill="white" dominant-baseline="text-before-edge">从真实需求，到可验证的 CAD</text>
+<text x="60" y="170" font-size="29" font-weight="400" fill="#d9e6e8" dominant-baseline="text-before-edge">语言模型设计与写代码，插件执行，内核计算，保存结果后再测量与修正。</text>
+<text x="60" y="254" font-size="27" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">实测：本项目实际运行与检查</text>
+<text x="760" y="254" font-size="27" font-weight="700" fill="#966023" dominant-baseline="text-before-edge">提供：固定版本有工作流，尚未本机实测</text>
+<text x="60" y="325" font-size="34" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">01</text>
+<text x="135" y="322" font-size="42" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">谁负责什么，底层如何执行</text>
+<rect x="60" y="398" width="435" height="235" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="88" y="423" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">你 · 用户</text>
+<text x="88" y="483" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">提供目标、真实配件</text>
+<text x="88" y="523" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">说明使用与制造条件</text>
+<text x="88" y="563" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">审阅与提出修改</text>
+<rect x="515" y="398" width="435" height="235" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="543" y="423" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">我 · 语言模型</text>
+<text x="543" y="483" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">定结构、参数与基准</text>
+<text x="543" y="523" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">写建模与验收代码</text>
+<text x="543" y="563" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">根据失败结果修正</text>
+<rect x="970" y="398" width="435" height="235" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="998" y="423" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">插件 · 技能 / cadgen</text>
+<text x="998" y="483" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">技能给出工作约定</text>
+<text x="998" y="523" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">cadgen 构建与导出</text>
+<text x="998" y="563" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">查看器读取并驱动姿态</text>
+<rect x="1425" y="398" width="435" height="235" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="1453" y="423" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">内核 · OpenCascade</text>
+<text x="1453" y="483" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">执行曲面与实体运算</text>
+<text x="1453" y="523" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">查询尺寸、间隙与干涉</text>
+<text x="1453" y="563" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">返回几何和测量结果</text>
+<rect x="60" y="679" width="328" height="83" rx="10" fill="#e6efed"/>
+<text x="80" y="702" font-size="29" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">Python 建模源码</text>
+<polyline points="393,721 422,721" fill="none" stroke="#126d72" stroke-width="4"/>
+<polyline points="412,713 422,721 412,729" fill="none" stroke="#126d72" stroke-width="4"/>
+<rect x="428" y="679" width="328" height="83" rx="10" fill="#e6efed"/>
+<text x="448" y="702" font-size="29" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">cadgen</text>
+<polyline points="761,721 790,721" fill="none" stroke="#126d72" stroke-width="4"/>
+<polyline points="780,713 790,721 780,729" fill="none" stroke="#126d72" stroke-width="4"/>
+<rect x="796" y="679" width="328" height="83" rx="10" fill="#e6efed"/>
+<text x="816" y="702" font-size="29" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">build123d</text>
+<polyline points="1129,721 1158,721" fill="none" stroke="#126d72" stroke-width="4"/>
+<polyline points="1148,713 1158,721 1148,729" fill="none" stroke="#126d72" stroke-width="4"/>
+<rect x="1164" y="679" width="328" height="83" rx="10" fill="#e6efed"/>
+<text x="1184" y="702" font-size="29" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">OCP 绑定</text>
+<polyline points="1497,721 1526,721" fill="none" stroke="#126d72" stroke-width="4"/>
+<polyline points="1516,713 1526,721 1516,729" fill="none" stroke="#126d72" stroke-width="4"/>
+<rect x="1532" y="679" width="328" height="83" rx="10" fill="#e6efed"/>
+<text x="1552" y="702" font-size="29" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">OpenCascade</text>
+<text x="60" y="786" font-size="29" font-weight="400" fill="#18354a" dominant-baseline="text-before-edge">保存 CAD → 独立回读与视觉复核 → 对照规格判定 → 失败后修改源码、重新构建</text>
+<text x="60" y="867" font-size="34" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">02</text>
+<text x="135" y="864" font-size="42" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">能力分成四组，核心与扩展分开看</text>
+<rect x="60" y="938" width="885" height="270" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="88" y="963" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">几何与参数</text>
+<text x="88" y="1014" font-size="26" font-weight="400" fill="#126d72" dominant-baseline="text-before-edge">部分实测 · 安装板 / 外壳 / 望远镜</text>
+<text x="88" y="1059" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">孔、槽、空腔、圆角、凸台、曲面与尺寸变体</text>
+<text x="88" y="1099" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">构造顺序、基准和关系保留在建模源码</text>
+<text x="88" y="1139" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">可以继续细化，所有算子未逐一实测</text>
+<rect x="975" y="938" width="885" height="270" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="1003" y="963" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">装配与动作</text>
+<text x="1003" y="1014" font-size="26" font-weight="400" fill="#126d72" dominant-baseline="text-before-edge">部分实测 · 11 实体 / 3 个自由度</text>
+<text x="1003" y="1059" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">独立零件、层级、定位、套接与分解展示</text>
+<text x="1003" y="1099" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">已测方位、仰角与调焦；动画未实测</text>
+<text x="1003" y="1139" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">树形正向运动学，闭环机构另需求解</text>
+<rect x="60" y="1236" width="885" height="270" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="88" y="1261" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">交付与验收</text>
+<text x="88" y="1312" font-size="26" font-weight="400" fill="#126d72" dominant-baseline="text-before-edge">部分实测 · CAD / 网格 / 图纸 / 报告</text>
+<text x="88" y="1357" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">STEP / GLB / STL 已输出；3MF 未实测</text>
+<text x="88" y="1397" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">尺寸、孔位、体积、间隙与干涉回读</text>
+<text x="88" y="1437" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">A3 PDF 工程图已测；DXF 工作流未实测</text>
+<rect x="975" y="1236" width="885" height="270" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="1003" y="1261" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">扩展工作流</text>
+<text x="1003" y="1312" font-size="26" font-weight="400" fill="#966023" dominant-baseline="text-before-edge">提供技能 · 这些扩展尚未本机实测</text>
+<text x="1003" y="1357" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">真实配件读取与 step.parts 目录搜索</text>
+<text x="1003" y="1397" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">DFM / DfAM / SendCutSend 上传前检查</text>
+<text x="1003" y="1437" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">OrcaSlicer、Bambu、URDF / SRDF / SDF</text>
+<text x="60" y="1558" font-size="34" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">03</text>
+<text x="135" y="1555" font-size="42" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">达到什么效果，用实际证据说明</text>
+<rect x="60" y="1632" width="580" height="238" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="84" y="1657" font-size="31" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">安装板、变体与销装配</text>
+<text x="84" y="1712" font-size="35" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">409 项通过 / 0 项失败</text>
+<text x="84" y="1780" font-size="26" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">孔距、圆角、解析体积</text>
+<text x="84" y="1817" font-size="26" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">100 mm 变体与 0.5 mm 间隙</text>
+<rect x="670" y="1632" width="580" height="238" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="694" y="1657" font-size="31" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">电子外壳与上盖</text>
+<text x="694" y="1712" font-size="35" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">721 项通过 / 0 项失败</text>
+<text x="694" y="1780" font-size="26" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">空腔、螺丝柱、十个通风口</text>
+<text x="694" y="1817" font-size="26" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">上盖位置与 0.5 mm 缝隙</text>
+<rect x="1280" y="1632" width="580" height="238" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="1304" y="1657" font-size="31" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">望远镜概念装配</text>
+<text x="1304" y="1712" font-size="35" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">537 项通过 / 0 项失败</text>
+<text x="1304" y="1780" font-size="26" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">11 实体、20 mm 调焦、三种运动</text>
+<text x="1304" y="1817" font-size="26" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">0.25 mm 间隙、12 mm 套接</text>
+<text x="60" y="1900" font-size="28" font-weight="400" fill="#18354a" dominant-baseline="text-before-edge">望远镜 60° 姿态曾干涉：底板降低 30 mm，原规则重验；保留修正前 6 项失败。</text>
+<text x="60" y="1953" font-size="31" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">单件 / 变体 → 装配 / 动作 → 真实配件适配 → 完整功能产品</text>
+<text x="60" y="2004" font-size="27" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">后两层需要实际接口、专业分析与实物测试；本次镜片为占位，光学性能未验证。</text>
+<text x="60" y="2080" font-size="34" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">04</text>
+<text x="135" y="2077" font-size="42" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">你提供哪些资料，设计才有匹配依据</text>
+<rect x="60" y="2154" width="435" height="230" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="88" y="2179" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">真实配件</text>
+<text x="88" y="2239" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">型号与版本</text>
+<text x="88" y="2279" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">供应商 STEP</text>
+<text x="88" y="2319" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">尺寸图、规格书</text>
+<rect x="515" y="2154" width="435" height="230" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="543" y="2179" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">接口与空间</text>
+<text x="543" y="2239" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">外形、孔位、轴径</text>
+<text x="543" y="2279" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">螺纹与安装面</text>
+<text x="543" y="2319" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">套接与避让区域</text>
+<rect x="970" y="2154" width="435" height="230" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="998" y="2179" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">使用与运动</text>
+<text x="998" y="2239" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">固定方式与装配方向</text>
+<text x="998" y="2279" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">行程、转角和维护空间</text>
+<text x="998" y="2319" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">载荷与工作环境</text>
+<rect x="1425" y="2154" width="435" height="230" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="1453" y="2179" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">制造与验收</text>
+<text x="1453" y="2239" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">工艺、材料与配合</text>
+<text x="1453" y="2279" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">生产公差与检查对象</text>
+<text x="1453" y="2319" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">交付格式和完成标准</text>
+<text x="60" y="2411" font-size="28" font-weight="400" fill="#18354a" dominant-baseline="text-before-edge">例如：给出真实物镜与镜筒接口 → 设计镜座、压圈、连接件和支架 → 检查匹配与干涉。</text>
+<text x="60" y="2495" font-size="34" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">05</text>
+<text x="135" y="2492" font-size="42" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">对我们的价值，集中在配套设计与迭代</text>
+<rect x="60" y="2569" width="580" height="240" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="88" y="2594" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">定制与改造</text>
+<text x="88" y="2654" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">为已有配件设计外壳、支架和接口</text>
+<text x="88" y="2694" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">把想法转成可讨论的具体装配</text>
+<text x="88" y="2734" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">围绕真实规格逐步细化</text>
+<rect x="670" y="2569" width="580" height="240" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="698" y="2594" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">参数复用与修正</text>
+<text x="698" y="2654" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">积累模型工厂和零件模板</text>
+<text x="698" y="2694" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">改尺寸、重建并测量结果</text>
+<text x="698" y="2734" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">提前发现部分结构与运动问题</text>
+<rect x="1280" y="2569" width="580" height="240" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="1308" y="2594" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">学习与工程交接</text>
+<text x="1308" y="2654" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">理解需求、代码、几何之间的关系</text>
+<text x="1308" y="2694" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">保留源码、CAD、图纸和验收证据</text>
+<text x="1308" y="2734" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">继续接入制造、打印或仿真</text>
+<text x="60" y="2865" font-size="34" font-weight="700" fill="#126d72" dominant-baseline="text-before-edge">06</text>
+<text x="135" y="2862" font-size="42" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">复杂度的瓶颈，出现在依据、约束与验证</text>
+<rect x="60" y="2939" width="580" height="305" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="88" y="2964" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">依据与约束</text>
+<text x="88" y="3024" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">真实数据不足时要标明假设。零件增加，</text>
+<text x="88" y="3064" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">会增加接口、运动空间、紧固和误差关</text>
+<text x="88" y="3104" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">系。提供参数能减少猜测，实际配合仍需</text>
+<text x="88" y="3144" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">制造依据。</text>
+<rect x="670" y="2939" width="580" height="305" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="698" y="2964" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">几何与求解</text>
+<text x="698" y="3024" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">布尔、圆角、小特征和复杂曲面可能失</text>
+<text x="698" y="3064" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">败。当前运动接口不解通用闭环机构。参</text>
+<text x="698" y="3104" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">数保留在源码；STEP 不携带本项目完整特</text>
+<text x="698" y="3144" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">征历史。</text>
+<rect x="1280" y="2939" width="580" height="305" rx="18" fill="white" stroke="#d0deda" stroke-width="2"/>
+<text x="1308" y="2964" font-size="34" font-weight="700" fill="#18354a" dominant-baseline="text-before-edge">工程与验证</text>
+<text x="1308" y="3024" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">有限姿态采样不证明连续全行程。光学、</text>
+<text x="1308" y="3064" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">强度、热、电路与控制需要专业分析和实</text>
+<text x="1308" y="3104" font-size="28" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">物测试。检查项数不代表工程成熟度。</text>
+<text x="60" y="3280" font-size="25" font-weight="400" fill="#506979" dominant-baseline="text-before-edge">固定版本 0.7.10 · 2026-10-04 · 依据官方技能与本项目实测 · 能力说明与检查记录见配套网页</text>
+</svg>

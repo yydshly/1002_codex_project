@@ -1,0 +1,23 @@
+{
+  "installed": [
+    {
+      "pluginId": "text-to-cad@earthtojake",
+      "name": "text-to-cad",
+      "marketplaceName": "earthtojake",
+      "version": "0.7.10",
+      "installed": true,
+      "enabled": true,
+      "source": {
+        "source": "local",
+        "path": "D:\\codex\\home\\.tmp\\marketplaces\\earthtojake"
+      },
+      "marketplaceSource": {
+        "sourceType": "git",
+        "source": "https://github.com/earthtojake/text-to-cad.git"
+      },
+      "installPolicy": "AVAILABLE",
+      "authPolicy": "ON_INSTALL"
+    }
+  ],
+  "available": []
+}

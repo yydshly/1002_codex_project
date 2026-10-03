@@ -1,0 +1,6 @@
+.venv/
+.agents/skills/
+tmp/
+.cache/
+__pycache__/
+*.pyc

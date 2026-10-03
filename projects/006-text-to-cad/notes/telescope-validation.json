@@ -1,0 +1,4297 @@
+{
+  "created_at": "2026-10-03T16:01:22.582681+00:00",
+  "status": "pass",
+  "checks_passed": 537,
+  "checks_failed": 0,
+  "error": null,
+  "artifacts": [
+    {
+      "file": "STEP/telescope_assembly.step",
+      "sha256": "5045852e4782f9a15ebb8b22b1277d6cce88e837ba4961f07b69057c9a2a8852",
+      "leaf_count": 11
+    },
+    {
+      "file": "STEP/telescope_extended.step",
+      "sha256": "da44f0c1d64da5c354b2f7e733be9540034fe24d983c87cd7476a6b1126f3722",
+      "leaf_count": 11
+    },
+    {
+      "file": "STEP/telescope_exploded.step",
+      "sha256": "7f0f513a722e27fb0430e65f18369a80c0f65cce847b5f48bad308ec4e23e221",
+      "leaf_count": 11
+    }
+  ],
+  "summary": {
+    "leaf_solids": 11,
+    "tube_length_mm": 420,
+    "focus_extension_mm": 20,
+    "focus_radial_clearance_mm": 0.25,
+    "extended_engagement_mm": 12
+  },
+  "sampled_poses": [
+    {
+      "altitude": 25,
+      "azimuth": 35,
+      "focus": 10,
+      "maximum_overlap_mm3": 0.0,
+      "minimum_z_mm": 0.0
+    },
+    {
+      "altitude": 60,
+      "azimuth": -135,
+      "focus": 20,
+      "maximum_overlap_mm3": 0.0,
+      "minimum_z_mm": 0.0
+    },
+    {
+      "altitude": 60,
+      "azimuth": 135,
+      "focus": 0,
+      "maximum_overlap_mm3": 0.0,
+      "minimum_z_mm": 0.0
+    }
+  ],
+  "checks": [
+    {
+      "name": "telescope_assembly.leaf_labels",
+      "observed": [
+        "eyecup",
+        "eyepiece_barrel",
+        "eyepiece_glass",
+        "focus_drawtube",
+        "mount_yoke",
+        "objective_cell",
+        "objective_glass",
+        "pedestal",
+        "telescope_cradle",
+        "telescope_focuser",
+        "telescope_tube"
+      ],
+      "expected": [
+        "eyecup",
+        "eyepiece_barrel",
+        "eyepiece_glass",
+        "focus_drawtube",
+        "mount_yoke",
+        "objective_cell",
+        "objective_glass",
+        "pedestal",
+        "telescope_cradle",
+        "telescope_focuser",
+        "telescope_tube"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.pedestal.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.pedestal.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.pedestal.positive_volume",
+      "observed": 665360.8139035627,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.pedestal.min_X",
+      "observed": 120.0,
+      "expected": 120,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.pedestal.min_Y",
+      "observed": -80.0,
+      "expected": -80,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.pedestal.min_Z",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.pedestal.max_X",
+      "observed": 300.0,
+      "expected": 300,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.pedestal.max_Y",
+      "observed": 80.0,
+      "expected": 80,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.pedestal.max_Z",
+      "observed": 225.0,
+      "expected": 225,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.mount_yoke.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.mount_yoke.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.mount_yoke.positive_volume",
+      "observed": 208903.1511346455,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.mount_yoke.min_X",
+      "observed": 165.0,
+      "expected": 165,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.mount_yoke.min_Y",
+      "observed": -70.0,
+      "expected": -70,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.mount_yoke.min_Z",
+      "observed": 225.0,
+      "expected": 225,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.mount_yoke.max_X",
+      "observed": 255.0,
+      "expected": 255,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.mount_yoke.max_Y",
+      "observed": 70.0,
+      "expected": 70,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.mount_yoke.max_Z",
+      "observed": 325.0,
+      "expected": 325,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_tube.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.telescope_tube.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.telescope_tube.positive_volume",
+      "observed": 328547.7597124281,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_tube.min_X",
+      "observed": -4.7739590058875e-15,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_tube.min_Y",
+      "observed": -43.0,
+      "expected": -43,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_tube.min_Z",
+      "observed": 312.0,
+      "expected": 312,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_tube.max_X",
+      "observed": 420.0,
+      "expected": 420,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_tube.max_Y",
+      "observed": 43.0,
+      "expected": 43,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_tube.max_Z",
+      "observed": 398.0,
+      "expected": 398,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.objective_cell.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.objective_cell.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.objective_cell.positive_volume",
+      "observed": 62464.28673132512,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.objective_cell.min_X",
+      "observed": -12.000000000000005,
+      "expected": -12,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.objective_cell.min_Y",
+      "observed": -48.0,
+      "expected": -48,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.objective_cell.min_Z",
+      "observed": 307.0,
+      "expected": 307,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.objective_cell.max_X",
+      "observed": 16.000000000000004,
+      "expected": 16,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.objective_cell.max_Y",
+      "observed": 48.0,
+      "expected": 48,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.objective_cell.max_Z",
+      "observed": 403.0,
+      "expected": 403,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.objective_glass.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.objective_glass.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.objective_glass.positive_volume",
+      "observed": 14973.703132365732,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.objective_glass.min_X",
+      "observed": -9.875050040040009,
+      "expected": -9.875050040040037,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.objective_glass.min_Y",
+      "observed": -35.00000000000002,
+      "expected": -35,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.objective_glass.min_Z",
+      "observed": 320.0,
+      "expected": 320,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.objective_glass.max_X",
+      "observed": -2.1249499598999932,
+      "expected": -2.124949959959963,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.objective_glass.max_Y",
+      "observed": 34.99999999999998,
+      "expected": 35,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.objective_glass.max_Z",
+      "observed": 390.0,
+      "expected": 390,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_focuser.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.telescope_focuser.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.telescope_focuser.positive_volume",
+      "observed": 137146.22729246065,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_focuser.min_X",
+      "observed": 404.0,
+      "expected": 404,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_focuser.min_Y",
+      "observed": -45.0,
+      "expected": -45,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_focuser.min_Z",
+      "observed": 310.0,
+      "expected": 310,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_focuser.max_X",
+      "observed": 446.0,
+      "expected": 446,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_focuser.max_Y",
+      "observed": 45.0,
+      "expected": 45,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_focuser.max_Z",
+      "observed": 400.0,
+      "expected": 400,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.focus_drawtube.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.focus_drawtube.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.focus_drawtube.positive_volume",
+      "observed": 43872.341407382424,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.focus_drawtube.min_X",
+      "observed": 414.0,
+      "expected": 414,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.focus_drawtube.min_Y",
+      "observed": -20.75,
+      "expected": -20.75,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.focus_drawtube.min_Z",
+      "observed": 334.25,
+      "expected": 334.25,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.focus_drawtube.max_X",
+      "observed": 494.0,
+      "expected": 494,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.focus_drawtube.max_Y",
+      "observed": 20.75,
+      "expected": 20.75,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.focus_drawtube.max_Z",
+      "observed": 375.75,
+      "expected": 375.75,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyepiece_barrel.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.eyepiece_barrel.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.eyepiece_barrel.positive_volume",
+      "observed": 35411.71823199853,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyepiece_barrel.min_X",
+      "observed": 486.0,
+      "expected": 486,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyepiece_barrel.min_Y",
+      "observed": -24.0,
+      "expected": -24,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyepiece_barrel.min_Z",
+      "observed": 331.0,
+      "expected": 331,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyepiece_barrel.max_X",
+      "observed": 522.0,
+      "expected": 522,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyepiece_barrel.max_Y",
+      "observed": 24.0,
+      "expected": 24,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyepiece_barrel.max_Z",
+      "observed": 379.0,
+      "expected": 379,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyepiece_glass.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.eyepiece_glass.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.eyepiece_glass.positive_volume",
+      "observed": 2463.008640414398,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyepiece_glass.min_X",
+      "observed": 501.0,
+      "expected": 501,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyepiece_glass.min_Y",
+      "observed": -14.0,
+      "expected": -14,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyepiece_glass.min_Z",
+      "observed": 341.0,
+      "expected": 341,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyepiece_glass.max_X",
+      "observed": 505.0,
+      "expected": 505,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyepiece_glass.max_Y",
+      "observed": 14.0,
+      "expected": 14,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyepiece_glass.max_Z",
+      "observed": 369.0,
+      "expected": 369,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyecup.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.eyecup.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.eyecup.positive_volume",
+      "observed": 18095.573684677605,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyecup.min_X",
+      "observed": 522.0,
+      "expected": 522,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyecup.min_Y",
+      "observed": -26.0,
+      "expected": -26,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyecup.min_Z",
+      "observed": 329.0,
+      "expected": 329,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyecup.max_X",
+      "observed": 534.0,
+      "expected": 534,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyecup.max_Y",
+      "observed": 26.0,
+      "expected": 26,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.eyecup.max_Z",
+      "observed": 381.0,
+      "expected": 381,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_cradle.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.telescope_cradle.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_assembly.telescope_cradle.positive_volume",
+      "observed": 192124.10408557727,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_cradle.min_X",
+      "observed": 140.0,
+      "expected": 140,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_cradle.min_Y",
+      "observed": -67.0,
+      "expected": -67,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_cradle.min_Z",
+      "observed": 295.0,
+      "expected": 295,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_cradle.max_X",
+      "observed": 280.0,
+      "expected": 280,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_cradle.max_Y",
+      "observed": 67.0,
+      "expected": 67,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_assembly.telescope_cradle.max_Z",
+      "observed": 404.0,
+      "expected": 404,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.leaf_labels",
+      "observed": [
+        "eyecup",
+        "eyepiece_barrel",
+        "eyepiece_glass",
+        "focus_drawtube",
+        "mount_yoke",
+        "objective_cell",
+        "objective_glass",
+        "pedestal",
+        "telescope_cradle",
+        "telescope_focuser",
+        "telescope_tube"
+      ],
+      "expected": [
+        "eyecup",
+        "eyepiece_barrel",
+        "eyepiece_glass",
+        "focus_drawtube",
+        "mount_yoke",
+        "objective_cell",
+        "objective_glass",
+        "pedestal",
+        "telescope_cradle",
+        "telescope_focuser",
+        "telescope_tube"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.pedestal.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.pedestal.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.pedestal.positive_volume",
+      "observed": 665360.8139035627,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.pedestal.min_X",
+      "observed": 120.0,
+      "expected": 120,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.pedestal.min_Y",
+      "observed": -80.0,
+      "expected": -80,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.pedestal.min_Z",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.pedestal.max_X",
+      "observed": 300.0,
+      "expected": 300,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.pedestal.max_Y",
+      "observed": 80.0,
+      "expected": 80,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.pedestal.max_Z",
+      "observed": 225.0,
+      "expected": 225,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.mount_yoke.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.mount_yoke.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.mount_yoke.positive_volume",
+      "observed": 208903.1511346455,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.mount_yoke.min_X",
+      "observed": 165.0,
+      "expected": 165,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.mount_yoke.min_Y",
+      "observed": -70.0,
+      "expected": -70,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.mount_yoke.min_Z",
+      "observed": 225.0,
+      "expected": 225,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.mount_yoke.max_X",
+      "observed": 255.0,
+      "expected": 255,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.mount_yoke.max_Y",
+      "observed": 70.0,
+      "expected": 70,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.mount_yoke.max_Z",
+      "observed": 325.0,
+      "expected": 325,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_tube.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.telescope_tube.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.telescope_tube.positive_volume",
+      "observed": 328547.7597124281,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_tube.min_X",
+      "observed": -4.7739590058875e-15,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_tube.min_Y",
+      "observed": -43.0,
+      "expected": -43,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_tube.min_Z",
+      "observed": 312.0,
+      "expected": 312,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_tube.max_X",
+      "observed": 420.0,
+      "expected": 420,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_tube.max_Y",
+      "observed": 43.0,
+      "expected": 43,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_tube.max_Z",
+      "observed": 398.0,
+      "expected": 398,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.objective_cell.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.objective_cell.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.objective_cell.positive_volume",
+      "observed": 62464.28673132512,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.objective_cell.min_X",
+      "observed": -12.000000000000005,
+      "expected": -12,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.objective_cell.min_Y",
+      "observed": -48.0,
+      "expected": -48,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.objective_cell.min_Z",
+      "observed": 307.0,
+      "expected": 307,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.objective_cell.max_X",
+      "observed": 16.000000000000004,
+      "expected": 16,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.objective_cell.max_Y",
+      "observed": 48.0,
+      "expected": 48,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.objective_cell.max_Z",
+      "observed": 403.0,
+      "expected": 403,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.objective_glass.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.objective_glass.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.objective_glass.positive_volume",
+      "observed": 14973.703132365732,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.objective_glass.min_X",
+      "observed": -9.875050040040009,
+      "expected": -9.875050040040037,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.objective_glass.min_Y",
+      "observed": -35.00000000000002,
+      "expected": -35,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.objective_glass.min_Z",
+      "observed": 320.0,
+      "expected": 320,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.objective_glass.max_X",
+      "observed": -2.1249499598999932,
+      "expected": -2.124949959959963,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.objective_glass.max_Y",
+      "observed": 34.99999999999998,
+      "expected": 35,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.objective_glass.max_Z",
+      "observed": 390.0,
+      "expected": 390,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_focuser.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.telescope_focuser.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.telescope_focuser.positive_volume",
+      "observed": 137146.22729246065,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_focuser.min_X",
+      "observed": 404.0,
+      "expected": 404,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_focuser.min_Y",
+      "observed": -45.0,
+      "expected": -45,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_focuser.min_Z",
+      "observed": 310.0,
+      "expected": 310,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_focuser.max_X",
+      "observed": 446.0,
+      "expected": 446,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_focuser.max_Y",
+      "observed": 45.0,
+      "expected": 45,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_focuser.max_Z",
+      "observed": 400.0,
+      "expected": 400,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.focus_drawtube.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.focus_drawtube.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.focus_drawtube.positive_volume",
+      "observed": 43872.341407382424,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.focus_drawtube.min_X",
+      "observed": 434.0,
+      "expected": 434,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.focus_drawtube.min_Y",
+      "observed": -20.75,
+      "expected": -20.75,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.focus_drawtube.min_Z",
+      "observed": 334.25,
+      "expected": 334.25,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.focus_drawtube.max_X",
+      "observed": 514.0,
+      "expected": 514,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.focus_drawtube.max_Y",
+      "observed": 20.75,
+      "expected": 20.75,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.focus_drawtube.max_Z",
+      "observed": 375.75,
+      "expected": 375.75,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyepiece_barrel.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.eyepiece_barrel.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.eyepiece_barrel.positive_volume",
+      "observed": 35411.71823199854,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyepiece_barrel.min_X",
+      "observed": 506.0,
+      "expected": 506,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyepiece_barrel.min_Y",
+      "observed": -24.0,
+      "expected": -24,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyepiece_barrel.min_Z",
+      "observed": 331.0,
+      "expected": 331,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyepiece_barrel.max_X",
+      "observed": 542.0,
+      "expected": 542,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyepiece_barrel.max_Y",
+      "observed": 24.0,
+      "expected": 24,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyepiece_barrel.max_Z",
+      "observed": 379.0,
+      "expected": 379,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyepiece_glass.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.eyepiece_glass.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.eyepiece_glass.positive_volume",
+      "observed": 2463.008640414398,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyepiece_glass.min_X",
+      "observed": 521.0,
+      "expected": 521,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyepiece_glass.min_Y",
+      "observed": -14.0,
+      "expected": -14,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyepiece_glass.min_Z",
+      "observed": 341.0,
+      "expected": 341,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyepiece_glass.max_X",
+      "observed": 525.0,
+      "expected": 525,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyepiece_glass.max_Y",
+      "observed": 14.0,
+      "expected": 14,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyepiece_glass.max_Z",
+      "observed": 369.0,
+      "expected": 369,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyecup.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.eyecup.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.eyecup.positive_volume",
+      "observed": 18095.573684677605,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyecup.min_X",
+      "observed": 542.0,
+      "expected": 542,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyecup.min_Y",
+      "observed": -26.0,
+      "expected": -26,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyecup.min_Z",
+      "observed": 329.0,
+      "expected": 329,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyecup.max_X",
+      "observed": 554.0,
+      "expected": 554,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyecup.max_Y",
+      "observed": 26.0,
+      "expected": 26,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.eyecup.max_Z",
+      "observed": 381.0,
+      "expected": 381,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_cradle.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.telescope_cradle.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_extended.telescope_cradle.positive_volume",
+      "observed": 192124.10408557727,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_cradle.min_X",
+      "observed": 140.0,
+      "expected": 140,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_cradle.min_Y",
+      "observed": -67.0,
+      "expected": -67,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_cradle.min_Z",
+      "observed": 295.0,
+      "expected": 295,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_cradle.max_X",
+      "observed": 280.0,
+      "expected": 280,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_cradle.max_Y",
+      "observed": 67.0,
+      "expected": 67,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_extended.telescope_cradle.max_Z",
+      "observed": 404.0,
+      "expected": 404,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_exploded.leaf_labels",
+      "observed": [
+        "eyecup",
+        "eyepiece_barrel",
+        "eyepiece_glass",
+        "focus_drawtube",
+        "mount_yoke",
+        "objective_cell",
+        "objective_glass",
+        "pedestal",
+        "telescope_cradle",
+        "telescope_focuser",
+        "telescope_tube"
+      ],
+      "expected": [
+        "eyecup",
+        "eyepiece_barrel",
+        "eyepiece_glass",
+        "focus_drawtube",
+        "mount_yoke",
+        "objective_cell",
+        "objective_glass",
+        "pedestal",
+        "telescope_cradle",
+        "telescope_focuser",
+        "telescope_tube"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.pedestal.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.pedestal.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.pedestal.positive_volume",
+      "observed": 665360.8139035627,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_exploded.mount_yoke.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.mount_yoke.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.mount_yoke.positive_volume",
+      "observed": 208903.1511346455,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_exploded.telescope_tube.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.telescope_tube.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.telescope_tube.positive_volume",
+      "observed": 328547.7597124281,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_exploded.objective_cell.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.objective_cell.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.objective_cell.positive_volume",
+      "observed": 62464.286731325046,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_exploded.objective_glass.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.objective_glass.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.objective_glass.positive_volume",
+      "observed": 14973.703132365732,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_exploded.telescope_focuser.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.telescope_focuser.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.telescope_focuser.positive_volume",
+      "observed": 137146.22729246068,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_exploded.focus_drawtube.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.focus_drawtube.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.focus_drawtube.positive_volume",
+      "observed": 43872.341407382424,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_exploded.eyepiece_barrel.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.eyepiece_barrel.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.eyepiece_barrel.positive_volume",
+      "observed": 35411.71823199854,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_exploded.eyepiece_glass.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.eyepiece_glass.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.eyepiece_glass.positive_volume",
+      "observed": 2463.008640414398,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_exploded.eyecup.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.eyecup.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.eyecup.positive_volume",
+      "observed": 18095.573684677598,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "telescope_exploded.telescope_cradle.solid_count",
+      "observed": 1,
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.telescope_cradle.valid",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "telescope_exploded.telescope_cradle.positive_volume",
+      "observed": 192124.10408557733,
+      "expected": "> 0",
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "tube.analytic_volume",
+      "observed": 328547.7597124281,
+      "expected": 328547.7597124205,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "telescope_tube.circle_at_0_radius_40",
+      "observed": [
+        40.0
+      ],
+      "expected": [
+        40
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "telescope_tube.circle_at_0_radius_43",
+      "observed": [
+        43.0
+      ],
+      "expected": [
+        43
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "telescope_tube.circle_at_420_radius_40",
+      "observed": [
+        40.0
+      ],
+      "expected": [
+        40
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "telescope_tube.circle_at_420_radius_43",
+      "observed": [
+        43.0
+      ],
+      "expected": [
+        43
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "telescope_focuser.circle_at_446_radius_21",
+      "observed": [
+        21.0
+      ],
+      "expected": [
+        21
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "focus_drawtube.circle_at_494_radius_20.75",
+      "observed": [
+        20.75
+      ],
+      "expected": [
+        20.75
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "focus.radial_clearance",
+      "observed": 0.25,
+      "expected": 0.25,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "home.focus_minimum_gap",
+      "observed": 0.24999999999994788,
+      "expected": 0.25,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "home.overlap.pedestal/mount_yoke",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.pedestal/telescope_tube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.pedestal/objective_cell",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.pedestal/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.pedestal/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.pedestal/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.pedestal/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.pedestal/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.pedestal/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.pedestal/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.mount_yoke/telescope_tube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.mount_yoke/objective_cell",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.mount_yoke/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.mount_yoke/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.mount_yoke/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.mount_yoke/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.mount_yoke/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.mount_yoke/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.mount_yoke/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.telescope_tube/objective_cell",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.telescope_tube/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.telescope_tube/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.telescope_tube/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.telescope_tube/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.telescope_tube/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.telescope_tube/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.telescope_tube/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.objective_cell/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.objective_cell/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.objective_cell/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.objective_cell/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.objective_cell/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.objective_cell/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.objective_cell/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.objective_glass/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.objective_glass/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.objective_glass/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.objective_glass/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.objective_glass/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.objective_glass/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.telescope_focuser/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.telescope_focuser/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.telescope_focuser/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.telescope_focuser/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.telescope_focuser/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.focus_drawtube/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.focus_drawtube/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.focus_drawtube/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.focus_drawtube/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.eyepiece_barrel/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.eyepiece_barrel/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.eyepiece_barrel/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.eyepiece_glass/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.eyepiece_glass/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "home.overlap.eyecup/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.focus_minimum_gap",
+      "observed": 0.25,
+      "expected": 0.25,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "extended.overlap.pedestal/mount_yoke",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.pedestal/telescope_tube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.pedestal/objective_cell",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.pedestal/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.pedestal/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.pedestal/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.pedestal/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.pedestal/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.pedestal/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.pedestal/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.mount_yoke/telescope_tube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.mount_yoke/objective_cell",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.mount_yoke/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.mount_yoke/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.mount_yoke/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.mount_yoke/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.mount_yoke/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.mount_yoke/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.mount_yoke/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.telescope_tube/objective_cell",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.telescope_tube/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.telescope_tube/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.telescope_tube/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.telescope_tube/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.telescope_tube/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.telescope_tube/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.telescope_tube/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.objective_cell/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.objective_cell/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.objective_cell/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.objective_cell/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.objective_cell/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.objective_cell/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.objective_cell/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.objective_glass/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.objective_glass/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.objective_glass/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.objective_glass/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.objective_glass/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.objective_glass/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.telescope_focuser/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.telescope_focuser/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.telescope_focuser/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.telescope_focuser/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.telescope_focuser/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.focus_drawtube/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.focus_drawtube/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.focus_drawtube/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.focus_drawtube/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.eyepiece_barrel/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.eyepiece_barrel/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.eyepiece_barrel/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.eyepiece_glass/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.eyepiece_glass/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.overlap.eyecup/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "extended.engagement",
+      "observed": 12.0,
+      "expected": 12,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "focus_drawtube.measured_extension",
+      "observed": 20.0,
+      "expected": 20,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "eyecup.measured_extension",
+      "observed": 20.0,
+      "expected": 20,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "eyepiece_glass.measured_extension",
+      "observed": 20.0,
+      "expected": 20,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "eyepiece_barrel.measured_extension",
+      "observed": 20.0,
+      "expected": 20,
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "sidecar.document_hash",
+      "observed": "5045852e4782f9a15ebb8b22b1277d6cce88e837ba4961f07b69057c9a2a8852",
+      "expected": "5045852e4782f9a15ebb8b22b1277d6cce88e837ba4961f07b69057c9a2a8852",
+      "status": "pass"
+    },
+    {
+      "name": "motion.azimuth.kind",
+      "observed": "revolute",
+      "expected": "revolute",
+      "status": "pass"
+    },
+    {
+      "name": "motion.azimuth.limits",
+      "observed": [
+        -135.0,
+        135.0
+      ],
+      "expected": [
+        -135,
+        135
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "motion.azimuth.resolved_targets",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "motion.altitude.kind",
+      "observed": "revolute",
+      "expected": "revolute",
+      "status": "pass"
+    },
+    {
+      "name": "motion.altitude.limits",
+      "observed": [
+        0.0,
+        60.0
+      ],
+      "expected": [
+        0,
+        60
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "motion.altitude.resolved_targets",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "motion.focus.kind",
+      "observed": "slider",
+      "expected": "slider",
+      "status": "pass"
+    },
+    {
+      "name": "motion.focus.limits",
+      "observed": [
+        0.0,
+        20.0
+      ],
+      "expected": [
+        0,
+        20
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "motion.focus.resolved_targets",
+      "observed": true,
+      "expected": true,
+      "status": "pass"
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.pedestal/mount_yoke",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.pedestal/telescope_tube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.pedestal/objective_cell",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.pedestal/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.pedestal/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.pedestal/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.pedestal/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.pedestal/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.pedestal/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.pedestal/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.mount_yoke/telescope_tube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.mount_yoke/objective_cell",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.mount_yoke/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.mount_yoke/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.mount_yoke/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.mount_yoke/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.mount_yoke/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.mount_yoke/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.mount_yoke/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.telescope_tube/objective_cell",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.telescope_tube/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.telescope_tube/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.telescope_tube/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.telescope_tube/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.telescope_tube/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.telescope_tube/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.telescope_tube/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.objective_cell/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.objective_cell/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.objective_cell/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.objective_cell/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.objective_cell/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.objective_cell/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.objective_cell/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.objective_glass/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.objective_glass/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.objective_glass/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.objective_glass/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.objective_glass/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.objective_glass/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.telescope_focuser/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.telescope_focuser/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.telescope_focuser/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.telescope_focuser/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.telescope_focuser/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.focus_drawtube/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.focus_drawtube/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.focus_drawtube/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.focus_drawtube/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.eyepiece_barrel/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.eyepiece_barrel/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.eyepiece_barrel/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.eyepiece_glass/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.eyepiece_glass/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.overlap.eyecup/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt25_az35_focus10.above_floor",
+      "observed": 0.0,
+      "expected": ">= 0",
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.pedestal/mount_yoke",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.pedestal/telescope_tube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.pedestal/objective_cell",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.pedestal/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.pedestal/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.pedestal/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.pedestal/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.pedestal/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.pedestal/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.pedestal/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.mount_yoke/telescope_tube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.mount_yoke/objective_cell",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.mount_yoke/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.mount_yoke/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.mount_yoke/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.mount_yoke/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.mount_yoke/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.mount_yoke/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.mount_yoke/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.telescope_tube/objective_cell",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.telescope_tube/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.telescope_tube/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.telescope_tube/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.telescope_tube/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.telescope_tube/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.telescope_tube/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.telescope_tube/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.objective_cell/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.objective_cell/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.objective_cell/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.objective_cell/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.objective_cell/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.objective_cell/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.objective_cell/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.objective_glass/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.objective_glass/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.objective_glass/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.objective_glass/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.objective_glass/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.objective_glass/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.telescope_focuser/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.telescope_focuser/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.telescope_focuser/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.telescope_focuser/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.telescope_focuser/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.focus_drawtube/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.focus_drawtube/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.focus_drawtube/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.focus_drawtube/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.eyepiece_barrel/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.eyepiece_barrel/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.eyepiece_barrel/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.eyepiece_glass/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.eyepiece_glass/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.overlap.eyecup/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az-135_focus20.above_floor",
+      "observed": 0.0,
+      "expected": ">= 0",
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.pedestal/mount_yoke",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.pedestal/telescope_tube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.pedestal/objective_cell",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.pedestal/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.pedestal/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.pedestal/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.pedestal/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.pedestal/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.pedestal/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.pedestal/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.mount_yoke/telescope_tube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.mount_yoke/objective_cell",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.mount_yoke/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.mount_yoke/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.mount_yoke/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.mount_yoke/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.mount_yoke/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.mount_yoke/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.mount_yoke/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.telescope_tube/objective_cell",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.telescope_tube/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.telescope_tube/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.telescope_tube/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.telescope_tube/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.telescope_tube/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.telescope_tube/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.telescope_tube/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.objective_cell/objective_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.objective_cell/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.objective_cell/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.objective_cell/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.objective_cell/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.objective_cell/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.objective_cell/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.objective_glass/telescope_focuser",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.objective_glass/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.objective_glass/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.objective_glass/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.objective_glass/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.objective_glass/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.telescope_focuser/focus_drawtube",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.telescope_focuser/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.telescope_focuser/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.telescope_focuser/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.telescope_focuser/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.focus_drawtube/eyepiece_barrel",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.focus_drawtube/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.focus_drawtube/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.focus_drawtube/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.eyepiece_barrel/eyepiece_glass",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.eyepiece_barrel/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.eyepiece_barrel/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.eyepiece_glass/eyecup",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.eyepiece_glass/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.overlap.eyecup/telescope_cradle",
+      "observed": 0.0,
+      "expected": 0,
+      "status": "pass",
+      "units": "mm^3",
+      "absolute_tolerance": 0.001
+    },
+    {
+      "name": "pose_alt60_az135_focus0.above_floor",
+      "observed": 0.0,
+      "expected": ">= 0",
+      "status": "pass",
+      "units": "mm",
+      "absolute_tolerance": 1e-05
+    }
+  ],
+  "limits": "Geometry and specified sampled poses only. No optical performance, continuous collision sweep, material, load, assembly retention or manufacturing approval."
+}

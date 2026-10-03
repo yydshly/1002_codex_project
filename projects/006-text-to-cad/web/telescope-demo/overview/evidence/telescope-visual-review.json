@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-04",
+  "status": "pass",
+  "method": "Every PNG was generated from the saved STEP with cadgen step snapshot and individually opened with view_image by the root agent",
+  "model_snapshots": ["telescope_tube", "telescope_objective", "telescope_focuser", "telescope_focus_unit", "telescope_cradle", "telescope_mount", "telescope_assembly", "telescope_extended", "telescope_exploded"],
+  "pose_snapshots": ["telescope_pose_focused", "telescope_pose_observing"],
+  "findings": ["All nine saved models render with complete silhouettes", "Object lens and eyepiece geometry visible in separated components", "Eleven parts form a telescope and pedestal assembly", "Exploded presentation separates functional modules", "Focus extension is visible in the native pose rendering and saved extended variant", "Observing pose visibly changes both altitude and azimuth while the pedestal stays fixed"],
+  "geometry_report": "notes/telescope-validation.json",
+  "limits": "Visual review does not establish optical performance or continuous motion clearance. Independent checks use saved STEP solids and specified motion samples."
+}

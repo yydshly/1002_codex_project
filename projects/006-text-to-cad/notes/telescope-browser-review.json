@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-10-04T00:26:11.0908345+08:00",
+  "status": "pass",
+  "demo_url": "http://127.0.0.1:50288/",
+  "checks": [
+    "Eight step buttons show the expected titles, owners and inputs/actions/outputs",
+    "Assembly, exploded and 20 mm extension buttons change the actual CAD file and download links",
+    "All 12 checked HTTP routes returned 200 including saved STEP/GLB, code, reports and process notes",
+    "Standalone CAD Position panel exposes azimuth, altitude and focus",
+    "observing preset visibly reads 35 deg / 25 deg / 10 mm and transforms the assembly",
+    "focused preset visibly reads 0 deg / 0 deg / 20 mm",
+    "home restored; demo starts at step 01",
+    "JavaScript syntax and repository catalog checks passed"
+  ],
+  "limitations": [
+    "Embedded viewer controls inspected; motion preset interaction was verified in the standalone viewer",
+    "Native app cad_show delivered each artifact; native cad_screenshot remained loading, so visible UI confirmation used the plugin browser viewer",
+    "Page is a replay of completed work; step controls do not invoke an LLM or rebuild"
+  ]
+}

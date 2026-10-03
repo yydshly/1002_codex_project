@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>望远镜 · 从目标到 CAD 的完整演示</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><div class="brand">TEXT → CAD <span>006 / 望远镜实验</span></div><h1>从一句目标，到一台望远镜</h1><p>逐步回放本次真实建模过程，看清谁决定、谁执行、谁验证。</p><div class="scope">结构概念演示 · 尺寸为模型设定的假设 · 光学性能未验证</div><nav class="demo-nav" aria-label="项目页面"><a href="overview/">能力、原理与一张图总览 ↗</a><a href="#demo" aria-current="page">望远镜完整演示 ↓</a><a href="overview/#inputs">真实配件输入与目标模板 ↗</a></nav></header>
+  <main id="demo">
+    <section class="role-strip" aria-label="四方职责">
+      <div data-role="user"><b>你 · 用户</b><span>下发目标，审阅结果</span></div>
+      <div data-role="agent"><b>我 · 语言模型</b><span>设计、参数、代码、验收</span></div>
+      <div data-role="plugin"><b>插件 · cadgen / build123d</b><span>构建、导出、展示</span></div>
+      <div data-role="kernel"><b>内核 · OpenCascade</b><span>执行几何运算与测量</span></div>
+    </section>
+    <nav class="steps" aria-label="建模步骤" id="steps"></nav>
+    <div class="workspace">
+      <section class="explanation" aria-live="polite">
+        <div class="step-meta"><span id="step-index"></span><span id="owner"></span></div>
+        <h2 id="step-title"></h2><p id="step-description"></p>
+        <div class="handoff"><p><b>输入</b><span id="step-input"></span></p><p><b>本步负责人做什么</b><span id="step-action"></span></p><p><b>输出 / 交给谁</b><span id="step-output"></span></p></div>
+        <div id="detail"></div>
+        <div class="pager"><button id="previous" type="button">← 上一步</button><button id="next" type="button">下一步 →</button></div>
+      </section>
+      <section class="model-panel" aria-label="真实 CAD 模型">
+        <div class="model-toolbar"><div><b>实际 CAD 产物</b><span id="model-caption"></span></div><a id="open-cad" target="_blank" rel="noopener">单独打开 ↗</a></div>
+        <div class="view-buttons" id="view-buttons"><button type="button" data-model="telescope_assembly">整体装配</button><button type="button" data-model="telescope_exploded">分解结构</button><button type="button" data-model="telescope_extended">调焦伸出 20 mm</button></div>
+        <iframe id="cad" title="插件提供的交互式 CAD 查看器" allow="fullscreen"></iframe>
+        <div class="viewer-help">拖动旋转、滚轮缩放。整体装配的 Position 工具可调节方位、仰角和调焦；Pose 可选 home、focused、observing。可用“单独打开”查看完整面板。步骤切换回放已完成过程；不会重新调用语言模型或修改 CAD。</div>
+        <div class="artifacts"><a id="step-file">下载 STEP</a><a id="glb-file">下载 GLB</a><a href="/artifacts/notes/telescope-validation.json" target="_blank">实测报告 ↗</a><a href="/artifacts/notes/telescope-demo.md" target="_blank">完整过程记录 ↗</a></div>
+      </section>
+    </div>
+    <footer>实际产物来自项目内的 Python 源码与 text-to-cad 0.7.10。页面通过插件自带查看器显示保存文件，保留独立几何验收和修正前后的证据。</footer>
+  </main>
+  <p id="error" role="alert" hidden></p>
+  <script src="app.js"></script>
+</body>
+</html>

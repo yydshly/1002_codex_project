@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-04T01:15:48.535342+08:00",
+  "status": "pass",
+  "page": "http://127.0.0.1:50288/overview/",
+  "sections": 10,
+  "capability_groups": 10,
+  "local_assets_and_records_checked": 18,
+  "checks": [
+    "All HTML fragment targets exist",
+    "All linked local files exist and their HTTP reads returned 200",
+    "Standalone site build contains the linked assets and evidence",
+    "PNG and SVG copies match their editable project outputs",
+    "Default browser viewport shows the overview SVG",
+    "Actual capability status labels distinguish tested, partly tested and provided workflows",
+    "Brief copy button visibly confirms successful copy",
+    "Overview and eight-step telescope demo links navigate both ways",
+    "Body has no horizontal overflow at the observed default browser sizes"
+  ],
+  "scope": [
+    "Website and infographic only; CAD files and existing geometry reports were not changed",
+    "No production approval, optical simulation, printing, purchase or external deployment"
+  ],
+  "sources": "notes/understanding.json"
+}

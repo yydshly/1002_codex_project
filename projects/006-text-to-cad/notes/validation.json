@@ -1,0 +1,3543 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-10-03T15:13:22.640840+00:00",
+  "measurement_basis": "Saved STEP B-rep readback; no model-source imports.",
+  "units": {
+    "length": "mm",
+    "volume": "mm^3"
+  },
+  "absolute_tolerances": {
+    "length_mm": 1e-05,
+    "volume_mm3": 0.001
+  },
+  "independent_specification": {
+    "baseline": {
+      "length": 80.0,
+      "width": 50.0,
+      "thickness": 5.0,
+      "corner_radius": 3.0,
+      "hole_diameter": 5.5,
+      "hole_centers": [
+        [
+          -30.0,
+          -15.0
+        ],
+        [
+          30.0,
+          -15.0
+        ],
+        [
+          -30.0,
+          15.0
+        ],
+        [
+          30.0,
+          15.0
+        ]
+      ],
+      "pitch_x": 60.0,
+      "pitch_y": 30.0
+    },
+    "wide": {
+      "length": 100.0,
+      "width": 50.0,
+      "thickness": 5.0,
+      "corner_radius": 3.0,
+      "hole_diameter": 5.5,
+      "hole_centers": [
+        [
+          -40.0,
+          -15.0
+        ],
+        [
+          40.0,
+          -15.0
+        ],
+        [
+          -40.0,
+          15.0
+        ],
+        [
+          40.0,
+          15.0
+        ]
+      ],
+      "pitch_x": 80.0,
+      "pitch_y": 30.0
+    },
+    "pin_diameter_mm": 4.5,
+    "pin_height_mm": 12.0,
+    "pin_bottom_z_mm": -2.5,
+    "plate_pin_clearance_mm": 0.5
+  },
+  "artifacts": [
+    {
+      "name": "baseline",
+      "file": "STEP/mounting_plate.step",
+      "checks": [
+        {
+          "name": "baseline.solid_count",
+          "status": "pass",
+          "observed": 1,
+          "expected": 1
+        },
+        {
+          "name": "baseline.topology_valid",
+          "status": "pass",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "baseline.positive_volume",
+          "status": "pass",
+          "observed": 19486.205780556123,
+          "expected": "> 0",
+          "units": "mm^3"
+        },
+        {
+          "name": "baseline.envelope_X",
+          "status": "pass",
+          "observed": 80.0,
+          "expected": 80.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.min_X",
+          "status": "pass",
+          "observed": -40.0,
+          "expected": -40.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.max_X",
+          "status": "pass",
+          "observed": 40.0,
+          "expected": 40.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.envelope_Y",
+          "status": "pass",
+          "observed": 50.0,
+          "expected": 50.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.min_Y",
+          "status": "pass",
+          "observed": -25.0,
+          "expected": -25.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.max_Y",
+          "status": "pass",
+          "observed": 25.0,
+          "expected": 25.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.envelope_Z",
+          "status": "pass",
+          "observed": 5.0,
+          "expected": 5.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.min_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.max_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.analytic_volume",
+          "status": "pass",
+          "observed": 19486.205780556123,
+          "expected": 19486.205780556083,
+          "units": "mm^3",
+          "absolute_tolerance": 0.001
+        },
+        {
+          "name": "baseline.top.full_hole_ring_count",
+          "status": "pass",
+          "observed": 4,
+          "expected": 4
+        },
+        {
+          "name": "baseline.top.hole_1.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_1.center_X",
+          "status": "pass",
+          "observed": -30.0,
+          "expected": -30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_1.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_1.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_1.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_2.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_2.center_X",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_2.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_2.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_2.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_3.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_3.center_X",
+          "status": "pass",
+          "observed": -30.0,
+          "expected": -30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_3.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_3.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_3.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_4.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_4.center_X",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_4.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_4.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.hole_4.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.row_1.pitch_X",
+          "status": "pass",
+          "observed": 60.0,
+          "expected": 60.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.row_2.pitch_X",
+          "status": "pass",
+          "observed": 60.0,
+          "expected": 60.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.column_1.pitch_Y",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.column_2.pitch_Y",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_arc_count",
+          "status": "pass",
+          "observed": 4,
+          "expected": 4
+        },
+        {
+          "name": "baseline.top.corner_1.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_1.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_1.center_X",
+          "status": "pass",
+          "observed": -37.0,
+          "expected": -37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_1.center_Y",
+          "status": "pass",
+          "observed": -22.0,
+          "expected": -22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_1.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_2.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_2.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_2.center_X",
+          "status": "pass",
+          "observed": 37.0,
+          "expected": 37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_2.center_Y",
+          "status": "pass",
+          "observed": -22.0,
+          "expected": -22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_2.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_3.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_3.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_3.center_X",
+          "status": "pass",
+          "observed": -37.0,
+          "expected": -37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_3.center_Y",
+          "status": "pass",
+          "observed": 22.0,
+          "expected": 22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_3.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_4.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_4.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_4.center_X",
+          "status": "pass",
+          "observed": 37.0,
+          "expected": 37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_4.center_Y",
+          "status": "pass",
+          "observed": 22.0,
+          "expected": 22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.top.corner_4.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.full_hole_ring_count",
+          "status": "pass",
+          "observed": 4,
+          "expected": 4
+        },
+        {
+          "name": "baseline.bottom.hole_1.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_1.center_X",
+          "status": "pass",
+          "observed": -30.0,
+          "expected": -30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_1.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_1.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_1.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_2.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_2.center_X",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_2.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_2.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_2.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_3.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_3.center_X",
+          "status": "pass",
+          "observed": -30.0,
+          "expected": -30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_3.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_3.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_3.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_4.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_4.center_X",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_4.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_4.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.hole_4.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.row_1.pitch_X",
+          "status": "pass",
+          "observed": 60.0,
+          "expected": 60.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.row_2.pitch_X",
+          "status": "pass",
+          "observed": 60.0,
+          "expected": 60.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.column_1.pitch_Y",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.column_2.pitch_Y",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_arc_count",
+          "status": "pass",
+          "observed": 4,
+          "expected": 4
+        },
+        {
+          "name": "baseline.bottom.corner_1.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_1.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_1.center_X",
+          "status": "pass",
+          "observed": -37.0,
+          "expected": -37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_1.center_Y",
+          "status": "pass",
+          "observed": -22.0,
+          "expected": -22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_1.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_2.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_2.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_2.center_X",
+          "status": "pass",
+          "observed": 37.0,
+          "expected": 37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_2.center_Y",
+          "status": "pass",
+          "observed": -22.0,
+          "expected": -22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_2.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_3.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_3.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_3.center_X",
+          "status": "pass",
+          "observed": -37.0,
+          "expected": -37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_3.center_Y",
+          "status": "pass",
+          "observed": 22.0,
+          "expected": 22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_3.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_4.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_4.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_4.center_X",
+          "status": "pass",
+          "observed": 37.0,
+          "expected": 37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_4.center_Y",
+          "status": "pass",
+          "observed": 22.0,
+          "expected": 22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "baseline.bottom.corner_4.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        }
+      ],
+      "sha256": "67f5a1abd4657e5f8a146746eaf0e6bf02e3afbdc5a33890f02d8a16208d3efb",
+      "file_size_bytes": 48407,
+      "measurements": {
+        "baseline": {
+          "signed_volume_mm3": 19486.205780556123,
+          "analytic_volume_mm3": 19486.205780556083,
+          "hole_centers_mm": {
+            "top": [
+              [
+                -30.0,
+                -15.0,
+                2.5
+              ],
+              [
+                30.0,
+                -15.0,
+                2.5
+              ],
+              [
+                -30.0,
+                15.0,
+                2.5
+              ],
+              [
+                30.0,
+                15.0,
+                2.5
+              ]
+            ],
+            "bottom": [
+              [
+                -30.0,
+                -15.0,
+                -2.5
+              ],
+              [
+                30.0,
+                -15.0,
+                -2.5
+              ],
+              [
+                -30.0,
+                15.0,
+                -2.5
+              ],
+              [
+                30.0,
+                15.0,
+                -2.5
+              ]
+            ]
+          }
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "name": "wide",
+      "file": "STEP/mounting_plate_wide.step",
+      "checks": [
+        {
+          "name": "wide.solid_count",
+          "status": "pass",
+          "observed": 1,
+          "expected": 1
+        },
+        {
+          "name": "wide.topology_valid",
+          "status": "pass",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "wide.positive_volume",
+          "status": "pass",
+          "observed": 24486.205780556123,
+          "expected": "> 0",
+          "units": "mm^3"
+        },
+        {
+          "name": "wide.envelope_X",
+          "status": "pass",
+          "observed": 100.0,
+          "expected": 100.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.min_X",
+          "status": "pass",
+          "observed": -50.0,
+          "expected": -50.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.max_X",
+          "status": "pass",
+          "observed": 50.0,
+          "expected": 50.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.envelope_Y",
+          "status": "pass",
+          "observed": 50.0,
+          "expected": 50.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.min_Y",
+          "status": "pass",
+          "observed": -25.0,
+          "expected": -25.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.max_Y",
+          "status": "pass",
+          "observed": 25.0,
+          "expected": 25.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.envelope_Z",
+          "status": "pass",
+          "observed": 5.0,
+          "expected": 5.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.min_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.max_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.analytic_volume",
+          "status": "pass",
+          "observed": 24486.205780556123,
+          "expected": 24486.205780556083,
+          "units": "mm^3",
+          "absolute_tolerance": 0.001
+        },
+        {
+          "name": "wide.top.full_hole_ring_count",
+          "status": "pass",
+          "observed": 4,
+          "expected": 4
+        },
+        {
+          "name": "wide.top.hole_1.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_1.center_X",
+          "status": "pass",
+          "observed": -40.0,
+          "expected": -40.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_1.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_1.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_1.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_2.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_2.center_X",
+          "status": "pass",
+          "observed": 40.0,
+          "expected": 40.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_2.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_2.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_2.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_3.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_3.center_X",
+          "status": "pass",
+          "observed": -40.0,
+          "expected": -40.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_3.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_3.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_3.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_4.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_4.center_X",
+          "status": "pass",
+          "observed": 40.0,
+          "expected": 40.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_4.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_4.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.hole_4.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.row_1.pitch_X",
+          "status": "pass",
+          "observed": 80.0,
+          "expected": 80.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.row_2.pitch_X",
+          "status": "pass",
+          "observed": 80.0,
+          "expected": 80.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.column_1.pitch_Y",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.column_2.pitch_Y",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_arc_count",
+          "status": "pass",
+          "observed": 4,
+          "expected": 4
+        },
+        {
+          "name": "wide.top.corner_1.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_1.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_1.center_X",
+          "status": "pass",
+          "observed": -47.0,
+          "expected": -47.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_1.center_Y",
+          "status": "pass",
+          "observed": -22.0,
+          "expected": -22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_1.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_2.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_2.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_2.center_X",
+          "status": "pass",
+          "observed": 47.0,
+          "expected": 47.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_2.center_Y",
+          "status": "pass",
+          "observed": -22.0,
+          "expected": -22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_2.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_3.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_3.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_3.center_X",
+          "status": "pass",
+          "observed": -47.0,
+          "expected": -47.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_3.center_Y",
+          "status": "pass",
+          "observed": 22.0,
+          "expected": 22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_3.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_4.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_4.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_4.center_X",
+          "status": "pass",
+          "observed": 47.0,
+          "expected": 47.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_4.center_Y",
+          "status": "pass",
+          "observed": 22.0,
+          "expected": 22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.top.corner_4.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.full_hole_ring_count",
+          "status": "pass",
+          "observed": 4,
+          "expected": 4
+        },
+        {
+          "name": "wide.bottom.hole_1.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_1.center_X",
+          "status": "pass",
+          "observed": -40.0,
+          "expected": -40.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_1.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_1.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_1.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_2.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_2.center_X",
+          "status": "pass",
+          "observed": 40.0,
+          "expected": 40.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_2.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_2.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_2.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_3.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_3.center_X",
+          "status": "pass",
+          "observed": -40.0,
+          "expected": -40.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_3.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_3.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_3.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_4.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_4.center_X",
+          "status": "pass",
+          "observed": 40.0,
+          "expected": 40.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_4.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_4.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.hole_4.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.row_1.pitch_X",
+          "status": "pass",
+          "observed": 80.0,
+          "expected": 80.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.row_2.pitch_X",
+          "status": "pass",
+          "observed": 80.0,
+          "expected": 80.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.column_1.pitch_Y",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.column_2.pitch_Y",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_arc_count",
+          "status": "pass",
+          "observed": 4,
+          "expected": 4
+        },
+        {
+          "name": "wide.bottom.corner_1.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_1.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_1.center_X",
+          "status": "pass",
+          "observed": -47.0,
+          "expected": -47.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_1.center_Y",
+          "status": "pass",
+          "observed": -22.0,
+          "expected": -22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_1.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_2.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_2.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_2.center_X",
+          "status": "pass",
+          "observed": 47.0,
+          "expected": 47.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_2.center_Y",
+          "status": "pass",
+          "observed": -22.0,
+          "expected": -22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_2.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_3.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_3.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_3.center_X",
+          "status": "pass",
+          "observed": -47.0,
+          "expected": -47.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_3.center_Y",
+          "status": "pass",
+          "observed": 22.0,
+          "expected": 22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_3.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_4.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_4.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_4.center_X",
+          "status": "pass",
+          "observed": 47.0,
+          "expected": 47.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_4.center_Y",
+          "status": "pass",
+          "observed": 22.0,
+          "expected": 22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "wide.bottom.corner_4.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        }
+      ],
+      "sha256": "a03a486cef8476f9b8d47058adda5fd83db1d44994b0514b750f1887e93a6a82",
+      "file_size_bytes": 48422,
+      "measurements": {
+        "wide": {
+          "signed_volume_mm3": 24486.205780556123,
+          "analytic_volume_mm3": 24486.205780556083,
+          "hole_centers_mm": {
+            "top": [
+              [
+                -40.0,
+                -15.0,
+                2.5
+              ],
+              [
+                40.0,
+                -15.0,
+                2.5
+              ],
+              [
+                -40.0,
+                15.0,
+                2.5
+              ],
+              [
+                40.0,
+                15.0,
+                2.5
+              ]
+            ],
+            "bottom": [
+              [
+                -40.0,
+                -15.0,
+                -2.5
+              ],
+              [
+                40.0,
+                -15.0,
+                -2.5
+              ],
+              [
+                -40.0,
+                15.0,
+                -2.5
+              ],
+              [
+                40.0,
+                15.0,
+                -2.5
+              ]
+            ]
+          }
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "name": "assembly",
+      "file": "STEP/plate_assembly.step",
+      "checks": [
+        {
+          "name": "assembly.leaf_count",
+          "status": "pass",
+          "observed": 5,
+          "expected": 5
+        },
+        {
+          "name": "assembly.solid_count",
+          "status": "pass",
+          "observed": 5,
+          "expected": 5
+        },
+        {
+          "name": "assembly.mounting_plate.solid_count",
+          "status": "pass",
+          "observed": 1,
+          "expected": 1
+        },
+        {
+          "name": "assembly.mounting_plate.topology_valid",
+          "status": "pass",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "assembly.mounting_plate.positive_volume",
+          "status": "pass",
+          "observed": 19486.205780556123,
+          "expected": "> 0",
+          "units": "mm^3"
+        },
+        {
+          "name": "assembly.mounting_plate.envelope_X",
+          "status": "pass",
+          "observed": 80.0,
+          "expected": 80.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.min_X",
+          "status": "pass",
+          "observed": -40.0,
+          "expected": -40.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.max_X",
+          "status": "pass",
+          "observed": 40.0,
+          "expected": 40.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.envelope_Y",
+          "status": "pass",
+          "observed": 50.0,
+          "expected": 50.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.min_Y",
+          "status": "pass",
+          "observed": -25.0,
+          "expected": -25.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.max_Y",
+          "status": "pass",
+          "observed": 25.0,
+          "expected": 25.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.envelope_Z",
+          "status": "pass",
+          "observed": 5.0,
+          "expected": 5.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.min_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.max_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.analytic_volume",
+          "status": "pass",
+          "observed": 19486.205780556123,
+          "expected": 19486.205780556083,
+          "units": "mm^3",
+          "absolute_tolerance": 0.001
+        },
+        {
+          "name": "assembly.mounting_plate.top.full_hole_ring_count",
+          "status": "pass",
+          "observed": 4,
+          "expected": 4
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_1.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_1.center_X",
+          "status": "pass",
+          "observed": -30.0,
+          "expected": -30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_1.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_1.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_1.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_2.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_2.center_X",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_2.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_2.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_2.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_3.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_3.center_X",
+          "status": "pass",
+          "observed": -30.0,
+          "expected": -30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_3.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_3.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_3.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_4.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_4.center_X",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_4.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_4.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.hole_4.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.row_1.pitch_X",
+          "status": "pass",
+          "observed": 60.0,
+          "expected": 60.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.row_2.pitch_X",
+          "status": "pass",
+          "observed": 60.0,
+          "expected": 60.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.column_1.pitch_Y",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.column_2.pitch_Y",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_arc_count",
+          "status": "pass",
+          "observed": 4,
+          "expected": 4
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_1.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_1.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_1.center_X",
+          "status": "pass",
+          "observed": -37.0,
+          "expected": -37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_1.center_Y",
+          "status": "pass",
+          "observed": -22.0,
+          "expected": -22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_1.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_2.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_2.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_2.center_X",
+          "status": "pass",
+          "observed": 37.0,
+          "expected": 37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_2.center_Y",
+          "status": "pass",
+          "observed": -22.0,
+          "expected": -22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_2.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_3.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_3.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_3.center_X",
+          "status": "pass",
+          "observed": -37.0,
+          "expected": -37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_3.center_Y",
+          "status": "pass",
+          "observed": 22.0,
+          "expected": 22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_3.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_4.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_4.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_4.center_X",
+          "status": "pass",
+          "observed": 37.0,
+          "expected": 37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_4.center_Y",
+          "status": "pass",
+          "observed": 22.0,
+          "expected": 22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.top.corner_4.center_Z",
+          "status": "pass",
+          "observed": 2.5,
+          "expected": 2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.full_hole_ring_count",
+          "status": "pass",
+          "observed": 4,
+          "expected": 4
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_1.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_1.center_X",
+          "status": "pass",
+          "observed": -30.0,
+          "expected": -30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_1.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_1.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_1.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_2.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_2.center_X",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_2.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_2.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_2.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_3.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_3.center_X",
+          "status": "pass",
+          "observed": -30.0,
+          "expected": -30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_3.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_3.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_3.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_4.diameter",
+          "status": "pass",
+          "observed": 5.5,
+          "expected": 5.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_4.center_X",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_4.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_4.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.hole_4.complete_circle_length",
+          "status": "pass",
+          "observed": 17.27875959474386,
+          "expected": 17.27875959474386,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.row_1.pitch_X",
+          "status": "pass",
+          "observed": 60.0,
+          "expected": 60.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.row_2.pitch_X",
+          "status": "pass",
+          "observed": 60.0,
+          "expected": 60.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.column_1.pitch_Y",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.column_2.pitch_Y",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_arc_count",
+          "status": "pass",
+          "observed": 4,
+          "expected": 4
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_1.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_1.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_1.center_X",
+          "status": "pass",
+          "observed": -37.0,
+          "expected": -37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_1.center_Y",
+          "status": "pass",
+          "observed": -22.0,
+          "expected": -22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_1.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_2.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_2.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_2.center_X",
+          "status": "pass",
+          "observed": 37.0,
+          "expected": 37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_2.center_Y",
+          "status": "pass",
+          "observed": -22.0,
+          "expected": -22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_2.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_3.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_3.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_3.center_X",
+          "status": "pass",
+          "observed": -37.0,
+          "expected": -37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_3.center_Y",
+          "status": "pass",
+          "observed": 22.0,
+          "expected": 22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_3.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_4.radius",
+          "status": "pass",
+          "observed": 3.0,
+          "expected": 3.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_4.quarter_arc_length",
+          "status": "pass",
+          "observed": 4.712388980384691,
+          "expected": 4.71238898038469,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_4.center_X",
+          "status": "pass",
+          "observed": 37.0,
+          "expected": 37.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_4.center_Y",
+          "status": "pass",
+          "observed": 22.0,
+          "expected": 22.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.mounting_plate.bottom.corner_4.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.solid_count",
+          "status": "pass",
+          "observed": 1,
+          "expected": 1
+        },
+        {
+          "name": "assembly.pin_1.topology_valid",
+          "status": "pass",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "assembly.pin_1.positive_volume",
+          "status": "pass",
+          "observed": 190.85175370557997,
+          "expected": "> 0",
+          "units": "mm^3"
+        },
+        {
+          "name": "assembly.pin_1.envelope_X",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.envelope_Y",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.height",
+          "status": "pass",
+          "observed": 12.0,
+          "expected": 12.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.bottom_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.top_Z",
+          "status": "pass",
+          "observed": 9.5,
+          "expected": 9.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.center_X",
+          "status": "pass",
+          "observed": -30.0,
+          "expected": -30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.analytic_volume",
+          "status": "pass",
+          "observed": 190.85175370557997,
+          "expected": 190.85175370557994,
+          "units": "mm^3",
+          "absolute_tolerance": 0.001
+        },
+        {
+          "name": "assembly.pin_1.bottom.full_ring_count",
+          "status": "pass",
+          "observed": 1,
+          "expected": 1
+        },
+        {
+          "name": "assembly.pin_1.bottom.diameter",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.bottom.center_X",
+          "status": "pass",
+          "observed": -30.0,
+          "expected": -30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.bottom.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.bottom.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.top.full_ring_count",
+          "status": "pass",
+          "observed": 1,
+          "expected": 1
+        },
+        {
+          "name": "assembly.pin_1.top.diameter",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.top.center_X",
+          "status": "pass",
+          "observed": -30.0,
+          "expected": -30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.top.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.top.center_Z",
+          "status": "pass",
+          "observed": 9.5,
+          "expected": 9.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.plate_clearance",
+          "status": "pass",
+          "observed": 0.49999999999999367,
+          "expected": 0.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_1.plate_overlap",
+          "status": "pass",
+          "observed": 0.0,
+          "expected": 0.0,
+          "units": "mm^3",
+          "absolute_tolerance": 0.001
+        },
+        {
+          "name": "assembly.pin_2.solid_count",
+          "status": "pass",
+          "observed": 1,
+          "expected": 1
+        },
+        {
+          "name": "assembly.pin_2.topology_valid",
+          "status": "pass",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "assembly.pin_2.positive_volume",
+          "status": "pass",
+          "observed": 190.8517537055799,
+          "expected": "> 0",
+          "units": "mm^3"
+        },
+        {
+          "name": "assembly.pin_2.envelope_X",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.envelope_Y",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.height",
+          "status": "pass",
+          "observed": 12.0,
+          "expected": 12.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.bottom_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.top_Z",
+          "status": "pass",
+          "observed": 9.5,
+          "expected": 9.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.center_X",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.analytic_volume",
+          "status": "pass",
+          "observed": 190.8517537055799,
+          "expected": 190.85175370557994,
+          "units": "mm^3",
+          "absolute_tolerance": 0.001
+        },
+        {
+          "name": "assembly.pin_2.bottom.full_ring_count",
+          "status": "pass",
+          "observed": 1,
+          "expected": 1
+        },
+        {
+          "name": "assembly.pin_2.bottom.diameter",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.bottom.center_X",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.bottom.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.bottom.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.top.full_ring_count",
+          "status": "pass",
+          "observed": 1,
+          "expected": 1
+        },
+        {
+          "name": "assembly.pin_2.top.diameter",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.top.center_X",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.top.center_Y",
+          "status": "pass",
+          "observed": -15.0,
+          "expected": -15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.top.center_Z",
+          "status": "pass",
+          "observed": 9.5,
+          "expected": 9.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.plate_clearance",
+          "status": "pass",
+          "observed": 0.49999999999999434,
+          "expected": 0.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_2.plate_overlap",
+          "status": "pass",
+          "observed": 0.0,
+          "expected": 0.0,
+          "units": "mm^3",
+          "absolute_tolerance": 0.001
+        },
+        {
+          "name": "assembly.pin_3.solid_count",
+          "status": "pass",
+          "observed": 1,
+          "expected": 1
+        },
+        {
+          "name": "assembly.pin_3.topology_valid",
+          "status": "pass",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "assembly.pin_3.positive_volume",
+          "status": "pass",
+          "observed": 190.85175370557997,
+          "expected": "> 0",
+          "units": "mm^3"
+        },
+        {
+          "name": "assembly.pin_3.envelope_X",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.envelope_Y",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.height",
+          "status": "pass",
+          "observed": 12.0,
+          "expected": 12.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.bottom_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.top_Z",
+          "status": "pass",
+          "observed": 9.5,
+          "expected": 9.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.center_X",
+          "status": "pass",
+          "observed": -30.0,
+          "expected": -30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.analytic_volume",
+          "status": "pass",
+          "observed": 190.85175370557997,
+          "expected": 190.85175370557994,
+          "units": "mm^3",
+          "absolute_tolerance": 0.001
+        },
+        {
+          "name": "assembly.pin_3.bottom.full_ring_count",
+          "status": "pass",
+          "observed": 1,
+          "expected": 1
+        },
+        {
+          "name": "assembly.pin_3.bottom.diameter",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.bottom.center_X",
+          "status": "pass",
+          "observed": -30.0,
+          "expected": -30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.bottom.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.bottom.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.top.full_ring_count",
+          "status": "pass",
+          "observed": 1,
+          "expected": 1
+        },
+        {
+          "name": "assembly.pin_3.top.diameter",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.top.center_X",
+          "status": "pass",
+          "observed": -30.0,
+          "expected": -30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.top.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.top.center_Z",
+          "status": "pass",
+          "observed": 9.5,
+          "expected": 9.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.plate_clearance",
+          "status": "pass",
+          "observed": 0.4999999999999983,
+          "expected": 0.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_3.plate_overlap",
+          "status": "pass",
+          "observed": 0.0,
+          "expected": 0.0,
+          "units": "mm^3",
+          "absolute_tolerance": 0.001
+        },
+        {
+          "name": "assembly.pin_4.solid_count",
+          "status": "pass",
+          "observed": 1,
+          "expected": 1
+        },
+        {
+          "name": "assembly.pin_4.topology_valid",
+          "status": "pass",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "assembly.pin_4.positive_volume",
+          "status": "pass",
+          "observed": 190.8517537055799,
+          "expected": "> 0",
+          "units": "mm^3"
+        },
+        {
+          "name": "assembly.pin_4.envelope_X",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.envelope_Y",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.height",
+          "status": "pass",
+          "observed": 12.0,
+          "expected": 12.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.bottom_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.top_Z",
+          "status": "pass",
+          "observed": 9.5,
+          "expected": 9.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.center_X",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.analytic_volume",
+          "status": "pass",
+          "observed": 190.8517537055799,
+          "expected": 190.85175370557994,
+          "units": "mm^3",
+          "absolute_tolerance": 0.001
+        },
+        {
+          "name": "assembly.pin_4.bottom.full_ring_count",
+          "status": "pass",
+          "observed": 1,
+          "expected": 1
+        },
+        {
+          "name": "assembly.pin_4.bottom.diameter",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.bottom.center_X",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.bottom.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.bottom.center_Z",
+          "status": "pass",
+          "observed": -2.5,
+          "expected": -2.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.top.full_ring_count",
+          "status": "pass",
+          "observed": 1,
+          "expected": 1
+        },
+        {
+          "name": "assembly.pin_4.top.diameter",
+          "status": "pass",
+          "observed": 4.5,
+          "expected": 4.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.top.center_X",
+          "status": "pass",
+          "observed": 30.0,
+          "expected": 30.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.top.center_Y",
+          "status": "pass",
+          "observed": 15.0,
+          "expected": 15.0,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.top.center_Z",
+          "status": "pass",
+          "observed": 9.5,
+          "expected": 9.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.plate_clearance",
+          "status": "pass",
+          "observed": 0.49999999999999434,
+          "expected": 0.5,
+          "units": "mm",
+          "absolute_tolerance": 1e-05
+        },
+        {
+          "name": "assembly.pin_4.plate_overlap",
+          "status": "pass",
+          "observed": 0.0,
+          "expected": 0.0,
+          "units": "mm^3",
+          "absolute_tolerance": 0.001
+        }
+      ],
+      "sha256": "68acc9fff21982797f5d1ac28440562e142def6a2c2c1d567bc2996265705949",
+      "file_size_bytes": 57990,
+      "document_hash": "68acc9fff21982797f5d1ac28440562e142def6a2c2c1d567bc2996265705949",
+      "occurrences": [
+        {
+          "label": "mounting_plate",
+          "ref": "#o1.1"
+        },
+        {
+          "label": "pin_1",
+          "ref": "#o1.2"
+        },
+        {
+          "label": "pin_2",
+          "ref": "#o1.3"
+        },
+        {
+          "label": "pin_3",
+          "ref": "#o1.4"
+        },
+        {
+          "label": "pin_4",
+          "ref": "#o1.5"
+        }
+      ],
+      "measurements": {
+        "assembly.mounting_plate": {
+          "signed_volume_mm3": 19486.205780556123,
+          "analytic_volume_mm3": 19486.205780556083,
+          "hole_centers_mm": {
+            "top": [
+              [
+                -30.0,
+                -15.0,
+                2.5
+              ],
+              [
+                30.0,
+                -15.0,
+                2.5
+              ],
+              [
+                -30.0,
+                15.0,
+                2.5
+              ],
+              [
+                30.0,
+                15.0,
+                2.5
+              ]
+            ],
+            "bottom": [
+              [
+                -30.0,
+                -15.0,
+                -2.5
+              ],
+              [
+                30.0,
+                -15.0,
+                -2.5
+              ],
+              [
+                -30.0,
+                15.0,
+                -2.5
+              ],
+              [
+                30.0,
+                15.0,
+                -2.5
+              ]
+            ]
+          }
+        },
+        "plate_pin_pairs": [
+          {
+            "label": "pin_1",
+            "ref": "#o1.2",
+            "clearance_mm": 0.49999999999999367,
+            "overlap_mm3": 0.0,
+            "point_on_plate_mm": [
+              -27.25,
+              -15.0,
+              -2.5
+            ],
+            "point_on_pin_mm": [
+              -27.75,
+              -15.0,
+              -2.5
+            ]
+          },
+          {
+            "label": "pin_2",
+            "ref": "#o1.3",
+            "clearance_mm": 0.49999999999999434,
+            "overlap_mm3": 0.0,
+            "point_on_plate_mm": [
+              32.75,
+              -15.0,
+              -2.5
+            ],
+            "point_on_pin_mm": [
+              32.25,
+              -15.0,
+              -2.5
+            ]
+          },
+          {
+            "label": "pin_3",
+            "ref": "#o1.4",
+            "clearance_mm": 0.4999999999999983,
+            "overlap_mm3": 0.0,
+            "point_on_plate_mm": [
+              -27.25,
+              15.0,
+              -2.5
+            ],
+            "point_on_pin_mm": [
+              -27.75,
+              15.0,
+              -2.5
+            ]
+          },
+          {
+            "label": "pin_4",
+            "ref": "#o1.5",
+            "clearance_mm": 0.49999999999999434,
+            "overlap_mm3": 0.0,
+            "point_on_plate_mm": [
+              32.75,
+              15.0,
+              -2.5
+            ],
+            "point_on_pin_mm": [
+              32.25,
+              15.0,
+              -2.5
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    }
+  ],
+  "status": "pass",
+  "checks_passed": 409,
+  "checks_failed": 0
+}

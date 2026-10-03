@@ -6,9 +6,10 @@
 | --- | --- |
 | 总索引 | `https://yydshly.github.io/1002_codex_project/` |
 | 001 · Cult UI | `https://yydshly.github.io/1002_codex_project/projects/001-cult-ui/` |
+| 006 · text-to-cad | `https://yydshly.github.io/1002_codex_project/projects/006-text-to-cad/` |
 | 002 项目 | `https://yydshly.github.io/1002_codex_project/projects/002-slug/` |
 
-总入口与 001 项目是当前站点的配置地址；002 行展示后续项目的路径格式。仓库 Pages 已配置为 GitHub Actions 发布。GitHub Pages 每个仓库只有一个站点，因此这里使用多个子目录承载各项目的静态输出。参考 [GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)。
+总入口、001 和 006 项目是站点的配置地址；002 行展示后续项目的路径格式。006 发布可独立阅读的静态理解总览、生成的引导图和实测报告；实时 CAD 查看与运动操作按页面说明在本机启动。仓库 Pages 已配置为 GitHub Actions 发布。GitHub Pages 每个仓库只有一个站点，因此这里使用多个子目录承载各项目的静态输出。参考 [GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)。
 
 ## 配置子项目
 

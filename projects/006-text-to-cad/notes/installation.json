@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-03",
+  "timezone": "Asia/Shanghai",
+  "upstream": {
+    "repository": "https://github.com/earthtojake/text-to-cad",
+    "release": "0.7.10",
+    "commit": "f62f86746a9c74bab08f8e68d0fb76ba68dc3c86",
+    "license": "MIT",
+    "license_evidence": "notes/upstream-MIT-LICENSE.txt"
+  },
+  "installation_scope": {
+    "native_codex_plugin": {
+      "plugin_id": "text-to-cad@earthtojake",
+      "version": "0.7.10",
+      "installation_method": "Codex CLI plugin installation",
+      "scope": "User-level Codex plugin registration; not restricted to this subproject",
+      "installed": true,
+      "enabled": true,
+      "evidence": "notes/native-plugin.json"
+    },
+    "project_local_skills": {
+      "directory": ".agents/skills",
+      "method": "Copied upstream skill snapshot at the recorded commit",
+      "count": 13,
+      "names": [
+        "bambu-labs",
+        "cad",
+        "cad-mcp-setup",
+        "dfam-check",
+        "dfm",
+        "dxf",
+        "engineering-drawing",
+        "gcode",
+        "sdf",
+        "sendcutsend",
+        "srdf",
+        "step-parts",
+        "urdf"
+      ],
+      "git_ignored": true,
+      "reproduction_note": "A fresh checkout must restore the upstream skill snapshot; these ignored files are not included in Git. Copying a skill does not install every optional dependency or verify that capability."
+    },
+    "python_environment": {
+      "directory": ".venv",
+      "project_local": true,
+      "include_system_site_packages": false,
+      "python_global_packages_modified": false
+    }
+  },
+  "environment": {
+    "platform": "Windows x86_64",
+    "windows_build": "26200",
+    "powershell": "7.6.5 Core",
+    "python": "CPython 3.12.10",
+    "uv": "0.11.2",
+    "installed_packages_verified_with": "uv pip list --python .venv/Scripts/python.exe",
+    "key_installed_versions": {
+      "cadgen": "0.7.10",
+      "build123d": "0.11.1",
+      "cadquery-ocp-novtk": "7.9.3.1.1",
+      "cadquery-ocp-proxy": "7.9.3.1.1",
+      "playwright": "1.63.0",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "pillow": "12.3.0"
+    },
+    "units": {
+      "length": "mm",
+      "volume": "mm^3"
+    }
+  },
+  "dependency_installation": {
+    "declared_requirement": "cadgen[snapshot]==0.7.10",
+    "python_requirement": ">=3.12,<3.13",
+    "lockfile": "uv.lock",
+    "lockfile_sha256": "1687846c928019ddcc7965f0b1193ac585ceeb0c7a831c630fbbad8e6586101f",
+    "lockfile_format": {
+      "version": 1,
+      "revision": 3,
+      "requires_python": "==3.12.*"
+    },
+    "locked_index": "https://pypi.org/simple",
+    "package_host": "files.pythonhosted.org",
+    "result": "Dependencies downloaded successfully from official PyPI and installed into the project .venv with low download concurrency",
+    "download_concurrency": 2,
+    "network_notes": "Index pages were reachable. Official PyPI Windows wheel transfers were faster than the tested domestic mirrors. Universal dependency resolution also requested unrelated macOS wheels and encountered timeouts.",
+    "reproduction_commands": [
+      "uv sync --frozen",
+      "pwsh -File scripts/run-demo.ps1"
+    ],
+    "snapshot_prerequisite": "Playwright Chromium must also be installed; installing the Python snapshot extra alone does not download the browser."
+  },
+  "runtime_workaround": {
+    "observed_failure": "Initial OpenBLAS import with default threading exhausted available memory and failed",
+    "successful_process_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "result": "CAD model generation, saved STEP checks and engineering drawing generation succeeded with single-thread numerical library settings",
+    "script": "scripts/run-demo.ps1",
+    "scope": "The script saves and restores process environment values; it does not persist these values to user or machine settings",
+    "cadgen_cache": ".cache/cadgen"
+  },
+  "running_evidence": {
+    "saved_step_geometry": {
+      "plate": {
+        "checks_passed": 409,
+        "checks_failed": 0,
+        "evidence": "notes/validation.json"
+      },
+      "enclosure": {
+        "checks_passed": 721,
+        "checks_failed": 0,
+        "evidence": "notes/enclosure-validation.json"
+      },
+      "measurement_basis": "Saved STEP B-rep readback against independent specifications; not merely source constants",
+      "files": [
+        "STEP/mounting_plate.step",
+        "STEP/mounting_plate_wide.step",
+        "STEP/plate_assembly.step",
+        "STEP/enclosure_base.step",
+        "STEP/enclosure_lid.step",
+        "STEP/enclosure_assembly.step"
+      ]
+    },
+    "engineering_drawing": {
+      "file": "PDF/mounting_plate_drawing.pdf",
+      "generated": true,
+      "visual_qa_passed": true,
+      "visual_qa_evidence": "Root agent rendered and visually reviewed the generated PDF during this task"
+    },
+    "cli_viewer": {
+      "url": "http://127.0.0.1:3245",
+      "server_started": true,
+      "browser_model_display_verified": true,
+      "browser_evidence": "Codex in-app browser displayed all six STEP models from the local CLI viewer; source geometry remained local",
+      "scope": "Local loopback CLI viewer, separate from the native Codex CAD tab",
+      "keepalive": {
+        "method": "Root agent retained a Wait-Process exec session so its background viewer was not killed when exec exited",
+        "exec_session_id": 52360,
+        "note": "Task-specific process lifetime evidence; this is not persistent installation configuration"
+      }
+    },
+    "native_codex_viewer": {
+      "cad_open_returned_launch": true,
+      "cad_view_views": [],
+      "model_display_verified": false,
+      "status": "Native plugin installed and launch requested; no actual native viewer display verified",
+      "evidence": "Root agent observed cad_open launch output followed by cad_view returning views=[]"
+    },
+    "chromium_snapshots": {
+      "browser": "Chromium headless shell",
+      "revision": "1243",
+      "browser_download_status": "completed",
+      "browser_install_verified": true,
+      "browser_cache_scope": "User-level Playwright browser cache, shared by Playwright projects",
+      "cadgen_snapshots_verified": true,
+      "snapshot_count": 6,
+      "evidence": "notes/visual-review.json",
+      "note": "All six saved STEP snapshots were generated and independently viewed; run-demo.ps1 completed with exit code 0."
+    }
+  },
+  "tested_vs_untested": {
+    "tested": [
+      "Native Codex plugin installation and enabled registration",
+      "Project-local Python environment and pinned CAD runtime",
+      "Parametric plate generation and a dimension variant",
+      "Plate and pin assembly",
+      "Decomposed enclosure base, lid and assembly generation",
+      "Saved STEP readback geometry checks: 1130 passed, 0 failed",
+      "Engineering PDF generation and visual QA",
+      "Local CLI viewer server startup and browser model display",
+      "Playwright Chromium headless shell installation",
+      "Six cadgen raster snapshots and visual review",
+      "Complete scripts/run-demo.ps1 execution: exit 0"
+    ],
+    "pending_verification": [
+      "Actual native Codex CAD tab model display"
+    ],
+    "untested": [
+      "DfAM and manufacturing analysis",
+      "Robot URDF, SRDF or SDF workflows",
+      "Slicer and G-code workflows",
+      "Printer connection or physical printing",
+      "Catalog procurement or ordering",
+      "Structural load, material and production tolerance approval"
+    ],
+    "actions_not_performed": [
+      "No physical printing",
+      "No procurement or parts orders"
+    ],
+    "optional_dependency_limit": "Project dependencies cover the CAD/snapshot runtime. DFM/DfAM skill requirements also list packages such as trimesh, rtree, networkx and lxml which are absent from this lockfile. Their skills being present does not imply they are ready or verified."
+  }
+}

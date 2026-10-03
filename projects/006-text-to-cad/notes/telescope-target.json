@@ -1,0 +1,23 @@
+{
+  "title": "望远镜完整建模演示",
+  "user_request": "那么以望远镜为准把，这里需要把步骤，包括下发目标，谁负责做什么都标记清楚，做一个完整的演示",
+  "user_requirements": ["制作望远镜演示", "标清步骤", "标清各方职责"],
+  "agent_proposed_target": "制作教学用折射式望远镜概念装配，包含物镜、镜筒、调焦组件、目镜、托架和可转动底座。展示装配、分解、20 mm 调焦，以及方位和仰角运动。",
+  "parameter_source": "以下数值由语言模型为本演示设定，是明确的设计假设，不是用户指定尺寸或真实商品规格。",
+  "units": "mm",
+  "assumed_parameters": {
+    "objective_clear_diameter": 70,
+    "tube_length": 420,
+    "tube_outer_diameter": 86,
+    "tube_inner_diameter": 80,
+    "optical_axis_z": 355,
+    "focus_travel": [0, 20],
+    "focus_drawtube_outer_diameter": 41.5,
+    "focus_housing_bore": 42,
+    "altitude_degrees": [0, 60],
+    "azimuth_degrees": [-135, 135],
+    "altitude_pivot": [210, 0, 300]
+  },
+  "acceptance": ["11 个独立有效正体积实体", "镜筒长度、内外径与轴线正确", "调焦单位从收回到伸出平移 20 mm", "调焦径向间隙为 0.25 mm", "伸出后仍保留 12 mm 套接", "基准与指定运动采样姿态无正体积干涉", "运动声明能被插件读取", "生成并逐张查看所有模型与运动快照"],
+  "not_verified": ["焦距、倍率、像差和实际成像", "全运动范围的连续碰撞检测", "材料、承载、稳定性、紧固与生产公差", "真实商品接口兼容性"]
+}
