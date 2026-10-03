@@ -1,0 +1,242 @@
+{
+  "date": "2026-10-03",
+  "timezone": "Asia/Shanghai",
+  "preview": "http://localhost:4189/projects/004-threejs-worlds/",
+  "runtime": {
+    "node": "v22.15.0",
+    "browser": "Codex in-app browser",
+    "three": "r180"
+  },
+  "checks": {
+    "fullHubBuild": "passed",
+    "hubCatalogCheck": "passed",
+    "moduleSyntax": "passed: app.js, world.js, lessons.js, network.js, value.js, showcase.js, park-scene.js",
+    "worldSwitching": [
+      "harbour",
+      "coast",
+      "observatory"
+    ],
+    "cameras": [
+      "orbit",
+      "third",
+      "first",
+      "V key"
+    ],
+    "movement": [
+      "W key in focused canvas",
+      "mobile forward button",
+      "wave after pause",
+      "reset"
+    ],
+    "controls": [
+      "light presets",
+      "roughness slider",
+      "tree slider",
+      "instancing",
+      "shadows",
+      "wireframe"
+    ],
+    "picking": "clicked observatory dome; displayed 山顶天文台 and hierarchy explanation",
+    "navigation": "section anchors preserve selected scene",
+    "browserErrors": 0
+  },
+  "instancingComparison": {
+    "world": "coast",
+    "camera": "default orbit",
+    "light": "dawn",
+    "shadows": true,
+    "trees": 600,
+    "ordinaryMainViewDrawCalls": 2120,
+    "instancedMainViewDrawCalls": 323,
+    "displayedTrianglesBoth": "82.1k",
+    "scope": "main view only; excludes shadow pass; no general FPS benchmark",
+    "screenshots": [
+      "assets/trees-ordinary.jpg",
+      "assets/trees-instanced.jpg"
+    ]
+  },
+  "responsive": {
+    "testViewport": {
+      "width": 390,
+      "height": 844
+    },
+    "documentClientWidth": 375,
+    "documentScrollWidth": 375,
+    "horizontalOverflow": false,
+    "testViewportReset": true,
+    "screenshots": [
+      "assets/mobile-overview.jpg",
+      "assets/mobile.jpg"
+    ]
+  },
+  "networkTeaching": {
+    "mode": "local visualization only",
+    "realMultiplayer": false,
+    "checked": [
+      "four-step sequence",
+      "move A",
+      "500 ms delay",
+      "positions converge",
+      "restart resets all positions"
+    ]
+  },
+  "screenshots": [
+    "assets/overview.jpg",
+    "assets/full-page.jpg",
+    "assets/hotspot.jpg",
+    "assets/wireframe.jpg"
+  ],
+  "limitations": [
+    "No real multiplayer test",
+    "No general performance benchmark",
+    "Parameter lab uses a geometry character; art garden uses a CC0 skinned glTF guide"
+  ],
+  "originalIntegration": {
+    "date": "2026-10-03",
+    "mode": "live cross-origin iframe, no original assets copied",
+    "worlds": [
+      "porto",
+      "solstice",
+      "astral"
+    ],
+    "verified": [
+      "welcome and walking view rendered",
+      "V toggles first/third person",
+      "Golden hour light selected",
+      "fullscreen entry and custom exit",
+      "direct links point at selected world",
+      "local lab lazy initialization",
+      "iframe unloaded in local mode",
+      "local metrics stop in original mode",
+      "capability cards resume local experiment"
+    ],
+    "mobile": {
+      "clientWidth": 375,
+      "viewport": "390x844",
+      "scrollWidth": 375,
+      "touchMovementTested": false
+    },
+    "network": {
+      "crossDeviceMultiplayerTested": false,
+      "upstreamError": "MQTT connack timeout observed; single-player visuals and interactions remained usable"
+    },
+    "screenshots": [
+      "assets/porto-integrated.jpg",
+      "assets/value-extraction.jpg",
+      "assets/porto-mobile.jpg"
+    ]
+  },
+  "artGarden": {
+    "date": "2026-10-04",
+    "preview": "http://localhost:4189/projects/004-threejs-worlds/#source=showcase&world=art-garden",
+    "scope": "Original local single-player art garden; live original iframe and parameter lab remain separate",
+    "staticSiteBuild": "passed",
+    "hubTests": "14 passed",
+    "dependencyGraph": "27 local module dependencies resolved",
+    "assetIntegrity": "26 files matched manifest byte counts and SHA-256",
+    "requiredGltfClips": [
+      "Idle",
+      "Walking",
+      "Running",
+      "Wave"
+    ],
+    "verified": [
+      "glTF guide rendered with the pavilion, sculptures and reflected pool",
+      "first/third/overview labels and V cycling",
+      "W input interrupted the tour and moved from entrance z=19 to z=18.3",
+      "touch forward drag moved entrance z=19 to z=18.8",
+      "3D artwork sign click opened tide content",
+      "E opened nearby exhibit content",
+      "three exhibit buttons located the guide and opened their descriptions",
+      "golden/day/blue lights and practical lamps",
+      "balanced/high/performance select",
+      "browser immersive view entered and explicit exit returned to page",
+      "wind audio button on/off labels",
+      "reference iframe address selected, unloaded as about:blank in both local modes",
+      "lab and art-garden switching"
+    ],
+    "responsive": {
+      "desktop": {
+        "viewport": "1440x1080",
+        "horizontalOverflow": false,
+        "clientWidth": 1425,
+        "scrollWidth": 1425
+      },
+      "temporaryViewportReset": true,
+      "mobile": {
+        "viewport": "390x844",
+        "horizontalOverflow": false,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      }
+    },
+    "screenshots": [
+      "assets/art-garden.jpg",
+      "assets/art-garden-gallery.jpg",
+      "assets/art-garden-night.jpg",
+      "assets/art-garden-mobile.jpg"
+    ],
+    "limitations": [
+      "No cross-device multiplayer",
+      "No hardware-independent FPS claim",
+      "Locally generated architecture and art, not original Porto Lume scene assets"
+    ],
+    "fullHubBuild": "passed: npm run build",
+    "browserErrors": 0,
+    "autoTour": {
+      "status": "passed",
+      "stops": [
+        "tide",
+        "gallery",
+        "coast"
+      ],
+      "returnedToEntrance": true,
+      "finalPosition": {
+        "x": 0.5,
+        "z": 19
+      },
+      "button": "跟随导览",
+      "message": "导览已结束，可以继续自由探索。"
+    }
+  },
+  "understanding": {
+    "date": "2026-10-04",
+    "phase": "archived; restart on demand",
+    "guide": "1920x1280 reproducible SVG with local proof image",
+    "fullBuild": "passed",
+    "hubTests": "16 passed",
+    "verified": [
+      "four topic selection updates explanations",
+      "character demo opened the original WebGL canvas in a dialog",
+      "one park canvas while dialog is open",
+      "explicit close restored the scene to experience",
+      "material demo selected blue light",
+      "scenario demo started automatic tour",
+      "reference button selected Solstice iframe",
+      "lab button opened motion experiment and unloaded iframe",
+      "mobile dialog scrollWidth matched clientWidth",
+      "Escape closed mobile dialog",
+      "after Escape close event, scene restored to experience"
+    ],
+    "responsive": {
+      "desktop": {
+        "viewport": "1280x720",
+        "clientWidth": 1265,
+        "scrollWidth": 1265
+      },
+      "mobile": {
+        "viewport": "390x844",
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "temporaryViewportReset": true
+    },
+    "browserErrors": 0,
+    "screenshots": [
+      "assets/understanding-live.jpg",
+      "assets/understanding-mobile.jpg",
+      "assets/threejs-understanding.jpg"
+    ],
+    "imageGeneration": "Two built-in image generation network failures; used SVG code generator"
+  }
+}

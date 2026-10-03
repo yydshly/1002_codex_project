@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-04",
+  "mode": "reproducible code-generated SVG infographic",
+  "generator": "notes/build-understanding-map.mjs",
+  "outputs": [
+    "assets/threejs-understanding.svg",
+    "web/assets/threejs-understanding.svg"
+  ],
+  "embeddedProof": "assets/art-garden.jpg",
+  "originalImageGenAttempts": {
+    "tool": "built-in image_gen",
+    "attempts": 2,
+    "outcome": "Both failed with a network error; no generated raster was used",
+    "prompt": "Use case: infographic-diagram\nAsset type: Chinese project overview infographic and website guide cover, wide landscape 16:10, very high resolution, crisp typography.\nPrimary request: Create one complete, professionally designed Chinese educational map summarizing our understanding of Three.js and the Porto Lume-inspired LUME coastal art garden. This is an explanatory guide, not a screenshot of implemented features. All Chinese text must be correctly typeset and readable.\nStyle: elegant editorial technical infographic on warm ivory paper, forest green typography, bronze-gold accents, delicate connecting lines, tasteful small 3D illustrations. Match an art garden website. Clear visual hierarchy and generous space. Flat text panels with a central softly lit 3D coastal exhibition garden containing a friendly cream/green robot, a realistic casually dressed human, bronze sculpture, glass pavilion, reflective pool and trees.\nComposition: Title across top. Four distinctly separated panels: upper left \"01 能力\", upper right \"02 原理\", lower left \"03 使用场景\", lower right \"04 可扩展方向\". Center is the art garden with a human and a robot clearly represented as alternative character identities. Four panels connected to center. Below center place character takeaway and three-layer responsibility chain. Footer clearly describes current status and sources. Do not invent capabilities as implemented. Do not use tiny dense prose.\nExact text, render verbatim:\nTitle: \"Three.js · 从绘制能力到空间体验\"\nSubtitle: \"模型 + 动画 + 材质光影 + 镜头交互 + 内容组织\"\nUpper-left panel:\n\"01 能力\"\n\"场景与镜头 · 几何与模型\"\n\"PBR 材质 · 灯光与阴影\"\n\"骨骼动画 · 射线拾取\"\n\"实例化 · 水面反射 · 后处理\"\nUpper-right panel:\n\"02 原理\"\n\"输入 → 更新 → 绘制 → 显示\"\n\"模型提供形状，骨骼驱动动作\"\n\"材质与光决定质感，镜头决定视野\"\n\"GPU 将三维场景绘制为像素\"\nLower-left panel:\n\"03 使用场景\"\n\"数字展览 · 文旅园区导览\"\n\"产品展示 · 品牌空间\"\n\"教学实验 · 轻量互动\"\n\"场景、路线与热点承载真实内容\"\nLower-right panel:\n\"04 可扩展方向\"\n\"需另行开发\"\n\"角色替换 · 动作与控制复用\"\n\"更自然的脚步、镜头与碰撞\"\n\"业务内容 · 移动端优化 · WebXR\"\n\"多人房间 · 状态同步 · 重连\"\nCenter labels:\n\"LUME 海岸艺术花园\"\n\"真人：代入感与空间尺度\"\n\"机器人：陪伴感与角色辨识\"\n\"舒服感来自比例、动作、脚步、镜头与环境的一致\"\nResponsibility chain below center:\n\"外部素材 → Three.js 绘制 → 应用体验\"\n\"模型 / 贴图 / 动作\" \"加载 / 动画 / 渲染\" \"漫游 / 导览 / 内容 / 联网\"\nFooter:\n\"当前：单人艺术花园 + 原作在线接入 + 参数实验\"\n\"人物：Renderpeople Nathan（原作） / RobotExpressive（本地，CC0）\"\n\"暂告一段落，后期按需重启；多人与 WebXR 尚未接入\"\nConstraints: Correct exact Chinese, complete coherent composition. Human and robot equally dignified, neither described as inherently superior. Three.js is a rendering library; it does not create the source character asset and does not automatically supply business logic or multiplayer. No QR codes, no invented statistics, no watermarks, no fake browser controls, no unreadable placeholder text. Leave the center illustration unobstructed enough that a webpage can overlay one small '打开实时演示' button near its lower edge."
+  },
+  "interactiveConnections": [
+    "four topic explanations",
+    "existing art garden renderer in a dialog",
+    "robot animation and camera",
+    "material and blue light",
+    "automatic tour",
+    "original human reference",
+    "parameter lab"
+  ],
+  "status": "stage archived; restart on concrete demand"
+}

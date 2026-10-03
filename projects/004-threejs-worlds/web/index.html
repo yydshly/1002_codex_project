@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4f3eb">
+  <meta name="description" content="Three.js 能力与原理理解总览：模型、动画、材质光影、镜头交互与内容导航，人物和机器人的体验价值、使用场景及后期扩展。配套单人海岸艺术花园、原作接入和参数实验，研究暂告一段落，后期按需重启。">
+  <title>Three.js · 理解总览与海岸艺术花园</title>
+  <link rel="icon" type="image/svg+xml" href="./mark.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./understanding.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到内容</a>
+  <header class="site-header">
+    <a class="brand" href="../../" aria-label="返回项目研究库"><span class="brand-symbol" aria-hidden="true">◈</span><span>世界实验室<small>PORTO LUME / PROJECT 004</small></span></a>
+    <nav aria-label="页面导航"><a href="#understanding">理解总览</a><a href="#experience">艺术花园</a><a href="#value">参考价值</a><a href="#principles">实现原理</a></nav>
+    <a class="source-link" href="https://porto-lume-worlds.vercel.app/#world=solstice&room=commons" target="_blank" rel="noopener noreferrer">打开原作 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="intro">
+      <div><p class="eyebrow"><span></span> LUME · AN OPEN-AIR ART GARDEN</p><h1>沿着光，<span>走进艺术。</span><br>让空间成为内容。</h1></div>
+      <div class="intro-copy"><p>参考 Porto Lume，把模型、动画、材质光影与漫游组合成在线逛展。<br>理解已整理，当前研究暂告一段落，后期按需重启。</p><div class="intro-links"><a href="#understanding">一张图看懂能力 <span aria-hidden="true">↓</span></a><a href="#experience">进入艺术花园 ↓</a></div></div>
+    </section>
+
+    <section id="understanding" class="understanding-section" aria-labelledby="understanding-title">
+      <div class="section-line"><h2 id="understanding-title"><span>总览</span> 从绘制能力到空间体验</h2><span class="research-state">2026.10.04 · 阶段整理 / 按需重启</span></div>
+      <p class="guide-introduction">点击图中入口体验真实场景，或选择四个主题展开说明。人物与机器人都可成为空间的核心；角色、动作、镜头与环境共同决定体感。</p>
+      <figure class="understanding-map">
+        <img src="./assets/threejs-understanding.svg" width="1920" height="1280" alt="Three.js 理解总览：能力、输入更新绘制显示的原理、使用场景与需开发的扩展方向；外部素材、库和应用的职责；真人的代入感与机器人的陪伴感；当前单人艺术花园、原作接入与参数实验。" fetchpriority="high">
+        <button type="button" class="guide-pin guide-capability" data-guide-topic="capability" aria-pressed="true">01 查看能力</button>
+        <button type="button" class="guide-pin guide-principle" data-guide-topic="principle" aria-pressed="false">02 理解原理</button>
+        <button type="button" class="guide-pin guide-scenario" data-guide-topic="scenario" aria-pressed="false">03 使用场景</button>
+        <button type="button" class="guide-pin guide-extension" data-guide-topic="extension" aria-pressed="false">04 扩展方向</button>
+        <button type="button" class="guide-live-pin" data-guide-demo="character">打开实时演示 <span aria-hidden="true">↗</span></button>
+      </figure>
+      <div class="guide-actions"><a href="./assets/threejs-understanding.svg" target="_blank" rel="noopener">打开完整引导图 ↗</a><span>图为生成的理解示意；实时效果来自下方的现有演示。</span></div>
+      <div class="guide-topic" aria-live="polite"><div class="guide-topic-heading"><span id="guide-topic-number">01</span><h3 id="guide-topic-title">库的能力</h3></div><p id="guide-topic-description"></p><ul id="guide-topic-points"></ul><button id="guide-topic-demo" type="button" class="primary">在图中打开演示 ↗</button></div>
+      <div class="understanding-details">
+        <article><span>三层职责</span><h3>素材、绘制与体验一起工作</h3><p><strong>外部素材：</strong>人物模型、贴图、骨骼和动作。<br><strong>Three.js：</strong>加载、动画计算、材质光照、镜头与 GPU 绘制。<br><strong>应用代码：</strong>输入、碰撞、漫游、导览、内容导航与联网。</p></article>
+        <article><span>角色与体感</span><h3>真人带来代入，机器人提供陪伴</h3><p>真人更直观地提供现实尺度；机器人可以成为亲切的品牌角色和导览伙伴。舒服感来自比例、动作、脚步、镜头和环境的协调，选择应由体验目标决定。</p><button type="button" data-guide-demo="character">体验机器人动作 ↗</button></article>
+        <article><span>来源与对照</span><h3>人物模型来自独立素材</h3><p>原作公开代码标注 Renderpeople Nathan，加载 <code>explorer-nathan.glb</code>；本地使用 Tomás Laulhé / Quaternius 的 RobotExpressive（CC0），来自 Three.js 官方示例并调整配色。</p><button type="button" data-guide-source>打开原作真人对照 ↗</button></article>
+        <article><span>当前结论</span><h3>保留演示，后期按需继续</h3><p>本地已完成单人漫游、自动导览、展品热点、地图和画质分档。原作多人跨设备尚未验证；本地多人、WebXR、业务后台与复杂物理尚未接入。后期可从角色、内容或设备需求重新启动。</p><button type="button" data-guide-lab>打开基础参数实验 ↗</button></article>
+      </div>
+      <p class="guide-sources">来源：<a href="https://github.com/mrdoob/three.js/tree/r180" target="_blank" rel="noopener">Three.js r180</a> · <a href="https://porto-lume-worlds.vercel.app/assets/index-tsq_4SI0.js" target="_blank" rel="noopener">原作公开代码</a> · <a href="https://renderpeople.com/free-3d-people/" target="_blank" rel="noopener">Renderpeople</a> · <a href="https://github.com/mrdoob/three.js/blob/r180/examples/models/gltf/RobotExpressive/README.md" target="_blank" rel="noopener">RobotExpressive 说明</a>。体感与迁移方向为本项目的体验判断。</p>
+    </section>
+
+    <section id="experience" class="original-experience" aria-labelledby="experience-title">
+      <div class="section-line"><h2 id="experience-title"><span>01</span> 一个可以走进去的展览</h2><span class="live-badge"><i></i> THREE.JS / REALTIME 3D</span></div>
+      <div class="experience-tabs" role="group" aria-label="选择体验来源"><button type="button" class="active" data-view="showcase" aria-pressed="true">海岸艺术花园 <span>完整场景 · 自由漫游 · 展览导览</span></button><button type="button" data-view="original" aria-pressed="false">Porto Lume 原作 <span>参考作品 · 三个世界 · 房间</span></button><button type="button" data-view="lab" aria-pressed="false">原理参数实验 <span>光照 · 材质 · 批量绘制</span></button></div>
+      <div id="showcase-view" class="park-showcase">
+        <div class="park-toolbar"><div class="park-light" role="group" aria-label="艺术花园光照"><span>光照时刻</span><button type="button" data-park-light="golden" aria-pressed="true">金色时分</button><button type="button" data-park-light="day" aria-pressed="false">晴朗日光</button><button type="button" data-park-light="blue" aria-pressed="false">蓝调夜色</button></div><label class="park-quality-label">画质 <select id="park-quality" aria-label="艺术花园画质"><option value="balanced">均衡</option><option value="high">精细</option><option value="performance">流畅</option></select></label></div>
+        <div class="park-frame park-walking">
+          <canvas id="park-canvas" tabindex="0" aria-label="海岸艺术花园三维漫游。点击画面后用WASD移动、Shift奔跑、拖动转动镜头、V切换视角、E查看附近展品、Q挥手。"></canvas>
+          <div class="park-vignette" aria-hidden="true"></div>
+          <div class="park-heading"><span>EST. 2026 · BY THE WATER</span><strong>LUME</strong><p>海岸艺术花园</p><small>ART, LIGHT & A LITTLE TIME.</small></div>
+          <div class="park-top-actions"><button type="button" id="park-camera">第三人称 · V</button><button type="button" id="park-sound" aria-pressed="false">海风 · 关</button><button type="button" id="park-fullscreen" aria-label="全屏体验艺术花园">⛶</button></div>
+          <button id="park-exit-fullscreen" type="button" class="fullscreen-exit">退出全屏 ×</button>
+          <div class="park-map"><span>GARDEN MAP <i id="park-fps">— FPS</i></span><svg viewBox="0 0 120 130" role="img" aria-label="花园地图。金色圆点为当前位置。"><ellipse cx="60" cy="59" rx="49" ry="47" fill="#b8c5ad" opacity=".35"/><path d="M57 100V35H39M57 73H87" fill="none" stroke="#ece5cf" stroke-width="5"/><rect x="38" y="43" width="14" height="17" rx="1" fill="#eee8d6"/><rect x="63" y="50" width="13" height="22" fill="#91b9b4"/><circle cx="60" cy="60" r="4" fill="none" stroke="#e5c695" stroke-width="1.8"/><rect x="80" y="70" width="12" height="8" fill="#d3b28b"/><text x="45" y="39">02</text><text x="54" y="52">01</text><text x="91" y="87">03</text><circle id="park-map-player" cx="60" cy="66" r="3" fill="#ffcc80" stroke="#233e36" stroke-width="1.5"/></svg><div><strong id="park-location">潮汐之环</strong><small id="park-position">0.0 / 0.0</small></div></div>
+          <div class="park-bottom"><div class="park-visit"><span>EXPLORE THE COLLECTION</span><div><button type="button" id="park-tour" aria-pressed="false">跟随导览 <b>↗</b></button><button type="button" id="park-interact" disabled>走近作品，查看展览</button></div></div><div class="park-utilities"><button type="button" id="park-wave">挥手 · Q</button><button type="button" id="park-reset">回到入口</button></div></div>
+          <aside id="park-art-panel" class="park-art-panel" aria-labelledby="park-art-title" hidden><button type="button" id="park-art-close" aria-label="关闭展品介绍">×</button><span id="park-art-number">EXHIBIT 01</span><h3 id="park-art-title">潮汐之环</h3><small id="park-art-author">LUME STUDIO · 2026</small><p id="park-art-description"></p><div><span>在这个展点看见的能力</span><p id="park-art-capability"></p></div></aside>
+          <div class="park-touch" aria-label="触屏移动"><button type="button" data-park-move="forward" aria-label="前进">↑</button><div><button type="button" data-park-move="left" aria-label="向左">←</button><button type="button" data-park-move="backward" aria-label="后退">↓</button><button type="button" data-park-move="right" aria-label="向右">→</button></div></div>
+          <div id="park-loading" class="park-loading" role="status"><span class="loading-ring"></span><strong>正在打开海岸艺术花园</strong><p id="park-loading-message">准备导览角色、天空与材质…</p><button type="button" id="park-retry" class="secondary" hidden>重新加载</button></div>
+        </div>
+        <div class="park-route" role="group" aria-label="定位展点"><div><span>THE EXHIBITION ROUTE</span><strong>三处作品，一段沿海散步。</strong></div><button type="button" data-park-stop="tide" data-park-title="潮汐之环"><span>01</span><div><strong>潮汐之环</strong><small>青铜雕塑 / 定位展点 ↗</small></div></button><button type="button" data-park-stop="gallery" data-park-title="光的房间"><span>02</span><div><strong>光的房间</strong><small>玻璃展亭 / 定位展点 ↗</small></div></button><button type="button" data-park-stop="coast" data-park-title="海岸观景台"><span>03</span><div><strong>面向海的座位</strong><small>海岸平台 / 定位展点 ↗</small></div></button></div>
+        <div class="park-caption"><p>点击画面 · WASD 行走 · Shift 奔跑 · 拖动看四周 · 滚轮调距离 · V 切换视角 · E 查看作品</p><span id="park-status" role="status" aria-live="polite">正在准备场景。</span></div>
+        <div class="park-meaning"><div><span>应用场景</span><strong>数字展览与园区导览</strong><p>人物提供尺度，路线组织作品，热点承载说明。参观者可以跟随导览，也可以自己探索。</p></div><div><span>效果组合</span><strong>模型、建筑、材质与光</strong><p>动画 glTF 导览员、HDR 天空、PBR 贴图、物理玻璃、真实水面反射、植被与柔和后期共同组成一个空间。</p></div><div><span>值得提取的价值</span><strong>让好效果承担具体任务</strong><p>氛围塑造记忆，镜头帮助理解空间，展点连接内容，画质分级让不同设备都能进入。</p></div></div>
+      </div>
+      <div id="original-view" hidden>
+        <div class="original-toolbar"><div class="world-switch" role="group" aria-label="选择原作世界"><button type="button" data-reference-world="porto" aria-pressed="false">Porto Lume · 港湾</button><button type="button" class="active" data-reference-world="solstice" aria-pressed="true">Solstice · 海岸</button><button type="button" data-reference-world="astral" aria-pressed="false">Sable · 天文台</button></div><button type="button" id="original-fullscreen" class="secondary">全屏体验 ⛶</button></div>
+        <div id="original-frame-wrap" class="original-frame-wrap">
+          <iframe id="original-frame" title="Porto Lume 原作完整交互体验" allow="fullscreen" allowfullscreen referrerpolicy="no-referrer"></iframe>
+          <button id="original-exit-fullscreen" type="button" class="fullscreen-exit" aria-label="退出原作全屏">退出全屏 ×</button>
+          <div id="original-loading" class="original-loading" role="status"><span class="loading-ring"></span><strong>正在接入原作世界</strong><p>画面与交互来自 Porto Lume 原站。</p></div>
+        </div>
+        <div class="original-caption"><div><strong id="original-world-name">Solstice Coast / 松林海岸</strong><p>点击原作中的「Walk / Start walking」进入。WASD 移动 · Shift 奔跑 · V 切换人称 · Q 挥手 · Esc 暂停。先点击画面，让键盘进入原作。</p></div><a id="original-direct" href="https://porto-lume-worlds.vercel.app/#world=solstice&room=commons" target="_blank" rel="noopener noreferrer">独立窗口打开 ↗</a></div>
+        <div class="observation-strip"><span>体验时关注</span><p id="observation-focus">看海面反射与松林层次；切换光照，观察同一空间如何改变情绪。</p><a href="#value">查看价值拆解 ↓</a></div>
+        <p id="original-status" class="original-note" role="status" aria-live="polite">在线嵌入原站，保留原有界面和功能；需要网络。房间连接由原站处理。</p>
+        <p class="original-note">原作内部也可切换目的地，当前位置以原作地图为准。2026-10-03 检查：画面与单人交互正常；公共联机中继出现连接超时，多人连通性尚未验证。</p>
+        <div id="original-fallback" class="original-fallback" hidden><p>原作加载时间较长，可能受网络或嵌入限制影响。可以重试，或在独立窗口体验。</p><button id="original-retry" type="button" class="secondary">重新接入</button></div>
+      </div>
+    </section>
+
+    <section id="playground" class="playground" aria-labelledby="playground-title" hidden>
+      <div class="section-line"><h2 id="playground-title"><span>实验</span> 调参数，看懂原理</h2><span class="live-badge"><i></i> 本地教学场景</span></div>
+      <p class="lab-introduction">把关键技术拆成可控制的变化。完整的本地应用在上方「海岸艺术花园」，参考作品在「Porto Lume 原作」。</p>
+      <div class="lab-grid">
+        <div class="viewport-wrap">
+          <div class="viewport-bar"><div class="world-switch" role="group" aria-label="选择场景"><button class="active" data-world="harbour" aria-pressed="true">港湾小镇</button><button data-world="coast" aria-pressed="false">松林海岸</button><button data-world="observatory" aria-pressed="false">星光观测台</button></div><span id="world-number">WORLD 01 / 03</span></div>
+          <div class="canvas-frame">
+            <canvas id="world-canvas" tabindex="0" aria-label="交互三维场景。点击进入后，使用WASD移动，Shift奔跑，拖动鼠标转动镜头。"></canvas>
+            <div id="loading" class="loading"><span class="loading-ring"></span><strong>正在搭建这个小世界</strong><span>加载本地 Three.js 模块…</span></div>
+            <div class="scene-label"><span id="scene-kicker">THE HARBOUR</span><strong id="scene-name">有风的港湾</strong><p id="scene-description">码头、陶土屋顶与一片会发光的海。</p></div>
+            <div class="scene-actions"><button id="camera-button" class="glass-button" title="切换第一、第三人称与鸟瞰镜头">鸟瞰镜头 <kbd>V</kbd></button><button id="pause-button" class="glass-button" aria-pressed="false">暂停画面</button></div>
+            <div class="scene-footer"><span id="scene-hint">拖动旋转 · 滚轮缩放 · 点击场景中的标记</span><button id="walk-button" class="walk-button">开始漫游 <span>↗</span></button></div>
+            <div id="hotspot" class="hotspot" hidden><button id="close-hotspot" aria-label="关闭热点说明">×</button><span>场景里的小知识</span><h3 id="hotspot-title"></h3><p id="hotspot-description"></p><div id="hotspot-principle"></div></div>
+            <div class="touch-controls" aria-label="触屏移动方向"><button data-move="forward" aria-label="前进">↑</button><div><button data-move="left" aria-label="向左">←</button><button data-move="backward" aria-label="后退">↓</button><button data-move="right" aria-label="向右">→</button></div></div>
+          </div>
+          <div class="scene-metrics" aria-label="实时渲染指标"><div><strong id="metric-fps">—</strong><span>FPS / 帧率</span></div><div><strong id="metric-draws">—</strong><span>主视角绘制调用</span></div><div><strong id="metric-triangles">—</strong><span>主视角三角面</span></div><div><strong id="metric-trees">—</strong><span>场景树木</span></div><p>阴影额外开销<br>体现在帧率中。</p></div>
+        </div>
+        <aside class="inspector" aria-labelledby="inspector-title">
+          <p class="eyebrow">MAKE IT YOURS</p><h3 id="inspector-title">调一调，感受变化。</h3><p class="inspector-intro">每一个控件，都对应一种真实的三维能力。</p>
+          <div class="control-block"><label>光照时刻 <span id="light-label">暖金晨光</span></label><div class="segmented" role="group" aria-label="光照时刻"><button class="active" data-light="dawn" aria-pressed="true">晨光</button><button data-light="day" aria-pressed="false">午后</button><button data-light="dusk" aria-pressed="false">蓝调</button></div></div>
+          <div class="control-block"><label for="roughness">表面粗糙度 <output id="roughness-value" for="roughness">0.45</output></label><input id="roughness" type="range" min="0.05" max="1" value="0.45" step="0.05"><div class="range-labels"><span>光滑 · 反光</span><span>粗糙 · 哑光</span></div><p>比较建筑表面，或天文台里黄铜装置的反光。</p></div>
+          <div class="control-block"><label for="tree-count">树林密度 <output id="tree-value" for="tree-count">180 棵</output></label><input id="tree-count" type="range" min="0" max="600" step="20" value="180"><div class="range-labels"><span>开阔海岸</span><span>茂密树林</span></div></div>
+          <div class="control-block switch-stack"><label class="switch-label" for="instancing"><span>批量绘制 <small>相同树木，一起交给显卡</small></span><input id="instancing" type="checkbox" checked><i aria-hidden="true"></i></label><label class="switch-label" for="shadows"><span>实时阴影 <small>让物体落在地面上</small></span><input id="shadows" type="checkbox" checked><i aria-hidden="true"></i></label><label class="switch-label" for="wireframe"><span>线框视图 <small>看见模型的三角形结构</small></span><input id="wireframe" type="checkbox"><i aria-hidden="true"></i></label></div>
+          <div id="experiment-tip" class="experiment-tip"><span>试试这个</span><p>关闭「批量绘制」，比较相同树林的绘制调用数。</p></div>
+          <div class="inspector-actions"><button id="wave-button" class="secondary">角色挥手</button><button id="reset-button" class="secondary">回到起点</button></div>
+        </aside>
+      </div>
+      <p class="lab-note">原创程序化场景 · 真实 Three.js 渲染 · 无需账户 · 桌面键鼠 / 触屏方向键 <span id="app-status" role="status" aria-live="polite"></span></p>
+    </section>
+
+    <section id="value" class="reference-value" aria-labelledby="value-title">
+      <div class="section-heading"><div><p class="eyebrow">FROM EFFECT TO USEFUL VALUE</p><h2 id="value-title">值得带走的，是这些方法。</h2></div><p>效果 → 实现方式 → 可用价值 → 适用项目。<br>每一项都给出复用方向与投入判断。</p></div>
+      <div class="value-takeaway"><span>优先提取</span><strong>统一的氛围、清楚的空间引导、低门槛的进入方式。</strong><p>它们可以先用于品牌页、数字展览和文旅导览。人物与多人体验，等项目需要真实漫游和共同在场时再投入。</p></div>
+      <div id="reference-values" class="reference-value-grid"></div>
+      <div class="value-decision"><div><span>01 / 品牌与活动页</span><strong>先做一个有记忆点的空间</strong><p>保留氛围、镜头和关键互动，把产品介绍与行动入口放在清晰的二维界面里。</p></div><div><span>02 / 展览与导览</span><strong>用空间组织真实内容</strong><p>将地标、路线、热点与章节绑定，让探索承担内容导航的任务。</p></div><div><span>03 / 团队与社交</span><strong>让多人为具体任务服务</strong><p>有共同参观、讲解或讨论需求，再接入房间、玩家状态与连接恢复。</p></div></div>
+      <p class="value-evidence">效果描述来自原作界面与公开发布代码；应用价值为本项目的迁移判断，尚无转化率或跨设备多人实测数据。</p>
+    </section>
+
+    <section id="capabilities" class="capabilities" aria-labelledby="capabilities-title">
+      <div class="section-heading"><div><p class="eyebrow">LEARN BY CHANGING ONE THING</p><h2 id="capabilities-title">亲手验证，效果怎样产生。</h2></div><p>点击卡片，打开对应的本地参数实验。<br>先理解基础能力，再组合成自己的体验。</p></div>
+      <div id="capability-grid" class="capability-grid"></div>
+    </section>
+
+    <section id="principles" class="principles" aria-labelledby="principles-title">
+      <div class="section-heading"><div><p class="eyebrow">BEHIND THE SCENE</p><h2 id="principles-title">画面为什么会动？</h2></div><p>Three.js 负责三维绘制。<br>人物行为、场景规则和联机，来自应用代码。</p></div>
+      <div class="principle-grid"><article class="render-story"><div class="article-heading"><span class="diagram-symbol" aria-hidden="true">◈</span><div><h3>每一帧，都是重新计算的世界。</h3><p>输入 → 更新 → 绘制 → 显示，循环进行。</p></div></div><div id="render-pipeline" class="render-pipeline"></div><div class="code-example"><div><span>一个最小的渲染循环</span><span>JavaScript</span></div><pre><code>renderer.setAnimationLoop(() =&gt; {
+  updateMovement(); <span>// 根据输入更新位置</span>
+  updateAnimation(); <span>// 让人物和水面动起来</span>
+  renderer.render(scene, camera);
+});</code></pre></div><p class="plain-note">模型定义形状，材质决定表面，灯光提供照明，镜头决定你看见哪里。浏览器通过 WebGL 把它们交给显卡，计算成屏幕上的像素。</p><a class="text-link" href="https://threejs.org/manual/#en/fundamentals" target="_blank" rel="noopener noreferrer">阅读 Three.js 基础原理 ↗</a></article>
+      <article class="network-story"><div class="article-heading"><span class="diagram-symbol" aria-hidden="true">↔</span><div><h3>朋友看见的，是同一个位置。</h3><p>原站：Trystero + WebRTC 多人同步。</p></div></div><div id="network-demo"></div><p class="plain-note">每个人的电脑各自绘制画面，网络只交换位置、朝向和动作等少量状态。接收方用插值补齐两次更新之间的运动，减少跳动。</p><a class="text-link" href="https://github.com/dmotz/trystero" target="_blank" rel="noopener noreferrer">阅读 Trystero 联机原理 ↗</a></article></div>
+      <div class="responsibilities"><div><span>绘制能力</span><strong>Three.js</strong><p>场景、模型、材质、灯光、镜头、动画、射线拾取。</p></div><b aria-hidden="true">+</b><div><span>体验逻辑</span><strong>应用代码</strong><p>键鼠控制、碰撞、世界切换、界面、热点和规则。</p></div><b aria-hidden="true">+</b><div><span>共同在场</span><strong>Trystero / WebRTC</strong><p>发现同房间用户、连接浏览器、同步玩家状态。</p></div></div>
+    </section>
+
+    <section id="applications" class="applications" aria-labelledby="applications-title"><div class="section-heading"><div><p class="eyebrow">WHERE IT BELONGS</p><h2 id="applications-title">当内容需要被「走进去」。</h2></div><p>空间感、探索感、共同在场。<br>这三件事，是三维网页的价值。</p></div><div id="use-case-grid" class="use-case-grid"></div><div class="boundary-note"><span>选用判断</span><p>适合虚拟展览、产品空间、文旅导览和轻量互动。表单、检索与高密度信息仍适合二维界面。真实项目还需要内容、业务功能与设备性能适配。</p></div></section>
+    <section class="reference"><div><span>从完整作品，提取可复用的方法。</span><h2>作品是组合，库是基础。</h2><p>Porto Lume 组合了 Three.js 渲染、人物动画、世界规则与 Trystero 联机。本地海岸艺术花园把这些绘制与漫游能力用于数字展览，并保留原作在线接入和基础参数实验；本地展示为单人体验，联机图为教学模拟。</p></div><div class="reference-links"><a class="primary" href="#experience">返回艺术花园 ↑</a><a class="secondary" href="#experience" data-open-original>对照原作体验 ↗</a></div></section>
+  </main>
+  <footer><span>004 / PORTO LUME WORLDS <small>理解总览 · 单人艺术花园 · 原作接入 · 阶段归档 / 按需重启 · 2026.10</small></span><a href="../../">返回项目研究库 ↗</a></footer>
+  <dialog id="guide-live-dialog" class="guide-live-dialog" aria-labelledby="guide-live-title"><div class="guide-live-header"><div><span>LIVE DEMO / SAME SCENE</span><h2 id="guide-live-title">引导图中的实时体验</h2></div><button id="guide-live-close" type="button" aria-label="关闭图中实时演示">关闭 ×</button></div><div id="guide-live-body"></div></dialog>
+</body>
+</html>

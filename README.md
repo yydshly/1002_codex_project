@@ -14,6 +14,7 @@
 | 001 | [Cult UI · 组件能力与原理实验室](projects/001-cult-ui/README.md) | **能力：** 可复制和修改的 React 界面与动效源码集合；137 个组件覆盖 AI 输入与结果、工作台、表单、导航、反馈、引导、官网、插画、媒体、文字与背景。<br>**原理：** 通过 React 状态、Tailwind / CSS / SVG，结合 Motion、Canvas / WebGL 实现交互与视觉效果；组件源码复制进自己的项目后可直接修改。<br>**使用场景：** React 官网、作品集、AI / SaaS 产品界面与后台工作台。<br>**价值：** 快速搭建界面、复用交互并学习动效实现；完整中文目录、真实示例与原理证据帮助选型。<br>**边界：** 业务后端、模型 API、鉴权与持久化需自行接入。 | 已完成 | [Cult UI](https://github.com/nolly-studio/cult-ui) | [演示](https://yydshly.github.io/1002_codex_project/projects/001-cult-ui/) |
 | 002 | [Upscayl 图片超分辨率研究](projects/002-upscayl/README.md) | **能力：** 本地 AI 图片放大与细节增强，支持单张和文件夹批量处理。<br>**原理：** 调用预训练视觉模型，通过 NCNN 与 Vulkan GPU 在本机执行推理，放大图片并预测细节。<br>**使用场景：** 设计、展示与打印素材加工，以及重复图片处理的自动化。<br>**价值：** 改善素材交付尺寸，并学习如何把模型、显卡计算、文件管理与任务界面组合成产品。<br>**边界：** 预测纹理不等于恢复真实信息；本项目尚未实测图片质量或显卡性能。 | 已完成 | [Upscayl](https://github.com/upscayl/upscayl) | — |
 | 003 | [sprite-gen · 精灵素材能力实验室](projects/003-sprite-gen/README.md) | **能力：** 制作与整理透明动图、精灵图集和帧数据；支持抠图、切帧、对齐、循环选择、换色、导出，以及动画与背景合成。<br>**原理：** 动作来自外部视频模型、多姿势图像模型，或已有帧与有限代码形变；Python、Pillow、NumPy、FFmpeg 加工资源，按时间、位置和图层合成。<br>**使用场景：** 2D 游戏原型、网页与桌面角色、贴纸、视频包装、短场景和素材库整理。<br>**价值：** 复用素材、减少批量整理，并学习“模型生成—算法加工—人工整理—资源交付”的制作流程，为后续角色动效与素材工具提供参考。<br>**边界：** 复杂动作仍需验收；本机验证了已有素材的后处理，未调用 AI 生成或运行场景渲染，网页提供研究与效果展示。 | 已完成 | [sprite-gen](https://github.com/aldegad/sprite-gen) | [演示](https://yydshly.github.io/1002_codex_project/projects/003-sprite-gen/) |
+| 004 | [Three.js · 空间体验理解与海岸艺术花园](projects/004-threejs-worlds/README.md) | **能力：** 场景、镜头、几何与模型、PBR 材质、灯光阴影、骨骼动画、射线拾取、实例化；官方扩展提供模型/HDR 加载、水面反射和后处理。<br>**原理：** 外部素材提供形状、贴图与动作；每帧更新角色和世界，由 Three.js 组织 GPU 绘制。漫游、碰撞、导览、内容和联网由应用代码实现。<br>**角色价值：** 原作 Renderpeople Nathan 提供真人代入与现实尺度；本地 CC0 RobotExpressive 提供陪伴与辨识。舒适感由比例、动作、脚步、镜头与环境共同形成。<br>**使用场景：** 数字展览、文旅园区导览、产品展示、品牌空间、教学实验和轻量互动；用路线、地图和热点组织内容。<br>**现有效果：** 单人海岸艺术花园、动画导览员、玻璃展亭、金属雕塑、反射水池、光照与画质分档；保留原作在线接入、参数实验及可打开实时演示的生成引导图。<br>**可扩展方向：** 角色替换与动作复用、更自然的脚步镜头和碰撞、可配置内容、移动端优化、WebXR、多人同步与重连；需要另行开发和验证。<br>**当前结论：** 理解与演示已整理，阶段归档，后期按需求重启。本地多人、WebXR、业务后台和复杂物理尚未接入，原作跨设备联机尚未实测。 | 已归档 | [Porto Lume](https://porto-lume-worlds.vercel.app/) | [演示](https://yydshly.github.io/1002_codex_project/projects/004-threejs-worlds/) |
 | 005 | [Jianying Headless · 配置驱动的初步剪辑](projects/005-jianying-headless/README.md) | **能力：** 以结构化 JSON 计划执行初步剪辑；Mac 生成可编辑剪映工程与原生 MP4，Windows 输出 MP4。<br>**原理：** Mac 适配剪映私有草稿格式与内部接口；Windows 将计划转成 FFmpeg 滤镜图和公开命令行调用。<br>**使用场景：** 口播粗剪、模板化批量制作，以及 AI 剪辑决定向人工编辑工程交接。<br>**价值：** 参考“配置驱动执行、AI 决策外接、人工精修”的自动化剪辑流程。<br>**当前结论：** 当前仅作方向参考，暂不深入研究或集成；尚未在本机运行，Mac 路径依赖匹配的剪映与运行环境。 | 已归档 | [Jianying Headless](https://github.com/mcncarl/jianying-headless) | — |
 | 006 | [text-to-cad · 参数化 CAD 能力实验室](projects/006-text-to-cad/README.md) | **能力：** 参数化建模、零件装配、运动声明、文件交换、图纸与几何验收；制造、打印和机器人相关扩展均标明实测状态。<br>**原理：** 用户给需求与配件；语言模型设计并写 Python；cadgen / build123d 经 OCP 调用 OpenCascade，保存结果后测量、判定与修正。<br>**效果：** 已生成安装板、外壳、A3 工程图与 11 实体望远镜；演示 20 mm 调焦、方位和仰角，保留干涉修正与验收报告。<br>**价值：** 围绕真实配件设计外壳、支架和接口，复用参数与模型工厂，学习工程建模，积累可修改、可测量、可交接的项目资产。<br>**边界：** 复杂度增加会增加几何稳定性、接口与运动约束、制造和专业性能验证的难度；本次未证明望远镜成像或完整产品可用。 | 已完成 | [text-to-cad](https://github.com/earthtojake/text-to-cad) | [演示](https://yydshly.github.io/1002_codex_project/projects/006-text-to-cad/) |
 | 007 | [X-Twitter-Downloader · 视频下载产品参考](projects/007-x-twitter-downloader/README.md) | **能力：** 解析公开 X 帖子的媒体信息，列出已有视频版本并提供下载入口。<br>**原理：** 链接经解析接口获取媒体元数据与视频地址，用户选择版本后请求媒体文件；具体后台实现尚未确认。<br>**使用场景：** 公开视频下载、链接解析与多版本选择产品。<br>**价值：** 借鉴链接输入、版本选择、下载与失败反馈流程，指导后期视频下载产品开发。<br>**当前结论：** 基础解析与下载技术已成熟，当前不继续深入研究，按产品参考归档。 | 已归档 | [X-Twitter-Downloader](https://x-twitter-downloader.com/zh-CN) | — |
@@ -59,6 +60,24 @@
 **边界：** 复杂动作仍需验收；本机验证了已有素材的后处理，未调用 AI 生成或运行场景渲染，网页提供研究与效果展示。
 
 [![sprite-gen 能力与原理全景图：三种动作来源、输入输出、图像算法、背景场景、技术底座与需开发的扩展方向](projects/003-sprite-gen/assets/capabilities-principles-map.png)](projects/003-sprite-gen/README.md)
+
+### 004 · Three.js · 空间体验理解与海岸艺术花园
+
+**能力：** 场景、镜头、几何与模型、PBR 材质、灯光阴影、骨骼动画、射线拾取、实例化；官方扩展提供模型/HDR 加载、水面反射和后处理。
+
+**原理：** 外部素材提供形状、贴图与动作；每帧更新角色和世界，由 Three.js 组织 GPU 绘制。漫游、碰撞、导览、内容和联网由应用代码实现。
+
+**角色价值：** 原作 Renderpeople Nathan 提供真人代入与现实尺度；本地 CC0 RobotExpressive 提供陪伴与辨识。舒适感由比例、动作、脚步、镜头与环境共同形成。
+
+**使用场景：** 数字展览、文旅园区导览、产品展示、品牌空间、教学实验和轻量互动；用路线、地图和热点组织内容。
+
+**现有效果：** 单人海岸艺术花园、动画导览员、玻璃展亭、金属雕塑、反射水池、光照与画质分档；保留原作在线接入、参数实验及可打开实时演示的生成引导图。
+
+**可扩展方向：** 角色替换与动作复用、更自然的脚步镜头和碰撞、可配置内容、移动端优化、WebXR、多人同步与重连；需要另行开发和验证。
+
+**当前结论：** 理解与演示已整理，阶段归档，后期按需求重启。本地多人、WebXR、业务后台和复杂物理尚未接入，原作跨设备联机尚未实测。
+
+[![Three.js 理解总览：绘制与动画能力、输入更新绘制显示原理、素材库和应用职责、真人代入与机器人陪伴、使用场景和后期扩展](projects/004-threejs-worlds/assets/threejs-understanding.svg)](projects/004-threejs-worlds/README.md)
 
 ### 005 · Jianying Headless · 配置驱动的初步剪辑
 

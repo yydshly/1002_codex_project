@@ -1,0 +1,59 @@
+{
+  "repository": "https://github.com/mrdoob/three.js",
+  "tag": "r180",
+  "package": "three",
+  "packageVersion": "0.180.0",
+  "tagObject": "9e8635e2031c25859dc47ba07e72230dccb2682a",
+  "commit": "0af9729d0c143a86a1d725d6e2c3ad83301f3f34",
+  "taggedAt": "2025-09-03T11:47:06Z",
+  "researchDate": "2026-10-03",
+  "timezone": "Asia/Shanghai",
+  "license": "MIT",
+  "copyright": "Copyright © 2010-2025 three.js authors",
+  "licenseLocalPath": "assets/three-LICENSE.txt",
+  "sources": {
+    "release": "https://github.com/mrdoob/three.js/releases/tag/r180",
+    "tagRef": "https://api.github.com/repos/mrdoob/three.js/git/ref/tags/r180",
+    "tagObject": "https://api.github.com/repos/mrdoob/three.js/git/tags/9e8635e2031c25859dc47ba07e72230dccb2682a",
+    "package": "https://raw.githubusercontent.com/mrdoob/three.js/0af9729d0c143a86a1d725d6e2c3ad83301f3f34/package.json",
+    "license": "https://raw.githubusercontent.com/mrdoob/three.js/0af9729d0c143a86a1d725d6e2c3ad83301f3f34/LICENSE",
+    "instancedMesh": "https://github.com/mrdoob/three.js/blob/r180/docs/api/en/objects/InstancedMesh.html",
+    "raycaster": "https://github.com/mrdoob/three.js/blob/r180/docs/api/en/core/Raycaster.html",
+    "standardMaterial": "https://github.com/mrdoob/three.js/blob/r180/docs/api/en/materials/MeshStandardMaterial.html",
+    "trysteroReference": "https://github.com/dmotz/trystero"
+  },
+  "referenceApplication": {
+    "url": "https://porto-lume-worlds.vercel.app/#world=solstice&room=commons",
+    "observedThreeRevision": "180",
+    "evidenceMode": "Read-only browser observation and publicly served JavaScript inspection",
+    "applicationLicense": "not confirmed",
+    "modelLicense": "not confirmed",
+    "resourcesCopiedIntoProject": false,
+    "crossClientMultiplayerTested": false,
+    "publishedEvidenceUrls": [
+      "https://porto-lume-worlds.vercel.app/assets/index-tsq_4SI0.js",
+      "https://porto-lume-worlds.vercel.app/assets/three-UKy7KGmT.js",
+      "https://porto-lume-worlds.vercel.app/assets/topic-strategy-BK0WQZQA.js",
+      "https://porto-lume-worlds.vercel.app/assets/index-cIRNkQ-x.js",
+      "https://porto-lume-worlds.vercel.app/assets/index-vhRo7NHj.js"
+    ]
+  },
+  "localDemo": {
+    "geometry": "original procedural scenes and character",
+    "scenes": [
+      "harbour",
+      "coast",
+      "observatory"
+    ],
+    "networkMode": "educational flow visualization only",
+    "realMultiplayer": false,
+    "verificationStatus": "local browser integration checks passed; see validation.json",
+    "artGarden": {
+      "character": "CC0 skinned RobotExpressive, recolored",
+      "renderer": "Three.js r180 and official local addons",
+      "networkMode": "single player",
+      "guide": "reuses current renderer for diagram live demo"
+    },
+    "phase": "archived 2026-10-04; restart on demand"
+  }
+}
