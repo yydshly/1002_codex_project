@@ -7,12 +7,13 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 try {
   const { values } = parseArgs({ options: {
     slug: { type: 'string' }, name: { type: 'string' }, repo: { type: 'string' },
+    'source-name': { type: 'string' },
     summary: { type: 'string' }, help: { type: 'boolean', short: 'h' },
   } });
   if (values.help) {
-    console.log('用法：npm run new -- --slug <英文短名> --name "<项目名称>" --repo "https://github.com/owner/repo" [--summary "<摘要>"]');
+    console.log('用法：npm run new -- --slug <英文短名> --name "<项目名称>" --repo "<HTTPS 来源链接>" [--source-name "<来源名称，默认项目名称>"] [--summary "<摘要>"]');
   } else {
-    const project = await createProject(root, values);
+    const project = await createProject(root, { ...values, sourceName: values['source-name'] });
     console.log(`已创建 projects/${directoryOf(project)}/，总 README 索引已同步。`);
     console.log('下一步：填写研究文档，并按需在 projects/catalog.json 中添加封面与演示。');
   }

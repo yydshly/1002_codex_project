@@ -52,6 +52,7 @@ test('new projects retain archived numbers and generate working source links', a
   const root = await fixture(t);
   const first = await createProject(root, options());
   assert.equal(directoryOf(first), '001-example');
+  assert.equal(first.sourceName, first.name);
   const readme = await readFile(path.join(root, 'projects/001-example/README.md'), 'utf8');
   assert.match(readme, /\(https:\/\/github\.com\/owner\/example_repo\)/u);
   assert.doesNotMatch(readme, /\{\{\w+\}\}/u);
@@ -116,12 +117,79 @@ test('cover and multiple Web outputs use independent project paths', async t => 
   await buildSite(root); // Rebuilding replaces the previous output safely.
 });
 
-test('duplicate slug and invalid repository do not add project entries', async t => {
+test('duplicate slug and invalid source do not add project entries', async t => {
   const root = await fixture(t);
   await createProject(root, options());
   await assert.rejects(createProject(root, options()), /slug 已存在/u);
-  await assert.rejects(createProject(root, options('bad', { repo: 'https://example.com/owner/repo' })), /GitHub 仓库/u);
+  await assert.rejects(createProject(root, options('bad', { repo: 'http://example.com/owner/repo' })), /HTTPS/u);
+  await assert.rejects(createProject(root, options('credentials', { repo: 'https://user:password@example.com/' })), /HTTPS/u);
   assert.equal((await readCatalog(root)).projects.length, 1);
+});
+
+test('website sources use named links in templates, the README index and Web cards', async t => {
+  const root = await fixture(t);
+  const source = 'https://x-twitter-downloader.com/zh-CN';
+  const sourceName = 'X / Twitter 视频下载器';
+  await createProject(root, options('video-downloader', { name: '视频下载产品研究', repo: source, sourceName }));
+  const projectReadme = await readFile(path.join(root, 'projects/001-video-downloader/README.md'), 'utf8');
+  const research = await readFile(path.join(root, 'projects/001-video-downloader/notes/research.md'), 'utf8');
+  assert.ok(projectReadme.includes(`| 来源 | [${sourceName}](${source}) |`));
+  assert.ok(research.includes(`- 来源：[${sourceName}](${source})`));
+  const index = await readFile(path.join(root, 'README.md'), 'utf8');
+  assert.match(index, /\| 状态 \| 来源 \| Web \|/u);
+  assert.ok(index.includes(`[${sourceName}](${source})`));
+  assert.doesNotMatch(index, /\[源码\]/u);
+  await buildSite(root);
+  const output = await readFile(path.join(root, '_site/index.html'), 'utf8');
+  assert.ok(output.includes(`<a href="${source}">${sourceName} ↗</a>`));
+  assert.doesNotMatch(output, /上游仓库 ↗/u);
+});
+
+test('legacy records without sourceName fall back to the project name', async t => {
+  const root = await fixture(t);
+  await createProject(root, options());
+  await mutate(root, catalog => { delete catalog.projects[0].sourceName; });
+  const catalog = await synchronize(root);
+  assert.equal(catalog.projects[0].sourceName, undefined);
+  const index = await readFile(path.join(root, 'README.md'), 'utf8');
+  assert.ok(index.includes('[示例项目](https://github.com/owner/example_repo)'));
+  await buildSite(root);
+  const output = await readFile(path.join(root, '_site/index.html'), 'utf8');
+  assert.ok(output.includes('<a href="https://github.com/owner/example_repo">示例项目 ↗</a>'));
+});
+
+test('source names escape Markdown and HTML characters', async t => {
+  const root = await fixture(t);
+  const sourceName = 'A [video] | <script> & "quote" \\ *';
+  const escapedMarkdown = 'A \\[video\\] \\| &lt;script&gt; &amp; &quot;quote&quot; \\\\ \\*';
+  await createProject(root, options('escaped-source', { sourceName }));
+  const index = await readFile(path.join(root, 'README.md'), 'utf8');
+  const projectReadme = await readFile(path.join(root, 'projects/001-escaped-source/README.md'), 'utf8');
+  assert.ok(index.includes(`[${escapedMarkdown}](https://github.com/owner/example_repo)`));
+  assert.ok(projectReadme.includes(`[${escapedMarkdown}](https://github.com/owner/example_repo)`));
+  await buildSite(root);
+  const output = await readFile(path.join(root, '_site/index.html'), 'utf8');
+  assert.ok(output.includes('>A [video] | &lt;script&gt; &amp; &quot;quote&quot; \\ * ↗</a>'));
+  assert.doesNotMatch(output, /<script>/u);
+});
+
+test('provided source names must be nonempty single-line strings', async t => {
+  const root = await fixture(t);
+  for (const sourceName of ['', '  ', 'first\nsecond', 'first\rsecond', null, 42]) {
+    await assert.rejects(createProject(root, options('invalid-source-name', { sourceName })), /sourceName 必须是非空单行文字/u);
+  }
+  assert.equal((await readCatalog(root)).projects.length, 0);
+  await createProject(root, options());
+  for (const sourceName of ['', '  ', 'first\nsecond', 'first\rsecond', null, 42]) {
+    await mutate(root, catalog => { catalog.projects[0].sourceName = sourceName; });
+    await assert.rejects(readCatalog(root), /sourceName 必须是非空单行文字/u);
+  }
+});
+
+test('hub repository still requires a GitHub repository URL', async t => {
+  const root = await fixture(t);
+  await mutate(root, catalog => { catalog.repository = 'https://example.com/owner/repo'; });
+  await assert.rejects(readCatalog(root), /repository 必须指向一个 GitHub 仓库/u);
 });
 
 test('stale root index fails until synchronized', async t => {

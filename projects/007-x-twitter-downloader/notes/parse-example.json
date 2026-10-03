@@ -1,0 +1,52 @@
+{
+  "recordType": "observed-response-excerpt",
+  "observedOn": "2026-10-03",
+  "timezone": "Asia/Shanghai",
+  "endpoint": "https://x-twitter-downloader.com/api/parse-video",
+  "inputUrl": "https://x.com/TeslaAUNZ/status/1963788601361359349",
+  "success": true,
+  "duration": 58.665,
+  "author": "Tesla Australia & New Zealand",
+  "videos": [
+    {
+      "width": 3840,
+      "quality": 2160,
+      "qualityDesc": "HD (1080p)",
+      "format_ext": "mp4",
+      "direct_download_url": "https://video.twimg.com/amplify_video/1963784155281719298/vid/avc1/3840x2160/4TuBzFYtsdH2ZEbC.mp4?tag=21",
+      "download_type": "direct"
+    },
+    {
+      "width": 1920,
+      "quality": 1080,
+      "qualityDesc": "SD (480p)",
+      "format_ext": "mp4",
+      "direct_download_url": "https://video.twimg.com/amplify_video/1963784155281719298/vid/avc1/1920x1080/Qxeg84NijkMakMAv.mp4?tag=21",
+      "download_type": "direct"
+    },
+    {
+      "width": 1280,
+      "quality": 720,
+      "qualityDesc": "SD (360p)",
+      "format_ext": "mp4",
+      "direct_download_url": "https://video.twimg.com/amplify_video/1963784155281719298/vid/avc1/1280x720/QnLXBBnuNPOXiwLX.mp4?tag=21",
+      "download_type": "direct"
+    },
+    {
+      "width": 640,
+      "quality": 360,
+      "qualityDesc": "Low (240p)",
+      "format_ext": "mp4",
+      "direct_download_url": "https://video.twimg.com/amplify_video/1963784155281719298/vid/avc1/640x360/69rKJkNcHDXzwx_W.mp4?tag=21",
+      "download_type": "direct"
+    },
+    {
+      "width": 480,
+      "quality": 270,
+      "qualityDesc": "Low (240p)",
+      "format_ext": "mp4",
+      "direct_download_url": "https://video.twimg.com/amplify_video/1963784155281719298/vid/avc1/480x270/Z4uF-avNfW1IzFHG.mp4?tag=21",
+      "download_type": "direct"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # GitHub 项目研究库
 
-记录近期发现的优秀 GitHub 项目：理解设计思路、复现核心能力、整理研究结论，并按需提供 Web 演示。
+记录近期发现的项目与网站：理解设计思路、复现核心能力、整理研究结论，并按需提供 Web 演示。
 
 这里是总入口。每个子项目都有固定编号、独立研究文档、图片和可选演示；首页只保留摘要与索引，具体分析放在子项目内。
 
@@ -9,11 +9,12 @@
 编号按加入顺序递增，归档后保留编号。目录、README 和展示网站使用同一份 [项目清单](projects/catalog.json)。
 
 <!-- PROJECTS:START -->
-| 编号 | 子项目 / 研究文档 | 摘要 | 状态 | 上游 | Web |
+| 编号 | 子项目 / 研究文档 | 摘要 | 状态 | 来源 | Web |
 | --- | --- | --- | --- | --- | --- |
-| 001 | [Cult UI · 组件能力与原理实验室](projects/001-cult-ui/README.md) | 可复制和修改的 React 界面与动效源码库，137 个组件覆盖 AI 输入/结果、工作台、表单、导航、反馈、引导、按钮卡片、官网、插画、设备媒体、文字与背景。通过 React 状态、Tailwind/CSS/SVG，结合 Motion、Canvas/WebGL 实现；用于 React 官网、作品集、AI/SaaS 与后台，帮助快速搭界面、复用交互和学习原理，业务后端需自行接入。 | 已完成 | [源码](https://github.com/nolly-studio/cult-ui) | [演示](https://yydshly.github.io/1002_codex_project/projects/001-cult-ui/) |
-| 002 | [Upscayl 图片超分辨率研究](projects/002-upscayl/README.md) | 本地 AI 图片放大与细节增强工具。以预训练视觉模型、NCNN 和 Vulkan GPU 推理实现单张及批量处理；用于素材加工、脚本自动化和学习模型产品化，预测细节不等于恢复真实信息。 | 已完成 | [源码](https://github.com/upscayl/upscayl) | — |
-| 005 | [Jianying Headless · 配置驱动的初步剪辑](projects/005-jianying-headless/README.md) | 以结构化 JSON 计划驱动初步剪辑：Mac 适配剪映私有草稿格式与内部接口，生成可编辑工程和原生 MP4；Windows 调用 FFmpeg 输出 MP4。当前仅作自动化剪辑方向参考，暂不深入研究。 | 已归档 | [源码](https://github.com/mcncarl/jianying-headless) | — |
+| 001 | [Cult UI · 组件能力与原理实验室](projects/001-cult-ui/README.md) | 可复制和修改的 React 界面与动效源码库，137 个组件覆盖 AI 输入/结果、工作台、表单、导航、反馈、引导、按钮卡片、官网、插画、设备媒体、文字与背景。通过 React 状态、Tailwind/CSS/SVG，结合 Motion、Canvas/WebGL 实现；用于 React 官网、作品集、AI/SaaS 与后台，帮助快速搭界面、复用交互和学习原理，业务后端需自行接入。 | 已完成 | [Cult UI](https://github.com/nolly-studio/cult-ui) | [演示](https://yydshly.github.io/1002_codex_project/projects/001-cult-ui/) |
+| 002 | [Upscayl 图片超分辨率研究](projects/002-upscayl/README.md) | 本地 AI 图片放大与细节增强工具。以预训练视觉模型、NCNN 和 Vulkan GPU 推理实现单张及批量处理；用于素材加工、脚本自动化和学习模型产品化，预测细节不等于恢复真实信息。 | 已完成 | [Upscayl](https://github.com/upscayl/upscayl) | — |
+| 005 | [Jianying Headless · 配置驱动的初步剪辑](projects/005-jianying-headless/README.md) | 以结构化 JSON 计划驱动初步剪辑：Mac 适配剪映私有草稿格式与内部接口，生成可编辑工程和原生 MP4；Windows 调用 FFmpeg 输出 MP4。当前仅作自动化剪辑方向参考，暂不深入研究。 | 已归档 | [Jianying Headless](https://github.com/mcncarl/jianying-headless) | — |
+| 007 | [X-Twitter-Downloader · 视频下载产品参考](projects/007-x-twitter-downloader/README.md) | 解析公开 X 帖子的媒体信息，列出视频版本并提供下载入口。基础解析与下载原理已成熟，当前深入研究价值不大；有意义的是参考链接输入、版本选择、下载与失败反馈流程，指导后期视频下载产品开发。 | 已归档 | [X-Twitter-Downloader](https://x-twitter-downloader.com/zh-CN) | — |
 
 ### 001 · Cult UI · 组件能力与原理实验室
 
@@ -39,10 +40,10 @@
 需要 Node.js 22.12 或更新版本；管理脚本无需安装依赖，框架子项目需要先安装各自依赖。
 
 ```bash
-npm run new -- --slug example-repo --name "项目名称" --repo "https://github.com/owner/repo" --summary "一句话说明研究价值"
+npm run new -- --slug example-repo --name "项目名称" --repo "https://github.com/owner/repo" --source-name "来源名称" --summary "一句话说明研究价值"
 ```
 
-脚本自动分配下一个编号，例如 `001-example-repo`，创建研究文档、图片目录和 Web 目录，并更新上方索引。命令中的名称和地址是占位示例，请替换为实际项目。
+脚本自动分配下一个编号，例如 `001-example-repo`，创建研究文档、图片目录和 Web 目录，并更新上方索引。`--repo` 可填写 GitHub 仓库或网站的 HTTPS 地址；`--source-name` 指定索引显示的来源名称，省略时使用项目名称。命令中的名称和地址是占位示例，请替换为实际来源。
 
 后续编辑子项目文档与 `projects/catalog.json`，再运行：
 
@@ -92,7 +93,7 @@ npm run preview
 ## 研究约定
 
 - 编号固定、不复用；研究顺序按编号展示，停止研究时将状态设为“已归档”。
-- 记录上游仓库、研究时的版本或 commit、许可证，以及本仓库做了哪些改动。
+- 记录来源名称与链接；仓库来源记录研究版本或 commit、许可证，网站来源记录访问日期、实测范围与证据。
 - 总 README 保持摘要；图片存入对应子项目的 `assets/`，完整分析写在项目文档和研究笔记中。
 - 复现前写清环境、运行命令和验证结果；尚未验证的结论明确标注。
 
