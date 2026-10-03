@@ -186,6 +186,43 @@ test('provided source names must be nonempty single-line strings', async t => {
   }
 });
 
+test('structured summaries emphasize and escape labels while legacy summaries still render', async t => {
+  const root = await fixture(t);
+  await createProject(root, options('structured'));
+  await createProject(root, options('legacy', { summary: '仍然显示旧格式摘要。' }));
+  const cover = 'projects/001-structured/assets/cover.svg';
+  await writeFile(path.join(root, cover), '<svg xmlns="http://www.w3.org/2000/svg"></svg>');
+  await mutate(root, catalog => {
+    Object.assign(catalog.projects[0], {
+      summary: '被分项摘要替代的长段落。', cover, coverAlt: '封面',
+      summarySections: [
+        { title: '能力 [A] | <script>', text: '已有帧 **不是** 新生成 <img>' },
+        { title: '原理', text: '代码按时间播放。' },
+      ],
+    });
+  });
+  await synchronize(root);
+  const readme = await readFile(path.join(root, 'README.md'), 'utf8');
+  assert.ok(readme.includes('**能力 \\[A\\] \\| &lt;script&gt;：** 已有帧 \\*\\*不是\\*\\* 新生成 &lt;img&gt;<br>**原理：** 代码按时间播放。'));
+  assert.ok(readme.includes('\n\n**原理：** 代码按时间播放。\n\n'));
+  assert.ok(readme.includes('仍然显示旧格式摘要。'));
+  assert.ok(!readme.includes('被分项摘要替代的长段落。'));
+  await buildSite(root);
+  const output = await readFile(path.join(root, '_site/index.html'), 'utf8');
+  assert.ok(output.includes('<dt>能力 [A] | &lt;script&gt;</dt><dd>已有帧 **不是** 新生成 &lt;img&gt;</dd>'));
+  assert.ok(output.includes('<p>仍然显示旧格式摘要。</p>'));
+  assert.doesNotMatch(output, /<script>/u);
+});
+
+test('structured summaries reject incomplete and multiline fields', async t => {
+  const root = await fixture(t);
+  await createProject(root, options());
+  for (const summarySections of [null, [], '能力', [null], [[]], [{}], [{ title: '', text: '内容' }], [{ title: '能力', text: '多行\n内容' }]]) {
+    await mutate(root, catalog => { catalog.projects[0].summarySections = summarySections; });
+    await assert.rejects(readCatalog(root), /summarySections/u);
+  }
+});
+
 test('hub repository still requires a GitHub repository URL', async t => {
   const root = await fixture(t);
   await mutate(root, catalog => { catalog.repository = 'https://example.com/owner/repo'; });

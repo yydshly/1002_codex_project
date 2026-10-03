@@ -71,6 +71,14 @@ export async function readCatalog(root) {
     plainText(project.name, `${project.id} name`);
     if (project.sourceName !== undefined) plainText(project.sourceName, `${project.id} sourceName`);
     plainText(project.summary, `${project.id} summary`);
+    if (project.summarySections !== undefined) {
+      requireValue(Array.isArray(project.summarySections) && project.summarySections.length > 0, `${project.id} summarySections 必须是非空数组`);
+      for (const section of project.summarySections) {
+        requireValue(section !== null && typeof section === 'object' && !Array.isArray(section), `${project.id} summarySections 条目必须包含 title 和 text`);
+        plainText(section.title, `${project.id} summarySections title`);
+        plainText(section.text, `${project.id} summarySections text`);
+      }
+    }
     httpsUrl(project.source, `${project.id} source`);
     requireValue(statuses.includes(project.status), `${project.id} status 不在支持的状态中`);
     requireValue(Array.isArray(project.tags), `${project.id} tags 必须是数组`);
@@ -118,13 +126,25 @@ export function demoUrl(catalog, project) {
   return project.demo ?? (project.publishDir ? `${catalog.siteUrl}projects/${directoryOf(project)}/` : null);
 }
 
+function summaryMarkdown(project, separator = '\n\n') {
+  return project.summarySections
+    ? project.summarySections.map(section => `**${markdown(section.title)}：** ${markdown(section.text)}`).join(separator)
+    : markdown(project.summary);
+}
+
+function summaryHtml(project) {
+  return project.summarySections
+    ? `<dl class="project-summary">${project.summarySections.map(section => `<div class="summary-section"><dt>${html(section.title)}</dt><dd>${html(section.text)}</dd></div>`).join('')}</dl>`
+    : `<p>${html(project.summary)}</p>`;
+}
+
 export function renderReadmeIndex(catalog) {
   if (catalog.projects.length === 0) return '暂未添加研究项目。添加第一个项目后，这里会自动生成按编号排序的摘要、文档与演示索引。';
   const rows = catalog.projects.map(project => {
     const demo = demoUrl(catalog, project);
-    return `| ${project.id} | [${markdown(project.name)}](projects/${directoryOf(project)}/README.md) | ${markdown(project.summary)} | ${project.status} | [${markdown(project.sourceName ?? project.name)}](${markdownUrl(project.source)}) | ${demo ? `[演示](${markdownUrl(demo)})` : '—'} |`;
+    return `| ${project.id} | [${markdown(project.name)}](projects/${directoryOf(project)}/README.md) | ${summaryMarkdown(project, '<br>')} | ${project.status} | [${markdown(project.sourceName ?? project.name)}](${markdownUrl(project.source)}) | ${demo ? `[演示](${markdownUrl(demo)})` : '—'} |`;
   });
-  const previews = catalog.projects.filter(project => project.cover).map(project => `### ${project.id} · ${markdown(project.name)}\n\n${markdown(project.summary)}\n\n[![${markdown(project.coverAlt)}](${markdownUrl(project.cover)})](projects/${directoryOf(project)}/README.md)`);
+  const previews = catalog.projects.filter(project => project.cover).map(project => `### ${project.id} · ${markdown(project.name)}\n\n${summaryMarkdown(project)}\n\n[![${markdown(project.coverAlt)}](${markdownUrl(project.cover)})](projects/${directoryOf(project)}/README.md)`);
   return ['| 编号 | 子项目 / 研究文档 | 摘要 | 状态 | 来源 | Web |', '| --- | --- | --- | --- | --- | --- |', ...rows, ...(previews.length ? ['', ...previews.map(preview => `${preview}\n`)] : [])].join('\n').trimEnd();
 }
 
@@ -157,7 +177,7 @@ function renderSite(catalog) {
     return `<article class="project-card">
       ${cover ? `<a class="cover" href="${html(demo ?? `${catalog.repository}/blob/HEAD/projects/${directory}/README.md`)}"><img src="${html(cover)}" alt="${html(project.coverAlt)}" loading="lazy"></a>` : `<div class="number-cover" aria-hidden="true"><span>${project.id}</span></div>`}
       <div class="card-content"><div class="card-meta"><span>PROJECT ${project.id}</span><span class="status">${html(project.status)}</span></div>
-      <h2>${html(project.name)}</h2><p>${html(project.summary)}</p>
+      <h2>${html(project.name)}</h2>${summaryHtml(project)}
       ${project.tags.length ? `<ul class="tags" aria-label="项目标签">${project.tags.map(tag => `<li>${html(tag)}</li>`).join('')}</ul>` : ''}
       <div class="card-links"><a href="${html(catalog.repository)}/blob/HEAD/projects/${directory}/README.md">研究文档 ↗</a><a href="${html(project.source)}">${html(project.sourceName ?? project.name)} ↗</a>${demo ? `<a class="demo-link" href="${html(demo)}">打开演示 ↗</a>` : ''}</div></div>
     </article>`;

@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-04",
+  "timezone": "Asia/Shanghai",
+  "rootUrl": "http://localhost:4197/",
+  "desktop": {
+    "labels": [
+      {
+        "label": "能力",
+        "weight": "750"
+      },
+      {
+        "label": "原理",
+        "weight": "750"
+      },
+      {
+        "label": "使用场景",
+        "weight": "750"
+      },
+      {
+        "label": "价值",
+        "weight": "750"
+      },
+      {
+        "label": "边界",
+        "weight": "750"
+      },
+      {
+        "label": "能力",
+        "weight": "750"
+      },
+      {
+        "label": "原理",
+        "weight": "750"
+      },
+      {
+        "label": "使用场景",
+        "weight": "750"
+      },
+      {
+        "label": "价值",
+        "weight": "750"
+      },
+      {
+        "label": "边界",
+        "weight": "750"
+      },
+      {
+        "label": "能力",
+        "weight": "750"
+      },
+      {
+        "label": "原理",
+        "weight": "750"
+      },
+      {
+        "label": "使用场景",
+        "weight": "750"
+      },
+      {
+        "label": "价值",
+        "weight": "750"
+      },
+      {
+        "label": "边界",
+        "weight": "750"
+      },
+      {
+        "label": "能力",
+        "weight": "750"
+      },
+      {
+        "label": "原理",
+        "weight": "750"
+      },
+      {
+        "label": "使用场景",
+        "weight": "750"
+      },
+      {
+        "label": "价值",
+        "weight": "750"
+      },
+      {
+        "label": "当前结论",
+        "weight": "750"
+      },
+      {
+        "label": "能力",
+        "weight": "750"
+      },
+      {
+        "label": "原理",
+        "weight": "750"
+      },
+      {
+        "label": "使用场景",
+        "weight": "750"
+      },
+      {
+        "label": "价值",
+        "weight": "750"
+      },
+      {
+        "label": "当前结论",
+        "weight": "750"
+      }
+    ],
+    "overflow": false,
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    }
+  },
+  "mobileRoot": {
+    "width": 390,
+    "overflow": false
+  },
+  "sprite": {
+    "guideLoaded": true,
+    "headings": [
+      {
+        "title": "能力是什么",
+        "weight": "800"
+      },
+      {
+        "title": "原理是什么",
+        "weight": "800"
+      },
+      {
+        "title": "使用场景是什么",
+        "weight": "800"
+      },
+      {
+        "title": "对我的意义是什么",
+        "weight": "800"
+      }
+    ],
+    "overflow": false,
+    "titleWeight": "800"
+  },
+  "mobileSprite": {
+    "overflow": false,
+    "width": 390
+  },
+  "scope": "分项摘要、标题字重、既有引导图加载与桌面/手机宽度；未新增生成能力。"
+}

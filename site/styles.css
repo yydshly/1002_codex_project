@@ -18,7 +18,7 @@ a:focus-visible { outline: 3px solid var(--green); outline-offset: 5px; border-r
 .brand-mark { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 7px; background: var(--green); color: white; font-family: Georgia, serif; font-size: 24px; }
 .hero { padding: 76px 0 56px; }
 .eyebrow { margin: 0 0 20px; font-size: 11px; font-weight: 700; letter-spacing: .18em; color: var(--green); }
-h1 { margin: 0; font-size: clamp(34px, 5vw, 60px); font-weight: 650; letter-spacing: -.025em; line-height: 1.28; }
+h1 { margin: 0; font-size: clamp(34px, 5vw, 60px); font-weight: 750; letter-spacing: -.025em; line-height: 1.28; }
 .hero-description { margin: 25px 0 36px; color: var(--muted); font-size: 16px; }
 .stats { display: flex; gap: 64px; }
 .stats div { display: flex; align-items: baseline; gap: 10px; }
@@ -27,7 +27,7 @@ h1 { margin: 0; font-size: clamp(34px, 5vw, 60px); font-weight: 650; letter-spac
 .catalog { padding: 32px 0 72px; border-top: 1px solid var(--line); }
 .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 26px; }
 .section-heading .eyebrow { margin-bottom: 6px; }
-.section-heading h2 { margin: 0; font-size: 24px; font-weight: 600; }
+.section-heading h2 { margin: 0; font-size: 24px; font-weight: 750; }
 .sort-note { font-size: 12px; color: var(--muted); }
 .empty-state { display: flex; align-items: center; gap: 42px; min-height: 215px; padding: 36px 42px; border: 1px dashed #acbfb0; border-radius: 12px; background: #ecf2e8; }
 .empty-number { color: #9bab9b; font-size: 80px; font-weight: 300; font-variant-numeric: tabular-nums; line-height: 1; }
@@ -42,8 +42,13 @@ h1 { margin: 0; font-size: clamp(34px, 5vw, 60px); font-weight: 650; letter-spac
 .card-content { padding: 24px; }
 .card-meta { display: flex; justify-content: space-between; gap: 16px; align-items: center; color: var(--muted); font-size: 11px; letter-spacing: .06em; }
 .status { background: #edf3ea; color: var(--green); padding: 3px 9px; border-radius: 4px; letter-spacing: 0; white-space: nowrap; }
-.card-content h2 { font-size: 21px; margin: 12px 0 6px; font-weight: 600; overflow-wrap: anywhere; }
+.card-content h2 { font-size: 22px; margin: 12px 0 18px; font-weight: 750; line-height: 1.45; overflow-wrap: anywhere; }
 .card-content p { margin: 0; color: var(--muted); font-size: 14px; overflow-wrap: anywhere; }
+.project-summary { margin: 0; display: grid; gap: 14px; }
+.summary-section { padding-top: 12px; border-top: 1px solid #e7ede6; }
+.summary-section:first-child { padding-top: 0; border-top: 0; }
+.summary-section dt { margin-bottom: 3px; color: var(--ink); font-size: 14px; font-weight: 750; }
+.summary-section dd { margin: 0; color: var(--muted); font-size: 14px; overflow-wrap: anywhere; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 18px 0 0; padding: 0; }
 .tags li { font-size: 11px; border: 1px solid var(--line); border-radius: 4px; padding: 2px 7px; }
 .card-links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; }

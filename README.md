@@ -11,33 +11,65 @@
 <!-- PROJECTS:START -->
 | 编号 | 子项目 / 研究文档 | 摘要 | 状态 | 来源 | Web |
 | --- | --- | --- | --- | --- | --- |
-| 001 | [Cult UI · 组件能力与原理实验室](projects/001-cult-ui/README.md) | 可复制和修改的 React 界面与动效源码库，137 个组件覆盖 AI 输入/结果、工作台、表单、导航、反馈、引导、按钮卡片、官网、插画、设备媒体、文字与背景。通过 React 状态、Tailwind/CSS/SVG，结合 Motion、Canvas/WebGL 实现；用于 React 官网、作品集、AI/SaaS 与后台，帮助快速搭界面、复用交互和学习原理，业务后端需自行接入。 | 已完成 | [Cult UI](https://github.com/nolly-studio/cult-ui) | [演示](https://yydshly.github.io/1002_codex_project/projects/001-cult-ui/) |
-| 002 | [Upscayl 图片超分辨率研究](projects/002-upscayl/README.md) | 本地 AI 图片放大与细节增强工具。以预训练视觉模型、NCNN 和 Vulkan GPU 推理实现单张及批量处理；用于素材加工、脚本自动化和学习模型产品化，预测细节不等于恢复真实信息。 | 已完成 | [Upscayl](https://github.com/upscayl/upscayl) | — |
-| 003 | [sprite-gen · 精灵素材能力实验室](projects/003-sprite-gen/README.md) | 2D 动画素材生产与整理工具：支持角色图调用视频模型生成动作、代码形变与已有帧编排、图像模型直接生成多姿势，再做抠图、对齐、循环、换色和图集导出。以 Python、Pillow、NumPy、FFmpeg 加工资源，可把动画与背景按位置、速度和镜头合成 GIF / MP4；用于 2D 游戏、网页与桌面角色、贴纸、短场景和素材库，帮助复用素材、减少批量整理并学习 AI 工作流，复杂动作仍需验收。 | 已完成 | [sprite-gen](https://github.com/aldegad/sprite-gen) | [演示](https://yydshly.github.io/1002_codex_project/projects/003-sprite-gen/) |
-| 005 | [Jianying Headless · 配置驱动的初步剪辑](projects/005-jianying-headless/README.md) | 以结构化 JSON 计划驱动初步剪辑：Mac 适配剪映私有草稿格式与内部接口，生成可编辑工程和原生 MP4；Windows 调用 FFmpeg 输出 MP4。当前仅作自动化剪辑方向参考，暂不深入研究。 | 已归档 | [Jianying Headless](https://github.com/mcncarl/jianying-headless) | — |
-| 007 | [X-Twitter-Downloader · 视频下载产品参考](projects/007-x-twitter-downloader/README.md) | 解析公开 X 帖子的媒体信息，列出视频版本并提供下载入口。基础解析与下载原理已成熟，当前深入研究价值不大；有意义的是参考链接输入、版本选择、下载与失败反馈流程，指导后期视频下载产品开发。 | 已归档 | [X-Twitter-Downloader](https://x-twitter-downloader.com/zh-CN) | — |
+| 001 | [Cult UI · 组件能力与原理实验室](projects/001-cult-ui/README.md) | **能力：** 可复制和修改的 React 界面与动效源码集合；137 个组件覆盖 AI 输入与结果、工作台、表单、导航、反馈、引导、官网、插画、媒体、文字与背景。<br>**原理：** 通过 React 状态、Tailwind / CSS / SVG，结合 Motion、Canvas / WebGL 实现交互与视觉效果；组件源码复制进自己的项目后可直接修改。<br>**使用场景：** React 官网、作品集、AI / SaaS 产品界面与后台工作台。<br>**价值：** 快速搭建界面、复用交互并学习动效实现；完整中文目录、真实示例与原理证据帮助选型。<br>**边界：** 业务后端、模型 API、鉴权与持久化需自行接入。 | 已完成 | [Cult UI](https://github.com/nolly-studio/cult-ui) | [演示](https://yydshly.github.io/1002_codex_project/projects/001-cult-ui/) |
+| 002 | [Upscayl 图片超分辨率研究](projects/002-upscayl/README.md) | **能力：** 本地 AI 图片放大与细节增强，支持单张和文件夹批量处理。<br>**原理：** 调用预训练视觉模型，通过 NCNN 与 Vulkan GPU 在本机执行推理，放大图片并预测细节。<br>**使用场景：** 设计、展示与打印素材加工，以及重复图片处理的自动化。<br>**价值：** 改善素材交付尺寸，并学习如何把模型、显卡计算、文件管理与任务界面组合成产品。<br>**边界：** 预测纹理不等于恢复真实信息；本项目尚未实测图片质量或显卡性能。 | 已完成 | [Upscayl](https://github.com/upscayl/upscayl) | — |
+| 003 | [sprite-gen · 精灵素材能力实验室](projects/003-sprite-gen/README.md) | **能力：** 制作与整理透明动图、精灵图集和帧数据；支持抠图、切帧、对齐、循环选择、换色、导出，以及动画与背景合成。<br>**原理：** 动作来自外部视频模型、多姿势图像模型，或已有帧与有限代码形变；Python、Pillow、NumPy、FFmpeg 加工资源，按时间、位置和图层合成。<br>**使用场景：** 2D 游戏原型、网页与桌面角色、贴纸、视频包装、短场景和素材库整理。<br>**价值：** 复用素材、减少批量整理，并学习“模型生成—算法加工—人工整理—资源交付”的制作流程，为后续角色动效与素材工具提供参考。<br>**边界：** 复杂动作仍需验收；本机验证了已有素材的后处理，未调用 AI 生成或运行场景渲染，网页提供研究与效果展示。 | 已完成 | [sprite-gen](https://github.com/aldegad/sprite-gen) | [演示](https://yydshly.github.io/1002_codex_project/projects/003-sprite-gen/) |
+| 005 | [Jianying Headless · 配置驱动的初步剪辑](projects/005-jianying-headless/README.md) | **能力：** 以结构化 JSON 计划执行初步剪辑；Mac 生成可编辑剪映工程与原生 MP4，Windows 输出 MP4。<br>**原理：** Mac 适配剪映私有草稿格式与内部接口；Windows 将计划转成 FFmpeg 滤镜图和公开命令行调用。<br>**使用场景：** 口播粗剪、模板化批量制作，以及 AI 剪辑决定向人工编辑工程交接。<br>**价值：** 参考“配置驱动执行、AI 决策外接、人工精修”的自动化剪辑流程。<br>**当前结论：** 当前仅作方向参考，暂不深入研究或集成；尚未在本机运行，Mac 路径依赖匹配的剪映与运行环境。 | 已归档 | [Jianying Headless](https://github.com/mcncarl/jianying-headless) | — |
+| 007 | [X-Twitter-Downloader · 视频下载产品参考](projects/007-x-twitter-downloader/README.md) | **能力：** 解析公开 X 帖子的媒体信息，列出已有视频版本并提供下载入口。<br>**原理：** 链接经解析接口获取媒体元数据与视频地址，用户选择版本后请求媒体文件；具体后台实现尚未确认。<br>**使用场景：** 公开视频下载、链接解析与多版本选择产品。<br>**价值：** 借鉴链接输入、版本选择、下载与失败反馈流程，指导后期视频下载产品开发。<br>**当前结论：** 基础解析与下载技术已成熟，当前不继续深入研究，按产品参考归档。 | 已归档 | [X-Twitter-Downloader](https://x-twitter-downloader.com/zh-CN) | — |
 
 ### 001 · Cult UI · 组件能力与原理实验室
 
-可复制和修改的 React 界面与动效源码库，137 个组件覆盖 AI 输入/结果、工作台、表单、导航、反馈、引导、按钮卡片、官网、插画、设备媒体、文字与背景。通过 React 状态、Tailwind/CSS/SVG，结合 Motion、Canvas/WebGL 实现；用于 React 官网、作品集、AI/SaaS 与后台，帮助快速搭界面、复用交互和学习原理，业务后端需自行接入。
+**能力：** 可复制和修改的 React 界面与动效源码集合；137 个组件覆盖 AI 输入与结果、工作台、表单、导航、反馈、引导、官网、插画、媒体、文字与背景。
+
+**原理：** 通过 React 状态、Tailwind / CSS / SVG，结合 Motion、Canvas / WebGL 实现交互与视觉效果；组件源码复制进自己的项目后可直接修改。
+
+**使用场景：** React 官网、作品集、AI / SaaS 产品界面与后台工作台。
+
+**价值：** 快速搭建界面、复用交互并学习动效实现；完整中文目录、真实示例与原理证据帮助选型。
+
+**边界：** 业务后端、模型 API、鉴权与持久化需自行接入。
 
 [![Cult UI 全能力地图：137 个组件、源码分发、底层技术、效果方向、应用场景、个人价值与选用路径](projects/001-cult-ui/assets/cult-ui-capability-map.png)](projects/001-cult-ui/README.md)
 
 ### 002 · Upscayl 图片超分辨率研究
 
-本地 AI 图片放大与细节增强工具。以预训练视觉模型、NCNN 和 Vulkan GPU 推理实现单张及批量处理；用于素材加工、脚本自动化和学习模型产品化，预测细节不等于恢复真实信息。
+**能力：** 本地 AI 图片放大与细节增强，支持单张和文件夹批量处理。
+
+**原理：** 调用预训练视觉模型，通过 NCNN 与 Vulkan GPU 在本机执行推理，放大图片并预测细节。
+
+**使用场景：** 设计、展示与打印素材加工，以及重复图片处理的自动化。
+
+**价值：** 改善素材交付尺寸，并学习如何把模型、显卡计算、文件管理与任务界面组合成产品。
+
+**边界：** 预测纹理不等于恢复真实信息；本项目尚未实测图片质量或显卡性能。
 
 [![Upscayl 能力与原理总览：应用能力、上游训练、本机 GPU 推理、技术关键词、后期价值与能力边界](projects/002-upscayl/assets/upscayl-overview.png)](projects/002-upscayl/README.md)
 
 ### 003 · sprite-gen · 精灵素材能力实验室
 
-2D 动画素材生产与整理工具：支持角色图调用视频模型生成动作、代码形变与已有帧编排、图像模型直接生成多姿势，再做抠图、对齐、循环、换色和图集导出。以 Python、Pillow、NumPy、FFmpeg 加工资源，可把动画与背景按位置、速度和镜头合成 GIF / MP4；用于 2D 游戏、网页与桌面角色、贴纸、短场景和素材库，帮助复用素材、减少批量整理并学习 AI 工作流，复杂动作仍需验收。
+**能力：** 制作与整理透明动图、精灵图集和帧数据；支持抠图、切帧、对齐、循环选择、换色、导出，以及动画与背景合成。
+
+**原理：** 动作来自外部视频模型、多姿势图像模型，或已有帧与有限代码形变；Python、Pillow、NumPy、FFmpeg 加工资源，按时间、位置和图层合成。
+
+**使用场景：** 2D 游戏原型、网页与桌面角色、贴纸、视频包装、短场景和素材库整理。
+
+**价值：** 复用素材、减少批量整理，并学习“模型生成—算法加工—人工整理—资源交付”的制作流程，为后续角色动效与素材工具提供参考。
+
+**边界：** 复杂动作仍需验收；本机验证了已有素材的后处理，未调用 AI 生成或运行场景渲染，网页提供研究与效果展示。
 
 [![sprite-gen 能力与原理全景图：三种动作来源、输入输出、图像算法、背景场景、技术底座与需开发的扩展方向](projects/003-sprite-gen/assets/capabilities-principles-map.png)](projects/003-sprite-gen/README.md)
 
 ### 005 · Jianying Headless · 配置驱动的初步剪辑
 
-以结构化 JSON 计划驱动初步剪辑：Mac 适配剪映私有草稿格式与内部接口，生成可编辑工程和原生 MP4；Windows 调用 FFmpeg 输出 MP4。当前仅作自动化剪辑方向参考，暂不深入研究。
+**能力：** 以结构化 JSON 计划执行初步剪辑；Mac 生成可编辑剪映工程与原生 MP4，Windows 输出 MP4。
+
+**原理：** Mac 适配剪映私有草稿格式与内部接口；Windows 将计划转成 FFmpeg 滤镜图和公开命令行调用。
+
+**使用场景：** 口播粗剪、模板化批量制作，以及 AI 剪辑决定向人工编辑工程交接。
+
+**价值：** 参考“配置驱动执行、AI 决策外接、人工精修”的自动化剪辑流程。
+
+**当前结论：** 当前仅作方向参考，暂不深入研究或集成；尚未在本机运行，Mac 路径依赖匹配的剪映与运行环境。
 
 [![Jianying Headless 配置驱动初剪理解图：Mac 剪映逆向适配、Windows FFmpeg 公开接口、能力环境场景与当前参考价值](projects/005-jianying-headless/assets/jianying-headless-overview.png)](projects/005-jianying-headless/README.md)
 <!-- PROJECTS:END -->
