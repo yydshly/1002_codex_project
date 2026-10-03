@@ -10,7 +10,13 @@
       "source": "https://github.com/nolly-studio/cult-ui",
       "sourceName": "Cult UI",
       "status": "已完成",
-      "tags": ["React", "源码组件", "界面与动效", "产品原型", "原理研究"],
+      "tags": [
+        "React",
+        "源码组件",
+        "界面与动效",
+        "产品原型",
+        "原理研究"
+      ],
       "cover": "projects/001-cult-ui/assets/cult-ui-capability-map.png",
       "coverAlt": "Cult UI 全能力地图：137 个组件、源码分发、底层技术、效果方向、应用场景、个人价值与选用路径",
       "publishDir": "projects/001-cult-ui/web/dist",
@@ -73,6 +79,26 @@
       "cover": null,
       "coverAlt": "",
       "publishDir": null,
+      "demo": null
+    },
+    {
+      "id": "003",
+      "slug": "sprite-gen",
+      "name": "sprite-gen · 精灵素材能力实验室",
+      "summary": "2D 动画素材生产与整理工具：支持角色图调用视频模型生成动作、代码形变与已有帧编排、图像模型直接生成多姿势，再做抠图、对齐、循环、换色和图集导出。以 Python、Pillow、NumPy、FFmpeg 加工资源，可把动画与背景按位置、速度和镜头合成 GIF / MP4；用于 2D 游戏、网页与桌面角色、贴纸、短场景和素材库，帮助复用素材、减少批量整理并学习 AI 工作流，复杂动作仍需验收。",
+      "source": "https://github.com/aldegad/sprite-gen",
+      "sourceName": "sprite-gen",
+      "status": "已完成",
+      "tags": [
+        "2D动画素材",
+        "AI与代码合成",
+        "图像后处理",
+        "场景与个人价值",
+        "能力原理研究"
+      ],
+      "cover": "projects/003-sprite-gen/assets/capabilities-principles-map.png",
+      "coverAlt": "sprite-gen 能力与原理全景图：三种动作来源、输入输出、图像算法、背景场景、技术底座与需开发的扩展方向",
+      "publishDir": "projects/003-sprite-gen/web",
       "demo": null
     }
   ]

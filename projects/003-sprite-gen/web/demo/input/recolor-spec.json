@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "kind": "sprite-gen-recolor",
+  "match": "exact",
+  "variants": [
+    {
+      "name": "sunset",
+      "map": {
+        "#203640": "#203640",
+        "#3fbbc2": "#e7ae58",
+        "#eee9d5": "#eee9d5",
+        "#ed9248": "#df6559"
+      }
+    },
+    {
+      "name": "violet",
+      "map": {
+        "#203640": "#203640",
+        "#3fbbc2": "#9f8ddb",
+        "#eee9d5": "#eee9d5",
+        "#ed9248": "#f3be72"
+      }
+    }
+  ]
+}

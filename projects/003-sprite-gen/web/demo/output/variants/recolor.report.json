@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "kind": "sprite-gen-recolor-report",
+  "base": "atlas.png",
+  "match": "exact",
+  "tolerance": 0,
+  "alpha_threshold": 8,
+  "variant_count": 2,
+  "variants": [
+    {
+      "name": "sunset",
+      "sheet": "sunset.png",
+      "substituted_pixels": 38698,
+      "substitutions": [
+        {
+          "from": "#203640",
+          "to": "#203640",
+          "pixels": 15795
+        },
+        {
+          "from": "#3fbbc2",
+          "to": "#e7ae58",
+          "pixels": 8845
+        },
+        {
+          "from": "#ed9248",
+          "to": "#df6559",
+          "pixels": 5742
+        },
+        {
+          "from": "#eee9d5",
+          "to": "#eee9d5",
+          "pixels": 8316
+        }
+      ],
+      "unused_sources": [],
+      "passthrough_pixels": 0,
+      "passthrough_color_count": 0,
+      "passthrough_colors": [],
+      "manifest": "sunset.manifest.json"
+    },
+    {
+      "name": "violet",
+      "sheet": "violet.png",
+      "substituted_pixels": 38698,
+      "substitutions": [
+        {
+          "from": "#203640",
+          "to": "#203640",
+          "pixels": 15795
+        },
+        {
+          "from": "#3fbbc2",
+          "to": "#9f8ddb",
+          "pixels": 8845
+        },
+        {
+          "from": "#ed9248",
+          "to": "#f3be72",
+          "pixels": 5742
+        },
+        {
+          "from": "#eee9d5",
+          "to": "#eee9d5",
+          "pixels": 8316
+        }
+      ],
+      "unused_sources": [],
+      "passthrough_pixels": 0,
+      "passthrough_color_count": 0,
+      "passthrough_colors": [],
+      "manifest": "violet.manifest.json"
+    }
+  ]
+}

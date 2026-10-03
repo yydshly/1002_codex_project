@@ -1,0 +1,592 @@
+{
+  "status": "passed",
+  "validatedAt": "2026-10-03T21:27:32+08:00",
+  "timezone": "Asia/Shanghai",
+  "repository": "https://github.com/aldegad/sprite-gen",
+  "commit": "d993e5300b4255111e8ee0e29779caea1b3b97bd",
+  "version": "2.20.0",
+  "sourceMode": "selective pinned raw source download; git blob hashes verified",
+  "pythonModuleCount": 87,
+  "entrypoint": "upstream installed console script sprite-gen (editable install from selective source snapshot)",
+  "environment": {
+    "python": "3.12.14",
+    "pythonExecutable": "F:\\codex_project\\1002_codex_project\\projects\\003-sprite-gen\\.venv\\Scripts\\python.exe",
+    "isolatedVenv": true,
+    "pillow": "12.3.0",
+    "numpy": "2.5.3",
+    "platform": "win32"
+  },
+  "reproduce": "python scripts/run_demo.py",
+  "aiGeneratedInput": false,
+  "modelApiCalls": 0,
+  "sample": "Pillow rectangle/line primitives, 6 geometric robot poses, 3x2 magenta keyed sheet",
+  "notValidated": [
+    "AI image generation",
+    "AI video generation",
+    "video loop detection",
+    "pixel-unfake",
+    "curation web server",
+    "Godot/Unity/Phaser runtime import"
+  ],
+  "stages": [
+    {
+      "stage": "cutout",
+      "command": "sprite-gen cutout web/demo/input/keyed-sheet.png --out web/demo/output/cutout-sheet.png --key auto",
+      "input": [
+        "web/demo/input/keyed-sheet.png"
+      ],
+      "output": [
+        "web/demo/output/cutout-sheet.png"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedSeconds": 0.498,
+      "measurement": {
+        "width": 384,
+        "height": 320,
+        "nontransparentPixels": 38698,
+        "transparentPixels": 84182,
+        "partialAlphaPixels": 0,
+        "dirtyTransparentPixels": 0,
+        "contentBbox": [
+          21,
+          20,
+          375,
+          303
+        ],
+        "backgroundPixelsRemoved": 84182,
+        "allSourceForegroundRetained": true
+      },
+      "log": ".cache/logs/cutout.txt",
+      "version": "2.20.0"
+    },
+    {
+      "stage": "slice-sheet",
+      "command": "sprite-gen slice-sheet --sheet web/demo/input/keyed-sheet.png --out-dir web/demo/output/frames --chroma-key magenta --grid 3x2 --names frame-00,frame-01,frame-02,frame-03,frame-04,frame-05 --cell-width 128 --cell-height 160 --baseline-y 144 --target-height 123",
+      "input": [
+        "web/demo/input/keyed-sheet.png"
+      ],
+      "output": [
+        "web/demo/output/frames"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedSeconds": 0.561,
+      "measurement": {
+        "frameCount": 6,
+        "frames": [
+          {
+            "width": 128,
+            "height": 160,
+            "nontransparentPixels": 6424,
+            "transparentPixels": 14056,
+            "partialAlphaPixels": 0,
+            "dirtyTransparentPixels": 0,
+            "contentBbox": [
+              18,
+              21,
+              111,
+              144
+            ]
+          },
+          {
+            "width": 128,
+            "height": 160,
+            "nontransparentPixels": 6397,
+            "transparentPixels": 14083,
+            "partialAlphaPixels": 0,
+            "dirtyTransparentPixels": 0,
+            "contentBbox": [
+              16,
+              21,
+              114,
+              144
+            ]
+          },
+          {
+            "width": 128,
+            "height": 160,
+            "nontransparentPixels": 6486,
+            "transparentPixels": 13994,
+            "partialAlphaPixels": 0,
+            "dirtyTransparentPixels": 0,
+            "contentBbox": [
+              16,
+              21,
+              113,
+              144
+            ]
+          },
+          {
+            "width": 128,
+            "height": 160,
+            "nontransparentPixels": 6508,
+            "transparentPixels": 13972,
+            "partialAlphaPixels": 0,
+            "dirtyTransparentPixels": 0,
+            "contentBbox": [
+              20,
+              21,
+              109,
+              144
+            ]
+          },
+          {
+            "width": 128,
+            "height": 160,
+            "nontransparentPixels": 6486,
+            "transparentPixels": 13994,
+            "partialAlphaPixels": 0,
+            "dirtyTransparentPixels": 0,
+            "contentBbox": [
+              16,
+              21,
+              113,
+              144
+            ]
+          },
+          {
+            "width": 128,
+            "height": 160,
+            "nontransparentPixels": 6397,
+            "transparentPixels": 14083,
+            "partialAlphaPixels": 0,
+            "dirtyTransparentPixels": 0,
+            "contentBbox": [
+              16,
+              21,
+              114,
+              144
+            ]
+          }
+        ]
+      },
+      "log": ".cache/logs/slice-sheet.txt",
+      "version": "2.20.0"
+    },
+    {
+      "stage": "unpack-atlas",
+      "command": "sprite-gen unpack-atlas --pngs-dir web/demo/output/frames --state-name wave --out-dir .cache/demo-run --force",
+      "input": [
+        "web/demo/output/frames"
+      ],
+      "output": [
+        ".cache/demo-run/sprite-request.json",
+        ".cache/demo-run/frames"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedSeconds": 0.558,
+      "measurement": {
+        "importedFrameCount": 6,
+        "state": "wave",
+        "explicitLocalRecipeEdit": {
+          "fps": 6,
+          "loop": true,
+          "characterId": "geometry-wave-test"
+        }
+      },
+      "log": ".cache/logs/unpack-atlas.txt",
+      "version": "2.20.0"
+    },
+    {
+      "stage": "compose-atlas",
+      "command": "sprite-gen compose-atlas --run-dir .cache/demo-run --atlas atlas.png",
+      "input": [
+        ".cache/demo-run/sprite-request.json",
+        ".cache/demo-run/frames"
+      ],
+      "output": [
+        ".cache/demo-run/atlas.png",
+        ".cache/demo-run/manifest.json"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedSeconds": 0.555,
+      "measurement": {
+        "width": 768,
+        "height": 160,
+        "nontransparentPixels": 38698,
+        "transparentPixels": 84182,
+        "partialAlphaPixels": 0,
+        "dirtyTransparentPixels": 0,
+        "contentBbox": [
+          18,
+          21,
+          754,
+          144
+        ],
+        "frameCount": 6,
+        "frameRects": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 128,
+            "h": 160
+          },
+          {
+            "x": 128,
+            "y": 0,
+            "w": 128,
+            "h": 160
+          },
+          {
+            "x": 256,
+            "y": 0,
+            "w": 128,
+            "h": 160
+          },
+          {
+            "x": 384,
+            "y": 0,
+            "w": 128,
+            "h": 160
+          },
+          {
+            "x": 512,
+            "y": 0,
+            "w": 128,
+            "h": 160
+          },
+          {
+            "x": 640,
+            "y": 0,
+            "w": 128,
+            "h": 160
+          }
+        ],
+        "everyAtlasFrameMatchesSource": true
+      },
+      "log": ".cache/logs/compose-atlas.txt",
+      "version": "2.20.0"
+    },
+    {
+      "stage": "unpack-atlas-roundtrip",
+      "command": "sprite-gen unpack-atlas --atlas web/demo/output/atlas.png --manifest web/demo/output/manifest.json --out-dir .cache/roundtrip-run --force",
+      "input": [
+        "web/demo/output/atlas.png",
+        "web/demo/output/manifest.json"
+      ],
+      "output": [
+        ".cache/roundtrip-run/frames",
+        ".cache/roundtrip-run/sprite-request.json"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedSeconds": 0.582,
+      "measurement": {
+        "frameCount": 6,
+        "allFramesPixelIdentical": true,
+        "layoutSource": "exact manifest rectangles"
+      },
+      "log": ".cache/logs/unpack-atlas-roundtrip.txt",
+      "version": "2.20.0"
+    },
+    {
+      "stage": "compose-gif",
+      "command": "sprite-gen compose-gif web/demo/output/frames/frame-00.png web/demo/output/frames/frame-01.png web/demo/output/frames/frame-02.png web/demo/output/frames/frame-03.png web/demo/output/frames/frame-04.png web/demo/output/frames/frame-05.png --output web/demo/output/wave.gif --delay-ticks 17 --manifest-output web/demo/output/gif-manifest.json --contact-output web/demo/output/contact-sheet.png",
+      "input": [
+        "web/demo/output/frames"
+      ],
+      "output": [
+        "web/demo/output/wave.gif",
+        "web/demo/output/gif-manifest.json",
+        "web/demo/output/contact-sheet.png"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedSeconds": 0.589,
+      "measurement": {
+        "frameCount": 6,
+        "width": 128,
+        "height": 160,
+        "durationsMs": [
+          170,
+          170,
+          170,
+          170,
+          170,
+          170
+        ],
+        "loop": 0,
+        "transparentPixelsPerFrame": [
+          14056,
+          14083,
+          13994,
+          13972,
+          13994,
+          14083
+        ],
+        "transparency": true
+      },
+      "log": ".cache/logs/compose-gif.txt",
+      "version": "2.20.0"
+    },
+    {
+      "stage": "recolor-palette",
+      "command": "sprite-gen recolor-palette --base web/demo/output/atlas.png --out web/demo/output/palette.json",
+      "input": [
+        "web/demo/output/atlas.png"
+      ],
+      "output": [
+        "web/demo/output/palette.json"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedSeconds": 0.402,
+      "measurement": {
+        "colorCount": 4
+      },
+      "log": ".cache/logs/recolor-palette.txt",
+      "version": "2.20.0"
+    },
+    {
+      "stage": "recolor",
+      "command": "sprite-gen recolor --base web/demo/output/atlas.png --spec web/demo/input/recolor-spec.json --manifest web/demo/output/manifest.json --out-dir web/demo/output/variants",
+      "input": [
+        "web/demo/output/atlas.png",
+        "web/demo/input/recolor-spec.json",
+        "web/demo/output/manifest.json"
+      ],
+      "output": [
+        "web/demo/output/variants"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedSeconds": 0.483,
+      "measurement": {
+        "variants": [
+          {
+            "name": "sunset",
+            "sheet": "sunset.png",
+            "changedRgbPixels": 14587,
+            "alphaPreserved": true,
+            "passthroughPixels": 0
+          },
+          {
+            "name": "violet",
+            "sheet": "violet.png",
+            "changedRgbPixels": 14587,
+            "alphaPreserved": true,
+            "passthroughPixels": 0
+          }
+        ]
+      },
+      "log": ".cache/logs/recolor.txt",
+      "version": "2.20.0"
+    },
+    {
+      "stage": "export-aseprite",
+      "command": "sprite-gen export-aseprite --run-dir .cache/demo-run --output exports/aseprite.json",
+      "input": [
+        ".cache/demo-run/manifest.json"
+      ],
+      "output": [
+        ".cache/demo-run/exports/aseprite.json"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedSeconds": 0.553,
+      "measurement": {
+        "frameCount": 6,
+        "frameTags": [
+          {
+            "name": "wave",
+            "from": 0,
+            "to": 5,
+            "direction": "forward"
+          }
+        ],
+        "format": "Aseprite JSON array",
+        "nativeAseFile": false
+      },
+      "log": ".cache/logs/export-aseprite.txt",
+      "version": "2.20.0"
+    },
+    {
+      "stage": "export-pngs",
+      "command": "sprite-gen export-pngs --run-dir .cache/demo-run --state wave --out-dir web/demo/output/exported-pngs",
+      "input": [
+        ".cache/demo-run/frames",
+        ".cache/demo-run/sprite-request.json"
+      ],
+      "output": [
+        "web/demo/output/exported-pngs"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedSeconds": 0.423,
+      "measurement": {
+        "frameCount": 6,
+        "allFramesPixelIdentical": true,
+        "filenames": [
+          "frame-00.png",
+          "frame-01.png",
+          "frame-02.png",
+          "frame-03.png",
+          "frame-04.png",
+          "frame-05.png"
+        ]
+      },
+      "log": ".cache/logs/export-pngs.txt",
+      "version": "2.20.0"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "web/demo/demo.json",
+      "bytes": 1797,
+      "sha256": "1b9a06bc207fe48d060281c82fcb3d8c06b83c73094a12f1836a93a9ece98569"
+    },
+    {
+      "path": "web/demo/input/keyed-sheet.png",
+      "bytes": 2416,
+      "sha256": "9d97ffa43348400ebe17d15d049702c4f94ff6663cde717f24b4941a9b03d9cc"
+    },
+    {
+      "path": "web/demo/input/provenance.json",
+      "bytes": 521,
+      "sha256": "404def7694d4438a56f7902334f466a7fbb9c4867486e293ba483ba0f800ba98"
+    },
+    {
+      "path": "web/demo/input/recolor-spec.json",
+      "bytes": 474,
+      "sha256": "2e21b8240ab662c99537be09f9cfc58fe240ba3affede55e4ee7c00582127a3c"
+    },
+    {
+      "path": "web/demo/input/sprite-request.json",
+      "bytes": 624,
+      "sha256": "37f9b66c6feaae6b4ebf674419e6fe1e7c07a3750b2000ef84c0565943fb2bea"
+    },
+    {
+      "path": "web/demo/output/aseprite.json",
+      "bytes": 2721,
+      "sha256": "c883f15964e8341d9aef4dc4138c3769ec37502ad1ab57b7b84a1a30ffc9b8a6"
+    },
+    {
+      "path": "web/demo/output/atlas.png",
+      "bytes": 1898,
+      "sha256": "10aab7fd32e4f11476c0df2c606b46bb5a4f534a3718104bad6f669fae042d05"
+    },
+    {
+      "path": "web/demo/output/contact-sheet.png",
+      "bytes": 4194,
+      "sha256": "cde3c0c51134962c4de41d0c7b0b19b27d6b302ef4debd15bd9ed4f7013a9967"
+    },
+    {
+      "path": "web/demo/output/cutout-sheet.png",
+      "bytes": 2417,
+      "sha256": "68ecf47689a0550da5d514d18ba080fe67a12aef6658090363345baac2ddf461"
+    },
+    {
+      "path": "web/demo/output/exported-pngs/frame-00.png",
+      "bytes": 790,
+      "sha256": "05284566f08efe06e18f8126510898442dcee99342ab0d5cf390757b1cffd57b"
+    },
+    {
+      "path": "web/demo/output/exported-pngs/frame-01.png",
+      "bytes": 738,
+      "sha256": "2f40c3dcd1f41ccd2ada8525f8579cbd5cf4c2f2930a985630967d8fb7ae03e8"
+    },
+    {
+      "path": "web/demo/output/exported-pngs/frame-02.png",
+      "bytes": 785,
+      "sha256": "52a561dde6876eef34edb2025610d108b7efd71da76d045771bc40193ad040e9"
+    },
+    {
+      "path": "web/demo/output/exported-pngs/frame-03.png",
+      "bytes": 775,
+      "sha256": "9b989921d62819c6d8a06c49b7265b6fa5fbbaf447788fa71a1c5f6e4dc8683b"
+    },
+    {
+      "path": "web/demo/output/exported-pngs/frame-04.png",
+      "bytes": 785,
+      "sha256": "52a561dde6876eef34edb2025610d108b7efd71da76d045771bc40193ad040e9"
+    },
+    {
+      "path": "web/demo/output/exported-pngs/frame-05.png",
+      "bytes": 738,
+      "sha256": "2f40c3dcd1f41ccd2ada8525f8579cbd5cf4c2f2930a985630967d8fb7ae03e8"
+    },
+    {
+      "path": "web/demo/output/frames/frame-00.png",
+      "bytes": 790,
+      "sha256": "05284566f08efe06e18f8126510898442dcee99342ab0d5cf390757b1cffd57b"
+    },
+    {
+      "path": "web/demo/output/frames/frame-01.png",
+      "bytes": 738,
+      "sha256": "2f40c3dcd1f41ccd2ada8525f8579cbd5cf4c2f2930a985630967d8fb7ae03e8"
+    },
+    {
+      "path": "web/demo/output/frames/frame-02.png",
+      "bytes": 785,
+      "sha256": "52a561dde6876eef34edb2025610d108b7efd71da76d045771bc40193ad040e9"
+    },
+    {
+      "path": "web/demo/output/frames/frame-03.png",
+      "bytes": 775,
+      "sha256": "9b989921d62819c6d8a06c49b7265b6fa5fbbaf447788fa71a1c5f6e4dc8683b"
+    },
+    {
+      "path": "web/demo/output/frames/frame-04.png",
+      "bytes": 785,
+      "sha256": "52a561dde6876eef34edb2025610d108b7efd71da76d045771bc40193ad040e9"
+    },
+    {
+      "path": "web/demo/output/frames/frame-05.png",
+      "bytes": 738,
+      "sha256": "2f40c3dcd1f41ccd2ada8525f8579cbd5cf4c2f2930a985630967d8fb7ae03e8"
+    },
+    {
+      "path": "web/demo/output/gif-manifest.json",
+      "bytes": 1505,
+      "sha256": "63088701897fdcf5a99ffec36a7fd386f599d36fbdb5d8b348d93a1d43c04bbf"
+    },
+    {
+      "path": "web/demo/output/manifest.json",
+      "bytes": 1756,
+      "sha256": "653700cc52c7a54b3067033ee3ba5a7d9c19e9c348133e8b221fe640e718f886"
+    },
+    {
+      "path": "web/demo/output/palette.json",
+      "bytes": 659,
+      "sha256": "f47f9d6514484c215fb6805507ba0b9f8f5763d30ebcd9d88252a18eb01ef05b"
+    },
+    {
+      "path": "web/demo/output/sprite-sheet-alpha.report.json",
+      "bytes": 2111,
+      "sha256": "887a0ada93060fbf81fc36c3fde05fd75482dd3c54f4bd6c26d2925274dcbae5"
+    },
+    {
+      "path": "web/demo/output/variants/recolor.report.json",
+      "bytes": 1680,
+      "sha256": "245904bbcca7888ff2dffad32cb8919609e585fee8e6d6cd6a68d003df6177c2"
+    },
+    {
+      "path": "web/demo/output/variants/sunset.manifest.json",
+      "bytes": 1758,
+      "sha256": "d22644bc3e4b98e9aa07391d58a931d1865a1971384710c4a96c2cc2e5bbff2f"
+    },
+    {
+      "path": "web/demo/output/variants/sunset.png",
+      "bytes": 1900,
+      "sha256": "e90b4958ede8224410d00566e62c6c54a750ec0c6d5e8cf1bfc9e7cb60c86172"
+    },
+    {
+      "path": "web/demo/output/variants/violet.manifest.json",
+      "bytes": 1758,
+      "sha256": "0bb4614e126df9b69bed89466e26bd9e06cc32e9fe7a74c67ed814e4fccde5ab"
+    },
+    {
+      "path": "web/demo/output/variants/violet.png",
+      "bytes": 1895,
+      "sha256": "ed2943aa1eb359ac9416c664eec9139d8f9bebb6bc786675a04dbf735db1b42b"
+    },
+    {
+      "path": "web/demo/output/wave.gif",
+      "bytes": 6319,
+      "sha256": "8230f3b8a1087aa5e020f24ffc066f5985615ce6ce35d7209006ba1158b00f0f"
+    }
+  ]
+}

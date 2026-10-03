@@ -1,0 +1,200 @@
+{
+  "date": "2026-10-04",
+  "timezone": "Asia/Shanghai",
+  "url": "http://localhost:4196/projects/003-sprite-gen/",
+  "guide": {
+    "loaded": true,
+    "width": 3840,
+    "height": 2880,
+    "sha256": "e7cbb18ffc64c203d31f837b8c02e183944b02a8167788edd3a67d3b09c9b863"
+  },
+  "views": [
+    {
+      "hash": "#overview",
+      "overflow": false,
+      "title": "角色动图与背景场景，怎样制作？ · sprite-gen",
+      "visible": [
+        "overview"
+      ]
+    },
+    {
+      "hash": "#examples",
+      "overflow": false,
+      "title": "看效果，也看它如何被验证。 · sprite-gen",
+      "visible": [
+        "examples"
+      ]
+    },
+    {
+      "hash": "#pipelines",
+      "overflow": false,
+      "title": "三种实现方式，先分清动作从哪里来。 · sprite-gen",
+      "visible": [
+        "pipelines"
+      ]
+    },
+    {
+      "hash": "#catalog",
+      "overflow": false,
+      "title": "按任务找能力。 · sprite-gen",
+      "visible": [
+        "catalog"
+      ]
+    },
+    {
+      "hash": "#scenarios",
+      "overflow": false,
+      "title": "从目标出发，判断是否合适。 · sprite-gen",
+      "visible": [
+        "scenarios"
+      ]
+    },
+    {
+      "hash": "#value",
+      "overflow": false,
+      "title": "对我的意义：把制作流程变成可复用能力。 · sprite-gen",
+      "visible": [
+        "value"
+      ]
+    },
+    {
+      "hash": "#sources",
+      "overflow": false,
+      "title": "让每个结论，都有出处。 · sprite-gen",
+      "visible": [
+        "sources"
+      ]
+    }
+  ],
+  "pipelineStages": [
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "准备运动画布",
+      "tab": "① AI 视频生成"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "生成连续运动",
+      "tab": "① AI 视频生成"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "解码与透明清理",
+      "tab": "① AI 视频生成"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "寻找动作周期",
+      "tab": "① AI 视频生成"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "导入已有素材",
+      "tab": "② 代码形变与组装"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "配置呼吸或帧序列",
+      "tab": "② 代码形变与组装"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "组装动图与资源",
+      "tab": "② 代码形变与组装"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "搭配背景合成场景",
+      "tab": "② 代码形变与组装"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "准备规格",
+      "tab": "③ AI 多姿势图"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "生成动作行",
+      "tab": "③ AI 多姿势图"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "清理与提帧",
+      "tab": "③ AI 多姿势图"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "筛选与调整",
+      "tab": "③ AI 多姿势图"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "组装图集",
+      "tab": "③ AI 多姿势图"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "测量网格",
+      "tab": "像素风后处理"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "吸附真实边界",
+      "tab": "像素风后处理"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "对齐与统一色彩",
+      "tab": "像素风后处理"
+    },
+    {
+      "hasInput": true,
+      "hasOutput": true,
+      "heading": "整数放大与放置",
+      "tab": "像素风后处理"
+    }
+  ],
+  "mobile": [
+    {
+      "hash": "#overview",
+      "overflow": false,
+      "visible": "overview",
+      "width": 390
+    },
+    {
+      "hash": "#pipelines",
+      "overflow": false,
+      "visible": "pipelines",
+      "width": 390
+    },
+    {
+      "hash": "#value",
+      "overflow": false,
+      "visible": "value",
+      "width": 390
+    }
+  ],
+  "desktop": {
+    "width": 1280,
+    "height": 720,
+    "overflow": false
+  },
+  "console": [],
+  "scope": "静态页面七栏导航、17 个流程阶段、引导图加载和手机布局。既有播放器检查见 ui-validation.json；未运行外部 AI 或 scene-render。"
+}

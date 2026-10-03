@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="sprite-gen 能力与价值研究：解释 AI 视频、代码形变与已有素材组装、AI 多姿势图片三种实现方式，展示透明动图、精灵图集、背景场景、算法、个人价值与扩展方向。">
+  <meta name="theme-color" content="#0b1220">
+  <title>sprite-gen · 精灵素材能力实验室</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data.js"></script>
+  <script defer src="demo-data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到内容</a>
+  <header class="topbar">
+    <a class="brand" href="../../"><span class="brand-symbol" aria-hidden="true">▦</span><span>开源项目研究库</span></a>
+    <span class="breadcrumb">研究项目 <span>/</span> 003</span>
+    <a class="repo-link" href="https://github.com/aldegad/sprite-gen" target="_blank" rel="noreferrer">上游仓库 <span aria-hidden="true">↗</span></a>
+  </header>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="project-name"><span class="overline">SPRITE PRODUCTION</span><strong>sprite-gen<span>.</span></strong><p>精灵素材能力实验室</p></div>
+      <nav aria-label="研究内容" id="navigation">
+        <a href="#overview" data-view="overview"><span aria-hidden="true">01</span>能力总览</a>
+        <a href="#examples" data-view="examples"><span aria-hidden="true">02</span>效果与复现</a>
+        <a href="#pipelines" data-view="pipelines"><span aria-hidden="true">03</span>流程与原理</a>
+        <a href="#catalog" data-view="catalog"><span aria-hidden="true">04</span>能力目录</a>
+        <a href="#scenarios" data-view="scenarios"><span aria-hidden="true">05</span>场景与边界</a>
+        <a href="#value" data-view="value"><span aria-hidden="true">06</span>价值与扩展</a>
+        <a href="#sources" data-view="sources"><span aria-hidden="true">07</span>来源与验证</a>
+      </nav>
+      <div class="side-note"><span class="tiny-label">研究快照</span><p>2026.10.03</p><a id="snapshot-link" target="_blank" rel="noreferrer" href="https://github.com/aldegad/sprite-gen/commit/d993e5300b4255111e8ee0e29779caea1b3b97bd"><code>d993e53</code></a><p class="muted">固定源码与示例来源，<br>区分上游展示和本机验证。</p></div>
+    </aside>
+    <main id="main" tabindex="-1">
+      <section class="view" id="overview" aria-labelledby="overview-title">
+        <div class="page-heading"><div><span class="overline">CAPABILITY OVERVIEW</span><h1 id="overview-title">角色动图与背景场景，怎样制作？</h1><p>sprite-gen 是 2D 动画素材生产与整理工具：连接外部生成模型和代码处理，把图片、视频或已有动作帧变成可播放、可复用的资源。</p></div><span class="outline-tag">Python CLI + Agent Skill</span></div>
+        <div class="understanding-grid" aria-label="一分钟理解 sprite-gen">
+<article class="understanding-card"><span class="tiny-label">能力是什么</span><h2>角色动图、精灵图与场景视频</h2><p>生成或导入动作，抠图、切帧、换色、打包，再把角色动画和背景合成。</p></article>
+<article class="understanding-card"><span class="tiny-label">原理是什么</span><h2>模型画动作，代码加工与合成</h2><p>复杂姿态来自 AI 或已有帧；代码可做轻微呼吸、帧编排和按规则移动、叠加素材。</p></article>
+<article class="understanding-card"><span class="tiny-label">使用场景是什么</span><h2>2D 素材与短场景制作</h2><p>游戏原型、网页与桌面角色、贴纸、视频包装、场景样片和素材库整理。</p></article>
+<article class="understanding-card"><span class="tiny-label">对我的意义是什么</span><h2>复用素材，掌握制作流程</h2><p>减少批量素材的重复整理；后续做角色动效或场景工具时，复用其工作流、算法与资源格式。</p></article>
+</div>
+<figure class="understanding-map panel">
+<figcaption><div><span class="overline">START WITH THE MAP</span><h2>一张图看懂输入、动作来源、原理与输出。</h2><p>按动作来源归纳三种方式；背景合成可以接任意路线。橙色虚线区为需开发与验证的扩展方向。</p></div><a href="media/capabilities-principles-map.png" target="_blank" rel="noreferrer">打开高清图 ↗</a></figcaption>
+<a class="map-image-link" href="media/capabilities-principles-map.png" target="_blank" rel="noreferrer" aria-label="打开 sprite-gen 能力与原理全景图，可放大阅读"><img src="media/capabilities-principles-map.png" alt="sprite-gen 全景图：视频模型生成动作、代码呼吸与既有帧组装、图像模型画多姿势，配套透明处理、帧提取、循环、人工整理、换色、图集导出、背景场景与扩展方向" width="3840" height="2880" fetchpriority="high"></a>
+<div class="map-caption"><span>点击图片可放大；流程示意不等同于本机生成结果。</span><a href="#pipelines">理解三种实现方式 →</a><a href="#value">判断对我的价值 →</a></div>
+</figure>
+<div class="three-route-grid" aria-label="三种动作来源">
+<a class="understanding-card" href="#pipelines?pipe=B"><span class="badge purple">① 视频模型</span><h2>单图＋动作要求 → AI 视频</h2><p>狐狸图＋“原地攻击”：模型生成连续运动，库再拆帧、去背景、截取动作。</p><span class="route-origin">动作来自外部视频模型</span></a>
+<a class="understanding-card" href="#pipelines?pipe=code"><span class="badge mint">② 代码处理与组装</span><h2>静态图／已有姿势 → 动画</h2><p>单姿势做轻微呼吸；已有六姿势按顺序播放。背景与道具按明确规则叠加。</p><span class="route-origin">动作来自既有素材或有限形变</span></a>
+<a class="understanding-card" href="#pipelines?pipe=A"><span class="badge purple">③ 图像模型</span><h2>参考图＋姿势要求 → 多帧图片</h2><p>模型直接画多姿势，库提取、对齐、选择，再组装 GIF 或精灵图，不经过视频。</p><span class="route-origin">动作来自模型画出的多张姿势</span></a>
+</div>
+<p class="display-scope">本页是研究与效果展示：GIF 由浏览器播放，机器人由 Canvas 读取真实输出图集。网页本身没有接入生成服务。</p>
+
+<div class="overview-grid">
+          <article class="showcase panel">
+            <div class="panel-head"><div><span class="tiny-label">UPSTREAM SAMPLE</span><h2>视频路线的成品 GIF 示例</h2></div><span class="badge purple">上游真实样例</span></div>
+            <div class="sprite-stage checker" id="hero-stage"><img id="hero-sprite" src="media/attack-fox-hood.gif" alt="上游狐狸兜帽角色攻击动画，展示视频提取的透明动作循环" width="640" height="520"><span class="stage-coordinate">RGBA / LOOP</span></div>
+            <div class="showcase-toolbar"><div class="segmented" aria-label="选择演示样例"><button type="button" class="active" data-hero="fox" aria-pressed="true">狐狸角色</button><button type="button" data-hero="slime" aria-pressed="false">史莱姆</button><button type="button" data-hero="furniture" aria-pressed="false">素材编辑</button></div><div class="background-controls" aria-label="预览背景"><button type="button" data-bg="checker" class="bg-checker active" aria-label="棋盘背景" aria-pressed="true"></button><button type="button" data-bg="light" class="bg-light" aria-label="白色背景" aria-pressed="false"></button><button type="button" data-bg="dark" class="bg-dark" aria-label="深色背景" aria-pressed="false"></button></div></div>
+            <p id="hero-caption" class="sample-caption">上游提供的透明攻击 GIF：视频模型产生动作，库处理与导出。本页播放现成文件；未在本机生成这只狐狸，原始输入与提示词未完整归档。</p>
+            <a id="hero-source" class="source-link" href="https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/assets/attack-fox-hood.gif" target="_blank" rel="noreferrer">查看样例来源</a>
+          </article>
+          <div class="overview-notes">
+            <article class="output-card"><span class="tiny-label">最终交付</span><h2>图片 + 动画 + 描述文件</h2><ul class="output-list"><li><span>01</span><div><strong>透明 PNG 图集</strong><p>多个动作、多个帧，整理在同一张图里。</p></div><code>atlas.png</code></li><li><span>02</span><div><strong>运行时帧信息</strong><p>记录矩形位置、播放速度和循环方式。</p></div><code>manifest.json</code></li><li><span>03</span><div><strong>透明动画循环</strong><p>GIF / WebP / 帧条带，用于播放与验收。</p></div><code>loop.webp</code></li></ul></article>
+            <a class="route-card" href="#pipelines?pipe=A"><span class="route-letter">A</span><div><h3>图像 → 动作图集</h3><p>按动作生成姿态，抠图、提取、对齐、打包。</p></div><span class="route-count">5 阶段</span></a>
+            <a class="route-card" href="#pipelines?pipe=B"><span class="route-letter violet">B</span><div><h3>视频 → 透明循环</h3><p>静态图生视频，逐帧处理，找到动作周期。</p></div><span class="route-count">4 阶段</span></a>
+            <div class="boundary-note"><span class="badge amber">质量边界</span><p>短动作更适合起步。复杂人形走跑、精确脚部接触仍需动作检查。</p><a href="#scenarios">查看适用范围</a></div>
+          </div>
+        </div>
+        <div class="section-intro"><div><span class="overline">BEYOND GENERATION</span><h2>已有素材，也能进入这条流程。</h2></div><a href="#catalog">浏览完整能力目录</a></div>
+        <div class="feature-grid"><a class="feature-card" href="#examples"><span class="feature-icon" aria-hidden="true">α</span><h3>抠图与切帧</h3><p>清理色键边缘，将姿态或网格拆成透明帧。</p><span>真实算法复现</span></a><a class="feature-card" href="#pipelines?pipe=pixel"><span class="feature-icon" aria-hidden="true">▦</span><h3>像素风修复</h3><p>测量网格、纠正误检、统一调色板与帧间对齐。</p><span>确定性后处理</span></a><a class="feature-card" href="#catalog?group=D"><span class="feature-icon" aria-hidden="true">◒</span><h3>换色与导出</h3><p>制作配色变体，输出逐帧 PNG 和引擎兼容描述。</p><span>素材再利用</span></a><a class="feature-card" href="#catalog?group=S"><span class="feature-icon" aria-hidden="true">⊞</span><h3>场景与辅助工具</h3><p>背景平铺、投影阴影，以及素材摆放和相机运动。</p><span>可选制作流程</span></a></div>
+      </section>
+
+      <section class="view" id="examples" aria-labelledby="examples-title" hidden>
+        <div class="page-heading"><div><span class="overline">SHOW / VERIFY</span><h1 id="examples-title">看效果，也看它如何被验证。</h1><p>上游真实素材展示生成结果；本机复现展示无需模型的处理能力。</p></div></div>
+        <div class="tab-list" role="tablist" aria-label="效果展示类型"><button type="button" role="tab" id="tab-local" aria-controls="example-local" aria-selected="true" data-example="local">本机后处理复现</button><button type="button" role="tab" id="tab-chroma" aria-controls="example-chroma" aria-selected="false" data-example="chroma" tabindex="-1">透明边缘对比</button><button type="button" role="tab" id="tab-curation" aria-controls="example-curation" aria-selected="false" data-example="curation" tabindex="-1">筛帧与编辑</button></div>
+        <div id="example-local" role="tabpanel" aria-labelledby="tab-local">
+          <div class="local-header"><span class="badge mint">本机 CLI 复现</span><p>实际输入是一张已画好六个挥手姿势的品红底图片。库去背景、切帧、打包与换色；动作已经在输入里，外部模型调用为 0。</p></div>
+          <div class="demo-grid">
+            <article class="panel"><div class="panel-head"><h2>按图集坐标播放</h2><span id="frame-info" class="mono">FRAME 01</span></div><div class="canvas-stage checker" id="local-stage"><canvas id="frame-player" width="256" height="256" aria-label="使用真实输出图集与帧描述播放的测试动画"></canvas></div><div class="player-controls"><button type="button" id="play-toggle" class="primary-button">暂停</button><label>播放速度 <input id="fps" type="range" min="1" max="16" value="6"><output id="fps-value">6 fps</output></label><button type="button" id="next-frame" class="small-button">下一帧</button></div><div class="frame-buttons" id="frame-buttons" aria-label="选择帧"></div><p class="sample-caption">Canvas 根据库输出的绝对矩形从 PNG 图集中裁出一帧，再按 fps 切换。可暂停、逐帧观察和调速；这里的播放不是生成新动作。</p></article>
+            <article class="panel"><div class="panel-head"><h2>从色键到透明图集</h2><span class="badge mint">实际输出</span></div><div class="comparison-tabs segmented" aria-label="查看处理阶段"><button type="button" data-local-image="input" class="active" aria-pressed="true">色键输入</button><button type="button" data-local-image="alpha" aria-pressed="false">透明结果</button><button type="button" data-local-image="variant" aria-pressed="false">换色结果</button></div><div class="atlas-display checker"><img id="local-atlas" alt="本机测试输入及 sprite-gen 处理输出的图集" width="640" height="160"></div><div class="metrics" id="local-metrics"></div><div class="artifact-links" id="artifact-links"></div></article>
+          </div>
+          <div class="section-intro"><div><span class="overline">EXECUTION EVIDENCE</span><h2>处理记录</h2></div><a href="demo/validation.json" target="_blank" rel="noreferrer">打开验证记录</a></div><div class="validation-list" id="validation-list"></div>
+        </div>
+        <div id="example-chroma" role="tabpanel" aria-labelledby="tab-chroma" hidden><div class="local-header"><span class="badge purple">上游对比样例</span><p>观察源图、旧版清理与软透明度解混的差异。对比图来自上游，保留原图内容。</p></div><div class="comparison-gallery"><article class="panel media-panel"><h2>插画：绿幕与细轮廓</h2><img src="media/chroma-fullbody-illustration-green.png" alt="上游全身插画绿幕对比，展示原图、旧版边缘清理和软alpha解混结果" width="640" loading="lazy"><p>边缘混合色被分解为主体颜色与透明度，减少色边，同时保留头发等细节。</p><a class="source-link" data-doc="docs/chroma-alpha.md" target="_blank" rel="noreferrer">抠图原理与限制</a></article><article class="panel media-panel"><h2>像素画：轮廓与透明度</h2><img src="media/chroma-fullbody-pixelart-magenta.png" alt="上游像素画品红背景对比，展示轮廓清理和透明输出" width="640" loading="lazy"><p>像素风路径后续会把透明度二值化，输出透明或不透明的逻辑像素。</p><a class="source-link" data-doc="docs/pixel-unfake.md" target="_blank" rel="noreferrer">像素修复说明</a></article></div></div>
+        <div id="example-curation" role="tabpanel" aria-labelledby="tab-curation" hidden><div class="local-header"><span class="badge purple">上游界面截图</span><p>生成之后，通过 curation webview 选择、排序、移动和检查素材，再烘焙输出。</p></div><article class="panel curator-panel"><img src="media/curator-iso.png" alt="sprite-gen 上游 curation 家具素材整理界面，展示等距网格与物件预览" width="1200" loading="lazy"><div><h2>人工判断进入最终资源</h2><p>原始帧被保留，选择和变换写入 <code>curation.json</code>。重新组装图集时才应用这些修改。</p><p>当前展示的是上游界面截图。本项目提供图集播放器与结果对比，完整编辑器需在上游环境中运行。</p><a class="source-link" data-doc="docs/curation.md" target="_blank" rel="noreferrer">筛帧契约与字段</a></div></article></div>
+      </section>
+
+      <section class="view" id="pipelines" aria-labelledby="pipelines-title" hidden>
+<div class="page-heading"><div><span class="overline">WHERE MOTION COMES FROM</span><h1 id="pipelines-title">三种实现方式，先分清动作从哪里来。</h1><p>每条路线都说明输入、动作来源、处理原理与输出。背景合成可接在任何路线之后。</p></div></div>
+<div class="explanation-note"><strong>按理解方式分成三类。</strong><p>上游正式组织为 A「图像到图集」、B「视频到循环」两条生成管线，加上素材处理、后期和场景工具。这里的②解释代码能力，不代表新增一个上游生成模型。</p></div>
+<div class="tab-list" role="tablist" aria-label="实现方式与处理原理"><button type="button" role="tab" id="pipe-tab-B" aria-controls="pipeline-panel" aria-selected="true" data-pipe="B">① AI 视频生成</button><button type="button" role="tab" id="pipe-tab-code" aria-controls="pipeline-panel" aria-selected="false" data-pipe="code" tabindex="-1">② 代码形变与组装</button><button type="button" role="tab" id="pipe-tab-A" aria-controls="pipeline-panel" aria-selected="false" data-pipe="A" tabindex="-1">③ AI 多姿势图</button><button type="button" role="tab" id="pipe-tab-pixel" aria-controls="pipeline-panel" aria-selected="false" data-pipe="pixel" tabindex="-1">像素风后处理</button></div>
+<div id="pipeline-panel" role="tabpanel" aria-labelledby="pipe-tab-B"><div class="pipeline-summary" id="pipeline-summary"></div><div class="pipeline-nodes" id="pipeline-nodes" aria-label="流程阶段"></div><article class="stage-detail panel" id="stage-detail"></article></div>
+<div class="principle-grid">
+<article class="panel"><span class="tiny-label">模型生成</span><h2>参考图＋要求 → 新画面</h2><p>视频模型补出连续运动；图像模型直接画多张姿势。图像接入 Codex / Grok / OpenAI，视频接入 Grok Imagine。参考、布局和方向锚点提供约束，结果仍需人工验收。</p><a class="source-link" data-doc="docs/gen.md" target="_blank" rel="noreferrer">生成适配器与透明策略</a></article>
+<article class="panel"><span class="tiny-label">图像算法</span><h2>处理已经存在的像素</h2><p>Pillow 与 NumPy 处理背景、Alpha、连通区域、像素网格、调色板和对齐。绿幕只是透明策略之一，原生透明 PNG 可绕过色键清理。已有视频的透明抠图依赖可识别色键背景。</p><a class="source-link" data-doc="docs/chroma-alpha.md" target="_blank" rel="noreferrer">色键与软透明度</a></article>
+<article class="panel"><span class="tiny-label">有限程序动画</span><h2>呼吸由形变规则产生</h2><p>单张静态姿势按周期轻微挤压、拉伸身体，保护头部与脚端，再烘焙成多帧。可产生待机呼吸；复杂走路和攻击仍需要已画好的姿势或模型生成。</p><a class="source-link" data-doc="docs/breathing.md" target="_blank" rel="noreferrer">单姿势呼吸的实现</a></article>
+<article class="panel"><span class="tiny-label">时间与场景</span><h2>选帧、移动、逐层叠加</h2><p>播放按时间选择图片；循环分析比较帧差。场景逐帧更新位置和相机，播放已有角色动画，再叠加背景与投影阴影。位置移动不会自动创造新的肢体动作。</p><a class="source-link" data-doc="docs/scene.md" target="_blank" rel="noreferrer">场景配置与输出</a></article>
+</div>
+<article class="setup-panel panel technology-panel"><div><span class="tiny-label">TECHNOLOGY</span><h2>Python 组织流程，图像与视频工具执行处理。</h2></div><div class="setup-grid"><div><strong>Python CLI / 工作流</strong><p>保存规格、调用模型、组织任务、产物与报告。</p></div><div><strong>Pillow / NumPy</strong><p>图片、透明度、颜色、形变、区域与帧差计算。</p></div><div><strong>FFmpeg / FFprobe</strong><p>视频解码、检查与编码；img2webp 编码 WebP，可选 RIFE 用于插帧修复。</p></div></div><p class="technology-caption">GIF 是输出与播放格式。外部模型的训练和内部网络不由库实现；各加工工具按素材需要组合使用。</p></article>
+</section>
+
+
+      <section class="view" id="catalog" aria-labelledby="catalog-title" hidden><div class="page-heading"><div><span class="overline">CAPABILITY DIRECTORY</span><h1 id="catalog-title">按任务找能力。</h1><p>整理主要生成流程、独立工具、后处理与质量检查；每项都可追溯到源码或规范。</p></div><span class="outline-tag" id="catalog-count"></span></div><div class="catalog-toolbar"><label class="search-field"><span aria-hidden="true">⌕</span><input id="capability-search" type="search" placeholder="搜索能力、命令或关键词" aria-label="搜索能力、命令或关键词"></label><div class="category-buttons" id="category-buttons" aria-label="能力分类"></div></div><p class="catalog-result" id="catalog-result" aria-live="polite"></p><div class="catalog-grid" id="capability-grid"></div><div class="empty-result" id="empty-result" hidden><h2>没有找到匹配能力</h2><p>试试“抠图”“图集”“视频”或完整 CLI 命令。</p><button type="button" id="clear-search" class="small-button">清除筛选</button></div></section>
+
+      <section class="view" id="scenarios" aria-labelledby="scenarios-title" hidden><div class="page-heading"><div><span class="overline">WHEN TO USE IT</span><h1 id="scenarios-title">从目标出发，判断是否合适。</h1><p>场景建议基于源码和功能契约推导，实际收益需要用自己的素材验证。</p></div></div><div class="scenario-grid" id="scenario-grid"></div><div class="section-intro"><div><span class="overline">QUALITY BOUNDARIES</span><h2>格式正确之后，还要检查动作。</h2></div></div><div class="boundary-grid"><article class="boundary-card"><span>01 / MOTION</span><h3>人形走跑仍需验收</h3><p>短姿态变化是图像行管线的稳定起点。精确脚接触、左右相位对称和循环 locomotion 需要单独通过动作 QA。</p></article><article class="boundary-card"><span>02 / IDENTITY</span><h3>参考约束有作用，也有失败</h3><p>提示词不能保证方向、脸部和配饰永远一致。方向检测的高置信度也可能判断错误，需要看实际帧。</p></article><article class="boundary-card"><span>03 / FRAME COUNT</span><h3>更多帧不自动更顺滑</h3><p>默认短动作通常从 4 帧开始。上游的 9 / 12 帧试验出现重复人物、空帧、合并姿态和提取失败。</p></article><article class="boundary-card"><span>04 / EXPORT</span><h3>引擎导出有明确范围</h3><p>Aseprite 导出是兼容 JSON 与原 PNG。Phaser / Flame 的描述结构有测试，仓库未在真实引擎运行时执行 CI。</p></article></div><div class="source-row"><a data-doc="docs/states-and-frames.md" target="_blank" rel="noreferrer">动作与帧数规范</a><a data-doc="docs/qa-motion.md" target="_blank" rel="noreferrer">动作验收标准</a><a data-doc="docs/engine-export.md" target="_blank" rel="noreferrer">引擎导出范围</a></div><article class="setup-panel panel"><div><span class="tiny-label">使用条件</span><h2>本地工具与外部生成服务分开准备。</h2></div><div class="setup-grid"><div><strong>基础处理</strong><p>Python ≥ 3.11，独立 venv，Pillow 与 NumPy。</p></div><div><strong>图像 / 视频生成</strong><p>准备相应服务登录或 API key；调用会消耗配额或产生 API 费用。</p></div><div><strong>视频处理</strong><p>FFmpeg / FFprobe、img2webp；RIFE 插帧为可选扩展，需要额外环境。</p></div></div><a class="source-link" data-doc="docs/video-pipeline.md" target="_blank" rel="noreferrer">视频环境与处理契约</a></article></section>
+
+      <section class="view" id="value" aria-labelledby="value-title" hidden>
+<div class="page-heading"><div><span class="overline">VALUE FOR YOUR NEXT PROJECT</span><h1 id="value-title">对我的意义：把制作流程变成可复用能力。</h1><p>结合当前的开源项目研究，掌握动画资源的生产与整理，为后续角色动效、素材工具和场景产品提供参考。</p></div></div>
+<div class="value-grid">
+<article class="panel value-card"><span class="tiny-label">01 / 快速验证想法</span><h2>从角色设计到动作候选</h2><p>以后做网页角色、桌面吉祥物、贴纸或游戏原型时，用角色图和动作要求启动生成，再得到透明动画或精灵图。模型负责画，库把结果加工成能播放的素材。</p><p class="value-condition">需要生成服务与参考图，身份和动作质量仍需验收。</p></article>
+<article class="panel value-card"><span class="tiny-label">02 / 少做重复整理</span><h2>让已有素材批量复用</h2><p>已有姿势图、PNG 帧或图集可直接抠图、拆分、选帧、换色与重打包。同一动作制作多个配色、导出多个格式，复用帧位置与时序数据。</p><p class="value-condition">本机已验证这类处理，无需重新调用 AI。</p></article>
+<article class="panel value-card"><span class="tiny-label">03 / 把素材搭成样片</span><h2>角色动画＋背景＋移动规则</h2><p>已有狐狸走路动画和森林背景，再配置向右移动、相机和视差，按规则渲染场景样片。肢体动作由素材提供，代码负责摆放、播放、移动与叠加。</p><p class="value-condition">适合短场景验证；场景渲染尚未在本项目本机实测。</p></article>
+<article class="panel value-card"><span class="tiny-label">04 / 学习可复用设计</span><h2>模型适配＋加工＋人工整理＋导出</h2><p>研究如何统一规格、隔离生成服务、保存编辑规则、管理候选、测量质量，再输出图片与 JSON。这些设计可用于后续图像生成、素材管理和视频工具。</p><p class="value-condition">流程与代码结构提供参考，具体产品界面和业务需开发。</p></article>
+</div>
+<div class="section-intro"><div><span class="overline">CHOOSE BY YOUR INPUT</span><h2>先看手上有什么，再选择入口。</h2></div></div>
+<div class="decision-table-wrap panel"><table class="decision-table"><thead><tr><th>目标 / 输入</th><th>选择什么</th><th>收益与条件</th></tr></thead><tbody>
+<tr><td>一张角色图，想要复杂动作</td><td>视频或多姿势图像模型</td><td>获得候选；成本和成片质量取决于模型与素材。</td></tr>
+<tr><td>已有姿势、帧图或图集</td><td>代码处理、整理与导出</td><td>批量复用，减少反复手工切图与打包。</td></tr>
+<tr><td>静态姿势只需要轻微待机</td><td>程序化呼吸</td><td>有限身体形变生成循环，不必生成视频。</td></tr>
+<tr><td>动画与背景都已有</td><td>scene.json 场景合成</td><td>按位置、速度和相机规则输出带背景 GIF / MP4。</td></tr>
+<tr><td>只把一个现成视频转成 GIF</td><td>简单转换工具即可</td><td>额外价值主要体现在透明处理、循环选择、批量规格与多格式资源管理。</td></tr>
+</tbody></table></div>
+<div class="explanation-note"><strong>价值判断</strong><p>单个 GIF 转换工作不多；维护多个角色、动作、方向、配色和格式时，可重复流程的收益更明显。此判断来自接口和处理方式分析，未做人工耗时或批量性能基准。</p></div>
+<div class="section-intro"><div><span class="overline">EXTENSION IDEAS</span><h2>可扩展方向：需要新增开发与验证。</h2></div><span class="badge amber">与现有能力分开</span></div>
+<div class="extension-grid">
+<article class="extension-card"><h3>更多生成后端</h3><p>新增云端或本地图像、视频模型适配器，统一请求与错误。</p></article>
+<article class="extension-card"><h3>更强动作与身份约束</h3><p>姿态、轨迹条件和跨方向校验，减少失败候选。</p></article>
+<article class="extension-card"><h3>更丰富的程序动画</h3><p>骨骼、IK、弹性形变、动作混合。</p></article>
+<article class="extension-card"><h3>生产管理与素材库</h3><p>可视化队列、恢复、成本统计、版本和批量验收。</p></article>
+<article class="extension-card"><h3>引擎接入与交互</h3><p>Unity / Godot 加载、状态机、实时操作和物理。</p></article>
+</div>
+<p class="display-scope">扩展区是后续开发建议。现有场景能力是素材逐帧合成，已有资源导出不等于已具备这些交互模块。</p>
+</section>
+
+<section class="view" id="sources" aria-labelledby="sources-title" hidden><div class="page-heading"><div><span class="overline">TRACEABLE RESEARCH</span><h1 id="sources-title">让每个结论，都有出处。</h1><p>固定源码快照、保留媒体来源，单独记录本机验证范围。</p></div></div><div class="research-card panel"><div><span class="tiny-label">PINNED SNAPSHOT</span><h2>aldegad / sprite-gen</h2><p>研究日期：2026-10-03 · Asia/Shanghai</p><a href="https://github.com/aldegad/sprite-gen/commit/d993e5300b4255111e8ee0e29779caea1b3b97bd" target="_blank" rel="noreferrer"><code>d993e5300b4255111e8ee0e29779caea1b3b97bd</code></a></div><span class="outline-tag">Apache-2.0 · 仓库代码</span></div><div class="evidence-grid"><article class="panel"><span class="badge purple">上游证据</span><h2>文档、源码与媒体</h2><p>生成与循环效果引用仓库已有样例。功能和限制以固定 commit 的文档及代码为依据。</p><p>本页不测量模型生成成功率，也不把上游样例记为本机生成结果。</p></article><article class="panel"><span class="badge mint">本机证据</span><h2>处理结果与页面交互</h2><p id="verified-scope">已在独立 Python venv 中验证抠图、切帧、图集、换色与导出，完整结果见下方验证记录。</p><p>使用几何测试输入，验证处理链路和输出格式。AI 生成、视频服务与复杂人形动作尚未本机实测。</p></article></div><div class="section-intro"><div><span class="overline">PRIMARY SOURCES</span><h2>一手资料索引</h2></div></div><div class="source-grid" id="source-grid"></div><div class="license-note"><h2>素材来源与复用</h2><p>原始动画和对比图来自 sprite-gen 上游文档。代码许可证、第三方算法声明与生成服务规则需分别核对；完整来源记录保留在子项目文档与媒体清单中。</p><div class="artifact-links"><a href="media/capabilities-principles-map.png" target="_blank" rel="noreferrer">能力与原理高清图</a><a href="media/capabilities-principles-map.sources.json" target="_blank" rel="noreferrer">总览图依据与验证范围</a><a href="demo/validation.json" target="_blank" rel="noreferrer">本机验证 JSON</a><a href="media/media-index.json" target="_blank" rel="noreferrer">媒体来源清单</a><a data-doc="LICENSE" target="_blank" rel="noreferrer">上游 LICENSE</a><a data-doc="NOTICE" target="_blank" rel="noreferrer">上游 NOTICE</a></div></div></section>
+      <footer class="page-footer"><span>003 · sprite-gen / 能力研究与展示</span><span>上游样例 · 确定性处理复现 · 来源可追溯</span></footer>
+    </main>
+  </div>
+</body>
+</html>

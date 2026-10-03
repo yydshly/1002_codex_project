@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-03",
+  "timezone": "Asia/Shanghai",
+  "url": "http://localhost:4193/projects/003-sprite-gen/",
+  "desktop": {
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "overflow": false
+  },
+  "mobile": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "views": [
+      {
+        "contentWidth": 375,
+        "overflow": false,
+        "title": "从角色图，到可播放的二维素材。",
+        "width": 375
+      },
+      {
+        "contentWidth": 375,
+        "overflow": false,
+        "title": "看效果，也看它如何被验证。",
+        "width": 375
+      },
+      {
+        "contentWidth": 375,
+        "overflow": false,
+        "title": "把生成与工程处理接起来。",
+        "width": 375
+      },
+      {
+        "contentWidth": 375,
+        "overflow": false,
+        "title": "按任务找能力。",
+        "width": 375
+      },
+      {
+        "contentWidth": 375,
+        "overflow": false,
+        "title": "从目标出发，判断是否合适。",
+        "width": 375
+      },
+      {
+        "contentWidth": 375,
+        "overflow": false,
+        "title": "让每个结论，都有出处。",
+        "width": 375
+      }
+    ]
+  },
+  "interactions": [
+    "navigation",
+    "hero selection",
+    "background selection",
+    "pause and frame stepping",
+    "atlas and palette variant comparison",
+    "capability search",
+    "empty results and clear",
+    "category filters",
+    "pipeline and stage selection",
+    "playback speed range (6 → 16 → 6 fps)"
+  ],
+  "consoleErrors": [],
+  "scope": "浏览器交互与布局检查；不代表外部 AI 或引擎运行时验证",
+  "rootChecks": {
+    "catalog": "passed",
+    "tests": "9 passed",
+    "build": "passed"
+  }
+}

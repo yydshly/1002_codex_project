@@ -1,0 +1,25 @@
+{
+  "kind": "procedural-algorithm-test",
+  "aiGenerated": false,
+  "description": "Six simple geometric robot poses drawn by this script with Pillow primitives.",
+  "purpose": "Exercise chroma cutout, grid slicing, transparent atlas packing and deterministic palette swap.",
+  "grid": [
+    3,
+    2
+  ],
+  "cell": [
+    128,
+    160
+  ],
+  "background": "#ff00ff",
+  "phases": [
+    0,
+    1,
+    2,
+    3,
+    2,
+    1
+  ],
+  "authoringScript": "scripts/run_demo.py",
+  "externalApiCalls": 0
+}

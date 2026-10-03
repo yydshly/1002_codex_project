@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "sprite-gen-palette",
+  "source": "atlas.png",
+  "alpha_threshold": 8,
+  "color_count": 4,
+  "colors": [
+    {
+      "hex": "#203640",
+      "rgb": [
+        32,
+        54,
+        64
+      ],
+      "pixels": 15795
+    },
+    {
+      "hex": "#3fbbc2",
+      "rgb": [
+        63,
+        187,
+        194
+      ],
+      "pixels": 8845
+    },
+    {
+      "hex": "#eee9d5",
+      "rgb": [
+        238,
+        233,
+        213
+      ],
+      "pixels": 8316
+    },
+    {
+      "hex": "#ed9248",
+      "rgb": [
+        237,
+        146,
+        72
+      ],
+      "pixels": 5742
+    }
+  ]
+}

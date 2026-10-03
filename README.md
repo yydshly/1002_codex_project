@@ -13,6 +13,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 001 | [Cult UI · 组件能力与原理实验室](projects/001-cult-ui/README.md) | 可复制和修改的 React 界面与动效源码库，137 个组件覆盖 AI 输入/结果、工作台、表单、导航、反馈、引导、按钮卡片、官网、插画、设备媒体、文字与背景。通过 React 状态、Tailwind/CSS/SVG，结合 Motion、Canvas/WebGL 实现；用于 React 官网、作品集、AI/SaaS 与后台，帮助快速搭界面、复用交互和学习原理，业务后端需自行接入。 | 已完成 | [Cult UI](https://github.com/nolly-studio/cult-ui) | [演示](https://yydshly.github.io/1002_codex_project/projects/001-cult-ui/) |
 | 002 | [Upscayl 图片超分辨率研究](projects/002-upscayl/README.md) | 本地 AI 图片放大与细节增强工具。以预训练视觉模型、NCNN 和 Vulkan GPU 推理实现单张及批量处理；用于素材加工、脚本自动化和学习模型产品化，预测细节不等于恢复真实信息。 | 已完成 | [Upscayl](https://github.com/upscayl/upscayl) | — |
+| 003 | [sprite-gen · 精灵素材能力实验室](projects/003-sprite-gen/README.md) | 2D 动画素材生产与整理工具：支持角色图调用视频模型生成动作、代码形变与已有帧编排、图像模型直接生成多姿势，再做抠图、对齐、循环、换色和图集导出。以 Python、Pillow、NumPy、FFmpeg 加工资源，可把动画与背景按位置、速度和镜头合成 GIF / MP4；用于 2D 游戏、网页与桌面角色、贴纸、短场景和素材库，帮助复用素材、减少批量整理并学习 AI 工作流，复杂动作仍需验收。 | 已完成 | [sprite-gen](https://github.com/aldegad/sprite-gen) | [演示](https://yydshly.github.io/1002_codex_project/projects/003-sprite-gen/) |
 | 005 | [Jianying Headless · 配置驱动的初步剪辑](projects/005-jianying-headless/README.md) | 以结构化 JSON 计划驱动初步剪辑：Mac 适配剪映私有草稿格式与内部接口，生成可编辑工程和原生 MP4；Windows 调用 FFmpeg 输出 MP4。当前仅作自动化剪辑方向参考，暂不深入研究。 | 已归档 | [Jianying Headless](https://github.com/mcncarl/jianying-headless) | — |
 | 007 | [X-Twitter-Downloader · 视频下载产品参考](projects/007-x-twitter-downloader/README.md) | 解析公开 X 帖子的媒体信息，列出视频版本并提供下载入口。基础解析与下载原理已成熟，当前深入研究价值不大；有意义的是参考链接输入、版本选择、下载与失败反馈流程，指导后期视频下载产品开发。 | 已归档 | [X-Twitter-Downloader](https://x-twitter-downloader.com/zh-CN) | — |
 
@@ -27,6 +28,12 @@
 本地 AI 图片放大与细节增强工具。以预训练视觉模型、NCNN 和 Vulkan GPU 推理实现单张及批量处理；用于素材加工、脚本自动化和学习模型产品化，预测细节不等于恢复真实信息。
 
 [![Upscayl 能力与原理总览：应用能力、上游训练、本机 GPU 推理、技术关键词、后期价值与能力边界](projects/002-upscayl/assets/upscayl-overview.png)](projects/002-upscayl/README.md)
+
+### 003 · sprite-gen · 精灵素材能力实验室
+
+2D 动画素材生产与整理工具：支持角色图调用视频模型生成动作、代码形变与已有帧编排、图像模型直接生成多姿势，再做抠图、对齐、循环、换色和图集导出。以 Python、Pillow、NumPy、FFmpeg 加工资源，可把动画与背景按位置、速度和镜头合成 GIF / MP4；用于 2D 游戏、网页与桌面角色、贴纸、短场景和素材库，帮助复用素材、减少批量整理并学习 AI 工作流，复杂动作仍需验收。
+
+[![sprite-gen 能力与原理全景图：三种动作来源、输入输出、图像算法、背景场景、技术底座与需开发的扩展方向](projects/003-sprite-gen/assets/capabilities-principles-map.png)](projects/003-sprite-gen/README.md)
 
 ### 005 · Jianying Headless · 配置驱动的初步剪辑
 

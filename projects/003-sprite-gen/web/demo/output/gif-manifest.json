@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "kind": "sprite-gen-gif",
+  "output": "F:\\codex_project\\1002_codex_project\\projects\\003-sprite-gen\\web\\demo\\output\\wave.gif",
+  "delay_ticks": 17,
+  "duration_ms": 170,
+  "loop_count": 0,
+  "selected_user_frames": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "source_frames": [
+    "F:\\codex_project\\1002_codex_project\\projects\\003-sprite-gen\\web\\demo\\output\\frames\\frame-00.png",
+    "F:\\codex_project\\1002_codex_project\\projects\\003-sprite-gen\\web\\demo\\output\\frames\\frame-01.png",
+    "F:\\codex_project\\1002_codex_project\\projects\\003-sprite-gen\\web\\demo\\output\\frames\\frame-02.png",
+    "F:\\codex_project\\1002_codex_project\\projects\\003-sprite-gen\\web\\demo\\output\\frames\\frame-03.png",
+    "F:\\codex_project\\1002_codex_project\\projects\\003-sprite-gen\\web\\demo\\output\\frames\\frame-04.png",
+    "F:\\codex_project\\1002_codex_project\\projects\\003-sprite-gen\\web\\demo\\output\\frames\\frame-05.png"
+  ],
+  "contact": "F:\\codex_project\\1002_codex_project\\projects\\003-sprite-gen\\web\\demo\\output\\contact-sheet.png",
+  "gif_report": {
+    "path": "F:\\codex_project\\1002_codex_project\\projects\\003-sprite-gen\\web\\demo\\output\\wave.gif",
+    "frames": 6,
+    "delay_ticks": [
+      17,
+      17,
+      17,
+      17,
+      17,
+      17
+    ],
+    "loop": 0,
+    "transparent": true,
+    "disposal": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  }
+}

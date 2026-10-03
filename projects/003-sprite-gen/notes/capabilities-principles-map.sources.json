@@ -1,0 +1,119 @@
+{
+  "title": "sprite-gen 能力与原理全景图",
+  "date": "2026-10-03",
+  "timezone": "Asia/Shanghai",
+  "repository": "https://github.com/aldegad/sprite-gen",
+  "version": "2.20.0",
+  "commit": "d993e5300b4255111e8ee0e29779caea1b3b97bd",
+  "representation": "按动作来源归纳三类：AI视频、代码形变与既有素材组装、AI多姿势图；上游实际为两条生成管线及独立工具。",
+  "sharedProcessing": "按需选择工具；图中没有声明每条路线必须执行所有步骤。",
+  "extensions": "新增模型、骨骼/IK、姿态轨迹约束、生产管理界面和更完整引擎交互均为扩展建议，需开发与验证。",
+  "sourceFiles": [
+    "research.md",
+    "upstream-doc-index.md",
+    "validation.json"
+  ],
+  "primaryReferences": [
+    {
+      "path": "docs/architecture.md",
+      "url": "https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/architecture.md"
+    },
+    {
+      "path": "docs/video-pipeline.md",
+      "url": "https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/video-pipeline.md"
+    },
+    {
+      "path": "docs/atlas-workflow.md",
+      "url": "https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/atlas-workflow.md"
+    },
+    {
+      "path": "docs/breathing.md",
+      "url": "https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/breathing.md"
+    },
+    {
+      "path": "docs/chroma-alpha.md",
+      "url": "https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/chroma-alpha.md"
+    },
+    {
+      "path": "docs/pixel-unfake.md",
+      "url": "https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/pixel-unfake.md"
+    },
+    {
+      "path": "docs/curation.md",
+      "url": "https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/curation.md"
+    },
+    {
+      "path": "docs/engine-export.md",
+      "url": "https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/engine-export.md"
+    },
+    {
+      "path": "docs/recolor.md",
+      "url": "https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/recolor.md"
+    },
+    {
+      "path": "docs/layer-tracks.md",
+      "url": "https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/layer-tracks.md"
+    },
+    {
+      "path": "docs/asset-tools.md",
+      "url": "https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/asset-tools.md"
+    },
+    {
+      "path": "docs/scene.md",
+      "url": "https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/scene.md"
+    },
+    {
+      "path": "docs/video.md",
+      "url": "https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/video.md"
+    },
+    {
+      "path": "docs/frame-interpolation.md",
+      "url": "https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/frame-interpolation.md"
+    }
+  ],
+  "localValidation": {
+    "differentCliCommands": 9,
+    "commandInvocations": 10,
+    "modelApiCalls": 0,
+    "input": "web/demo/input/keyed-sheet.png",
+    "notValidated": [
+      "AI generation",
+      "scene rendering",
+      "game engine runtime"
+    ]
+  },
+  "production": {
+    "requestedArtifact": "单张中文能力与原理信息图",
+    "imageGenerationAttempt": "built-in image_gen; failed with network error",
+    "selectedMethod": "程序绘制新的信息图，以准确呈现中文文字与流程",
+    "output": "../assets/capabilities-principles-map.png",
+    "renderer": "../scripts/render_capabilities_map.py",
+    "dimensions": [3840, 2880],
+    "sha256": "e7cbb18ffc64c203d31f837b8c02e183944b02a8167788edd3a67d3b09c9b863",
+    "visualInspection": "三条路线、按需工具、场景、输出、扩展与边界已逐区查看；图例换行和呼吸示意已修正；绘图脚本编译与布局检查通过"
+  },
+  "illustrations": [
+    {
+      "asset": "../web/media/attack-fox-hood.gif",
+      "usage": "取动画帧、裁透明边界、缩放并排入路线及场景示意；示意不等同于各路线本机生成结果",
+      "source": "https://github.com/aldegad/sprite-gen/blob/d993e5300b4255111e8ee0e29779caea1b3b97bd/docs/assets/attack-fox-hood.gif",
+      "attribution": "sprite-gen / Alex Kim (Copyright 2026); upstream LICENSE and NOTICE retained in this subproject"
+    },
+    {
+      "asset": "../web/demo/output/frames/frame-00.png ... frame-05.png",
+      "usage": "本机CLI输出的程序绘制机器人；有限身体形变作为算法示意",
+      "provenance": "local non-AI geometric robot input; original input files preserved"
+    },
+    {
+      "asset": "forest and processing icons",
+      "usage": "绘图脚本直接绘制的场景与工具示意"
+    }
+  ],
+  "notes": [
+    "场景GIF与MP4为带背景输出；透明层可导出PNG。",
+    "静态图呼吸为有限形变；复杂肢体动作需模型或既有素材。",
+    "既有视频的透明提取需要可识别的色键背景。",
+    "图层合成需要预拆素材及显式对齐规则。",
+    "Aseprite导出为兼容JSON及PNG，而非可编辑源文件。"
+  ]
+}
