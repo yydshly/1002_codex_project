@@ -13,6 +13,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 001 | [Cult UI · 组件能力与原理实验室](projects/001-cult-ui/README.md) | 可复制和修改的 React 界面与动效源码库，137 个组件覆盖 AI 输入/结果、工作台、表单、导航、反馈、引导、按钮卡片、官网、插画、设备媒体、文字与背景。通过 React 状态、Tailwind/CSS/SVG，结合 Motion、Canvas/WebGL 实现；用于 React 官网、作品集、AI/SaaS 与后台，帮助快速搭界面、复用交互和学习原理，业务后端需自行接入。 | 已完成 | [源码](https://github.com/nolly-studio/cult-ui) | [演示](https://yydshly.github.io/1002_codex_project/projects/001-cult-ui/) |
 | 002 | [Upscayl 图片超分辨率研究](projects/002-upscayl/README.md) | 本地 AI 图片放大与细节增强工具。以预训练视觉模型、NCNN 和 Vulkan GPU 推理实现单张及批量处理；用于素材加工、脚本自动化和学习模型产品化，预测细节不等于恢复真实信息。 | 已完成 | [源码](https://github.com/upscayl/upscayl) | — |
+| 005 | [Jianying Headless · 配置驱动的初步剪辑](projects/005-jianying-headless/README.md) | 以结构化 JSON 计划驱动初步剪辑：Mac 适配剪映私有草稿格式与内部接口，生成可编辑工程和原生 MP4；Windows 调用 FFmpeg 输出 MP4。当前仅作自动化剪辑方向参考，暂不深入研究。 | 已归档 | [源码](https://github.com/mcncarl/jianying-headless) | — |
 
 ### 001 · Cult UI · 组件能力与原理实验室
 
@@ -25,6 +26,12 @@
 本地 AI 图片放大与细节增强工具。以预训练视觉模型、NCNN 和 Vulkan GPU 推理实现单张及批量处理；用于素材加工、脚本自动化和学习模型产品化，预测细节不等于恢复真实信息。
 
 [![Upscayl 能力与原理总览：应用能力、上游训练、本机 GPU 推理、技术关键词、后期价值与能力边界](projects/002-upscayl/assets/upscayl-overview.png)](projects/002-upscayl/README.md)
+
+### 005 · Jianying Headless · 配置驱动的初步剪辑
+
+以结构化 JSON 计划驱动初步剪辑：Mac 适配剪映私有草稿格式与内部接口，生成可编辑工程和原生 MP4；Windows 调用 FFmpeg 输出 MP4。当前仅作自动化剪辑方向参考，暂不深入研究。
+
+[![Jianying Headless 配置驱动初剪理解图：Mac 剪映逆向适配、Windows FFmpeg 公开接口、能力环境场景与当前参考价值](projects/005-jianying-headless/assets/jianying-headless-overview.png)](projects/005-jianying-headless/README.md)
 <!-- PROJECTS:END -->
 
 ## 添加项目

@@ -33,6 +33,25 @@
       "coverAlt": "Upscayl 能力与原理总览：应用能力、上游训练、本机 GPU 推理、技术关键词、后期价值与能力边界",
       "publishDir": null,
       "demo": null
+    },
+    {
+      "id": "005",
+      "slug": "jianying-headless",
+      "name": "Jianying Headless · 配置驱动的初步剪辑",
+      "summary": "以结构化 JSON 计划驱动初步剪辑：Mac 适配剪映私有草稿格式与内部接口，生成可编辑工程和原生 MP4；Windows 调用 FFmpeg 输出 MP4。当前仅作自动化剪辑方向参考，暂不深入研究。",
+      "source": "https://github.com/mcncarl/jianying-headless",
+      "status": "已归档",
+      "tags": [
+        "视频剪辑",
+        "配置驱动",
+        "剪映适配",
+        "FFmpeg",
+        "方向参考"
+      ],
+      "cover": "projects/005-jianying-headless/assets/jianying-headless-overview.png",
+      "coverAlt": "Jianying Headless 配置驱动初剪理解图：Mac 剪映逆向适配、Windows FFmpeg 公开接口、能力环境场景与当前参考价值",
+      "publishDir": null,
+      "demo": null
     }
   ]
 }
