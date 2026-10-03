@@ -14,6 +14,25 @@
       "coverAlt": "Cult UI 全能力地图：137 个组件、源码分发、底层技术、效果方向、应用场景、个人价值与选用路径",
       "publishDir": "projects/001-cult-ui/web/dist",
       "demo": null
+    },
+    {
+      "id": "002",
+      "slug": "upscayl",
+      "name": "Upscayl 图片超分辨率研究",
+      "summary": "本地 AI 图片放大与细节增强工具。以预训练视觉模型、NCNN 和 Vulkan GPU 推理实现单张及批量处理；用于素材加工、脚本自动化和学习模型产品化，预测细节不等于恢复真实信息。",
+      "source": "https://github.com/upscayl/upscayl",
+      "status": "已完成",
+      "tags": [
+        "图像超分辨率",
+        "深度学习",
+        "CNN与GAN",
+        "本地GPU推理",
+        "模型产品化"
+      ],
+      "cover": "projects/002-upscayl/assets/upscayl-overview.png",
+      "coverAlt": "Upscayl 能力与原理总览：应用能力、上游训练、本机 GPU 推理、技术关键词、后期价值与能力边界",
+      "publishDir": null,
+      "demo": null
     }
   ]
 }

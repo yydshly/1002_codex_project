@@ -1,0 +1,331 @@
+<div id="upscayl-map" lang="zh-CN">
+  <h2>Upscayl · 能力、原理与后期价值</h2>
+  <div class="map-surface" role="group" aria-label="Upscayl 总览关系图">
+    <svg class="map-links" aria-hidden="true"></svg>
+    <div class="map-root"><button class="btn btn-primary" type="button" data-key="overview" aria-pressed="true"><span>Upscayl：本地 AI 图片超分辨率应用<br><span class="text-small">业务目标 → 预训练视觉模型 → 显卡推理 → 图片结果</span></span></button></div>
+    <div class="map-lanes">
+      <section class="map-lane" data-lane="capabilities" aria-labelledby="cap-heading">
+        <h3 id="cap-heading"><span class="lane-dot cap-dot"></span>应用能力</h3>
+        <div class="map-node"><button class="btn btn-block" type="button" data-key="sr" aria-pressed="false"><span>超分辨率 · 细节增强<br><span class="text-small">增大尺寸，预测边缘与纹理</span></span></button></div>
+        <div class="map-node"><button class="btn btn-block" type="button" data-key="batch" aria-pressed="false"><span>单张 · 文件夹批量<br><span class="text-small">统一模型、倍率和输出设置</span></span></button></div>
+        <div class="map-node"><button class="btn btn-block" type="button" data-key="models" aria-pressed="false"><span>多模型 · 自定义模型<br><span class="text-small">通用、轻量、高保真、数字艺术</span></span></button></div>
+        <div class="map-node"><button class="btn btn-block" type="button" data-key="scale" aria-pressed="false"><span>倍率 · Double Upscayl<br><span class="text-small">内置原生 4×；二次处理再放大</span></span></button></div>
+        <div class="map-node"><button class="btn btn-block" type="button" data-key="export" aria-pressed="false"><span>结果对比 · 格式导出<br><span class="text-small">PNG / JPG / WebP · 中文界面</span></span></button></div>
+      </section>
+      <section class="map-lane" data-lane="training" aria-labelledby="train-heading">
+        <h3 id="train-heading"><span class="lane-dot train-dot"></span>上游模型训练</h3>
+        <div class="lane-scope text-small">以 Real-ESRGAN 为例<br>其他模型的结构与训练可能不同</div>
+        <div class="map-node"><button class="btn btn-block" type="button" data-key="data" aria-pressed="false"><span>高清参考图 → 合成劣化<br><span class="text-small">模糊、缩放、噪声、JPEG</span></span></button></div>
+        <div class="map-node"><button class="btn btn-block" type="button" data-key="network" aria-pressed="false"><span>深度学习 · CNN · RRDB<br><span class="text-small">多层计算，学习局部图像特征</span></span></button></div>
+        <div class="map-node"><button class="btn btn-block" type="button" data-key="gan" aria-pressed="false"><span>GAN：生成器 G ↔ 判别器 D<br><span class="text-small">生成高清预测，学习判断真假</span></span></button></div>
+        <div class="map-node"><button class="btn btn-block" type="button" data-key="loss" aria-pressed="false"><span>损失 → 梯度 → 参数更新<br><span class="text-small">L1 / 感知 / 对抗 · Adam</span></span></button></div>
+        <div class="map-node"><button class="btn btn-block" type="button" data-key="weights" aria-pressed="false"><span>保存生成器 → 部署转换<br><span class="text-small">网络结构 + 学好的权重</span></span></button></div>
+      </section>
+      <section class="map-lane" data-lane="runtime" aria-labelledby="run-heading">
+        <h3 id="run-heading"><span class="lane-dot run-dot"></span>本机使用与推理</h3>
+        <div class="lane-scope text-small">参数固定，处理新图片<br>通常只执行训练好的生成器</div>
+        <div class="map-node"><button class="btn btn-block" type="button" data-key="environment" aria-pressed="false"><span>运行环境与驱动<br><span class="text-small">Windows / macOS / Linux</span></span></button></div>
+        <div class="map-node"><button class="btn btn-block" type="button" data-key="ui" aria-pressed="false"><span>Electron + React / Next.js<br><span class="text-small">选图、设置模型、任务与进度</span></span></button></div>
+        <div class="map-node"><button class="btn btn-block" type="button" data-key="backend" aria-pressed="false"><span>IPC → upscayl-ncnn → NCNN<br><span class="text-small">启动后端，加载并执行模型</span></span></button></div>
+        <div class="map-node"><button class="btn btn-block" type="button" data-key="gpu" aria-pressed="false"><span>Vulkan → GPU · Tile 分块<br><span class="text-small">并行计算，控制显存压力</span></span></button></div>
+        <div class="map-node"><button class="btn btn-block" type="button" data-key="post" aria-pressed="false"><span>拼接 → 按需缩放 → 编码<br><span class="text-small">输出图片，回传进度与结果</span></span></button></div>
+      </section>
+    </div>
+    <div class="meaning-heading"><h3>对你的后期意义 · 按目标选择</h3></div>
+    <div class="map-meanings">
+      <div class="map-node"><button class="btn btn-block" type="button" data-key="use" aria-pressed="false"><span>素材加工与内容生产<br><span class="text-small">网页 / PPT / 封面 / 插画</span></span></button></div>
+      <div class="map-node"><button class="btn btn-block" type="button" data-key="automation" aria-pressed="false"><span>CLI 接入自动化<br><span class="text-small">收集 → 增强 → 转换 → 导出</span></span></button></div>
+      <div class="map-node"><button class="btn btn-block" type="button" data-key="learning" aria-pressed="false"><span>学习算法与模型产品化<br><span class="text-small">数据、训练、部署、任务管理</span></span></button></div>
+    </div>
+    <div class="map-boundary"><button class="btn btn-block" type="button" data-key="limits" aria-pressed="false"><span>能力边界与复用条件<br><span class="text-small">新增像素 ≠ 真实细节<br>严重失焦效果有限 · 兼容性、资源与许可证</span></span></button></div>
+  </div>
+  <div class="map-detail"><div class="card" aria-live="polite" aria-atomic="false">
+    <h3 id="detail-heading">整体定位与阅读关系</h3>
+    <table class="table table-sm"><thead><tr><th scope="col">关键词 / 关注点</th><th scope="col">含义与这里的作用</th></tr></thead><tbody id="detail-rows"></tbody></table>
+    <div class="detail-sources text-small" id="detail-sources"></div>
+  </div></div>
+</div>
+<style>
+#upscayl-map .map-surface { position:relative; }
+#upscayl-map .map-links { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; overflow:visible; }
+#upscayl-map .map-root { display:flex; justify-content:center; position:relative; margin:0 0 32px; padding-right:24px; }
+#upscayl-map .map-lanes { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; position:relative; }
+#upscayl-map .map-lane { min-width:0; display:flex; flex-direction:column; gap:16px; padding:0 8px; }
+#upscayl-map .map-lane h3 { text-align:center; margin:0; }
+#upscayl-map .map-node { position:relative; min-width:0; }
+#upscayl-map .lane-scope { text-align:center; min-height:40px; }
+#upscayl-map .map-lane[data-lane="capabilities"] .map-node:first-of-type { margin-top:56px; }
+#upscayl-map .lane-dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+#upscayl-map .cap-dot { background:var(--viz-series-1); }
+#upscayl-map .train-dot { background:var(--viz-series-2); }
+#upscayl-map .run-dot { background:var(--viz-series-3); }
+#upscayl-map .meaning-heading { position:relative; text-align:center; margin-top:30px; }
+#upscayl-map .map-meanings { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; position:relative; padding:12px 8px 0; }
+#upscayl-map .map-boundary { position:relative; margin:24px 8px 0; }
+#upscayl-map .map-detail { margin-top:20px; }
+#upscayl-map .map-detail h3 { margin-top:0; }
+#upscayl-map .detail-sources { display:flex; flex-wrap:wrap; gap:8px 14px; margin-top:10px; }
+@media (max-width:599px) {
+  #upscayl-map .map-root { padding-right:0; margin-bottom:20px; }
+  #upscayl-map .map-lanes, #upscayl-map .map-meanings { grid-template-columns:1fr; gap:28px; }
+  #upscayl-map .map-lane { padding-left:22px; }
+  #upscayl-map .lane-scope { min-height:0; }
+  #upscayl-map .map-lane[data-lane="capabilities"] .map-node:first-of-type { margin-top:0; }
+}
+</style>
+<script>
+(() => {
+  const root = document.getElementById('upscayl-map');
+  const src = {
+    app:['Upscayl 项目 / FAQ','https://github.com/upscayl/upscayl#readme'],
+    site:['桌面版功能','https://upscayl.org/'],
+    guide:['倍率与自定义模型指南','https://github.com/upscayl/upscayl/wiki/Guide'],
+    list:['内置模型列表','https://github.com/upscayl/upscayl/blob/main/common/models-list.ts'],
+    custom:['自定义模型与转换','https://github.com/upscayl/upscayl/wiki/Model-Conversion-Guide'],
+    paper:['Real-ESRGAN 原论文','https://arxiv.org/html/2107.10833v2'],
+    training:['官方训练说明','https://github.com/xinntao/Real-ESRGAN/blob/master/docs/Training.md'],
+    gan:['GAN 原始论文','https://arxiv.org/abs/1406.2661'],
+    torch:['神经网络教程','https://docs.pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html'],
+    grad:['反向传播教程','https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html'],
+    cli:['upscayl-ncnn 后端','https://github.com/upscayl/upscayl-ncnn'],
+    main:['后端处理与缩放代码','https://github.com/upscayl/upscayl-ncnn/blob/master/src/main.cpp'],
+    compute:['模型加载与分块推理','https://github.com/upscayl/upscayl-ncnn/blob/master/src/realesrgan.cpp'],
+    package:['应用依赖与打包配置','https://github.com/upscayl/upscayl/blob/main/package.json'],
+    spawn:['启动后端进程','https://github.com/upscayl/upscayl/blob/main/electron/utils/spawn-upscayl.ts'],
+    compatibility:['硬件兼容性','https://github.com/upscayl/upscayl/wiki/Compatibility-List'],
+    release:['发布版功能','https://github.com/upscayl/upscayl/releases/tag/v2.15.0'],
+    format:['图片导出格式','https://github.com/upscayl/upscayl/blob/main/renderer/components/sidebar/settings-tab/select-image-format.tsx'],
+    license:['应用 AGPL-3.0 许可证','https://github.com/upscayl/upscayl/blob/main/LICENSE']
+  };
+  const items = {
+    overview:{title:'整体定位与阅读关系',rows:[
+      ['Upscayl','开源桌面应用：把预训练视觉模型、显卡计算、文件与任务管理组合成图片增强工具。'],
+      ['核心任务','图像超分辨率：增加输出尺寸，并预测更自然的边缘与纹理。'],
+      ['上游训练 → 本机推理','研究者或社区作者训练模型；转换兼容格式后，应用加载模型处理你的新图片。'],
+      ['三类价值','素材加工；通过 CLI 建立批量流水线；学习模型训练与跨平台产品实现。'],
+      ['阅读范围','图中训练路线以经典 Real-ESRGAN 为例；云端生图、云存储等官网功能需与本桌面仓库区分。']
+    ],sources:['app','cli','paper']},
+    sr:{title:'超分辨率与细节增强',rows:[
+      ['SR / Super-Resolution','从低分辨率输入预测高分辨率输出。4× 指宽、高分别乘四。'],
+      ['Blind SR / 盲超分辨率','使用时输入的劣化过程未知；训练仍可使用合成的参考配对。'],
+      ['细节增强','网络根据训练得到的规律预测边缘与纹理；与普通插值放大有不同的视觉表现。'],
+      ['真实信息','同一低质量图可能来自不同高清原图，因此预测细节不能保证等于真实历史细节。']
+    ],sources:['app','paper']},
+    batch:{title:'单张与文件夹批量',rows:[
+      ['单张处理','选择已有图片、模型及输出设置，运行本机增强任务。'],
+      ['Batch / 批量','以统一设置处理一组图片，适合素材库和重复工作。'],
+      ['工程职责','应用负责文件路径、任务启动、进度、错误反馈和结果保存；模型负责图像预测。'],
+      ['实际成本','图片数量、尺寸、模型与硬件影响耗时；输出大图也占用内存和磁盘。']
+    ],sources:['site','app','main']},
+    models:{title:'模型选择与扩展',rows:[
+      ['内置模型','Standard、Lite、High Fidelity、Remacri、Ultramix Balanced、Ultrasharp、Digital Art。'],
+      ['为什么有多个模型','网络结构、权重及训练数据可能不同；速度、纹理风格与图片适配也不同。'],
+      ['自定义模型','导入后端兼容的 NCNN 模型；通常以同名 .param 与 .bin 文件配对。'],
+      ['兼容性边界','模型导入受网络结构和算子支持限制；任意 PyTorch 或 ONNX 模型并不都能直接使用。'],
+      ['选择方法','用你的常见素材比较同尺寸结果，检查细节是否改写，再确定批处理设置。']
+    ],sources:['list','guide','custom']},
+    scale:{title:'倍率与 Double Upscayl',rows:[
+      ['原生 4×','当前七个内置模型为 4×：512×512 → 2048×2048；像素数量变为 16 倍。'],
+      ['1–16× 输出尺寸','界面可选择多种倍率；与模型原生倍率不同的尺寸可通过普通后处理缩放得到。'],
+      ['Double Upscayl','把第一遍输出再次送入模型；两遍原生 4× 可得到宽、高各 16×。'],
+      ['尺寸与质量','倍率不是清晰度评分；反复增强可能放大伪影，也会增加资源开销。']
+    ],sources:['guide','list','main']},
+    export:{title:'预览、格式与桌面体验',rows:[
+      ['结果比较','对比原图和输出；发布版提供滑动比较及 Lens Viewer 等查看方式。'],
+      ['输出格式','PNG、JPG、WebP；编码及压缩设置影响文件大小和图像保存效果。'],
+      ['使用体验','提供中文等语言、剪贴板图片输入、日志和系统信息。'],
+      ['本地处理','图像推理在本机执行；更新检查和可选统计与图像推理属于不同功能。']
+    ],sources:['release','format','app']},
+    data:{title:'训练数据：把高清图变成学习样本',rows:[
+      ['HR / GT','High Resolution / Ground Truth：高清参考图，作为训练时的目标。'],
+      ['LR / LQ','Low Resolution / Low Quality：经过缩放及劣化后的输入。'],
+      ['高阶劣化','重复组合模糊、缩放、噪声和 JPEG，接近拍摄、编辑与网络传播造成的复杂劣化。'],
+      ['sinc 滤波','训练数据合成中用于模拟振铃、过冲等边缘伪影。'],
+      ['数据集','官方训练使用 DIV2K、Flickr2K、OST；训练可由高清图在线生成低质量配对。']
+    ],sources:['paper','training']},
+    network:{title:'深度学习、CNN 与网络结构',rows:[
+      ['深度学习','用多层神经网络和训练数据学习参数；这里是专用图像模型。'],
+      ['CNN / 卷积神经网络','用可学习的卷积核在局部区域计算，提取并组合边缘、线条与纹理特征。'],
+      ['网络结构 + 权重','结构定义如何计算；权重是训练调整的数值；两者共同构成部署模型。'],
+      ['RRDB','Residual-in-Residual Dense Block：结合残差与密集连接，帮助特征传递；经典 Real-ESRGAN 生成器所用。'],
+      ['适用范围','这里的 RRDB 说明针对经典模型；Lite 或社区模型可能使用不同的网络结构。']
+    ],sources:['torch','paper']},
+    gan:{title:'GAN：训练时的生成与判别',rows:[
+      ['GAN','Generative Adversarial Network：生成对抗网络，一种联合训练生成器和判别器的框架。'],
+      ['生成器 G','在超分辨率中，输入低质量图，输出预测的高清图。'],
+      ['判别器 D','学习区分真实高清图与生成图，并给生成器提供逼真程度的反馈。'],
+      ['U-Net + 谱归一化','经典 Real-ESRGAN 判别器采用 U-Net，提供局部反馈；谱归一化有助于训练稳定。'],
+      ['训练与使用','训练中交替更新 G、D；日常图片增强通常只运行训练好的 G。']
+    ],sources:['gan','paper','compute']},
+    loss:{title:'训练目标与参数更新',rows:[
+      ['L1 像素损失','比较预测图与参考图的像素绝对差异，关注数值接近。'],
+      ['感知损失','比较视觉网络提取的特征，关注结构与纹理的相似性。'],
+      ['GAN 对抗损失','根据判别器反馈，鼓励输出呈现真实高清图片的纹理特征。'],
+      ['反向传播 / 梯度','计算每个参数的变化如何影响损失，获得调整方向的信息。'],
+      ['Adam / 优化器','根据梯度小步更新参数；训练反复执行预测、评分、求梯度和更新。'],
+      ['两阶段训练','先用 L1 训练 Real-ESRNet；再以此初始化生成器，用 L1 + 感知 + GAN 训练 Real-ESRGAN。']
+    ],sources:['training','grad','paper']},
+    weights:{title:'从训练结果到部署模型',rows:[
+      ['预训练','模型已经用大量样本学好参数；用户放大新图片时可直接调用。'],
+      ['训练环境','Real-ESRGAN 官方训练使用 PyTorch，常配合 CUDA / NVIDIA GPU；与桌面推理环境有区别。'],
+      ['部署转换','将支持的模型转换为 NCNN 格式；.param 保存结构描述，.bin 保存权重。'],
+      ['微调 / Fine-tuning','在现有参数基础上，用你的领域数据继续训练；需要数据、训练代码与计算资源。'],
+      ['功能边界','图中训练支线是模型来源说明，Upscayl 桌面端主要负责推理，不提供完整训练流程。']
+    ],sources:['training','custom','compute']},
+    environment:{title:'运行环境与显卡的职责',rows:[
+      ['操作系统','桌面版面向 Windows、macOS、Linux；具体安装包与最低版本以发布说明为准。'],
+      ['环境准备','驱动、运行程序、后端二进制、模型文件及路径的准备，由操作系统和程序完成。'],
+      ['Vulkan 兼容性','正常推理路径需要兼容 GPU 与驱动；部分核显可用，需要实际确认。'],
+      ['GPU 的职责','执行卷积等大量并行计算；显卡提供算力与显存，模型决定计算结构与参数。']
+    ],sources:['compatibility','app','package']},
+    ui:{title:'桌面界面与任务管理',rows:[
+      ['Electron','把网页界面与本机文件、进程等能力结合，提供桌面应用运行环境。'],
+      ['React / Next.js','用于界面组件与应用页面；不是图像超分辨率算法。'],
+      ['TypeScript','应用层主要使用的编程语言；帮助组织界面与主进程逻辑。'],
+      ['应用职责','选择图片与模型，保存设置，启动任务，显示进度、日志和结果。']
+    ],sources:['package','spawn']},
+    backend:{title:'从桌面操作到模型执行',rows:[
+      ['IPC','进程间通信：界面把处理请求传给 Electron 主进程。'],
+      ['子进程 / spawn','主进程启动本机推理二进制，将模型、图片及处理参数传入。'],
+      ['upscayl-ncnn','C++ 推理后端与 CLI，从 Real-ESRGAN-ncnn-vulkan 派生；可脱离 GUI 使用。'],
+      ['NCNN','神经网络推理框架：加载网络结构与权重，安排算子执行。'],
+      ['推理 / Inference','用固定参数对新图片做前向计算；这里无需为每张图片重新训练。']
+    ],sources:['spawn','cli','compute']},
+    gpu:{title:'GPU、Vulkan 与分块推理',rows:[
+      ['Vulkan','调用 GPU 的底层接口；这里用于神经网络计算，不仅用于绘制画面。'],
+      ['GPU / 显卡','并行执行计算；速度受硬件、模型和图片尺寸影响。'],
+      ['VRAM / 显存','保存模型与中间计算结果；大图和较重模型会增加需求。'],
+      ['Tile / 分块','把大图切成带周边区域的块，分别推理后拼合；可以控制显存压力。'],
+      ['资源边界','分块增加调度开销，并可能带来局部不一致；整张输出仍需要内存与磁盘。']
+    ],sources:['cli','main','compute']},
+    post:{title:'从网络预测到图片文件',rows:[
+      ['拼接','将分块推理的有效区域合并成整张输出。'],
+      ['后处理缩放','当目标尺寸与模型原生输出不一致时，可用普通重采样调整大小。'],
+      ['编码 / Export','把像素数据保存为指定格式；压缩、尺寸与文件大小共同影响交付结果。'],
+      ['进度与结果','后端处理状态由应用读取并展示；成功输出仍应检查文字、线条和纹理。']
+    ],sources:['main','compute','format']},
+    use:{title:'后期价值：素材加工',rows:[
+      ['适合的目标','网页配图、PPT、封面、插画、AI 生成图等素材需要更大尺寸展示。'],
+      ['预期收益','素材内容合适但尺寸不足时，可减少寻找替代图或手工加工的工作。'],
+      ['验证方式','用常见图片做小规模试验，在相同显示尺寸下比较观感，再检查细节是否改写。'],
+      ['价值取决于业务','原图已经足够清晰，或主要使用矢量素材时，超分辨率收益可能较小。']
+    ],sources:['app','paper']},
+    automation:{title:'后期价值：脚本与流水线',rows:[
+      ['接入入口','先看 upscayl-ncnn CLI，通过脚本传入图片、模型、GPU 与输出设置。'],
+      ['业务流水线','素材收集 → 超分辨率处理 → 格式与尺寸转换 → 输出给网站或其他内容系统。'],
+      ['你的工程工作','需要管理任务队列、资源占用、失败重试与结果检查；这些不是模型自己完成的。'],
+      ['扩展成本','本机 GPU 与资源管理决定吞吐；发布服务或分发修改版本时应核实软件及模型授权。']
+    ],sources:['cli','license']},
+    learning:{title:'后期价值：算法学习与产品实现',rows:[
+      ['学习算法','重点看上游训练：数据劣化、网络结构、损失设计、效果评估和领域微调。'],
+      ['学习工程','重点看 Upscayl：界面与本机进程协作、文件管理、任务进度、模型加载、分块与跨平台打包。'],
+      ['可迁移的框架','业务任务 → 数据与模型 → 执行框架 → 硬件 → 结果；其他 AI 任务可能采用不同网络。'],
+      ['建议顺序','先用真实素材评估 → 学会 CLI 批处理 → 阅读调用链 → 有领域需求再考虑微调。']
+    ],sources:['training','package','spawn','cli']},
+    limits:{title:'能力边界、资源与复用条件',rows:[
+      ['保真与观感','模型预测合理细节；可能出现假纹理、文字变化或线条扭曲，不能把增强结果当作原始事实。'],
+      ['严重失焦 / 全模糊','官方 FAQ 明确指出这类图片不适合 Upscayl；优先寻找高清原图或原始文件。'],
+      ['倍率边界','新增像素不等于新增真实信息；Double 并不保证效果更好。'],
+      ['硬件与资源','检查 GPU / Vulkan 兼容性；考虑显存、内存、磁盘和处理时间。'],
+      ['开源与授权','应用和后端为 AGPL-3.0；改造发布或服务化需评估许可条件，自定义模型的权重许可需分别核实。'],
+      ['桌面与云端','该仓库的主要对象是本地图片增强；官网云端生图、存储等能力需另行核实。']
+    ],sources:['app','paper','license','site']}
+  };
+  const body = root.querySelector('#detail-rows');
+  const heading = root.querySelector('#detail-heading');
+  const sourceBox = root.querySelector('#detail-sources');
+  const buttons = Array.from(root.querySelectorAll('button[data-key]'));
+  let selected = 'overview';
+  function select(key, save) {
+    if (!items[key]) key = 'overview';
+    selected = key;
+    const item = items[key];
+    heading.textContent = item.title;
+    body.replaceChildren();
+    for (const [label, meaning] of item.rows) {
+      const tr = document.createElement('tr');
+      const th = document.createElement('th'); th.scope = 'row'; th.textContent = label;
+      const td = document.createElement('td'); td.textContent = meaning;
+      tr.append(th, td); body.append(tr);
+    }
+    sourceBox.replaceChildren();
+    for (const sourceKey of item.sources) {
+      const a = document.createElement('a');
+      a.textContent = src[sourceKey][0]; a.href = src[sourceKey][1];
+      a.target = '_blank'; a.rel = 'noopener noreferrer'; sourceBox.append(a);
+    }
+    for (const button of buttons) {
+      const active = button.dataset.key === key;
+      button.setAttribute('aria-pressed', String(active));
+      button.classList.toggle('btn-primary', active);
+    }
+    if (save && window.openai && typeof window.openai.setWidgetState === 'function') {
+      window.openai.setWidgetState({modelContent:{selectedModule:key},privateContent:{selectedModule:key}}).catch(() => {});
+    }
+  }
+  for (const button of buttons) button.addEventListener('click', () => select(button.dataset.key, true));
+  const state = window.openai && window.openai.widgetState;
+  if (state) selected = state.selectedModule || (state.privateContent && state.privateContent.selectedModule) || (state.modelContent && state.modelContent.selectedModule) || selected;
+  select(selected, false);
+  window.addEventListener('openai:set_globals', (event) => {
+    const next = event.detail && event.detail.globals && event.detail.globals.widgetState;
+    if (next) select(next.selectedModule || (next.privateContent && next.privateContent.selectedModule) || (next.modelContent && next.modelContent.selectedModule) || selected, false);
+  });
+  const surface = root.querySelector('.map-surface');
+  const svg = root.querySelector('.map-links');
+  const ns = 'http://www.w3.org/2000/svg';
+  function draw() {
+    const box = surface.getBoundingClientRect();
+    const width = box.width, height = box.height;
+    if (!width || !height) return;
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    svg.replaceChildren();
+    const defs = document.createElementNS(ns,'defs');
+    for (let i=1;i<=3;i++) {
+      const marker = document.createElementNS(ns,'marker');
+      marker.id = `upscayl-arrow-${i}`; marker.setAttribute('viewBox','0 0 10 10');
+      marker.setAttribute('refX','8'); marker.setAttribute('refY','5'); marker.setAttribute('markerWidth','5'); marker.setAttribute('markerHeight','5'); marker.setAttribute('orient','auto-start-reverse');
+      const mark = document.createElementNS(ns,'path'); mark.setAttribute('d','M 1 1 L 8 5 L 1 9 Z'); mark.setAttribute('fill',`var(--viz-series-${i})`); marker.append(mark); defs.append(marker);
+    }
+    svg.append(defs);
+    const rect = (el) => { const r=el.getBoundingClientRect(); return {x:r.left-box.left,y:r.top-box.top,w:r.width,h:r.height}; };
+    function path(d, series, arrow=false) {
+      const p=document.createElementNS(ns,'path'); p.setAttribute('d',d); p.setAttribute('fill','none');
+      p.setAttribute('stroke',`var(--viz-series-${series})`); p.setAttribute('stroke-width','1.5'); p.setAttribute('opacity','0.65');
+      if (arrow) p.setAttribute('marker-end',`url(#upscayl-arrow-${series})`); svg.append(p);
+    }
+    const top=rect(root.querySelector('.map-root button'));
+    const lanes=Array.from(root.querySelectorAll('.map-lane'));
+    const narrow=width<600;
+    lanes.forEach((lane,index) => {
+      const label=rect(lane.querySelector('h3'));
+      if (!narrow) {
+        const midY=(top.y+top.h+label.y)/2;
+        path(`M ${top.x+top.w/2} ${top.y+top.h} V ${midY} H ${label.x+label.w/2} V ${label.y-5}`,index+1);
+      }
+      const nodes=Array.from(lane.querySelectorAll('.map-node button')).map(rect);
+      if (index===0 || narrow) {
+        const x=rect(lane).x+(narrow?9:2);
+        path(`M ${x} ${nodes[0].y+nodes[0].h/2} V ${nodes[nodes.length-1].y+nodes[nodes.length-1].h/2}`,index+1);
+        nodes.forEach(n=>path(`M ${x} ${n.y+n.h/2} H ${n.x-3}`,index+1));
+      } else {
+        for (let i=0;i<nodes.length-1;i++) path(`M ${nodes[i].x+nodes[i].w/2} ${nodes[i].y+nodes[i].h+2} V ${nodes[i+1].y-4}`,index+1,true);
+      }
+    });
+    if (!narrow) {
+      const trained=rect(root.querySelector('[data-key="weights"]'));
+      const runtime=rect(root.querySelector('[data-key="backend"]'));
+      const corridor=(trained.x+trained.w+runtime.x)/2;
+      path(`M ${trained.x+trained.w+2} ${trained.y+trained.h/2} H ${corridor} V ${runtime.y+runtime.h/2} H ${runtime.x-4}`,2,true);
+      const losses=rect(root.querySelector('[data-key="loss"]'));
+      const network=rect(root.querySelector('[data-key="network"]'));
+      const x=network.x-7;
+      path(`M ${losses.x-2} ${losses.y+losses.h/2} H ${x} V ${network.y+network.h/2} H ${network.x-3}`,2,true);
+    }
+  }
+  const observer=new ResizeObserver(draw); observer.observe(surface);
+  window.addEventListener('resize',draw);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+  draw();
+})();
+</script>
