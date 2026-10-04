@@ -10,11 +10,14 @@
 | 008 · PDoomVideo | `https://yydshly.github.io/1002_codex_project/projects/008-pdoom-video/` |
 | 008 · 理解总览与引导图 | `https://yydshly.github.io/1002_codex_project/projects/008-pdoom-video/overview.html` |
 | 009 · shadcn-admin | `https://yydshly.github.io/1002_codex_project/projects/009-shadcn-admin/` |
+| 013 · OmniVoice 中文研究网页 | `https://yydshly.github.io/1002_codex_project/projects/013-omnivoice/` |
 | 002 项目 | `https://yydshly.github.io/1002_codex_project/projects/002-slug/` |
 
 总入口、001、006、008 和 009 项目是站点的配置地址；002 行展示后续项目的路径格式。006 发布可独立阅读的静态理解总览、生成的引导图和实测报告；实时 CAD 查看与运动操作按页面说明在本机启动。008 发布完整能力实验室、理解总览与引导图、元素驱动控制台和六秒真实场景样例。009 发布 shadcn-admin 的八类模块、复用原理、业务适配、后续价值与边界说明，并沿用我们整理的理解引导图，提供 PNG / SVG 下载。仓库 Pages 已配置为 GitHub Actions 发布。GitHub Pages 每个仓库只有一个站点，因此这里使用多个子目录承载各项目的静态输出。参考 [GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)。
 
 ## 配置子项目
+
+013 发布 OmniVoice 的中文知识汇总，包含能力与输入输出、声音编码与模型权重的区别、双向 Transformer、掩码补全教学交互、训练与推理、部署代码、使用场景和边界。目录封面与网页均沿用我们制作的全量引导图，网页默认展示整图，提供原尺寸 PNG / SVG；静态网页不运行语音模型。
 
 静态输出目录必须位于对应的 `projects/<编号>-<slug>/` 内，并包含 `index.html`。在清单中设置 `publishDir` 后，总构建会将整个目录复制到 `_site/projects/<编号>-<slug>/`。
 

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OmniVoice 中文研究手册：理解多语言语音合成、音色克隆、双向 Transformer、离散掩码生成、输入输出与模型部署。">
+  <meta name="theme-color" content="#142d3b">
+  <title>OmniVoice · 从文字到声音的完整理解</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="topbar">
+    <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>项目研究库 <b>/ 013</b></span></a>
+    <div class="top-links"><a href="https://github.com/k2-fsa/OmniVoice" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://huggingface.co/spaces/k2-fsa/OmniVoice" target="_blank" rel="noopener noreferrer">官方试听 ↗</a></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" aria-label="阅读导航">
+      <div class="sidebar-title">OMNIVOICE <span>阅读目录</span></div>
+      <nav>
+        <a href="#essence" class="active"><span>01</span>本质与价值</a>
+        <a href="#capabilities"><span>02</span>能力与输入输出</a>
+        <a href="#concepts"><span>03</span>三个关键概念</a>
+        <a href="#pipeline"><span>04</span>生成的完整流程</a>
+        <a href="#transformer"><span>05</span>双向 Transformer</a>
+        <a href="#masking"><span>06</span>掩码补全演示</a>
+        <a href="#technology"><span>07</span>技术与训练</a>
+        <a href="#deployment"><span>08</span>如何部署使用</a>
+        <a href="#scenarios"><span>09</span>场景与能力边界</a>
+        <a href="#map"><span>10</span>一张图总览</a>
+        <a href="#sources"><span>11</span>资料与核实范围</a>
+      </nav>
+      <div class="sidebar-note"><span class="status-dot"></span>中文研究手册<p>依据官方代码、论文与文档<br>资料核对：2026.10.04</p></div>
+    </aside>
+    <main id="main">
+      <section id="essence" class="hero section">
+        <div class="eyebrow">多语言语音生成 / 技术理解</div>
+        <div class="hero-grid">
+          <div>
+            <h1>OmniVoice<span>从文字，到声音。</span></h1>
+            <p class="hero-lead">把文字合成为语音，<br>克隆参考声音，或用属性设计声音。</p>
+            <p class="hero-description">它的本质是<strong>条件语音合成模型（TTS）</strong>。训练让模型学会“文字与声音的关系”；使用时，预训练权重根据文字和声音条件，生成新的声音编码，再解码成可播放音频。</p>
+            <div class="hero-actions"><a class="button primary" href="#pipeline">理解生成原理 <span aria-hidden="true">↓</span></a><a class="button light" href="#deployment">查看部署方式</a></div>
+          </div>
+          <div class="hero-visual" aria-label="结构示意：文字和声音条件输入模型，生成声学编码并解码为语音">
+            <div class="visual-label">核心链路 <span>结构示意</span></div>
+            <div class="visual-input"><span>目标文字 <b>说什么</b></span><span>声音条件 <b>谁来说 / 怎样说</b></span></div>
+            <div class="visual-arrow" aria-hidden="true">↓</div>
+            <div class="visual-model"><div class="model-symbol" aria-hidden="true">✳</div><div><strong>OmniVoice</strong><span>双向 Transformer · 多轮补全</span></div></div>
+            <div class="visual-tokens" aria-hidden="true"><i>·</i><i>52</i><i>·</i><i>81</i><i>24</i><i>·</i><i>→</i><i>37</i><i>52</i><i>96</i></div>
+            <div class="visual-output"><svg viewBox="0 0 230 54" role="img" aria-label="语音波形示意"><path d="M2 27H18L23 16L28 39L33 8L38 45L43 17L48 32L53 25H70L75 6L80 48L85 2L90 52L95 11L100 41L105 22L110 27H125L130 17L135 38L140 12L145 44L150 20L155 31L160 27H177L182 9L187 45L192 16L197 38L202 23L207 29L212 27H228"/></svg><span>音频解码 → <b>24 kHz 语音</b></span></div>
+          </div>
+        </div>
+        <div class="facts">
+          <div><strong>646<span>种语言</span></strong><p>官方模型卡标注的覆盖范围<br><a class="source" href="https://huggingface.co/k2-fsa/OmniVoice">模型卡 ↗</a></p></div>
+          <div><strong>0.6B<span>骨干初始化</span></strong><p>从 Qwen3-0.6B 权重开始语音训练<br><a class="source" href="https://arxiv.org/html/2604.00688v3#S3.SS2">论文训练配置 ↗</a></p></div>
+          <div><strong>24<span>kHz 音频</span></strong><p>输出单声道音频数组，可存为 WAV<br><a class="source" href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/models/omnivoice.py">生成实现 ↗</a></p></div>
+        </div>
+        <div class="takeaway"><span>理解重点</span><p>多语言是覆盖价值；<strong>参考声音条件 + 非自回归语音生成</strong>是核心能力。模型可以运行在个人电脑、企业服务器或云 GPU 上，部署位置与生成原理是两件事。</p></div>
+      </section>
+
+      <section id="capabilities" class="section">
+        <div class="section-heading"><span class="number">02</span><div><h2>同一个模型，三种声音来源</h2><p>目标文字决定内容；参考声音或属性决定声音条件。</p></div></div>
+        <div class="mode-tabs" role="tablist" aria-label="声音生成模式">
+          <button id="tab-clone" role="tab" aria-selected="true" aria-controls="mode-panel" data-mode="clone" tabindex="0"><span>01</span>参考声音克隆</button>
+          <button id="tab-design" role="tab" aria-selected="false" aria-controls="mode-panel" data-mode="design" tabindex="-1"><span>02</span>属性声音设计</button>
+          <button id="tab-auto" role="tab" aria-selected="false" aria-controls="mode-panel" data-mode="auto" tabindex="-1"><span>03</span>自动选择声音</button>
+        </div>
+        <div id="mode-panel" class="mode-panel" role="tabpanel" aria-labelledby="tab-clone" tabindex="0">
+          <div><div class="small-label" id="mode-label">ZERO-SHOT VOICE CLONING</div><h3 id="mode-title">让新文稿，用参考声音来说</h3><p id="mode-description">输入短参考音频，模型利用其中的声音特征合成另一段文字。正常使用不需要为这个人重新训练模型。</p><dl class="input-list"><div><dt>必须输入</dt><dd id="mode-required">目标文字 text + 参考音频 ref_audio</dd></div><div><dt>可选输入</dt><dd id="mode-optional">参考转写 ref_text；省略时调用 Whisper 转写</dd></div><div><dt>适用提示</dt><dd id="mode-note">参考音频建议 3–10 秒。可跨语言克隆，但参考语言可能影响口音。</dd></div></dl></div>
+          <div class="code-panel"><div class="code-heading"><span>Python · 用法示意</span><button class="copy-button" data-copy="mode-code" aria-label="复制当前模式的 Python 示例">复制</button></div><pre><code id="mode-code">audio = model.generate(
+    text="你好，欢迎来到今天的课程。",
+    ref_audio="ref.wav",
+    ref_text="这是参考录音里说的内容。",
+)</code></pre><div class="code-footnote">三种模式均返回语音；这里展示接口，不在网页运行模型。</div></div>
+        </div>
+        <p class="citation">依据：<a href="https://github.com/k2-fsa/OmniVoice#python-api">官方三种模式与接口</a> · <a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/voice-design.md">声音属性与限制</a></p>
+        <div class="io-strip"><div><span>共同输入</span><strong>目标文稿</strong><p>可带语言、发音及非语言声音标记</p></div><span class="io-arrow" aria-hidden="true">→</span><div><span>中间结果</span><strong>离散声学 token</strong><p>声音的压缩编码，尚不能直接播放</p></div><span class="io-arrow" aria-hidden="true">→</span><div><span>最终输出</span><strong>可播放音频</strong><p>API：list[np.ndarray]；文件：WAV 等</p></div></div>
+        <div class="feature-grid">
+          <article><h3>多语言与跨语言</h3><p>目标文字可以属于不同语言；参考声音也可来自另一种语言。语言数量表示覆盖，实际发音和稳定性需按语言验收。</p><a class="source" href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/languages.md">语言列表 ↗</a></article>
+          <article><h3>发音与表达控制</h3><p>中文可用带声调数字的拼音，如 <code>ZHE2</code>；英文可用 <code>[B EY1 S]</code> 等音素。支持 <code>[laughter]</code>、<code>[sigh]</code> 等指定标记；可选文本规范化处理数字读法。</p><a class="source" href="https://github.com/k2-fsa/OmniVoice#non-verbal--pronunciation-control">发音与标记 ↗</a> · <a class="source" href="https://github.com/k2-fsa/OmniVoice#voice-cloning">文本规范化 ↗</a></article>
+          <article><h3>生成与批量控制</h3><p>可调整步数、语速与目标时长，提供批量及多 GPU 推理入口。长文可内部切段并衔接；当前接口返回完整生成结果。</p><a class="source" href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/generation-parameters.md">生成参数 ↗</a></article>
+        </div>
+      </section>
+
+      <section id="concepts" class="section">
+        <div class="section-heading"><span class="number">03</span><div><h2>声音编码、模型参数、参考提示</h2><p>理解“把声音参数化”，需要分清这三个层次。</p></div></div>
+        <div class="concept-grid">
+          <article class="concept"><div class="concept-mark">01 / 数据</div><h3>声学 token</h3><p>音频编码器把波形压缩为离散编号。它们表示这段声音的信息，类似一种模型可处理的“声音编码”。</p><div class="token-example" aria-label="声音编码的编号示例">37 · 215 · 82 · 601</div><small>编号为示意；不是逐个对应音高、性别等人工参数。</small></article>
+          <article class="concept"><div class="concept-mark">02 / 知识</div><h3>模型权重</h3><p>训练调整神经网络的大量数值，使模型学会文字、声音条件与声学编码之间的统计关系。</p><div class="concept-formula">大量训练数据 → 学习 → 固定权重</div><small>这是模型长期学到的能力；普通生成时不更新权重。</small></article>
+          <article class="concept"><div class="concept-mark">03 / 条件</div><h3>参考声音提示</h3><p>使用时把参考音频编码，并与转写文字一起作为上下文，引导目标声音。可以缓存提示，重复使用。</p><div class="concept-formula">参考音频 → 编码 → VoiceClonePrompt</div><small>保存的声音提示不是为某个人训练出的专属模型。</small></article>
+        </div>
+        <div class="answer-line"><span>更准确的理解</span><p>先把声音编码为模型可处理的数据；训练让模型学会条件生成；克隆时用参考声音<strong>引导已有模型</strong>，生成新文稿的声音。</p></div>
+        <p class="citation">依据：<a href="https://github.com/boson-ai/higgs-audio/blob/main/tech_blogs/TOKENIZER_BLOG.md">音频编码器说明</a> · <a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/data/processor.py">训练数据处理</a> · <a href="https://github.com/k2-fsa/OmniVoice#reusing-a-cloned-voice-across-sessions">声音提示复用</a></p>
+      </section>
+
+      <section id="pipeline" class="section">
+        <div class="section-heading"><span class="number">04</span><div><h2>一次语音生成，经历哪些步骤？</h2><p>从可读文字，到离散编码，再到可以听到的波形。</p></div></div>
+        <ol class="pipeline">
+          <li><span class="step-index">1</span><div><h3>准备内容与声音条件</h3><p>输入目标文字。克隆模式准备参考音频和转写；设计模式准备声音属性；自动模式只需目标文字。</p></div><span class="step-kind">输入</span></li>
+          <li><span class="step-index">2</span><div><h3>文本编码 + 参考音频编码</h3><p>文本转换为 token。参考音频经 Higgs Audio Tokenizer 转成 8 组码本的声学 token，组成模型上下文。</p></div><span class="step-kind">表征</span></li>
+          <li><span class="step-index">3</span><div><h3>估计时长，创建待生成区域</h3><p>根据文字与参考转写等规则估计帧数，或指定 duration。目标区域初始全部为 MASK，表示未知编码。</p></div><span class="step-kind">初始化</span></li>
+          <li><span class="step-index">4</span><div><h3>双向 Transformer 多轮补全</h3><p>每轮利用文字、声音条件和已填的编码，并行预测空位；按置信度和码本优先级填入一部分，再进入下一轮。</p></div><span class="step-kind emphasis">核心生成</span></li>
+          <li><span class="step-index">5</span><div><h3>声学 token 解码为波形</h3><p>补全后的多组离散编码经音频解码器还原成波形；需要时进行音量处理、尾部修整及长文分段结果的拼接与衔接。</p></div><span class="step-kind">解码</span></li>
+          <li><span class="step-index">6</span><div><h3>返回数组，保存或播放</h3><p>返回 24 kHz 单声道音频数组列表。调用方可以保存 WAV、接入播放器，或加入自己的应用工作流。</p></div><span class="step-kind">产出</span></li>
+        </ol>
+        <p class="citation">依据：<a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/models/omnivoice.py">生成、提示与音频解码实现</a> · <a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/utils/duration.py">规则时长估计</a></p>
+      </section>
+
+      <section id="transformer" class="section">
+        <div class="section-heading"><span class="number">05</span><div><h2>“双向 Transformer”到底是什么？</h2><p>双向描述的是注意力的可见范围：当前预测可以参考前面，也可以参考后面。</p></div></div>
+        <div class="attention-demo">
+          <div class="demo-heading"><div><h3>预测一个空位，模型能参考哪里？</h3><p>点击一个 MASK 格子，再切换注意力范围。</p></div><span class="demo-badge">教学示意</span></div>
+          <div class="segmented" role="group" aria-label="注意力范围对照"><button data-attention="bidirectional" aria-pressed="true">双向注意力 · OmniVoice</button><button data-attention="causal" aria-pressed="false">单向因果注意力 · 对照</button></div>
+          <div class="context-chip">已知条件：整段目标文字 + 参考声音提示</div>
+          <div id="attention-sequence" class="attention-sequence" aria-label="八个时间位置的简化声音编码序列"></div>
+          <div class="attention-legend"><span><i class="legend-square visible"></i>可参考的已填编码</span><span><i class="legend-square selected"></i>当前预测位置</span><span><i class="legend-square unknown"></i>仍然未知的 MASK</span></div>
+          <div id="attention-explanation" class="demo-explanation" aria-live="polite"></div>
+        </div>
+        <div class="two-columns explanation-pair"><div><h3>Transformer 做什么</h3><p>注意力机制让模型判断上下文中哪些信息有助于当前预测。多层网络融合这些信息，再预测每个时间位置、每组码本可能的编码编号。</p></div><div><h3>双向带来的价值</h3><p>已知整段文字，而且部分较后位置的编码也可能已填好。模型能结合两边的信息补空位，支持整段并行预测和反复完善上下文。</p></div></div>
+        <p class="inline-note"><strong>后面还没生成的真实声音仍然未知。</strong>模型看到的是当前位置上的编码或 MASK，不会提前得到正确答案。“双向”也不等于两个模型同时说话。</p>
+        <p class="citation">依据：<a href="https://arxiv.org/html/2604.00688v3#S2.SS1">论文模型结构与双向注意力</a> · <a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/models/omnivoice.py#L427-L493">音频嵌入与输出头实现</a></p>
+        <noscript><p class="inline-note">请启用 JavaScript 查看交互：双向可参考左右已填编码，单向因果对照只可参考左侧。未知 MASK 始终不是真实声音。</p></noscript>
+      </section>
+
+      <section id="masking" class="section">
+        <div class="section-heading"><span class="number">06</span><div><h2>离散掩码生成：多轮做“声音完形填空”</h2><p>从全部未知开始，每轮预测许多位置，再填入一批编码。</p></div></div>
+        <div class="mask-demo">
+          <div class="demo-heading"><div><h3>8 组码本 × 12 个时间位置</h3><p>每列对应同一时刻的 8 个声音编码，不是 8 个说话人。</p></div><span class="demo-badge">教学示意 · 压缩为 4 轮</span></div>
+          <div class="mask-controls"><div class="round-pills" role="group" aria-label="选择示意轮次"><button data-round="0" aria-pressed="true">初始化</button><button data-round="1" aria-pressed="false">第 1 轮</button><button data-round="2" aria-pressed="false">第 2 轮</button><button data-round="3" aria-pressed="false">第 3 轮</button><button data-round="4" aria-pressed="false">完成</button></div><div class="mask-buttons"><button id="mask-reset" class="button light">重置</button><button id="mask-next" class="button primary">下一轮 →</button></div></div>
+          <div class="matrix-scroll" tabindex="0" role="region" aria-label="示意声学编码矩阵，窄屏可以左右滚动"><div id="mask-matrix" class="mask-matrix"></div></div>
+          <div class="attention-legend matrix-legend"><span><i class="legend-square visible"></i>此前已填</span><span><i class="legend-square fresh"></i>本轮新增</span><span><i class="legend-square unknown"></i>· 表示未知 MASK</span></div>
+          <div class="mask-progress"><div class="progress-track" aria-hidden="true"><span id="mask-progress-fill"></span></div><span id="mask-counter">0 / 96 个编码已填</span></div>
+          <div id="mask-explanation" class="demo-explanation" aria-live="polite"></div>
+          <div class="matrix-footnote">演示使用人工示例编号，不运行模型。真实默认生成 32 步，可选 16 步；实际每轮填入数量由调度、置信度和码本优先级决定。</div>
+        </div>
+        <div class="two-columns explanation-pair"><div><h3>为什么叫“离散扩散”</h3><p>这里处理离散编号，用 MASK 表示破坏后的未知状态；模型学习恢复编码。推理逐轮减少 MASK，属于扩散语言模型风格的离散生成。</p></div><div><h3>为什么可以并行</h3><p>一次前向计算会预测多个空位，而非严格从左到右逐个生成。总速度仍受步数、序列长度、硬件和批量影响；并行不代表瞬间完成。</p></div></div>
+        <p class="citation">依据：<a href="https://arxiv.org/html/2604.00688v3#S3.SS4">论文采样方法</a> · <a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/models/omnivoice.py#L1272-L1334">推理补全循环</a></p>
+      </section>
+
+      <section id="technology" class="section">
+        <div class="section-heading"><span class="number">07</span><div><h2>技术栈，以及训练如何获得这种能力</h2><p>音频表征、生成网络和推理调度共同构成核心。</p></div></div>
+        <div class="codec-banner"><div><span class="small-label">AUDIO TOKENIZER</span><h3>把连续波形，变成离散编号</h3><p>Higgs Audio Tokenizer 融合 DAC 声学特征与 HuBERT 语义特征，通过 RVQ（残差向量量化）得到多组码本。后续层继续编码前面近似后剩余的误差，多组共同还原声音。</p></div><div class="codec-numbers"><div><b>8</b><span>组码本</span></div><div><b>1024</b><span>每组有效编号</span></div><div><b>25</b><span>帧 / 秒</span></div></div></div>
+        <p class="inline-note">例如 10 秒音频约有 250 个时间位置 × 8 组 = 2,000 个编码。每个位置的 8 组嵌入相加成一个输入向量；模型对 8 组分别预测。每组另有一个 MASK 编号。</p>
+        <p class="citation">依据：<a href="https://huggingface.co/docs/transformers/model_doc/higgs_audio_v2_tokenizer">Higgs Audio V2 文档</a> · <a href="https://github.com/boson-ai/higgs-audio/blob/main/tech_blogs/TOKENIZER_BLOG.md">编码器技术说明</a> · <a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/models/omnivoice.py#L427-L493">多码本嵌入与预测</a></p>
+        <div class="two-columns training-pair"><article><span class="phase-label">阶段 A · 训练</span><h3>学习“给定条件，恢复声音编码”</h3><ol><li>准备带转写和语言等信息的音频数据。</li><li>编码音频，保留参考前缀，随机遮住目标编码。</li><li>网络依据文字与可见编码预测被遮住的部分。</li><li>对被遮住位置计算交叉熵损失，更新权重。</li></ol><p>训练过程中也会丢弃部分条件，使模型具备无条件预测能力，供推理时 CFG 使用。</p><a class="source" href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/data/processor.py">训练样本与损失掩码 ↗</a></article><article><span class="phase-label">阶段 B · 使用</span><h3>固定权重，根据新条件生成声音</h3><ol><li>加载已训练的 OmniVoice 权重与编码器。</li><li>输入新文稿和参考声音 / 声音属性。</li><li>初始化 MASK，逐轮补全所有目标编码。</li><li>解码得到音频，并返回调用方。</li></ol><p>零样本克隆通常直接进行这一阶段。想调整模型能力时，才另行考虑全量微调或 LoRA。</p><a class="source" href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/training.md">训练与微调指南 ↗</a></article></div>
+        <div class="technical-details">
+          <details><summary><span>模型骨干</span>Qwen3 初始化 + 双向注意力 + 音频输入输出层</summary><div><p>从 Qwen3-0.6B 权重初始化，增加声学 token 嵌入与预测输出，按语音任务训练为 OmniVoice。推理加载的是 OmniVoice 权重；Qwen 提供训练起点，不能直接替换成任意聊天模型。</p><a href="https://arxiv.org/html/2604.00688v3#S3.SS2">论文训练配置 ↗</a> · <a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/training/builder.py#L86-L106">模型构建代码 ↗</a></div></details>
+          <details><summary><span>多语言数据</span>大规模语音训练 + 清洗 + 语言采样平衡</summary><div><p>论文报告约 58.1 万小时、来自 50 个开放数据集。通过清洗与处理、转写筛选、语言采样调整等措施训练多语言能力。语言覆盖广，数据量和实际质量仍不均匀。</p><a href="https://arxiv.org/html/2604.00688v3#S3.SS1">论文数据部分 ↗</a> · <a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/data_preparation.md">数据准备指南 ↗</a></div></details>
+          <details><summary><span>条件引导</span>CFG 增强文字与声音条件的作用</summary><div><p>Classifier-Free Guidance 对比有条件与去掉文字、风格和参考声音条件的预测，放大条件对结果的影响。它属于推理阶段的概率调节，需要训练时的条件丢弃支持。</p><a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/models/omnivoice.py#L1272-L1334">条件与无条件预测实现 ↗</a> · <a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/training/config.py">条件丢弃配置 ↗</a></div></details>
+          <details><summary><span>补全调度</span>置信度 + 码本优先级 + 多轮填入</summary><div><p>当前实现按预测置信度，结合扰动和码本惩罚排序，决定本轮填哪些空位。较低层码本更优先；已填位置在这条推理路径中保留，不反复遮回。默认 32 步，16 步可加快推理，质量需实测。</p><a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/generation-parameters.md">参数含义 ↗</a> · <a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/models/omnivoice.py#L1272-L1334">补全排序实现 ↗</a></div></details>
+          <details><summary><span>时长与长文</span>规则估计 + 切段 + 声音连续性处理</summary><div><p>时长估计使用字符、语言权重及参考转写时长比例等规则；speed 调整帧数，duration 优先于 speed。长文可切段，复用声音提示或首段声音，并交叉淡化衔接。默认后处理可能修剪尾部，指定时长不代表最终文件绝对精确到该长度。</p><a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/utils/duration.py">时长估计器 ↗</a> · <a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/models/omnivoice.py">长文与后处理 ↗</a></div></details>
+          <details><summary><span>工程加速</span>PyTorch / Transformers / Accelerate / FlashInfer</summary><div><p>PyTorch 与 Transformers 执行模型；训练可用 Accelerate、混合精度与序列打包。可选 FlashInfer 合并条件分支计算，使用融合算子与 CUDA Graphs。加速收益依赖 GPU、批量与软件组合，不能把论文速度直接当成本机速度。</p><a href="https://github.com/k2-fsa/OmniVoice/blob/master/pyproject.toml">依赖配置 ↗</a> · <a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/training.md">训练实现 ↗</a> · <a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/models/omnivoice_flashinfer.py">FlashInfer 路径 ↗</a></div></details>
+        </div>
+      </section>
+
+      <section id="deployment" class="section">
+        <div class="section-heading"><span class="number">08</span><div><h2>部署在哪里，怎么使用？</h2><p>“本地模型”说明权重在计算环境中运行；这个环境也可以位于云端。</p></div></div>
+        <div class="deployment-grid"><article><span class="deployment-icon" aria-hidden="true">01</span><h3>个人电脑</h3><p>下载权重，在自己的设备推理。适合验证、研究、少量生成和本地工具。</p><small>准备 Python、PyTorch、模型与硬件支持。</small></article><article><span class="deployment-icon" aria-hidden="true">02</span><h3>企业服务器</h3><p>在统一机器加载模型，供内部批量任务或应用调用。可管理模型缓存和任务队列。</p><small>HTTP 接口、鉴权和并发管理需要自行开发。</small></article><article><span class="deployment-icon" aria-hidden="true">03</span><h3>云 GPU</h3><p>把同样的权重与依赖放在云主机推理，再通过自己封装的服务远程使用。</p><small>云是部署位置，底层仍运行 OmniVoice 权重。</small></article></div>
+        <div class="deploy-steps"><h3>最小使用路径</h3><div class="deploy-step"><span>1</span><div><strong>准备计算环境</strong><p>Python ≥ 3.10。按设备安装匹配的 PyTorch / torchaudio，再安装 OmniVoice。NVIDIA 使用 CUDA；Apple Silicon 使用 MPS；Intel Arc 使用 XPU。CPU 路径可回退，但速度需验证。</p><a class="source" href="https://github.com/k2-fsa/OmniVoice/blob/master/pyproject.toml">运行依赖 ↗</a> · <a class="source" href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/utils/common.py">设备选择 ↗</a></div></div><div class="deploy-step"><span>2</span><div><strong>安装库，选择入口</strong><p>在新的虚拟环境中操作。PyTorch 的具体安装命令请按 <a href="https://pytorch.org/get-started/locally/">官方安装选择器</a>匹配设备与 CUDA。</p><div class="code-panel compact"><div class="code-heading"><span>安装与本机 Gradio 界面</span><button class="copy-button" data-copy="install-code" aria-label="复制安装与本机界面命令">复制</button></div><pre><code id="install-code">pip install omnivoice
+omnivoice-demo --ip 127.0.0.1 --port 8001</code></pre></div><p class="small-text">也可使用 <code>omnivoice-infer</code> 单项生成，或 <code>omnivoice-infer-batch</code> 批量 / 多 GPU 推理。Gradio 是官方示例入口；生产服务需另外封装。</p></div></div><div class="deploy-step"><span>3</span><div><strong>加载权重，输入文字与参考声音</strong><p>首次使用模型 ID 会下载预训练资源。之后可使用缓存，或把模型 ID 替换为准备好的本地模型目录。</p><div class="code-panel"><div class="code-heading"><span>Python · NVIDIA CUDA 示例</span><button class="copy-button" data-copy="inference-code" aria-label="复制完整 Python 推理示例">复制</button></div><pre><code id="inference-code">from omnivoice import OmniVoice
+import soundfile as sf
+import torch
+
+model = OmniVoice.from_pretrained(
+    "k2-fsa/OmniVoice",  # 也可传入本地模型目录
+    device_map="cuda:0",
+    dtype=torch.float16,
+)
+audio = model.generate(
+    text="你好，欢迎来到今天的课程。",
+    ref_audio="ref.wav",
+    ref_text="这是参考录音里说的内容。",
+    num_step=32,
+)
+sf.write("out.wav", audio[0], 24000)</code></pre></div><p class="small-text">Apple Silicon 将设备设为 <code>mps</code>，Intel Arc 设为 <code>xpu</code>，并匹配相应环境。缺省 ref_text 会加载额外的 Whisper ASR；手工提供转写可以跳过它。MPS 路径中的音频编解码器会转到 CPU 执行。</p></div></div><div class="deploy-step"><span>4</span><div><strong>验收与接入应用</strong><p>检查文稿读音、内容完整性、音色、停顿与输出时长，再测单条耗时、批量吞吐和硬件占用。接入应用时保存 / 播放数组，按需求增加 API、排队、错误处理和存储。</p></div></div></div>
+        <div class="two-columns deploy-notes"><div><h3>可以完全离线吗？</h3><p>在提前准备全部模型资源和依赖后可以离线运行，包括 OmniVoice、音频编解码器，以及需要自动转写时的 Whisper。普通推理不必调用收费云模型 API。</p></div><div class="license-note"><h3>代码与权重的授权不同</h3><p>仓库代码为 Apache 2.0；官方模型权重标注 CC-BY-NC。实际采用时应分别阅读代码和权重条款，不能由代码开源推断权重允许商用。</p><a class="source" href="https://huggingface.co/k2-fsa/OmniVoice#license">官方模型许可证 ↗</a></div></div>
+        <p class="citation">依据：<a href="https://github.com/k2-fsa/OmniVoice#installation">官方安装说明</a> · <a href="https://github.com/k2-fsa/OmniVoice#command-line-tools">API 与命令行入口</a> · <a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/models/omnivoice.py">资源加载与设备处理</a></p>
+      </section>
+
+      <section id="scenarios" class="section">
+        <div class="section-heading"><span class="number">09</span><div><h2>适用场景，以及需要另外补上的能力</h2><p>将“文字 → 声音”作为工作流中的一环。以下场景是基于公开能力的采用方向。</p></div></div>
+        <div class="scenario-grid"><article><span>内容生产</span><h3>多语言旁白与朗读</h3><p>文稿、课程、讲解或资讯转语音，统一声音并批量制作。翻译与编辑文稿属于上游步骤。</p></article><article><span>交互应用</span><h3>助手的语音输出</h3><p>把语言模型生成的回答转成声音。识别用户语音、对话逻辑和播放中断需要其他组件。</p></article><article><span>角色与原型</span><h3>声音设计与角色试音</h3><p>用声音属性探索角色风格，或用已授权的参考声音试制旁白。需实际试听属性一致性。</p></article><article><span>研究与工具</span><h3>语音模型实验与微调</h3><p>学习离散声学编码、掩码训练和条件生成，评估特定语言 / 文本，再按需要调整模型。</p></article></div>
+        <div class="boundary-table-wrap"><table class="boundary-table"><caption>从公开功能出发，判断能做到哪一步</caption><thead><tr><th scope="col">容易产生的理解</th><th scope="col">更准确的边界</th></tr></thead><tbody><tr><th scope="row">音色克隆 = 每个人训练一套参数</th><td>通常用参考提示引导已有模型，不重新训练该人的权重。</td></tr><tr><th scope="row">646 种语言 = 每种质量都一样</th><td>覆盖广，语言资源与表现不均；声音设计尤其要单独验收。</td></tr><tr><th scope="row">跨语言克隆 = 自动翻译配音</th><td>需要提供目标语言文稿；翻译、字幕对齐及剪辑需额外接入。</td></tr><tr><th scope="row">本地模型 = 只能在本机调用</th><td>权重可在服务器或云 GPU 运行，再由应用通过接口调用。</td></tr><tr><th scope="row">Qwen 初始化 = 可接任意聊天模型</th><td>实际使用经过语音训练的 OmniVoice，接口不是通用 LLM 适配器。</td></tr><tr><th scope="row">并行生成 / 长文分段 = 实时流式播放</th><td>当前 generate() 生成后返回完整结果；实时流式交付需另外实现并验证。</td></tr></tbody></table></div>
+        <p class="citation">依据：<a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/voice-design.md">声音设计范围</a> · <a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/models/omnivoice.py">生成接口与返回行为</a> · <a href="https://arxiv.org/html/2604.00688v3#S3.SS2">模型训练配置</a></p>
+      </section>
+
+      <section id="map" class="section">
+        <div class="section-heading"><span class="number">10</span><div><h2>一张图，回看完整理解</h2><p>保留此前整理的总览图，涵盖能力、输入输出、技术、训练与部署。</p></div></div>
+        <figure class="overview-figure"><a href="assets/omnivoice-overview.png" target="_blank" rel="noopener" aria-label="打开 OmniVoice 全尺寸总览图"><img src="assets/omnivoice-overview.png" width="4200" height="6165" alt="OmniVoice 能力与原理总览：三种声音模式、目标文字与参考声音输入、声学编码、双向 Transformer 多轮掩码补全、模型训练、部署方式和 24 kHz 音频输出" loading="lazy"></a><figcaption><span>完整理解总览 · 点击图片查看原尺寸</span><div><a href="assets/omnivoice-overview.png" download>下载 PNG ↓</a><a href="assets/omnivoice-overview.svg" download>下载 SVG ↓</a></div></figcaption></figure>
+      </section>
+
+      <section id="sources" class="section sources-section">
+        <div class="section-heading"><span class="number">11</span><div><h2>来源与核实范围</h2><p>研究依据来自官方仓库、论文、模型卡和音频编码器资料。</p></div></div>
+        <div class="verification-note"><strong>这份网页验证了什么？</strong><p>已核对公开能力、代码主线、参数、部署入口与许可证，并检查本页的交互和响应式布局。尚未在本机运行 OmniVoice，因此这里不对实际音质、音色相似度或推理速度给出实测结论。网页中的编码和波形是教学示意。</p></div>
+        <ul class="source-list"><li><span>能力与接口</span><a href="https://github.com/k2-fsa/OmniVoice">官方仓库与 README ↗</a><a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/generation-parameters.md">生成参数 ↗</a><a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/voice-design.md">声音设计 ↗</a></li><li><span>模型原理</span><a href="https://arxiv.org/html/2604.00688v3">OmniVoice 论文 v3 ↗</a><a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/models/omnivoice.py">核心模型源码 ↗</a><a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/data/processor.py">训练样本处理 ↗</a></li><li><span>音频编码</span><a href="https://huggingface.co/docs/transformers/model_doc/higgs_audio_v2_tokenizer">Higgs Audio V2 文档 ↗</a><a href="https://github.com/boson-ai/higgs-audio/blob/main/tech_blogs/TOKENIZER_BLOG.md">Tokenizer 技术说明 ↗</a></li><li><span>覆盖与训练</span><a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/languages.md">语言列表 ↗</a><a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/data_preparation.md">数据准备 ↗</a><a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/training.md">训练指南 ↗</a></li><li><span>资源与授权</span><a href="https://huggingface.co/k2-fsa/OmniVoice">官方模型卡与权重 ↗</a><a href="https://github.com/k2-fsa/OmniVoice/blob/master/LICENSE">代码许可证 ↗</a><a href="https://huggingface.co/spaces/k2-fsa/OmniVoice">官方在线 Demo ↗</a></li></ul>
+        <p class="research-date">资料访问日期：2026 年 10 月 4 日。未固定仓库 commit；线上文档可能继续更新。</p>
+      </section>
+      <footer><a href="../../">← 返回项目研究库</a><span>013 / OmniVoice · 能力、原理与使用</span><a href="#essence">回到顶部 ↑</a></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

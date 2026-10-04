@@ -1,0 +1,43 @@
+{
+  "url": "http://127.0.0.1:4193/projects/013-omnivoice/",
+  "date": "2026-10-04",
+  "checks": [
+    "Page title and main heading",
+    "Clone default mode",
+    "Voice design fields and code",
+    "Auto voice requires only text",
+    "Keyboard tab navigation",
+    "Bidirectional sees four known positions",
+    "Causal comparison excludes later positions",
+    "Selecting a different MASK updates context",
+    "Bidirectional restores both sides",
+    "Matrix starts fully unknown",
+    "Mask round fills 18 codes",
+    "Mask round fills 43 codes",
+    "Mask round fills 72 codes",
+    "Mask round fills 96 codes",
+    "Completion disables next button",
+    "Reset returns to unknown",
+    "Direct round selection works",
+    "Copy reports success",
+    "Copy preserves displayed code and newlines",
+    "All technical details expand",
+    "All in-page anchor targets exist",
+    "Overview image loads",
+    "No document overflow at 1440px",
+    "No document overflow at 1024px",
+    "No document overflow at 820px",
+    "No document overflow at 390px",
+    "Mobile mode interaction",
+    "Mobile mask interaction",
+    "No document overflow at 375px",
+    "No JavaScript errors"
+  ],
+  "errors": [],
+  "screenshots": [
+    "assets/web-desktop.png",
+    "assets/web-mobile.png",
+    "assets/web-mask-demo.png"
+  ],
+  "limitation": "Teaching UI verified; OmniVoice inference not run."
+}

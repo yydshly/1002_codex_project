@@ -1,0 +1,351 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2800" height="4110" viewBox="0 0 2800 4110" role="img" aria-labelledby="title desc">
+<title id="title">OmniVoice 能力、原理与部署全景</title>
+<desc id="desc">中文总览图，涵盖三种输入模式、推理步骤、关键技术、训练流程、部署、输出、用途及限制。</desc>
+<rect width="2800" height="4110" fill="#F2F5F9"/>
+<rect x="0" y="0" width="2800" height="246" rx="0" fill="#15263C"/>
+<text x="80" y="42.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="62" font-weight="700" fill="#FFFFFF">OmniVoice｜能力、原理与部署全景</text>
+<text x="84" y="130.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#D8E6F6">本质：根据文字与参考声音生成新语音。音色克隆是条件生成能力；本地／云端是运行位置。</text>
+<rect x="80" y="190" width="440" height="42" rx="10" fill="#2B405B"/>
+<text x="96" y="195.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#FFFFFF">646 种语言 [L]</text>
+<rect x="538" y="190" width="570" height="42" rx="10" fill="#2B405B"/>
+<text x="554" y="195.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#FFFFFF">参考录音 3–10 秒 [R]</text>
+<rect x="1126" y="190" width="640" height="42" rx="10" fill="#2B405B"/>
+<text x="1142" y="195.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#FFFFFF">Qwen3-0.6B 初始化 [P]</text>
+<rect x="1784" y="190" width="600" height="42" rx="10" fill="#2B405B"/>
+<text x="1800" y="195.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#FFFFFF">8 码本 · 24 kHz [C]</text>
+<rect x="80" y="275" width="58" height="58" rx="16" fill="#235EC4"/>
+<text x="94" y="282.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">01</text>
+<text x="156" y="280.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="40" font-weight="700" fill="#15263C">输入什么？三种生成模式</text>
+<text x="156" y="338.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#4F6278">所有模式都以目标文字 text 为核心输入；参考录音和声音属性是可选条件。</text>
+<rect x="80" y="384" width="864.0" height="220" rx="18" fill="#FFFFFF"/>
+<rect x="80" y="384" width="7" height="220" rx="3" fill="#235EC4"/>
+<text x="108" y="404.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#235EC4">音色克隆｜text + ref_audio</text>
+<text x="108" y="462.2" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#15263C">提供 3–10 秒参考录音；ref_text 是录音转写。</text>
+<text x="108" y="503.64" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#15263C">不填转写可用 Whisper 自动识别。</text>
+<text x="108" y="545.0799999999999" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#15263C">参考声音可缓存为 .pt 提示，跨次复用。 [R / M]</text>
+<rect x="968.0" y="384" width="864.0" height="220" rx="18" fill="#FFFFFF"/>
+<rect x="968.0" y="384" width="7" height="220" rx="3" fill="#235EC4"/>
+<text x="996.0" y="404.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#235EC4">声音设计｜text + instruct</text>
+<text x="996.0" y="462.2" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#15263C">无需参考录音；组合性别、年龄、音调。</text>
+<text x="996.0" y="503.64" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#15263C">支持耳语、英语口音、部分中文方言。</text>
+<text x="996.0" y="545.0799999999999" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#15263C">示例：female, young adult, low pitch。 [V]</text>
+<rect x="1856.0" y="384" width="864.0" height="220" rx="18" fill="#FFFFFF"/>
+<rect x="1856.0" y="384" width="7" height="220" rx="3" fill="#235EC4"/>
+<text x="1884.0" y="404.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#235EC4">自动声音｜仅 text</text>
+<text x="1884.0" y="462.2" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#15263C">让模型自动选择声音朗读。</text>
+<text x="1884.0" y="503.64" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#15263C">共享控制：language、speed、duration、num_step。</text>
+<text x="1884.0" y="545.0799999999999" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#15263C">文字可插入笑声／叹气、拼音／英文音素。 [R / G]</text>
+<rect x="80" y="623" width="2640" height="76" rx="14" fill="#E2ECFC"/>
+<text x="104" y="640.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#235EC4">能力：多语言 TTS  ·  零样本／跨语言克隆  ·  属性设计  ·  发音纠正与非言语声音  ·  语速／时长控制  ·  长文分段  ·  多 GPU 批量推理</text>
+<rect x="80" y="717" width="58" height="58" rx="16" fill="#087F80"/>
+<text x="94" y="724.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">02</text>
+<text x="156" y="722.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="40" font-weight="700" fill="#15263C">日常推理：一次生成经历哪些步骤？</text>
+<text x="156" y="780.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#4F6278">以下步骤使用已经训练好的 OmniVoice 权重；普通音色克隆无需为个人重新训练。</text>
+<rect x="80.0" y="831" width="415.0" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="102.0" y="851" width="46" height="46" rx="13" fill="#087F80"/>
+<text x="114.0" y="856.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">1</text>
+<text x="162.0" y="853.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#087F80">准备输入</text>
+<text x="102.0" y="918" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">文字分词与控制标签</text>
+<text x="102.0" y="956" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">参考音频编码</text>
+<text x="102.0" y="994" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">转写缺省时调用 ASR</text>
+<polyline points="500.0,944 520.0,944" fill="none" stroke="#087F80" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="520.0,944 506.0,937.0 506.0,951.0" fill="#087F80"/>
+<rect x="525.0" y="831" width="415.0" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="547.0" y="851" width="46" height="46" rx="13" fill="#087F80"/>
+<text x="559.0" y="856.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">2</text>
+<text x="607.0" y="853.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#087F80">确定长度</text>
+<text x="547.0" y="918" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">按字符类别权重与</text>
+<text x="547.0" y="956" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">参考文字／时长估计</text>
+<text x="547.0" y="994" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">duration 可直接指定</text>
+<polyline points="945.0,944 965.0,944" fill="none" stroke="#087F80" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="965.0,944 951.0,937.0 951.0,951.0" fill="#087F80"/>
+<rect x="970.0" y="831" width="415.0" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="992.0" y="851" width="46" height="46" rx="13" fill="#087F80"/>
+<text x="1004.0" y="856.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">3</text>
+<text x="1052.0" y="853.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#087F80">组装条件</text>
+<text x="992.0" y="918" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">风格与语言 + 文字</text>
+<text x="992.0" y="956" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">+ 参考音频 token</text>
+<text x="992.0" y="994" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">+ 全 MASK 目标区域</text>
+<polyline points="1390.0,944 1410.0,944" fill="none" stroke="#087F80" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1410.0,944 1396.0,937.0 1396.0,951.0" fill="#087F80"/>
+<rect x="1415.0" y="831" width="415.0" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="1437.0" y="851" width="46" height="46" rx="13" fill="#087F80"/>
+<text x="1449.0" y="856.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">4</text>
+<text x="1497.0" y="853.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#087F80">并行预测</text>
+<text x="1437.0" y="918" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">双向 Transformer</text>
+<text x="1437.0" y="956" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">读取整段上下文</text>
+<text x="1437.0" y="994" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">预测各码本分类概率</text>
+<polyline points="1835.0,944 1855.0,944" fill="none" stroke="#087F80" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1855.0,944 1841.0,937.0 1841.0,951.0" fill="#087F80"/>
+<rect x="1860.0" y="831" width="415.0" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="1882.0" y="851" width="46" height="46" rx="13" fill="#087F80"/>
+<text x="1894.0" y="856.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">5</text>
+<text x="1942.0" y="853.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#087F80">逐轮填空</text>
+<text x="1882.0" y="918" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">CFG + 置信度选位</text>
+<text x="1882.0" y="956" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">默认类别取 argmax</text>
+<text x="1882.0" y="994" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">每轮填入一批 token</text>
+<polyline points="2280.0,944 2300.0,944" fill="none" stroke="#087F80" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="2300.0,944 2286.0,937.0 2286.0,951.0" fill="#087F80"/>
+<rect x="2305.0" y="831" width="415.0" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="2327.0" y="851" width="46" height="46" rx="13" fill="#087F80"/>
+<text x="2339.0" y="856.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">6</text>
+<text x="2387.0" y="853.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#087F80">解码输出</text>
+<text x="2327.0" y="918" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">Codec 还原波形</text>
+<text x="2327.0" y="956" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">修剪静音、淡入淡出</text>
+<text x="2327.0" y="994" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">长文段落拼接</text>
+<polyline points="1622.5,1057 1622.5,1100 2067.5,1100 2067.5,1057" fill="none" stroke="#087F80" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1712.5,1100 1647.5,1100" fill="none" stroke="#087F80" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1647.5,1100 1661.5,1107.0 1661.5,1093.0" fill="#087F80"/>
+<text x="80" y="1085.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#4F6278">参考音频可选；时长控制决定目标 token 数量。 [D / M]</text>
+<text x="2140" y="1080.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#087F80">迭代：32 轮；16 轮可提速 [G]</text>
+<rect x="80" y="1150" width="58" height="58" rx="16" fill="#087F80"/>
+<text x="94" y="1157.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">03</text>
+<text x="156" y="1155.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="40" font-weight="700" fill="#15263C">底层用了哪些关键技术？</text>
+<text x="156" y="1213.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#4F6278">核心生成路线：直接从文本预测多码本声学 token，再通过独立 Codec 解码为声音。</text>
+<rect x="80.0" y="1264" width="864.0" height="290" rx="18" fill="#FFFFFF"/>
+<rect x="80.0" y="1264" width="7" height="290" rx="3" fill="#087F80"/>
+<text x="108.0" y="1284.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#087F80">神经音频 Codec：声音离散化</text>
+<text x="108.0" y="1339.6" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">Higgs Audio V2：DAC 声学 + HuBERT 语义特征，融合后经 RVQ</text>
+<text x="108.0" y="1379.56" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">残差量化。</text>
+<text x="108.0" y="1419.52" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">约 25 帧／秒 × 8 组码本；每组 1024 个有效编码。</text>
+<text x="108.0" y="1459.48" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">10 秒语音约有 250 个时间位置，每位置 8 个码。 [C / K]</text>
+<rect x="968.0" y="1264" width="864.0" height="290" rx="18" fill="#FFFFFF"/>
+<rect x="968.0" y="1264" width="7" height="290" rx="3" fill="#087F80"/>
+<text x="996.0" y="1284.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#087F80">Qwen 初始化 + 双向注意力</text>
+<text x="996.0" y="1339.6" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">以 Qwen3-0.6B 预训练权重和文本 tokenizer</text>
+<text x="996.0" y="1379.56" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">为起点，再训练语音任务。</text>
+<text x="996.0" y="1419.52" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">双向上下文帮助模型关联文字、参考声音与待生成声音。</text>
+<text x="996.0" y="1459.48" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">部署时加载的是已经训练好的 OmniVoice。 [B / P]</text>
+<rect x="1856.0" y="1264" width="864.0" height="290" rx="18" fill="#FFFFFF"/>
+<rect x="1856.0" y="1264" width="7" height="290" rx="3" fill="#087F80"/>
+<text x="1884.0" y="1284.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#087F80">多码本共享骨干与输出头</text>
+<text x="1884.0" y="1339.6" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">同一时间的 8 组编码分别查 embedding，</text>
+<text x="1884.0" y="1379.56" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">求和形成一个时间位置的输入向量。</text>
+<text x="1884.0" y="1419.52" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">共享 Transformer 输出 8 组分类概率。</text>
+<text x="1884.0" y="1459.48" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">码本共同表示声音，不固定对应“音色／情绪”。 [M]</text>
+<rect x="80.0" y="1566" width="864.0" height="290" rx="18" fill="#FFFFFF"/>
+<rect x="80.0" y="1566" width="7" height="290" rx="3" fill="#7152AA"/>
+<text x="108.0" y="1586.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#7152AA">离散掩码扩散：恢复缺失编码</text>
+<text x="108.0" y="1641.6" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">训练在全部目标码本随机遮蔽；每个样本随机选择遮蔽比例。</text>
+<text x="108.0" y="1681.56" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">只对被遮住的目标编码计算分类损失。</text>
+<text x="108.0" y="1721.52" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">这里的扰动是 MASK，并非向波形加入高斯噪声。 [S]</text>
+<rect x="968.0" y="1566" width="864.0" height="290" rx="18" fill="#FFFFFF"/>
+<rect x="968.0" y="1566" width="7" height="290" rx="3" fill="#087F80"/>
+<text x="996.0" y="1586.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#087F80">迭代解码、CFG 与选位策略</text>
+<text x="996.0" y="1641.6" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">全 MASK → 部分确定 → 全部确定。</text>
+<text x="996.0" y="1681.56" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">已填编码保持，继续填剩余位置。</text>
+<text x="996.0" y="1721.52" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">置信度与 Gumbel 选位，鼓励浅层码本先填。</text>
+<text x="996.0" y="1761.48" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">类别默认取 argmax；CFG 比较有／无条件预测。 [M / G]</text>
+<rect x="1856.0" y="1566" width="864.0" height="290" rx="18" fill="#FFFFFF"/>
+<rect x="1856.0" y="1566" width="7" height="290" rx="3" fill="#235EC4"/>
+<text x="1884.0" y="1586.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#235EC4">声音提示、属性与去噪条件</text>
+<text x="1884.0" y="1641.6" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">参考音频 token 提供音色／口音／风格上下文。</text>
+<text x="1884.0" y="1681.56" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">日常克隆不更新权重；属性标签用于设计声音。</text>
+<text x="1884.0" y="1721.52" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">拼音／音素与非言语标签用于控制输出。</text>
+<text x="1884.0" y="1761.48" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">去噪条件帮助生成较干净的目标语音。 [R / V / P]</text>
+<rect x="80" y="1903" width="58" height="58" rx="16" fill="#7152AA"/>
+<text x="94" y="1910.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">04</text>
+<text x="156" y="1908.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="40" font-weight="700" fill="#15263C">训练阶段：这些能力怎样学出来？</text>
+<text x="156" y="1966.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#4F6278">训练／微调会产生新权重；.pt 声音提示只是参考编码缓存。两者用途不同。</text>
+<rect x="80.0" y="2018" width="502.4" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="102.0" y="2038" width="46" height="46" rx="13" fill="#7152AA"/>
+<text x="114.0" y="2043.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">1</text>
+<text x="162.0" y="2040.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#7152AA">准备配对数据</text>
+<text x="102.0" y="2105" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">文字 + 音频 + 可选标签</text>
+<text x="102.0" y="2143" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">论文：58.1 万小时</text>
+<text x="102.0" y="2181" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">646 语言；数据清理 [P/L]</text>
+<polyline points="588.4,2131 608.4,2131" fill="none" stroke="#7152AA" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="608.4,2131 594.4,2124.0 594.4,2138.0" fill="#7152AA"/>
+<rect x="614.4" y="2018" width="502.4" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="636.4" y="2038" width="46" height="46" rx="13" fill="#7152AA"/>
+<text x="648.4" y="2043.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">2</text>
+<text x="696.4" y="2040.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#7152AA">复用 Codec 编码</text>
+<text x="636.4" y="2105" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">预训练 Codec 提取 token</text>
+<text x="636.4" y="2143" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">WebDataset 分片存储</text>
+<text x="636.4" y="2181" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">语言级重采样 [A/P]</text>
+<polyline points="1122.8,2131 1142.8,2131" fill="none" stroke="#7152AA" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1142.8,2131 1128.8,2124.0 1128.8,2138.0" fill="#7152AA"/>
+<rect x="1148.8" y="2018" width="502.4" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="1170.8" y="2038" width="46" height="46" rx="13" fill="#7152AA"/>
+<text x="1182.8" y="2043.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">3</text>
+<text x="1230.8" y="2040.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#7152AA">构造训练任务</text>
+<text x="1170.8" y="2105" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">参考前缀 + 目标区域</text>
+<text x="1170.8" y="2143" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">全部码本随机 MASK</text>
+<text x="1170.8" y="2181" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">部分样本丢弃条件 [S]</text>
+<polyline points="1657.1999999999998,2131 1677.1999999999998,2131" fill="none" stroke="#7152AA" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1677.1999999999998,2131 1663.1999999999998,2124.0 1663.1999999999998,2138.0" fill="#7152AA"/>
+<rect x="1683.1999999999998" y="2018" width="502.4" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="1705.1999999999998" y="2038" width="46" height="46" rx="13" fill="#7152AA"/>
+<text x="1717.1999999999998" y="2043.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">4</text>
+<text x="1765.1999999999998" y="2040.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#7152AA">训练语音模型</text>
+<text x="1705.1999999999998" y="2105" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">Qwen 权重初始化</text>
+<text x="1705.1999999999998" y="2143" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">双向模型恢复缺失码</text>
+<text x="1705.1999999999998" y="2181" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">掩码分类损失反向传播</text>
+<polyline points="2191.6,2131 2211.6,2131" fill="none" stroke="#7152AA" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="2211.6,2131 2197.6,2124.0 2197.6,2138.0" fill="#7152AA"/>
+<rect x="2217.6" y="2018" width="502.4" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="2239.6" y="2038" width="46" height="46" rx="13" fill="#7152AA"/>
+<text x="2251.6" y="2043.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">5</text>
+<text x="2299.6" y="2040.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#7152AA">保存模型权重</text>
+<text x="2239.6" y="2105" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">得到 OmniVoice checkpoint</text>
+<text x="2239.6" y="2143" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">可继续全量／LoRA 微调</text>
+<text x="2239.6" y="2181" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">用于后续推理 [T/B]</text>
+<text x="80" y="2265.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#4F6278">训练工程：PyTorch + Transformers + Accelerate；混合精度、序列打包减少开销。推理可选 FlashInfer / 融合算子 / CUDA Graph。 [T / F]</text>
+<rect x="80" y="2334" width="58" height="58" rx="16" fill="#235EC4"/>
+<text x="94" y="2341.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">05</text>
+<text x="156" y="2339.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="40" font-weight="700" fill="#15263C">如何部署？位置可选，计算原理相同</text>
+<text x="156" y="2397.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#4F6278">本机／自有服务器／云 GPU 均可运行；官方入口是 Python、命令行、Gradio。业务 HTTP API 需自行封装。</text>
+<rect x="80.0" y="2448" width="502.4" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="102.0" y="2468" width="46" height="46" rx="13" fill="#235EC4"/>
+<text x="114.0" y="2473.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">1</text>
+<text x="162.0" y="2470.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#235EC4">选择环境</text>
+<text x="102.0" y="2535" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">Python ≥ 3.10</text>
+<text x="102.0" y="2573" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">创建独立虚拟环境</text>
+<text x="102.0" y="2611" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">Windows / Linux / macOS</text>
+<polyline points="588.4,2561 608.4,2561" fill="none" stroke="#235EC4" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="608.4,2561 594.4,2554.0 594.4,2568.0" fill="#235EC4"/>
+<rect x="614.4" y="2448" width="502.4" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="636.4" y="2468" width="46" height="46" rx="13" fill="#235EC4"/>
+<text x="648.4" y="2473.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">2</text>
+<text x="696.4" y="2470.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#235EC4">安装计算后端</text>
+<text x="636.4" y="2535" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">安装匹配硬件的</text>
+<text x="636.4" y="2573" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">PyTorch + torchaudio</text>
+<text x="636.4" y="2611" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">CUDA / MPS / XPU</text>
+<polyline points="1122.8,2561 1142.8,2561" fill="none" stroke="#235EC4" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1142.8,2561 1128.8,2554.0 1128.8,2568.0" fill="#235EC4"/>
+<rect x="1148.8" y="2448" width="502.4" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="1170.8" y="2468" width="46" height="46" rx="13" fill="#235EC4"/>
+<text x="1182.8" y="2473.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">3</text>
+<text x="1230.8" y="2470.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#235EC4">安装 OmniVoice</text>
+<text x="1170.8" y="2535" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">pip install omnivoice</text>
+<text x="1170.8" y="2573" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">或克隆仓库 + uv sync</text>
+<text x="1170.8" y="2611" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">额外功能按需安装</text>
+<polyline points="1657.1999999999998,2561 1677.1999999999998,2561" fill="none" stroke="#235EC4" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1677.1999999999998,2561 1663.1999999999998,2554.0 1663.1999999999998,2568.0" fill="#235EC4"/>
+<rect x="1683.1999999999998" y="2448" width="502.4" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="1705.1999999999998" y="2468" width="46" height="46" rx="13" fill="#235EC4"/>
+<text x="1717.1999999999998" y="2473.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">4</text>
+<text x="1765.1999999999998" y="2470.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#235EC4">加载预训练权重</text>
+<text x="1705.1999999999998" y="2535" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">OmniVoice + 音频 Codec</text>
+<text x="1705.1999999999998" y="2573" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">首次下载，后续缓存</text>
+<text x="1705.1999999999998" y="2611" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">可传本地权重目录</text>
+<polyline points="2191.6,2561 2211.6,2561" fill="none" stroke="#235EC4" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="2211.6,2561 2197.6,2554.0 2197.6,2568.0" fill="#235EC4"/>
+<rect x="2217.6" y="2448" width="502.4" height="226" rx="18" fill="#FFFFFF"/>
+<rect x="2239.6" y="2468" width="46" height="46" rx="13" fill="#235EC4"/>
+<text x="2251.6" y="2473.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">5</text>
+<text x="2299.6" y="2470.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#235EC4">选择调用方式</text>
+<text x="2239.6" y="2535" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">Python model.generate</text>
+<text x="2239.6" y="2573" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">CLI / Gradio demo</text>
+<text x="2239.6" y="2611" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#15263C">云端按需封装服务</text>
+<rect x="80" y="2700" width="1710" height="320" rx="18" fill="#15263C"/>
+<text x="104" y="2718.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#D8E6F6">最小克隆示例｜NVIDIA GPU；先安装匹配的 PyTorch 与 OmniVoice</text>
+<text x="104" y="2770" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#FFFFFF">from omnivoice import OmniVoice</text>
+<text x="104" y="2803" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#FFFFFF">import torch, soundfile as sf</text>
+<text x="104" y="2836" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#FFFFFF">model = OmniVoice.from_pretrained(</text>
+<text x="104" y="2869" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#FFFFFF">    &quot;k2-fsa/OmniVoice&quot;, device_map=&quot;cuda:0&quot;, dtype=torch.float16)</text>
+<text x="104" y="2902" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#FFFFFF">audio = model.generate(text=&quot;你好，欢迎使用。&quot;, ref_audio=&quot;ref.wav&quot;,</text>
+<text x="104" y="2935" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#FFFFFF">                       ref_text=&quot;参考录音的完整转写。&quot;)</text>
+<text x="104" y="2968" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#FFFFFF">sf.write(&quot;out.wav&quot;, audio[0], 24000)</text>
+<rect x="1814" y="2700" width="906" height="320" rx="18" fill="#FFFFFF"/>
+<rect x="1814" y="2700" width="7" height="320" rx="3" fill="#235EC4"/>
+<text x="1842" y="2720.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#235EC4">部署与性能提示 [R / Q / M / F]</text>
+<text x="1842" y="2775.6" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">NVIDIA 用 CUDA；Apple Silicon 用 MPS；Intel Arc 用 XPU。GPU</text>
+<text x="1842" y="2815.56" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">推荐，CPU 可回退。</text>
+<text x="1842" y="2855.52" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">缺省转写才需要额外加载 Whisper；权重与依赖备齐后可从本地加载。</text>
+<text x="1842" y="2895.48" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">显存与速度随长度、批量和后端变化；Apple MPS 下 Codec 在 CPU。</text>
+<text x="1842" y="2935.44" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">FlashInfer 是可选加速；运行快不等于流式输出。</text>
+<rect x="80" y="3053" width="58" height="58" rx="16" fill="#087F80"/>
+<text x="94" y="3060.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">06</text>
+<text x="156" y="3058.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="40" font-weight="700" fill="#15263C">产出是什么？</text>
+<text x="156" y="3116.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#4F6278">主产物是可播放的语音；模型权重和声音提示缓存属于不同层次的产物。</text>
+<rect x="80" y="3168" width="864.0" height="224" rx="18" fill="#FFFFFF"/>
+<rect x="80" y="3168" width="7" height="224" rx="3" fill="#087F80"/>
+<text x="108" y="3188.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#087F80">日常生成：语音数组／音频文件</text>
+<text x="108" y="3243.6" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">Python 返回 list[np.ndarray]，每项形状 (T,)。</text>
+<text x="108" y="3283.56" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">24 kHz 单声道；可保存 out.wav、试听或接入业务。</text>
+<text x="108" y="3323.52" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">批量模式为多个输入生成对应音频。 [R]</text>
+<rect x="968.0" y="3168" width="864.0" height="224" rx="18" fill="#FFFFFF"/>
+<rect x="968.0" y="3168" width="7" height="224" rx="3" fill="#087F80"/>
+<text x="996.0" y="3188.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#087F80">声音复用：VoiceClonePrompt</text>
+<text x="996.0" y="3243.6" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">参考音频 token + 转写 + 音量信息，可存为 .pt。</text>
+<text x="996.0" y="3283.56" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">再次生成时复用提示，省去重复编码／转写。</text>
+<text x="996.0" y="3323.52" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">这是声音提示缓存，不是个人训练权重。 [M]</text>
+<rect x="1856.0" y="3168" width="864.0" height="224" rx="18" fill="#FFFFFF"/>
+<rect x="1856.0" y="3168" width="7" height="224" rx="3" fill="#7152AA"/>
+<text x="1884.0" y="3188.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#7152AA">训练／微调：模型 checkpoint</text>
+<text x="1884.0" y="3243.6" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">保存新模型权重或 LoRA adapter。</text>
+<text x="1884.0" y="3283.56" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">后续加载以适配语种、领域或声音数据。</text>
+<text x="1884.0" y="3323.52" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">普通零样本克隆不需要这一步。 [T / B]</text>
+<rect x="80" y="3430" width="58" height="58" rx="16" fill="#97600A"/>
+<text x="94" y="3437.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">07</text>
+<text x="156" y="3435.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="40" font-weight="700" fill="#15263C">适用场景与实际边界</text>
+<text x="156" y="3493.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#4F6278">场景是基于能力的应用推演；部署前应以自己的文稿与参考声音试听验证。</text>
+<rect x="80" y="3542" width="1298" height="252" rx="18" fill="#FFFFFF"/>
+<rect x="80" y="3542" width="7" height="252" rx="3" fill="#087F80"/>
+<text x="108" y="3562.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#087F80">适用场景</text>
+<text x="108" y="3617.6" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">多语言配音、课程／文章／有声书朗读、角色声音原型。</text>
+<text x="108" y="3657.56" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">小语种研究、定制语音微调、批量内容生成。</text>
+<text x="108" y="3697.52" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">语音助手链路：ASR → 对话模型 → OmniVoice 发声。</text>
+<text x="108" y="3737.48" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">翻译、对话与业务编排需接入相应组件。</text>
+<rect x="1402" y="3542" width="1318" height="252" rx="18" fill="#FFFFFF"/>
+<rect x="1402" y="3542" width="7" height="252" rx="3" fill="#97600A"/>
+<text x="1430" y="3562.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#97600A">边界与许可 [R / G / M / H / N]</text>
+<text x="1430" y="3617.6" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">646 语言的质量不均；跨语言克隆可能带参考语言口音。</text>
+<text x="1430" y="3657.56" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">声音设计主要训练于中英文；短句、数字、复杂属性需验证。</text>
+<text x="1430" y="3697.52" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">当前 generate 分段后返回完整音频；快生成 ≠ 流式接口。</text>
+<text x="1430" y="3737.48" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#15263C">代码 Apache 2.0；官方权重 CC-BY-NC，商用需确认授权。</text>
+<polyline points="80,3840 2720,3840" fill="none" stroke="#CED8E4" stroke-width="2" stroke-linejoin="round"/>
+<text x="80" y="3858.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#4F6278">来源索引｜按 2026-10-04 可见官方资料整理；SVG 中可点击下列来源</text>
+<a href="https://github.com/k2-fsa/OmniVoice" target="_blank">
+<text x="80" y="3907.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[R] README / 输入与调用</text>
+</a>
+<a href="https://arxiv.org/html/2604.00688v3" target="_blank">
+<text x="610" y="3907.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[P] 论文 2604.00688v3</text>
+</a>
+<a href="https://huggingface.co/docs/transformers/model_doc/higgs_audio_v2_tokenizer" target="_blank">
+<text x="1140" y="3907.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[C] Higgs Codec 文档</text>
+</a>
+<a href="https://github.com/huggingface/transformers/blob/main/src/transformers/models/higgs_audio_v2_tokenizer/modeling_higgs_audio_v2_tokenizer.py" target="_blank">
+<text x="1670" y="3907.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[K] Codec 官方实现</text>
+</a>
+<a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/models/omnivoice.py" target="_blank">
+<text x="2200" y="3907.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[M] OmniVoice 模型源码</text>
+</a>
+<a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/data/processor.py" target="_blank">
+<text x="80" y="3949.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[S] 掩码训练处理</text>
+</a>
+<a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/training/builder.py" target="_blank">
+<text x="610" y="3949.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[B] 模型构建与初始化</text>
+</a>
+<a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/utils/duration.py" target="_blank">
+<text x="1140" y="3949.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[D] 时长估计</text>
+</a>
+<a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/generation-parameters.md" target="_blank">
+<text x="1670" y="3949.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[G] 生成参数</text>
+</a>
+<a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/voice-design.md" target="_blank">
+<text x="2200" y="3949.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[V] 声音设计</text>
+</a>
+<a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/data_preparation.md" target="_blank">
+<text x="80" y="3991.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[A] 数据准备</text>
+</a>
+<a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/training.md" target="_blank">
+<text x="610" y="3991.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[T] 训练 / LoRA</text>
+</a>
+<a href="https://github.com/k2-fsa/OmniVoice/blob/master/omnivoice/models/omnivoice_flashinfer.py" target="_blank">
+<text x="1140" y="3991.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[F] FlashInfer 实现</text>
+</a>
+<a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/languages.md" target="_blank">
+<text x="1670" y="3991.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[L] 646 语言列表</text>
+</a>
+<a href="https://github.com/k2-fsa/OmniVoice/blob/master/pyproject.toml" target="_blank">
+<text x="2200" y="3991.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[Q] 环境与依赖</text>
+</a>
+<a href="https://huggingface.co/k2-fsa/OmniVoice#license" target="_blank">
+<text x="80" y="4033.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[H] 权重许可</text>
+</a>
+<a href="https://github.com/k2-fsa/OmniVoice/blob/master/docs/tips.md" target="_blank">
+<text x="610" y="4033.0" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#235EC4">[N] 使用限制与提示</text>
+</a>
+</svg>
