@@ -1,0 +1,174 @@
+{
+  "status": "passed",
+  "startedAt": "2026-10-04T06:10:02.460Z",
+  "url": "http://localhost:4191/projects/008-pdoom-video/example.html",
+  "checks": [
+    {
+      "name": "Rendered source and actual H.264 exports",
+      "status": "passed",
+      "videos": [
+        {
+          "style": "warm",
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "12/1",
+          "duration": "6.000000",
+          "nb_read_frames": "72"
+        },
+        {
+          "style": "cool",
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "12/1",
+          "duration": "6.000000",
+          "nb_read_frames": "72"
+        },
+        {
+          "style": "flat",
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "12/1",
+          "duration": "6.000000",
+          "nb_read_frames": "72"
+        }
+      ],
+      "identicalMotionAcrossStyles": true
+    },
+    {
+      "name": "Four storyboard actions map to actual frames",
+      "status": "passed",
+      "actions": [
+        {
+          "title": "发现",
+          "time": 0.3333333333333333
+        },
+        {
+          "title": "走近",
+          "time": 1.5833333333333333
+        },
+        {
+          "title": "按下",
+          "time": 3.25
+        },
+        {
+          "title": "庆祝",
+          "time": 4.5
+        }
+      ]
+    },
+    {
+      "name": "Frame slider, keyboard and button-to-light timing",
+      "status": "passed",
+      "beforeTime": 3.1666666666666665,
+      "lightOnTime": 3.25,
+      "pressPercent": 100,
+      "keyboardFrame": 20
+    },
+    {
+      "name": "Three style controls preserve motion and change assets",
+      "status": "passed",
+      "identicalPose": true
+    },
+    {
+      "name": "Each actual MP4 plays and pauses at its current frame",
+      "status": "passed",
+      "videos": [
+        {
+          "style": "warm",
+          "width": 1920,
+          "height": 1080,
+          "duration": 6,
+          "currentTime": 0.308597,
+          "hidden": false
+        },
+        {
+          "style": "cool",
+          "width": 1920,
+          "height": 1080,
+          "duration": 6,
+          "currentTime": 0.305521,
+          "hidden": false
+        },
+        {
+          "style": "flat",
+          "width": 1920,
+          "height": 1080,
+          "duration": 6,
+          "currentTime": 0.308351,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "name": "Four actual painting layers load and differ",
+      "status": "passed",
+      "distinctImages": 4,
+      "fixedTime": 3.75
+    },
+    {
+      "name": "Desktop and 375px layout, with working source links",
+      "status": "passed",
+      "viewports": [
+        1440,
+        375
+      ],
+      "links": [
+        {
+          "file": "example-scene.js",
+          "status": 200
+        },
+        {
+          "file": "example-studio.html",
+          "status": 200
+        },
+        {
+          "file": "vendor/pdoom/core.js",
+          "status": 200
+        },
+        {
+          "file": "vendor/pdoom/clawd.js",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "name": "Original-code studio redraws the new scene",
+      "status": "重绘完成 · 2483 ms / 帧",
+      "pose": {
+        "t": 3.75,
+        "shot": 3,
+        "x": 1030,
+        "y": 785.1507575950825,
+        "walk": 0,
+        "aL": 0.925,
+        "aR": 0.925,
+        "sq": -0.028284271247461905,
+        "press": 0,
+        "light": 1,
+        "on": true,
+        "eyes": "happy",
+        "mouth": "smile"
+      },
+      "width": 1920,
+      "height": 1080,
+      "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A788) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "name": "No browser or resource errors",
+      "status": "passed",
+      "errors": 0
+    }
+  ],
+  "diagnostics": {
+    "pageErrors": [],
+    "consoleErrors": [],
+    "httpErrors": []
+  },
+  "completedAt": "2026-10-04T06:10:27.553Z"
+}

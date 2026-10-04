@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="一个实际六秒场景：AI 写分镜和动画代码，复用 PDoomVideo 绘画代码，点亮灯泡，并输出三种风格的真实视频。"><title>点亮一盏灯 · PDoomVideo 实际样例</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="example.css"></head>
+<body>
+<a class="skip" href="#player">跳到实际动画</a>
+<header><a class="brand" href="./">008 <span>/ PDoomVideo 实际样例</span></a><a href="./#principles">← 返回能力实验室</a></header>
+<main>
+  <section class="hero"><p class="eyebrow">一个故事，走完制作流程</p><h1>一次按下，<br>点亮一盏灯。</h1><p class="lead">用一个 6 秒场景，看清楚分镜怎么成为动作、颜色怎样画上去，以及风格在哪里控制。</p><div class="flow"><span>AI 写分镜与代码</span><b aria-hidden="true">→</b><span>程序绘制带颜色的帧</span><b aria-hidden="true">→</b><span>工具合成 MP4</span></div><p class="provenance">这是本次新写的场景，复用 PDoomVideo 原始角色和绘画代码。下方播放的是实际重绘、编码后的成片。</p></section>
+
+  <section id="player" class="player-section" aria-labelledby="player-title">
+    <div class="section-title"><div><p class="eyebrow">先看成品，再拆开看</p><h2 id="player-title">发现 → 走近 → 按下 → 庆祝</h2></div><span class="spec">6 秒 / 12 FPS / 无声</span></div>
+    <div class="style-toolbar"><span>同一分镜，切换风格</span><div role="group" aria-label="选择实际渲染风格"><button type="button" data-style="warm" aria-pressed="true" disabled><i class="swatch warm" aria-hidden="true"></i>暖色水彩</button><button type="button" data-style="cool" aria-pressed="false" disabled><i class="swatch cool" aria-hidden="true"></i>冷色水彩</button><button type="button" data-style="flat" aria-pressed="false" disabled><i class="swatch flat" aria-hidden="true"></i>清晰平涂</button></div></div>
+    <div class="player-grid"><div class="screen-card"><div class="screen-meta"><span id="style-label">暖色水彩</span><span id="frame-label">FRAME 000 / 071</span></div><div class="screen"><img id="example-image" src="assets/example/warm/f000.jpg" width="1920" height="1080" alt="角色发现按钮和熄灭的灯泡"><video id="example-video" src="assets/example/warm.mp4" muted playsinline preload="metadata" hidden aria-label="角色按按钮点亮灯泡的六秒实际成片"></video></div><div class="transport"><button id="play" class="primary" type="button" disabled>▶ 播放 6 秒成片</button><button id="restart" type="button" disabled>回到开头</button><output id="time">0.00 / 6.00 s</output></div><label class="scrub-label" for="frame">逐帧查看：拖动时间，观察动作与右侧参数</label><input id="frame" type="range" min="0" max="71" step="1" value="0" disabled><p id="load-status" class="small" role="status">正在读取实际渲染记录…</p></div>
+    <aside class="live-panel"><p class="eyebrow">这个时刻，代码在做什么？</p><h3 id="action-title">发现</h3><p id="action-story">角色看见右侧的按钮和熄灭的灯泡，向右侧张望。</p><dl><div><dt>角色横坐标 x</dt><dd><output id="pose-x">460</output> px</dd></div><div><dt>角色脚底 y</dt><dd><output id="pose-y">800</output> px</dd></div><div><dt>右手角度</dt><dd><output id="pose-arm">17.2</output>°</dd></div><div><dt>按钮按下程度</dt><dd><output id="pose-press">0</output>%</dd></div><div><dt>灯泡</dt><dd><output id="pose-light">熄灭</output></dd></div></dl><p class="small">这些值来自实际出帧时的动作函数。同一时刻更换风格，位置与动作保持相同。</p><a id="studio-link" href="example-studio.html?t=0&style=warm" target="_blank" rel="noopener noreferrer">用原始绘画引擎重绘这一帧 ↗</a></aside></div>
+  </section>
+
+  <section id="storyboard" class="section" aria-labelledby="storyboard-title"><div class="section-title"><div><p class="eyebrow">01 / AI 怎么写动作分镜？</p><h2 id="storyboard-title">先写“发生什么”，再写“怎么动”。</h2></div></div><div class="brief"><span>本次创作要求</span><p>做一段 6 秒的二维卡通：角色发现按钮，走过去按下，灯泡亮起，角色开心地庆祝。动作清楚，能比较水彩与平涂效果。</p></div><p class="section-lead">本次 AI 编写了下面四段分镜，再把它们落实为位置、角度、表情和时间条件。点击分镜，跳到实际对应画面。</p><div id="shots" class="shots"><button type="button" data-shot="0" aria-pressed="true" disabled><span>0.00–0.80 s</span><strong>发现</strong><p>看见按钮和灯泡</p><small>眼睛朝右，身体停留</small></button><button type="button" data-shot="1" aria-pressed="false" disabled><span>0.80–2.40 s</span><strong>走近</strong><p>走到按钮旁边</p><small>x 插值，腿交替移动</small></button><button type="button" data-shot="2" aria-pressed="false" disabled><span>2.40–3.50 s</span><strong>按下</strong><p>伸手按下，灯泡亮起</p><small>手臂旋转，3.25 秒开灯</small></button><button type="button" data-shot="3" aria-pressed="false" disabled><span>3.50–6.00 s</span><strong>庆祝</strong><p>微笑、举手、小跳跃</p><small>表情与身体位置变化</small></button></div><div class="code-grid"><div><h3>分镜到代码，中间发生了什么？</h3><p>“走过去”被写成横坐标的关键帧；“按下后亮灯”被写成时间条件。绘图函数接收算出的姿态，画出当前这一帧。</p><p>程序会计算关键时刻之间的动作，因此不需要 AI 分别描述每一张图片。</p><a href="example-scene.js" target="_blank" rel="noopener noreferrer">查看本次真正执行的场景代码 ↗</a></div><pre><code>// 摘自本次实际动作函数
+x: kf(t, [[0, 460], [.8, 460],
+          [2.4, 1030], [6, 1030]]),
+
+// 3.25 秒开始亮灯
+on: t >= 3.25,
+light: t >= 3.25
+  ? easeOut(seg(t, 3.25, 3.65)) : 0,
+
+// 计算完姿态后，再绘制角色
+clawd(p.x, p.y, 32, {
+  aL: p.aL, aR: p.aR, eyes: p.eyes,
+  col: s.clay, dk: s.clayDk, lt: s.clayLt
+});</code></pre></div></section>
+
+  <section id="painting" class="section" aria-labelledby="painting-title"><div class="section-title"><div><p class="eyebrow">02 / 画面怎样上色？</p><h2 id="painting-title">颜色在每一帧的绘制中产生。</h2></div><span class="spec">固定 3.75 秒 / 暖色风格</span></div><p class="section-lead">下面是同一帧的四个教学拆分，全部由实际绘画引擎输出。轮廓、铺色、水彩和纸纹逐步组成最终画面。</p><div class="painting-grid"><div class="paint-image"><img id="layer-image" src="assets/example/layer-outline.jpg" width="1920" height="1080" alt="3.75 秒画面的形状与轮廓教学拆分"></div><div class="paint-controls" role="group" aria-label="查看上色步骤"><button type="button" data-layer="outline" aria-pressed="true"><span>01</span><strong>形状与轮廓</strong><small>先看到角色和道具的几何结构</small></button><button type="button" data-layer="flat" aria-pressed="false"><span>02</span><strong>铺底色</strong><small>形状带上指定颜色与透明度</small></button><button type="button" data-layer="brush" aria-pressed="false"><span>03</span><strong>水彩与阴影</strong><small>加入亮部、暗部、渗边和颜料纹理</small></button><button type="button" data-layer="paper" aria-pressed="false"><span>04</span><strong>纸纹与成帧</strong><small>合成纸张颗粒，得到最终画面</small></button></div></div><p id="layer-description" class="paint-description">这是教学用的轮廓视图，方便看清组成画面的形状。实际成帧时，代码按图层顺序绘制每个形状的颜色、纹理和描边。</p></section>
+
+  <section id="style-control" class="section" aria-labelledby="style-title"><div class="section-title"><div><p class="eyebrow">03 / 风格在哪里控制？</p><h2 id="style-title">保留动作，修改绘画规则。</h2></div></div><p class="section-lead">上方三种风格使用同一分镜、同一角色形状和同一动作函数。变化来自这里的颜色、填充方式与纸张处理。</p><div class="style-facts"><article><span>调色板</span><div id="palette" class="palette" aria-label="当前风格的纸张、角色、阴影、灯光颜色"></div><p id="palette-values">正在读取…</p></article><article><span>笔刷与填充</span><h3 id="brush-title">水彩渗边 + 墨线</h3><p id="brush-description">水彩风格使用上游 paint() 包装器和 p5.brush；平涂风格把填充改成统一铺色。</p></article><article><span>纸张处理</span><h3 id="paper-title">纸纹 + 颗粒合成</h3><p id="paper-description">水彩风格沿用上游纸张底图和颗粒叠加；平涂风格使用纯色背景。</p></article></div><p class="small">本次只实现这三种二维风格。改成 3D 或写实画需要进一步改变角色与绘制方法。</p></section>
+
+  <section id="export" class="section export" aria-labelledby="export-title"><div><p class="eyebrow">04 / 最后怎样变成视频？</p><h2 id="export-title">72 张实际画面，组成 6 秒成片。</h2><p>渲染工具每隔 1/12 秒执行一次场景代码，得到 1920×1080 图片。FFmpeg 把 72 张图片按 12 FPS 编码为 H.264 MP4。上方播放按钮播放的就是这个文件。</p><p class="small">12 FPS 是本样例的输出设置；上游默认 24 FPS。为了便于观察动作，本样例没有添加声音。</p></div><div class="export-actions"><a id="download" class="download" href="assets/example/warm.mp4" download="点亮一盏灯-暖色水彩.mp4">下载暖色水彩 MP4 ↓</a><a href="assets/example/manifest.json" target="_blank" rel="noopener noreferrer">查看实际帧与参数记录 ↗</a></div></section>
+  <footer><p>新增分镜与场景：本次 AI 编写 · 共享绘画与角色：JohnHeibel / PDoomVideo</p><div><a href="./">返回能力实验室</a><a href="elements.html">角色与要素 · 准备和驱动</a><a href="vendor/pdoom/core.js" target="_blank" rel="noopener noreferrer">上游绘画代码</a><a href="vendor/pdoom/clawd.js" target="_blank" rel="noopener noreferrer">上游角色代码</a></div></footer>
+</main><script type="module" src="example.js"></script>
+</body></html>

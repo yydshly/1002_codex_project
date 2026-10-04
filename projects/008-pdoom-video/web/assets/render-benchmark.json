@@ -1,0 +1,26 @@
+{
+  "researchDate": "2026-10-04",
+  "source": "notes/render-results.json",
+  "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A788) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "stills": {
+    "count": 6,
+    "times": [
+      23.8,
+      43.2,
+      76.2,
+      101,
+      112,
+      143
+    ],
+    "minMs": 4846.7,
+    "maxMs": 13135.2
+  },
+  "clip": {
+    "start": 23,
+    "end": 26,
+    "fps": 12,
+    "frameCount": 36,
+    "totalMs": 289858.4
+  },
+  "scope": "一次本机测量；线性工作量推算与理想并行值不是完整视频或多worker吞吐实测。"
+}

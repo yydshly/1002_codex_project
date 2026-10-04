@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "url": "http://localhost:4191/projects/008-pdoom-video/overview.html",
+  "startedAt": "2026-10-04T07:11:51.117Z",
+  "checks": [
+    {
+      "name": "Standalone overview image matches its source and real rendered inputs",
+      "status": "passed",
+      "width": 3200,
+      "height": 5830,
+      "actualRenderedInputs": 14
+    },
+    {
+      "name": "Understanding covers effects, preparation, AI scripts, rendering, scenarios and personal value",
+      "status": "passed",
+      "sections": 6,
+      "pipelineStages": 5
+    },
+    {
+      "name": "Poster links, downloads, evidence and navigation resolve",
+      "status": "passed",
+      "localLinks": 10
+    },
+    {
+      "name": "Embedded six-second source-based video actually plays and pauses",
+      "status": "passed",
+      "duration": 6,
+      "width": 1920,
+      "height": 1080,
+      "currentTime": 0.205396,
+      "paused": true
+    },
+    {
+      "name": "Desktop and mobile reading and image remain within the viewport",
+      "status": "passed",
+      "viewports": [
+        1440,
+        375
+      ]
+    },
+    {
+      "name": "No browser or resource errors",
+      "status": "passed",
+      "errors": 0
+    }
+  ],
+  "errors": [],
+  "completedAt": "2026-10-04T07:12:08.848Z"
+}

@@ -1,0 +1,137 @@
+{
+  "status": "passed",
+  "startedAt": "2026-10-04T06:52:37.534Z",
+  "source": "web/elements-scene.js",
+  "reused": "Unmodified shared files and five original chapter-exported characters",
+  "items": [
+    {
+      "id": "clawd",
+      "file": "web/assets/elements/clawd.jpg",
+      "width": 960,
+      "height": 540,
+      "renderMs": 1073,
+      "bytes": 68764,
+      "sha256": "15f0a021633f65611a85556415bc45b7b6fc5d36986bc31f63493079ebc33d55"
+    },
+    {
+      "id": "researcher",
+      "file": "web/assets/elements/researcher.jpg",
+      "width": 960,
+      "height": 540,
+      "renderMs": 1548,
+      "bytes": 70426,
+      "sha256": "b45817873adb0debb1f20eef0f422aebbda195944f43c47469c1d2aa3d23b8c6"
+    },
+    {
+      "id": "troupe",
+      "file": "web/assets/elements/troupe.jpg",
+      "width": 960,
+      "height": 540,
+      "renderMs": 2244,
+      "bytes": 83717,
+      "sha256": "868be67d7fb0d9e9bf762b410e5b5b26146302e14427d3b5a1bdbce6672401fd"
+    },
+    {
+      "id": "sydney",
+      "file": "web/assets/elements/sydney.jpg",
+      "width": 960,
+      "height": 540,
+      "renderMs": 911,
+      "bytes": 71344,
+      "sha256": "b6cb321afbe7a7045e452749da69faa22384634d1e82669163dee7bbc1e5b31f"
+    },
+    {
+      "id": "gato",
+      "file": "web/assets/elements/gato.jpg",
+      "width": 960,
+      "height": 540,
+      "renderMs": 1001,
+      "bytes": 73973,
+      "sha256": "4e3282753604c1264176fecc752cdecc5f8b20b787664127b9ffea109d699909"
+    },
+    {
+      "id": "shoggoth",
+      "file": "web/assets/elements/shoggoth.jpg",
+      "width": 960,
+      "height": 540,
+      "renderMs": 810,
+      "bytes": 83216,
+      "sha256": "70a179f893469e6f7647582ebee1d033df88ff5e6f42d9fe2d9052184ee29815"
+    },
+    {
+      "id": "basilisk",
+      "file": "web/assets/elements/basilisk.jpg",
+      "width": 960,
+      "height": 540,
+      "renderMs": 2837,
+      "bytes": 73428,
+      "sha256": "d2a2060e72baf3cfdd5970f916ddb3c866fae8efbbd3d9dd6a0bffc0221cca30"
+    },
+    {
+      "id": "chinchilla",
+      "file": "web/assets/elements/chinchilla.jpg",
+      "width": 960,
+      "height": 540,
+      "renderMs": 2728,
+      "bytes": 73707,
+      "sha256": "acf99ab2cbbf24efd365ca21d90c732033e4e2f3c831a314df39b1b5307ed7e4"
+    },
+    {
+      "id": "stage",
+      "file": "web/assets/elements/stage.jpg",
+      "width": 960,
+      "height": 540,
+      "renderMs": 6307,
+      "bytes": 70749,
+      "sha256": "87861c4ef98c0ce9284aaf8ba7b763e30b6eeb7b5c77c6e9d1a2959153259649"
+    },
+    {
+      "id": "meter",
+      "file": "web/assets/elements/meter.jpg",
+      "width": 960,
+      "height": 540,
+      "renderMs": 962,
+      "bytes": 69716,
+      "sha256": "f15da52b77e0b12aef58230094223853e62d9b4769d81813d6d8637571ba8351"
+    },
+    {
+      "id": "pump",
+      "file": "web/assets/elements/pump.jpg",
+      "width": 960,
+      "height": 540,
+      "renderMs": 287,
+      "bytes": 65208,
+      "sha256": "7d3f0f94e2291b4eb107292d95af420adfd1f497b2a95caec4ee5c34043b0537"
+    },
+    {
+      "id": "spotlight",
+      "file": "web/assets/elements/spotlight.jpg",
+      "width": 960,
+      "height": 540,
+      "renderMs": 409,
+      "bytes": 15143,
+      "sha256": "ea360cc45d9ecde7c53194c9ba38fb8014e480257534144fadd28f2d97b04efa"
+    },
+    {
+      "id": "sunburst",
+      "file": "web/assets/elements/sunburst.jpg",
+      "width": 960,
+      "height": 540,
+      "renderMs": 4832,
+      "bytes": 65480,
+      "sha256": "7e01796fa01892373d639d28f6f36a8b1482759d2fb1e940bfa08d24552da34f"
+    },
+    {
+      "id": "geometry",
+      "file": "web/assets/elements/geometry.jpg",
+      "width": 960,
+      "height": 540,
+      "renderMs": 666,
+      "bytes": 68638,
+      "sha256": "453788e5562b46ce87b601059f1d68054fa535e0d7f92f060b91311b206fa9dd"
+    }
+  ],
+  "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A788) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "sourceHash": "ef83f917539fd37aaec9ca8849815c60b6a6d0e4487cde66764b69481feb6b8d",
+  "completedAt": "2026-10-04T06:53:08.057Z"
+}

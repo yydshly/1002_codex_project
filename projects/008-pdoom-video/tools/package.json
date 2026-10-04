@@ -1,0 +1,11 @@
+{
+  "name": "pdoom-research-tools",
+  "private": true,
+  "type": "module",
+  "scripts": { "render": "node render-evidence.mjs" },
+  "dependencies": {
+    "p5": "2.3.3",
+    "p5.brush": "2.2.3",
+    "puppeteer-core": "25.11.0"
+  }
+}

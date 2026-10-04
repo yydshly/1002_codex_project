@@ -1,0 +1,285 @@
+{
+  "sourceStudio": "web/source-studio.html",
+  "resolution": {
+    "width": 1920,
+    "height": 1080
+  },
+  "lastRun": {
+    "startedAt": "2026-10-04T01:41:13.053Z",
+    "status": "success",
+    "command": [
+      "--clip=23:26",
+      "--fps=12"
+    ],
+    "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "finishedAt": "2026-10-04T01:47:05.660Z"
+  },
+  "gpu": {
+    "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A788) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "canvasWidth": 1920,
+    "canvasHeight": 1080,
+    "software": false,
+    "recordedAt": "2026-10-04T01:41:21.028Z"
+  },
+  "stills": {
+    "completedAt": "2026-10-04T01:42:15.798Z",
+    "frames": [
+      {
+        "time": 23.8,
+        "output": "web/assets/frames/t23_80.jpg",
+        "bytes": 526604,
+        "renderMs": 9760.8,
+        "totalMs": 9779.73
+      },
+      {
+        "time": 43.2,
+        "output": "web/assets/frames/t43_20.jpg",
+        "bytes": 583835,
+        "renderMs": 5449.1,
+        "totalMs": 5489.64
+      },
+      {
+        "time": 76.2,
+        "output": "web/assets/frames/t76_20.jpg",
+        "bytes": 602994,
+        "renderMs": 13135.2,
+        "totalMs": 13161.38
+      },
+      {
+        "time": 101,
+        "output": "web/assets/frames/t101_00.jpg",
+        "bytes": 336436,
+        "renderMs": 4846.7,
+        "totalMs": 4860.48
+      },
+      {
+        "time": 112,
+        "output": "web/assets/frames/t112_00.jpg",
+        "bytes": 538437,
+        "renderMs": 8039.1,
+        "totalMs": 8073.19
+      },
+      {
+        "time": 143,
+        "output": "web/assets/frames/t143_00.jpg",
+        "bytes": 535558,
+        "renderMs": 12916.3,
+        "totalMs": 12966.21
+      }
+    ]
+  },
+  "contactSheet": {
+    "output": "web/assets/pdoom-contact-sheet.jpg",
+    "researchCopy": "assets/pdoom-contact-sheet.jpg",
+    "width": 1920,
+    "height": 720,
+    "times": [
+      23.8,
+      43.2,
+      76.2,
+      101,
+      112,
+      143
+    ]
+  },
+  "clip": {
+    "completedAt": "2026-10-04T01:47:05.657Z",
+    "output": "web/assets/pdoom-chorus.mp4",
+    "start": 23,
+    "end": 26,
+    "fps": 12,
+    "frameCount": 36,
+    "encodedDuration": 3,
+    "audio": false,
+    "codec": "H.264",
+    "pixelFormat": "yuv420p",
+    "crf": 19,
+    "preset": "medium",
+    "exitCode": 0,
+    "bytes": 6748442,
+    "totalMs": 289858.4,
+    "frames": [
+      {
+        "frame": 0,
+        "time": 23,
+        "renderMs": 7777.6
+      },
+      {
+        "frame": 1,
+        "time": 23.083333,
+        "renderMs": 8162.5
+      },
+      {
+        "frame": 2,
+        "time": 23.166667,
+        "renderMs": 8591.9
+      },
+      {
+        "frame": 3,
+        "time": 23.25,
+        "renderMs": 8926.3
+      },
+      {
+        "frame": 4,
+        "time": 23.333333,
+        "renderMs": 7835.6
+      },
+      {
+        "frame": 5,
+        "time": 23.416667,
+        "renderMs": 8501.6
+      },
+      {
+        "frame": 6,
+        "time": 23.5,
+        "renderMs": 7593.1
+      },
+      {
+        "frame": 7,
+        "time": 23.583333,
+        "renderMs": 7683.3
+      },
+      {
+        "frame": 8,
+        "time": 23.666667,
+        "renderMs": 7232.4
+      },
+      {
+        "frame": 9,
+        "time": 23.75,
+        "renderMs": 7669.9
+      },
+      {
+        "frame": 10,
+        "time": 23.833333,
+        "renderMs": 7760.6
+      },
+      {
+        "frame": 11,
+        "time": 23.916667,
+        "renderMs": 7246.7
+      },
+      {
+        "frame": 12,
+        "time": 24,
+        "renderMs": 7524
+      },
+      {
+        "frame": 13,
+        "time": 24.083333,
+        "renderMs": 7751.7
+      },
+      {
+        "frame": 14,
+        "time": 24.166667,
+        "renderMs": 7620.7
+      },
+      {
+        "frame": 15,
+        "time": 24.25,
+        "renderMs": 7012.9
+      },
+      {
+        "frame": 16,
+        "time": 24.333333,
+        "renderMs": 7598.8
+      },
+      {
+        "frame": 17,
+        "time": 24.416667,
+        "renderMs": 7483.7
+      },
+      {
+        "frame": 18,
+        "time": 24.5,
+        "renderMs": 8335.8
+      },
+      {
+        "frame": 19,
+        "time": 24.583333,
+        "renderMs": 9600.3
+      },
+      {
+        "frame": 20,
+        "time": 24.666667,
+        "renderMs": 10206.7
+      },
+      {
+        "frame": 21,
+        "time": 24.75,
+        "renderMs": 9114.9
+      },
+      {
+        "frame": 22,
+        "time": 24.833333,
+        "renderMs": 9489.2
+      },
+      {
+        "frame": 23,
+        "time": 24.916667,
+        "renderMs": 9113.2
+      },
+      {
+        "frame": 24,
+        "time": 25,
+        "renderMs": 8628.5
+      },
+      {
+        "frame": 25,
+        "time": 25.083333,
+        "renderMs": 7794.3
+      },
+      {
+        "frame": 26,
+        "time": 25.166667,
+        "renderMs": 6904.9
+      },
+      {
+        "frame": 27,
+        "time": 25.25,
+        "renderMs": 7177.4
+      },
+      {
+        "frame": 28,
+        "time": 25.333333,
+        "renderMs": 7380.9
+      },
+      {
+        "frame": 29,
+        "time": 25.416667,
+        "renderMs": 7347.8
+      },
+      {
+        "frame": 30,
+        "time": 25.5,
+        "renderMs": 8525.7
+      },
+      {
+        "frame": 31,
+        "time": 25.583333,
+        "renderMs": 8057.5
+      },
+      {
+        "frame": 32,
+        "time": 25.666667,
+        "renderMs": 7971.1
+      },
+      {
+        "frame": 33,
+        "time": 25.75,
+        "renderMs": 7509.1
+      },
+      {
+        "frame": 34,
+        "time": 25.833333,
+        "renderMs": 7353
+      },
+      {
+        "frame": 35,
+        "time": 25.916667,
+        "renderMs": 6462.8
+      }
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="用一张图整理 PDoomVideo 的效果、素材准备、AI 分镜与代码编排、程序绘画与出片、使用场景及个人价值。包含原始角色和实际场景画面。">
+  <title>PDoomVideo · 一图理解效果、原理与价值</title>
+  <link rel="icon" href="favicon.svg"><link rel="stylesheet" href="overview.css">
+</head>
+<body>
+<a class="skip" href="#overview-board">跳到理解总览图</a>
+<header class="page-header"><a class="brand" href="./">008 / PDoomVideo</a><nav aria-label="相关演示"><a href="elements.html">现成元素与驱动</a><a href="example.html">实际场景样例</a><a href="./#principles">能力实验室</a></nav></header>
+<main>
+  <div class="page-tools"><div><span class="kicker">我们的理解 / 已整理为网页与一张图</span><p>网页可逐段阅读；完整图可下载、放大和分享。图中的素材与效果均来自已有代码的实际渲染。</p></div><div class="tool-links"><a id="image-open" href="assets/pdoom-understanding.png" target="_blank" rel="noopener">放大查看完整图 ↗</a><a id="image-download" href="assets/pdoom-understanding.png" download="PDoomVideo-效果原理价值总览.png">下载一张 PNG 图 ↓</a></div></div>
+
+  <article id="overview-board" aria-labelledby="board-title">
+    <div class="board-intro">
+      <div class="board-heading"><div><p class="kicker">PDoomVideo / 效果 · 准备 · 原理 · 场景 · 意义</p><h1 id="board-title">准备素材与风格，<br>让 AI 编排，让程序画成视频。</h1></div><div class="stamp"><strong>代码动画</strong><span>故事 → 分镜 → 程序 → 视频</span><span>理解总览 · 2026.10.04</span></div></div>
+      <p class="shared-understanding"><strong>我们确认的理解：</strong>先准备可复用的角色、道具、风格及调用说明；AI 根据新故事写导演式分镜和动画脚本；程序根据时间计算姿态、绘制每一帧，最后编码成视频。</p>
+      <div class="role-line"><span><b>素材</b> 绘图函数 + 参数 + 使用说明</span><span><b>AI</b> 创作阶段的编剧、导演与编码助手</span><span><b>程序</b> 渲染阶段的绘画与输出执行者</span></div>
+    </div>
+
+    <section class="board-section" id="effects" aria-labelledby="effects-title">
+      <div class="section-heading"><h2 id="effects-title"><span>01</span> 它能产生什么效果？</h2><p>下方均为实际代码渲染，三个新场景共用同一套动作。</p></div>
+      <div class="effect-grid">
+        <figure><img src="assets/frames/t23_80.jpg" width="1920" height="1080" alt="原作 23.8 秒：水彩舞台、Clawd、研究员和表盘"><figcaption><strong>原作：水彩音乐 MV</strong><span>角色表演、道具、镜头、字幕、节拍与转场</span></figcaption></figure>
+        <figure><img src="assets/example/warm/f045.jpg" width="960" height="540" alt="新增实际样例 3.75 秒，暖色水彩的角色点灯庆祝"><figcaption><strong>新增样例：暖色水彩</strong><span>复用原始角色，新增按钮、灯泡和故事</span></figcaption></figure>
+        <figure><img src="assets/example/cool/f045.jpg" width="960" height="540" alt="同一时刻和动作的冷色水彩实际帧"><figcaption><strong>同一动作：冷色水彩</strong><span>修改调色板，保留角色造型与动作时间</span></figcaption></figure>
+        <figure><img src="assets/example/flat/f045.jpg" width="960" height="540" alt="同一时刻和动作的清晰平涂实际帧"><figcaption><strong>同一动作：清晰平涂</strong><span>修改笔刷与纸纹合成，保留动作程序</span></figcaption></figure>
+      </div>
+      <div class="spec-line"><p><b>上游作品规格</b> 156.6 秒 · 9 章 · 1920×1080 · 默认 24 FPS</p><p><b>本地新增样例</b> 6 秒 · 12 FPS · 72 帧 / 风格 · 3 种风格 · 无声 MP4</p></div>
+    </section>
+
+    <section class="board-section" id="preparation" aria-labelledby="preparation-title">
+      <div class="section-heading"><h2 id="preparation-title"><span>02</span> 给 AI 准备什么？</h2><p>先把角色与世界变成明确、可调用、可检查的资产。</p></div>
+      <div class="asset-strip">
+        <figure><img src="assets/elements/clawd.jpg" width="960" height="540" alt="Clawd 原始角色预览"><figcaption>Clawd / 共享主角</figcaption></figure>
+        <figure><img src="assets/elements/researcher.jpg" width="960" height="540" alt="研究员原始角色预览"><figcaption>Researcher / 研究员</figcaption></figure>
+        <figure><img src="assets/elements/sydney.jpg" width="960" height="540" alt="Sydney 原始章节客串预览"><figcaption>Sydney / 章节客串</figcaption></figure>
+        <figure><img src="assets/elements/shoggoth.jpg" width="960" height="540" alt="Shoggoth 原始章节客串预览"><figcaption>Shoggoth / 章节客串</figcaption></figure>
+        <figure><img src="assets/elements/meter.jpg" width="960" height="540" alt="原始温度计式表盘预览"><figcaption>表盘 / 数值控制</figcaption></figure>
+        <figure><img src="assets/elements/pump.jpg" width="960" height="540" alt="原始打气筒预览"><figcaption>打气筒 / 可动把手</figcaption></figure>
+      </div>
+      <div class="prepare-grid">
+        <div><h3>① 角色造型与接口</h3><p>轮廓、比例、配色、坐标原点、尺寸单位、依赖与默认预览。</p><code>clawd(x, y, u, options)<br>researcher(x, y, s, options)</code><small>共享主角 + 群演组合；另有 Sydney、Gato、Shoggoth、Basilisk、Chinchilla 客串。</small></div>
+        <div><h3>② 动作与表演参数</h3><p>位置、手臂角度、表情、帽子、伸缩与持物挂点；说明单位和允许值。</p><code>move() / kf() / mood()<br>eyes / hat / aL / aR</code><small>12 种动作调用名称；走到另一侧还需计算 x(t)。角度为弧度；手部道具还需绘图函数。</small></div>
+        <div><h3>③ 场景与道具</h3><p>背景、前景、舞台、光照、布局、遮挡与角色接触关系。</p><code>stageBack / stageFront<br>meterProp / pumpProp</code><small>现成共享组件含舞台、表盘、打气筒、聚光灯和放射背景；新按钮、灯泡可另写代码。</small></div>
+        <div><h3>④ 风格与创作说明</h3><p>调色板、画笔、墨线、纸纹、动作节奏，以及分镜格式和输出规格。</p><code>PAL / paint / p5.brush<br>ANIMATION_GUIDE.md</code><small>交付源文件、参数手册、运行样例和风格规范。新角色、新道具也可由 AI 或人扩充。</small></div>
+      </div>
+      <p class="scope-note">复用时要读依赖：核心几何与画笔在 core.js，主角在 clawd.js，研究员在 cast.js，共享场景在 props.js；章节客串要保留对应章节与私有辅助函数。</p>
+    </section>
+
+    <section class="board-section pipeline-section" id="mechanism" aria-labelledby="mechanism-title">
+      <div class="section-heading"><h2 id="mechanism-title"><span>03</span> 原理：AI 怎样“驱动”？</h2><p>驱动的具体形式，是写出按时间调用资产的动画程序。</p></div>
+      <div class="phase-band"><span>创作阶段：人给目标，AI 写分镜与代码</span><span>渲染阶段：程序绘画与编码</span></div>
+      <div class="pipeline">
+        <div class="pipeline-node"><b>1</b><h3>故事 + 资产 + 风格</h3><p>你提出目标、参考形象、内容和视频规格；模型读取资产接口。</p><small>输入：源文件、说明、新故事</small></div>
+        <div class="pipeline-node ai"><b>2</b><h3>AI 编排分镜</h3><p>安排角色做什么、持续多久、镜头如何移动、何时切换场景。</p><small>产物：带起止时间的分镜</small></div>
+        <div class="pipeline-node ai"><b>3</b><h3>AI 编写动画脚本</h3><p>把分镜落实成 x(t)、角度、表情、道具状态和镜头参数。</p><small>产物：可执行场景代码</small></div>
+        <div class="pipeline-node runtime"><b>4</b><h3>程序计算并画帧</h3><p>renderAt(t) 计算当前画面，p5.js / p5.brush 绘画、上色与合成。</p><small>产物：连续图像 / 帧序列</small></div>
+        <div class="pipeline-node runtime"><b>5</b><h3>编码交付视频</h3><p>Chrome 输出图像，FFmpeg 编码 MP4；需要声音时另行配置音轨。</p><small>交付：视频 + 源码 + 分镜</small></div>
+      </div>
+      <div class="mechanism-notes"><p><strong>画面怎样上色？</strong>角色与道具函数生成几何，paint() 按调色板与画笔规则铺色、画墨线；纸纹等由程序合成。</p><p><strong>风格怎样统一？</strong>共用角色函数、调色板、笔刷和合成约定；换风格主要调整这些配置，改轮廓则需改造型代码。</p><p><strong>AI 在哪里？</strong>AI 参与创作与修改脚本。渲染和播放执行已写好的代码，无需每帧请求模型；人负责审看故事与效果。</p></div>
+      <p class="review-loop"><b>验收回路 ↺</b> 先渲染关键时点 → 检查动作、接触、遮挡与节奏 → 修改分镜或参数 → 重绘 → 通过后连续出帧与编码。</p>
+    </section>
+
+    <section class="board-section" id="story" aria-labelledby="story-title">
+      <div class="section-heading"><h2 id="story-title"><span>04</span> 把一个故事拆成可执行的动作</h2><p>实际样例：角色发现按钮，走近并按下，灯亮后举手庆祝。</p></div>
+      <div class="story-grid">
+        <figure><img src="assets/example/warm/f005.jpg" width="960" height="540" alt="发现按钮的实际帧"><figcaption><strong>0–0.8 秒 / 发现</strong><span>向右看，灯灭；用眼睛方向与姿态表达注意力。</span></figcaption></figure>
+        <figure><img src="assets/example/warm/f019.jpg" width="960" height="540" alt="角色走近按钮的实际帧"><figcaption><strong>0.8–2.4 秒 / 走近</strong><span>x 从 460 到 1030；步态、摆臂随时间变化。</span></figcaption></figure>
+        <figure><img src="assets/example/warm/f039.jpg" width="960" height="540" alt="3.25 秒按下按钮并触发灯亮的实际帧"><figcaption><strong>2.4–3.5 秒 / 按下</strong><span>抬手、按钮下降；3.25 秒触发灯泡变亮。</span></figcaption></figure>
+        <figure><img src="assets/example/warm/f054.jpg" width="960" height="540" alt="4.5 秒双臂上举庆祝的实际帧"><figcaption><strong>3.5–6 秒 / 庆祝</strong><span>开心表情、双臂上举、小跳；灯保持亮起。</span></figcaption></figure>
+      </div>
+      <div class="story-code"><pre><code>// 实际场景代码摘录：位置与状态由时间决定
+x: kf(t, [[0,460], [.8,460], [2.4,1030], [6,1030]])
+on: t &gt;= 3.25
+// 完整姿态传给 clawd()，按钮与灯泡由道具函数绘制。</code></pre><p><b>6 秒 × 12 FPS = 72 帧</b><br>每帧计算这个时刻的参数，再绘制并合成。帧序列经过 FFmpeg，得到真实可播放的六秒视频。原始角色不变，新故事由新场景代码编排。</p></div>
+    </section>
+
+    <section class="board-section" id="use-cases" aria-labelledby="use-cases-title">
+      <div class="section-heading"><h2 id="use-cases-title"><span>05</span> 适合哪些使用场景？</h2><p>适合能明确描述造型、动作和时间的二维内容。</p></div>
+      <div class="use-grid">
+        <div><h3>品牌角色与产品介绍</h3><p>固定角色做欢迎、操作演示、产品说明和短故事；积累品牌配色、动作与道具。</p><small>需要：角色规范、文案、分镜与验收</small></div>
+        <div><h3>教学与概念讲解</h3><p>用图形、人物和道具解释步骤、因果、算法或抽象概念，并对齐旁白时间。</p><small>需要：知识核对、可读图示、讲解节奏</small></div>
+        <div><h3>音乐 MV 与歌词动画</h3><p>按歌词与节拍编排舞蹈、镜头、字幕和转场，用固定角色保持整片视觉一致。</p><small>需要：歌词时间、BPM、音乐与新分镜</small></div>
+        <div><h3>系列内容与参数模板</h3><p>复用角色、场景和风格，换故事、文案、颜色或数据；逐步形成系列短片模板。</p><small>需要：可变参数、批量入口与质量检查</small></div>
+      </div>
+    </section>
+
+    <section class="board-section personal-section" id="meaning" aria-labelledby="meaning-title">
+      <div class="section-heading"><h2 id="meaning-title"><span>06</span> 对你的意义是什么？</h2><p>把创作需求变成能积累、能修改、能重复使用的动画流程。</p></div>
+      <div class="personal-grid"><div><b>积累自己的资产</b><p>建立角色、道具、表情、动作与风格库；后续作品继续使用同一套造型。</p></div><div><b>让编码 AI 帮你制作</b><p>给清楚的故事与接口，让 AI 写分镜和动画程序；你通过预览提出具体修改。</p></div><div><b>掌握具体的修改点</b><p>能指定何时走到哪里、手抬多少、何时亮灯、用什么颜色，并检查对应代码。</p></div><div><b>保留可继续发展的成果</b><p>同时保留分镜、源代码、实际帧和 MP4；便于修改、复用及制作下一集。</p></div></div>
+      <p class="first-step"><strong>你可以先做：</strong>一个自己的角色 + 按钮和灯泡 + 六秒短片 → 看静帧 → 改动作和配色 → 出片 → 再积累新场景与道具。制作效率的改善要用你自己的样例实测。</p>
+    </section>
+
+    <section class="board-boundary" aria-labelledby="boundary-title"><div><h2 id="boundary-title">采用时要理解的边界</h2><p>PDoomVideo 是固定 MV 的作品源码，提供可借鉴的组件与流程。制作新内容需要写新分镜和场景代码；通用自然语言入口、自动听歌与业务批量生产还需开发。</p></div><div><h3>准备、渲染与检查仍需投入</h3><p>造型改动需要写代码；复杂水彩逐帧绘制需要等待。本机原作六帧样本约 4.85–13.14 秒 / 帧，不能当作所有镜头的速度；先静帧、再短片。</p></div></section>
+    <div class="board-footer"><p><strong>画面来源：</strong>固定版本原始角色与章节代码，以及本地新增“点亮一盏灯”场景；图片均为实际渲染。本地样例无声，完整原作通过作者入口观看。</p><p>上游：JohnHeibel/PDoomVideo · commit fa546a3 · 本地整理：008 代码动画能力实验室 · 图中角色与道具遵循原来源及许可说明。</p></div>
+  </article>
+
+  <section class="live-proof" aria-labelledby="live-title"><div><p class="kicker">总览图里的效果，实际播放</p><h2 id="live-title">看六秒成片，再去驱动同一个角色。</h2><p>这段视频复用原始 core.js 与 clawd.js，新增分镜、按钮、灯泡和动作代码。图上的流程对应真实帧与 H.264 成片。</p><div class="tool-links"><a href="example.html#player">逐帧、上色与三种风格 →</a><a href="elements.html#drive">启动原始角色驱动 →</a><a href="example-scene.js" target="_blank" rel="noopener">查看实际场景代码 ↗</a></div></div><video id="overview-video" src="assets/example/warm.mp4" poster="assets/example/warm/f045.jpg" controls muted playsinline preload="metadata" aria-label="点亮一盏灯六秒真实无声样例"></video></section>
+  <footer class="page-footer"><a href="./">返回能力实验室</a><a href="elements.html">角色与要素目录</a><a href="vendor/pdoom/source-manifest.json" target="_blank" rel="noopener">固定版本与来源</a><a href="assets/overview-manifest.json" target="_blank" rel="noopener">总览图导出记录</a><a href="https://github.com/JohnHeibel/PDoomVideo/tree/fa546a38092e75f2b079e6a86d6abc54dd525d17" target="_blank" rel="noopener">上游源码 ↗</a></footer>
+</main></body></html>

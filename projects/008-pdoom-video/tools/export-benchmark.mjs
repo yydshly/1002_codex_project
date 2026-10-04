@@ -1,0 +1,10 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const result=JSON.parse(await readFile(path.join(root,'notes/render-results.json'),'utf8'));
+if(result.lastRun.status!=='success')throw new Error('Only a successful measured render can be exported.');
+const times=result.stills.frames.map(frame=>frame.renderMs);
+const benchmark={researchDate:'2026-10-04',source:'notes/render-results.json',gpu:result.gpu.renderer,stills:{count:times.length,times:result.stills.frames.map(frame=>frame.time),minMs:Math.min(...times),maxMs:Math.max(...times)},clip:{start:result.clip.start,end:result.clip.end,fps:result.clip.fps,frameCount:result.clip.frameCount,totalMs:result.clip.totalMs},scope:'一次本机测量；线性工作量推算与理想并行值不是完整视频或多worker吞吐实测。'};
+await writeFile(path.join(root,'web/assets/render-benchmark.json'),JSON.stringify(benchmark,null,2)+'\n');
+console.log('Exported measured rendering data for the workload explorer.');

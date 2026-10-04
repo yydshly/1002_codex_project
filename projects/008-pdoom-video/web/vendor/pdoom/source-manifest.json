@@ -1,0 +1,119 @@
+{
+  "repository": "https://github.com/JohnHeibel/PDoomVideo",
+  "commit": "fa546a38092e75f2b079e6a86d6abc54dd525d17",
+  "researchDate": "2026-10-04",
+  "sourceDate": "2026-09-25T15:11:03Z",
+  "upstreamChanges": "绘画、角色、时间轴与九章代码原样保存；source-studio.html 是本地加载包装页，字体采用系统回退。",
+  "license": {
+    "upstream": "package.json 声明 ISC；固定版本没有独立 LICENSE 文件。",
+    "dependencies": [
+      {
+        "name": "p5",
+        "version": "2.3.3",
+        "license": "LGPL-2.1",
+        "notice": "vendor/p5-LICENSE.txt",
+        "source": "https://github.com/processing/p5.js"
+      },
+      {
+        "name": "p5.brush",
+        "version": "2.2.3",
+        "license": "MIT",
+        "notice": "vendor/p5.brush-LICENSE.md",
+        "source": "https://github.com/acamposuribe/p5.brush"
+      }
+    ]
+  },
+  "excluded": [
+    "assets/pdoom.mp3",
+    "legacy/"
+  ],
+  "media": "本机原画静帧与三秒无声短片；新增点亮一盏灯场景有三种风格的六秒无声成片，复用上游角色与绘画代码；原作音乐与完整成片通过作者外部入口访问。",
+  "localDemo": "lab.js 使用原生 Canvas 另行编写，用于原理示意；example-scene.js 新写分镜、动作与道具，复用 core.js 和 clawd.js，独立包装绘画和合成以展示三种风格及上色过程；elements-scene.js 另写目录与驱动包装，调用原始共享组件和章节 CAST 接口，提供 14 张预览及角色参数控制台。",
+  "files": [
+    {
+      "path": "vendor/pdoom/cast.js",
+      "bytes": 9595,
+      "sha256": "b3bd792e151a1672c1ecb145d688d5dc377d7c10deee884280e7b794a00864b4"
+    },
+    {
+      "path": "vendor/pdoom/ch/c01_lab.js",
+      "bytes": 39855,
+      "sha256": "747ca02ed2724020c97a6e37e53e2a095100ecf17113220b416688884af29a35"
+    },
+    {
+      "path": "vendor/pdoom/ch/c02_chorus1.js",
+      "bytes": 54898,
+      "sha256": "9face56fa2b4de479388cf8651dea4867b30c73a8cc8236e5d25c0fcd4729f9f"
+    },
+    {
+      "path": "vendor/pdoom/ch/c03_takeoff.js",
+      "bytes": 64952,
+      "sha256": "d9b2b083430fb53bba2c3a6a5177d94848b5f612b3a1f653629537e8a90af457"
+    },
+    {
+      "path": "vendor/pdoom/ch/c04_chorus2.js",
+      "bytes": 67341,
+      "sha256": "10a88a492678781c7a559f45d3be9b29888dc5080439ca96739a4cd6840b4b3c"
+    },
+    {
+      "path": "vendor/pdoom/ch/c05_obsolete.js",
+      "bytes": 70755,
+      "sha256": "66e9a9acc8a1bbbe55cb46855d5a2e89e989295de93b173d5c39cf709ca3f22f"
+    },
+    {
+      "path": "vendor/pdoom/ch/c06_chorus3.js",
+      "bytes": 56191,
+      "sha256": "4db11abeeec734b7aabf649d41171441937ed80e54c8dea74b4c7d69e2d18156"
+    },
+    {
+      "path": "vendor/pdoom/ch/c07_scale.js",
+      "bytes": 54039,
+      "sha256": "f1791042536f2638bb19048fe9b97468a9c754b4469cd8e0fb2c4d58a1bf8030"
+    },
+    {
+      "path": "vendor/pdoom/ch/c08_chorus4.js",
+      "bytes": 63582,
+      "sha256": "1ddf8e4750a915331a897a5080431b78b408a2512cc4821b86ceb8eeecd94075"
+    },
+    {
+      "path": "vendor/pdoom/ch/c09_finale.js",
+      "bytes": 27875,
+      "sha256": "aa46a1f9e296da10003b36f8683ea0b6c9f5502ca2f940d93d26581d5fe6d396"
+    },
+    {
+      "path": "vendor/pdoom/clawd.js",
+      "bytes": 18718,
+      "sha256": "addc4c4bd4196efe6110a7c044b438cd0809eedf42752e29da2e939beeaaef8f"
+    },
+    {
+      "path": "vendor/pdoom/core.js",
+      "bytes": 14615,
+      "sha256": "f2dc54c6e098abb03305b79c1282cc30fcf593f181a549d0898815e1d4dda103"
+    },
+    {
+      "path": "vendor/pdoom/lyrics.js",
+      "bytes": 2254,
+      "sha256": "b766864af4b08b6e9deefd4cebb59194f157ec93097932357cd703e87a8e899d"
+    },
+    {
+      "path": "vendor/pdoom/props.js",
+      "bytes": 7484,
+      "sha256": "f6da922f9694451f19aff8054a1efca0ae8987ed6343ab9e97b07dbe170748b1"
+    },
+    {
+      "path": "vendor/pdoom/timeline.js",
+      "bytes": 6631,
+      "sha256": "b362dc9a4a6cf1935510dbabca813cf9db322880d9e6a73a56b0526dd557269e"
+    },
+    {
+      "path": "vendor/p5.min.js",
+      "bytes": 990372,
+      "sha256": "3f8a0c739bd3c6350e239ff7187d38656ed2247e30a2b8084fd16a91e6e843ac"
+    },
+    {
+      "path": "vendor/p5.brush.js",
+      "bytes": 71792,
+      "sha256": "41c25108c69a8eb1cca500d68f3603593e33b53e90a773fc024a6cff461fc31a"
+    }
+  ]
+}

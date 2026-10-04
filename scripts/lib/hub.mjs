@@ -184,7 +184,7 @@ function renderSite(catalog) {
   }).join('\n');
   return `<!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="按固定编号整理优秀 GitHub 项目的研究、复现、图片与 Web 演示。"><title>GitHub 项目研究库</title><link rel="stylesheet" href="styles.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="按固定编号整理优秀 GitHub 项目的研究、复现、图片与 Web 演示。"><title>GitHub 项目研究库</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2321654e'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia' font-size='44' fill='white'%3ER%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="styles.css"></head>
 <body>
   <header class="site-header"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">R</span> GitHub 项目研究库</a><a href="${html(catalog.repository)}">仓库与文档 ↗</a></header>
   <main>

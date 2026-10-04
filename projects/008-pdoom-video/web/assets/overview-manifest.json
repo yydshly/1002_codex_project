@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "generatedAt": "2026-10-04T07:11:38.465Z",
+  "method": "Native HTML/CSS diagram exported by Chromium; existing source-rendered images embedded unchanged",
+  "source": "overview.html",
+  "sourceHash": "087161e93b7fc94d81a27444c12a79d5f2f792d88f29fd95b752aeaca76290de",
+  "styleHash": "f6264a726ccc20bfa158bc41bfa82d76f0d88bedf8007e69e6be6e781a8d904c",
+  "upstreamCommit": "fa546a38092e75f2b079e6a86d6abc54dd525d17",
+  "inputs": [
+    {
+      "file": "assets/frames/t23_80.jpg",
+      "sha256": "19b749f4090577738910f9dce999f60cecc429846f4cee292adf35d7d529ee91"
+    },
+    {
+      "file": "assets/example/warm/f045.jpg",
+      "sha256": "ce0aa5a5ec725847cc7befcd597b1ff9d565650475cb529c422cd3823300af21"
+    },
+    {
+      "file": "assets/example/cool/f045.jpg",
+      "sha256": "7bd8b5e337a6dede5f4b76457808c573828aacb523718e610245b9cb9260c04d"
+    },
+    {
+      "file": "assets/example/flat/f045.jpg",
+      "sha256": "240463be9fe3278aae6b306b9b6260bf071caffb0b377f2226f573738b00d035"
+    },
+    {
+      "file": "assets/elements/clawd.jpg",
+      "sha256": "15f0a021633f65611a85556415bc45b7b6fc5d36986bc31f63493079ebc33d55"
+    },
+    {
+      "file": "assets/elements/researcher.jpg",
+      "sha256": "b45817873adb0debb1f20eef0f422aebbda195944f43c47469c1d2aa3d23b8c6"
+    },
+    {
+      "file": "assets/elements/sydney.jpg",
+      "sha256": "b6cb321afbe7a7045e452749da69faa22384634d1e82669163dee7bbc1e5b31f"
+    },
+    {
+      "file": "assets/elements/shoggoth.jpg",
+      "sha256": "70a179f893469e6f7647582ebee1d033df88ff5e6f42d9fe2d9052184ee29815"
+    },
+    {
+      "file": "assets/elements/meter.jpg",
+      "sha256": "f15da52b77e0b12aef58230094223853e62d9b4769d81813d6d8637571ba8351"
+    },
+    {
+      "file": "assets/elements/pump.jpg",
+      "sha256": "7d3f0f94e2291b4eb107292d95af420adfd1f497b2a95caec4ee5c34043b0537"
+    },
+    {
+      "file": "assets/example/warm/f005.jpg",
+      "sha256": "8b8c964e6a73fee3c635fb0319af20e17e54887d6f335924c236d844f3e55c72"
+    },
+    {
+      "file": "assets/example/warm/f019.jpg",
+      "sha256": "957d09b60cdf4c70f34560f8c84252a0516b508b9feab76d77f47b37d2bc11e0"
+    },
+    {
+      "file": "assets/example/warm/f039.jpg",
+      "sha256": "0fb7ceebe26aa0025103902fe5718b0d6f6cca0741a109cc584a2ae2ffc00b8f"
+    },
+    {
+      "file": "assets/example/warm/f054.jpg",
+      "sha256": "390546be999ca346f1576f276bd20c6410ab17f2eded7dce97e14156036cd1c2"
+    }
+  ],
+  "file": "assets/pdoom-understanding.png",
+  "width": 3200,
+  "height": 5830,
+  "bytes": 4359421,
+  "sha256": "42148cef0bae53a54a8c2421ae839fbb176b33459d76b8edf2c558d1f0e3018e",
+  "completedAt": "2026-10-04T07:11:41.363Z"
+}

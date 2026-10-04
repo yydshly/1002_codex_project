@@ -1,0 +1,475 @@
+{
+  "status": "passed",
+  "startedAt": "2026-10-04T07:11:48.864Z",
+  "url": "http://localhost:4191/projects/008-pdoom-video/",
+  "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "scope": "Integrated showcase behavior and rendered-media dimensions. The Canvas principle experiment is a local schematic, not a test of the upstream p5.brush renderer.",
+  "browser": {
+    "headless": true,
+    "reducedMotion": "reduce",
+    "desktop": {
+      "width": 1440,
+      "height": 1000,
+      "deviceScaleFactor": 1
+    },
+    "mobile": {
+      "width": 375,
+      "height": 1000,
+      "deviceScaleFactor": 1
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36"
+  },
+  "checks": [
+    {
+      "name": "page loads with paused local experiment",
+      "status": "passed",
+      "durationMs": 1034,
+      "httpStatus": 200,
+      "title": "PDoomVideo · 代码动画能力实验室",
+      "defaultPlayback": "paused"
+    },
+    {
+      "name": "six real-scene buttons update loaded 1920 × 1080 frames",
+      "status": "passed",
+      "durationMs": 211,
+      "frames": [
+        {
+          "file": "t23_80.jpg",
+          "title": "节拍动作",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "file": "t43_20.jpg",
+          "title": "角色变换",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "file": "t76_20.jpg",
+          "title": "概念叙事",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "file": "t101_00.jpg",
+          "title": "星球尺度",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "file": "t112_00.jpg",
+          "title": "场景调度",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "file": "t143_00.jpg",
+          "title": "返回舞台",
+          "width": 1920,
+          "height": 1080
+        }
+      ]
+    },
+    {
+      "name": "five pipeline steps update explanation, code and source",
+      "status": "passed",
+      "durationMs": 117,
+      "steps": [
+        {
+          "index": 0,
+          "title": "先决定每个镜头发生什么",
+          "codeLines": 3,
+          "source": "https://github.com/JohnHeibel/PDoomVideo/blob/fa546a38092e75f2b079e6a86d6abc54dd525d17/STORYBOARD.md"
+        },
+        {
+          "index": 1,
+          "title": "给定 t，找到当前章节和镜头",
+          "codeLines": 3,
+          "source": "https://github.com/JohnHeibel/PDoomVideo/blob/fa546a38092e75f2b079e6a86d6abc54dd525d17/src/timeline.js"
+        },
+        {
+          "index": 2,
+          "title": "把形状、姿态与纹理画成一帧",
+          "codeLines": 3,
+          "source": "https://github.com/JohnHeibel/PDoomVideo/blob/fa546a38092e75f2b079e6a86d6abc54dd525d17/src/core.js"
+        },
+        {
+          "index": 3,
+          "title": "浏览器逐帧运行同一套代码",
+          "codeLines": 3,
+          "source": "https://github.com/JohnHeibel/PDoomVideo/blob/fa546a38092e75f2b079e6a86d6abc54dd525d17/render.mjs"
+        },
+        {
+          "index": 4,
+          "title": "图片序列和音频进入 FFmpeg",
+          "codeLines": 3,
+          "source": "https://github.com/JohnHeibel/PDoomVideo/blob/fa546a38092e75f2b079e6a86d6abc54dd525d17/render.mjs"
+        }
+      ]
+    },
+    {
+      "name": "four usage cases update guidance and required work",
+      "status": "passed",
+      "durationMs": 122,
+      "cases": [
+        {
+          "index": 0,
+          "title": "让每句歌词都有动作与转场",
+          "tag": "最接近上游现有作品",
+          "description": "围绕一首歌做水彩角色表演、视觉笑点和字幕。适合能接受二维卡通语言，并愿意设计每个镜头的创作。",
+          "input": "有权使用的音频、歌词时间、节拍与角色设定。",
+          "reuse": "角色绘画、舞蹈、镜头、字幕和逐帧渲染管线。",
+          "work": "为新歌曲编写分镜与章节，调整时间轴并逐镜头验收。"
+        },
+        {
+          "index": 1,
+          "title": "让同一角色成为长期内容资产",
+          "tag": "可迁移方向 / 需要新分镜",
+          "description": "用固定角色、配色和动作接口制作欢迎短片、节日动画或系列故事。形象复用与局部参数修改对连续制作有价值。",
+          "input": "品牌角色设定、视觉规范、故事与目标时长。",
+          "reuse": "角色参数、表情、服装、镜头与绘画风格。",
+          "work": "绘制新角色，建立动作与场景；对形象、授权和每支短片进行验收。"
+        },
+        {
+          "index": 2,
+          "title": "把抽象概念变成有时间顺序的画面",
+          "tag": "可迁移方向 / 内容需自行设计",
+          "description": "让角色、形状和镜头呈现知识点与因果关系。时间函数使讲解节奏可精确控制，适合二维解释型视频。",
+          "input": "经过核对的讲解脚本、概念关系、旁白时间。",
+          "reuse": "几何绘画、关键帧、文字合成和指定时刻检查。",
+          "work": "为教学概念设计画面；校验事实、旁白同步、可读性与教学效果。"
+        },
+        {
+          "index": 3,
+          "title": "把重复制作变成可配置的模板",
+          "tag": "扩展方向 / 需要参数化开发",
+          "description": "围绕已有角色与分镜，把颜色、台词和部分时间参数提取为配置，可用于系列短片或小型动态素材生产。",
+          "input": "固定模板、允许变化的参数、输出规格与素材。",
+          "reuse": "时间调度、确定性绘制、循环场景与导出逻辑。",
+          "work": "另行开发配置接口、批处理、队列和失败恢复；仓库未提供完整产品流程。"
+        }
+      ]
+    },
+    {
+      "name": "five reusable-asset disclosures open, close and link to complete source files",
+      "status": "passed",
+      "durationMs": 111,
+      "categories": [
+        {
+          "index": 0,
+          "summary": "01角色与动作一致的造型与表演接口",
+          "links": [
+            {
+              "label": "clawd.js ↗",
+              "href": "http://localhost:4191/projects/008-pdoom-video/vendor/pdoom/clawd.js"
+            },
+            {
+              "label": "cast.js ↗",
+              "href": "http://localhost:4191/projects/008-pdoom-video/vendor/pdoom/cast.js"
+            }
+          ],
+          "toggledOpenAndClosed": true
+        },
+        {
+          "index": 1,
+          "summary": "02绘画与视觉风格让多个镜头保持同一媒介",
+          "links": [
+            {
+              "label": "core.js ↗",
+              "href": "http://localhost:4191/projects/008-pdoom-video/vendor/pdoom/core.js"
+            },
+            {
+              "label": "props.js ↗",
+              "href": "http://localhost:4191/projects/008-pdoom-video/vendor/pdoom/props.js"
+            }
+          ],
+          "toggledOpenAndClosed": true
+        },
+        {
+          "index": 2,
+          "summary": "03时间轴与镜头精确控制何时出现与切换",
+          "links": [
+            {
+              "label": "timeline.js ↗",
+              "href": "http://localhost:4191/projects/008-pdoom-video/vendor/pdoom/timeline.js"
+            },
+            {
+              "label": "lyrics.js ↗",
+              "href": "http://localhost:4191/projects/008-pdoom-video/vendor/pdoom/lyrics.js"
+            }
+          ],
+          "toggledOpenAndClosed": true
+        },
+        {
+          "index": 3,
+          "summary": "04离线渲染与导出把可执行画面交付为视频",
+          "links": [
+            {
+              "label": "上游 render.mjs ↗",
+              "href": "https://github.com/JohnHeibel/PDoomVideo/blob/fa546a38092e75f2b079e6a86d6abc54dd525d17/render.mjs"
+            }
+          ],
+          "toggledOpenAndClosed": true
+        },
+        {
+          "index": 4,
+          "summary": "05分镜与协作规范把创意交给可检查的执行",
+          "links": [
+            {
+              "label": "ANIMATION_GUIDE.md ↗",
+              "href": "https://github.com/JohnHeibel/PDoomVideo/blob/fa546a38092e75f2b079e6a86d6abc54dd525d17/ANIMATION_GUIDE.md"
+            }
+          ],
+          "toggledOpenAndClosed": true
+        }
+      ],
+      "checkedLocalFiles": [
+        {
+          "url": "http://localhost:4191/projects/008-pdoom-video/vendor/pdoom/clawd.js",
+          "status": 200,
+          "characters": 18717
+        },
+        {
+          "url": "http://localhost:4191/projects/008-pdoom-video/vendor/pdoom/cast.js",
+          "status": 200,
+          "characters": 9594
+        },
+        {
+          "url": "http://localhost:4191/projects/008-pdoom-video/vendor/pdoom/core.js",
+          "status": 200,
+          "characters": 14614
+        },
+        {
+          "url": "http://localhost:4191/projects/008-pdoom-video/vendor/pdoom/props.js",
+          "status": 200,
+          "characters": 7473
+        },
+        {
+          "url": "http://localhost:4191/projects/008-pdoom-video/vendor/pdoom/timeline.js",
+          "status": 200,
+          "characters": 6631
+        },
+        {
+          "url": "http://localhost:4191/projects/008-pdoom-video/vendor/pdoom/lyrics.js",
+          "status": 200,
+          "characters": 2250
+        }
+      ],
+      "externalLinks": "Pinned URL validation only; no external network request."
+    },
+    {
+      "name": "render budget uses measured frame times and labels ideal parallel estimates",
+      "status": "passed",
+      "durationMs": 50,
+      "benchmarkURL": "http://localhost:4191/projects/008-pdoom-video/assets/render-benchmark.json",
+      "measuredFrameTimeMs": {
+        "min": 4846.7,
+        "max": 13135.2
+      },
+      "defaults": {
+        "frames": 360,
+        "serial": {
+          "text": "29.1–78.8 分钟",
+          "minSeconds": 1744.812,
+          "maxSeconds": 4728.672
+        },
+        "ideal": {
+          "text": "29.1–78.8 分钟",
+          "minSeconds": 1744.812,
+          "maxSeconds": 4728.672
+        }
+      },
+      "duration30Fps12": {
+        "frames": 360,
+        "serial": {
+          "text": "29.1–78.8 分钟",
+          "minSeconds": 1744.812,
+          "maxSeconds": 4728.672
+        },
+        "ideal": {
+          "text": "29.1–78.8 分钟",
+          "minSeconds": 1744.812,
+          "maxSeconds": 4728.672
+        }
+      },
+      "duration30Fps24": {
+        "frames": 720,
+        "serial": {
+          "text": "58.2–157.6 分钟",
+          "minSeconds": 3489.624,
+          "maxSeconds": 9457.344
+        },
+        "ideal": {
+          "text": "58.2–157.6 分钟",
+          "minSeconds": 3489.624,
+          "maxSeconds": 9457.344
+        }
+      },
+      "duration30Fps24Workers4": {
+        "frames": 720,
+        "serial": {
+          "text": "58.2–157.6 分钟",
+          "minSeconds": 3489.624,
+          "maxSeconds": 9457.344
+        },
+        "ideal": {
+          "text": "14.5–39.4 分钟",
+          "minSeconds": 872.406,
+          "maxSeconds": 2364.336
+        }
+      },
+      "idealParallelClearlyUnmeasured": true,
+      "numericalToleranceSeconds": 0.02
+    },
+    {
+      "name": "Canvas time, BPM, modes and layers alter the local schematic",
+      "status": "passed",
+      "durationMs": 251,
+      "time": 1.72,
+      "bpm": 88,
+      "beat": 2.52,
+      "seed": 20,
+      "modes": [
+        {
+          "mode": "jump",
+          "canvasSHA256": "fcbcbc8ec0ad0ac8cc4befc3a753e83882079b8d754852f6b5819e4d80501645",
+          "formula": "y = −117 × max(0, sin(beat × 2π))"
+        },
+        {
+          "mode": "sway",
+          "canvasSHA256": "75c6f61540fc39289f196801d8e463aa86b37ef2bedcb62a4693eabda1f7b6b0",
+          "formula": "x = 105 × sin(beat × 2π)"
+        },
+        {
+          "mode": "wipe",
+          "canvasSHA256": "854afe26d7fd6328ed7d3d8b95031b567c78e03dc2e8b45f8390e96ebb925e84",
+          "formula": "转场进度 = (t mod 4) / 4"
+        }
+      ],
+      "layers": [
+        {
+          "layer": "character",
+          "disabledSHA256": "9bb38fcf38e8888771a713f2951be5fe83b88f8139a8bd11ff114a2b447588a6"
+        },
+        {
+          "layer": "camera",
+          "disabledSHA256": "f7dda775a0eecb2f894e6500b17ff87120aa3627b11de92ddde8ad75954acec6"
+        },
+        {
+          "layer": "jitter",
+          "disabledSHA256": "cd2b97f38e3c4a5c8ad5317703236803c6f6248a4737dfd2ed729d12a3c7552a"
+        }
+      ]
+    },
+    {
+      "name": "Canvas redraw and reverse seek preserve identical pixels",
+      "status": "passed",
+      "durationMs": 44,
+      "time": 1.72,
+      "bpm": 88,
+      "mode": "jump",
+      "comparison": "strict equality of complete PNG data URLs",
+      "originalSHA256": "fcbcbc8ec0ad0ac8cc4befc3a753e83882079b8d754852f6b5819e4d80501645",
+      "redrawnSHA256": "fcbcbc8ec0ad0ac8cc4befc3a753e83882079b8d754852f6b5819e4d80501645",
+      "reverseSeekSHA256": "fcbcbc8ec0ad0ac8cc4befc3a753e83882079b8d754852f6b5819e4d80501645"
+    },
+    {
+      "name": "Canvas playback advances time and pause freezes it",
+      "status": "passed",
+      "durationMs": 592,
+      "before": 1.72,
+      "after": 2.05,
+      "pauseStableForMs": 160,
+      "keyboardTime": 2.06
+    },
+    {
+      "name": "silent 3-second video plays at 1920 × 1080 and returns to still",
+      "status": "passed",
+      "durationMs": 3487,
+      "width": 1920,
+      "height": 1080,
+      "duration": 3,
+      "currentTime": 0.030196,
+      "muted": true,
+      "loop": true,
+      "src": "http://localhost:4191/projects/008-pdoom-video/assets/pdoom-chorus.mp4",
+      "firstTime": 0.393222,
+      "loopTime": 0.431973,
+      "watchedForMs": 3400,
+      "returnedToStill": true
+    },
+    {
+      "name": "desktop and mobile screenshots with no horizontal overflow",
+      "status": "passed",
+      "durationMs": 1263,
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "height": 6193,
+          "horizontalOverflow": false
+        },
+        {
+          "name": "mobile",
+          "width": 375,
+          "scrollWidth": 375,
+          "height": 10263,
+          "horizontalOverflow": false
+        }
+      ],
+      "files": [
+        "assets/lab-page-desktop.png",
+        "assets/lab-principles-desktop.png",
+        "assets/lab-page-mobile.png",
+        "assets/lab-principles-mobile.png"
+      ]
+    },
+    {
+      "name": "no browser errors, failed requests or HTTP resource errors",
+      "status": "passed",
+      "durationMs": 114,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "pageErrors": 0,
+      "failedRequests": 0,
+      "httpErrors": 0
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "assets/lab-page-desktop.png",
+      "bytes": 1329597,
+      "width": 1440,
+      "height": 6193
+    },
+    {
+      "path": "assets/lab-principles-desktop.png",
+      "bytes": 184512,
+      "width": 1224,
+      "height": 1664
+    },
+    {
+      "path": "assets/lab-page-mobile.png",
+      "bytes": 639910,
+      "width": 375,
+      "height": 10263
+    },
+    {
+      "path": "assets/lab-principles-mobile.png",
+      "bytes": 139460,
+      "width": 335,
+      "height": 2688
+    }
+  ],
+  "diagnostics": {
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "httpErrors": []
+  },
+  "finishedAt": "2026-10-04T07:11:56.666Z",
+  "totalMs": 7801
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PDoomVideo · 上游画面重绘</title>
+  <style>
+    body{margin:0;background:#f3ebdc;color:#2b2233;font:16px/1.6 system-ui,sans-serif}main{max-width:1200px;margin:auto;padding:24px}a{color:inherit}.p5Canvas{display:none!important}#out{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:8px}.bar{display:flex;align-items:center;gap:16px;margin-top:18px}#scrub{flex:1;min-width:0}#tt{font-variant-numeric:tabular-nums;white-space:nowrap}.intro{max-width:900px}h1{font-size:28px}#status{padding:12px;border:1px solid #bf6144;border-radius:6px}body.render main{padding:0}body.render .intro,body.render .bar,body.render #status{display:none}
+  </style>
+  <script src="vendor/p5.min.js"></script><script src="vendor/p5.brush.js"></script>
+</head>
+<body>
+<main>
+  <div class="intro"><a href="./#effects">← 返回能力实验室</a><h1>按指定时间重绘上游画面</h1><p>这张画布执行 PDoomVideo 的原始章节与绘画代码。拖动时间会重绘完整画面，复杂水彩效果需要等待几秒；本页用于检查帧，不播放音乐。字体采用系统回退。</p></div>
+  <p id="status" role="status">正在初始化绘画引擎…</p>
+  <canvas id="out" width="1920" height="1080" aria-label="上游动画画面"></canvas>
+  <div class="bar"><label for="scrub">歌曲时间</label><input id="scrub" type="range" min="0" max="156.59" step="0.0417" value="24"><span id="tt">loading…</span></div>
+</main>
+<script src="vendor/pdoom/core.js"></script>
+<script src="vendor/pdoom/clawd.js"></script>
+<script src="vendor/pdoom/cast.js"></script>
+<script src="vendor/pdoom/props.js"></script>
+<script src="vendor/pdoom/lyrics.js"></script>
+<script src="vendor/pdoom/timeline.js"></script>
+<script>const CAST={}; if(location.search.includes('render'))document.body.classList.add('render');</script>
+<script src="vendor/pdoom/ch/c01_lab.js"></script>
+<script src="vendor/pdoom/ch/c02_chorus1.js"></script>
+<script src="vendor/pdoom/ch/c03_takeoff.js"></script>
+<script src="vendor/pdoom/ch/c04_chorus2.js"></script>
+<script src="vendor/pdoom/ch/c05_obsolete.js"></script>
+<script src="vendor/pdoom/ch/c06_chorus3.js"></script>
+<script src="vendor/pdoom/ch/c07_scale.js"></script>
+<script src="vendor/pdoom/ch/c08_chorus4.js"></script>
+<script src="vendor/pdoom/ch/c09_finale.js"></script>
+<script>
+  window.addEventListener('error',e=>{document.getElementById('status').textContent='画面加载失败：'+e.message;});
+  const readyCheck=setInterval(()=>{if(window.ready){document.getElementById('status').hidden=true;clearInterval(readyCheck)}},250);
+</script>
+</body>
+</html>

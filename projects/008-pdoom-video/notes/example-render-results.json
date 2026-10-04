@@ -1,0 +1,6122 @@
+{
+  "status": "passed",
+  "startedAt": "2026-10-04T06:03:31.701Z",
+  "source": "web/example-scene.js",
+  "reused": [
+    "web/vendor/pdoom/core.js",
+    "web/vendor/pdoom/clawd.js"
+  ],
+  "fps": 12,
+  "duration": 6,
+  "audio": false,
+  "styles": {
+    "warm": {
+      "frames": [
+        {
+          "index": 0,
+          "time": 0,
+          "renderMs": 1077.8,
+          "sourceFrame": {
+            "bytes": 541884,
+            "sha256": "9d82e43c2dea6901eb68991e4a1b0aa27176d83d64e65bd216e65a963b00f9f6"
+          },
+          "preview": {
+            "bytes": 60554,
+            "sha256": "a17a4af8b5a71a4bf25556dbd3bdf86205c6477654022bc36757e6167da022c1"
+          },
+          "pose": {
+            "t": 0,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 1,
+          "time": 0.08333333333333333,
+          "renderMs": 1138.8,
+          "sourceFrame": {
+            "bytes": 541704,
+            "sha256": "7afb3c6b70f72d176985ae17eb7657b5b6e95f6aa6b8b4d8b72a63ee0ea2fc30"
+          },
+          "preview": {
+            "bytes": 60073,
+            "sha256": "26d8e7c00aaa85eb812b8669df54652bb9a1bcea33cb4e517d9e37020130c1f1"
+          },
+          "pose": {
+            "t": 0.08333333333333333,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 2,
+          "time": 0.16666666666666666,
+          "renderMs": 1229.1,
+          "sourceFrame": {
+            "bytes": 541841,
+            "sha256": "cd513bdc71619415fbd4088108d45ccb514ea13bdb5fd2781751502ee7c181e1"
+          },
+          "preview": {
+            "bytes": 60212,
+            "sha256": "dfa93dd9c6c9483e15da159a2a02d37e57278dd639811c22541eb27f9a3935df"
+          },
+          "pose": {
+            "t": 0.16666666666666666,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 3,
+          "time": 0.25,
+          "renderMs": 1034.8,
+          "sourceFrame": {
+            "bytes": 540659,
+            "sha256": "d1eccf5cec870cf45c0b0cd4e3ab89f7fe5333aef7295cb1f0659e2e662eded5"
+          },
+          "preview": {
+            "bytes": 60362,
+            "sha256": "f70bf72963f7103ac1cdd8d0054b133a05362cdd5f3fabaabcd0edd494a0834d"
+          },
+          "pose": {
+            "t": 0.25,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 4,
+          "time": 0.3333333333333333,
+          "renderMs": 994.3,
+          "sourceFrame": {
+            "bytes": 541548,
+            "sha256": "d963474f748e8dff5e2908c2b25b906db9002b50b92b3c3faf32e8abf8a423e2"
+          },
+          "preview": {
+            "bytes": 60224,
+            "sha256": "8da0c649f686093b0504c93ed39c84116b403bf1dfc0a828906296e0585ed965"
+          },
+          "pose": {
+            "t": 0.3333333333333333,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 5,
+          "time": 0.4166666666666667,
+          "renderMs": 998.2,
+          "sourceFrame": {
+            "bytes": 541607,
+            "sha256": "d970750cb8871ea1fdbf1d0ba9a4fa67a7129c690f0148a0d2a0806e32b7d9a4"
+          },
+          "preview": {
+            "bytes": 60360,
+            "sha256": "8b8c964e6a73fee3c635fb0319af20e17e54887d6f335924c236d844f3e55c72"
+          },
+          "pose": {
+            "t": 0.4166666666666667,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 6,
+          "time": 0.5,
+          "renderMs": 1027.5,
+          "sourceFrame": {
+            "bytes": 541942,
+            "sha256": "fcfe4d90a76c268fd9c58576ed32c072263252f80e6d2eeb220dfc150dbec5ad"
+          },
+          "preview": {
+            "bytes": 60581,
+            "sha256": "7f9930fea03f34d46cc981778c0b4f38797f0c560a9d76718e72f5eee52b3b67"
+          },
+          "pose": {
+            "t": 0.5,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 7,
+          "time": 0.5833333333333334,
+          "renderMs": 978.2,
+          "sourceFrame": {
+            "bytes": 541178,
+            "sha256": "e1ea75e3e7a615aa8fbe6765c1d7d19903296f8f87b426da9527ad043e63ed98"
+          },
+          "preview": {
+            "bytes": 60495,
+            "sha256": "6f8e7899c88a0e74952c5d539d8788e8811a0819f19b2f2a24008807fbedbc80"
+          },
+          "pose": {
+            "t": 0.5833333333333334,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 8,
+          "time": 0.6666666666666666,
+          "renderMs": 1056.1,
+          "sourceFrame": {
+            "bytes": 542333,
+            "sha256": "c4f3bcd75f36d07da2882d4a597babf916c25152047c8860f52fb3c03c265c76"
+          },
+          "preview": {
+            "bytes": 60541,
+            "sha256": "f59d01b492bf4724d8485dff8dd2b6e08ada0eaa354eba2a560cfdadd4c0482c"
+          },
+          "pose": {
+            "t": 0.6666666666666666,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 9,
+          "time": 0.75,
+          "renderMs": 958.6,
+          "sourceFrame": {
+            "bytes": 542355,
+            "sha256": "d9cc9e445be63908f9d234117ede6b55a353fff016ef1daa557c68d8a9bce41c"
+          },
+          "preview": {
+            "bytes": 60461,
+            "sha256": "fd515e5a368046a44ebfae37e2915462f52aa7aad2aeb701c6df250c4f2074d9"
+          },
+          "pose": {
+            "t": 0.75,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 10,
+          "time": 0.8333333333333334,
+          "renderMs": 927.6,
+          "sourceFrame": {
+            "bytes": 541508,
+            "sha256": "87f0ae35f919343aa47cc5e3aecd4f041c161b8373d7e54b7c07fea57900eaa9"
+          },
+          "preview": {
+            "bytes": 60142,
+            "sha256": "ae98eb0b7278ef3ea900a518d8d49597b2cff2119d451ee6308f6a8969107879"
+          },
+          "pose": {
+            "t": 0.8333333333333334,
+            "shot": 1,
+            "x": 460.73187934027777,
+            "y": 791.5580002090273,
+            "walk": 1.4166666666666667,
+            "aL": 0.6251999907098955,
+            "aR": -0.12519999070989557,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 11,
+          "time": 0.9166666666666666,
+          "renderMs": 1169.6,
+          "sourceFrame": {
+            "bytes": 540788,
+            "sha256": "832cc6eca36a63652307aa268fd9e219ed5154065988c03112ba6c364e18191d"
+          },
+          "preview": {
+            "bytes": 59559,
+            "sha256": "f7ec0bafc7e372849601f6115067e9afc64e8046e1800c18ec29d4d2a93afcbe"
+          },
+          "pose": {
+            "t": 0.9166666666666666,
+            "shot": 1,
+            "x": 468.64983452690973,
+            "y": 791.6965621078459,
+            "walk": 1.5583333333333331,
+            "aL": 0.6190416840957361,
+            "aR": -0.11904168409573612,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 12,
+          "time": 1,
+          "renderMs": 1043.2,
+          "sourceFrame": {
+            "bytes": 539651,
+            "sha256": "5a75730d1a5b5cfc5fa26eb3498d0c6ac3c78809482bbd5c08a12d79223be422"
+          },
+          "preview": {
+            "bytes": 58872,
+            "sha256": "0207ff499841d1932853a0233717d9be5c3385ba73051f888b5885f3d54adca7"
+          },
+          "pose": {
+            "t": 1,
+            "shot": 1,
+            "x": 484.4921875,
+            "y": 796.2909336328241,
+            "walk": 1.7,
+            "aL": 0.4148473940967027,
+            "aR": 0.08515260590329735,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 13,
+          "time": 1.0833333333333333,
+          "renderMs": 997.3,
+          "sourceFrame": {
+            "bytes": 539834,
+            "sha256": "5a499e7e7cf3898355be94d45c73f04bb8d95f46a1c0e7eaba490dd27c9e6367"
+          },
+          "preview": {
+            "bytes": 59313,
+            "sha256": "649fe6905d29e10b99c81d57ee5a4ead6cf1caabf8e918a403333fbed0361908"
+          },
+          "pose": {
+            "t": 1.0833333333333333,
+            "shot": 1,
+            "x": 507.29254828559027,
+            "y": 797.1243272573995,
+            "walk": 1.8416666666666666,
+            "aL": 0.12219232255109053,
+            "aR": 0.3778076774489095,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 14,
+          "time": 1.1666666666666667,
+          "renderMs": 1088.9,
+          "sourceFrame": {
+            "bytes": 541097,
+            "sha256": "feb54f31a9581667632d51acc67ac5a48f92a49b618fa8876aa12c95951160cb"
+          },
+          "preview": {
+            "bytes": 59623,
+            "sha256": "2d5d638de98456ec16cf4319f4d9b4fcefe2b62089f1c82927b10e6f727d48c7"
+          },
+          "pose": {
+            "t": 1.1666666666666667,
+            "shot": 1,
+            "x": 536.0845269097223,
+            "y": 792.082738160255,
+            "walk": 1.9833333333333334,
+            "aL": -0.10187830398866804,
+            "aR": 0.601878303988668,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 15,
+          "time": 1.25,
+          "renderMs": 1006.6,
+          "sourceFrame": {
+            "bytes": 540897,
+            "sha256": "68577defdaa98558ade15448fd4d39d2abc3a09dddc0432e906c057bfb1d19ca"
+          },
+          "preview": {
+            "bytes": 59720,
+            "sha256": "9e2871b4b2f01abc751f93b642d56c7cb120e5f9d03ec9bedfd5b43db613d7df"
+          },
+          "pose": {
+            "t": 1.25,
+            "shot": 1,
+            "x": 569.9017333984375,
+            "y": 791.2897280223987,
+            "walk": 2.125,
+            "aL": -0.1371231990045046,
+            "aR": 0.6371231990045045,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 16,
+          "time": 1.3333333333333333,
+          "renderMs": 1029.8,
+          "sourceFrame": {
+            "bytes": 540303,
+            "sha256": "1d23ece126454576b81f887766c4e8e24a7380b2545b3df3b29df9ce7b549675"
+          },
+          "preview": {
+            "bytes": 59468,
+            "sha256": "4cf7fa58064337878720d7ad94f2c67e95411439b3f5fa7d1f313a424a435481"
+          },
+          "pose": {
+            "t": 1.3333333333333333,
+            "shot": 1,
+            "x": 607.7777777777777,
+            "y": 795.170843737996,
+            "walk": 2.2666666666666666,
+            "aL": 0.035370832799826,
+            "aR": 0.464629167200174,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 17,
+          "time": 1.4166666666666667,
+          "renderMs": 1240.2,
+          "sourceFrame": {
+            "bytes": 540873,
+            "sha256": "5b3bd9c497abf013a069500d4c39e8480b838031ccf5a671b6d9e26c78d87812"
+          },
+          "preview": {
+            "bytes": 59440,
+            "sha256": "27f99e4f878767c3cadc1824d76b2dfd14622e53a76c6cf3448e2363a3730fd4"
+          },
+          "pose": {
+            "t": 1.4166666666666667,
+            "shot": 1,
+            "x": 648.7462700737848,
+            "y": 798.3566077883198,
+            "walk": 2.408333333333333,
+            "aL": 0.3230396538524536,
+            "aR": 0.1769603461475464,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 18,
+          "time": 1.5,
+          "renderMs": 966.4,
+          "sourceFrame": {
+            "bytes": 540325,
+            "sha256": "0d56c7aab3dc3f804a1b6b27c832f1715e00f0b8b7010e3479c45896049cca31"
+          },
+          "preview": {
+            "bytes": 59425,
+            "sha256": "2f4bbaffa4df36ef8e6da39efcefdd312fef0e163276941bc13dfce5b8c34f7a"
+          },
+          "pose": {
+            "t": 1.5,
+            "shot": 1,
+            "x": 691.8408203125,
+            "y": 792.7659401610354,
+            "walk": 2.55,
+            "aL": 0.5715137706206483,
+            "aR": -0.0715137706206484,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 19,
+          "time": 1.5833333333333333,
+          "renderMs": 922.7,
+          "sourceFrame": {
+            "bytes": 541146,
+            "sha256": "532b804077f994f64efc7d8b0fe69dac6241ee5b81dd3a5410d24b0516a83a23"
+          },
+          "preview": {
+            "bytes": 59958,
+            "sha256": "957d09b60cdf4c70f34560f8c84252a0516b508b9feab76d77f47b37d2bc11e0"
+          },
+          "pose": {
+            "t": 1.5833333333333333,
+            "shot": 1,
+            "x": 736.0950385199653,
+            "y": 791.0572300898051,
+            "walk": 2.6916666666666664,
+            "aL": 0.6474564404531051,
+            "aR": -0.14745644045310508,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 20,
+          "time": 1.6666666666666667,
+          "renderMs": 988,
+          "sourceFrame": {
+            "bytes": 540010,
+            "sha256": "09996b01f785c54f32b8822703ee91d9595907a12749d1dab7f4f817e88e8561"
+          },
+          "preview": {
+            "bytes": 59515,
+            "sha256": "e64b6a043d62eab9f986460e471d8da7e432b1cf07542382aa7e64806a9efc13"
+          },
+          "pose": {
+            "t": 1.6666666666666667,
+            "shot": 1,
+            "x": 780.5425347222223,
+            "y": 794.1474094385859,
+            "walk": 2.8333333333333335,
+            "aL": 0.5101151360628468,
+            "aR": -0.010115136062846752,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 21,
+          "time": 1.75,
+          "renderMs": 1086.7,
+          "sourceFrame": {
+            "bytes": 540796,
+            "sha256": "c5f7ec330840e932256023b394a56f7f3dc04e0c0690cf73756e2be07931dee6"
+          },
+          "preview": {
+            "bytes": 60191,
+            "sha256": "9f27aefc0e11da84a2765febada8c2541a29a6a07d6862637bf2e3ca3526a1e1"
+          },
+          "pose": {
+            "t": 1.75,
+            "shot": 1,
+            "x": 824.2169189453125,
+            "y": 799.6217808255304,
+            "walk": 2.975,
+            "aL": 0.23319025891246367,
+            "aR": 0.2668097410875363,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 22,
+          "time": 1.8333333333333333,
+          "renderMs": 916.6,
+          "sourceFrame": {
+            "bytes": 540423,
+            "sha256": "2e29f2a356d50c478b876c2e97879199a09b74c42c6768c9b2a16e81ddb8e467"
+          },
+          "preview": {
+            "bytes": 59340,
+            "sha256": "113e60840ba85be98c7dd7e5a02f3c210b2880af57da9a80d3fe3ff01ecceeb3"
+          },
+          "pose": {
+            "t": 1.8333333333333333,
+            "shot": 1,
+            "x": 866.1518012152777,
+            "y": 793.5939319186779,
+            "walk": 3.1166666666666663,
+            "aL": -0.03471413694764924,
+            "aR": 0.5347141369476492,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 23,
+          "time": 1.9166666666666667,
+          "renderMs": 1020.9,
+          "sourceFrame": {
+            "bytes": 539683,
+            "sha256": "392a7eae2a599f2d9be5d29629feca4fc9b569f159f7ce797de311a9e9156da7"
+          },
+          "preview": {
+            "bytes": 59688,
+            "sha256": "126440c8d146e21fa3926bb51b7b5f0f72f0c1d79e0988b35ede895a5bf2a72c"
+          },
+          "pose": {
+            "t": 1.9166666666666667,
+            "shot": 1,
+            "x": 905.3807915581598,
+            "y": 791.003721757767,
+            "walk": 3.2583333333333333,
+            "aL": -0.14983458854368692,
+            "aR": 0.6498345885436869,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 24,
+          "time": 2,
+          "renderMs": 1007.4,
+          "sourceFrame": {
+            "bytes": 539909,
+            "sha256": "22b624778bd62604cba15aaae31457bcc6947450db57588aa22bc1669a814fe0"
+          },
+          "preview": {
+            "bytes": 59963,
+            "sha256": "49330da5d8c746fb3883802ad882de56ae502a1fa69a4ab33b11517d38107421"
+          },
+          "pose": {
+            "t": 2,
+            "shot": 1,
+            "x": 940.9375,
+            "y": 793.2411147790549,
+            "walk": 3.4,
+            "aL": -0.05039489870867042,
+            "aR": 0.5503948987086704,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 25,
+          "time": 2.0833333333333335,
+          "renderMs": 1182.7,
+          "sourceFrame": {
+            "bytes": 539596,
+            "sha256": "28316c1c89db5c7e7c1d93383802b0e65fb562e2e5af8ac385f968d769dff070"
+          },
+          "preview": {
+            "bytes": 59859,
+            "sha256": "07da1bffaa4e74cb3d2ed0c6e9d4ed9cfe1aa87d8216420df8305e69a0e01b2d"
+          },
+          "pose": {
+            "t": 2.0833333333333335,
+            "shot": 1,
+            "x": 971.8555365668403,
+            "y": 799.1054760779103,
+            "walk": 3.541666666666667,
+            "aL": 0.2102433812404607,
+            "aR": 0.2897566187595393,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 26,
+          "time": 2.1666666666666665,
+          "renderMs": 1060.7,
+          "sourceFrame": {
+            "bytes": 539658,
+            "sha256": "0bbd75e8e03a8f5ba9ba99117bbacd9d2d0ded32f3909cffcac27a8596e43777"
+          },
+          "preview": {
+            "bytes": 59184,
+            "sha256": "98a2b79ab48993a4cfb0cd7106911610d7538cb284b6b52527dd7306f02988a4"
+          },
+          "pose": {
+            "t": 2.1666666666666665,
+            "shot": 1,
+            "x": 997.1685112847223,
+            "y": 794.5501411725236,
+            "walk": 3.683333333333333,
+            "aL": 0.4922159478878404,
+            "aR": 0.007784052112159573,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 27,
+          "time": 2.25,
+          "renderMs": 941.6,
+          "sourceFrame": {
+            "bytes": 539707,
+            "sha256": "406c68484b94ee8c0a42fd875ca3cc834b3ee78a0ea656ade75dcdb4ba1962bb"
+          },
+          "preview": {
+            "bytes": 59144,
+            "sha256": "b1e46925e109ab0ef70f162122feb08b031d6c5e9beeebe15b2f73f14078fac4"
+          },
+          "pose": {
+            "t": 2.25,
+            "shot": 1,
+            "x": 1015.9100341796875,
+            "y": 791.130273995914,
+            "walk": 3.8249999999999997,
+            "aL": 0.6442100446260479,
+            "aR": -0.14421004462604792,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 28,
+          "time": 2.3333333333333335,
+          "renderMs": 1169.8,
+          "sourceFrame": {
+            "bytes": 539100,
+            "sha256": "4d25812b9d8a531e988031e6105033f6642e3a0948d0061a8282d34101532914"
+          },
+          "preview": {
+            "bytes": 59104,
+            "sha256": "d09a5acbcc63ff068e901b7325c2c08d1ff6d8eda0d24c4e71fa8efba37593f5"
+          },
+          "pose": {
+            "t": 2.3333333333333335,
+            "shot": 1,
+            "x": 1027.1137152777778,
+            "y": 792.4700992531755,
+            "walk": 3.966666666666667,
+            "aL": 0.5846622554144225,
+            "aR": -0.08466225541442246,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 29,
+          "time": 2.4166666666666665,
+          "renderMs": 1147.9,
+          "sourceFrame": {
+            "bytes": 539793,
+            "sha256": "7d18cea74eea68cc972bfc5f60d9f636b7cd28413a317fd5161c8ca46904bb90"
+          },
+          "preview": {
+            "bytes": 59276,
+            "sha256": "45bcecce888767203ee6fa9a4fb8c29f85f41854fbcb8c6059c3564ba8685a63"
+          },
+          "pose": {
+            "t": 2.4166666666666665,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.29924684159378034,
+            "sq": 0,
+            "press": 0.0011383253801328214,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 30,
+          "time": 2.5,
+          "renderMs": 924.3,
+          "sourceFrame": {
+            "bytes": 540562,
+            "sha256": "ccfcd5f9066f53b1e5d582e2490c23c94106894b8250a5c72532cfe8edf7e38e"
+          },
+          "preview": {
+            "bytes": 59175,
+            "sha256": "792e66b2ede3d109129683a2d5b99dbff86b67861cfbb95ddd500f581d5dc7f8"
+          },
+          "pose": {
+            "t": 2.5,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.27507288629737603,
+            "sq": 0,
+            "press": 0.03826582536128645,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 31,
+          "time": 2.5833333333333335,
+          "renderMs": 1026.4,
+          "sourceFrame": {
+            "bytes": 540356,
+            "sha256": "a72f04e2862b27a4f9a156fc88f2dd1068d9dfe6f378b881533047537e6a0066"
+          },
+          "preview": {
+            "bytes": 59475,
+            "sha256": "d5c4f25464027d16a62c286acc61a1605f73521b2873185995c28113c0e9e9ee"
+          },
+          "pose": {
+            "t": 2.5833333333333335,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.2235665694849367,
+            "sq": 0,
+            "press": 0.11949401059924186,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 32,
+          "time": 2.6666666666666665,
+          "renderMs": 1025.1,
+          "sourceFrame": {
+            "bytes": 540693,
+            "sha256": "a3e9da58582cbd485170cb6e27111615d5ac73c455c25b15dd13b1ccd1dce6d9"
+          },
+          "preview": {
+            "bytes": 59561,
+            "sha256": "a353cfd200ca3a5423216795f7c7dd0c0302d7d5c6c6e0abf81b49878f22afc1"
+          },
+          "pose": {
+            "t": 2.6666666666666665,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.15383867832847437,
+            "sq": 0,
+            "press": 0.2335150130794339,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 33,
+          "time": 2.75,
+          "renderMs": 1061.4,
+          "sourceFrame": {
+            "bytes": 539437,
+            "sha256": "5f355020bc57c0f7f13ef3f1ca033e5ae66046f0c4a319e6eca8aab3817c75c1"
+          },
+          "preview": {
+            "bytes": 59015,
+            "sha256": "520b87f6d01a3fcb498a381a442c4c309b87ebcabb0d11b1043e4c10f55166f4"
+          },
+          "pose": {
+            "t": 2.75,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.07500000000000001,
+            "sq": 0,
+            "press": 0.369020964787299,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 34,
+          "time": 2.8333333333333335,
+          "renderMs": 1050.7,
+          "sourceFrame": {
+            "bytes": 539479,
+            "sha256": "7dbbe7eafe5baee5da9866e1557f16298c54e3df252b853f82535b9a17dd2bfe"
+          },
+          "preview": {
+            "bytes": 59059,
+            "sha256": "148f4a400be49b6dff84be5ea586e57e3488512dd7d72b2843a5ec7ef190de78"
+          },
+          "pose": {
+            "t": 2.8333333333333335,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.003838678328474343,
+            "sq": 0,
+            "press": 0.5147039977082724,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 35,
+          "time": 2.9166666666666665,
+          "renderMs": 963.4,
+          "sourceFrame": {
+            "bytes": 540108,
+            "sha256": "c24ee765121e43b95ad0bf4ff3a87519bac816621d9d9c53bbfa3cb64be92311"
+          },
+          "preview": {
+            "bytes": 59658,
+            "sha256": "34d81b8fd05196bcc2aabea66d7766f12df6a223ff4a8dccbfa69773cb772132"
+          },
+          "pose": {
+            "t": 2.9166666666666665,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.07356656948493667,
+            "sq": 0,
+            "press": 0.6592562438277885,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 36,
+          "time": 3,
+          "renderMs": 981.2,
+          "sourceFrame": {
+            "bytes": 540503,
+            "sha256": "556fb1e9a05d2fee47b656390842f6b7b864ebd8311edd7d738939ad1bad9b9c"
+          },
+          "preview": {
+            "bytes": 59322,
+            "sha256": "d3d715d353e2065cd129b5b1a189f13f36ebdd07b961c5805922bab241444084"
+          },
+          "pose": {
+            "t": 3,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.12507288629737606,
+            "sq": 0,
+            "press": 0.7913698351312844,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 37,
+          "time": 3.0833333333333335,
+          "renderMs": 934.8,
+          "sourceFrame": {
+            "bytes": 540195,
+            "sha256": "c2855aaeb1153ed26559b1b464df3eb09c5a2b510d1bfc55c3ef17c1cc51ec10"
+          },
+          "preview": {
+            "bytes": 59198,
+            "sha256": "8995c32d926904727cbd132510748b10c2d1074734cf61c4642ae6d83bebe4f9"
+          },
+          "pose": {
+            "t": 3.0833333333333335,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.14924684159378032,
+            "sq": 0,
+            "press": 0.8997369036041946,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 38,
+          "time": 3.1666666666666665,
+          "renderMs": 947.3,
+          "sourceFrame": {
+            "bytes": 539871,
+            "sha256": "6046a6a4ff150e0864f0c1208cd8cd47298fbe96a63bfe996a2755e032d8efe3"
+          },
+          "preview": {
+            "bytes": 59537,
+            "sha256": "1b776822bfae34f17a4afc5f49e06171a56ea2112b9ce48a7621c4b77ce3bb31"
+          },
+          "pose": {
+            "t": 3.1666666666666665,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.19170096021947855,
+            "sq": 0,
+            "press": 0.9730495812319544,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 39,
+          "time": 3.25,
+          "renderMs": 1116.3,
+          "sourceFrame": {
+            "bytes": 540203,
+            "sha256": "db6eca455769e177c3e9f9608cc39dd50c7e471f917616009705c79ede1e0a33"
+          },
+          "preview": {
+            "bytes": 59048,
+            "sha256": "0fb7ceebe26aa0025103902fe5718b0d6f6cca0741a109cc584a2ae2ffc00b8f"
+          },
+          "pose": {
+            "t": 3.25,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.25,
+            "sq": 0,
+            "press": 1,
+            "light": 0,
+            "on": true,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 40,
+          "time": 3.3333333333333335,
+          "renderMs": 1217,
+          "sourceFrame": {
+            "bytes": 541272,
+            "sha256": "8e269fc8ef940bd203c32de6ec435511b9581e59f1eccb971e4604403d50eb22"
+          },
+          "preview": {
+            "bytes": 59856,
+            "sha256": "21bdea63f3b5a90da1dd28210356ed647f4d2e2e4d2a758c73281f344adb7ca5"
+          },
+          "pose": {
+            "t": 3.3333333333333335,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.10740740740740695,
+            "sq": 0,
+            "press": 0.7407407407407399,
+            "light": 0.5038339120370378,
+            "on": true,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 41,
+          "time": 3.4166666666666665,
+          "renderMs": 1146.7,
+          "sourceFrame": {
+            "bytes": 541811,
+            "sha256": "08a2b37a7deae69e62723dd2fccfb08b84be560de0bc21376587e595bd2f12b0"
+          },
+          "preview": {
+            "bytes": 59934,
+            "sha256": "538781fd1ec15a7a48f4a785741fbb45af0842cc8c2a0ba8acb26daa7de5b141"
+          },
+          "pose": {
+            "t": 3.4166666666666665,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.157407407407407,
+            "sq": 0,
+            "press": 0.2592592592592601,
+            "light": 0.8015046296296293,
+            "on": true,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 42,
+          "time": 3.5,
+          "renderMs": 1082.2,
+          "sourceFrame": {
+            "bytes": 544521,
+            "sha256": "e9210bfb14b37822da1dc42618b8f355d0414e7e90c62b49d35b102fbcf765bc"
+          },
+          "preview": {
+            "bytes": 60550,
+            "sha256": "f24d8b5f3385701edf4c3326876a893371a06b77abbbe0bec36ba9a2cbd633e0"
+          },
+          "pose": {
+            "t": 3.5,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0.947265625,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 43,
+          "time": 3.5833333333333335,
+          "renderMs": 1205.6,
+          "sourceFrame": {
+            "bytes": 543368,
+            "sha256": "bbc62ec1ae34ffc58650b502b745517692fc913e3bbcf5d94fbd4ea3d9229620"
+          },
+          "preview": {
+            "bytes": 60560,
+            "sha256": "e0480ad9a43816e18da0554a48621f58687add8f7f06593ba31a07198488b649"
+          },
+          "pose": {
+            "t": 3.5833333333333335,
+            "shot": 3,
+            "x": 1030,
+            "y": 795.0502525316941,
+            "walk": 0,
+            "aL": 0.5083333333333337,
+            "aR": 0.3925925925925929,
+            "sq": -0.009428090415820664,
+            "press": 0,
+            "light": 0.9953703703703705,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 44,
+          "time": 3.6666666666666665,
+          "renderMs": 1281.4,
+          "sourceFrame": {
+            "bytes": 544291,
+            "sha256": "019b8c9bacb5e8a645b2d852d2b8d080fbfe884fa20f2a1016584b91bd57397f"
+          },
+          "preview": {
+            "bytes": 61324,
+            "sha256": "022dcc40f8d1aada27600a1e841a662b05e12a6d5f270dda50a71943615ae703"
+          },
+          "pose": {
+            "t": 3.6666666666666665,
+            "shot": 3,
+            "x": 1030,
+            "y": 786,
+            "walk": 0,
+            "aL": 0.7166666666666663,
+            "aR": 0.6240740740740736,
+            "sq": -0.026666666666666644,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 45,
+          "time": 3.75,
+          "renderMs": 1148,
+          "sourceFrame": {
+            "bytes": 544378,
+            "sha256": "e58216f636b345927eced3cf4956a8f7eebfce730fe1d97166c381f2f60f5dfd"
+          },
+          "preview": {
+            "bytes": 61228,
+            "sha256": "ce0aa5a5ec725847cc7befcd597b1ff9d565650475cb529c422cd3823300af21"
+          },
+          "pose": {
+            "t": 3.75,
+            "shot": 3,
+            "x": 1030,
+            "y": 785.1507575950825,
+            "walk": 0,
+            "aL": 0.925,
+            "aR": 0.925,
+            "sq": -0.028284271247461905,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 46,
+          "time": 3.8333333333333335,
+          "renderMs": 1109.7,
+          "sourceFrame": {
+            "bytes": 543855,
+            "sha256": "1d384213986d6dfc6cf92b1823b7c728df47cd80c37b59f2ce9d0b65549a5425"
+          },
+          "preview": {
+            "bytes": 60772,
+            "sha256": "d1a624af5db287c3065855e73b99fbcf2618bd81bdea5c7e83640ed430d459d3"
+          },
+          "pose": {
+            "t": 3.8333333333333335,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.1333333333333337,
+            "aR": 1.2259259259259265,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 47,
+          "time": 3.9166666666666665,
+          "renderMs": 1063.3,
+          "sourceFrame": {
+            "bytes": 542698,
+            "sha256": "df0f2aca43d0462b5cf5e662947e3775ecfb6caad02d2ccce81401ee2c39b19f"
+          },
+          "preview": {
+            "bytes": 60337,
+            "sha256": "7c0a9f819646e2140799aa91031a5c44b986083984022b15232ebf8324ab762f"
+          },
+          "pose": {
+            "t": 3.9166666666666665,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.3416666666666663,
+            "aR": 1.4574074074074073,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 48,
+          "time": 4,
+          "renderMs": 1160.9,
+          "sourceFrame": {
+            "bytes": 542131,
+            "sha256": "94f530621d6ba9042ac6ab2ba4a1b4bb1c9b965155ddc1d4495eed4629c75a97"
+          },
+          "preview": {
+            "bytes": 60524,
+            "sha256": "7864ca5a404b8cbf4862003f368bd1a5b02726a359c515a69d66fe3e6a3ba103"
+          },
+          "pose": {
+            "t": 4,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 49,
+          "time": 4.083333333333333,
+          "renderMs": 1026.4,
+          "sourceFrame": {
+            "bytes": 543829,
+            "sha256": "c5e41eb2b2d72b3257ae6ac557f6ea8f7e411f39975e1579c3356bb565f80027"
+          },
+          "preview": {
+            "bytes": 60287,
+            "sha256": "9f7d1b4288292b4bb6cdff831690558226468a31c74346eb48af288856cb5bbf"
+          },
+          "pose": {
+            "t": 4.083333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 50,
+          "time": 4.166666666666667,
+          "renderMs": 1026.1,
+          "sourceFrame": {
+            "bytes": 543418,
+            "sha256": "d774c47f31b25d078d34a603231cd1eb8f98000fe4846b374fb78953d3fc0938"
+          },
+          "preview": {
+            "bytes": 60312,
+            "sha256": "7a267f21f4a5718dea61574b2d541ee6cbb3de870bbc4e8d1c72ee0964cb5bb5"
+          },
+          "pose": {
+            "t": 4.166666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 799.9999999999999,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -1.2251419836566238e-16,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 51,
+          "time": 4.25,
+          "renderMs": 1102.9,
+          "sourceFrame": {
+            "bytes": 542898,
+            "sha256": "0a2fc1abf2177841bb9e1142b4e22381992df34a0ea12cb0494449655c797546"
+          },
+          "preview": {
+            "bytes": 60878,
+            "sha256": "a01b05ac40256a642b5817b9bd28b24e4af757eb3cab94a9915c6785bb1a2bfa"
+          },
+          "pose": {
+            "t": 4.25,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.301515190165,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.05656854249492379,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 52,
+          "time": 4.333333333333333,
+          "renderMs": 997.1,
+          "sourceFrame": {
+            "bytes": 544361,
+            "sha256": "5a9f042dc890fc927e64f2bffff1d24395231d621bcfd36dd9d1fb64f8e0c9b3"
+          },
+          "preview": {
+            "bytes": 61115,
+            "sha256": "e426b48e0da8845ad1263be50eafe6d824ca9efc8f501846c95b9f99e3d55dc0"
+          },
+          "pose": {
+            "t": 4.333333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 758,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.08,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 53,
+          "time": 4.416666666666667,
+          "renderMs": 1131.6,
+          "sourceFrame": {
+            "bytes": 544304,
+            "sha256": "3c363f0d0e632ae01e28ad1dd1260d02d0b4fd6b30174428cc3b2bafc5f259e9"
+          },
+          "preview": {
+            "bytes": 60850,
+            "sha256": "2ce49d42c87ce9ac55164f0d4446222068562ef15a3c945d5f728839250e7003"
+          },
+          "pose": {
+            "t": 4.416666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.3015151901651,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.05656854249492367,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 54,
+          "time": 4.5,
+          "renderMs": 1177,
+          "sourceFrame": {
+            "bytes": 542774,
+            "sha256": "c24d5656e348d08cda30ee781b1085b951f4c2e01d657b5f38f16690f2d95cda"
+          },
+          "preview": {
+            "bytes": 60226,
+            "sha256": "390546be999ca346f1576f276bd20c6410ab17f2eded7dce97e14156036cd1c2"
+          },
+          "pose": {
+            "t": 4.5,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -2.9391523179536474e-17,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 55,
+          "time": 4.583333333333333,
+          "renderMs": 1141.7,
+          "sourceFrame": {
+            "bytes": 543203,
+            "sha256": "30e93e774212a474a4cd6fc5ad4f95b356585f67f8529fa5880b2ed9e8323e63"
+          },
+          "preview": {
+            "bytes": 60471,
+            "sha256": "be847dca58b11ba276aedf6f46cbe84ef738a0da48510c248e6077282ecd8992"
+          },
+          "pose": {
+            "t": 4.583333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 56,
+          "time": 4.666666666666667,
+          "renderMs": 1241.3,
+          "sourceFrame": {
+            "bytes": 543299,
+            "sha256": "34ad88c84dcdc35cc194cdc4d13ab5d0067b43fe29e43f3c6941ae1e1cd0c52d"
+          },
+          "preview": {
+            "bytes": 60513,
+            "sha256": "3e843ebe778b496bb6bcbfbd5d7adab945179134743821f835700a02bb7a4672"
+          },
+          "pose": {
+            "t": 4.666666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 57,
+          "time": 4.75,
+          "renderMs": 1126.5,
+          "sourceFrame": {
+            "bytes": 543826,
+            "sha256": "97880226f3a14d8f5619a812bed12ac27abaacce420e34b70dce9c7ee4d9aa3f"
+          },
+          "preview": {
+            "bytes": 60364,
+            "sha256": "718c4d221b9e6626a6ec3a97272018199df36056fdd6dccfdc34b92e36e73ab8"
+          },
+          "pose": {
+            "t": 4.75,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 58,
+          "time": 4.833333333333333,
+          "renderMs": 1148.8,
+          "sourceFrame": {
+            "bytes": 542219,
+            "sha256": "43f893bea782ed3b3f8e0afb3b87ab39db4f71d7748f6c020ef31e99fc5c0206"
+          },
+          "preview": {
+            "bytes": 60264,
+            "sha256": "261533442bd7e2264a0371183db1bd43715b11f339e103d58a45596aa634fe7c"
+          },
+          "pose": {
+            "t": 4.833333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 59,
+          "time": 4.916666666666667,
+          "renderMs": 1074,
+          "sourceFrame": {
+            "bytes": 543870,
+            "sha256": "d46eb591242c3567d3c95c599011b496eb854e43fec9fa64f4ab18b49561b70c"
+          },
+          "preview": {
+            "bytes": 60514,
+            "sha256": "c0325f0e2f69f7579e455f2e0d67de6b8b205fd79d3290886cb976784ac59f16"
+          },
+          "pose": {
+            "t": 4.916666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.3015151901649,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.05656854249492403,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 60,
+          "time": 5,
+          "renderMs": 1141,
+          "sourceFrame": {
+            "bytes": 543607,
+            "sha256": "d652a284d8a8479d13a36a62108ada819102ad11cabf10908b97c841bbc79a85"
+          },
+          "preview": {
+            "bytes": 61151,
+            "sha256": "50b79a184a70e08706443721565bb4dbf041b8e3d2727f46aa7bb230b1bbfccf"
+          },
+          "pose": {
+            "t": 5,
+            "shot": 3,
+            "x": 1030,
+            "y": 758,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.08,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 61,
+          "time": 5.083333333333333,
+          "renderMs": 1215.2,
+          "sourceFrame": {
+            "bytes": 542773,
+            "sha256": "7d18b9cb936d9357889d803629c52fa30c5227a0e94a1823a13db4b0ec87a4e8"
+          },
+          "preview": {
+            "bytes": 60521,
+            "sha256": "422b9f21e998782d58a8f88a0b940cdf52b6e6ae495cc6b2ebd59ff654df8273"
+          },
+          "pose": {
+            "t": 5.083333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.3015151901649,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.056568542494924094,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 62,
+          "time": 5.166666666666667,
+          "renderMs": 1145.7,
+          "sourceFrame": {
+            "bytes": 543751,
+            "sha256": "6861acae88665184ef0441bd00ff6b3c8c7a7e6ddb70cfe6124dc92dcb8abc83"
+          },
+          "preview": {
+            "bytes": 60284,
+            "sha256": "65d7bf0c5672b857570937c588dd3bba27b59cba22432ffb876badfdc667d4ed"
+          },
+          "pose": {
+            "t": 5.166666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 63,
+          "time": 5.25,
+          "renderMs": 1065,
+          "sourceFrame": {
+            "bytes": 543121,
+            "sha256": "5dfb57bb0df71a4e133a42876ad8cd9935b7dfc97e0e2677231c5b0dc05acd42"
+          },
+          "preview": {
+            "bytes": 60197,
+            "sha256": "d90f5917b6a9f231bf2b695fc28d01ed8ea91a7b032f92d84f1155292928220c"
+          },
+          "pose": {
+            "t": 5.25,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 64,
+          "time": 5.333333333333333,
+          "renderMs": 1085,
+          "sourceFrame": {
+            "bytes": 542536,
+            "sha256": "ffb84b69bd6d2194af3abb28f3223e978d76876aa4842782fb03bbee7156736f"
+          },
+          "preview": {
+            "bytes": 60248,
+            "sha256": "943f03feeabbc0e867e3e264dbcc98ae8b82345fbb6c472808239c9a1b1e70ba"
+          },
+          "pose": {
+            "t": 5.333333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 65,
+          "time": 5.416666666666667,
+          "renderMs": 1340.7,
+          "sourceFrame": {
+            "bytes": 542460,
+            "sha256": "db1ad6fda4e5a2a6766bb7b421f1eb35b321d721dffeb7083d415ff8d3d3d5c4"
+          },
+          "preview": {
+            "bytes": 59990,
+            "sha256": "e743497ec77916f22dbf6c28a85abc7cb5609641b4512f37dad3db11f95550a9"
+          },
+          "pose": {
+            "t": 5.416666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 66,
+          "time": 5.5,
+          "renderMs": 1082.4,
+          "sourceFrame": {
+            "bytes": 542794,
+            "sha256": "2136d600330c0dc2aeb7f3e1939f16657686520b35de1ceb0c77c66adf5179a6"
+          },
+          "preview": {
+            "bytes": 60460,
+            "sha256": "47c01b65875db10ab01d3f3555fab5e14c09151d29bddc90b18c192134939d12"
+          },
+          "pose": {
+            "t": 5.5,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 67,
+          "time": 5.583333333333333,
+          "renderMs": 1202.3,
+          "sourceFrame": {
+            "bytes": 543296,
+            "sha256": "0e0cb77908a49ad0ef4b4d5b0262976e113a781412b35845e024cd25d0af47f1"
+          },
+          "preview": {
+            "bytes": 60587,
+            "sha256": "e478437af0596fb953fc2db7736b38ce7c8e2e718db898383093d731e8cfdd35"
+          },
+          "pose": {
+            "t": 5.583333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.3015151901651,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.05656854249492361,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 68,
+          "time": 5.666666666666667,
+          "renderMs": 1249.5,
+          "sourceFrame": {
+            "bytes": 544166,
+            "sha256": "ca66d9feb0b99dff0ad710e87856e598a1e3ab49b6d8e0307abed780981a90e7"
+          },
+          "preview": {
+            "bytes": 61354,
+            "sha256": "8d348c406e76e99469ed4f8ec5d2cf33598f790a39fa49ec1341370eeb7a5289"
+          },
+          "pose": {
+            "t": 5.666666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 758,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.08,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 69,
+          "time": 5.75,
+          "renderMs": 1144.9,
+          "sourceFrame": {
+            "bytes": 543641,
+            "sha256": "a3c83f44ac6932161a3b89cbaa642d3b3c43ff1f2656bd3117cb206e1df7a9ba"
+          },
+          "preview": {
+            "bytes": 60856,
+            "sha256": "d3578fb7b27e6bb01fe1bfc81e0e0b1c58e40dcfac7182ade0fffb2b143bb027"
+          },
+          "pose": {
+            "t": 5.75,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.301515190165,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.05656854249492389,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 70,
+          "time": 5.833333333333333,
+          "renderMs": 1155.5,
+          "sourceFrame": {
+            "bytes": 543231,
+            "sha256": "5530ad382b8ab5c83dd9cd8b91bd8c861e572071650e2d51ef8be8a2b165408f"
+          },
+          "preview": {
+            "bytes": 60265,
+            "sha256": "582b27bf8e8d5de6eb9d0210f3b352c40f0797b9cdbc3a43e3aa5d9b37ed46bc"
+          },
+          "pose": {
+            "t": 5.833333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 799.9999999999998,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -3.527973150562919e-16,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 71,
+          "time": 5.916666666666667,
+          "renderMs": 1077.9,
+          "sourceFrame": {
+            "bytes": 543203,
+            "sha256": "38bf3755389c7849816a7a002b999fe34f9a33d275c776ec7e4479e649c37863"
+          },
+          "preview": {
+            "bytes": 60373,
+            "sha256": "7049372a125957286dd268f36aa5afe6d4db701203e8fd6df2945a4ea94bfd4f"
+          },
+          "pose": {
+            "t": 5.916666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        }
+      ],
+      "totalMs": 82565,
+      "video": "web/assets/example/warm.mp4",
+      "videoBytes": 2227095
+    },
+    "cool": {
+      "frames": [
+        {
+          "index": 0,
+          "time": 0,
+          "renderMs": 1337.3,
+          "sourceFrame": {
+            "bytes": 539017,
+            "sha256": "215243328b553f83a68df89adfcd83bf030a91502dd73249b9cac14c8307f529"
+          },
+          "preview": {
+            "bytes": 59695,
+            "sha256": "9c771046308fe5bada1aae2b20de9070cbcde962a28d4c162883f2a824e62748"
+          },
+          "pose": {
+            "t": 0,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 1,
+          "time": 0.08333333333333333,
+          "renderMs": 976.6,
+          "sourceFrame": {
+            "bytes": 539051,
+            "sha256": "2616e04eefcbf0ffbdc1cc76ef703a307c618b9b8f29702d720e8d7fad85777e"
+          },
+          "preview": {
+            "bytes": 59246,
+            "sha256": "6359078ae64f7318454df207831f4afde7d9060f1c48bfc0dacd50250f699a99"
+          },
+          "pose": {
+            "t": 0.08333333333333333,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 2,
+          "time": 0.16666666666666666,
+          "renderMs": 947.8,
+          "sourceFrame": {
+            "bytes": 538937,
+            "sha256": "39047aad966429e5bdde3384ff8f6c94712701cabdbff3f5235fdd23fb391ae0"
+          },
+          "preview": {
+            "bytes": 59382,
+            "sha256": "01b25a1e6b6fd5dce5bdef3336070bdf439e2143ea4b81e121218c52d8f3ba5b"
+          },
+          "pose": {
+            "t": 0.16666666666666666,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 3,
+          "time": 0.25,
+          "renderMs": 1045.6,
+          "sourceFrame": {
+            "bytes": 537862,
+            "sha256": "81b41e053327b2f9b273faa3dd32399d3393baf933b56c4d9433a3c0ea40bdda"
+          },
+          "preview": {
+            "bytes": 59456,
+            "sha256": "94e130304aafbd37888b0ee727feee95aa05734da3bcb8e441e89f917982aaca"
+          },
+          "pose": {
+            "t": 0.25,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 4,
+          "time": 0.3333333333333333,
+          "renderMs": 1213,
+          "sourceFrame": {
+            "bytes": 538762,
+            "sha256": "cc5c4305f0d11bb2c95c9c9cd7cc849f42e8436e7ac3ea7c2ef1e401084127ce"
+          },
+          "preview": {
+            "bytes": 59290,
+            "sha256": "f8e5419e3930d0c75e6d1d039e42d04bb54380a3660e9770dfa2ab9f8bc95294"
+          },
+          "pose": {
+            "t": 0.3333333333333333,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 5,
+          "time": 0.4166666666666667,
+          "renderMs": 1124.5,
+          "sourceFrame": {
+            "bytes": 538618,
+            "sha256": "51d6a93eeb8196144e0cb5d9c3e768bcf58a3515af34403d9c1e467da2a5596d"
+          },
+          "preview": {
+            "bytes": 59437,
+            "sha256": "1a7f29fa9a0e14b83e7dfbff9c4f21f408b96894b22f2a312d60761507f3a362"
+          },
+          "pose": {
+            "t": 0.4166666666666667,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 6,
+          "time": 0.5,
+          "renderMs": 1047,
+          "sourceFrame": {
+            "bytes": 539370,
+            "sha256": "f2bc2c611b43bf55c9c7e05250a61bb7e2647d5f8036f536fa688ebb5a092130"
+          },
+          "preview": {
+            "bytes": 59674,
+            "sha256": "8f6a7c1de9f97cd2add9ce74cbabfc8b3b8a78be188e4cb41bf43b58df8f4963"
+          },
+          "pose": {
+            "t": 0.5,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 7,
+          "time": 0.5833333333333334,
+          "renderMs": 950.8,
+          "sourceFrame": {
+            "bytes": 538275,
+            "sha256": "8c37e26e7f05746a62c593efd3a614f2e0696925da7973b10bb210b74834fdaf"
+          },
+          "preview": {
+            "bytes": 59566,
+            "sha256": "53abe516af839e026dfb0b382f789202d9dbdfe4c02a5d36e9ebe4019b4ea9fd"
+          },
+          "pose": {
+            "t": 0.5833333333333334,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 8,
+          "time": 0.6666666666666666,
+          "renderMs": 1033.1,
+          "sourceFrame": {
+            "bytes": 539662,
+            "sha256": "499c697b2964a717526759a9807ca9ceae82053894e95d324a7a384c72d3caba"
+          },
+          "preview": {
+            "bytes": 59726,
+            "sha256": "eaf5c53963d88bfa3ebcdb1901fa9d20edf9fb07bb399ddfa77dbf2a4dd1b543"
+          },
+          "pose": {
+            "t": 0.6666666666666666,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 9,
+          "time": 0.75,
+          "renderMs": 1109.9,
+          "sourceFrame": {
+            "bytes": 539519,
+            "sha256": "44e3ff12046f369d6e4a34189bc05259e3d91e5ce833597fe10b425073b203f8"
+          },
+          "preview": {
+            "bytes": 59603,
+            "sha256": "bf5cba38e87aa86b101fad8dbb6447fbaeeb9bfe26494b9f0c1001b65afac248"
+          },
+          "pose": {
+            "t": 0.75,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 10,
+          "time": 0.8333333333333334,
+          "renderMs": 941.5,
+          "sourceFrame": {
+            "bytes": 539012,
+            "sha256": "7a339cd163746668c79e451eaedcbf7ef472476c94cdd80e9cffcd64b9105e36"
+          },
+          "preview": {
+            "bytes": 59324,
+            "sha256": "39c078226b1c8e9c1e8cacfd8fa59b473728acdccf2a41bc1cbe06faefc15e9a"
+          },
+          "pose": {
+            "t": 0.8333333333333334,
+            "shot": 1,
+            "x": 460.73187934027777,
+            "y": 791.5580002090273,
+            "walk": 1.4166666666666667,
+            "aL": 0.6251999907098955,
+            "aR": -0.12519999070989557,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 11,
+          "time": 0.9166666666666666,
+          "renderMs": 1054.8,
+          "sourceFrame": {
+            "bytes": 537939,
+            "sha256": "59ebea723485da344837fdaabe3970da82ecb79b23c55b192b012caff7a6e046"
+          },
+          "preview": {
+            "bytes": 58741,
+            "sha256": "3f5964fa7bd604f9ed8dca83fde86db35feac5a8680995d2592492b1af803095"
+          },
+          "pose": {
+            "t": 0.9166666666666666,
+            "shot": 1,
+            "x": 468.64983452690973,
+            "y": 791.6965621078459,
+            "walk": 1.5583333333333331,
+            "aL": 0.6190416840957361,
+            "aR": -0.11904168409573612,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 12,
+          "time": 1,
+          "renderMs": 989.1,
+          "sourceFrame": {
+            "bytes": 536977,
+            "sha256": "a73646da2d08e994f1ad583bdc42689b13141628c4fa8a8e4d5b723fae7bb14f"
+          },
+          "preview": {
+            "bytes": 58139,
+            "sha256": "0e03dc235d7acabc958641406c273125658bdf0e1385c5990e724ec9ee240593"
+          },
+          "pose": {
+            "t": 1,
+            "shot": 1,
+            "x": 484.4921875,
+            "y": 796.2909336328241,
+            "walk": 1.7,
+            "aL": 0.4148473940967027,
+            "aR": 0.08515260590329735,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 13,
+          "time": 1.0833333333333333,
+          "renderMs": 1174.6,
+          "sourceFrame": {
+            "bytes": 537244,
+            "sha256": "3920726543ffc5e963ced08867238e163aabf704bfdfac34ffc2fd673f6fee6e"
+          },
+          "preview": {
+            "bytes": 58570,
+            "sha256": "a153d345a8205152305fe2b775ef4ef594db53f7dccc6778bd121b1bc768c04d"
+          },
+          "pose": {
+            "t": 1.0833333333333333,
+            "shot": 1,
+            "x": 507.29254828559027,
+            "y": 797.1243272573995,
+            "walk": 1.8416666666666666,
+            "aL": 0.12219232255109053,
+            "aR": 0.3778076774489095,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 14,
+          "time": 1.1666666666666667,
+          "renderMs": 1073.1,
+          "sourceFrame": {
+            "bytes": 538262,
+            "sha256": "f1dd8122c4c0ff4f1b9dc710c61749e25e1035447d93ec2710e57f3eda73a6fe"
+          },
+          "preview": {
+            "bytes": 58814,
+            "sha256": "e5a1edc41f17fa612416c4e610c8a4649c4d9c2d168076962f4563348a4a44ee"
+          },
+          "pose": {
+            "t": 1.1666666666666667,
+            "shot": 1,
+            "x": 536.0845269097223,
+            "y": 792.082738160255,
+            "walk": 1.9833333333333334,
+            "aL": -0.10187830398866804,
+            "aR": 0.601878303988668,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 15,
+          "time": 1.25,
+          "renderMs": 1023.7,
+          "sourceFrame": {
+            "bytes": 537867,
+            "sha256": "5af5e31c8ac46cf0e7ac7937897c1dfbc6843d2765df9d2e2a13fa2e10390f6c"
+          },
+          "preview": {
+            "bytes": 58878,
+            "sha256": "9ef767d794e6f026925c67edb1dea7b22c783f60d466cbfe7437ee1c53d2f366"
+          },
+          "pose": {
+            "t": 1.25,
+            "shot": 1,
+            "x": 569.9017333984375,
+            "y": 791.2897280223987,
+            "walk": 2.125,
+            "aL": -0.1371231990045046,
+            "aR": 0.6371231990045045,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 16,
+          "time": 1.3333333333333333,
+          "renderMs": 1071.5,
+          "sourceFrame": {
+            "bytes": 537414,
+            "sha256": "1f373faece85d7316ba3ada9df332e1a1023d30a160fe5524d769b400f771ba0"
+          },
+          "preview": {
+            "bytes": 58590,
+            "sha256": "1a64b22311e5625963fb6d6ff5a5bdd95ebe6c3997948f93b03188e857ce1fdc"
+          },
+          "pose": {
+            "t": 1.3333333333333333,
+            "shot": 1,
+            "x": 607.7777777777777,
+            "y": 795.170843737996,
+            "walk": 2.2666666666666666,
+            "aL": 0.035370832799826,
+            "aR": 0.464629167200174,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 17,
+          "time": 1.4166666666666667,
+          "renderMs": 986.8,
+          "sourceFrame": {
+            "bytes": 537836,
+            "sha256": "daef746423a8ba2e6b070bdeb81a2e2c8057ef818993a2ee97137b752251fe78"
+          },
+          "preview": {
+            "bytes": 58544,
+            "sha256": "5239d6da32367267ffda8e3f8d6fb9ce8112ccc309698bd0fdc09cc67e010009"
+          },
+          "pose": {
+            "t": 1.4166666666666667,
+            "shot": 1,
+            "x": 648.7462700737848,
+            "y": 798.3566077883198,
+            "walk": 2.408333333333333,
+            "aL": 0.3230396538524536,
+            "aR": 0.1769603461475464,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 18,
+          "time": 1.5,
+          "renderMs": 997.4,
+          "sourceFrame": {
+            "bytes": 537438,
+            "sha256": "e39a11f3b02f6bdb8086887134adf4dde7f57a7d00ed034b64be7c1f64f9bd15"
+          },
+          "preview": {
+            "bytes": 58544,
+            "sha256": "ae125230ad0743024a8a484ce37590ad382b0750fd9b83c0efa4ca2a1f990e22"
+          },
+          "pose": {
+            "t": 1.5,
+            "shot": 1,
+            "x": 691.8408203125,
+            "y": 792.7659401610354,
+            "walk": 2.55,
+            "aL": 0.5715137706206483,
+            "aR": -0.0715137706206484,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 19,
+          "time": 1.5833333333333333,
+          "renderMs": 967.6,
+          "sourceFrame": {
+            "bytes": 538072,
+            "sha256": "278e600c9728799148059315212909ca76d2d00be94dc6e0ebd8230f56dc6a8b"
+          },
+          "preview": {
+            "bytes": 59004,
+            "sha256": "c0ceca8988f3ae0e158b85ed89f278a73b36c5ba9a187e9b69b2907d2b56c307"
+          },
+          "pose": {
+            "t": 1.5833333333333333,
+            "shot": 1,
+            "x": 736.0950385199653,
+            "y": 791.0572300898051,
+            "walk": 2.6916666666666664,
+            "aL": 0.6474564404531051,
+            "aR": -0.14745644045310508,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 20,
+          "time": 1.6666666666666667,
+          "renderMs": 1041.6,
+          "sourceFrame": {
+            "bytes": 537190,
+            "sha256": "576a07f18fd2745bd0a2388f10ffa9f07833d6ab3ad415364a0909b4c470fcf1"
+          },
+          "preview": {
+            "bytes": 58673,
+            "sha256": "d394f53e03075334db57ec5649f38ffe61f041760961bdd24ecae2d4691a9cbd"
+          },
+          "pose": {
+            "t": 1.6666666666666667,
+            "shot": 1,
+            "x": 780.5425347222223,
+            "y": 794.1474094385859,
+            "walk": 2.8333333333333335,
+            "aL": 0.5101151360628468,
+            "aR": -0.010115136062846752,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 21,
+          "time": 1.75,
+          "renderMs": 1028.9,
+          "sourceFrame": {
+            "bytes": 537833,
+            "sha256": "4fa166cd3db2d1f9f15f25a340f299e4b8a01d9b76f383638d1a8f3f60f03ed2"
+          },
+          "preview": {
+            "bytes": 59135,
+            "sha256": "6f389e7783f6ba86eab917f8a94ec842c282c0859789202e71446904d0ce5ed3"
+          },
+          "pose": {
+            "t": 1.75,
+            "shot": 1,
+            "x": 824.2169189453125,
+            "y": 799.6217808255304,
+            "walk": 2.975,
+            "aL": 0.23319025891246367,
+            "aR": 0.2668097410875363,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 22,
+          "time": 1.8333333333333333,
+          "renderMs": 972.2,
+          "sourceFrame": {
+            "bytes": 537582,
+            "sha256": "c6ac819aea644d593e5550bdc96675c83d2e098e9a56ff70824a154bffd23f50"
+          },
+          "preview": {
+            "bytes": 58520,
+            "sha256": "7b1de04fc008c1c73d6cb07fe48c639f7a66c75d3148b7045ce7b69187e64b1b"
+          },
+          "pose": {
+            "t": 1.8333333333333333,
+            "shot": 1,
+            "x": 866.1518012152777,
+            "y": 793.5939319186779,
+            "walk": 3.1166666666666663,
+            "aL": -0.03471413694764924,
+            "aR": 0.5347141369476492,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 23,
+          "time": 1.9166666666666667,
+          "renderMs": 1289.7,
+          "sourceFrame": {
+            "bytes": 536888,
+            "sha256": "8cca511cccfe07e4cbb68959e456cbe18897913bede4f102d3569bae86d27f4e"
+          },
+          "preview": {
+            "bytes": 58791,
+            "sha256": "cd72177267d3187f7ef39a9a5c5e626cd3528ff2388ec8007edc49fcec9ab10d"
+          },
+          "pose": {
+            "t": 1.9166666666666667,
+            "shot": 1,
+            "x": 905.3807915581598,
+            "y": 791.003721757767,
+            "walk": 3.2583333333333333,
+            "aL": -0.14983458854368692,
+            "aR": 0.6498345885436869,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 24,
+          "time": 2,
+          "renderMs": 1088.3,
+          "sourceFrame": {
+            "bytes": 537228,
+            "sha256": "0de65f44082b55a0bb7f028e54908cbf72879d3183f5ae73d6fb516717deaacd"
+          },
+          "preview": {
+            "bytes": 59032,
+            "sha256": "905eea26303d904e12da2182a870d2feca1ca01329659791744dd8220bb02924"
+          },
+          "pose": {
+            "t": 2,
+            "shot": 1,
+            "x": 940.9375,
+            "y": 793.2411147790549,
+            "walk": 3.4,
+            "aL": -0.05039489870867042,
+            "aR": 0.5503948987086704,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 25,
+          "time": 2.0833333333333335,
+          "renderMs": 948.2,
+          "sourceFrame": {
+            "bytes": 536752,
+            "sha256": "9029927229cdc214d97a0dcba9319a38824bf619fc56772de957e146a9064eac"
+          },
+          "preview": {
+            "bytes": 58935,
+            "sha256": "443302f61991056bc1b8208b95fc33a0bf1cdec21bf5c67dfddabf2c532c0ef7"
+          },
+          "pose": {
+            "t": 2.0833333333333335,
+            "shot": 1,
+            "x": 971.8555365668403,
+            "y": 799.1054760779103,
+            "walk": 3.541666666666667,
+            "aL": 0.2102433812404607,
+            "aR": 0.2897566187595393,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 26,
+          "time": 2.1666666666666665,
+          "renderMs": 1057.9,
+          "sourceFrame": {
+            "bytes": 536764,
+            "sha256": "7025261b10f7aee1672a21dd7c4b942733150eaf7da3aec95848d814a18c73e0"
+          },
+          "preview": {
+            "bytes": 58577,
+            "sha256": "ad1d05224ecfe4ed53d9579d1c2eb8b1cac5b2d7349ea732f15f9109b49843d3"
+          },
+          "pose": {
+            "t": 2.1666666666666665,
+            "shot": 1,
+            "x": 997.1685112847223,
+            "y": 794.5501411725236,
+            "walk": 3.683333333333333,
+            "aL": 0.4922159478878404,
+            "aR": 0.007784052112159573,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 27,
+          "time": 2.25,
+          "renderMs": 980.6,
+          "sourceFrame": {
+            "bytes": 537402,
+            "sha256": "9339b9f8c1b7c53ecb16f9d1ae78b92c339f45ba3567e5f126cb858197798197"
+          },
+          "preview": {
+            "bytes": 58509,
+            "sha256": "f32419e9f2f1831440f043ac2813814284630ea4cece415657f82a2eab75b2a3"
+          },
+          "pose": {
+            "t": 2.25,
+            "shot": 1,
+            "x": 1015.9100341796875,
+            "y": 791.130273995914,
+            "walk": 3.8249999999999997,
+            "aL": 0.6442100446260479,
+            "aR": -0.14421004462604792,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 28,
+          "time": 2.3333333333333335,
+          "renderMs": 1006.8,
+          "sourceFrame": {
+            "bytes": 536194,
+            "sha256": "a3e441182e144514db26da162888545bc1aa2526a7caa9ced565be7a95e8ce60"
+          },
+          "preview": {
+            "bytes": 58339,
+            "sha256": "e044ea6af76f4c0d344e31b3432159c5f125d6a1240e350561c4e9d754f32df0"
+          },
+          "pose": {
+            "t": 2.3333333333333335,
+            "shot": 1,
+            "x": 1027.1137152777778,
+            "y": 792.4700992531755,
+            "walk": 3.966666666666667,
+            "aL": 0.5846622554144225,
+            "aR": -0.08466225541442246,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 29,
+          "time": 2.4166666666666665,
+          "renderMs": 918.7,
+          "sourceFrame": {
+            "bytes": 536592,
+            "sha256": "c3a91fc4126bdf42f273937641349d2f9790420784bc1ce2877d22ebffa872df"
+          },
+          "preview": {
+            "bytes": 58507,
+            "sha256": "fa75071a909f77a92df4db593501f0cb2945ba8e0fd829777300e570cad2f419"
+          },
+          "pose": {
+            "t": 2.4166666666666665,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.29924684159378034,
+            "sq": 0,
+            "press": 0.0011383253801328214,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 30,
+          "time": 2.5,
+          "renderMs": 951.1,
+          "sourceFrame": {
+            "bytes": 537656,
+            "sha256": "46fae779a9d36d85c632a24e1c04aa73d72efafcd0c599a5d2275815badf520f"
+          },
+          "preview": {
+            "bytes": 58524,
+            "sha256": "6209388f4d36af9edff34064e0791f43b9445670f9fa57001c488f34e71f2457"
+          },
+          "pose": {
+            "t": 2.5,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.27507288629737603,
+            "sq": 0,
+            "press": 0.03826582536128645,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 31,
+          "time": 2.5833333333333335,
+          "renderMs": 1054.6,
+          "sourceFrame": {
+            "bytes": 537341,
+            "sha256": "1893f8380e0f7b99d11127f92e73a6103301b40c42e34e0fd5f56762eb6fe527"
+          },
+          "preview": {
+            "bytes": 58615,
+            "sha256": "62e36c59c330a059bae907244a8da014f286cf00dc471830325e03a844caf4c0"
+          },
+          "pose": {
+            "t": 2.5833333333333335,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.2235665694849367,
+            "sq": 0,
+            "press": 0.11949401059924186,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 32,
+          "time": 2.6666666666666665,
+          "renderMs": 1224.5,
+          "sourceFrame": {
+            "bytes": 537357,
+            "sha256": "9b65e13d6ba9e481b78fc0dda7af6dee7633ba0120a637ef346306a925574543"
+          },
+          "preview": {
+            "bytes": 58638,
+            "sha256": "d8113a73e55b59bdf1211531b57057313131fd77e4bf5e3525eeaa4706a33c75"
+          },
+          "pose": {
+            "t": 2.6666666666666665,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.15383867832847437,
+            "sq": 0,
+            "press": 0.2335150130794339,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 33,
+          "time": 2.75,
+          "renderMs": 1024.3,
+          "sourceFrame": {
+            "bytes": 536401,
+            "sha256": "f122b3d5a326badd44f4e4d7136521c6fb98549cbc137cf620e9a1256d30c23d"
+          },
+          "preview": {
+            "bytes": 58277,
+            "sha256": "93204a9e33129efdbebb6f1bbc6c000f2ab363291cfa046d9d18a779a5488156"
+          },
+          "pose": {
+            "t": 2.75,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.07500000000000001,
+            "sq": 0,
+            "press": 0.369020964787299,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 34,
+          "time": 2.8333333333333335,
+          "renderMs": 1074.1,
+          "sourceFrame": {
+            "bytes": 536335,
+            "sha256": "3a17d8d1d74c10ad333ad1c6bf788232c5338581fadc13f1b5003abc8a6b1a1d"
+          },
+          "preview": {
+            "bytes": 58174,
+            "sha256": "280bd5cdab7cc94e7ceefce9b196626d3308152d83ebc647e4187069ee2e1ca3"
+          },
+          "pose": {
+            "t": 2.8333333333333335,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.003838678328474343,
+            "sq": 0,
+            "press": 0.5147039977082724,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 35,
+          "time": 2.9166666666666665,
+          "renderMs": 1019.5,
+          "sourceFrame": {
+            "bytes": 537134,
+            "sha256": "2ee8f77c59d27d7c81da839a08ee467158cc72806d2465374ded43f43ad8ed17"
+          },
+          "preview": {
+            "bytes": 58780,
+            "sha256": "790381283272eb2c9b3aeef0c69203e81e592cd17915555a88aafc31481f9d25"
+          },
+          "pose": {
+            "t": 2.9166666666666665,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.07356656948493667,
+            "sq": 0,
+            "press": 0.6592562438277885,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 36,
+          "time": 3,
+          "renderMs": 1000.1,
+          "sourceFrame": {
+            "bytes": 537946,
+            "sha256": "75338eb9ea08245a230f9282ceb18ccc9fe7d0cbf6ac2744b99e0845f1523b4d"
+          },
+          "preview": {
+            "bytes": 58520,
+            "sha256": "3b1e32aadb03bcc29025371f310faf06f8123f887eda7204fd0c8768cb572d62"
+          },
+          "pose": {
+            "t": 3,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.12507288629737606,
+            "sq": 0,
+            "press": 0.7913698351312844,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 37,
+          "time": 3.0833333333333335,
+          "renderMs": 923.9,
+          "sourceFrame": {
+            "bytes": 537210,
+            "sha256": "44913bb9341d175c7dd69d3ba8a983418e67fdd108e3fd8786a3e8c77164b6cd"
+          },
+          "preview": {
+            "bytes": 58455,
+            "sha256": "77524d881238ff824d4953e4681032aa589c076e75522c2a315e012c8f609cba"
+          },
+          "pose": {
+            "t": 3.0833333333333335,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.14924684159378032,
+            "sq": 0,
+            "press": 0.8997369036041946,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 38,
+          "time": 3.1666666666666665,
+          "renderMs": 1002.1,
+          "sourceFrame": {
+            "bytes": 536585,
+            "sha256": "fbf935bfa8014bf3105bb6e23bda6123b5ab6ae1e01708ac14d1cf568de93b00"
+          },
+          "preview": {
+            "bytes": 58615,
+            "sha256": "15a4b1d7449f3be3c6fd5b8133cf99f94d518587c332fb898267e11a4b1379b0"
+          },
+          "pose": {
+            "t": 3.1666666666666665,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.19170096021947855,
+            "sq": 0,
+            "press": 0.9730495812319544,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 39,
+          "time": 3.25,
+          "renderMs": 978,
+          "sourceFrame": {
+            "bytes": 537090,
+            "sha256": "ab7b08fd7e5c591d6363c380d232f6543bd3b956517d2859c3e41a1121736e00"
+          },
+          "preview": {
+            "bytes": 58318,
+            "sha256": "ab3f73083359aa2f4449356defa4e4695f6be770b1a0364f00c5a60f43283908"
+          },
+          "pose": {
+            "t": 3.25,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.25,
+            "sq": 0,
+            "press": 1,
+            "light": 0,
+            "on": true,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 40,
+          "time": 3.3333333333333335,
+          "renderMs": 1167.8,
+          "sourceFrame": {
+            "bytes": 537319,
+            "sha256": "5c33aaebe4fbc5fd05734cb0fd3ebc2e38a916f0e530b06b4e84a9379587243e"
+          },
+          "preview": {
+            "bytes": 58855,
+            "sha256": "b1444ab3268bca3dba71d60305a60a79dc2c3ab28e7456c2b266a28bd9aa79c9"
+          },
+          "pose": {
+            "t": 3.3333333333333335,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.10740740740740695,
+            "sq": 0,
+            "press": 0.7407407407407399,
+            "light": 0.5038339120370378,
+            "on": true,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 41,
+          "time": 3.4166666666666665,
+          "renderMs": 1376.2,
+          "sourceFrame": {
+            "bytes": 537763,
+            "sha256": "417330b8c98e637487f3e017e0a6dd53f881f728dc829637acb5013c3cf9a6df"
+          },
+          "preview": {
+            "bytes": 58824,
+            "sha256": "f989b9f5a91f0fb56e8a56941ae73a55f9632b324e65a3c230e3edc07311d89e"
+          },
+          "pose": {
+            "t": 3.4166666666666665,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.157407407407407,
+            "sq": 0,
+            "press": 0.2592592592592601,
+            "light": 0.8015046296296293,
+            "on": true,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 42,
+          "time": 3.5,
+          "renderMs": 1248.8,
+          "sourceFrame": {
+            "bytes": 540062,
+            "sha256": "224960d5e34f6c3565bb7ab54bb59df370cd0bd3af6827456cd50d1cafec4d1d"
+          },
+          "preview": {
+            "bytes": 59374,
+            "sha256": "07fd72fad8add04c31bf3e15146cfbadca3772324b92575b6c4c9c3c71f7ee5e"
+          },
+          "pose": {
+            "t": 3.5,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0.947265625,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 43,
+          "time": 3.5833333333333335,
+          "renderMs": 1093.1,
+          "sourceFrame": {
+            "bytes": 538770,
+            "sha256": "663396d35a5536f43e661fb907c9f73dc7ba4052368a05236fe4302688aeee10"
+          },
+          "preview": {
+            "bytes": 59391,
+            "sha256": "ede108941735fc972e67f6566a7053fc9fd61ede02c160097b27196bf43330a5"
+          },
+          "pose": {
+            "t": 3.5833333333333335,
+            "shot": 3,
+            "x": 1030,
+            "y": 795.0502525316941,
+            "walk": 0,
+            "aL": 0.5083333333333337,
+            "aR": 0.3925925925925929,
+            "sq": -0.009428090415820664,
+            "press": 0,
+            "light": 0.9953703703703705,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 44,
+          "time": 3.6666666666666665,
+          "renderMs": 1126.5,
+          "sourceFrame": {
+            "bytes": 539455,
+            "sha256": "192ac1ff58e50309ca900bb5c03c835bc832bf03b728db7182e60e5bf572ced0"
+          },
+          "preview": {
+            "bytes": 59954,
+            "sha256": "8a44c0fd5a54d8e36c6b799d65e32448d2ff688e123f75bfa61fb7bb88cfb0cd"
+          },
+          "pose": {
+            "t": 3.6666666666666665,
+            "shot": 3,
+            "x": 1030,
+            "y": 786,
+            "walk": 0,
+            "aL": 0.7166666666666663,
+            "aR": 0.6240740740740736,
+            "sq": -0.026666666666666644,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 45,
+          "time": 3.75,
+          "renderMs": 1153.2,
+          "sourceFrame": {
+            "bytes": 539611,
+            "sha256": "b388a0128429f458dafb82c1092a6e7f51a0a5e97d018d83ff1595f929e8182c"
+          },
+          "preview": {
+            "bytes": 59871,
+            "sha256": "7bd8b5e337a6dede5f4b76457808c573828aacb523718e610245b9cb9260c04d"
+          },
+          "pose": {
+            "t": 3.75,
+            "shot": 3,
+            "x": 1030,
+            "y": 785.1507575950825,
+            "walk": 0,
+            "aL": 0.925,
+            "aR": 0.925,
+            "sq": -0.028284271247461905,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 46,
+          "time": 3.8333333333333335,
+          "renderMs": 1219.9,
+          "sourceFrame": {
+            "bytes": 539071,
+            "sha256": "aaca26df3dd29018a3684fd086aabf80b78b18235161565591e7e9ec9150d770"
+          },
+          "preview": {
+            "bytes": 59644,
+            "sha256": "df869d8af50b250e0e33e3d726317cbe2e99ce3a02c91cc8b21455fb2c4456ab"
+          },
+          "pose": {
+            "t": 3.8333333333333335,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.1333333333333337,
+            "aR": 1.2259259259259265,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 47,
+          "time": 3.9166666666666665,
+          "renderMs": 1092.3,
+          "sourceFrame": {
+            "bytes": 538273,
+            "sha256": "809e95bc56a52cbb579de1ebdaece3d1cc7efd33ec1f2cb87d6ab0507432c1ec"
+          },
+          "preview": {
+            "bytes": 59101,
+            "sha256": "9dcc5cf274b54debe3337898d6a197c932c54c5e9272bb9308908f2f1e122855"
+          },
+          "pose": {
+            "t": 3.9166666666666665,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.3416666666666663,
+            "aR": 1.4574074074074073,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 48,
+          "time": 4,
+          "renderMs": 1163.1,
+          "sourceFrame": {
+            "bytes": 537439,
+            "sha256": "7abd2fc26e8070253b8cf0437bd7de208b2871eae298dc4f1c451cff2348da3d"
+          },
+          "preview": {
+            "bytes": 59205,
+            "sha256": "3c0600a2b3ec86441adac00c679bb911bab869747ec3f91bd77d3538b72881b9"
+          },
+          "pose": {
+            "t": 4,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 49,
+          "time": 4.083333333333333,
+          "renderMs": 1513.2,
+          "sourceFrame": {
+            "bytes": 539567,
+            "sha256": "fa6248687d0451e89b002fab5df83cb793984e89955ae8951d2fa38e6f48864a"
+          },
+          "preview": {
+            "bytes": 59194,
+            "sha256": "d141c538f171c7b703c8c489bca234d8c6106c5d976f85310bc7bb6642142b85"
+          },
+          "pose": {
+            "t": 4.083333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 50,
+          "time": 4.166666666666667,
+          "renderMs": 1210.3,
+          "sourceFrame": {
+            "bytes": 538815,
+            "sha256": "5d1994021df9f77f7a4ca8c49b777c88f6f3bde1941a13bca9b197bb1d75f4a1"
+          },
+          "preview": {
+            "bytes": 59109,
+            "sha256": "c18647157241fa340ec9077c394b6a075aeb42997371ff23259a529bbb080bed"
+          },
+          "pose": {
+            "t": 4.166666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 799.9999999999999,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -1.2251419836566238e-16,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 51,
+          "time": 4.25,
+          "renderMs": 1086.8,
+          "sourceFrame": {
+            "bytes": 538295,
+            "sha256": "19974f18a45396e07e689fab79ee6c2244a29b08e477c91efe505215ed957ee0"
+          },
+          "preview": {
+            "bytes": 59590,
+            "sha256": "540ab91887d5f4201b6a46d2f4b040f6509b1a648c4a131961580a61ff312051"
+          },
+          "pose": {
+            "t": 4.25,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.301515190165,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.05656854249492379,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 52,
+          "time": 4.333333333333333,
+          "renderMs": 1077.3,
+          "sourceFrame": {
+            "bytes": 539758,
+            "sha256": "ff6c8bf72f87c3f7bc1331497a2bef792aab8ff34f2d4f7ba2425d730085e2c6"
+          },
+          "preview": {
+            "bytes": 59882,
+            "sha256": "f0367f5db308b413d52c684b81bef13af7d313c51ff793cfcd591a6f2dcc8c32"
+          },
+          "pose": {
+            "t": 4.333333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 758,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.08,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 53,
+          "time": 4.416666666666667,
+          "renderMs": 986.3,
+          "sourceFrame": {
+            "bytes": 539669,
+            "sha256": "c09ea651b66912c1968b194420770837b364ae782df1a9013bae53229f833fbc"
+          },
+          "preview": {
+            "bytes": 59726,
+            "sha256": "dbd9cbb050a5937372f0842fce3054065d2aecd7f86c603c3462865471d39bea"
+          },
+          "pose": {
+            "t": 4.416666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.3015151901651,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.05656854249492367,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 54,
+          "time": 4.5,
+          "renderMs": 1085.2,
+          "sourceFrame": {
+            "bytes": 538390,
+            "sha256": "b57cf03412ad8b340f27d507d4d9ea62565493bab34dd2fcc62e54355901cb6d"
+          },
+          "preview": {
+            "bytes": 59086,
+            "sha256": "24f0143d6dff0feded7175d78cc096ff343e63044cc2b91c95521e38223213ab"
+          },
+          "pose": {
+            "t": 4.5,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -2.9391523179536474e-17,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 55,
+          "time": 4.583333333333333,
+          "renderMs": 1026.2,
+          "sourceFrame": {
+            "bytes": 539054,
+            "sha256": "2b0fb87ce351dddb927348ee8275a83dcd89a7a3801b5449617623de0b72c147"
+          },
+          "preview": {
+            "bytes": 59392,
+            "sha256": "52b2b9d12150f8accb3e0f017935808bbc0283ebf0aa2ea1adced358bf69bad9"
+          },
+          "pose": {
+            "t": 4.583333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 56,
+          "time": 4.666666666666667,
+          "renderMs": 1088.3,
+          "sourceFrame": {
+            "bytes": 538781,
+            "sha256": "434d3ca87cb2a7dfb0b76c3c91f1d490ae38e44a70690421b0574e98c09b0f4c"
+          },
+          "preview": {
+            "bytes": 59410,
+            "sha256": "6f3ec6cedd17567ffa38e2509c5076a0ab9b087ebc085bbffacfba6130e703c7"
+          },
+          "pose": {
+            "t": 4.666666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 57,
+          "time": 4.75,
+          "renderMs": 1106.1,
+          "sourceFrame": {
+            "bytes": 539520,
+            "sha256": "751cfac8ee9e54841b5c1e4ebc6d95d894ce092ab4617bcf94bc353991836731"
+          },
+          "preview": {
+            "bytes": 59181,
+            "sha256": "ed1a0435868a3fb5e6a362eb9fd281949d94a2de5834254c877a2343193b8288"
+          },
+          "pose": {
+            "t": 4.75,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 58,
+          "time": 4.833333333333333,
+          "renderMs": 1291.2,
+          "sourceFrame": {
+            "bytes": 537686,
+            "sha256": "a4bc483565086fadf9e7e2ba0fb78173d945637e7211dc26e7cd4d059e7cd73e"
+          },
+          "preview": {
+            "bytes": 59144,
+            "sha256": "69e82d848ae33c6104773e3f139354641f390de83b236a1f137c52acc8a2dd08"
+          },
+          "pose": {
+            "t": 4.833333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 59,
+          "time": 4.916666666666667,
+          "renderMs": 1369.7,
+          "sourceFrame": {
+            "bytes": 539754,
+            "sha256": "d184f3806013fa6f49525f9327877be8fbd710b8bdd8be9df8da16fe2ee1a63c"
+          },
+          "preview": {
+            "bytes": 59414,
+            "sha256": "2cb20c4a2b5c9fff9f2ac0bcabeab3e0b6f4496217407214ea57ccea2765b9af"
+          },
+          "pose": {
+            "t": 4.916666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.3015151901649,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.05656854249492403,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 60,
+          "time": 5,
+          "renderMs": 1074.6,
+          "sourceFrame": {
+            "bytes": 539110,
+            "sha256": "bc9bd6bd8ab5074871e472e635c98c4e2fceeb9144b003f19127c3892e9b0497"
+          },
+          "preview": {
+            "bytes": 59889,
+            "sha256": "ed23427d1c56266ffd74abd9303a5766d87605a2d782f86ab5b01cb733a94bf8"
+          },
+          "pose": {
+            "t": 5,
+            "shot": 3,
+            "x": 1030,
+            "y": 758,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.08,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 61,
+          "time": 5.083333333333333,
+          "renderMs": 1052,
+          "sourceFrame": {
+            "bytes": 538056,
+            "sha256": "64407d5f59b884e8c264a7940cadb695abe3c1a4f1ce2915ef97a304d69b596e"
+          },
+          "preview": {
+            "bytes": 59349,
+            "sha256": "cefc0cd186ab162910af140ad1391fdc23efacd4e2afdd09fb8f710ab6aa5ec0"
+          },
+          "pose": {
+            "t": 5.083333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.3015151901649,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.056568542494924094,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 62,
+          "time": 5.166666666666667,
+          "renderMs": 1074.1,
+          "sourceFrame": {
+            "bytes": 539437,
+            "sha256": "47dc8495992f2a9bd4ac3f2d71620d00cbf6bcacb15f5c750b4e70c2348c586c"
+          },
+          "preview": {
+            "bytes": 59065,
+            "sha256": "266e8834092e153034a750418464ceb86bbcd6bb657ccad04cd20cd4ab9160a6"
+          },
+          "pose": {
+            "t": 5.166666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 63,
+          "time": 5.25,
+          "renderMs": 1094.2,
+          "sourceFrame": {
+            "bytes": 538755,
+            "sha256": "75912dda1535b0eb37d16c2e8750f61aeb786f322d7b1ed79aa97b4f76ad96f9"
+          },
+          "preview": {
+            "bytes": 59097,
+            "sha256": "2aa7d8a11fae02ccb29860ce40aa2b8dbc68040cf39524cb37136425fe95b91b"
+          },
+          "pose": {
+            "t": 5.25,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 64,
+          "time": 5.333333333333333,
+          "renderMs": 1395.1,
+          "sourceFrame": {
+            "bytes": 538274,
+            "sha256": "282575bfc8fccd3b2a84b2215ca720456ec54df7af5ef234a6d13c15c8f7bed9"
+          },
+          "preview": {
+            "bytes": 59075,
+            "sha256": "873fcc0426a7bb3837eaa1827d6e8a6d4efaf3d194e56dda3f014ef2db63596d"
+          },
+          "pose": {
+            "t": 5.333333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 65,
+          "time": 5.416666666666667,
+          "renderMs": 1589.2,
+          "sourceFrame": {
+            "bytes": 538086,
+            "sha256": "89a29292105a8a96cdcadd84ee19ae4ba85125e522bee4bd9c300369dea81fbb"
+          },
+          "preview": {
+            "bytes": 58822,
+            "sha256": "d558bfbb6a38479239d01926b75ed9f1ead64f2fe31d370cc80e2b92201e3281"
+          },
+          "pose": {
+            "t": 5.416666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 66,
+          "time": 5.5,
+          "renderMs": 1606.7,
+          "sourceFrame": {
+            "bytes": 538265,
+            "sha256": "5d782170f5f68e1563bd89734c6d27a1fc469f3edce2d26bf27bcd867a04d0cc"
+          },
+          "preview": {
+            "bytes": 59249,
+            "sha256": "b636068b52bc29417dd71a413a64044464bc63ff6b2171f8672ab8bcf5242781"
+          },
+          "pose": {
+            "t": 5.5,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 67,
+          "time": 5.583333333333333,
+          "renderMs": 1569.9,
+          "sourceFrame": {
+            "bytes": 538811,
+            "sha256": "8bfc5788b61b3eb4153abdbcda72561a9b351047ad3b4385a8d142f7c93f9b6e"
+          },
+          "preview": {
+            "bytes": 59333,
+            "sha256": "1c7321e49d28111bdfad82afadc8168adc3a587925f4b1a36d78a32a7ed26344"
+          },
+          "pose": {
+            "t": 5.583333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.3015151901651,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.05656854249492361,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 68,
+          "time": 5.666666666666667,
+          "renderMs": 1507.4,
+          "sourceFrame": {
+            "bytes": 539211,
+            "sha256": "0acb628f9282d04cc4d4f58d7e6d8c32caca33b3b149e56dc322d95658502fa4"
+          },
+          "preview": {
+            "bytes": 60056,
+            "sha256": "7f3806021d806182381782ef39cd1129a44f395bb15d5de9618642bae59ef161"
+          },
+          "pose": {
+            "t": 5.666666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 758,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.08,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 69,
+          "time": 5.75,
+          "renderMs": 1381.6,
+          "sourceFrame": {
+            "bytes": 538872,
+            "sha256": "e3f4d852e23338b48125070e3979c85b8e3b7111c249a549d4c4c1b0d07d1690"
+          },
+          "preview": {
+            "bytes": 59644,
+            "sha256": "bc894cdf8b629320cb94c3a0e681e97753eae9217216f030d582a2eaae28c9ec"
+          },
+          "pose": {
+            "t": 5.75,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.301515190165,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.05656854249492389,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 70,
+          "time": 5.833333333333333,
+          "renderMs": 1364.4,
+          "sourceFrame": {
+            "bytes": 538956,
+            "sha256": "9547c0697bda4bbe9d877cd40c724e7485b26c18666266436e235f12cafdc4a7"
+          },
+          "preview": {
+            "bytes": 59235,
+            "sha256": "a98773e2a505e16ba7e2c4e60912c7192c175773f8ca98cae5ffd63abc4b80fe"
+          },
+          "pose": {
+            "t": 5.833333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 799.9999999999998,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -3.527973150562919e-16,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 71,
+          "time": 5.916666666666667,
+          "renderMs": 1370.9,
+          "sourceFrame": {
+            "bytes": 538753,
+            "sha256": "28174cc067aa9d78a349b641ac014fee1a42fbf8ed94349eb1bb40a70ac4d565"
+          },
+          "preview": {
+            "bytes": 59239,
+            "sha256": "9ba21938b76408cf731bed994a8050c845437a5c6f40c8fd03c59b69d7643e89"
+          },
+          "pose": {
+            "t": 5.916666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        }
+      ],
+      "totalMs": 85746,
+      "video": "web/assets/example/cool.mp4",
+      "videoBytes": 2158727
+    },
+    "flat": {
+      "frames": [
+        {
+          "index": 0,
+          "time": 0,
+          "renderMs": 276.3,
+          "sourceFrame": {
+            "bytes": 65681,
+            "sha256": "7fa2414759e0676e463c22cf60c795fd86861a22d446fc1528e8df8fa2d54144"
+          },
+          "preview": {
+            "bytes": 22563,
+            "sha256": "fa9000def31f7eddd8228ba23c1b3aeb4b62a7447517cff72e6fe6c9c1d2ebb8"
+          },
+          "pose": {
+            "t": 0,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 1,
+          "time": 0.08333333333333333,
+          "renderMs": 277.3,
+          "sourceFrame": {
+            "bytes": 65175,
+            "sha256": "2673b20595ebe5f378eeac9afeaba4349285577b3ec57007042a4db19c0d5664"
+          },
+          "preview": {
+            "bytes": 22171,
+            "sha256": "7a6b832b990e89c152c28312090a1c3e4dbe56a399978960174e09e49c7128c2"
+          },
+          "pose": {
+            "t": 0.08333333333333333,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 2,
+          "time": 0.16666666666666666,
+          "renderMs": 289.9,
+          "sourceFrame": {
+            "bytes": 65835,
+            "sha256": "57cd5484b950d23717dc2801f1f2f8b7d772c208566921298621e3df9c9fcb51"
+          },
+          "preview": {
+            "bytes": 22505,
+            "sha256": "fb55f718c8837a83542d3ebd3b8c76c97e90186706b1baa3208a2cfb0ec00185"
+          },
+          "pose": {
+            "t": 0.16666666666666666,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 3,
+          "time": 0.25,
+          "renderMs": 263,
+          "sourceFrame": {
+            "bytes": 65081,
+            "sha256": "b988dcb52cd137670cd16c152da311cd487e267439f8ace4535cbb38ba585b15"
+          },
+          "preview": {
+            "bytes": 22023,
+            "sha256": "a035613f9a820c64a2ac94c11010c4c289a84bab4b25577757ca377e9ebf60d6"
+          },
+          "pose": {
+            "t": 0.25,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 4,
+          "time": 0.3333333333333333,
+          "renderMs": 262.2,
+          "sourceFrame": {
+            "bytes": 65016,
+            "sha256": "b6b42be7d6ac3f74eedbdde20205d7625b524354190fa95f316cf8892da7899c"
+          },
+          "preview": {
+            "bytes": 22255,
+            "sha256": "cbfe2d6ef16664e80f57867c36ecb5a56ba2ff5eeee430659bbce4ad7928123c"
+          },
+          "pose": {
+            "t": 0.3333333333333333,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 5,
+          "time": 0.4166666666666667,
+          "renderMs": 284.1,
+          "sourceFrame": {
+            "bytes": 65281,
+            "sha256": "9deffba27c449407108474dc999de7b3f33ca858a5330b2d7610573d4006979e"
+          },
+          "preview": {
+            "bytes": 22196,
+            "sha256": "612d4ff4081433f3045edf59dfed44328fbdd46c0cef814b18c17ef525bafd57"
+          },
+          "pose": {
+            "t": 0.4166666666666667,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 6,
+          "time": 0.5,
+          "renderMs": 277.8,
+          "sourceFrame": {
+            "bytes": 65390,
+            "sha256": "506e64649ff7fb783a78420c69713f87890129ce6bbbdc2df51315359191987d"
+          },
+          "preview": {
+            "bytes": 22351,
+            "sha256": "f55107b5b10defa324607409332a46d2394865095a05805186f858b6b3352c6f"
+          },
+          "pose": {
+            "t": 0.5,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 7,
+          "time": 0.5833333333333334,
+          "renderMs": 246.4,
+          "sourceFrame": {
+            "bytes": 65417,
+            "sha256": "aa7925f449990c92a28b26cc3d06fb971b753f955320f451a84306e439f641ad"
+          },
+          "preview": {
+            "bytes": 22370,
+            "sha256": "4be6b51413de775ac5547c5f49628dccd0fab45a2c446d718d80f128d2660cac"
+          },
+          "pose": {
+            "t": 0.5833333333333334,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 8,
+          "time": 0.6666666666666666,
+          "renderMs": 271.1,
+          "sourceFrame": {
+            "bytes": 65544,
+            "sha256": "0938cf0eda419e68682af003d8c22b5cdaa4b621adb52cbe7341c3e672344087"
+          },
+          "preview": {
+            "bytes": 22272,
+            "sha256": "f743e40a803b5de03534c691f55277e44598d2001563e8c14f7c3353876b2fc2"
+          },
+          "pose": {
+            "t": 0.6666666666666666,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 9,
+          "time": 0.75,
+          "renderMs": 297.2,
+          "sourceFrame": {
+            "bytes": 66040,
+            "sha256": "81f6bafd4d3a9f12ca3ccd3c2be20cf4961e42df916aa17ae90ae5b177cca65d"
+          },
+          "preview": {
+            "bytes": 22445,
+            "sha256": "f5f57ee8afbdb18ba19ef02f9c56ba77cba5a329379e821496c1135dfe353a2e"
+          },
+          "pose": {
+            "t": 0.75,
+            "shot": 0,
+            "x": 460,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 10,
+          "time": 0.8333333333333334,
+          "renderMs": 252.6,
+          "sourceFrame": {
+            "bytes": 64819,
+            "sha256": "c33a74c70286fabfcde647d2538623dfe8e71a776a4f1c07ca9eb87f0276c698"
+          },
+          "preview": {
+            "bytes": 22191,
+            "sha256": "c006578b62bb6fd99854d69f96f059e54e39995d07785b48281474cb1133c6e5"
+          },
+          "pose": {
+            "t": 0.8333333333333334,
+            "shot": 1,
+            "x": 460.73187934027777,
+            "y": 791.5580002090273,
+            "walk": 1.4166666666666667,
+            "aL": 0.6251999907098955,
+            "aR": -0.12519999070989557,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 11,
+          "time": 0.9166666666666666,
+          "renderMs": 299.2,
+          "sourceFrame": {
+            "bytes": 64502,
+            "sha256": "9b15bc05497630434d440d65801ad8f4b70336a1dcf98f4ea5923ee0b3e40478"
+          },
+          "preview": {
+            "bytes": 21440,
+            "sha256": "c3a4904997973e5ca029e0896e085159737460ae9d39803cb41e6ba4fd1dca62"
+          },
+          "pose": {
+            "t": 0.9166666666666666,
+            "shot": 1,
+            "x": 468.64983452690973,
+            "y": 791.6965621078459,
+            "walk": 1.5583333333333331,
+            "aL": 0.6190416840957361,
+            "aR": -0.11904168409573612,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 12,
+          "time": 1,
+          "renderMs": 273.8,
+          "sourceFrame": {
+            "bytes": 64189,
+            "sha256": "42fb308d9a4e20760a42f8677e8d0b5a8889edf43b02821af322c3fae425b52f"
+          },
+          "preview": {
+            "bytes": 21264,
+            "sha256": "da96c9c3991304de8eab53f266fec734e8b4c2726824912d419638de8b24e133"
+          },
+          "pose": {
+            "t": 1,
+            "shot": 1,
+            "x": 484.4921875,
+            "y": 796.2909336328241,
+            "walk": 1.7,
+            "aL": 0.4148473940967027,
+            "aR": 0.08515260590329735,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 13,
+          "time": 1.0833333333333333,
+          "renderMs": 366.4,
+          "sourceFrame": {
+            "bytes": 63754,
+            "sha256": "2384cc2f27e53719481634f95df67a3d78ce01eddc161ad1cd403da438301722"
+          },
+          "preview": {
+            "bytes": 21703,
+            "sha256": "ef991f56602fbe5994c959d1f99dee1c3673acae00533b5d9d95b3a380751e4b"
+          },
+          "pose": {
+            "t": 1.0833333333333333,
+            "shot": 1,
+            "x": 507.29254828559027,
+            "y": 797.1243272573995,
+            "walk": 1.8416666666666666,
+            "aL": 0.12219232255109053,
+            "aR": 0.3778076774489095,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 14,
+          "time": 1.1666666666666667,
+          "renderMs": 290.9,
+          "sourceFrame": {
+            "bytes": 64668,
+            "sha256": "92b091371ef7e97ed7a6f011732f2bca4c864f5f299d9c9e1e4bce54427bf7eb"
+          },
+          "preview": {
+            "bytes": 21432,
+            "sha256": "9f548020a2dc7de4df59f510bce19f5bdcf8518d60b35e425b854662bffb81b1"
+          },
+          "pose": {
+            "t": 1.1666666666666667,
+            "shot": 1,
+            "x": 536.0845269097223,
+            "y": 792.082738160255,
+            "walk": 1.9833333333333334,
+            "aL": -0.10187830398866804,
+            "aR": 0.601878303988668,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 15,
+          "time": 1.25,
+          "renderMs": 254,
+          "sourceFrame": {
+            "bytes": 65060,
+            "sha256": "ad80f9b8164f0b060b28ae191c3ce4fd905e76ac94a3ac2c48c71d94a29dd031"
+          },
+          "preview": {
+            "bytes": 21708,
+            "sha256": "a5bbf55063916ba1b8b6c809e98a051dee1e2d48a95ffd2f7408dc421369a104"
+          },
+          "pose": {
+            "t": 1.25,
+            "shot": 1,
+            "x": 569.9017333984375,
+            "y": 791.2897280223987,
+            "walk": 2.125,
+            "aL": -0.1371231990045046,
+            "aR": 0.6371231990045045,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 16,
+          "time": 1.3333333333333333,
+          "renderMs": 311.8,
+          "sourceFrame": {
+            "bytes": 63591,
+            "sha256": "6ddbab26523397b0ade64b7c72a6d765d7979e8a8187903a1a1c74fd31593f35"
+          },
+          "preview": {
+            "bytes": 21633,
+            "sha256": "3d7be8aabe4dea08977e990035a9e260608db1b60f48b9f110c4ed1ff3262b9f"
+          },
+          "pose": {
+            "t": 1.3333333333333333,
+            "shot": 1,
+            "x": 607.7777777777777,
+            "y": 795.170843737996,
+            "walk": 2.2666666666666666,
+            "aL": 0.035370832799826,
+            "aR": 0.464629167200174,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 17,
+          "time": 1.4166666666666667,
+          "renderMs": 278.2,
+          "sourceFrame": {
+            "bytes": 63691,
+            "sha256": "9506003238c2469c93834238d4a74113f234c65ee540e6d5a49ab9bcce72c42b"
+          },
+          "preview": {
+            "bytes": 21372,
+            "sha256": "fa7596efd6ba7f5a73e00f3099651f7636588e8095318d088197caa00bbcecbc"
+          },
+          "pose": {
+            "t": 1.4166666666666667,
+            "shot": 1,
+            "x": 648.7462700737848,
+            "y": 798.3566077883198,
+            "walk": 2.408333333333333,
+            "aL": 0.3230396538524536,
+            "aR": 0.1769603461475464,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 18,
+          "time": 1.5,
+          "renderMs": 240.2,
+          "sourceFrame": {
+            "bytes": 64170,
+            "sha256": "58fc7097728addd425a89e4b38b374722c8be9013c2c69064e3e6c6155432282"
+          },
+          "preview": {
+            "bytes": 21277,
+            "sha256": "12c28a93a99126a2fd559100aac706f119b5cfe149fbae3236cdc65b192b601d"
+          },
+          "pose": {
+            "t": 1.5,
+            "shot": 1,
+            "x": 691.8408203125,
+            "y": 792.7659401610354,
+            "walk": 2.55,
+            "aL": 0.5715137706206483,
+            "aR": -0.0715137706206484,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 19,
+          "time": 1.5833333333333333,
+          "renderMs": 304.2,
+          "sourceFrame": {
+            "bytes": 64735,
+            "sha256": "19a679d1407bdd73285160cf408ca68fbbc40f676d038c153a7625cc5d82bf40"
+          },
+          "preview": {
+            "bytes": 22046,
+            "sha256": "ffb2c61b6e2876878b19debb7248fa6e376814636d0a8169487b3b334ce80674"
+          },
+          "pose": {
+            "t": 1.5833333333333333,
+            "shot": 1,
+            "x": 736.0950385199653,
+            "y": 791.0572300898051,
+            "walk": 2.6916666666666664,
+            "aL": 0.6474564404531051,
+            "aR": -0.14745644045310508,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 20,
+          "time": 1.6666666666666667,
+          "renderMs": 305.1,
+          "sourceFrame": {
+            "bytes": 63599,
+            "sha256": "13c49e79b785a7b66734349de5c33602615f5c96cca6b9abe2ab631b9e9db9de"
+          },
+          "preview": {
+            "bytes": 21561,
+            "sha256": "5035fdfe93ce89985b62edab3aecc2fa818f3525a6ce0431ef6be49e1a4620df"
+          },
+          "pose": {
+            "t": 1.6666666666666667,
+            "shot": 1,
+            "x": 780.5425347222223,
+            "y": 794.1474094385859,
+            "walk": 2.8333333333333335,
+            "aL": 0.5101151360628468,
+            "aR": -0.010115136062846752,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 21,
+          "time": 1.75,
+          "renderMs": 324.4,
+          "sourceFrame": {
+            "bytes": 64649,
+            "sha256": "be4f509363d0a22ba6999855575ba6f257f991385d08ae7a201518ea7096d3c8"
+          },
+          "preview": {
+            "bytes": 21528,
+            "sha256": "358a99046c476a61aa66ba142a603b38d67fe95455d20a0570dc23711ba3a823"
+          },
+          "pose": {
+            "t": 1.75,
+            "shot": 1,
+            "x": 824.2169189453125,
+            "y": 799.6217808255304,
+            "walk": 2.975,
+            "aL": 0.23319025891246367,
+            "aR": 0.2668097410875363,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 22,
+          "time": 1.8333333333333333,
+          "renderMs": 333.6,
+          "sourceFrame": {
+            "bytes": 63773,
+            "sha256": "36c7be16d0f5e9357942d74c7e2e51562e9ebcad432c34c6751d89fce383ae29"
+          },
+          "preview": {
+            "bytes": 21625,
+            "sha256": "fa0e10a3e762604d8ee120d379064e9e323b1bf0a9acbe014c5b47807159ed07"
+          },
+          "pose": {
+            "t": 1.8333333333333333,
+            "shot": 1,
+            "x": 866.1518012152777,
+            "y": 793.5939319186779,
+            "walk": 3.1166666666666663,
+            "aL": -0.03471413694764924,
+            "aR": 0.5347141369476492,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 23,
+          "time": 1.9166666666666667,
+          "renderMs": 329.6,
+          "sourceFrame": {
+            "bytes": 64763,
+            "sha256": "47cdcbbe4d72b893f7a5876f19543b4ddf6a7c78c206eb0ec9d15f26365d4386"
+          },
+          "preview": {
+            "bytes": 21534,
+            "sha256": "1f0855a0112cb7fe2fbf775e9d19eeea097f604910e02ae5264362cb2f2e6331"
+          },
+          "pose": {
+            "t": 1.9166666666666667,
+            "shot": 1,
+            "x": 905.3807915581598,
+            "y": 791.003721757767,
+            "walk": 3.2583333333333333,
+            "aL": -0.14983458854368692,
+            "aR": 0.6498345885436869,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 24,
+          "time": 2,
+          "renderMs": 293.9,
+          "sourceFrame": {
+            "bytes": 64086,
+            "sha256": "bcaad9874960b582632b81be58ff34bb6eca57ccb648d9bca0010716d5f3bb05"
+          },
+          "preview": {
+            "bytes": 21648,
+            "sha256": "5a216adb84c4960c793c9078f3e03ee2be5064bf19e4e86cce0b8b00742a829a"
+          },
+          "pose": {
+            "t": 2,
+            "shot": 1,
+            "x": 940.9375,
+            "y": 793.2411147790549,
+            "walk": 3.4,
+            "aL": -0.05039489870867042,
+            "aR": 0.5503948987086704,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 25,
+          "time": 2.0833333333333335,
+          "renderMs": 357.5,
+          "sourceFrame": {
+            "bytes": 63517,
+            "sha256": "432435f8e054407e6348993fa5e360f22ba984da0e3ef729b4baed50ce4fb96d"
+          },
+          "preview": {
+            "bytes": 21636,
+            "sha256": "0acc7bb7c90857a122daac348773042a16be1b936300e379fdbeeff061b299d1"
+          },
+          "pose": {
+            "t": 2.0833333333333335,
+            "shot": 1,
+            "x": 971.8555365668403,
+            "y": 799.1054760779103,
+            "walk": 3.541666666666667,
+            "aL": 0.2102433812404607,
+            "aR": 0.2897566187595393,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 26,
+          "time": 2.1666666666666665,
+          "renderMs": 366.5,
+          "sourceFrame": {
+            "bytes": 62838,
+            "sha256": "76491b1f9ff482b699aff38b0ed273a5e5df6e8c3376274b25bf1f9bb09c5d45"
+          },
+          "preview": {
+            "bytes": 20869,
+            "sha256": "628936f7e20cec283da380cc65bf0b240377c22df9513a294262962e5f4fbd64"
+          },
+          "pose": {
+            "t": 2.1666666666666665,
+            "shot": 1,
+            "x": 997.1685112847223,
+            "y": 794.5501411725236,
+            "walk": 3.683333333333333,
+            "aL": 0.4922159478878404,
+            "aR": 0.007784052112159573,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 27,
+          "time": 2.25,
+          "renderMs": 303.3,
+          "sourceFrame": {
+            "bytes": 63688,
+            "sha256": "0576b76bb2fc75dc41f399a7605aafb49df6ae24286e8049c44b376182d18c45"
+          },
+          "preview": {
+            "bytes": 21085,
+            "sha256": "3bb8c5c73b5a68d2d5919e2a3b0d1978be95b38f3104474582d3684bc420b15c"
+          },
+          "pose": {
+            "t": 2.25,
+            "shot": 1,
+            "x": 1015.9100341796875,
+            "y": 791.130273995914,
+            "walk": 3.8249999999999997,
+            "aL": 0.6442100446260479,
+            "aR": -0.14421004462604792,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 28,
+          "time": 2.3333333333333335,
+          "renderMs": 269.4,
+          "sourceFrame": {
+            "bytes": 62195,
+            "sha256": "428fbda10a278f89a7a8536e04aea67bda476b93cba24b6c2f0b7dd394b5b44b"
+          },
+          "preview": {
+            "bytes": 21058,
+            "sha256": "2bdda5195122c10fe69a21bb9d009291a97950f112d5b3f25fc926e3f025ebc3"
+          },
+          "pose": {
+            "t": 2.3333333333333335,
+            "shot": 1,
+            "x": 1027.1137152777778,
+            "y": 792.4700992531755,
+            "walk": 3.966666666666667,
+            "aL": 0.5846622554144225,
+            "aR": -0.08466225541442246,
+            "sq": 0,
+            "press": 0,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 29,
+          "time": 2.4166666666666665,
+          "renderMs": 252.4,
+          "sourceFrame": {
+            "bytes": 62707,
+            "sha256": "c4e9b2244da4a82898223097c983d32b3136ba18b24d77fae539adfb9fb5a576"
+          },
+          "preview": {
+            "bytes": 20926,
+            "sha256": "3f4884f15200ddd563aea5574abbd5b1378c35332e56dd7621d404bbbc2305d0"
+          },
+          "pose": {
+            "t": 2.4166666666666665,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.29924684159378034,
+            "sq": 0,
+            "press": 0.0011383253801328214,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 30,
+          "time": 2.5,
+          "renderMs": 266.2,
+          "sourceFrame": {
+            "bytes": 63776,
+            "sha256": "3127e6047b397c834223d70be340cfd6820555e507e2a660218404f7451b2b2c"
+          },
+          "preview": {
+            "bytes": 21122,
+            "sha256": "537d3a39fa01a888b58059b592d3ead9b0920097ff72ea1d97cc291f8e0dcc2b"
+          },
+          "pose": {
+            "t": 2.5,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.27507288629737603,
+            "sq": 0,
+            "press": 0.03826582536128645,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 31,
+          "time": 2.5833333333333335,
+          "renderMs": 242.6,
+          "sourceFrame": {
+            "bytes": 63557,
+            "sha256": "e249360ade78c4d8842311b97357bbbb4731852bd115bc73f727941cbadb3cf0"
+          },
+          "preview": {
+            "bytes": 21136,
+            "sha256": "0d3fb339f55f896bcfdfaa66a4ce89c94d599a2b0a017787b6541ee69e0e46bb"
+          },
+          "pose": {
+            "t": 2.5833333333333335,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.2235665694849367,
+            "sq": 0,
+            "press": 0.11949401059924186,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 32,
+          "time": 2.6666666666666665,
+          "renderMs": 238.5,
+          "sourceFrame": {
+            "bytes": 63266,
+            "sha256": "9f2f50251c4863fa591775c91837aa678394e58b960c70db2dacd69ff31cdbbf"
+          },
+          "preview": {
+            "bytes": 21095,
+            "sha256": "aa4aaebd333308b7739f4371cbd9171a70fee7daa0f6a892e06eb2f4115d5005"
+          },
+          "pose": {
+            "t": 2.6666666666666665,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.15383867832847437,
+            "sq": 0,
+            "press": 0.2335150130794339,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 33,
+          "time": 2.75,
+          "renderMs": 249.8,
+          "sourceFrame": {
+            "bytes": 62006,
+            "sha256": "64952cddd1112605cdb57d0de30efaf82e94cb0e5cabb40388b64819fcbd2e7f"
+          },
+          "preview": {
+            "bytes": 20758,
+            "sha256": "71228fbe9a9a99f18e1e31b63213cc15b955b598c058c518728c7f314f6387e0"
+          },
+          "pose": {
+            "t": 2.75,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.07500000000000001,
+            "sq": 0,
+            "press": 0.369020964787299,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 34,
+          "time": 2.8333333333333335,
+          "renderMs": 267.1,
+          "sourceFrame": {
+            "bytes": 62685,
+            "sha256": "0a8eb4295040a8d3cdf7ba243688cdfa48abce94e1141b02a4d3bbbd5eb28a0e"
+          },
+          "preview": {
+            "bytes": 21041,
+            "sha256": "c53a5d8711646bb6eb810a1513f51babde528cae1ed12c2ed5d38af81b93baad"
+          },
+          "pose": {
+            "t": 2.8333333333333335,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.003838678328474343,
+            "sq": 0,
+            "press": 0.5147039977082724,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 35,
+          "time": 2.9166666666666665,
+          "renderMs": 277.1,
+          "sourceFrame": {
+            "bytes": 62791,
+            "sha256": "c2c6d84cb5f5a1ee01fff47e50f670d36d8334fdf1924bf3a2ce910c0c2e6818"
+          },
+          "preview": {
+            "bytes": 21027,
+            "sha256": "9353b9015dd141985625fc57333d507a07e3722cf812a026700c8855f82997ef"
+          },
+          "pose": {
+            "t": 2.9166666666666665,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.07356656948493667,
+            "sq": 0,
+            "press": 0.6592562438277885,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 36,
+          "time": 3,
+          "renderMs": 274,
+          "sourceFrame": {
+            "bytes": 62969,
+            "sha256": "7f43de4997f6ad3ca1a9defa46a97d2e12294b6c3ef2e34977d5acdd9eddde36"
+          },
+          "preview": {
+            "bytes": 21168,
+            "sha256": "2dbdf1a10e1ee7868495926bae9da58a6c65bf870efe438218bab49f821e2e4e"
+          },
+          "pose": {
+            "t": 3,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.12507288629737606,
+            "sq": 0,
+            "press": 0.7913698351312844,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 37,
+          "time": 3.0833333333333335,
+          "renderMs": 274.9,
+          "sourceFrame": {
+            "bytes": 62606,
+            "sha256": "57d884cf537568cca87b8053e3d3fa278eb7fa1e7cedc1ed6348f59c1c50ecc7"
+          },
+          "preview": {
+            "bytes": 21024,
+            "sha256": "1f1c91453911f49acb0bcdeb8951022b7edca06aade57eaccf5ab56ee70662ef"
+          },
+          "pose": {
+            "t": 3.0833333333333335,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.14924684159378032,
+            "sq": 0,
+            "press": 0.8997369036041946,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 38,
+          "time": 3.1666666666666665,
+          "renderMs": 310.3,
+          "sourceFrame": {
+            "bytes": 62681,
+            "sha256": "7e3aaab406c0201c946f43056ef3eb9a6fcd0310252d25bba35d8accb1fa0361"
+          },
+          "preview": {
+            "bytes": 21109,
+            "sha256": "5f38de1718be22249bb5d9f776c74829fd772a699f408a1d4cfab92145b97b26"
+          },
+          "pose": {
+            "t": 3.1666666666666665,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.19170096021947855,
+            "sq": 0,
+            "press": 0.9730495812319544,
+            "light": 0,
+            "on": false,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 39,
+          "time": 3.25,
+          "renderMs": 359,
+          "sourceFrame": {
+            "bytes": 62281,
+            "sha256": "f3fa704039ed00859c4e08934d83347961cd0c7b0c83dd3ebdac140dd69753e4"
+          },
+          "preview": {
+            "bytes": 20863,
+            "sha256": "ff3fa24543502884729e6773324b8f8e2604dbbe652f0aceeaa6ee75ebe2d14c"
+          },
+          "pose": {
+            "t": 3.25,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.25,
+            "sq": 0,
+            "press": 1,
+            "light": 0,
+            "on": true,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 40,
+          "time": 3.3333333333333335,
+          "renderMs": 340.4,
+          "sourceFrame": {
+            "bytes": 65851,
+            "sha256": "602c95ab190863acbcc563be8a9e6eb7271e35ce7bba0eb72104aeb2319b95a9"
+          },
+          "preview": {
+            "bytes": 22073,
+            "sha256": "0b8254fed83b50628dd3aa169932ff0ae1c14435c49fc1bbfcd509e39da5bd5a"
+          },
+          "pose": {
+            "t": 3.3333333333333335,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": -0.10740740740740695,
+            "sq": 0,
+            "press": 0.7407407407407399,
+            "light": 0.5038339120370378,
+            "on": true,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 41,
+          "time": 3.4166666666666665,
+          "renderMs": 351.7,
+          "sourceFrame": {
+            "bytes": 67031,
+            "sha256": "bed50c5f6f3a04b01a310e8f60403185038065674a8d9e960ab2945bcb077b47"
+          },
+          "preview": {
+            "bytes": 22399,
+            "sha256": "78590cb973771ea57c65d23c55f9e51ceec13ac4976c922615efce30988eb0cd"
+          },
+          "pose": {
+            "t": 3.4166666666666665,
+            "shot": 2,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.157407407407407,
+            "sq": 0,
+            "press": 0.2592592592592601,
+            "light": 0.8015046296296293,
+            "on": true,
+            "eyes": "look",
+            "mouth": ""
+          }
+        },
+        {
+          "index": 42,
+          "time": 3.5,
+          "renderMs": 252.5,
+          "sourceFrame": {
+            "bytes": 69731,
+            "sha256": "40e3e5d52bc5173607d93578d00e83eeb41a41e35e75bedf47641b5c2d78a4e1"
+          },
+          "preview": {
+            "bytes": 23046,
+            "sha256": "e2943e1c997e20990f3e6fa6ba2aef34b6855a2c39da5ab66c0bbbc4eb989aed"
+          },
+          "pose": {
+            "t": 3.5,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 0.3,
+            "aR": 0.3,
+            "sq": 0,
+            "press": 0,
+            "light": 0.947265625,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 43,
+          "time": 3.5833333333333335,
+          "renderMs": 318.9,
+          "sourceFrame": {
+            "bytes": 69669,
+            "sha256": "464ecb625d1651162ec709d44cadf7968c08f077cbb70909dd6fdf5b6fc66cea"
+          },
+          "preview": {
+            "bytes": 22957,
+            "sha256": "8213adf9b2afafb46c33239a00cbf3414396f102d3c07446fc79bb0780afb5f4"
+          },
+          "pose": {
+            "t": 3.5833333333333335,
+            "shot": 3,
+            "x": 1030,
+            "y": 795.0502525316941,
+            "walk": 0,
+            "aL": 0.5083333333333337,
+            "aR": 0.3925925925925929,
+            "sq": -0.009428090415820664,
+            "press": 0,
+            "light": 0.9953703703703705,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 44,
+          "time": 3.6666666666666665,
+          "renderMs": 276.3,
+          "sourceFrame": {
+            "bytes": 70822,
+            "sha256": "ba205e2268fb8c5e1c4e8427c34dc13ad45a8690dc954e71abed5f3eb275f111"
+          },
+          "preview": {
+            "bytes": 23640,
+            "sha256": "c068b5248ef05e65131daa6aa2a88fe99fbc1e81c247f1b1fe9ec5e5e8d51929"
+          },
+          "pose": {
+            "t": 3.6666666666666665,
+            "shot": 3,
+            "x": 1030,
+            "y": 786,
+            "walk": 0,
+            "aL": 0.7166666666666663,
+            "aR": 0.6240740740740736,
+            "sq": -0.026666666666666644,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 45,
+          "time": 3.75,
+          "renderMs": 311.4,
+          "sourceFrame": {
+            "bytes": 70902,
+            "sha256": "487cadb6726f8e07a5c913f6caa3f86d8166baf2edfa15036f6d77cc5c431a47"
+          },
+          "preview": {
+            "bytes": 23497,
+            "sha256": "240463be9fe3278aae6b306b9b6260bf071caffb0b377f2226f573738b00d035"
+          },
+          "pose": {
+            "t": 3.75,
+            "shot": 3,
+            "x": 1030,
+            "y": 785.1507575950825,
+            "walk": 0,
+            "aL": 0.925,
+            "aR": 0.925,
+            "sq": -0.028284271247461905,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 46,
+          "time": 3.8333333333333335,
+          "renderMs": 287.5,
+          "sourceFrame": {
+            "bytes": 69832,
+            "sha256": "73fc160b1b9a32b28e7f7e011461d66cbb710aad3a5e81c74ef0cef74b70b51b"
+          },
+          "preview": {
+            "bytes": 23152,
+            "sha256": "cae4ca3b61a4b0922a774e9d4837e6a47bbfa013033b4706a3fcd71d55737eab"
+          },
+          "pose": {
+            "t": 3.8333333333333335,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.1333333333333337,
+            "aR": 1.2259259259259265,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 47,
+          "time": 3.9166666666666665,
+          "renderMs": 196.7,
+          "sourceFrame": {
+            "bytes": 69277,
+            "sha256": "d83c10a8a78fab054ce2d84009b6520b6d676dd042cb75976caa1c9aa2c021cc"
+          },
+          "preview": {
+            "bytes": 22946,
+            "sha256": "01be8d0b44d28869efd2b3170cd0ff8ea1ee60d05d464a9d7cf9ebc2bab8d748"
+          },
+          "pose": {
+            "t": 3.9166666666666665,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.3416666666666663,
+            "aR": 1.4574074074074073,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 48,
+          "time": 4,
+          "renderMs": 237,
+          "sourceFrame": {
+            "bytes": 67913,
+            "sha256": "169e161beecd83b9bcb6f9d1a33a2ba3ad263b09c901fdfb35b2bdb4b4f33556"
+          },
+          "preview": {
+            "bytes": 22631,
+            "sha256": "f8c3b179345dde1f6ad4bf40cbcf806e7af6920d968ee49045f469d41e20b333"
+          },
+          "pose": {
+            "t": 4,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 49,
+          "time": 4.083333333333333,
+          "renderMs": 318.3,
+          "sourceFrame": {
+            "bytes": 67508,
+            "sha256": "94b4e70d2309f87d5b9655b19ea688da6b84c9ac12765592c266777877cf65a2"
+          },
+          "preview": {
+            "bytes": 22749,
+            "sha256": "0200aac23bd7c7b19e3346f5354542b5e19477be120147c68f4d103ba8e708a5"
+          },
+          "pose": {
+            "t": 4.083333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 50,
+          "time": 4.166666666666667,
+          "renderMs": 303.6,
+          "sourceFrame": {
+            "bytes": 68430,
+            "sha256": "855414288cdeef8c007d2a161a813238f8b208019c35be799711a486bf04ebaf"
+          },
+          "preview": {
+            "bytes": 22699,
+            "sha256": "c3ffdc9377b41228f4c70cd2ef205e549fbb9154b8d4157971bf0ff2636b58d8"
+          },
+          "pose": {
+            "t": 4.166666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 799.9999999999999,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -1.2251419836566238e-16,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 51,
+          "time": 4.25,
+          "renderMs": 308.8,
+          "sourceFrame": {
+            "bytes": 69564,
+            "sha256": "597179daa3ba1d2b5c0a70251460a3f67d2e2ae71b2c6249da83eb96accda068"
+          },
+          "preview": {
+            "bytes": 23217,
+            "sha256": "75e4b00a6cae5570e3eff72da4cff5f3ee0334dcca5aa2c5a5006a294ad1b1e0"
+          },
+          "pose": {
+            "t": 4.25,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.301515190165,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.05656854249492379,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 52,
+          "time": 4.333333333333333,
+          "renderMs": 240.4,
+          "sourceFrame": {
+            "bytes": 69246,
+            "sha256": "df2a602a73bd22b79b4a6840388fa94851dfe22881f733671ac0b038826197d7"
+          },
+          "preview": {
+            "bytes": 23436,
+            "sha256": "4aac2ee5d6e6cdf3b2a590bdc0f4b96b1f03aa71061cbec92cbb58e4a126bdb7"
+          },
+          "pose": {
+            "t": 4.333333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 758,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.08,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 53,
+          "time": 4.416666666666667,
+          "renderMs": 291.6,
+          "sourceFrame": {
+            "bytes": 68973,
+            "sha256": "8d4782432876533826c0df9c717753fe88f94ce818d139bb15e71e75f2e656b4"
+          },
+          "preview": {
+            "bytes": 23286,
+            "sha256": "08397c89c1c79190a369f56cc2a148a5f368741698196f04247771b87e8f1703"
+          },
+          "pose": {
+            "t": 4.416666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.3015151901651,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.05656854249492367,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 54,
+          "time": 4.5,
+          "renderMs": 308,
+          "sourceFrame": {
+            "bytes": 67975,
+            "sha256": "c5282d59c740dcdc9c95480ab6b36f91d3021f1266c9915e7855d15cad7648e4"
+          },
+          "preview": {
+            "bytes": 22633,
+            "sha256": "d9cb300d9d53447da2d35bc862d11fc035ee83c47c8cee689d98c3b90d554c80"
+          },
+          "pose": {
+            "t": 4.5,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -2.9391523179536474e-17,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 55,
+          "time": 4.583333333333333,
+          "renderMs": 280.9,
+          "sourceFrame": {
+            "bytes": 68427,
+            "sha256": "266148221abf9b17cec4324338b2f645afdda6aa8724c4018a6878e922a149a5"
+          },
+          "preview": {
+            "bytes": 22634,
+            "sha256": "c5cf4d89766407dd9428bdde8303c7dc33175d04e6b24525323356c37e42fa88"
+          },
+          "pose": {
+            "t": 4.583333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 56,
+          "time": 4.666666666666667,
+          "renderMs": 274.5,
+          "sourceFrame": {
+            "bytes": 68343,
+            "sha256": "45ae3a6ad4c3b2640a2132a8bc597bc5c76831a5ade1ba06351e16f2d11d42e2"
+          },
+          "preview": {
+            "bytes": 22708,
+            "sha256": "d62029b83e7a50fff222c426985a945349aa2a4ec03eb61e76be771927f9774f"
+          },
+          "pose": {
+            "t": 4.666666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 57,
+          "time": 4.75,
+          "renderMs": 278.9,
+          "sourceFrame": {
+            "bytes": 68058,
+            "sha256": "c0fb399313ba441c6af83a83fb6d5e298dce0e77891c197463df816fcf8b4d08"
+          },
+          "preview": {
+            "bytes": 22647,
+            "sha256": "8f6f9405c7ac4acefd7ae0ad9fa2f7d8572a756ade8060603725e4ea56cd7532"
+          },
+          "pose": {
+            "t": 4.75,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 58,
+          "time": 4.833333333333333,
+          "renderMs": 289.4,
+          "sourceFrame": {
+            "bytes": 67892,
+            "sha256": "7ddf159709aed36f4fb8418eed407619a14b493e74fe3657bf05ec1059e69a57"
+          },
+          "preview": {
+            "bytes": 22630,
+            "sha256": "bb9f0a64a554de2c75eeaadf04b770833c6421c66965eb20f4cff2515a3ebc14"
+          },
+          "pose": {
+            "t": 4.833333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 59,
+          "time": 4.916666666666667,
+          "renderMs": 320,
+          "sourceFrame": {
+            "bytes": 68688,
+            "sha256": "6767378011be536bfffe71cb7a75a04ab14dbdea84106140ab063eb482e76424"
+          },
+          "preview": {
+            "bytes": 23080,
+            "sha256": "6fe9fdde91f290bc50f9db40a6120016a53f8a986e59f85328b9571c7dd6b156"
+          },
+          "pose": {
+            "t": 4.916666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.3015151901649,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.05656854249492403,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 60,
+          "time": 5,
+          "renderMs": 288.6,
+          "sourceFrame": {
+            "bytes": 69585,
+            "sha256": "16deccbcf7a30cf63c6b2fe4adcc3f9f4a1483bd16c71392fbeea6cc87aae4b8"
+          },
+          "preview": {
+            "bytes": 23536,
+            "sha256": "0ca6b45cc9dad292c358a7804cec1487649491e0628181c8c813292ca95930b4"
+          },
+          "pose": {
+            "t": 5,
+            "shot": 3,
+            "x": 1030,
+            "y": 758,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.08,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 61,
+          "time": 5.083333333333333,
+          "renderMs": 284.2,
+          "sourceFrame": {
+            "bytes": 68919,
+            "sha256": "a2ec93d114bade26e40714bc0766d6dc256d95cafff87601022735fa7486b0f6"
+          },
+          "preview": {
+            "bytes": 23178,
+            "sha256": "2a8cafb4db5d6deb0d9ec1717f1f8fb4a6a3a76786a6c0f3f5ef24a728380ea6"
+          },
+          "pose": {
+            "t": 5.083333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.3015151901649,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.056568542494924094,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 62,
+          "time": 5.166666666666667,
+          "renderMs": 277,
+          "sourceFrame": {
+            "bytes": 68308,
+            "sha256": "fec358ff2e09f3774f3ea7734edeecb2c9cf322ef9916ebf9d9504e08555d9a5"
+          },
+          "preview": {
+            "bytes": 22778,
+            "sha256": "30ffaa52de1ca1d91c4444a18101c54ede791529488c318ac2d59118be9410ec"
+          },
+          "pose": {
+            "t": 5.166666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 63,
+          "time": 5.25,
+          "renderMs": 280.5,
+          "sourceFrame": {
+            "bytes": 67939,
+            "sha256": "13ef4341032d155fc9f742768a9154b6451c46a916f77fa7e8149567f43ef300"
+          },
+          "preview": {
+            "bytes": 22644,
+            "sha256": "a1d08ed17d15348af075c013d1367f46ec9f989acb9c01d6a106962dc29ac986"
+          },
+          "pose": {
+            "t": 5.25,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 64,
+          "time": 5.333333333333333,
+          "renderMs": 275.3,
+          "sourceFrame": {
+            "bytes": 69302,
+            "sha256": "7473104104955b57b8863001084ffa090e487b7f3ae051b7e93cada784a4722d"
+          },
+          "preview": {
+            "bytes": 22882,
+            "sha256": "835f15b70cd4b6153ab4ddf827885582b6defb94f2fd9a153a31cb484fe542ab"
+          },
+          "pose": {
+            "t": 5.333333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 65,
+          "time": 5.416666666666667,
+          "renderMs": 281,
+          "sourceFrame": {
+            "bytes": 67638,
+            "sha256": "a0eb9ff6b1b1ce13a8f011f0f0d386c47f8a92d233f0d05aec15016444653b30"
+          },
+          "preview": {
+            "bytes": 22614,
+            "sha256": "220e9d302f8bf6f0629d687b2823c10516652fe9b02982801bcda2b66a7c68d0"
+          },
+          "pose": {
+            "t": 5.416666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 66,
+          "time": 5.5,
+          "renderMs": 282.9,
+          "sourceFrame": {
+            "bytes": 68341,
+            "sha256": "8c4ee1d97e78f225e511c9926ed8a9ea3ad587435df6d694de55a48fbfb26fc9"
+          },
+          "preview": {
+            "bytes": 22763,
+            "sha256": "4d2c44f077ee88e173dfe4f47851cf68a482b49c364e819b4565b6ef4b84680e"
+          },
+          "pose": {
+            "t": 5.5,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 67,
+          "time": 5.583333333333333,
+          "renderMs": 306.1,
+          "sourceFrame": {
+            "bytes": 68988,
+            "sha256": "fab91255d7a5055cc8ba9eaeec22ba3b93c9406a3c6922ead3a5856d33472fda"
+          },
+          "preview": {
+            "bytes": 23145,
+            "sha256": "256a08c0884023c28ba19c2666b276d40e213a36370ad1969f9b5d147e38293c"
+          },
+          "pose": {
+            "t": 5.583333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.3015151901651,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.05656854249492361,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 68,
+          "time": 5.666666666666667,
+          "renderMs": 258.6,
+          "sourceFrame": {
+            "bytes": 69320,
+            "sha256": "c4363a6510c9c0bb91102eac4aad321a22cf2699829bfb3fce8c614d0d70b492"
+          },
+          "preview": {
+            "bytes": 23586,
+            "sha256": "b1b23a9bb0b9df92fde5f9dfcf536aef749b1e688c9d0f1b6170935560df2b0c"
+          },
+          "pose": {
+            "t": 5.666666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 758,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.08,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 69,
+          "time": 5.75,
+          "renderMs": 291.5,
+          "sourceFrame": {
+            "bytes": 69205,
+            "sha256": "f8fc6be1f65cf41324488c2e189a5cc6a1e4e6c335fe6248c553c8eec0cc1921"
+          },
+          "preview": {
+            "bytes": 23249,
+            "sha256": "4752b1c72d0dab02c5962af9f2fd87296f7158f469a3ac19da43b60a209165e9"
+          },
+          "pose": {
+            "t": 5.75,
+            "shot": 3,
+            "x": 1030,
+            "y": 770.301515190165,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -0.05656854249492389,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 70,
+          "time": 5.833333333333333,
+          "renderMs": 287.3,
+          "sourceFrame": {
+            "bytes": 68606,
+            "sha256": "2a938323a37eb9c6bdd95ba72dfb0e55d9c959920532156278f6347cb7cb6713"
+          },
+          "preview": {
+            "bytes": 22843,
+            "sha256": "1e1102c1e9b84194f91705071be4701f76cde1d15fc4d5caa0e83b765481ad2c"
+          },
+          "pose": {
+            "t": 5.833333333333333,
+            "shot": 3,
+            "x": 1030,
+            "y": 799.9999999999998,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": -3.527973150562919e-16,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        },
+        {
+          "index": 71,
+          "time": 5.916666666666667,
+          "renderMs": 297.9,
+          "sourceFrame": {
+            "bytes": 68643,
+            "sha256": "d5e00bdf501ca91f8234d66b9cf2d292d2e0309131532dfdd42603c7ca1ce2b4"
+          },
+          "preview": {
+            "bytes": 22769,
+            "sha256": "860de055a78cb709e4a0fa07b95ad3f543635b26995c7f9ed5fbe354ac178302"
+          },
+          "pose": {
+            "t": 5.916666666666667,
+            "shot": 3,
+            "x": 1030,
+            "y": 800,
+            "walk": 0,
+            "aL": 1.55,
+            "aR": 1.55,
+            "sq": 0,
+            "press": 0,
+            "light": 1,
+            "on": true,
+            "eyes": "happy",
+            "mouth": "smile"
+          }
+        }
+      ],
+      "totalMs": 23436,
+      "video": "web/assets/example/flat.mp4",
+      "videoBytes": 540710
+    }
+  },
+  "layers": [
+    {
+      "layer": "outline",
+      "time": 3.75,
+      "renderMs": 104,
+      "bytes": 36467,
+      "sha256": "8659540449a3fecd8e33d99fc689ce5c9eba00707f6e6685fb4dca98953d9e85"
+    },
+    {
+      "layer": "flat",
+      "time": 3.75,
+      "renderMs": 310,
+      "bytes": 25033,
+      "sha256": "24a780bc173d7adfd8d89e31942b32d7aabea83f593e6e9adb000e09bdc1265f"
+    },
+    {
+      "layer": "brush",
+      "time": 3.75,
+      "renderMs": 1535,
+      "bytes": 26874,
+      "sha256": "39f0cc8fde61da3a05ed1d8e2cceb3f7c675607bfd5cd6f5806452529852987f"
+    },
+    {
+      "layer": "paper",
+      "time": 3.75,
+      "renderMs": 1414,
+      "bytes": 61228,
+      "sha256": "ce0aa5a5ec725847cc7befcd597b1ff9d565650475cb529c422cd3823300af21"
+    }
+  ],
+  "gpu": {
+    "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A788) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+  },
+  "sourceHash": "ac07c8cbc752550ac5f2ab18153b88ae921d4c16b32687f269f70127bdeffa15",
+  "determinism": {
+    "time": 3.75,
+    "identical": true
+  },
+  "completedAt": "2026-10-04T06:06:52.623Z"
+}

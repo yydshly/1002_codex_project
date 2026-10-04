@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "startedAt": "2026-10-04T06:54:12.547Z",
+  "url": "http://localhost:4191/projects/008-pdoom-video/elements.html",
+  "checks": [
+    {
+      "name": "Fourteen source-rendered previews have recorded hashes",
+      "status": "passed",
+      "items": 14,
+      "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A788) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "name": "Catalog filters, details, original sources and dependency guidance",
+      "status": "passed",
+      "characters": 8,
+      "otherElements": 6,
+      "sourceLinks": 9
+    },
+    {
+      "name": "Preparation instructions and model handoff cover the full pipeline",
+      "status": "passed",
+      "preparationSteps": 4,
+      "drivingStages": 4
+    },
+    {
+      "name": "Real upstream controller starts and returns a rendered frame",
+      "status": "passed",
+      "width": 1920,
+      "height": 1080,
+      "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A788) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "clawd": "function",
+      "researcher": "function",
+      "move": "function"
+    },
+    {
+      "name": "Pose, color, face, hat and time change actual rendered pixels",
+      "status": "passed",
+      "parameters": [
+        "arm",
+        "color",
+        "eyes",
+        "hat",
+        "x",
+        "size",
+        "motion",
+        "time"
+      ],
+      "actualFramesDiffer": true
+    },
+    {
+      "name": "Researcher uses its original interface and updates the model brief",
+      "status": "passed",
+      "actor": "researcher",
+      "eyes": "star",
+      "accessory": "bowtie",
+      "adaptedMotions": [
+        "spin",
+        "run"
+      ]
+    },
+    {
+      "name": "Rendered pixels repeat for an identical parameter set",
+      "status": "passed",
+      "identical": true
+    },
+    {
+      "name": "Desktop and mobile layouts include the real controller",
+      "status": "passed",
+      "viewports": [
+        1440,
+        375
+      ]
+    },
+    {
+      "name": "No browser or resource errors",
+      "status": "passed",
+      "errors": 0
+    }
+  ],
+  "diagnostics": {
+    "pageErrors": [],
+    "consoleErrors": [],
+    "httpErrors": []
+  },
+  "completedAt": "2026-10-04T06:54:46.698Z"
+}

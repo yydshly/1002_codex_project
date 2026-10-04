@@ -1,0 +1,7 @@
+# Preserve source bytes used by pinned provenance and rendering hashes.
+upstream/** -text
+web/vendor/** -text
+web/*-scene.js -text
+web/overview.html -text
+web/overview.css -text
+*.mp4 binary

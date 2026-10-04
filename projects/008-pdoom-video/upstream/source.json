@@ -1,0 +1,33 @@
+{
+  "acquired": "2026-10-04",
+  "sourceDate": "2026-09-25T15:11:03Z",
+  "excluded": [
+    "assets/pdoom.mp3",
+    "legacy/"
+  ],
+  "files": [
+    "README.md",
+    "ANIMATION_GUIDE.md",
+    "STORYBOARD.md",
+    "package.json",
+    "render.mjs",
+    "studio.html",
+    "src/core.js",
+    "src/clawd.js",
+    "src/cast.js",
+    "src/props.js",
+    "src/lyrics.js",
+    "src/timeline.js",
+    "src/ch/c01_lab.js",
+    "src/ch/c02_chorus1.js",
+    "src/ch/c03_takeoff.js",
+    "src/ch/c04_chorus2.js",
+    "src/ch/c05_obsolete.js",
+    "src/ch/c06_chorus3.js",
+    "src/ch/c07_scale.js",
+    "src/ch/c08_chorus4.js",
+    "src/ch/c09_finale.js"
+  ],
+  "commit": "fa546a38092e75f2b079e6a86d6abc54dd525d17",
+  "repository": "https://github.com/JohnHeibel/PDoomVideo"
+}
