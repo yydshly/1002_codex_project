@@ -1,0 +1,429 @@
+{
+  "checkedAt": "2026-10-04",
+  "method": "Codex in-app browser CUA; rendered SVG bounds, interactive controls, responsive layouts and screenshots",
+  "researchScope": "Local presentation only; Ix, ArangoDB and Compass were not installed or run",
+  "baseUrl": "http://127.0.0.1:4194/projects/010-ix/#map",
+  "diagram": {
+    "width": 1800,
+    "height": 4360,
+    "textCount": 206,
+    "topicViews": 9,
+    "topicSections": 8,
+    "svg": "assets/ix-understanding.svg",
+    "png": "assets/ix-understanding.png",
+    "renderer": "sharp using existing bundled module"
+  },
+  "checks": [
+    {
+      "cardOutside": [],
+      "name": "SVG canvas and card text bounds",
+      "outside": [],
+      "passed": true,
+      "textCount": 206
+    },
+    {
+      "activeCount": 1,
+      "actualViewBox": "0 0 1800 4360",
+      "expectedViewBox": "0 0 1800 4360",
+      "name": "Diagram topic: 完整总览",
+      "passed": true,
+      "textCount": 206
+    },
+    {
+      "activeCount": 1,
+      "actualViewBox": "0 0 1800 485",
+      "expectedViewBox": "0 0 1800 485",
+      "name": "Diagram topic: 定位与目标",
+      "passed": true,
+      "textCount": 206
+    },
+    {
+      "activeCount": 1,
+      "actualViewBox": "0 475 1800 665",
+      "expectedViewBox": "0 475 1800 665",
+      "name": "Diagram topic: 底层原理",
+      "passed": true,
+      "textCount": 206
+    },
+    {
+      "activeCount": 1,
+      "actualViewBox": "0 1140 1800 440",
+      "expectedViewBox": "0 1140 1800 440",
+      "name": "Diagram topic: 当前能力",
+      "passed": true,
+      "textCount": 206
+    },
+    {
+      "activeCount": 1,
+      "actualViewBox": "0 1580 1800 450",
+      "expectedViewBox": "0 1580 1800 450",
+      "name": "Diagram topic: 展示效果",
+      "passed": true,
+      "textCount": 206
+    },
+    {
+      "activeCount": 1,
+      "actualViewBox": "0 2030 1800 370",
+      "expectedViewBox": "0 2030 1800 370",
+      "name": "Diagram topic: 问题与性能",
+      "passed": true,
+      "textCount": 206
+    },
+    {
+      "activeCount": 1,
+      "actualViewBox": "0 2400 1800 385",
+      "expectedViewBox": "0 2400 1800 385",
+      "name": "Diagram topic: 扩展价值",
+      "passed": true,
+      "textCount": 206
+    },
+    {
+      "activeCount": 1,
+      "actualViewBox": "0 2785 1800 915",
+      "expectedViewBox": "0 2785 1800 915",
+      "name": "Diagram topic: 产品方向",
+      "passed": true,
+      "textCount": 206
+    },
+    {
+      "activeCount": 1,
+      "actualViewBox": "0 3700 1800 660",
+      "expectedViewBox": "0 3700 1800 660",
+      "name": "Diagram topic: 边界与证据",
+      "passed": true,
+      "textCount": 206
+    },
+    {
+      "actualWidth": 1800,
+      "expectedWidth": 1800,
+      "name": "Diagram zoom 1",
+      "passed": true
+    },
+    {
+      "actualWidth": 2250,
+      "expectedWidth": 2250,
+      "name": "Diagram zoom 1.25",
+      "passed": true
+    },
+    {
+      "actualWidth": 1200,
+      "expectedWidth": 1200,
+      "name": "Diagram zoom read",
+      "passed": true
+    },
+    {
+      "actualWidth": 1125,
+      "expectedWidth": 1125,
+      "name": "Diagram zoom fit",
+      "passed": true
+    },
+    {
+      "name": "Keyboard horizontal diagram scrolling",
+      "passed": true,
+      "scrollLeft": 2
+    },
+    {
+      "box": "0 0 1800 4360",
+      "name": "Reset diagram",
+      "passed": true,
+      "scale": "fit"
+    },
+    {
+      "name": "Text guide 1",
+      "open": true,
+      "passed": true,
+      "productRows": null,
+      "textLength": 173
+    },
+    {
+      "name": "Text guide 2",
+      "open": true,
+      "passed": true,
+      "productRows": null,
+      "textLength": 588
+    },
+    {
+      "name": "Text guide 3",
+      "open": true,
+      "passed": true,
+      "productRows": null,
+      "textLength": 305
+    },
+    {
+      "name": "Text guide 4",
+      "open": true,
+      "passed": true,
+      "productRows": null,
+      "textLength": 233
+    },
+    {
+      "name": "Text guide 5",
+      "open": true,
+      "passed": true,
+      "productRows": null,
+      "textLength": 304
+    },
+    {
+      "name": "Text guide 6",
+      "open": true,
+      "passed": true,
+      "productRows": null,
+      "textLength": 271
+    },
+    {
+      "name": "Text guide 7",
+      "open": true,
+      "passed": true,
+      "productRows": 8,
+      "textLength": 739
+    },
+    {
+      "name": "Text guide 8",
+      "open": true,
+      "passed": true,
+      "productRows": null,
+      "textLength": 303
+    },
+    {
+      "command": "ix explain verify_token",
+      "name": "Existing teaching query 解释实体",
+      "passed": true,
+      "resultCount": 5
+    },
+    {
+      "command": "ix callers verify_token",
+      "name": "Existing teaching query 谁调用它",
+      "passed": true,
+      "resultCount": 3
+    },
+    {
+      "command": "ix callees verify_token",
+      "name": "Existing teaching query 它调用谁",
+      "passed": true,
+      "resultCount": 1
+    },
+    {
+      "command": "ix trace verify_token",
+      "name": "Existing teaching query 关联调用链",
+      "passed": true,
+      "resultCount": 4
+    },
+    {
+      "command": "ix impact load_public_key",
+      "name": "Existing teaching query 修改影响",
+      "passed": true,
+      "resultCount": 4
+    },
+    {
+      "clientWidth": 305,
+      "height": 740,
+      "mapClientWidth": 254,
+      "mapScrollWidth": 1200,
+      "name": "Responsive layout 320",
+      "passed": true,
+      "scale": "read",
+      "scrollWidth": 305,
+      "tableClientWidth": 237,
+      "tableScrollWidth": 620,
+      "width": 320
+    },
+    {
+      "clientWidth": 375,
+      "height": 844,
+      "mapClientWidth": 324,
+      "mapScrollWidth": 1200,
+      "name": "Responsive layout 390",
+      "passed": true,
+      "scale": "read",
+      "scrollWidth": 375,
+      "tableClientWidth": 307,
+      "tableScrollWidth": 620,
+      "width": 390
+    },
+    {
+      "clientWidth": 753,
+      "height": 1024,
+      "mapClientWidth": 688,
+      "mapScrollWidth": 1200,
+      "name": "Responsive layout 768",
+      "passed": true,
+      "scale": "read",
+      "scrollWidth": 753,
+      "tableClientWidth": 671,
+      "tableScrollWidth": 671,
+      "width": 768
+    },
+    {
+      "clientWidth": 1425,
+      "height": 1000,
+      "mapClientWidth": 1110,
+      "mapScrollWidth": 1110,
+      "name": "Responsive layout 1440",
+      "passed": true,
+      "scale": "fit",
+      "scrollWidth": 1425,
+      "tableClientWidth": 1093,
+      "tableScrollWidth": 1093,
+      "width": 1440
+    },
+    {
+      "duplicates": [],
+      "missing": [],
+      "name": "Internal anchors, unique IDs and source entries",
+      "passed": true,
+      "sourceCount": 23
+    },
+    {
+      "name": "Browser error logs",
+      "count": 0,
+      "passed": true
+    },
+    {
+      "name": "Seven local HTTP resources",
+      "passed": true
+    },
+    {
+      "name": "PNG dimensions and export copies",
+      "passed": true
+    }
+  ],
+  "viewports": [
+    {
+      "clientWidth": 305,
+      "height": 740,
+      "mapClientWidth": 254,
+      "mapScrollWidth": 1200,
+      "name": "Responsive layout 320",
+      "passed": true,
+      "scale": "read",
+      "scrollWidth": 305,
+      "tableClientWidth": 237,
+      "tableScrollWidth": 620,
+      "width": 320
+    },
+    {
+      "clientWidth": 375,
+      "height": 844,
+      "mapClientWidth": 324,
+      "mapScrollWidth": 1200,
+      "name": "Responsive layout 390",
+      "passed": true,
+      "scale": "read",
+      "scrollWidth": 375,
+      "tableClientWidth": 307,
+      "tableScrollWidth": 620,
+      "width": 390
+    },
+    {
+      "clientWidth": 753,
+      "height": 1024,
+      "mapClientWidth": 688,
+      "mapScrollWidth": 1200,
+      "name": "Responsive layout 768",
+      "passed": true,
+      "scale": "read",
+      "scrollWidth": 753,
+      "tableClientWidth": 671,
+      "tableScrollWidth": 671,
+      "width": 768
+    },
+    {
+      "clientWidth": 1425,
+      "height": 1000,
+      "mapClientWidth": 1110,
+      "mapScrollWidth": 1110,
+      "name": "Responsive layout 1440",
+      "passed": true,
+      "scale": "fit",
+      "scrollWidth": 1425,
+      "tableClientWidth": 1093,
+      "tableScrollWidth": 1093,
+      "width": 1440
+    }
+  ],
+  "screenshots": [
+    "assets/verification/mobile-complete-summary.png",
+    "assets/verification/desktop-complete-principle.png",
+    "assets/verification/desktop-complete-products.png",
+    "assets/verification/complete-summary-final.png"
+  ],
+  "pageErrors": [],
+  "passed": true,
+  "limitations": [
+    "Unpinned upstream main; source may change and browsing may use caches",
+    "No Ix parsing, correctness, performance or token saving measurements",
+    "Products are hypotheses; no market or revenue validation",
+    "External link presence is checked; not every external URL was freshly status-checked"
+  ],
+  "resources": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "file": "styles.css",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "file": "app.js",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "file": "favicon.svg",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "file": "assets/ix-understanding.svg",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "file": "assets/ix-understanding.png",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "file": "assets/ix-map-views.json",
+      "status": 200,
+      "passed": true
+    }
+  ],
+  "exportChecks": {
+    "png": {
+      "width": 1800,
+      "height": 4360
+    },
+    "matches": [
+      {
+        "extension": "svg",
+        "bytes": 35041,
+        "equal": true
+      },
+      {
+        "extension": "png",
+        "bytes": 1173793,
+        "equal": true
+      }
+    ]
+  },
+  "buildChecks": {
+    "commands": [
+      "node scripts/catalog.mjs sync",
+      "node scripts/catalog.mjs build",
+      "node scripts/catalog.mjs check",
+      "node --check projects/010-ix/web/app.js"
+    ],
+    "passed": true,
+    "projectCount": 12
+  },
+  "finalDisplay": {
+    "url": "http://127.0.0.1:4194/projects/010-ix/#map",
+    "topic": "完整总览",
+    "temporaryViewportReset": true,
+    "browserVisible": true
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-10-04T09:22:30.553Z",
+  "nodeVersion": "v22.15.0",
+  "scope": "Actual Node.js example execution; Ix CLI and Docker are unavailable and were not installed.",
+  "command": "node app.js <amount>",
+  "before": {
+    "threshold": 100,
+    "runs": [
+      {
+        "goods": 79,
+        "shipping": 10,
+        "payable": 89
+      },
+      {
+        "goods": 80,
+        "shipping": 10,
+        "payable": 90
+      },
+      {
+        "goods": 100,
+        "shipping": 0,
+        "payable": 100
+      }
+    ]
+  },
+  "after": {
+    "threshold": 80,
+    "runs": [
+      {
+        "goods": 79,
+        "shipping": 10,
+        "payable": 89
+      },
+      {
+        "goods": 80,
+        "shipping": 0,
+        "payable": 80
+      },
+      {
+        "goods": 100,
+        "shipping": 0,
+        "payable": 100
+      }
+    ]
+  },
+  "shippingSourceRestored": true,
+  "passed": true,
+  "expectedStaticRelations": [
+    {
+      "from": "submitOrder",
+      "type": "CALLS",
+      "to": "checkoutOrder"
+    },
+    {
+      "from": "checkoutOrder",
+      "type": "CALLS",
+      "to": "calculateShipping"
+    }
+  ],
+  "expectedRelationsScope": "Derived from explicit calls in local source; not queried from Ix"
+}

@@ -1,0 +1,228 @@
+{
+  "project": "Ix",
+  "accessDate": "2026-10-04",
+  "timezone": "Asia/Shanghai",
+  "ref": "main",
+  "commit": null,
+  "notes": "主来源为上游公开文档和源码。main 可变化，网络浏览可能有缓存；没有锁定固定提交，也没有运行验证。",
+  "sources": [
+    {
+      "id": "readme",
+      "title": "Ix README",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/README.md",
+      "supports": ["项目定位", "Map / Structure / Retrieve / Remember", "CLI 与 Compass 入口", "语言支持声明", "内部 token 测量声明"],
+      "kind": "upstream_documentation"
+    },
+    {
+      "id": "commands",
+      "title": "Ix 命令参考",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/skills/ix/references/commands.md",
+      "supports": ["CLI 使用", "有限查询建议", "context", "query 弃用", "savings 估算与计数范围"],
+      "kind": "upstream_documentation"
+    },
+    {
+      "id": "oss-registration",
+      "title": "OSS 与 Pro 命令注册",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/ix-cli/src/cli/register/oss.ts",
+      "supports": ["OSS 命令存在", "高级隐藏命令", "Pro stub 与独立包边界"],
+      "kind": "upstream_source"
+    },
+    {
+      "id": "mcp-server",
+      "title": "MCP server 实现",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/ix-cli/src/mcp/server.ts",
+      "supports": ["23 个 OSS tools", "context 预算和结构", "Pro tool gating", "工具对 CLI 的适配"],
+      "kind": "upstream_source"
+    },
+    {
+      "id": "mcp-docs",
+      "title": "MCP 文档",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/docs/mcp.md",
+      "supports": ["stdio server", "客户端注册", "进程隔离"],
+      "kind": "upstream_documentation"
+    },
+    {
+      "id": "mcp-consolidation",
+      "title": "MCP 与宿主插件整合说明",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/docs/mcp-plugin-consolidation.md",
+      "supports": ["MCP 不承接 hooks 和 skills", "query tool 排除", "Pro 工具仅在加载后注册"],
+      "kind": "upstream_documentation"
+    },
+    {
+      "id": "parser-queries",
+      "title": "Tree-sitter 语法查询",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/core-ingestion/src/queries.ts",
+      "supports": ["语法结构提取"],
+      "kind": "upstream_source"
+    },
+    {
+      "id": "parser-resolver",
+      "title": "提取与关系解析",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/core-ingestion/src/index.ts",
+      "evidenceUrl": "https://github.com/ix-infrastructure/Ix/blob/main/core-ingestion/src/index.ts#L3416",
+      "supports": ["导入与一跳再导出规则", "同语言全局唯一候选", "commodity / 歧义跳过", "规则 confidence 非实测准确率"],
+      "kind": "upstream_source"
+    },
+    {
+      "id": "patch-builder",
+      "title": "图补丁与身份构造",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/core-ingestion/src/patch-builder.ts",
+      "evidenceUrl": "https://github.com/ix-infrastructure/Ix/blob/main/core-ingestion/src/patch-builder.ts#L6",
+      "supports": ["symbol ID", "patch ID", "chunk 行位置身份", "replaces", "未逐边保存 resolver confidence"],
+      "kind": "upstream_source"
+    },
+    {
+      "id": "ingestion",
+      "title": "CLI 增量摄取",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/ix-cli/src/cli/commands/ingest.ts",
+      "evidenceUrl": "https://github.com/ix-infrastructure/Ix/blob/main/ix-cli/src/cli/commands/ingest.ts#L1062",
+      "supports": ["mtime 与 hash", "删除清理", "干净运行保存基线", "stitch admission"],
+      "kind": "upstream_source"
+    },
+    {
+      "id": "http-api",
+      "title": "HTTP API 与图数据模型",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/docs/api/README.md",
+      "supports": ["来源字段", "图谱 revisions", "stitch", "semantic 云服务依赖", "短 ID 歧义", "本地 proxy 范围"],
+      "kind": "upstream_documentation",
+      "caveat": "API 出现端点不等于 OSS CLI / MCP 默认开放；需结合注册和后端能力。reset 说明与较新 README 存在版本差异。"
+    },
+    {
+      "id": "compose",
+      "title": "独立部署 Compose",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/docker-compose.standalone.yml",
+      "supports": ["ArangoDB", "公开 memory-layer 镜像", "named volume", "loopback 端口", "镜像固定与 latest 的区别"],
+      "kind": "upstream_source"
+    },
+    {
+      "id": "contributing",
+      "title": "贡献说明与私有后端边界",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/CONTRIBUTING.md",
+      "evidenceUrl": "https://github.com/ix-infrastructure/Ix/blob/main/CONTRIBUTING.md#backend-development",
+      "supports": ["Node 22+ 和 Docker", "Scala backend 在私有 Ix-memory", "公开镜像可匿名拉取", "backend artifact 不等于公开 repo"],
+      "kind": "upstream_documentation"
+    },
+    {
+      "id": "map-implementation",
+      "title": "建图编排与默认摄取模式",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/ix-cli/src/cli/commands/map.ts",
+      "supports": ["普通 map 默认 topology-only", "摄取后生成区域层级", "公开帮助描述 Louvain 文件耦合图聚类"],
+      "kind": "upstream_source",
+      "caveat": "聚类具体后端实现未公开；命令帮助描述不等于本次实测。"
+    },
+    {
+      "id": "name-resolution",
+      "title": "查询目标与同名候选解析",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/ix-cli/src/cli/resolve.ts",
+      "supports": ["名称或路径到实体 ID", "工作区范围", "候选消歧"],
+      "kind": "upstream_source"
+    },
+    {
+      "id": "callers-query",
+      "title": "调用者查询与文本回退",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/ix-cli/src/cli/commands/callers.ts",
+      "supports": ["反向 CALLS / REFERENCES 邻域", "默认一跳", "空图时可回退本地文本候选并标记来源"],
+      "kind": "upstream_source"
+    },
+    {
+      "id": "impact-query",
+      "title": "有界影响查询与风险规则",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/ix-cli/src/cli/commands/impact.ts",
+      "supports": ["默认 depth 1", "示例间接入口使用 depth 2", "图事实与规则风险描述"],
+      "kind": "upstream_source"
+    },
+    {
+      "id": "explain-pipeline",
+      "title": "CLI 结构解释流水线",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/ix-cli/src/cli/commands/explain.ts",
+      "supports": ["collectFacts", "inferRole", "inferImportance", "renderExplanation", "普通解释路径由规则与模板呈现"],
+      "kind": "upstream_source"
+    },
+    {
+      "id": "context-pipeline",
+      "title": "上下文组合与预算裁剪",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/ix-cli/src/cli/commands/context.ts",
+      "supports": ["按 ID 获取图上下文", "可补本地文本关联及 Git 共变", "确定性排序和预算限制"],
+      "kind": "upstream_source"
+    },
+    {
+      "id": "http-client",
+      "title": "共享 HTTP 客户端",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/ix-cli/src/client/api.ts",
+      "supports": ["patch 与 bulk 提交", "expand 的方向、谓词和跳数", "contextForNode 使用实体 ID slice"],
+      "kind": "upstream_source"
+    },
+    {
+      "id": "mcp-runner",
+      "title": "MCP 对 CLI 实现的复用",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/ix-cli/src/mcp/runner.ts",
+      "supports": ["默认进程内执行 Commander 命令树", "捕获输出", "可选子进程模式"],
+      "kind": "upstream_source"
+    },
+    {
+      "id": "trace-query",
+      "title": "静态路径遍历",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/ix-cli/src/cli/commands/trace.ts",
+      "supports": ["按方向、关系类型和深度遍历", "静态路径不等于运行请求 Trace"],
+      "kind": "upstream_source"
+    },
+    {
+      "id": "cpg-specification",
+      "title": "Joern Code Property Graph 规范",
+      "url": "https://cpg.joern.io/",
+      "supports": ["构图通用思路", "语法、控制流、数据流等扩展参考"],
+      "kind": "external_primary_reference",
+      "caveat": "不作为 Ix 已具备完整 CPG 分析的证据。"
+    },
+    {
+      "id": "opentelemetry-traces",
+      "title": "OpenTelemetry Traces",
+      "url": "https://opentelemetry.io/docs/concepts/signals/traces/",
+      "supports": ["运行 Trace 与 span", "连接运行证据的扩展参考"],
+      "kind": "external_primary_reference",
+      "caveat": "尚未构建或运行 Ix 集成。"
+    },
+    {
+      "id": "node-profiling",
+      "title": "Node.js Profiling",
+      "url": "https://nodejs.org/learn/getting-started/profiling",
+      "supports": ["CPU 运行采样", "性能诊断需要运行证据"],
+      "kind": "external_primary_reference"
+    },
+    {
+      "id": "sourcegraph-batch-changes",
+      "title": "Sourcegraph Agentic Batch Changes",
+      "url": "https://sourcegraph.com/docs/agentic-batch-changes",
+      "supports": ["相邻产品覆盖代码研究与跨仓库修改"],
+      "kind": "adjacent_product_official_documentation"
+    },
+    {
+      "id": "greptile-introduction",
+      "title": "Greptile Introduction",
+      "url": "https://www.greptile.com/docs/introduction",
+      "supports": ["相邻产品覆盖代码上下文与 PR 审查"],
+      "kind": "adjacent_product_official_documentation"
+    },
+    {
+      "id": "sealights",
+      "title": "Tricentis SeaLights",
+      "url": "https://www.tricentis.com/products/quality-intelligence-sealights",
+      "supports": ["相邻产品覆盖测试影响与覆盖分析"],
+      "kind": "adjacent_product_official_documentation"
+    },
+    {
+      "id": "pact-can-i-deploy",
+      "title": "Pact Broker can-i-deploy",
+      "url": "https://docs.pact.io/pact_broker/can_i_deploy",
+      "supports": ["相邻产品覆盖消费者与提供者的版本兼容证据"],
+      "kind": "adjacent_product_official_documentation"
+    },
+    {
+      "id": "license",
+      "title": "公开仓库许可证",
+      "url": "https://github.com/ix-infrastructure/Ix/blob/main/LICENSE",
+      "supports": ["Apache-2.0"],
+      "kind": "upstream_license"
+    }
+  ]
+}

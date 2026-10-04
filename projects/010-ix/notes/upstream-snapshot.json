@@ -1,0 +1,30 @@
+{
+  "project": "Ix",
+  "source": "https://github.com/ix-infrastructure/Ix",
+  "accessDate": "2026-10-04",
+  "timezone": "Asia/Shanghai",
+  "branch": "main",
+  "commit": null,
+  "commitStatus": "未获得可核对的 commit SHA；来源链接指向可变 main，不构成固定提交快照。",
+  "observedLicense": "Apache-2.0（公开仓库 LICENSE）",
+  "licenseScope": "未据此推定私有 backend 或独立 Pro 包的授权条款。",
+  "researchMethod": "公开 README、文档和关键客户端/解析源码交叉核对；浏览结果可能存在缓存。",
+  "runtimeValidation": {
+    "ixInstalled": false,
+    "backendStarted": false,
+    "repositoryMapped": false,
+    "mcpConfigured": false,
+    "proConfigured": false,
+    "cloudSemanticConfigured": false,
+    "performanceMeasured": false,
+    "relationshipAccuracyMeasured": false
+  },
+  "localArtifacts": {
+    "readme": "../README.md",
+    "research": "research.md",
+    "web": "../web/index.html",
+    "cover": "../assets/ix-understanding.svg",
+    "presentationData": "中文静态页与示意交互使用自编数据，不是真实 Ix 输出或上游应用截图。"
+  },
+  "sourceList": "sources.json"
+}

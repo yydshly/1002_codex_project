@@ -1,0 +1,74 @@
+[
+  {
+    "id": "all",
+    "label": "完整总览",
+    "x": 0,
+    "y": 0,
+    "width": 1800,
+    "height": 4360
+  },
+  {
+    "id": "position",
+    "label": "定位与目标",
+    "x": 0,
+    "y": 0,
+    "width": 1800,
+    "height": 485
+  },
+  {
+    "id": "principle",
+    "label": "底层原理",
+    "x": 0,
+    "y": 475,
+    "width": 1800,
+    "height": 665
+  },
+  {
+    "id": "capability",
+    "label": "当前能力",
+    "x": 0,
+    "y": 1140,
+    "width": 1800,
+    "height": 440
+  },
+  {
+    "id": "effect",
+    "label": "展示效果",
+    "x": 0,
+    "y": 1580,
+    "width": 1800,
+    "height": 450
+  },
+  {
+    "id": "diagnosis",
+    "label": "问题与性能",
+    "x": 0,
+    "y": 2030,
+    "width": 1800,
+    "height": 370
+  },
+  {
+    "id": "extension",
+    "label": "扩展价值",
+    "x": 0,
+    "y": 2400,
+    "width": 1800,
+    "height": 385
+  },
+  {
+    "id": "product",
+    "label": "产品方向",
+    "x": 0,
+    "y": 2785,
+    "width": 1800,
+    "height": 915
+  },
+  {
+    "id": "boundary",
+    "label": "边界与证据",
+    "x": 0,
+    "y": 3700,
+    "width": 1800,
+    "height": 660
+  }
+]

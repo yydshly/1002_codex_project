@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-10-04",
+  "method": "Codex in-app browser (CUA) interactive and responsive verification; local HTTP resource checks; sharp PNG rasterization",
+  "researchScope": "Local presentation only; Ix itself was not run.",
+  "baseUrl": "http://127.0.0.1:4194/projects/010-ix/",
+  "render": {
+    "width": 1600,
+    "height": 1800,
+    "scale": 1,
+    "renderer": "sharp; final SVG text bounds also inspected in the in-app browser",
+    "png": "assets/ix-understanding.png",
+    "svg": "assets/ix-understanding.svg",
+    "textCount": 95,
+    "outOfBounds": []
+  },
+  "checks": [
+    {
+      "name": "SVG text stays inside 1600 × 1800 canvas",
+      "passed": true,
+      "width": 1600,
+      "height": 1800,
+      "textCount": 95,
+      "outOfBounds": []
+    },
+    { "name": "Default explain includes target and four adjacent functions", "passed": true, "actual": ["verify_token", "login", "refresh_session", "test_token", "load_public_key"] },
+    { "name": "callers verify_token returns exactly three callers", "passed": true, "actual": ["login", "refresh_session", "test_token"], "highlightedEdges": 3 },
+    { "name": "callees verify_token returns load_public_key", "passed": true, "actual": ["load_public_key"], "highlightedEdges": 1 },
+    { "name": "trace verify_token includes upstream and downstream sample nodes", "passed": true, "actual": ["login", "refresh_session", "test_token", "load_public_key"] },
+    { "name": "impact load_public_key traverses direct and indirect reverse CALLS sample edges", "passed": true, "actual": ["login", "refresh_session", "test_token", "verify_token"], "highlightedEdges": 4, "scope": "Teaching simplification; not a reproduction of upstream impact algorithm" },
+    { "name": "callers login displays explicit empty result", "passed": true, "actual": "示例图中无相关节点" },
+    { "name": "SVG node click synchronizes the target select", "passed": true, "actual": "load_public_key" },
+    { "name": "Enter and Space activate SVG nodes", "passed": true, "actual": ["verify_token", "refresh_session"] },
+    { "name": "Command copy reports success", "passed": true, "actual": "命令已复制；请在安装并映射 Ix 后使用。" },
+    { "name": "Sample source and runtime-scope FAQ expand and collapse", "passed": true },
+    { "name": "All internal anchors resolve", "passed": true, "missingAnchors": [] },
+    { "name": "Eleven primary-source entries are present", "passed": true, "count": 11, "scope": "Link presence and research source review; not a fresh status check of every external URL" },
+    { "name": "Lazy overview image loads after navigating to its section", "passed": true, "naturalWidth": 1600, "naturalHeight": 1800 },
+    { "name": "All six local page resources return HTTP 200", "passed": true, "resources": ["index.html", "styles.css", "app.js", "favicon.svg", "assets/ix-understanding.svg", "assets/ix-understanding.png"] },
+    { "name": "Four responsive widths have no document horizontal overflow", "passed": true },
+    { "name": "No error-level browser console logs were observed", "passed": true, "count": 0 },
+    { "name": "Final static hub generation and catalog/README check pass", "passed": true, "commands": ["npm run sync", "node scripts/catalog.mjs build", "npm run check"], "projectCount": 12 }
+  ],
+  "viewports": [
+    { "width": 320, "height": 740, "documentScrollWidth": 305, "graphClientWidth": 269, "graphScrollWidth": 480 },
+    { "width": 390, "height": 844, "documentScrollWidth": 375, "graphClientWidth": 339, "graphScrollWidth": 480 },
+    { "width": 768, "height": 1024, "documentScrollWidth": 753 },
+    { "width": 1440, "height": 1000, "documentScrollWidth": 1425 }
+  ],
+  "screenshots": ["assets/verification/desktop-overview.jpg", "assets/verification/desktop-explorer.jpg", "assets/verification/mobile-390.jpg"],
+  "pageErrors": [],
+  "resourceFailures": [],
+  "passed": true,
+  "mode": "presentation-verification",
+  "limitations": ["Ix backend was not installed or run", "No upstream accuracy, token saving, or performance measurement", "Unpinned upstream main research", "Browser console errors were inspected; network completeness is limited to the six explicit resource checks"]
+}
