@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2180" viewBox="0 0 1600 2180" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">shadcn-admin 能力与复用总览</title>
+  <desc id="svg-desc">shadcn-admin 提供预先写好的后台前端页面、组件和交互，源码可以修改。图中说明八类页面、通用底座、前端与后端数据库的关系、业务适配步骤、后续价值与能力边界。固定指预写的页面结构、演示字段和 mock 数据，不表示代码无法修改。聊天收发、完整业务后端和权限等需要自行实现。研究核对日期为 2026 年 10 月 4 日。</desc>
+  <defs>
+    <style>
+      text { font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; fill: #14263f; }
+      .title { font-size: 54px; font-weight: 700; }
+      .subtitle { font-size: 28px; fill: #50647e; }
+      .section { font-size: 28px; font-weight: 700; }
+      .card-title { font-size: 25px; font-weight: 700; }
+      .body { font-size: 22px; }
+      .body-lg { font-size: 25px; }
+      .muted { fill: #526782; }
+      .blue { fill: #255fc4; }
+      .amber { fill: #9b6416; }
+      .teal { fill: #0f766e; }
+      .number { font-size: 20px; font-weight: 700; fill: #255fc4; }
+    </style>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#5b7cae"/></marker>
+  </defs>
+  <rect width="1600" height="2180" fill="#ffffff"/>
+  <rect x="64" y="52" width="256" height="36" rx="18" fill="#e9f1ff"/>
+  <text x="84" y="77" class="body blue">理解汇总 · 前端模板</text>
+  <text x="64" y="149" class="title">shadcn-admin 能力与复用总览</text>
+  <text x="64" y="197" class="subtitle">已有页面与组件 → 修改业务代码 → 接入真实服务</text>
+
+  <rect x="64" y="228" width="1472" height="132" rx="20" fill="#f4f8ff" stroke="#d8e5fc" stroke-width="2"/>
+  <text x="92" y="271" class="body-lg" font-weight="700">定位：一套预先写好的后台前端页面与组件，可修改源码，按业务适配。</text>
+  <text x="92" y="311" class="body muted">“固定”指上游已有页面结构、演示字段和 mock 数据；</text>
+  <text x="92" y="341" class="body muted">代码可以修改，现成的筛选、分页、主题等前端交互也可以运行。</text>
+
+  <text x="64" y="410" class="section">01　八类现成页面：提供界面与交互起点</text>
+
+  <g>
+    <rect x="64" y="438" width="350" height="187" rx="18" fill="#f4f8ff" stroke="#d8e5fc"/>
+    <text x="88" y="476" class="card-title blue">仪表盘</text>
+    <text x="88" y="515" class="body">统计卡片、图表、销售列表</text>
+    <text x="88" y="548" class="body muted">收入、销量等示例数据</text>
+    <text x="88" y="591" class="body amber">导出需连接业务逻辑</text>
+
+    <rect x="438" y="438" width="350" height="187" rx="18" fill="#f4f8ff" stroke="#d8e5fc"/>
+    <text x="462" y="476" class="card-title blue">任务</text>
+    <text x="462" y="515" class="body">搜索筛选、排序分页、多选</text>
+    <text x="462" y="548" class="body muted">编辑抽屉、确认弹窗</text>
+    <text x="462" y="591" class="body amber">增改删及导入导出待接</text>
+
+    <rect x="812" y="438" width="350" height="187" rx="18" fill="#f4f8ff" stroke="#d8e5fc"/>
+    <text x="836" y="476" class="card-title blue">用户</text>
+    <text x="836" y="515" class="body">用户列表、角色与状态筛选</text>
+    <text x="836" y="548" class="body muted">新增编辑、邀请删除弹窗</text>
+    <text x="836" y="591" class="body amber">保存邀请、权限需接服务</text>
+
+    <rect x="1186" y="438" width="350" height="187" rx="18" fill="#f4f8ff" stroke="#d8e5fc"/>
+    <text x="1210" y="476" class="card-title blue">聊天</text>
+    <text x="1210" y="515" class="body">联系人搜索、会话切换</text>
+    <text x="1210" y="548" class="body muted">历史消息与消息输入界面</text>
+    <text x="1210" y="591" class="body amber">发送附件通话尚未实现</text>
+
+    <rect x="64" y="645" width="350" height="187" rx="18" fill="#f4f8ff" stroke="#d8e5fc"/>
+    <text x="88" y="683" class="card-title blue">应用 Apps</text>
+    <text x="88" y="722" class="body">应用卡片、搜索筛选排序</text>
+    <text x="88" y="755" class="body muted">已连接 / 未连接状态展示</text>
+    <text x="88" y="798" class="body amber">连接与授权需接服务</text>
+
+    <rect x="438" y="645" width="350" height="187" rx="18" fill="#f4f8ff" stroke="#d8e5fc"/>
+    <text x="462" y="683" class="card-title blue">设置</text>
+    <text x="462" y="722" class="body">资料、账户、外观、通知等</text>
+    <text x="462" y="755" class="body muted">主题与字体可切换</text>
+    <text x="462" y="798" class="body amber">资料保存等需接业务接口</text>
+
+    <rect x="812" y="645" width="350" height="187" rx="18" fill="#f4f8ff" stroke="#d8e5fc"/>
+    <text x="836" y="683" class="card-title blue">认证</text>
+    <text x="836" y="722" class="body">登录注册、找回密码、验证码</text>
+    <text x="836" y="755" class="body amber">普通登录使用 mock</text>
+    <text x="836" y="798" class="body amber">Clerk 认证为局部可选集成</text>
+
+    <rect x="1186" y="645" width="350" height="187" rx="18" fill="#f4f8ff" stroke="#d8e5fc"/>
+    <text x="1210" y="683" class="card-title blue">错误页面</text>
+    <text x="1210" y="722" class="body">未登录、无权限、页面不存在</text>
+    <text x="1210" y="755" class="body muted">服务器错误、维护中</text>
+    <text x="1210" y="798" class="body muted">提供状态提示与返回入口</text>
+  </g>
+
+  <text x="64" y="884" class="section">02　通用底座：跨页面直接复用</text>
+  <rect x="64" y="910" width="1472" height="164" rx="18" fill="#f4f8ff" stroke="#d8e5fc"/>
+  <path d="M 358 932 V 1052 M 652 932 V 1052 M 946 932 V 1052 M 1240 932 V 1052" stroke="#d8e5fc" stroke-width="2"/>
+  <text x="88" y="952" class="card-title blue">布局与导航</text>
+  <text x="88" y="994" class="body">侧栏、响应式布局</text>
+  <text x="88" y="1029" class="body muted">快捷命令与页面路由</text>
+  <text x="382" y="952" class="card-title blue">外观与方向</text>
+  <text x="382" y="994" class="body">明暗主题、字体</text>
+  <text x="382" y="1029" class="body muted">RTL 从右到左布局</text>
+  <text x="676" y="952" class="card-title blue">数据表格</text>
+  <text x="676" y="994" class="body">筛选、排序、分页</text>
+  <text x="676" y="1029" class="body muted">多选、列显示控制</text>
+  <text x="970" y="952" class="card-title blue">表单与反馈</text>
+  <text x="970" y="994" class="body">输入校验、弹窗抽屉</text>
+  <text x="970" y="1029" class="body muted">菜单、提示与确认</text>
+  <text x="1264" y="952" class="card-title blue">组件与图表</text>
+  <text x="1264" y="994" class="body">按钮、卡片等 UI</text>
+  <text x="1264" y="1029" class="body muted">图表与统计展示</text>
+
+  <text x="64" y="1127" class="section">03　实现原理与数据链路</text>
+  <rect x="64" y="1154" width="1472" height="226" rx="18" fill="#fafbfd" stroke="#dfe5ed"/>
+  <text x="92" y="1196" class="body">React / TypeScript / Vite　＋　shadcn/ui / Radix / Tailwind</text>
+  <text x="92" y="1231" class="body muted">TanStack 路由 / 请求 / 表格　＋　React Hook Form / Zod 表单　＋　Recharts 图表</text>
+  <rect x="88" y="1255" width="476" height="99" rx="14" fill="#eaf2ff" stroke="#bdd3f6"/>
+  <text x="326" y="1295" text-anchor="middle" class="card-title blue">shadcn-admin 前端</text>
+  <text x="326" y="1329" text-anchor="middle" class="body muted">页面 · 组件 · 交互</text>
+  <path d="M 586 1304 H 650" fill="none" stroke="#5b7cae" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <rect x="676" y="1255" width="390" height="99" rx="14" fill="#fff8eb" stroke="#e5c78d"/>
+  <text x="871" y="1295" text-anchor="middle" class="card-title amber">业务后端 API</text>
+  <text x="871" y="1329" text-anchor="middle" class="body muted">由我们接入或实现</text>
+  <path d="M 1089 1304 H 1153" fill="none" stroke="#5b7cae" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <rect x="1178" y="1255" width="334" height="99" rx="14" fill="#fff8eb" stroke="#e5c78d"/>
+  <text x="1345" y="1295" text-anchor="middle" class="card-title amber">数据库</text>
+  <text x="1345" y="1329" text-anchor="middle" class="body muted">由我们选择与设计</text>
+
+  <text x="64" y="1434" class="section">04　业务适配：复用代码，并补齐业务规则</text>
+  <rect x="64" y="1461" width="1472" height="234" rx="18" fill="#fafbfd" stroke="#dfe5ed"/>
+  <g>
+    <circle cx="110" cy="1504" r="21" fill="#eaf2ff"/><text x="110" y="1512" text-anchor="middle" class="number">1</text>
+    <text x="143" y="1513" class="card-title">复制起点</text>
+    <text x="88" y="1557" class="body muted">整仓启动，或抽取组件</text>
+    <circle cx="476" cy="1504" r="21" fill="#eaf2ff"/><text x="476" y="1512" text-anchor="middle" class="number">2</text>
+    <text x="509" y="1513" class="card-title">修改业务</text>
+    <text x="454" y="1557" class="body muted">字段、表单规则、操作流程</text>
+    <circle cx="842" cy="1504" r="21" fill="#fff3d9"/><text x="842" y="1512" text-anchor="middle" class="number amber">3</text>
+    <text x="875" y="1513" class="card-title">连接服务</text>
+    <text x="820" y="1557" class="body muted">API、认证、权限与持久化</text>
+    <circle cx="1208" cy="1504" r="21" fill="#dff3ee"/><text x="1208" y="1512" text-anchor="middle" class="number teal">4</text>
+    <text x="1241" y="1513" class="card-title">验证上线</text>
+    <text x="1186" y="1557" class="body muted">按真实业务联调与验收</text>
+  </g>
+  <path d="M 88 1593 H 1512" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="88" y="1631" class="body" font-weight="700">例：任务页 → 订单页</text>
+  <text x="88" y="1668" class="body muted">保留表格和抽屉 → 改订单字段、状态与发货流程 → 接订单 API 和权限</text>
+
+  <text x="64" y="1748" class="section">05　对我们后期的意义，以及仍需完成的部分</text>
+  <rect x="64" y="1776" width="718" height="152" rx="18" fill="#edf9f5" stroke="#c2e6db"/>
+  <text x="88" y="1816" class="card-title teal">后期的意义</text>
+  <text x="88" y="1856" class="body">减少界面与交互开发；统一后台视觉和操作体验。</text>
+  <text x="88" y="1894" class="body">快速做原型；沉淀自己的组件、页面和业务模板。</text>
+  <rect x="818" y="1776" width="718" height="152" rx="18" fill="#fff8eb" stroke="#ecd5aa"/>
+  <text x="842" y="1816" class="card-title amber">能力边界</text>
+  <text x="842" y="1856" class="body">无完整业务后端、数据库与 RBAC 权限体系。</text>
+  <text x="842" y="1894" class="body">订单、支付、库存、聊天收发等需我们实现。</text>
+
+  <text x="64" y="1984" class="body-lg" font-weight="700">适合：需要表格、表单、统计和账户设置的业务后台。</text>
+  <text x="64" y="2025" class="body muted">采用前评估：前端技术栈是否匹配、需要修改多少流程、是否已有后端与权限。</text>
+  <circle cx="75" cy="2066" r="8" fill="#255fc4"/><text x="94" y="2074" class="body muted">已有前端 UI</text>
+  <circle cx="325" cy="2066" r="8" fill="#bf8832"/><text x="344" y="2074" class="body muted">演示 / 待接业务</text>
+  <circle cx="631" cy="2066" r="8" fill="#0f766e"/><text x="650" y="2074" class="body muted">后续价值</text>
+  <path d="M 64 2101 H 1536" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="64" y="2133" class="body muted">来源：github.com/satnaing/shadcn-admin　·　核对日期：2026-10-04</text>
+  <text x="64" y="2165" class="body muted">研究说明：本图汇总项目能力与我们的理解，非原作截图；实际业务仍需按源码逐项适配。</text>
+</svg>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="整理 shadcn-admin 的前端页面、现成交互、演示边界、实现原理、业务适配步骤和后续开发价值，并提供一张可下载的理解总览图。">
+  <title>shadcn-admin · 前端能力与业务适配研究</title>
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到研究内容</a>
+<header class="masthead">
+  <a class="brand" href="../../"><span class="brand-mark">009</span><span>项目研究库 <small>shadcn-admin</small></span></a>
+  <nav aria-label="研究目录"><a href="#modules">模块能力</a><a href="#map">一图总览</a><a href="#adapt">如何复用</a><a href="#value">后续意义</a><a href="#sources">证据来源</a></nav>
+</header>
+<main id="main">
+  <section class="intro" aria-labelledby="title">
+    <div class="eyebrow">SHADCN-ADMIN / 前端页面 · 源码复用 · 业务适配</div>
+    <div class="intro-layout">
+      <div>
+        <h1 id="title">现成的后台前端，<br><em>按我们的业务改。</em></h1>
+        <p class="lead">它提供一套预先写好的管理后台页面、组件和交互。我们复用这套代码，修改字段、规则和流程，再连接自己的后端服务。</p>
+        <div class="intro-links"><a class="primary-link" href="#map">查看理解总览图</a><a href="https://github.com/satnaing/shadcn-admin" target="_blank" rel="noopener noreferrer">shadcn-admin 仓库</a><a href="https://shadcn-admin.netlify.app/" target="_blank" rel="noopener noreferrer">上游界面演示</a></div>
+      </div>
+      <aside class="understanding" aria-label="我们的核心理解">
+        <p class="aside-label">我们最终确认的理解</p>
+        <dl>
+          <div><dt>固定的起点</dt><dd>上游已经设计好的页面结构、字段和演示流程。</dd></div>
+          <div><dt>可修改的源码</dt><dd>布局、组件、样式和操作逻辑都能调整；搜索、筛选等交互可以运行。</dd></div>
+          <div><dt>按业务适配</dt><dd>通用的是界面组件与交互模式，业务规则和服务由我们补齐。</dd></div>
+        </dl>
+      </aside>
+    </div>
+    <div class="scope-line"><span>定位：后台前端 UI 集合</span><span>8 类页面模块</span><span>前端源码可修改</span><span>核对：2026-10-04</span></div>
+    <p class="editor-note">“模板”是我们理解复用方式的便捷说法。作者将它称为可复用的 Dashboard UI 集合，并明确不将其定位为完整 starter project。这里的“固定”指预写好的起点，不代表代码不能改。<a href="#source-readme">依据：项目说明</a></p>
+  </section>
+
+  <section id="modules" class="section" aria-labelledby="modules-title">
+    <div class="section-head"><div><p class="eyebrow">01 / 支持哪些模块</p><h2 id="modules-title">先看界面，再看操作完成到哪里。</h2></div><p>页面存在、前端交互可用、业务服务接通，是三个不同层次。</p></div>
+    <div class="legend" aria-label="能力状态说明"><span class="label ready">前端可用</span><span>已有浏览器内交互</span><span class="label demo">演示流程</span><span>样例数据或展示提交结果</span><span class="label service">待接服务</span><span>真实业务需要开发</span></div>
+    <div class="module-grid">
+      <article class="module"><div class="module-heading"><span class="module-number">01</span><h3>仪表盘 <small>Dashboard</small></h3></div><p class="module-use">复用统计与数据展示页面。</p><ul><li>收入、订阅、销量、活跃人数等统计卡片。</li><li>月度柱状图、最近销售记录。</li><li>流量分析：点击、访客、跳出率、访问时长、来源与设备。</li><li>概览与分析标签页切换，响应式排版。</li></ul><p class="boundary"><span class="label demo">演示流程</span>统计值为本地示例，部分图表使用随机数据；Download 未实现导出，Reports / Notifications 标签禁用。</p><a class="evidence" href="#source-dashboard">查看仪表盘证据</a></article>
+      <article class="module"><div class="module-heading"><span class="module-number">02</span><h3>任务 <small>Tasks</small></h3></div><p class="module-use">复用列表管理与表单编辑模式。</p><ul><li>按编号、标题搜索，按状态、优先级筛选。</li><li>排序、分页、多选、显示或隐藏列。</li><li>筛选与分页同步 URL，便于保留当前列表条件。</li><li>创建 / 编辑抽屉、删除确认、CSV 导入界面及批量操作入口。</li></ul><p class="boundary"><span class="label ready">前端可用</span>表格交互已经实现。<span class="label demo">演示流程</span>创建、编辑只展示提交结果，批量修改和导出只模拟成功提示；导入展示文件信息。</p><a class="evidence" href="#source-tasks">查看任务证据</a></article>
+      <article class="module"><div class="module-heading"><span class="module-number">03</span><h3>用户 <small>Users</small></h3></div><p class="module-use">复用用户、客户或成员管理界面。</p><ul><li>用户名搜索，按账号状态、角色筛选。</li><li>排序、分页、多选、列显示控制。</li><li>新增 / 编辑表单，姓名、邮箱、电话、角色、密码等字段校验。</li><li>邀请与删除弹窗、批量操作入口。</li></ul><p class="boundary"><span class="label demo">演示流程</span>列表是本地示例用户。保存与邀请展示提交内容；角色选项只是界面字段，完整访问控制需另做。</p><a class="evidence" href="#source-users">查看用户证据</a></article>
+      <article class="module"><div class="module-heading"><span class="module-number">04</span><h3>聊天 <small>Chats</small></h3></div><p class="module-use">复用客服或内部消息界面的布局。</p><ul><li>联系人头像、姓名、简介与最近消息预览。</li><li>按姓名搜索，点击切换会话。</li><li>历史消息气泡、收发左右区分、时间与日期分组。</li><li>手机进入会话与返回；新建聊天弹窗入口、输入区域。</li></ul><p class="boundary"><span class="label service">待接服务</span>会话使用本地样例。发送消息、实时接收、图片附件上传、电话和视频通话尚未实现。</p><a class="evidence" href="#source-chats">查看聊天证据</a></article>
+      <article class="module"><div class="module-heading"><span class="module-number">05</span><h3>应用集成 <small>Apps</small></h3></div><p class="module-use">复用第三方应用连接管理的呈现方式。</p><ul><li>应用图标、名称、介绍和连接状态卡片。</li><li>按名称搜索、按名称升降序排序。</li><li>全部 / 已连接 / 未连接筛选。</li><li>查询条件同步 URL。</li></ul><p class="boundary"><span class="label ready">前端可用</span>搜索、筛选、排序可用。<span class="label service">待接服务</span>连接状态来自固定数组，Connect 按钮未实现第三方授权。</p><a class="evidence" href="#source-apps">查看应用证据</a></article>
+      <article class="module"><div class="module-heading"><span class="module-number">06</span><h3>设置 <small>Settings</small></h3></div><p class="module-use">复用个人账户与偏好设置页面。</p><ul><li>个人资料、账户、外观、通知、显示设置页面。</li><li>文本、下拉、单选、开关等表单模式。</li><li>主题和字体切换能实际更新页面。</li><li>独立外观面板可调整侧栏样式、展开方式和布局方向。</li></ul><p class="boundary"><span class="label ready">前端可用</span>主题、字体和布局偏好有本地实现。<span class="label demo">演示流程</span>个人资料等业务保存需要接接口，通知设置页面不等于通知发送服务。</p><a class="evidence" href="#source-settings">查看设置证据</a></article>
+      <article class="module"><div class="module-heading"><span class="module-number">07</span><h3>账户与认证 <small>Auth / Clerk</small></h3></div><p class="module-use">复用账户入口的表单与布局。</p><ul><li>登录（两种布局）、注册、忘记密码、OTP 输入页面。</li><li>邮箱、密码等前端校验与加载反馈。</li><li>可选 Clerk 登录、注册与个人账户入口。</li><li>Clerk 示例用户页会检查登录状态。</li></ul><p class="boundary"><span class="label demo">演示流程</span>普通登录设置 mock token。Clerk 只在局部路由集成；其示例列表仍是本地用户，不能当作完整用户管理和权限系统。</p><a class="evidence" href="#source-auth">查看认证证据</a></article>
+      <article class="module"><div class="module-heading"><span class="module-number">08</span><h3>错误状态 <small>Errors</small></h3></div><p class="module-use">复用异常情况下的提示页面。</p><ul><li>401：未登录 / 未授权。</li><li>403：无访问权限。</li><li>404：页面不存在。</li><li>500：服务器错误；维护状态页面。</li></ul><p class="boundary"><span class="label ready">前端可用</span>提示页面已提供。什么时候触发这些状态，需要和实际接口、路由及权限逻辑连接。</p><a class="evidence" href="#source-nav">查看页面目录</a></article>
+    </div>
+    <div class="shared"><h3>所有模块共用的前端底座</h3><p>侧栏与顶部导航、响应式布局、明暗 / 跟随系统主题、RTL 布局、弹窗与抽屉、提示消息，以及 Ctrl / Cmd + K 命令面板。命令面板主要搜索导航项与切换主题，业务数据的全站搜索需要另做。</p><a href="#source-global">查看全局能力证据</a></div>
+  </section>
+
+  <section id="map" class="section map-section" aria-labelledby="map-title">
+    <div class="section-head"><div><p class="eyebrow">02 / 一张图整理我们的理解</p><h2 id="map-title">页面起点、适配职责与后续价值。</h2></div><p>这张图是我们的研究整理图，覆盖八类模块、通用底座、技术原理、业务链路和复用步骤。</p></div>
+    <div class="image-tools"><a class="primary-link" id="png-download" href="assets/shadcn-admin-understanding.png" download="shadcn-admin-前端能力与业务适配总览.png">下载 PNG 总览图</a><a id="svg-open" href="assets/shadcn-admin-understanding.svg" target="_blank" rel="noopener">打开可放大的 SVG</a><a href="assets/shadcn-admin-understanding.svg" download="shadcn-admin-理解总览.svg">下载可编辑 SVG</a></div>
+    <figure class="map-figure"><a href="assets/shadcn-admin-understanding.svg" target="_blank" rel="noopener" aria-label="在新窗口放大查看理解总览图"><img id="understanding-map" src="assets/shadcn-admin-understanding.svg" width="1600" height="2180" loading="lazy" alt="shadcn-admin 理解总览：预写且可修改的后台前端，八类页面与通用交互；修改业务字段和流程、连接自建 API 与数据库；用于快速原型、统一后台和积累自己的组件，聊天收发与完整权限需开发。"></a><figcaption>固定的是上游预先设计的页面起点；业务适配和后端服务由我们实现。完整结论也在本页逐段呈现。</figcaption></figure>
+  </section>
+
+  <section id="principles" class="section" aria-labelledby="principles-title">
+    <div class="section-head"><div><p class="eyebrow">03 / 实现原理</p><h2 id="principles-title">把成熟前端工具组合成后台页面。</h2></div><p>关键是拿到可修改的组件和页面源码，再把数据与业务操作接进去。</p></div>
+    <div class="layer-list">
+      <div><span>页面与构建</span><h3>React · TypeScript · Vite</h3><p>用组件描述页面和状态，TypeScript 约束数据类型，Vite 负责开发与构建。TanStack Router 配合构建插件从路由文件生成路由树，负责页面导航，并支持代码拆分；侧栏菜单由配置定义。</p></div>
+      <div><span>界面与样式</span><h3>shadcn/ui · Radix UI · Tailwind CSS</h3><p>项目中直接保存按钮、菜单、弹窗等组件源码。Radix 提供基础交互，Tailwind 控制样式、响应式和主题；我们可以编辑这些源码。</p></div>
+      <div><span>列表与表单</span><h3>TanStack Table · React Hook Form · Zod</h3><p>表格根据数据和列定义计算搜索、筛选、排序、分页后的行；表单管理输入值，用规则校验后显示错误或提交。校验规则也需按业务改。</p></div>
+      <div><span>数据与展示</span><h3>TanStack Query · Zustand · Recharts</h3><p>Query 提供请求缓存、重试与错误处理配置；Zustand 保存认证等前端状态；Recharts 绘制图表。它们提供工具，具体业务接口仍要接入。</p></div>
+    </div>
+    <div class="data-chain" aria-label="实际业务数据链路"><div><b>用户操作页面</b><span>点击、输入、筛选</span></div><span class="chain-arrow" aria-hidden="true">→</span><div><b>我们的前端逻辑</b><span>提交数据、展示结果</span></div><span class="chain-arrow" aria-hidden="true">→</span><div class="to-build"><b>我们的后端 API</b><span>权限、规则、计算</span></div><span class="chain-arrow" aria-hidden="true">→</span><div class="to-build"><b>我们的数据库</b><span>保存与查询业务数据</span></div></div>
+    <p class="note">浏览器通常通过后端 API 访问业务数据。仅创建数据库表或替换连接地址，不会自动生成与业务匹配的页面、流程和权限。<a href="#source-stack">技术栈与入口证据</a></p>
+  </section>
+
+  <section id="adapt" class="section" aria-labelledby="adapt-title">
+    <div class="section-head"><div><p class="eyebrow">04 / 怎样复用</p><h2 id="adapt-title">保留通用交互，改成我们的业务。</h2></div><p>代码层面的复用；适配工作包含页面、数据和规则。</p></div>
+    <div class="reuse-paths"><article><span class="path-label">方式 A / 从现成工程开始</span><h3>整个项目拿来改</h3><p>保留侧栏、布局、主题和需要的页面，删减示例入口，再修改业务字段与操作。适合新建 React 后台、快速原型。</p><p class="note">这是二次开发起点；上线前仍要替换演示流程、整理认证和接口。</p></article><article><span class="path-label">方式 B / 融入已有项目</span><h3>复制需要的页面与组件</h3><p>把表格、表单、弹窗或整页搬到已有 React 项目，同时处理依赖、样式、路由和状态上下文。适合已有前端基础的项目。</p><p class="note">搬运整页通常涉及更多配套代码；优先迁移边界清晰的组件。</p></article></div>
+    <ol class="adapt-steps"><li><b>定义业务</b><p>明确管理对象、字段、状态、用户角色和操作规则。</p></li><li><b>选择页面</b><p>列表用 Tasks / Users，统计用 Dashboard，消息界面用 Chats。</p></li><li><b>修改代码</b><p>改列定义、表单校验、按钮动作、菜单和页面文案。</p></li><li><b>连接服务</b><p>接查询与写入 API，补后端权限、数据库和业务流程。</p></li><li><b>验证使用</b><p>检查保存与刷新、错误反馈、真实权限和手机操作。</p></li></ol>
+    <div class="case-heading"><h3>具体例子：任务管理 → 订单管理</h3><p>这是我们可以进行的改造方向，仓库本身没有现成的订单业务。</p></div>
+    <div class="table-wrap"><table><caption class="sr-only">从任务页适配到订单页的代码修改与服务工作</caption><thead><tr><th scope="col">现成任务页面</th><th scope="col">我们的订单业务</th><th scope="col">需要做的工作</th></tr></thead><tbody><tr><td>任务编号、标题</td><td>订单号、客户、金额</td><td>修改数据类型与表格列定义</td></tr><tr><td>任务状态、优先级</td><td>待付款、已支付、已发货</td><td>修改筛选选项，定义状态转换规则</td></tr><tr><td>创建 / 编辑抽屉</td><td>订单详情、地址修改、发货表单</td><td>修改表单字段、校验和按钮动作</td></tr><tr><td>本地演示数据</td><td>真实订单数据</td><td>调用查询 API；数据量大时接服务端分页与筛选</td></tr><tr><td>模拟提交结果</td><td>保存、发货、取消、退款</td><td>实现后端操作、权限与状态更新，再刷新页面数据</td></tr></tbody></table></div>
+    <div class="ownership"><div><h3>可以保留的</h3><p>布局、表格、分页控件、筛选栏、弹窗、抽屉、主题和反馈组件。</p></div><div><h3>需要我们决定的</h3><p>业务字段、权限、状态转换、操作流程、统计口径、API 和数据库结构。</p></div></div>
+  </section>
+
+  <section id="value" class="section value-section" aria-labelledby="value-title">
+    <div class="section-head"><div><p class="eyebrow">05 / 对我们后期的意义</p><h2 id="value-title">积累后台开发资产，缩短界面起步过程。</h2></div><p>以下是根据源码能力推导出的使用价值；具体节省多少时间，需要在我们的真实项目中验证。</p></div>
+    <div class="value-grid"><article><span>01</span><h3>更快做可操作的原型</h3><p>先复用列表、编辑抽屉和统计面板，让团队讨论真实字段和流程，不必从空白页面搭起。</p></article><article><span>02</span><h3>统一多个后台的体验</h3><p>让用户、任务、资产等管理页使用一致的筛选、分页、表单和错误反馈方式。</p></article><article><span>03</span><h3>积累我们自己的组件</h3><p>把完成业务适配的表格、表单和页面沉淀下来，下一次复用我们的版本与接口约定。</p></article><article><span>04</span><h3>给编码 AI 明确参考</h3><p>提供现成页面源码、业务字段和接口文档，让 AI 在明确结构上改代码，再由我们验证结果。</p></article></div>
+    <div class="table-wrap"><table><caption>后续可考虑的应用方向（需要业务适配）</caption><thead><tr><th scope="col">我们的项目方向</th><th scope="col">可复用模块</th><th scope="col">仍需补齐</th></tr></thead><tbody><tr><td>内部任务、工单管理</td><td>Tasks + Users + Dashboard</td><td>任务分配、状态流转、权限、持久化</td></tr><tr><td>素材或资产管理后台</td><td>列表表格 + 编辑表单 + 设置</td><td>预览、文件上传、存储、标签与检索</td></tr><tr><td>CRM、客户或成员管理</td><td>Users + 设置 + Dashboard</td><td>跟进记录、组织关系、邀请邮件、访问范围</td></tr><tr><td>SaaS 或 AI 工具管理台</td><td>Dashboard + 账户 + Apps</td><td>使用量统计、计费、模型 API、授权与租户隔离</td></tr><tr><td>客服、内部消息工具</td><td>Chats 的联系人与会话 UI</td><td>真实收发、存储、未读 / 已读、附件和实时连接</td></tr></tbody></table></div>
+    <p class="first-project"><strong>建议的第一步：</strong>选一个“列表 → 查看 / 编辑 → 保存 → 刷新”的小业务闭环，用真实 API 跑通，再判断是否值得将它发展成我们的后台基础工程。</p>
+  </section>
+
+  <section id="boundaries" class="section" aria-labelledby="boundaries-title">
+    <div class="section-head"><div><p class="eyebrow">06 / 适用范围与常见误解</p><h2 id="boundaries-title">前端通用能力，业务需要逐项适配。</h2></div></div>
+    <div class="fit-grid"><article><h3>适合参考与改造</h3><p>React 管理后台、内部 CRUD 工具、SaaS 控制台、客户 / 成员管理、统计看板和后台原型；尤其适合列表、表单和数据展示较多的项目。</p></article><article><h3>需要额外投入的项目</h3><p>复杂流程审批、大规模数据、精细权限、多租户、实时聊天、支付和音视频等。现成 UI 可做起点，这些服务与流程要另行设计实现。</p></article></div>
+    <div class="faq">
+      <details open><summary>“固定的前端”是什么意思？</summary><p>上游已经写好页面结构、字段和演示流程。我们可以改源码、增删模块和换主题；运行时搜索、筛选等操作有动态交互。固定的是默认设计，业务适配方式是改代码。</p></details>
+      <details open><summary>它支持任意业务自动生成页面吗？</summary><p>本次核对的工程通过 React 页面源码定义界面，没有根据任意数据库表自动生成业务后台的能力。新业务需修改页面、数据类型、规则与接口。</p></details>
+      <details><summary>“用户页面”是消费者使用的前台吗？</summary><p>Users 是管理用户的后台页面；登录、注册、个人设置是账户配套页面。电商消费者的商品浏览、购物车、付款等完整前台需要另做。</p></details>
+      <details><summary>登录、角色和聊天按钮都有了，为什么还要开发？</summary><p>普通登录生成模拟 token；角色是界面选项，后端仍需执行权限校验；聊天发送按钮未接发送逻辑。Clerk 是可选的局部真实认证集成，其示例用户列表仍是本地数据。</p></details>
+      <details><summary>上线前最少要补什么？</summary><p>真实接口与数据库、适合项目的认证与后端权限、业务规则、表单保存与列表刷新、失败反馈；根据需求再接文件、消息、计费等服务。组件升级时要检查上游对 RTL 等组件的定制，避免覆盖自己的修改。</p></details>
+    </div>
+  </section>
+
+  <section id="sources" class="section sources" aria-labelledby="sources-title">
+    <div class="section-head"><div><p class="eyebrow">07 / 依据与验证范围</p><h2 id="sources-title">结论对应到实际代码。</h2></div><p>本次为源码与文档研究。页面能力按实现核对；应用方向和后续价值是我们的推断。</p></div>
+    <p class="source-meta">核对日期：2026-10-04（北京时间） · 观察版本：package.json 2.2.1 · 提交引用：<a href="https://github.com/satnaing/shadcn-admin/commit/e16c87f213a5ba5e45964e9b67c792105ec74d26" target="_blank" rel="noopener noreferrer">e16c87f</a> · 上游许可证：<a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/LICENSE" target="_blank" rel="noopener noreferrer">MIT</a>。下方源码链接固定到该提交，后续版本可能变化。</p>
+    <ol class="source-list">
+      <li id="source-readme"><b>定位与功能声明</b><span><a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/README.md" target="_blank" rel="noopener noreferrer">shadcn-admin 项目说明</a>：UI 集合、响应式、主题、RTL、部分 Clerk 认证，以及定制组件更新提醒。</span></li>
+      <li id="source-nav"><b>页面目录</b><span><a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/components/layout/data/sidebar-data.ts" target="_blank" rel="noopener noreferrer">侧栏配置</a>：八类模块与具体设置 / 认证 / 错误页面。</span></li>
+      <li id="source-dashboard"><b>仪表盘</b><span><a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/dashboard/index.tsx" target="_blank" rel="noopener noreferrer">页面与按钮</a> · <a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/dashboard/components/overview.tsx" target="_blank" rel="noopener noreferrer">随机图表数据</a> · <a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/dashboard/components/analytics.tsx" target="_blank" rel="noopener noreferrer">流量分析</a>。</span></li>
+      <li id="source-tasks"><b>任务</b><span><a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/tasks/components/tasks-table.tsx" target="_blank" rel="noopener noreferrer">表格交互</a> · <a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/tasks/components/tasks-mutate-drawer.tsx" target="_blank" rel="noopener noreferrer">创建与编辑提交</a> · <a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/tasks/components/data-table-bulk-actions.tsx" target="_blank" rel="noopener noreferrer">批量模拟操作</a> · <a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/tasks/components/tasks-import-dialog.tsx" target="_blank" rel="noopener noreferrer">CSV 导入界面</a>。</span></li>
+      <li id="source-users"><b>用户</b><span><a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/users/components/users-table.tsx" target="_blank" rel="noopener noreferrer">筛选与分页</a> · <a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/users/components/users-action-dialog.tsx" target="_blank" rel="noopener noreferrer">表单与提交</a> · <a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/users/components/users-invite-dialog.tsx" target="_blank" rel="noopener noreferrer">邀请演示</a>。</span></li>
+      <li id="source-chats"><b>聊天</b><span><a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/chats/index.tsx" target="_blank" rel="noopener noreferrer">联系人、历史消息与按钮</a>：读取 Fake Data；发送表单与通话 / 附件按钮没有业务处理。</span></li>
+      <li id="source-apps"><b>应用集成</b><span><a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/apps/index.tsx" target="_blank" rel="noopener noreferrer">搜索、筛选、排序与 Connect 按钮</a>：连接状态是演示，尚未接授权。</span></li>
+      <li id="source-settings"><b>设置</b><span><a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/settings/appearance/appearance-form.tsx" target="_blank" rel="noopener noreferrer">主题与字体更新</a> · <a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/settings/profile/profile-form.tsx" target="_blank" rel="noopener noreferrer">个人资料演示提交</a>。</span></li>
+      <li id="source-auth"><b>认证边界</b><span><a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/auth/sign-in/components/user-auth-form.tsx" target="_blank" rel="noopener noreferrer">普通 mock 登录</a> · <a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/routes/clerk/route.tsx" target="_blank" rel="noopener noreferrer">局部可选 Clerk</a> · <a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/routes/clerk/_authenticated/user-management.tsx" target="_blank" rel="noopener noreferrer">登录保护与示例用户列表</a>。</span></li>
+      <li id="source-global"><b>全局前端能力</b><span><a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/components/config-drawer.tsx" target="_blank" rel="noopener noreferrer">外观与布局设置</a> · <a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/components/command-menu.tsx" target="_blank" rel="noopener noreferrer">快捷导航与主题命令</a>。</span></li>
+      <li id="source-stack"><b>技术原理</b><span><a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/package.json" target="_blank" rel="noopener noreferrer">依赖</a> · <a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/main.tsx" target="_blank" rel="noopener noreferrer">应用入口与请求处理</a> · <a href="https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/vite.config.ts" target="_blank" rel="noopener noreferrer">构建与路由插件</a> · <a href="https://ui.shadcn.com/docs" target="_blank" rel="noopener noreferrer">shadcn 开放组件源码说明</a>。</span></li>
+    </ol>
+    <p class="note">本地交付是研究网页与理解图，没有在这里安装或验收上游完整应用，也没有接入真实数据库、Clerk、业务 API 或聊天服务。页面与图为我们自行整理的说明内容，功能判断以所列上游代码为依据。</p>
+  </section>
+</main>
+<footer><p><b>009 / shadcn-admin</b> · 后台前端能力与业务适配研究</p><a href="../../">返回项目研究库</a><a href="#main">回到顶部</a></footer>
+</body>
+</html>

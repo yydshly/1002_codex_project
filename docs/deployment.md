@@ -9,9 +9,10 @@
 | 006 · text-to-cad | `https://yydshly.github.io/1002_codex_project/projects/006-text-to-cad/` |
 | 008 · PDoomVideo | `https://yydshly.github.io/1002_codex_project/projects/008-pdoom-video/` |
 | 008 · 理解总览与引导图 | `https://yydshly.github.io/1002_codex_project/projects/008-pdoom-video/overview.html` |
+| 009 · shadcn-admin | `https://yydshly.github.io/1002_codex_project/projects/009-shadcn-admin/` |
 | 002 项目 | `https://yydshly.github.io/1002_codex_project/projects/002-slug/` |
 
-总入口、001、006 和 008 项目是站点的配置地址；002 行展示后续项目的路径格式。006 发布可独立阅读的静态理解总览、生成的引导图和实测报告；实时 CAD 查看与运动操作按页面说明在本机启动。008 发布完整能力实验室、理解总览与引导图、元素驱动控制台和六秒真实场景样例。仓库 Pages 已配置为 GitHub Actions 发布。GitHub Pages 每个仓库只有一个站点，因此这里使用多个子目录承载各项目的静态输出。参考 [GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)。
+总入口、001、006、008 和 009 项目是站点的配置地址；002 行展示后续项目的路径格式。006 发布可独立阅读的静态理解总览、生成的引导图和实测报告；实时 CAD 查看与运动操作按页面说明在本机启动。008 发布完整能力实验室、理解总览与引导图、元素驱动控制台和六秒真实场景样例。009 发布 shadcn-admin 的八类模块、复用原理、业务适配、后续价值与边界说明，并沿用我们整理的理解引导图，提供 PNG / SVG 下载。仓库 Pages 已配置为 GitHub Actions 发布。GitHub Pages 每个仓库只有一个站点，因此这里使用多个子目录承载各项目的静态输出。参考 [GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)。
 
 ## 配置子项目
 

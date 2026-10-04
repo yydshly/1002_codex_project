@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "startedAt": "2026-10-04T08:33:58.648Z",
+  "previewUrl": "http://127.0.0.1:4193/projects/009-shadcn-admin/",
+  "method": "Native SVG rendered by Chromium; local research page browser verification",
+  "checks": [
+    {
+      "name": "Diagram text fits the canvas and covers all eight modules",
+      "status": "passed",
+      "width": 1600,
+      "height": 2180,
+      "textNodes": 93,
+      "overflow": 0
+    },
+    {
+      "name": "Page includes modules, reuse, value and source evidence",
+      "status": "passed",
+      "modules": 8,
+      "adaptationSteps": 5,
+      "valueDirections": 4
+    },
+    {
+      "name": "Local resources, downloads, anchors and research index resolve",
+      "status": "passed",
+      "localLinks": 5,
+      "missingAnchors": 0,
+      "projectInIndex": true
+    },
+    {
+      "name": "Diagram loads and native FAQ disclosure operates",
+      "status": "passed",
+      "loadedImage": true,
+      "disclosureOpened": true
+    },
+    {
+      "name": "Desktop and mobile layouts have no page overflow",
+      "status": "passed",
+      "viewports": [
+        1440,
+        768,
+        390,
+        320
+      ],
+      "pageOverflow": 0
+    },
+    {
+      "name": "Browser and local resources have no errors",
+      "status": "passed",
+      "errors": 0
+    }
+  ],
+  "errors": [],
+  "image": {
+    "width": 3200,
+    "height": 4360,
+    "bytes": 1076449,
+    "sha256": "ee0e05a0e58e8dafc5791b5df7c66002043238b7c3c3fdfacfd94b0e1d95b0c1",
+    "svgSha256": "15d9f313e956a7049c9b5fe816f6a6e51af2e72488c9b0bfadcd76bb73ffc04f"
+  },
+  "completedAt": "2026-10-04T08:34:04.223Z"
+}
