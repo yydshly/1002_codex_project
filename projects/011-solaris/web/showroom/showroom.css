@@ -3,3 +3,13 @@
 @media(max-width:600px){header{height:63px;gap:14px;padding:0 14px}.brand{letter-spacing:1px;font-size:11px;gap:7px}.brand-mark{width:28px;height:28px;font-size:23px}.brand small{display:none}header nav{gap:10px}header nav .active:after{bottom:-23px}.header-actions{gap:2px}header #save{font-size:10px;padding:7px}.header-actions #undo,.header-actions #redo{display:none}main{height:auto;min-height:0;display:flex;flex-direction:column}.stage{height:70dvh;min-height:430px}aside{overflow:visible;display:grid;grid-template-columns:1fr 1fr;gap:0 20px;padding:25px 22px}.panel-intro,.panel-footer{grid-column:1/-1}.stage-heading{top:26px}.stage-heading h1{font-size:24px}}
 .stage::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,#18231cb8 0%,transparent 29%,transparent 73%,#19261ee6 100%)}
 .model-caption{padding:10px 13px;background:#17261fbd;border:1px solid #83997624;border-radius:8px}.model-caption small{color:#acb8a3}.model-caption .model-index{color:#a5b995}.gesture-hint{color:#b1bfaa}@media(max-width:600px){.model-caption{left:20px;bottom:105px}}
+
+/* Keep the scene navigation inside its own scroll area without shrinking actions. */
+header>.brand,header>.header-actions{flex:0 0 auto;white-space:nowrap}
+header .brand-mark{flex:0 0 auto}
+header>nav{flex:1 1 auto;width:0;min-width:0;overflow-x:auto;overflow-y:hidden;border-inline:1px solid #d9dbd1;padding-inline:10px;scroll-padding-inline:10px;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#a1ad95 transparent}
+header>nav>a{flex:0 0 auto;display:flex;align-items:center;align-self:stretch;white-space:nowrap}
+header>nav>a:focus-visible{outline-offset:-4px}
+header>nav>.active:after{bottom:0}
+header>nav::-webkit-scrollbar{height:4px}
+header>nav::-webkit-scrollbar-thumb{background:#a1ad95;border-radius:4px}
