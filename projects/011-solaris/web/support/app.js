@@ -1,7 +1,8 @@
 import {SupportScene} from './scene.js';
 import {SUPPORT_WORKSPACE_KEY,MAX_SUPPORT_BACKUP_BYTES} from './state.js';
+import {createSupportStorage} from './storage.js';
 const $=id=>document.getElementById(id), clone=value=>structuredClone(value);
-let worker,view,analysis,reply,mode='lamp',gesture=null,busy=false,failed=false,checkedText=null,downloadUrl=null,toastTimer,fileReadId=0,readingFile=false;
+let worker,view,analysis,reply,storage,mode='lamp',gesture=null,busy=true,initialized=false,failed=false,checkedText=null,downloadUrl=null,toastTimer,fileReadId=0,readingFile=false,conflictEpoch=0,savedPreview=null;
 const pending=new Map();let requestId=0;
 function ask(type,payload={}){return new Promise((resolve,reject)=>{if(failed){reject(new Error('几何工作线程不可用，请重新打开工作台。'));return;}const id=++requestId;pending.set(id,{resolve,reject});worker.postMessage({id,type,payload});});}
 function fatal(message){failed=true;if(gesture){gesture.cancelled=true;const id=gesture.pointerId;gesture=null;if($('canvas-host').hasPointerCapture(id))$('canvas-host').releasePointerCapture(id);}
@@ -28,14 +29,16 @@ const reasons={
 };
 const explain=reason=>reasons[reason]??reason??'完整灯底与 2 mm 边距通过；当前验证不判断物理稳定性。';
 function setBusy(value){busy=value;if(value){$('placement-title').textContent='正在核对完整灯底与关系…';$('placement-detail').textContent='计算在独立线程进行，结果返回后才能继续提交。';}refreshControls();}
-function refreshControls(){const ready=Boolean(reply?.state)&&!busy&&!gesture&&!failed;
+function refreshControls(){const ready=initialized&&Boolean(reply?.state)&&!busy&&!gesture&&!failed;
   for(const id of ['save','backup','show-surface','lamp-turn-left','lamp-turn-right','table-turn-left','table-turn-right','table-width','table-depth','apply-size'])$(id).disabled=!ready;
   for(const button of document.querySelectorAll('[data-nudge]'))button.disabled=!ready;
-  $('undo').disabled=busy||!reply?.status?.canUndo;$('redo').disabled=busy||!reply?.status?.canRedo;
-  $('surface').disabled=busy||failed||!analysis;for(const b of $('asset-options').children)b.disabled=busy||failed;
-  view&&(view.controls.enabled=mode==='orbit'&&!gesture&&!busy);
+  $('undo').disabled=!initialized||failed||busy||!reply?.status?.canUndo;$('redo').disabled=!initialized||failed||busy||!reply?.status?.canRedo;
+  $('surface').disabled=!initialized||busy||failed||!analysis;for(const b of $('asset-options').children)b.disabled=!initialized||busy||failed;
+  for(const b of document.querySelectorAll('[data-mode]'))b.disabled=!initialized||failed||busy;
+  for(const id of ['top-view','home-view'])$(id).disabled=!initialized||failed||busy||Boolean(gesture);
+  view&&(view.controls.enabled=initialized&&!failed&&mode==='orbit'&&!gesture&&!busy);
 }
-async function render(result){reply=result;const assetId=result.activeAssetId??result.state?.table.assetId;
+async function render(result){if(failed)return;reply=result;const assetId=result.activeAssetId??result.state?.table.assetId;
   const table=analysis?.tables.find(t=>t.asset.id===assetId);if(!table)return;
   $('asset-title').textContent=table.asset.label;$('asset-number').textContent=String(analysis.tables.indexOf(table)+1).padStart(2,'0');
   $('asset-source').href=table.asset.sourcePage;
@@ -58,11 +61,11 @@ async function render(result){reply=result;const assetId=result.activeAssetId??r
   }else{$('surface-height').textContent='—';$('lamp-height').textContent='—';$('table-width').value=1;$('table-depth').value=1;$('anchor-readout').textContent='请选择一个检测台面；原方案保留，可撤销返回。';}
   refreshControls();await view.update(result);
 }
-async function operation(type,payload={}){if(busy)return;setBusy(true);await cancelDrag('切换操作前取消拖动');
-  try {const result=await ask(type,payload);await render(result);if(result.ok===false)toast(explain(result.reason));return result;}
+async function operation(type,payload={}){if(!initialized||busy||failed)return;setBusy(true);await cancelDrag('切换操作前取消拖动');
+  try {const result=await ask(type,payload);await render(result);if(failed)return;if(result.ok===false)toast(explain(result.reason));return result;}
   catch(error){toast(error.message);}finally{setBusy(false);}
 }
-async function edit(modify,label,sweep=false){if(!reply?.state||busy||gesture)return;const state=clone(reply.state);modify(state);return operation('apply',{state,detail:{label,sweep}});}
+async function edit(modify,label,sweep=false){if(!initialized||failed||!reply?.state||busy||gesture)return;const state=clone(reply.state);modify(state);return operation('apply',{state,detail:{label,sweep}});}
 const worldToLocal=(x,z,t)=>({x:(Math.cos(t.yaw)*(x-t.x)-Math.sin(t.yaw)*(z-t.z))/t.scale.x,z:(Math.sin(t.yaw)*(x-t.x)+Math.cos(t.yaw)*(z-t.z))/t.scale.z});
 function nudge(direction){const delta={left:[-.05,0],right:[.05,0],front:[0,.05],back:[0,-.05]}[direction];
   return edit(state=>{const t=state.table.transform,a=state.attachment.localAnchor,c=Math.cos(t.yaw),s=Math.sin(t.yaw);
@@ -90,10 +93,10 @@ function wireCanvas(){const host=$('canvas-host');
       const x=t.x+c*a.x*t.scale.x+s*a.z*t.scale.z,z=t.z-s*a.x*t.scale.x+c*a.z*t.scale.z;
       state.attachment.localAnchor=worldToLocal(x+dx,z+dz,t);}return state;
   };
-  host.addEventListener('pointerdown',event=>{if(busy||gesture||!reply?.state||mode==='orbit'||event.button!==0||!view.pick(event,mode))return;
+  host.addEventListener('pointerdown',event=>{if(!initialized||failed||busy||gesture||!reply?.state||mode==='orbit'||event.button!==0||!view.pick(event,mode))return;
     event.preventDefault();host.focus();const point=view.point(event,mode==='lamp'?view.surfaceHeight:0);if(!point)return;
     const g={pointerId:event.pointerId,mode,baseline:clone(reply.state),point,latest:null,cancelled:false,flushing:null,finishing:false};gesture=g;
-    view.controls.enabled=false;host.setPointerCapture(event.pointerId);refreshControls();g.beginPromise=ask('begin',{label:mode==='lamp'?'拖动灯具':'拖动桌子'}).then(async r=>{if(!r.ok){g.cancelled=true;gesture=null;}await render(r);}).catch(error=>fatal(error.message));
+    view.controls.enabled=false;host.setPointerCapture(event.pointerId);refreshControls();g.beginPromise=ask('begin',{label:mode==='lamp'?'拖动灯具':'拖动桌子'}).then(async r=>{if(!r.ok){g.cancelled=true;gesture=null;if(host.hasPointerCapture(g.pointerId))host.releasePointerCapture(g.pointerId);}await render(r);}).catch(error=>fatal(error.message));
   });
   host.addEventListener('pointermove',event=>{const g=gesture;if(!g||g.finishing||g.pointerId!==event.pointerId)return;
     const state=candidate(g,event);if(!state){g.latest=null;finishDrag(true,'无法投影到支撑平面，回到起点');return;}
@@ -111,11 +114,42 @@ function setDownload(rawText){if(downloadUrl)URL.revokeObjectURL(downloadUrl);do
 function invalidateBackup(){checkedText=null;$('apply-backup').disabled=true;$('download').removeAttribute('href');$('download').setAttribute('aria-disabled','true');$('backup-message').textContent='内容已修改，必须重新检查；不会改动当前方案。';}
 function cancelFileRead(){fileReadId++;readingFile=false;$('check-backup').disabled=false;return fileReadId;}
 async function openBackup(){cancelFileRead();const result=await operation('export');if(!result?.ok)return;$('configuration').value=result.rawText;checkedText=result.rawText;setDownload(result.rawText);$('apply-backup').disabled=false;$('backup-message').textContent='当前方案已通过当前几何检查，可以下载或打开。';$('backup-dialog').showModal();}
+function clearSavedPreview(){conflictEpoch++;savedPreview=null;$('open-saved').disabled=true;$('saved-configuration').value='';}
+function describeScheme(rawText){try{const s=JSON.parse(rawText).state,t=s.table.transform,a=s.attachment.localAnchor;
+  const label=analysis.tables.find(x=>x.asset.id===s.table.assetId)?.asset.label??s.table.assetId;
+  return `${label} · 桌宽 ${t.scale.x.toFixed(2)} / 深 ${t.scale.z.toFixed(2)} · 灯位置 X ${a.x.toFixed(3)} / Z ${a.z.toFixed(3)} m`;
+}catch{return '存档格式尚未核查';}}
+function showSaveIssue(result){clearSavedPreview();$('save-status').textContent='本页尚未保存';
+  $('conflict-title').textContent=result.code==='storage-conflict'?'本机已有变化的方案':'这次保存未能确认';
+  $('conflict-local-summary').textContent=reply?.state?describeScheme(JSON.stringify({state:reply.state})):'当前方案仍保留';
+  $('conflict-saved-summary').textContent=result.found===false?'本机已没有存档':result.restricted?'存档超出本页可检查范围':'请检查当前本机存档';
+  $('conflict-message').textContent=`${result.reason}。本页方案保持，未自动覆盖其他版本。`;
+  $('check-saved').disabled=!result.baselineKnown;$('open-saved').disabled=true;
+  if(!$('save-conflict-dialog').open)$('save-conflict-dialog').showModal();
+}
+async function checkSaved(){if(busy||failed)return;clearSavedPreview();const epoch=conflictEpoch,observed=storage.checkCurrent();
+  if(typeof observed.currentRaw!=='string'||observed.restricted){$('conflict-saved-summary').textContent=observed.currentRaw===null?'本机已没有存档':'当前存档无法检查';$('conflict-message').textContent=observed.reason??'暂无可打开存档，请先备份本页方案；重新打开工作台后可恢复备份。';return;}
+  $('check-saved').disabled=true;$('conflict-message').textContent='正在检查当前存档；本页摆放保持。';
+  try{const checked=await ask('checkBackup',{rawText:observed.currentRaw});if(epoch!==conflictEpoch||!$('save-conflict-dialog').open||failed)return;
+    if(!checked.ok){$('conflict-message').textContent=`存档未通过：${explain(checked.reason)}。本页方案保持，请先备份。`;$('conflict-saved-summary').textContent='当前存档未通过几何与源检查';return;}
+    const latest=storage.checkCurrent();if(latest.currentRaw!==observed.currentRaw){$('conflict-message').textContent='存档在检查期间再次变化，请重新检查；本页方案保持。';return;}
+    savedPreview={rawText:observed.currentRaw};$('saved-configuration').value=observed.currentRaw;$('conflict-saved-summary').textContent=describeScheme(observed.currentRaw);
+    $('open-saved').disabled=false;$('conflict-message').textContent='源模型、规则与完整支撑已通过。打开会替换本页显示，可撤销找回本页方案；尚未写入存档。';
+  }catch(error){$('conflict-message').textContent=`检查失败：${error.message}。本页方案保持。`;}
+  finally{if(epoch===conflictEpoch)$('check-saved').disabled=false;}
+}
+async function openSaved(){if(busy||failed||!savedPreview)return;const rawText=savedPreview.rawText,observed=storage.checkCurrent();
+  if(observed.currentRaw!==rawText){clearSavedPreview();$('conflict-message').textContent='存档在检查后再次变化，请重新检查；本页方案保持。';return;}
+  $('open-saved').disabled=true;const result=await operation('restore',{rawText});if(!result?.ok){clearSavedPreview();$('conflict-message').textContent='当前版本未能打开，保存基线保持，请重新检查。';return;}
+  const accepted=storage.acceptCurrent(rawText);
+  if(!accepted.ok){showSaveIssue(accepted);$('conflict-message').textContent=`${accepted.reason}。当前显示刚检查的版本，可撤销找回原方案；本页未写入，请重新检查。`;return;}
+  $('save-conflict-dialog').close();$('save-status').textContent='已打开当前存档';toast('已打开检查通过的存档；可撤销找回本页先前方案。');
+}
 function wireControls(){
   $('retry').onclick=()=>location.reload();$('about').onclick=()=>$('about-dialog').showModal();$('technical').onclick=()=>$('technical-dialog').showModal();
   for(const b of document.querySelectorAll('[data-close]'))b.onclick=()=>$(b.dataset.close).close();
-  for(const b of document.querySelectorAll('[data-mode]'))b.onclick=async()=>{await cancelDrag('切换模式，回到起点');mode=b.dataset.mode;for(const x of document.querySelectorAll('[data-mode]'))x.setAttribute('aria-pressed',String(x===b));refreshControls();$('gesture-hint').textContent=mode==='orbit'?'拖动环绕 · 滚轮缩放 · 右键平移':mode==='table'?'拖动原桌模型 · 灯随桌移动 · Escape 取消':'拖动灯具 · 越边释放整次回到起点 · 方向键每步 5 cm';};
-  $('top-view').onclick=()=>view.top();$('home-view').onclick=()=>view.home();
+  for(const b of document.querySelectorAll('[data-mode]'))b.onclick=async()=>{if(!initialized||failed||busy)return;await cancelDrag('切换模式，回到起点');if(failed)return;mode=b.dataset.mode;for(const x of document.querySelectorAll('[data-mode]'))x.setAttribute('aria-pressed',String(x===b));refreshControls();$('gesture-hint').textContent=mode==='orbit'?'拖动环绕 · 滚轮缩放 · 右键平移':mode==='table'?'拖动原桌模型 · 灯随桌移动 · Escape 取消':'拖动灯具 · 越边释放整次回到起点 · 方向键每步 5 cm';};
+  $('top-view').onclick=async()=>{if(!initialized||failed||busy)return;await cancelDrag('切换视角，回到起点');if(!failed)view.top();};$('home-view').onclick=async()=>{if(!initialized||failed||busy)return;await cancelDrag('切换视角，回到起点');if(!failed)view.home();};
   $('surface').onchange=()=>{if($('surface').value)operation('selectSurface',{surfaceId:$('surface').value});};
   for(const b of document.querySelectorAll('[data-nudge]'))b.onclick=()=>nudge(b.dataset.nudge);
   for(const sign of ['left','right']){
@@ -128,10 +162,15 @@ function wireControls(){
     edit(s=>{s.table.transform.scale.x=x;s.table.transform.scale.z=z;},'提交桌宽深比例');};
   $('show-surface').onclick=()=>{const show=$('show-surface').getAttribute('aria-pressed')!=='true';$('show-surface').setAttribute('aria-pressed',String(show));view.showSurface(show);};
   $('undo').onclick=()=>operation('undo');$('redo').onclick=()=>operation('redo');$('backup').onclick=openBackup;
-  $('save').onclick=async()=>{const result=await operation('export');if(!result?.ok)return;
-    try{localStorage.setItem(SUPPORT_WORKSPACE_KEY,result.rawText);$('save-status').textContent='研究方案已保存';toast('已保存桌子、灯具与所选台面的关系。');}
-    catch{toast('本机保存失败，方案仍保留，可以下载备份。');await openBackup();}
+  $('save').onclick=async()=>{const result=await operation('export');if(!result?.ok)return;const saved=storage.save(result.rawText);
+    if(saved.ok){$('save-status').textContent='研究方案已保存';toast('已保存桌子、灯具与所选台面的关系。');}else showSaveIssue(saved);
   };
+  $('check-saved').onclick=checkSaved;$('open-saved').onclick=openSaved;
+  $('backup-local').onclick=async()=>{$('save-conflict-dialog').close();await openBackup();};
+  $('save-conflict-dialog').addEventListener('close',clearSavedPreview);
+  window.addEventListener('storage',event=>{if(event.key!==SUPPORT_WORKSPACE_KEY&&event.key!==null)return;if(!initialized||failed)return;
+    clearSavedPreview();$('save-status').textContent='本机存档有变化';if($('save-conflict-dialog').open){$('check-saved').disabled=false;$('conflict-message').textContent='另一页面改变了本机存档，请重新检查；本页摆放保持。';}
+  });
   $('backup-dialog').addEventListener('close',cancelFileRead);
   $('configuration').oninput=()=>{cancelFileRead();invalidateBackup();};
   $('open-file').onclick=()=>$('backup-file').click();
@@ -150,15 +189,16 @@ function wireControls(){
   };
   $('apply-backup').onclick=async()=>{if(readingFile||checkedText!==$('configuration').value||checkedText===null)return;cancelFileRead();const result=await operation('restore',{rawText:checkedText});if(result?.ok){$('backup-dialog').close();toast('研究方案已按当前几何重新核查并打开。');}};
 }
-async function start(){wireControls();try{
+async function start(){wireControls();refreshControls();try{
   view=new SupportScene($('canvas-host'));worker=new Worker(new URL('./worker.js',import.meta.url),{type:'module'});
+  view.beforeResize=()=>cancelDrag('视口尺寸变化，回到起点');
   worker.onmessage=event=>{const value=event.data;if(value.progress||value.event==='progress'){$('loading-detail').textContent=value.progress??value.message;return;}const request=pending.get(value.id);if(request){pending.delete(value.id);value.error?request.reject(new Error(value.error)):request.resolve(value);}};
   worker.onerror=event=>{const message=event.message||'几何工作线程无法运行';fatal(message);for(const request of pending.values())request.reject(new Error(message));pending.clear();};
-  let savedRaw=null;try{savedRaw=localStorage.getItem(SUPPORT_WORKSPACE_KEY);}catch{}
+  storage=createSupportStorage(()=>localStorage);const loaded=storage.loadSnapshot(),savedRaw=loaded.currentRaw??null;
   const first=await ask('init',{savedRaw});analysis=first.analysis;if(!analysis)throw new Error(first.reason??'分析资料不可用');
   $('analysis-readout').textContent=JSON.stringify({policy:analysis.policy,lamp:{id:analysis.lamp.asset.id,source:analysis.lamp.asset.sourcePage,fingerprint:analysis.lamp.asset.sourceFingerprint,contactBounds:analysis.lamp.base.contactBounds},tables:analysis.tables.map(t=>({id:t.asset.id,fingerprint:t.asset.sourceFingerprint,candidateCount:t.surfaces?.length??0,verifiedPositions:t.surfaces?.filter(s=>s.recommendation.valid).length??0,reason:t.reason??null}))},null,2);
   $('analysis-summary').textContent='原夹装灯被语义核查排除；现在使用独立圆底管灯复核同三桌，不称新的未知模型测试集。每个未通过候选仍保留在菜单中。';
-  for(const table of analysis.tables){const b=document.createElement('button');b.dataset.asset=table.asset.id;b.textContent=table.asset.label;const small=document.createElement('small');small.textContent=`${table.surfaces?.length??0} 个检测面`;b.append(small);b.onclick=()=>operation('selectAsset',{assetId:table.asset.id});$('asset-options').append(b);}
-  await view.prepare(analysis);await render(first);wireCanvas();$('loading').hidden=true;if(first.savedRejected)toast(`保存资料未通过：${first.savedRejected}。原保存文本保留。`);
+  for(const table of analysis.tables){const b=document.createElement('button');b.disabled=true;b.dataset.asset=table.asset.id;b.textContent=table.asset.label;const small=document.createElement('small');small.textContent=`${table.surfaces?.length??0} 个检测面`;b.append(small);b.onclick=()=>operation('selectAsset',{assetId:table.asset.id});$('asset-options').append(b);}
+  await view.prepare(analysis);if(failed)return;await render(first);if(failed)return;initialized=true;setBusy(false);wireCanvas();$('loading').hidden=true;if(first.savedRejected)toast(`保存资料未通过：${first.savedRejected}。原保存文本保留。`);else if(!loaded.ok)toast(`${loaded.reason}。当前方案仍可编辑和下载。`);
 }catch(error){$('loading').hidden=true;$('load-error').hidden=false;$('error-detail').textContent=error.message;}}
 start();

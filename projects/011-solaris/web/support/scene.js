@@ -31,7 +31,7 @@ export class SupportScene {
       hdr.dispose();pmrem.dispose();
     },undefined,()=>{});
   }
-  resize(){const w=this.host.clientWidth,h=this.host.clientHeight;if(!w||!h)return;this.camera.aspect=w/h;this.camera.updateProjectionMatrix();this.renderer.setSize(w,h,false);if(this.tableData)this.home();}
+  async resize(){await this.beforeResize?.();const w=this.host.clientWidth,h=this.host.clientHeight;if(!w||!h)return;this.camera.aspect=w/h;this.camera.updateProjectionMatrix();this.renderer.setSize(w,h,false);if(this.tableData)this.home();}
   fitDistance(){const b=this.tableData?.bounds,t=this.tablePose;if(!b)return 4.1;const width=(b.max[0]-b.min[0])*(t?.scale.x??1),depth=(b.max[2]-b.min[2])*(t?.scale.z??1);
     return Math.max(4.1,Math.hypot(width,depth)/(2*Math.tan(THREE.MathUtils.degToRad(this.camera.fov/2))*this.camera.aspect)*1.12);}
   home(){const t=this.tablePose??{x:0,y:0,z:0},d=this.fitDistance();this.controls.target.set(t.x,t.y+.65,t.z);this.camera.position.copy(new THREE.Vector3(2.4,1.3,3.05).normalize().multiplyScalar(d).add(this.controls.target));this.controls.maxDistance=Math.max(8,d*2);this.controls.update();}
