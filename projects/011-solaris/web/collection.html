@@ -40,7 +40,36 @@
   <dialog id="travel-dialog" aria-labelledby="travel-title"><div class="dialog-head"><span class="eyebrow">CONTINUE IN A SCENE</span><button data-close="travel-dialog" aria-label="关闭场景去向">×</button></div><h2 id="travel-title">进入场景</h2><p id="travel-description"></p><dl class="task-description"><div><dt>怎么操作</dt><dd id="travel-operation"></dd></div><div><dt>看到什么</dt><dd id="travel-expected"></dd></div><div><dt>验证范围</dt><dd id="travel-boundary"></dd></div></dl><div class="travel-checkpoint"><strong>你的陈列将留在这里</strong><p>陈列、锁定、选品与偏好会保存。目标场景继续使用它已有的独立方案；素材不会被自动放入场景。</p><p>完成操作并保存稳定方案后，点击“返回选品台”。再次进入会读取保存的状态，不续播未完成动作、供能或追随过程。</p></div><div class="dialog-actions"><button data-close="travel-dialog">取消</button><button id="enter-scene" class="primary">保存并进入 ↗</button></div></dialog>
   <dialog id="json-dialog" aria-labelledby="json-title"><div class="dialog-head"><span class="eyebrow">KEEP YOUR COLLECTION</span><button data-close="json-dialog" aria-label="关闭陈列备份">×</button></div><h2 id="json-title">保存这份陈列</h2><p>复制完整 JSON 备份，或粘贴已有陈列恢复。来源模型保持登记版本。</p><label class="sr-only" for="json-text">陈列 JSON</label><textarea id="json-text" spellcheck="false"></textarea><p id="json-message" role="status"></p><div class="dialog-actions"><a id="download-json" download="atelier-collection.json">下载 JSON</a><button id="import-json" class="primary">应用陈列</button></div></dialog>
   <dialog id="trip-backup-dialog" aria-labelledby="trip-backup-title"><div class="dialog-head"><span class="eyebrow">KEEP THE ORIGINAL RECORD</span><button data-close="trip-backup-dialog" aria-label="关闭原始检查点备份">×</button></div><h2 id="trip-backup-title">保留原始返回检查点</h2><p>这是本窗口读取到的原始记录。下载只保留原文；进入登记任务时，可明确重建新的返回检查点。</p><textarea id="trip-raw" readonly aria-label="原始返回检查点" spellcheck="false"></textarea><div class="dialog-actions"><a id="download-trip-raw" download="atelier-trip-original.json">下载原始检查点</a><button data-close="trip-backup-dialog">关闭</button></div></dialog>
-  <dialog id="workspace-dialog" aria-labelledby="workspace-title"><div class="dialog-head"><span class="eyebrow">KEEP YOUR WORK TOGETHER</span><button data-close="workspace-dialog" aria-label="关闭整套工作台备份">×</button></div><h2 id="workspace-title">把一套方案，一起保留下来。</h2><p class="workspace-intro">汇总本机已保存的陈列和九个工作台。客厅包含 A/B 方案；尚未保存的编辑，请先回到对应工作台保存。</p><div class="workspace-toolbar"><a id="workspace-download" download="atelier-workspaces.json" hidden>下载整套备份</a><button id="workspace-refresh">重新读取本机保存</button><label class="workspace-file-button" for="workspace-file">打开整套备份文件<input id="workspace-file" class="sr-only" type="file" accept="application/json,.json"></label></div><details id="workspace-text-panel" class="workspace-text-panel"><summary>查看备份内容 / 粘贴已有备份</summary><p>可复制下方完整内容另存为 JSON 文件，也可粘贴一份整套备份后检查。查看和检查不会改写本机存档。</p><textarea id="workspace-text" aria-label="整套工作台备份内容" spellcheck="false"></textarea><div class="workspace-text-actions"><button id="workspace-copy">复制完整备份</button><button id="workspace-preview-text">检查粘贴内容</button></div></details><div id="workspace-summary" class="workspace-summary"></div><p id="workspace-file-name" class="fine" hidden></p><div class="workspace-table-wrap"><table class="workspace-table"><thead><tr><th scope="col">工作台</th><th scope="col" id="workspace-content-heading">本机已保存内容</th><th scope="col">处理</th></tr></thead><tbody id="workspace-rows"></tbody></table></div><p id="workspace-message" class="workspace-message" role="status"></p><div id="workspace-restore-panel" class="workspace-restore-panel" hidden><strong>只恢复勾选的工作台</strong><p>恢复会覆盖所选工作台的本机存档，未勾选和文件中的空项保持。请先保存并关闭其他编辑窗口，恢复后重新打开对应工作台。</p><p>这份备份保存稳定方案；未完成动作、临时预览、撤销历史和返回检查点不随文件恢复。</p><div class="dialog-actions"><a id="workspace-before-download" download="atelier-before-restore.json" hidden>先下载当前本机备份</a><button id="workspace-apply" class="primary" disabled>恢复所选工作台</button></div></div></dialog>
+  <dialog id="workspace-dialog" aria-labelledby="workspace-title">
+    <div class="dialog-head"><span class="eyebrow">KEEP YOUR WORK TOGETHER</span><button data-close="workspace-dialog" aria-label="关闭整套工作台备份">×</button></div>
+    <h2 id="workspace-title">把一套方案，一起保留下来。</h2>
+    <p class="workspace-intro">汇总本机已保存的陈列和九个工作台，客厅包含 A/B 方案。请先保存并关闭其他编辑页；整套文件使用 UTF-8 JSON，最多12 MiB。</p>
+    <p class="workspace-steps"><strong>保存：</strong>读取本机 → 下载文件 → 在下载列表确认 → 重新打开检查。<br><strong>恢复：</strong>打开或粘贴 → 核对差异 → 保留恢复前备份 → 恢复所选 → 重开所选页。</p>
+    <div class="workspace-toolbar">
+      <a id="workspace-download" download="atelier-workspaces.json" hidden>下载整套备份</a>
+      <button id="workspace-refresh">重新读取本机保存</button>
+      <label class="workspace-file-button" for="workspace-file">打开整套备份文件<input id="workspace-file" class="sr-only" type="file" accept="application/json,.json"></label>
+    </div>
+    <p id="workspace-export-info" class="workspace-file-info" hidden></p>
+    <details id="workspace-text-panel" class="workspace-text-panel">
+      <summary>查看备份内容 / 粘贴已有备份</summary>
+      <p>复制后可另存为 UTF-8 JSON；粘贴或修改文本后，先检查再下载或恢复。读取失败会保留当前文本，查看和检查不会改写存档。</p>
+      <p id="workspace-text-status" class="workspace-text-status">读取本机保存或打开文件后，可查看完整文本。</p>
+      <textarea id="workspace-text" aria-label="整套工作台备份内容" spellcheck="false"></textarea>
+      <div class="workspace-text-actions"><button id="workspace-copy">复制完整备份</button><button id="workspace-preview-text">检查粘贴内容</button></div>
+    </details>
+    <div id="workspace-summary" class="workspace-summary"></div>
+    <p id="workspace-file-name" class="fine" hidden></p>
+    <div class="workspace-table-wrap"><table class="workspace-table"><thead><tr><th scope="col">工作台</th><th scope="col" id="workspace-content-heading">本机已保存内容</th><th scope="col">处理</th></tr></thead><tbody id="workspace-rows"></tbody></table></div>
+    <p id="workspace-message" class="workspace-message" role="status"></p>
+    <div id="workspace-restore-panel" class="workspace-restore-panel" hidden>
+      <strong>只恢复勾选的工作台</strong>
+      <p>恢复会覆盖所选工作台的本机存档，未勾选和文件中的空项保持。请先保存并关闭其他编辑窗口，恢复后重新打开对应工作台。</p>
+      <p>这份备份保存稳定方案；未完成动作、临时预览、撤销历史和返回检查点不随文件恢复。</p>
+      <p id="workspace-before-info" class="workspace-file-info" hidden></p>
+      <div class="dialog-actions"><a id="workspace-before-download" download="atelier-before-restore.json" hidden>先下载当前本机备份</a><button id="workspace-apply" class="primary" disabled>恢复所选工作台</button></div>
+    </div>
+  </dialog>
   <script type="module" src="./collection/app.js"></script><script type="module" src="./capabilities/scene-capabilities.js"></script>
 </body>
 </html>
