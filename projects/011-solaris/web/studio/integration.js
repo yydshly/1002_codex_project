@@ -4,7 +4,8 @@ const node = (tag, value, className) => { const el=document.createElement(tag); 
 let data, filter = 'all', phaseFilter = 'all', selectedPhase;
 const phaseFor = id => data.roadmap.phases.find(p => p.id === id);
 const phaseLabel = phase => `阶段 ${String(phase.order).padStart(2,'0')}`;
-const phaseState = phase => phase.connected===phase.total ? '已接入 · 限定范围' : phase.id===data.roadmap.activePhaseId ? '当前推进' : phase.connected ? '部分接入' : '待研发';
+const onDemand = () => data?.projectStatus?.expansionMode === 'on-demand';
+const phaseState = phase => phase.connected===phase.total ? '已接入 · 限定范围' : onDemand() ? (phase.connected ? '部分接入 · 按需扩展' : '按需研究') : phase.id===data.roadmap.activePhaseId ? '当前推进' : phase.connected ? '部分接入' : '待研发';
 
 function render() {
   const query=$('#capability-search').value.trim().toLowerCase();
@@ -22,10 +23,10 @@ function render() {
     const dl=document.createElement('dl');
     for(const [term,value] of [
       ['接入阶段',`${phaseLabel(phase)} · ${phase.name}`],
-      ['研发顺序',connected?'已接入，持续验证画面、交互与状态可靠性':c.plan.priority],
+      ['研发安排',onDemand() ? (connected?'已接入限定范围；基础探索收束，后续按产品需求验证':'按需扩展，尚未排期；已有接入条件保留') : connected?'已接入，持续验证画面、交互与状态可靠性':c.plan.priority],
       ['目标场景',c.plan.scenario],['依赖条件',c.plan.dependencies.join('；')],
       ['操作入口',c.entrance],['当前范围',c.scope],['实现方案',c.implementation],['需要的数据',c.input],
-      [connected?'体验方法':'下一步接入',connected?c.trial:c.next],['验收要求',c.acceptance]
+      [connected?'体验方法':onDemand()?'后续接入条件':'下一步接入',connected?c.trial:c.next],['验收要求',c.acceptance]
     ]) { dl.append(node('dt',term),node('dd',value || '请查看对应场景操作说明')); }
     detail.append(summary,dl);list.append(detail);
   }
@@ -79,7 +80,7 @@ function renderRoadmap() {
   const grid=$('#roadmap-phases');grid.replaceChildren();
   for(const phase of data.roadmap.phases){
     const card=document.createElement('button');card.type='button';card.dataset.phase=phase.id;card.className='phase-card';card.setAttribute('aria-pressed','false');
-    const top=document.createElement('span');top.className='phase-card-top';top.append(node('span',phaseLabel(phase)),node('span',phaseState(phase),phase.id===data.roadmap.activePhaseId?'phase-state current':'phase-state'));
+    const top=document.createElement('span');top.className='phase-card-top';top.append(node('span',phaseLabel(phase)),node('span',phaseState(phase),!onDemand()&&phase.id===data.roadmap.activePhaseId?'phase-state current':'phase-state'));
     const count=document.createElement('span');count.className='phase-count';count.append(node('strong',String(phase.connected)),node('span',` / ${phase.total} 项已接入`));
     card.append(top,node('strong',phase.name,'phase-card-title'),count);
     card.addEventListener('click',()=>{renderPhase(phase.id);phaseFilter=phase.id;$('#phase-filter').value=phase.id;render();});grid.append(card);

@@ -74,6 +74,7 @@ const nextSteps = {
 const data = {
   version: research.currentRelease.version, updatedAt: research.updatedAt, total: research.capabilityRoutes.length,
   connected: connectedCount,
+  projectStatus: research.currentRelease.projectStatus ?? null,
   researchWorkbenches: research.currentRelease.tableSupportResearch ? [research.currentRelease.tableSupportResearch] : [],
   scenePrinciple: sceneCatalog.principle,
   scenes: sceneCatalog.scenes.map(scene => {
@@ -86,7 +87,7 @@ const data = {
   }),
   roadmap: {
     title: roadmap.title, principle: roadmap.planningPrinciple, scheduleBoundary: roadmap.scheduleBoundary,
-    activePhaseId: roadmap.activePhaseId, releaseGates: roadmap.releaseGates,
+    deliveryMode: roadmap.deliveryMode ?? 'active', activePhaseId: roadmap.activePhaseId, releaseGates: roadmap.releaseGates,
     phases: roadmap.phases.map(p => {
       const capabilityIds = roadmap.capabilities.filter(c => c.phaseId === p.id).map(c => c.id);
       const connectedIds = research.capabilityRoutes.filter(r => capabilityIds.includes(r.capabilityId) && r.implementationStatus === 'implemented-bounded').map(r => r.capabilityId);
