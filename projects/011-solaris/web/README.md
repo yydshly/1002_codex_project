@@ -4,6 +4,8 @@
 
 从[项目理解与完整总览](http://localhost:4189/projects/011-solaris/overview.html)及[新版汇总图](../assets/atelier-understanding-map.svg)阅读来源能力、原理、自主实现、场景用途和对后续产品的意义；[首页](http://localhost:4189/projects/011-solaris/)关联全部入口，[能力与接入说明](http://localhost:4189/projects/011-solaris/integration.html#scenes)记录操作和验证范围，[研究画廊](http://localhost:4189/projects/011-solaris/research.html#demo)保留官方媒体。0.18.2当轮386/386项产品Node测试、16/16项仓库检查已通过；本次网页整理的检查单独记录，不代表所有场景重新实测。全部历史数字、真实操作、失败与未验证事项按各自版本阅读，阶段收束不代表商用成熟或任意输入、设备和故障均已验证。
 
+汇总图现以清晰的效果展板呈现：源侧13个有公开画面场景、14份原始图；本项目侧11个场景的实际效果、独立桌灯和真人参考。网页可切换两侧或整图，125%–200%放大并在图内滚动，源图片目录保留完整过程图及出处。所有照片来自已留档的原图，不由AI替换；此次改进展示与说明，基础版本仍为0.18.2。原图清单见[solaris-effects/manifest.json](assets/solaris-effects/manifest.json)，新发布检查见[effect-display-validation.json](../notes/effect-display-validation.json)。
+
 **0.15.0历史：** 同一试衣场景提供三维衣鞋搭配和真人正面上装研究参考两个入口。真人用本机部署的FASHN预训练服务，四组实际输出与首次内存不足失败留档：跨衣缺实穿对照，原衣重建与实拍不一致，不判尺码或商业可用。当轮189项产品与18项Python后端测试通过，网页分界比较、放大/平移和复位已实际验证；PNG预览/评审JSON内容与选款撤销已核查；自动下载写盘/剪贴板一致性及异常另验；原C17/C18、水下和材料历史保留。
 
 0.12.0历史：C31有限跟随在固定水层/单鱼/单潜水员/三登记礁石接入；稳定v2及旧v1最新工作区保值迁移后保存重开完整JSON一致，PNG1443×969已解码；追随中重新抓鱼及设备/性能专项仍另验。详见[水下操作与边界](../notes/integration.md#underwater)。

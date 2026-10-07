@@ -1,0 +1,346 @@
+{
+  "date": "2026-10-07",
+  "scope": "效果展示整理；保持0.18.2基础收束，不新增功能、场景或研究排期",
+  "entry": "../web/overview.html#project-map",
+  "replaces": {
+    "report": "understanding-overview-validation.json",
+    "artifactCommit": "3d747bf13808d96e0b7dff04b2b6eea3b63e2274",
+    "historicalResultsUnmodified": true
+  },
+  "sourceReview": {
+    "manifest": "../web/assets/solaris-effects/manifest.json",
+    "sourceModelExecuted": false,
+    "sourceVideoReplayed": false,
+    "sourceScenesWithMedia": 13,
+    "originalFiles": 14,
+    "textOnlyCategories": 2,
+    "files": [
+      {
+        "sceneId": "interior",
+        "file": "interior.jpg",
+        "width": 3440,
+        "height": 968,
+        "format": "jpeg",
+        "bytes": 813255,
+        "sha256": "b4490c118f3c781acfc001246be176366b4983bde6759229e22f96a89f86490c",
+        "source": "https://arxiv.org/html/2609.00776v1/figures/interior/interior_strip.jpg"
+      },
+      {
+        "sceneId": "fashion",
+        "file": "fashion.jpg",
+        "width": 3424,
+        "height": 968,
+        "format": "jpeg",
+        "bytes": 690882,
+        "sha256": "3be5e939319ed4ffa21a9c1466879b7c8b9f62231925570c169ab15fd46b79bd",
+        "source": "https://arxiv.org/html/2609.00776v1/figures/ecomm_fashion/ecomm_fashion_strip.jpg"
+      },
+      {
+        "sceneId": "xray",
+        "file": "xray.jpg",
+        "width": 3424,
+        "height": 480,
+        "format": "jpeg",
+        "bytes": 200047,
+        "sha256": "18a4927ddb436f36c339d9de248d1b0a5c0bd78886f3e739ffab2db5a11894d3",
+        "source": "https://arxiv.org/html/2609.00776v1/figures/xray/xray_1_strip.jpg"
+      },
+      {
+        "sceneId": "xray",
+        "file": "xray-2.jpg",
+        "width": 3424,
+        "height": 480,
+        "format": "jpeg",
+        "bytes": 133746,
+        "sha256": "a982373e1aa1ba2b81ea665824663ca2e6e229fadf367ff12cf26dcee41c62dd",
+        "source": "https://arxiv.org/html/2609.00776v1/figures/xray/xray_2_strip.jpg"
+      },
+      {
+        "sceneId": "salad",
+        "file": "salad.jpg",
+        "width": 3424,
+        "height": 968,
+        "format": "jpeg",
+        "bytes": 1182388,
+        "sha256": "860234f21a9b0f80f1a1cc19d5f57f74803d5aee7eb0c3ef4f4f05d8701c4e17",
+        "source": "https://arxiv.org/html/2609.00776v1/figures/salad/salad_strip.jpg"
+      },
+      {
+        "sceneId": "combustion",
+        "file": "combustion.jpg",
+        "width": 3424,
+        "height": 968,
+        "format": "jpeg",
+        "bytes": 509115,
+        "sha256": "5fb6ad3fa69cb29b597f86bd1629afb2dabe3a3a1d9ad68da1783a2b1f03c1fc",
+        "source": "https://arxiv.org/html/2609.00776v1/figures/edu_fire/edu_fire_strip.jpg"
+      },
+      {
+        "sceneId": "landmark",
+        "file": "landmark.jpg",
+        "width": 3424,
+        "height": 968,
+        "format": "jpeg",
+        "bytes": 1147766,
+        "sha256": "28a3dd7a3b84adc7860b93661e88632f7ee09b9ed29c0ebd8384c7155eae4b4b",
+        "source": "https://arxiv.org/html/2609.00776v1/figures/nav_paris/nav_paris_strip.jpg"
+      },
+      {
+        "sceneId": "car",
+        "file": "car.jpg",
+        "width": 3424,
+        "height": 968,
+        "format": "jpeg",
+        "bytes": 582364,
+        "sha256": "af90d6af9bc95d1bf6ac8a1b3fcf9119fdef29e2a6e308031415ae69ee20d4b7",
+        "source": "https://arxiv.org/html/2609.00776v1/figures/alive_car/alive_car_strip.jpg"
+      },
+      {
+        "sceneId": "streetlight",
+        "file": "streetlight.webp",
+        "width": 1248,
+        "height": 704,
+        "format": "webp",
+        "bytes": 57552,
+        "sha256": "da45105e486efa61ebd39716a077624e220213a7351eacbc701e8b4cc77daae9",
+        "source": "https://image.mux.com/ePesxF92BUTxrRTA301CM3YbC75dwxHJWPvbHLi87sY8/thumbnail.webp"
+      },
+      {
+        "sceneId": "floating",
+        "file": "floating.jpg",
+        "width": 2632,
+        "height": 480,
+        "format": "jpeg",
+        "bytes": 420336,
+        "sha256": "58a9cff944246d795c2b9f7a6721a40dd30bc50ef64a3d161acd697875e13ff4",
+        "source": "https://arxiv.org/html/2609.00776v1/figures/comparisons/cmp_solaris_liftoff_strip.jpg"
+      },
+      {
+        "sceneId": "camera",
+        "file": "camera.jpg",
+        "width": 2632,
+        "height": 480,
+        "format": "jpeg",
+        "bytes": 303354,
+        "sha256": "d320047c52a61c71ce6e020e08e470886c585838600f0a15ffc8b513a41fc754",
+        "source": "https://arxiv.org/html/2609.00776v1/figures/comparisons/cmp_solaris_lighthouse_strip.jpg"
+      },
+      {
+        "sceneId": "mobile-fish",
+        "file": "mobile-fish.jpg",
+        "width": 826,
+        "height": 480,
+        "format": "jpeg",
+        "bytes": 136631,
+        "sha256": "7082b0bb6f9b2a75311551f8d9cade45b71be771d032075bdfaf2f30fd37833f",
+        "source": "https://arxiv.org/html/2609.00776v1/figures/dragging/mobile_ocean_strip.jpg"
+      },
+      {
+        "sceneId": "mobile-skateboard",
+        "file": "mobile-skateboard.jpg",
+        "width": 826,
+        "height": 480,
+        "format": "jpeg",
+        "bytes": 130327,
+        "sha256": "73f36664cdbe81e07c633724884171b2f9f65124987ee402528421e57a11e647",
+        "source": "https://arxiv.org/html/2609.00776v1/figures/dragging/skateboard_strip.jpg"
+      },
+      {
+        "sceneId": "interior-extended",
+        "file": "interior-extended.jpg",
+        "width": 3440,
+        "height": 968,
+        "format": "jpeg",
+        "bytes": 697364,
+        "sha256": "d273ed5dc7929995e2d0f7b7c925b3ccbdd5a4c507f0bec32922deee166a853c",
+        "source": "https://arxiv.org/html/2609.00776v1/figures/interior_design/interior_design_strip.jpg"
+      }
+    ],
+    "attribution": "Solaris authors / Runway; original research figures and official player cover, not our model outputs",
+    "paperLicense": "arXiv non-exclusive distribution license, not CC0 or a confirmed reuse license"
+  },
+  "display": {
+    "mainDimensions": [
+      4800,
+      10105
+    ],
+    "regionDimensions": [
+      2340,
+      7320
+    ],
+    "productScenes": 11,
+    "additionalEntries": [
+      "support",
+      "real-person"
+    ],
+    "originalPhotographs": 27,
+    "sourceOriginalsEmbeddedUnchanged": true,
+    "photographsOpaque": true,
+    "textOutsidePhotographs": true,
+    "selectedOriginalFrameWindowsClipped": true,
+    "clipWindows": 54,
+    "originalStripsRetained": true,
+    "repairs": [
+      "Only selected original pixels appear inside frame windows; neighboring frames no longer leak into letterbox",
+      "Image MIME follows actual byte signature; historical real-person .png is JPEG, unchanged bytes are displayed correctly"
+    ],
+    "artifacts": [
+      {
+        "file": "assets/atelier-understanding-map.svg",
+        "width": 4800,
+        "height": 10105,
+        "bytes": 10935870,
+        "sha256": "5ac5c49d108a5b8dbad6c2843a8e4ddea3845285a903918402206a172393d311"
+      },
+      {
+        "file": "assets/atelier-understanding-map.png",
+        "width": 4800,
+        "height": 10105,
+        "bytes": 18961363,
+        "sha256": "65a37d31c130995c0d0071ffc249d5c56a4f81154ed0c1c180ea8dd8a1fd1318"
+      },
+      {
+        "file": "assets/atelier-understanding-map-source.svg",
+        "width": 2340,
+        "height": 7320,
+        "bytes": 10935871,
+        "sha256": "a1887edffccb54594b7806048f52eaebefd177c94a857a56d60d4255b165f387"
+      },
+      {
+        "file": "assets/atelier-understanding-map-source.png",
+        "width": 2340,
+        "height": 7320,
+        "bytes": 9949292,
+        "sha256": "d9b9dfc435c5b51569191bbb5c5d7720871425d912b13362e057eec410b7b5eb"
+      },
+      {
+        "file": "assets/atelier-understanding-map-ours.svg",
+        "width": 2340,
+        "height": 7320,
+        "bytes": 10935873,
+        "sha256": "4f44a560529ef04ce14e23fbc03bd381b2e08ca8e8dfc1bd92cf5223f8868653"
+      },
+      {
+        "file": "assets/atelier-understanding-map-ours.png",
+        "width": 2340,
+        "height": 7320,
+        "bytes": 6715879,
+        "sha256": "1a9244b5e1d915b32d1de09b44ce5402be0ea8aa448200874d49a175a315206b"
+      }
+    ]
+  },
+  "inventory": {
+    "families": 12,
+    "sourceItems": 36,
+    "evidence": {
+      "figure": 25,
+      "existingVideoObservation": 1,
+      "comparison": 2,
+      "description": 5,
+      "prospect": 3
+    },
+    "boundedMapping": 35,
+    "remaining": "C19",
+    "productScenes": 11,
+    "taskTargets": 9,
+    "workspaceRecords": 10,
+    "newCapabilities": 0
+  },
+  "automatic": {
+    "repositoryTests": {
+      "passed": 16,
+      "failed": 0,
+      "command": "node --test scripts/tests/*.test.mjs"
+    },
+    "catalogCheck": true,
+    "build": true,
+    "integrationCheck": {
+      "release": "0.18.2",
+      "boundedMapping": "35/36",
+      "scenes": 11,
+      "editorTools": 6
+    },
+    "localUrlsAndFragments": 193,
+    "homeIdsPreserved": 113,
+    "sourceDirectoryGroups": 13,
+    "sourceDirectoryImages": 14,
+    "mainAndRegionSvgCopiesMatch": true,
+    "mainPngCopiesMatch": true,
+    "sourceOriginalHashesMatch": true,
+    "viewerJavaScriptSyntax": true,
+    "gitDiffCheck": true
+  },
+  "browser": {
+    "actualPageWidth": 768,
+    "defaultView": "source",
+    "sourceDimensions": [
+      2340,
+      7320
+    ],
+    "ourDimensions": [
+      2340,
+      7320
+    ],
+    "fullDimensions": [
+      4800,
+      10105
+    ],
+    "threeViewsAndPressedStates": true,
+    "currentOriginalLinkFollowsSelectedView": true,
+    "zoomMeasurements": {
+      "viewportWidth": 703,
+      "fitScrollWidth": 703,
+      "zoom125ScrollWidth": 879,
+      "zoom150ScrollWidth": 1055,
+      "zoom200ScrollWidth": 1407,
+      "pageWidth": 768,
+      "pageScrollWidth": 768
+    },
+    "keyboard": [
+      "ArrowRight",
+      "ArrowLeft",
+      "Home",
+      "End"
+    ],
+    "viewChangeResetsInnerScroll": true,
+    "innerVerticalScroll": {
+      "passed": true,
+      "scrollTop": 1572.6666259765625,
+      "scrollHeight": 2200,
+      "clientHeight": 627,
+      "tailRealPersonImageDisplayed": true
+    },
+    "sourceDirectoryOpened": {
+      "passed": true,
+      "groups": 13,
+      "images": 14,
+      "firstOriginal": {
+        "width": 3440,
+        "height": 968,
+        "loaded": true
+      },
+      "sourceAndRelatedLinksPresent": true
+    },
+    "consoleErrorsAndWarnings": 0,
+    "proofs": [
+      "../assets/atelier-effect-source-view.jpg",
+      "../assets/atelier-effect-ours-view.jpg",
+      "../assets/atelier-effect-zoom-view.jpg",
+      "../assets/atelier-effect-ours-tail.jpg",
+      "../assets/atelier-effect-source-directory.jpg"
+    ],
+    "finalReload": {
+      "sourceView": true,
+      "zoom100": true,
+      "sourceImageLoaded": true,
+      "directoryCollapsed": true
+    }
+  },
+  "boundaries": [
+    "No source model execution or new video playback",
+    "Existing operation screenshots do not mean all scenes were rerun this round",
+    "386 product tests and 16 repository tests shown in the map are the historical 0.18.2 result; only repository checks were rerun here",
+    "Actual page width 768 was observed; no new mobile/touch/other-browser claim",
+    "C19 and fitting/real-person expansion remain paused; 35/36 is a bounded mapping, not completion percentage"
+  ]
+}

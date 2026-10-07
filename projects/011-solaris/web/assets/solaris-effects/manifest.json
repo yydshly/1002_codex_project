@@ -1,0 +1,169 @@
+{
+  "date": "2026-10-07",
+  "purpose": "用户要求将清晰源效果接入完整理解图；从已登记官方URL获取原图以制作可携带的来源对照展板",
+  "publisher": "Runway / Solaris authors",
+  "modelExecuted": false,
+  "videoReplayed": false,
+  "items": [
+    {
+      "sceneId": "interior",
+      "title": "室内设计：移动、缩放与换材质",
+      "url": "https://arxiv.org/html/2609.00776v1/figures/interior/interior_strip.jpg",
+      "sourcePage": "https://runway.com/news/research/introducing-solaris",
+      "kind": "论文原过程图",
+      "file": "interior.jpg",
+      "sourceEvidence": "官网 What’s New 第二段视频；论文 Figure 2 明确描述移动灯、缩放画与植物、应用沙发布料。MP4 来自官方 Download，封面来自播放器 poster 属性。",
+      "bytes": 813255,
+      "sha256": "b4490c118f3c781acfc001246be176366b4983bde6759229e22f96a89f86490c"
+    },
+    {
+      "sceneId": "fashion",
+      "title": "服饰购物：把商品拖到自己身上",
+      "url": "https://arxiv.org/html/2609.00776v1/figures/ecomm_fashion/ecomm_fashion_strip.jpg",
+      "sourcePage": "https://runway.com/news/research/introducing-solaris",
+      "kind": "论文原过程图",
+      "file": "fashion.jpg",
+      "sourceEvidence": "官网 What’s New 第一段视频；论文 Figure 1 显示先选红鞋再选蓝衬衫，并描述外观与购物车更新。",
+      "bytes": 690882,
+      "sha256": "3be5e939319ed4ffa21a9c1466879b7c8b9f62231925570c169ab15fd46b79bd"
+    },
+    {
+      "sceneId": "xray",
+      "title": "手部 X 光：相同拖动，不同语义",
+      "url": "https://arxiv.org/html/2609.00776v1/figures/xray/xray_1_strip.jpg",
+      "sourcePage": "https://runway.com/news/research/introducing-solaris",
+      "kind": "论文原过程图",
+      "file": "xray.jpg",
+      "sourceEvidence": "官网同起始画面与同拖动的并排视频；论文 Figure 3 对两种响应分别注明手腕放大与手部测量。测量显示属于演示，不构成尺寸准确性的验证。",
+      "bytes": 200047,
+      "sha256": "18a4927ddb436f36c339d9de248d1b0a5c0bd78886f3e739ffab2db5a11894d3"
+    },
+    {
+      "sceneId": "xray",
+      "title": "手部 X 光：相同拖动，不同语义",
+      "url": "https://arxiv.org/html/2609.00776v1/figures/xray/xray_2_strip.jpg",
+      "sourcePage": "https://runway.com/news/research/introducing-solaris",
+      "kind": "论文原过程图",
+      "file": "xray-2.jpg",
+      "sourceEvidence": "官网同起始画面与同拖动的并排视频；论文 Figure 3 对两种响应分别注明手腕放大与手部测量。测量显示属于演示，不构成尺寸准确性的验证。",
+      "bytes": 133746,
+      "sha256": "a982373e1aa1ba2b81ea665824663ca2e6e229fadf367ff12cf26dcee41c62dd"
+    },
+    {
+      "sceneId": "salad",
+      "title": "沙拉搭配：把食材拖入碗中",
+      "url": "https://arxiv.org/html/2609.00776v1/figures/salad/salad_strip.jpg",
+      "sourcePage": "https://runway.com/news/research/introducing-solaris",
+      "kind": "论文原过程图",
+      "file": "salad.jpg",
+      "sourceEvidence": "官网沙拉视频；论文 Figure 4 说明在场景中拖食材进碗。",
+      "bytes": 1182388,
+      "sha256": "860234f21a9b0f80f1a1cc19d5f57f74803d5aee7eb0c3ef4f4f05d8701c4e17"
+    },
+    {
+      "sceneId": "combustion",
+      "title": "燃烧教学：用火焰触碰不同材料",
+      "url": "https://arxiv.org/html/2609.00776v1/figures/edu_fire/edu_fire_strip.jpg",
+      "sourcePage": "https://runway.com/news/research/introducing-solaris",
+      "kind": "论文原过程图",
+      "file": "combustion.jpg",
+      "sourceEvidence": "官网燃烧课程视频；论文 Figure 5 明确描述拖火焰到不同材料。视觉反应不等于已验证的化学或物理模拟。",
+      "bytes": 509115,
+      "sha256": "5fb6ad3fa69cb29b597f86bd1629afb2dabe3a3a1d9ad68da1783a2b1f03c1fc"
+    },
+    {
+      "sceneId": "landmark",
+      "title": "地标探索：时间、信息与视角切换",
+      "url": "https://arxiv.org/html/2609.00776v1/figures/nav_paris/nav_paris_strip.jpg",
+      "sourcePage": "https://runway.com/news/research/introducing-solaris",
+      "kind": "论文原过程图",
+      "file": "landmark.jpg",
+      "sourceEvidence": "官网 How Solaris Works 区域的第一段视频已目视确认是埃菲尔铁塔；论文 Figure 6 描述时间、信息与视点变化。",
+      "bytes": 1147766,
+      "sha256": "28a3dd7a3b84adc7860b93661e88632f7ee09b9ed29c0ebd8384c7155eae4b4b"
+    },
+    {
+      "sceneId": "car",
+      "title": "汽车展示：转动产品与打开引擎盖",
+      "url": "https://arxiv.org/html/2609.00776v1/figures/alive_car/alive_car_strip.jpg",
+      "sourcePage": "https://arxiv.org/html/2609.00776v1",
+      "kind": "论文原过程图",
+      "file": "car.jpg",
+      "sourceEvidence": "论文 Figure 7 展示并描述车灯、拖车转视角、打开引擎盖；当前核查的官网未找到该场景独立视频链接。",
+      "bytes": 582364,
+      "sha256": "af90d6af9bc95d1bf6ac8a1b3fcf9119fdef29e2a6e308031415ae69ee20d4b7"
+    },
+    {
+      "sceneId": "streetlight",
+      "title": "街景光照：鼠标改变环境",
+      "url": "https://image.mux.com/ePesxF92BUTxrRTA301CM3YbC75dwxHJWPvbHLi87sY8/thumbnail.webp",
+      "sourcePage": "https://runway.com/news/research/introducing-solaris",
+      "kind": "官方播放器封面",
+      "file": "streetlight.webp",
+      "sourceEvidence": "官网 Continuous generation 与 Redefining the mouse 之间的 7 秒街景视频。目视 0 秒太阳在左上、3 秒落到近地平线且天空暖橙与建筑变暗、7 秒回到初始照明；鼠标圆形标记位于太阳附近。官方此处没有逐项标注输入映射，未确认按下与释放状态。",
+      "bytes": 57552,
+      "sha256": "da45105e486efa61ebd39716a077624e220213a7351eacbc701e8b4cc77daae9"
+    },
+    {
+      "sceneId": "floating",
+      "title": "点击悬浮：整场景的自然响应",
+      "url": "https://arxiv.org/html/2609.00776v1/figures/comparisons/cmp_solaris_liftoff_strip.jpg",
+      "sourcePage": "https://runway.com/news/research/introducing-solaris#evaluating-solaris",
+      "kind": "论文原过程图",
+      "file": "floating.jpg",
+      "sourceEvidence": "官网 Solaris vs. Coded Interfaces 的第一段对比播放器公开 HLS src 与 poster；论文 Figure 12 提供 Solaris 静帧。当前未找到此播放器 Download MP4。",
+      "bytes": 420336,
+      "sha256": "58a9cff944246d795c2b9f7a6721a40dd30bc50ef64a3d161acd697875e13ff4"
+    },
+    {
+      "sceneId": "camera",
+      "title": "相机运动：从灯塔转向海岸",
+      "url": "https://arxiv.org/html/2609.00776v1/figures/comparisons/cmp_solaris_lighthouse_strip.jpg",
+      "sourcePage": "https://runway.com/news/research/introducing-solaris#evaluating-solaris",
+      "kind": "论文原过程图",
+      "file": "camera.jpg",
+      "sourceEvidence": "官网第二段对比播放器公开 HLS src 与 poster；论文 Figure 12 的第二组展示相机运动。原文提供运动指令，没有明确鼠标手势轨迹。",
+      "bytes": 303354,
+      "sha256": "d320047c52a61c71ce6e020e08e470886c585838600f0a15ffc8b513a41fc754"
+    },
+    {
+      "sceneId": "mobile-fish",
+      "title": "海底场景：拖鱼，潜水员跟随",
+      "url": "https://arxiv.org/html/2609.00776v1/figures/dragging/mobile_ocean_strip.jpg",
+      "sourcePage": "https://arxiv.org/html/2609.00776v1",
+      "kind": "论文原过程图",
+      "file": "mobile-fish.jpg",
+      "sourceEvidence": "官网竖屏海底播放器已目视确认，HLS 与封面来自公开 DOM；论文 Figure 13 上组明确描述鱼与潜水员的跟随关系。",
+      "bytes": 136631,
+      "sha256": "7082b0bb6f9b2a75311551f8d9cade45b71be771d032075bdfaf2f30fd37833f"
+    },
+    {
+      "sceneId": "mobile-skateboard",
+      "title": "滑板场景：拖板触发人物跳跃",
+      "url": "https://arxiv.org/html/2609.00776v1/figures/dragging/skateboard_strip.jpg",
+      "sourcePage": "https://arxiv.org/html/2609.00776v1",
+      "kind": "论文原过程图",
+      "file": "mobile-skateboard.jpg",
+      "sourceEvidence": "官网竖屏滑板播放器封面已目视确认，HLS 与封面来自公开 DOM；论文 Figure 13 下组描述向上拖滑板使骑手跳跃。",
+      "bytes": 130327,
+      "sha256": "73f36664cdbe81e07c633724884171b2f9f65124987ee402528421e57a11e647"
+    },
+    {
+      "sceneId": "interior-extended",
+      "title": "完整室内编辑：墙色、灯光、视角与画作",
+      "url": "https://arxiv.org/html/2609.00776v1/figures/interior_design/interior_design_strip.jpg",
+      "sourcePage": "https://runway.com/news/research/introducing-solaris#new-kinds-of-interfaces",
+      "kind": "论文原过程图",
+      "file": "interior-extended.jpg",
+      "sourceEvidence": "官网 New Kinds of Interfaces 视频已目视确认是室内编辑界面；论文 Figure 14 描述墙色、时间、灯光、视点与画作修改。",
+      "bytes": 697364,
+      "sha256": "d273ed5dc7929995e2d0f7b7c925b3ccbdd5a4c507f0bec32922deee166a853c"
+    }
+  ],
+  "rights": {
+    "paperLicenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "paperLicense": "arXiv non-exclusive distribution license; not CC0 or a confirmed reuse license",
+    "copyright": "Solaris authors / Runway",
+    "useDescription": "本项目作为公开研究说明引用并记录出处；不登记为本项目生成效果、CC0或已获商业授权素材"
+  }
+}

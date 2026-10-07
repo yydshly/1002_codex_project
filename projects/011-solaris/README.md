@@ -36,7 +36,11 @@
 
 ![Solaris与ATELIER完整理解图：源能力、功能、原理、自主实现、十一场景、支撑研究、用途、个人价值与边界](assets/atelier-understanding-map.png)
 
-新理解图为 **3840×3440**，提供[可放大矢量原图](assets/atelier-understanding-map.svg)和[完整PNG](assets/atelier-understanding-map.png)。图源可在本目录运行 `node scripts/understanding-map.mjs` 重建SVG。背景直接嵌入既有研究画廊与我们客厅、展厅、水下、桌灯的原截图，分别标“官方示例”和“我们的实景”；整图是理解导览，不能替代交互实测，正文保留可查找的完整说明。386/386与16/16在图中明确标为0.18.2当轮历史结果，不因本次汇总外推为所有场景复测。本次整理另通过16项仓库检查、143条发布链接/锚点、图源与图片发布检查，以及首页入口/面板和场景卡浏览；见[本次整理记录](notes/understanding-overview-validation.json)。
+新理解图为 **4800×10105**，提供[可放大矢量原图](assets/atelier-understanding-map.svg)和[完整PNG](assets/atelier-understanding-map.png)。左侧完整列出13个有公开画面的源场景，采用14份论文原过程图或官方封面：主要场景分别放大起始与变化帧，并保留完整原过程图；只有文字的工具/适配条目单独列出。右侧展示我们全部11个场景及独立桌灯、真人参考两个补充入口，用实际操作结果截图说明功能和限制。照片保持原始字节，文字放在照片外；原理、36项清单、用途、个人价值和阶段结论仍在同一张图中。
+
+网页新增“源效果 / 我们的效果 / 完整汇总图”切换、125%–200%放大、图内滚动、单侧原图入口及13组完整源图片目录。可单独阅读[源效果分区](assets/atelier-understanding-map-source.svg)和[我们的效果分区](assets/atelier-understanding-map-ours.svg)，图源可在本目录运行 `node scripts/understanding-map.mjs` 重建SVG。源图片的出处、原始文件摘要和使用说明见[原图清单](web/assets/solaris-effects/manifest.json)；这些是作者公开研究图，未实测原模型，也不是本项目生成结果。
+
+386/386与16/16在图中明确标为0.18.2当轮历史结果，照片采用已有实际演示留档，不因这次整理外推为所有场景复测。[首版理解汇总记录](notes/understanding-overview-validation.json)对应提交`3d747bf`中的3840×3440版本，143条链接检查与原摘要按历史保留；当前效果展示的发布与浏览器检查另见[效果展示记录](notes/effect-display-validation.json)。
 
 [0.17.0原汇总图](assets/atelier-project-overview.svg)、[原网页接入截图](assets/atelier-project-overview-page.png)与[原总览发布检查](notes/project-overview-validation.json)原样留档；[0.17.0整套备份实际页面](assets/atelier-workspace-backup.png)与[完整原文对照](assets/atelier-workspace-backup-state-checks.json)继续保留。
 

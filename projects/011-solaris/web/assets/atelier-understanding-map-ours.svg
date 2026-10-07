@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="4800" height="10105" viewBox="0 0 4800 10105" role="img" aria-labelledby="map-title map-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="2340" height="7320" viewBox="2380 285 2340 7320" role="img" aria-labelledby="map-title map-desc">
 <title id="map-title">Solaris 源效果与 ATELIER 扩展效果完整对照图</title>
 <desc id="map-desc">左侧为十三个公开场景的十四份官方原过程图或播放器封面、两类纯文字举例；右侧为我们的十一个场景和两个额外研究入口的历史实景。图片清晰不透明，出处与边界分别标注。完整保留十二族三十六项能力、两条原理、用途与意义；0.18.2 基础探索收束。源模型未接入，35/36 是有限映射，不是产品完成率。</desc>
 <view id="source-effects" viewBox="80 285 2340 7320"/><view id="our-effects" viewBox="2380 285 2340 7320"/><view id="principles" viewBox="80 7565 4640 2540"/>

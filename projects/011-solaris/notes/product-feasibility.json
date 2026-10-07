@@ -1741,7 +1741,34 @@
         "使用场景、个人价值与按需扩展",
         "首页分类关联和全页面目录",
         "分层历史证据与未验范围"
-      ]
+      ],
+      "effectDisplay": {
+        "date": "2026-10-07",
+        "sourceScenesWithMedia": 13,
+        "sourceOriginalFiles": 14,
+        "sourceTextOnlyCategories": 2,
+        "productSceneScreenshots": 11,
+        "additionalEntries": [
+          "support",
+          "real-person"
+        ],
+        "posterDimensions": [
+          4800,
+          10105
+        ],
+        "sourcePhotoManifest": "../web/assets/solaris-effects/manifest.json",
+        "sourceModelExecuted": false,
+        "sceneInteractionsRevalidated": false,
+        "viewer": [
+          "source-region",
+          "our-region",
+          "full-poster",
+          "zoom125-200",
+          "inner-scroll",
+          "complete-source-original-directory"
+        ],
+        "validationDocument": "effect-display-validation.json"
+      }
     }
   }
 }

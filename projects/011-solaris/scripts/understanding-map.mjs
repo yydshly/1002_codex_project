@@ -2,196 +2,124 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-// A new, editable knowledge map. The five existing photographs are embedded
-// without rewriting their bytes; the map itself is a conceptual explanation,
-// not a new browser test or a reproduction of a Solaris model session.
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const WIDTH = 3840, HEIGHT = 3440;
-const FONT = "'Microsoft YaHei', 'Noto Sans CJK SC', 'PingFang SC', sans-serif";
-const C = { ink:'#293b32', muted:'#5e7469', olive:'#42654e', line:'#cfdbd2', paper:'#f3f5ef', panel:'#fcfdf9', tint:'#e6eee2', warm:'#f4eddf', gold:'#8d7046', teal:'#426d74' };
-const chunks = [], bounds = [], backgroundAssets = [];
-const xml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[char]));
-const add = value => chunks.push(value);
-const rect = (x,y,w,h,fill=C.panel,stroke=C.line,r=18) => add(`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${fill}" stroke="${stroke}"/>`);
-function text(x,y,value,{size=32,color=C.ink,weight=400,anchor='start'}={}) {
-  if(size<30)throw new Error('All authored map text must be at least 30px');
-  add(`<text x="${x}" y="${y}" font-family="${xml(FONT)}" font-size="${size}" font-weight="${weight}" fill="${color}" text-anchor="${anchor}">${xml(value)}</text>`);
+// Original photographs are embedded once and referenced through SVG windows.
+// No bitmap rewriting or generated substitution. Source windows follow a
+// visual frame audit; the complete original remains below the selected frames.
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const WIDTH=4800,M=120,GAP=40,COLUMN=2260,CARD=1110,ROW=860,EFFECT_Y=550,EFFECT_H=6990;
+const PRINCIPLE_Y=7630,CAPABILITY_Y=8105,SUPPORT_Y=9010,USE_Y=9485,VALUE_Y=9745,HEIGHT=10105;
+const FONT="'Microsoft YaHei', 'Noto Sans CJK SC', 'PingFang SC', sans-serif";
+const C={ink:'#293b32',muted:'#5e7469',olive:'#42654e',line:'#cfdbd2',paper:'#f3f5ef',panel:'#fcfdf9',tint:'#e6eee2',gold:'#8d7046',source:'#3d6076'};
+const chunks=[],defs=[],bounds=[],photos=[];let windowIndex=0;
+const xml=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[char]));
+const add=value=>chunks.push(value);
+const rect=(x,y,w,h,fill=C.panel,stroke=C.line,r=18)=>add(`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${fill}" stroke="${stroke}"/>`);
+function text(x,y,value,{size=36,color=C.ink,weight=400,anchor='start'}={}){if(size<30)throw new Error('Map text must be at least 30px');add(`<text x="${x}" y="${y}" font-family="${xml(FONT)}" font-size="${size}" font-weight="${weight}" fill="${color}" text-anchor="${anchor}">${xml(value)}</text>`);}
+function lines(x,y,values,{gap=45,...options}={}){values.forEach((value,i)=>text(x,y+i*gap,value,options));}
+const units=value=>Array.from(value).reduce((sum,char)=>sum+(/\s/.test(char)?.32:/[\u0000-\u007f]/.test(char)?.57:1),0);
+function paragraph(x,y,w,value,{size=34,gap=43,maxLines=99,color=C.muted,weight=400}={}){const values=[];let line='';for(const char of String(value)){if(char==='\n'){values.push(line);line='';continue;}if(units(line+char)*size>w&&line){values.push(line);line=char;}else line+=char;}if(line)values.push(line);if(values.length>maxLines)throw new Error(`Text does not fit: ${value}`);lines(x,y,values,{size,gap,color,weight});bounds.push({x,y,w,bottom:y+(values.length-1)*gap+size*.24});return y+values.length*gap;}
+function link(url,fn){add(`<a href="${xml(url)}">`);fn();add('</a>');}
+function heading(x,y,n,title){text(x,y,`${n} / ${title}`,{size:48,color:C.olive,weight:600});}
+function imageSize(b){
+  if(b.subarray(1,4).toString()==='PNG')return{width:b.readUInt32BE(16),height:b.readUInt32BE(20)};
+  if(b[0]===0xff&&b[1]===0xd8){let i=2;while(i<b.length){if(b[i]!==0xff){i++;continue;}const marker=b[i+1];i+=2;if([0xd8,0xd9].includes(marker))continue;const len=b.readUInt16BE(i);if([0xc0,0xc1,0xc2,0xc3,0xc5,0xc6,0xc7,0xc9,0xca,0xcb,0xcd,0xce,0xcf].includes(marker))return{width:b.readUInt16BE(i+5),height:b.readUInt16BE(i+3)};i+=len;}}
+  if(b.subarray(0,4).toString()==='RIFF'&&b.subarray(8,12).toString()==='WEBP'){const type=b.subarray(12,16).toString();if(type==='VP8X')return{width:b.readUIntLE(24,3)+1,height:b.readUIntLE(27,3)+1};if(type==='VP8 ')return{width:b.readUInt16LE(26)&0x3fff,height:b.readUInt16LE(28)&0x3fff};if(type==='VP8L'){const bits=b.readUInt32LE(21);return{width:(bits&0x3fff)+1,height:((bits>>>14)&0x3fff)+1};}}
+  throw new Error('Unsupported original photo format');
 }
-function lines(x,y,values,{gap=43,...options}={}) {values.forEach((value,index)=>text(x,y+index*gap,value,options));}
-const units = value => Array.from(value).reduce((sum,char)=>sum+(/\s/.test(char)?0.32:/[\u0000-\u007f]/.test(char)?0.57:1),0);
-function paragraph(x,y,w,value,{size=32,gap=43,maxLines=99,color=C.muted,weight=400}={}) {
-  const values=[];let line='';
-  for(const char of String(value)){if(char==='\n'){values.push(line);line='';continue;}if(units(line+char)*size>w&&line){values.push(line);line=char;}else line+=char;}
-  if(line)values.push(line);
-  if(values.length>maxLines)throw new Error(`Text does not fit ${maxLines} lines: ${value}`);
-  lines(x,y,values,{size,gap,color,weight});
-  bounds.push({x,y,w,lines:values.length,size,bottom:y+(values.length-1)*gap+size*.24});
-  return y+values.length*gap;
-}
-function arrow(x,y,w=26,color='#89a28b') {add(`<path d="M${x} ${y}h${w}m-9-8 9 8-9 8" fill="none" stroke="${color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`);}
-async function background(name,x,y,w,h,{opacity=.15,align='xMidYMid slice'}={}) {
-  const bytes=await fs.readFile(path.join(root,'assets',name));
-  const id='bg-'+backgroundAssets.length;
-  add(`<defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="18"/></clipPath></defs>`);
-  add(`<image x="${x}" y="${y}" width="${w}" height="${h}" preserveAspectRatio="${align}" opacity="${opacity}" clip-path="url(#${id})" href="data:image/jpeg;base64,${bytes.toString('base64')}"/>`);
-  backgroundAssets.push({name,bytes:bytes.length,opacity});
-}
-function heading(x,y,number,title,subtitle='') {
-  text(x,y,`${number} / ${title}`,{size:40,color:C.olive,weight:600});
-  if(subtitle)text(3744,y,subtitle,{size:30,color:C.muted,anchor:'end'});
-}
-
+async function registerPhoto(relative,label){const bytes=await fs.readFile(path.join(root,relative)),size=imageSize(bytes),id=`photo-${photos.length}`,mime=bytes[0]===0xff&&bytes[1]===0xd8?'image/jpeg':bytes.subarray(1,4).toString()==='PNG'?'image/png':'image/webp';defs.push(`<image id="${id}" width="${size.width}" height="${size.height}" href="data:${mime};base64,${bytes.toString('base64')}"/>`);const photo={id,file:relative,label,mime,bytes:bytes.length,...size};photos.push(photo);return photo;}
+function viewport(photo,x,y,w,h,crop=null,{back='#eef1ed'}={}){const selected=crop||[0,0,photo.width,photo.height];if(selected.length!==4||selected[0]<0||selected[1]<0||selected[0]+selected[2]>photo.width||selected[1]+selected[3]>photo.height)throw new Error(`Crop outside original: ${photo.file}`);const clip=`window-${windowIndex++}`;rect(x,y,w,h,back,'#d1d9d2',6);add(`<svg x="${x}" y="${y}" width="${w}" height="${h}" viewBox="${selected.join(' ')}" preserveAspectRatio="xMidYMid meet" overflow="hidden"><defs><clipPath id="${clip}" clipPathUnits="userSpaceOnUse"><rect x="${selected[0]}" y="${selected[1]}" width="${selected[2]}" height="${selected[3]}"/></clipPath></defs><use href="#${photo.id}" clip-path="url(#${clip})"/></svg>`);}
 const catalog=JSON.parse(await fs.readFile(path.join(root,'web/capabilities.json'),'utf8'));
 const sceneCatalog=JSON.parse(await fs.readFile(path.join(root,'web/capabilities/scene-catalog.json'),'utf8'));
-const evidence=catalog.capabilities.reduce((map,item)=>(map[item.evidenceLevel]=(map[item.evidenceLevel]||0)+1,map),{});
-const expected={ 'official-figure':25,'official-video-observation':1,'official-comparison':2,'official-description':5,'official-prospect':3 };
-if(catalog.families.length!==12||catalog.capabilities.length!==36||sceneCatalog.scenes.length!==11||Object.entries(expected).some(([key,count])=>evidence[key]!==count))throw new Error('Source inventory changed; review map before publishing');
+const sourceCatalog=JSON.parse(await fs.readFile(path.join(root,'web/scenes.json'),'utf8'));
+const manifest=JSON.parse(await fs.readFile(path.join(root,'web/assets/solaris-effects/manifest.json'),'utf8'));
+const evidence=catalog.capabilities.reduce((map,item)=>(map[item.evidenceLevel]=(map[item.evidenceLevel]||0)+1,map),{}),expected={'official-figure':25,'official-video-observation':1,'official-comparison':2,'official-description':5,'official-prospect':3};
+if(catalog.families.length!==12||catalog.capabilities.length!==36||sceneCatalog.scenes.length!==11||Object.entries(expected).some(([key,count])=>evidence[key]!==count))throw new Error('Inventory changed; review diagram');
+if(manifest.items.length!==14||new Set(manifest.items.map(item=>item.sceneId)).size!==13||manifest.modelExecuted!==false)throw new Error('Expected 14 source photos across 13 scenes, model not executed');
+const sourcePhotos=new Map();for(const item of manifest.items)sourcePhotos.set(item.file,await registerPhoto(`web/assets/solaris-effects/${item.file}`,item.title));
+const sourceWindows={
+  'interior.jpg':{before:[0,0,854,480],after:[2586,488,854,480],beforeLabel:'P1 · 较早状态',afterLabel:'P8 · 蓝沙发 / 放大对象'},
+  'interior-extended.jpg':{before:[0,0,854,480],after:[0,488,854,480],beforeLabel:'P1 · 较早状态',afterLabel:'P5 · 墙色 / 夜间光照'},
+  'fashion.jpg':{before:[858,0,850,480],after:[2574,488,850,480],beforeLabel:'P2 · 白衣 / 棕鞋',afterLabel:'P8 · 蓝衬衫 / 红鞋'},
+  'xray.jpg':{before:[0,0,850,480],after:[1716,0,850,480],beforeLabel:'P1 · 初始 X 光',afterLabel:'P3 · 局部放大'},
+  'xray-2.jpg':{before:[0,0,850,480],after:[2574,0,850,480],beforeLabel:'P1 · 初始 X 光',afterLabel:'P4 · 测量线'},
+  'salad.jpg':{before:[0,0,850,480],after:[1716,488,850,480],beforeLabel:'P1 · 起始碗',afterLabel:'P7 · 食材组合'},
+  'combustion.jpg':{before:[858,0,850,480],after:[2574,0,850,480],beforeLabel:'P2 · 火焰工具',afterLabel:'P4 · 可见火花'},
+  'landmark.jpg':{before:[0,0,850,480],after:[2574,488,850,480],beforeLabel:'P1 · 白天正视',afterLabel:'P8 · 夜间航拍'},
+  'car.jpg':{before:[0,0,850,480],after:[1716,488,850,480],beforeLabel:'P1 · 较早状态',afterLabel:'P7 · 车灯 / 引擎盖'},
+  'floating.jpg':{before:[0,0,872,480],after:[1760,0,872,480],beforeLabel:'P1 · 较早状态',afterLabel:'P3 · 对象升起'},
+  'camera.jpg':{before:[0,0,872,480],after:[1760,0,872,480],beforeLabel:'P1 · 阳台视点',afterLabel:'P3 · 相机移动后'},
+  'mobile-fish.jpg':{before:[0,0,270,480],after:[556,0,270,480],beforeLabel:'P1 · 起始位置',afterLabel:'P3 · 鱼 / 潜水员移动'},
+  'mobile-skateboard.jpg':{before:[0,0,270,480],after:[278,0,270,480],beforeLabel:'P1 · 起始姿态',afterLabel:'P2 · 腾空'},
+};
+const ownScenes=[
+  ['living','客厅设计','atelier-chair-scaling.jpg','index.html','C01–04 / 06–11 / 15–16 / 34 / 36','家具移动、旋转、缩放；墙色材质、时段光照','测量 / 复制移除 / 有限指令 / 教程 / A/B','固定房间与登记资产；非工程日照'],
+  ['car','汽车展厅','atelier-car-mechanical-bay.jpg','showroom.html','C24–26','车漆灯组、环绕视角、原铰链引擎盖','独立部件状态、导图与可恢复配置','授权固定车型；非任意车型或维修系统'],
+  ['imaging','影像工作台','atelier-imaging-workspace.jpg','imaging.html','C22–23','原图缩放平移、两点测量与标注','校准 / 原图坐标 / 保存与稳定恢复','两张 JPEG；无 DICOM 与诊断能力'],
+  ['landmark','建筑白模','atelier-landmark-workspace.jpg','landmark.html','C12–14','同一几何的时段光影与多方向观察','四张知识卡、镜头与方案保存','外部简化模型；不补全未知建筑'],
+  ['kitchen','料理备料','atelier-kitchen-inspection.jpg','kitchen.html','C20 / 29','完整食材拖进碗、沉降和组合','点击浮起检视、归位、稳定实例恢复','四类 / 最多 16 件；无切丁与烹饪'],
+  ['creative','素材与笔触创作','atelier-creative-mouse-proof.jpg','creative.html','C27–28','矩形取样变成纹理印章与参考色笔刷','两图层 / 逐笔撤销 / 原图与状态恢复','登记来源与固定画纸；非通用风格模型'],
+  ['collection','精选陈列','atelier-collection-preference.jpg','collection.html','C05 / 33 / 35','六槽交换、锁定与显式选品偏好','九目标往返 / 整套稳定存档导出恢复','固定标签去向；不续播未完成的过程'],
+  ['skate','滑板练习','atelier-skate-air.jpg','skate.html','C32','向上拖动板面，让骑手与板同步起落','取消 / 重播 / 动作记录与保存','固定平地与有限姿态；非训练仿真'],
+  ['materials','热响应教学','atelier-materials-comparison-heating.jpg','materials.html','C21','拖火源；铜铝温升、冰熔化与同热量对照','暂停观察 / Q 与温度账本 / 重看恢复','固定教学假设；温度是计算值'],
+  ['underwater','水下联动','atelier-underwater-follow-during.jpg','underwater.html','C30–31','拖鱼改变位置朝向；潜水员绕礁跟随','不可达停留 / 取消整次动作 / 双主体恢复','固定水层与三礁；非海洋物理'],
+  ['fitting','三维搭配','atelier-footwear-workspace.jpg','fitting.html','C17–18','同一固定人体的上衣、双鞋拖放搭配','两款上衣 / 两双鞋 / 两姿态 / 保存恢复','不判断体型、尺码与合身；扩展暂缓'],
+  ['support','独立新桌与灯具','atelier-support-workbench.jpg','support.html','额外研究入口 · 不增加场景数','三张真实桌 + 圆底灯共用网格支撑规则','候选面选择 / 合法摆放 / 事务回滚恢复','独立存档；未并入客厅与整套备份'],
+  ['real-person','真人照片参考','atelier-real-person-workspace.png','tryon.html','额外研究入口 · 不增加场景数','人物原图与商品照片生成上装外观参考','本机 FASHN / 原图对照 / 人工评分留档','非商业研究样本；无真实合身证明，暂缓'],
+];
+const ownPhotos=new Map();for(const [,title,file]of ownScenes)ownPhotos.set(file,await registerPhoto(`assets/${file}`,title));
+const sourceView=[80,285,2340,7320],ourView=[2380,285,2340,7320];
+const header=(w,h,v)=>`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="${v.join(' ')}" role="img" aria-labelledby="map-title map-desc">`;
+add(`<?xml version="1.0" encoding="UTF-8"?>\n${header(WIDTH,HEIGHT,[0,0,WIDTH,HEIGHT])}
+<title id="map-title">Solaris 源效果与 ATELIER 扩展效果完整对照图</title>
+<desc id="map-desc">左侧为十三个公开场景的十四份官方原过程图或播放器封面、两类纯文字举例；右侧为我们的十一个场景和两个额外研究入口的历史实景。图片清晰不透明，出处与边界分别标注。完整保留十二族三十六项能力、两条原理、用途与意义；0.18.2 基础探索收束。源模型未接入，35/36 是有限映射，不是产品完成率。</desc>
+<view id="source-effects" viewBox="${sourceView.join(' ')}"/><view id="our-effects" viewBox="${ourView.join(' ')}"/><view id="principles" viewBox="80 7565 4640 2540"/>
+<defs>${defs.join('\n')}</defs>`);
+rect(0,0,WIDTH,HEIGHT,C.paper,'none',0);
+text(M,82,'ATELIER × Solaris',{size:42,color:C.olive,weight:600});text(M,180,'从源效果，到我们的自主交互基础',{size:80,weight:600});
+text(WIDTH-M,82,'基础探索基线 0.18.2 · 2026-10-07',{size:36,color:C.olive,anchor:'end'});
+text(M,242,'先看真实画面和它说明的能力，再看实现原理、使用场景与对你的价值。',{size:41,color:C.muted});text(WIDTH-M,239,'照片保持原字节 · 可放大阅读',{size:34,color:C.gold,anchor:'end'});
+rect(M,295,COLUMN,EFFECT_H+220,'#edf2f4','#bcced7',22);rect(2420,295,COLUMN,EFFECT_H+220,'#edf2e7','#c8d5c2',22);
+text(M+32,370,'01 / 源公开效果 · Runway Solaris',{size:56,color:C.source,weight:600});
+paragraph(M+32,425,COLUMN-64,'论文原过程图 / 官网播放器封面：13 个有画面场景、14 份原图；另列 2 类文字说明。不把愿景当作实证。',{size:35,gap:43,maxLines:2,color:C.source});text(M+32,515,'作者 / Runway 原图研究说明引用；本轮未运行源模型或重播视频。',{size:34,color:C.gold});
+text(2452,370,'02 / 我们的扩展效果 · ATELIER 实景',{size:56,color:C.olive,weight:600});
+paragraph(2452,425,COLUMN-64,'11 个场景全部展示；独立桌灯与真人照片参考另列，不增加场景数量。均来自本项目已有实际演示截图。',{size:35,gap:43,maxLines:2,color:C.olive});text(2452,515,'受控对象、明确规则与可恢复成果；没有复现任意视觉生成。',{size:34,color:C.gold});
+const sourceIds=['interior','interior-extended','fashion','xray','salad','combustion','landmark','car','streetlight','floating','camera','mobile-fish','mobile-skateboard','tools','adaptive'];
+const shortTitles=['室内移动、缩放与材质','完整室内编辑','真人服饰与购物联动','同一拖动，两种语义','食材进入碗中','火焰作用于材料','地标时间与多视角','车灯、角度与引擎盖','太阳与街景光照','点击使对象悬浮','相机移动与场景延续','拖鱼，潜水员跟随','拖滑板，骑手跳跃','对象变成工具（文字）','界面与教程适配（设想）'];
+const sourceCaptions=[['移动灯具；缩放挂画、植物；更换沙发布料','观察对象、遮挡与环境能否一起变化'],['墙色、时间、灯光、视点与画作连续编辑','同一房间里的连续设计工作流'],['商品拖到真人身上；外观与购物车关联','视觉替换演示；不证明真实尺码合身'],['同一张 X 光，同一拖动可放大或用于测量','双图分别展示；数值不证明测量准确性'],['多种食材拖入碗中，连续形成组合','保留已有食材与场景关系'],['火焰作为工具，触碰材料后触发响应','视觉响应不等于物理或化学验证'],['改变时间、地标信息与观察方向','新视点是持续生成的画面'],['车灯开关、车体角度、引擎盖及内部','公开论文图；未核实独立录像'],['鼠标标记、太阳位置与街景光照一起变化','封面单帧；按下 / 释放语义未确认'],['点击后缓慢升起，补全遮挡后的背景','公开对比任务；不是物理检验'],['灯塔阳台向海岸移动、向下观察','有官方运动指令；手势映射未明确'],['拖鱼改变位置，潜水员随之移动','一个输入带动多个主体的关联'],['向上拖滑板，触发骑手与板同步跳跃','方向被解释为动作意图'],['点击猫借取纹理；点击画作借用风格','只属文字举例，不展示虚构结果'],['店铺适配、推荐、教程恢复属方向设想','局部编辑或转场有官方方法描述 C35']];
+for(let i=0;i<sourceIds.length;i++){
+  const scene=sourceCatalog.scenes.find(item=>item.id===sourceIds[i]),x=M+(i%2)*(CARD+GAP),y=EFFECT_Y+Math.floor(i/2)*ROW,item=manifest.items.find(item=>item.sceneId===scene.id);
+  rect(x,y,CARD,ROW-28,C.panel,'#c4d3db',15);link(scene.sourceUrl,()=>text(x+24,y+51,`${String(i+1).padStart(2,'0')}  ${shortTitles[i]}`,{size:39,color:C.source,weight:600}));text(x+24,y+94,item?item.kind:'无对应媒体实证 · 不编造效果图',{size:30,color:item?C.muted:C.gold});
+  if(!item){rect(x+24,y+125,CARD-48,515,'#eef2f4','#cfdae0',10);text(x+54,y+200,'官方文字描述 / 方向性设想',{size:39,color:C.source,weight:600});paragraph(x+54,y+266,CARD-108,scene.description,{size:38,gap:54,maxLines:5,color:C.ink});paragraph(x+54,y+564,CARD-108,'没有找到对应公开录像或过程图；不能把邻近场景画面当成该功能的证明。',{size:33,gap:43,maxLines:2,color:C.gold});}
+  else if(scene.id==='xray'){
+    for(const [j,file]of['xray.jpg','xray-2.jpg'].entries()){const photo=sourcePhotos.get(file),p=sourceWindows[file],py=y+138+j*263;text(x+24,py,file==='xray.jpg'?'语义 A · 局部放大 P1 → P3':'语义 B · 测量 P1 → P4',{size:30,color:C.muted});viewport(photo,x+24,py+15,519,210,p.before);viewport(photo,x+567,py+15,519,210,p.after);}
+    text(x+24,y+667,'两份完整原图条带（不把示意数值当作实测）',{size:30,color:C.muted});viewport(sourcePhotos.get('xray.jpg'),x+24,y+682,519,30);viewport(sourcePhotos.get('xray-2.jpg'),x+567,y+682,519,30);
+  }else{
+    const photo=sourcePhotos.get(item.file),p=sourceWindows[item.file];
+    if(p){const pw=519;text(x+24,y+132,p.beforeLabel,{size:30,color:C.muted});text(x+567,y+132,p.afterLabel,{size:30,color:C.muted});viewport(photo,x+24,y+147,pw,405,p.before);viewport(photo,x+567,y+147,pw,405,p.after);text(x+24,y+587,'完整原过程图（未改写；上方选择原帧窗口）',{size:30,color:C.muted});viewport(photo,x+24,y+603,CARD-48,94,null,{back:'#f4f4ef'});}
+    else{text(x+24,y+132,'官方播放器封面：单帧，不表示前后变化',{size:30,color:C.muted});viewport(photo,x+24,y+147,CARD-48,515,null,{back:'#f4f4ef'});}
+  }
+  lines(x+24,y+743,sourceCaptions[i],{size:32,gap:39,color:C.ink});text(x+24,y+823,item?'© 作者 / Runway · 点击标题查看完整出处':'Runway 官网文字 · 点击标题查看出处',{size:30,color:C.muted});
+}
+for(let i=0;i<ownScenes.length;i++){
+  const [id,title,file,url,mapping,a,b,boundary]=ownScenes[i];if(i<11&&!sceneCatalog.scenes.some(item=>item.id===id))throw new Error(`Unregistered scene: ${id}`);
+  const x=2420+(i%2)*(CARD+GAP),y=EFFECT_Y+Math.floor(i/2)*ROW;rect(x,y,CARD,ROW-28,C.panel,'#c9d6c4',15);link(`../${url}`,()=>text(x+24,y+51,`${i<11?String(i+1).padStart(2,'0'):'额外'}  ${title}`,{size:39,color:C.olive,weight:600}));text(x+24,y+94,mapping,{size:30,color:C.muted});const photo=ownPhotos.get(file);
+  if(id==='real-person'){text(x+24,y+130,'原图 ↔ 本机生成图（实际截图对照区）',{size:30,color:C.muted});viewport(photo,x+24,y+147,775,515,[314,253,653,809]);viewport(photo,x+819,y+147,267,515);}
+  else viewport(photo,x+24,y+126,CARD-48,580);
+  lines(x+24,y+743,[a,b],{size:32,gap:39,color:C.ink});text(x+24,y+823,boundary,{size:30,color:C.gold});for(const value of[a,b,boundary])if(units(value)*32>CARD-48)throw new Error(`Caption too long: ${id}`);
+}
+const sy=EFFECT_Y+7*ROW;rect(2420,sy,COLUMN,ROW-28,'#e1ebdf','#bacdb7',16);text(2452,sy+62,'从效果里沉淀什么',{size:47,color:C.olive,weight:600});lines(2452,sy+133,['对象身份、选择工具、投影拾取、连续手势、明确状态、约束与恢复。','同一输入在不同场景中，操作意义由对象、当前工具与任务决定。','可重复编辑与保存的成果，帮助检验真实用户任务能否完成。'],{size:38,gap:60,color:C.ink});text(2452,sy+367,'35/36 是受控映射，不是“产品完成 97%”。',{size:47,color:C.gold,weight:600});paragraph(2452,sy+432,COLUMN-64,'C19 购物关联尚未接入；真人参考与三维试衣扩展暂缓。不会为了补齐编号继续扩展，也不会把程序渲染当成原模型的任意视觉生成。',{size:37,gap:53,maxLines:3,color:C.ink});text(2452,sy+667,'照片性质：已有真实演示留档，不表示本轮全量重新实测。',{size:34,color:C.muted});text(2452,sy+728,'图片是效果入口；功能说明、边界和验证记录仍是验收依据。',{size:34,color:C.muted});
+
+heading(M,PRINCIPLE_Y,'03','原理是什么：同样重视鼠标与语义，两条不同执行路径');rect(M,PRINCIPLE_Y+40,COLUMN,365,C.panel,C.line,16);rect(2420,PRINCIPLE_Y+40,COLUMN,365,C.panel,C.line,16);text(M+32,PRINCIPLE_Y+95,'源研究：视觉世界模型持续生成',{size:42,color:C.source,weight:600});lines(M+32,PRINCIPLE_Y+157,['鼠标操作历史 + 当前画面与上下文 → LLM 意图 / 行为提示','→ 条件化视觉世界模型生成下一帧 → 新操作继续改变未来画面。','公开方法：自回归生成、少步蒸馏、使用自身输出训练滚动生成。','不由视觉效果推断内部对象结构、精确几何或真实物理。'],{size:35,gap:49,color:C.ink});text(M+32,PRINCIPLE_Y+376,'未确认专用源码、API 或权重公开；不是已接入的“源库”。',{size:33,color:C.gold});text(2452,PRINCIPLE_Y+95,'我们的实现：明确对象、规则与可恢复状态',{size:42,color:C.olive,weight:600});lines(2452,PRINCIPLE_Y+157,['指针拾取 / 当前工具 → 校验几何与约束 → 状态事务与回滚','→ 本地图形或画布重绘 → 稳定成果保存 / 校验 / 重建。','主要用 Three.js、图像画布与有限算法；料理用近似刚体。','一次手势是一条编辑；非法或取消，整次回到手势起点。'],{size:35,gap:49,color:C.ink});text(2452,PRINCIPLE_Y+376,'真人另用本机 FASHN 预训练模型；非全部算法自研或真实合身。',{size:33,color:C.gold});
+heading(M,CAPABILITY_Y,'04','功能全清单：12 个族 / 36 条公开研究线索');text(M,CAPABILITY_Y+60,'论文图示 25 · 官方视频观察 1 · 对比任务 2 · 文字描述 5 · 官方设想 3 ｜ 证据类别分开阅读',{size:35,color:C.muted});
 const evidenceLabel={'official-figure':'图','official-video-observation':'视频','official-comparison':'比较','official-description':'文字','official-prospect':'设想'};
-
-add(`<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" role="img" aria-labelledby="understanding-title understanding-description">
-<title id="understanding-title">ATELIER × Solaris：从源网页能力到我们的自主实现与按需研究</title>
-<desc id="understanding-description">依据公开研究与ATELIER 0.18.2基础探索资料制作的新概念知识图，非实测截图。完整列出十二族三十六条研究能力、证据分类、两种实现原理、十一个产品场景、独立三桌圆底灯支撑、保存与离开保护、五类用途、用户意义、验收边界与按具体任务扩展的定位。背景含官方画面观察页截图以及本项目历史实际演示截图；并非本项目运行Solaris，未确认专用源码、API或权重公开。35/36是限定映射，不是完成率。</desc>
-<defs><linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f8f2"/><stop offset="1" stop-color="#edf3ed"/></linearGradient></defs>`);
-rect(0,0,WIDTH,HEIGHT,'url(#paper)','none',0);
-text(96,80,'ATELIER × Solaris',{size:37,color:C.olive,weight:600});
-text(96,168,'我们怎样理解鼠标交互，以及它对我们的价值',{size:70,weight:600});
-text(3744,77,'基础探索基线 0.18.2 · 2026-10-07',{size:32,color:C.olive,anchor:'end'});
-text(96,219,'公开研究启发 → 自主实现可控原型 → 留存基础 → 有具体产品想法时，再细化研究',{size:36,color:C.muted});
-text(3744,217,'概念汇总图 · 不是实测截图',{size:31,color:C.gold,anchor:'end'});
-
-// Two routes: input semantics are central in both; their execution is different.
-const colX=[96,1940],colW=1804;
-rect(colX[0],256,colW,541,C.panel);await background('solaris-gallery.jpg',colX[0],256,colW,541,{opacity:.12,align:'xMidYMax slice'});
-rect(colX[1],256,colW,541,C.panel);await background('atelier-studio.jpg',colX[1],256,colW,541,{opacity:.15});
-heading(128,307,'01','源网页：Runway Solaris 的生成式界面');
-paragraph(128,357,1708,'鼠标是连续控制输入；同一个拖动，在不同对象、场景与意图下可以触发不同效果。画面来自模型对上下文的持续生成。',{size:34,gap:44,maxLines:2,color:C.ink});
-const sourceNodes=['鼠标操作历史','当前画面 / 语义','LLM 意图与行为提示','逐帧视觉世界模型'];
-sourceNodes.forEach((label,index)=>{const x=128+index*435;rect(x,446,403,70,'#edf2e8','#bccdbd',11);text(x+201.5,490,label,{size:32,anchor:'middle',color:C.olive,weight:500});if(index<3)arrow(x+411,481,15);});
-lines(128,565,['生成下一帧 → 用户继续操作 → 新输入继续条件化；自回归地延续环境。','公开方法：少步蒸馏提高生成效率；用自身生成的输出训练，适应滚动生成。'],{size:32,gap:44,color:C.ink});
-paragraph(128,669,1720,'这不是已确认的开源库：专用源码、可调用 API、权重开放均未确认。我们未运行或实测 Solaris，不从视觉效果推断精确几何、真实物理或内部对象结构。',{size:31,gap:40,maxLines:2,color:C.gold});
-text(128,770,'背景：官方画面观察页截图（回放与论文入口），不是本项目实测源模型。',{size:30,color:C.muted});
-
-heading(1972,307,'02','我们的实现：明确对象、规则与可恢复状态');
-paragraph(1972,357,1708,'把可观察的交互类型，转为能自行维护的场景原型。登记对象有明确身份，操作有规则，失败可解释，成果能够保存、比较与继续编辑。',{size:34,gap:44,maxLines:2,color:C.ink});
-const ownNodes=['指针拾取 / 工具','校验几何与约束','状态事务 / 回滚','本地绘制 / 重建'];
-ownNodes.forEach((label,index)=>{const x=1972+index*435;rect(x,446,403,70,'#edf2e8','#bccdbd',11);text(x+201.5,490,label,{size:32,anchor:'middle',color:C.olive,weight:500});if(index<3)arrow(x+411,481,15);});
-lines(1972,565,['一次完整手势是一条编辑：预览 → 合法提交；越界或取消 → 整次回到起点。','主要基础：本地 Three.js / 图像画布 / 有限算法；料理使用近似刚体。'],{size:32,gap:44,color:C.ink});
-paragraph(1972,669,1710,'不借用 Solaris 后台；真人上装参考另用本机 FASHN 预训练模型，属于外观研究且暂缓扩展，不代表全部算法自研或真实合身。',{size:31,gap:40,maxLines:2,color:C.gold});
-text(1972,770,'背景：我们的历史客厅实际演示；本地图形与规则不等于任意世界生成。',{size:30,color:C.muted});
-
-// Exact source family and capability coverage, with evidence attached to each line.
-heading(96,862,'03','公开能力全清单：12 个族 / 36 条研究线索','证据强度分开读；设想不能当成可用功能');
-text(96,912,'图示 25 · 官方视频观察 1 · 对比任务 2 · 文字描述 5 · 官方设想 3  ｜  C19 购物关联尚未接入',{size:32,color:C.muted});
-const gridW=882,gridGap=40,familyH=234;
-catalog.families.forEach((family,index)=>{
-  const x=96+(index%4)*(gridW+gridGap),y=945+Math.floor(index/4)*(familyH+18);
-  rect(x,y,gridW,familyH,C.panel,C.line,13);
-  const items=catalog.capabilities.filter(item=>item.family===family.label);
-  text(x+22,y+42,`${String(index+1).padStart(2,'0')}  ${family.label}`,{size:34,color:C.olive,weight:600});
-  items.forEach((item,i)=>{
-    text(x+22,y+78+i*33,`${item.id}  ${item.name}`,{size:30,color:item.id==='C19'?C.gold:C.ink});
-    text(x+gridW-22,y+78+i*33,`${evidenceLabel[item.evidenceLevel]}${item.id==='C19'?' · 未接':''}`,{size:30,color:item.id==='C19'?C.gold:C.muted,anchor:'end'});
-    if(units(`${item.id}  ${item.name}`)*30>gridW-190)throw new Error(`Capability label overlaps evidence: ${item.id}`);
-  });
-});
-
-// Eleven bounded scenes and a separate research workbench: no extra scene count.
-heading(96,1749,'04','我们已经实现什么：11 个场景 + 独立支撑研究','35/36 是受控映射，不是“产品完成 97%”');
-const scenes=[
-  ['living','客厅设计','C01–04 / 06–11 / 15–16 / 34 / 36','家具移动旋转缩放、材质墙色、灯光时段','复制移除、测量、有限指令、教程与 A/B','固定房间 / 登记资产；非工程日照'],
-  ['car','汽车展厅','C24–26','车漆与灯组、车体环绕、原铰链引擎盖','独立部件状态、视角、图片与配置保存','授权固定车型；非维修或任意车型生成'],
-  ['imaging','影像工作台','C22–23','原图缩放平移、两点测量与标注','用户标尺校准、编辑恢复与稳定坐标','两张 JPEG；无 DICOM / 诊断能力'],
-  ['landmark','建筑白模','C12–14','同一几何的时段光影、多方向观察','四张知识卡、镜头与方案保存','外部简化模型；不补全未知建筑'],
-  ['kitchen','料理备料','C20 / 29','四类完整食材拖入碗、沉降与稳定实例','点击浮起检视、归位 / 恢复','最多 16 件；无切丁、烹饪或营养判断'],
-  ['creative','材质与笔触创作','C27–28','矩形取样变纹理印章 / 调色方向笔刷','局部绘画、两图层、逐笔撤销与恢复','登记来源 / 固定画纸；非通用风格模型'],
-  ['collection','精选陈列','C05 / 33 / 35','六槽交换锁定、显式偏好、九目标往返','整套已保存成果导出、勾选恢复','固定标签与去向；不续播未完成过程'],
-  ['skate','滑板练习','C32','上拖板面触发骑手与板同步起落','手势取消、动作记录、重播与保存','固定平地与有限姿态；非训练仿真'],
-  ['materials','热响应教学','C21','拖火源、铜铝温升 / 冰熔化、同热量对照','暂停观察、Q / 温度账本、重看与恢复','固定教学假设；温度是计算值非实测'],
-  ['underwater','水下联动','C30–31','拖鱼改变位置 / 朝向、潜水员安全跟随','绕礁 / 不可达停留、双主体事务恢复','固定水层 / 三礁石；非海洋物理'],
-  ['fitting','试衣与真人参考','C17–18','固定人体两款上衣 / 两双鞋的拖放搭配','真人另为本机照片外观参考，暂缓扩展','不判体型尺码合身；购物 C19 未接'],
-  ['support','独立新桌与灯具','深化对象关系 · 不新增研究编号','三张真实桌 + 圆底工业灯共用网格规则','候选面选择、合法摆放、回滚与完整恢复','独立存档；未并入客厅 / 九任务 / 整套备份'],
-];
-for(let index=0;index<scenes.length;index++){
-  const [id,name,mapping,a,b,boundary]=scenes[index];
-  if(id!=='support'&&!sceneCatalog.scenes.some(item=>item.id===id))throw new Error(`Scene is not registered: ${id}`);
-  const x=96+(index%4)*(gridW+gridGap),y=1782+Math.floor(index/4)*197;
-  rect(x,y,gridW,181,index===11?'#edf2e7':C.panel,C.line,13);
-  if(id==='car')await background('atelier-car-showroom.jpg',x,y,gridW,181,{opacity:.14});
-  if(id==='underwater')await background('atelier-underwater-follow-during.jpg',x,y,gridW,181,{opacity:.14});
-  text(x+22,y+40,`${id==='support'?'研究':String(index+1).padStart(2,'0')}  ${name}`,{size:34,color:C.olive,weight:600});
-  text(x+gridW-22,y+39,mapping,{size:30,color:C.muted,anchor:'end'});
-  lines(x+22,y+79,[a,b],{size:30,gap:34});
-  text(x+22,y+153,boundary,{size:30,color:C.muted});
-  for(const value of[a,b,boundary])if(units(value)*30>gridW-44)throw new Error(`Scene summary does not fit: ${id}`);
-}
-
-// Deeper support result and the distinction between historical evidence and gaps.
-const bottomY=2410,bottomH=383;
-rect(96,bottomY,colW,bottomH,C.panel);await background('atelier-support-workbench.jpg',96,bottomY,colW,bottomH,{opacity:.15});
-heading(128,bottomY+51,'05','独立支撑：探索可复用规则，保留失败原因');
-lines(128,bottomY+102,[
-  '原三角面 + 节点变换 → 水平连通候选 → 用户选面 → 完整灯底覆盖检验。',
-  '实际三角并集 + 2 mm 保守边距；不用中心、四角或桌包围框替代支撑。',
-  '拖灯连续扫掠；拖桌 / 旋转 / 宽深变更保持关系，非法释放整次回滚。',
-  '圆桌、乡村桌、复古茶几复用规则；原夹装灯语义失败如实留档。',
-  '0.18.2：编辑 / 撤销 / 重做的保存状态准确；失败不跳页，先备份可留页。',
-],{size:31,gap:43});
-text(128,bottomY+336,'背景：历史真实新桌工作台；75 cm / 52 cm 为设计约定，不判断承重与重心。',{size:30,color:C.muted});
-
-rect(1940,bottomY,colW,bottomH,C.tint);
-heading(1972,bottomY+51,'06','基础与证据：能复用，但不外推为商用成熟');
-lines(1972,bottomY+102,[
-  '共用积累：拾取投影、约束、手势事务、状态校验、稳定保存与重建。',
-  '0.18.2 历史已验：产品 Node 386/386；仓库检查 16/16。',
-  '九个登记目标 / 十份稳定存档；不含试衣、真人或独立新桌工作台。',
-  '真实截图、完整 JSON 对照、源资产分析、纯夹具 / VM 模拟分别留证。',
-  '待按需专项：指定设备、触摸 / 原生关闭、真实故障与竞争、离线与长期性能。',
-],{size:31,gap:43});
-text(1972,bottomY+336,'多键恢复 / 原文比较不是跨窗口原子锁；登记静态资产通过不证明任意输入泛化。',{size:30,color:C.muted});
-
-// Why this foundation matters: five practical purposes, not product promises.
-heading(96,2858,'07','可能用在哪里：五类用途，按真实用户任务选择');
-const uses=[
-  ['空间方案与选品','家具、灯光、关系与 A/B','用于可恢复的设计沟通'],
-  ['产品展示与观察','汽车部件、视角与配置','用于交互展品和说明'],
-  ['交互教学与探索','图像测量、热响应、地标','用于明确假设的教学'],
-  ['素材创作与策展','取样笔刷、陈列与偏好','用于可编辑内容生产'],
-  ['交互原型与接入研究','语义、动作、约束、状态','用于新任务的快速验证'],
-];
-uses.forEach(([title,a,b],index)=>{
-  const x=96+index*737;
-  rect(x,2892,700,143,C.panel,C.line,12);
-  text(x+22,2933,title,{size:34,weight:600,color:C.olive});
-  lines(x+22,2975,[a,b],{size:31,gap:37,color:C.muted});
-});
-
-rect(96,3074,3648,210,'#e1ebdf','#b9ccb8',15);
-text(128,3126,'对你的意义：把看到的“效果”沉淀为自主维护的交互、状态、约束、素材与原型基础。',{size:39,color:C.olive,weight:600});
-lines(128,3180,[
-  '基础方向探索已经够用：保留代码、十一场景、支撑研究与分层验证；不为补编号继续扩展，也不把测试数字当成商业成熟度。',
-  '后续有具体产品想法 → 明确谁要完成什么任务 → 选择复用能力 → 补该任务需要的研究 / 内容 / 业务 → 用真实成果与恢复流程验收。',
-  '更多素材与画质属于体验改善；任意新资产、复杂关系、真实数据与新业务，需各自定义输入、边界和失败样本再研究。',
-],{size:32,gap:42,color:C.ink});
-
-text(96,3339,'背景来源：solaris-gallery 为官方画面观察页；客厅 / 展厅 / 水下 / 新桌为我们的历史实际演示。背景不代表本轮全量实测。',{size:30,color:C.muted});
-text(96,3383,'公开依据：Runway Introducing Solaris · arxiv.org/html/2609.00776v1  ｜  本地依据：能力清单、场景说明、0.18.2 记录  ｜  C19 与试衣扩展暂缓。',{size:30,color:C.muted});
-add('<a href="https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/CarConcept">');
-text(96,3427,'汽车素材：Eric Chadwick · ©2024 Darmstadt Graphics Group GmbH · CC BY 4.0；修改：车漆 / 光照 / 姿态。其余素材与完整许可见网页声明。',{size:30,color:C.muted});
-add('</a>');
-add('</svg>\n');
-
-if(bounds.some(item=>item.x<0||item.x+item.w>WIDTH||item.bottom>HEIGHT))throw new Error('Paragraph outside figure bounds');
-const svg=chunks.join('\n');
-const outputs=['assets/atelier-understanding-map.svg','web/assets/atelier-understanding-map.svg'];
-for(const relative of outputs){
-  const target=path.resolve(root,relative);
-  if(!target.startsWith(root+path.sep))throw new Error('Map output escaped the project directory');
-  await fs.mkdir(path.dirname(target),{recursive:true});
-  await fs.writeFile(target,svg,'utf8');
-}
-// The site builder publishes web/ only; copy the existing real scene evidence
-// used by overview.html into that directory without altering the photographs.
-const galleryAssets=['atelier-studio.jpg','atelier-car-showroom.jpg','atelier-imaging-workspace.jpg','atelier-landmark-workspace.jpg','atelier-kitchen-workspace.jpg','atelier-creative-workspace.jpg','atelier-collection-workspace.jpg','atelier-skate-air.jpg','atelier-materials-comparison-heating.jpg','atelier-underwater-follow-during.jpg','atelier-footwear-workspace.jpg','atelier-support-workbench.jpg'];
-for(const name of galleryAssets) await fs.copyFile(path.join(root,'assets',name),path.join(root,'web/assets',name));
-console.log(JSON.stringify({width:WIDTH,height:HEIGHT,minimumAuthoredFontSize:30,bytes:Buffer.byteLength(svg),families:catalog.families.length,sourceCapabilities:catalog.capabilities.length,scenes:sceneCatalog.scenes.length,independentResearchWorkbenches:1,evidence,backgroundAssets,galleryAssets,outputs},null,2));
+catalog.families.forEach((family,i)=>{const x=M+(i%4)*(CARD+GAP),y=CAPABILITY_Y+98+Math.floor(i/4)*256;rect(x,y,CARD,238,C.panel,C.line,14);text(x+24,y+44,`${String(i+1).padStart(2,'0')}  ${family.label}`,{size:37,color:C.olive,weight:600});catalog.capabilities.filter(item=>item.family===family.label).forEach((item,j)=>{text(x+24,y+85+j*34,`${item.id}  ${item.name}`,{size:31,color:item.id==='C19'?C.gold:C.ink});text(x+CARD-24,y+85+j*34,`${evidenceLabel[item.evidenceLevel]}${item.id==='C19'?' · 未接':''}`,{size:31,color:item.id==='C19'?C.gold:C.muted,anchor:'end'});if(units(`${item.id}  ${item.name}`)*31>CARD-200)throw new Error(`Capability overlaps: ${item.id}`);});});
+heading(M,SUPPORT_Y,'05','我们已有的基础：可复用的关系与分层证据');rect(M,SUPPORT_Y+40,COLUMN,365,C.panel,C.line,16);rect(2420,SUPPORT_Y+40,COLUMN,365,C.tint,C.line,16);text(M+32,SUPPORT_Y+94,'独立支撑：从画面到可验证对象关系',{size:41,color:C.olive,weight:600});lines(M+32,SUPPORT_Y+151,['原三角面 / 节点变换 → 水平连通候选 → 选面 → 完整灯底覆盖检验。','真实三角并集 + 2 mm 保守边距；不用桌包围框替代支撑。','拖灯连续扫掠；拖桌 / 旋转 / 宽深变更保持关系，非法释放回滚。','三桌复用规则；原夹装灯语义失败保留，不判断承重与重心。','0.18.2：保存 / 撤销 / 重做状态准确；失败不跳页，备份后可留页。'],{size:34,gap:46,color:C.ink});text(2452,SUPPORT_Y+94,'证据与边界：历史通过，不外推商业成熟',{size:41,color:C.olive,weight:600});lines(2452,SUPPORT_Y+151,['历史 0.18.2：产品 Node 386/386；仓库检查 16/16。','九个登记目标 / 十份稳定存档；不含试衣、真人和独立桌灯。','实际截图、JSON 对照、源资产分析、纯夹具 / VM 模拟分别留证。','多键恢复 / 原文比较不是跨窗口原子锁；登记资产不证明任意泛化。','指定设备、真实故障竞争、触摸、离线与长期性能，按需专项验证。'],{size:34,gap:46,color:C.ink});
+heading(M,USE_Y,'06','使用场景：按真实用户任务选择，五类可能用途');
+[['空间方案与选品','家具、光照、关系与 A/B','可恢复的设计沟通'],['产品展示与观察','汽车部件、视角与配置','交互展品与说明'],['交互教学与探索','图像测量、热响应、地标','明确假设的教学'],['素材创作与策展','取样笔刷、陈列与偏好','可编辑的内容生产'],['交互原型与接入研究','语义、动作、约束与状态','新任务的实际验证']].forEach(([title,a,b],i)=>{const x=M+i*920;rect(x,USE_Y+44,880,159,C.panel,C.line,12);text(x+24,USE_Y+90,title,{size:36,weight:600,color:C.olive});lines(x+24,USE_Y+135,[a,b],{size:33,gap:40,color:C.muted});});
+rect(M,VALUE_Y,4560,255,'#e1ebdf','#bacdb7',18);text(M+32,VALUE_Y+59,'对你的意义：把看见的效果，沉淀为可自主维护的交互、状态、约束、素材和原型基础。',{size:44,color:C.olive,weight:600});lines(M+32,VALUE_Y+117,['基础方向探索已经够用。保留代码、十一场景、独立研究与失败证据；后期由具体产品想法决定扩展，当前不另起新功能研究。','具体用户任务 → 选择已可复用的基础 → 定义缺口与输入边界 → 补需要的研究 / 业务 / 内容 → 用真实成果与恢复流程验收。','画质和素材改善属于体验；任意新资产、复杂关系、真实数据与新业务，都需要各自的输入、失败样本和验证范围。'],{size:35,gap:48,color:C.ink});
+link('https://runway.com/news/research/introducing-solaris',()=>text(M,HEIGHT-59,'公开依据：Runway Introducing Solaris / arxiv.org/html/2609.00776v1 ｜ 标题可点击出处或场景；源图 © 作者 / Runway，并无商业授权声明。',{size:30,color:C.muted}));
+link('https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/CarConcept',()=>text(M,HEIGHT-15,'汽车：Eric Chadwick · ©2024 Darmstadt Graphics Group GmbH · CC BY 4.0；修改车漆 / 光照 / 姿态。其余素材完整许可见网页。',{size:30,color:C.muted}));add('</svg>\n');
+if(bounds.some(item=>item.x<0||item.x+item.w>WIDTH||item.bottom>HEIGHT))throw new Error('Paragraph outside map');
+const svg=chunks.join('\n'),outputs=[];
+for(const [suffix,view]of[['',[0,0,WIDTH,HEIGHT]],['-source',sourceView],['-ours',ourView]]){const out=suffix?svg.replace(header(WIDTH,HEIGHT,[0,0,WIDTH,HEIGHT]),header(view[2],view[3],view)):svg;for(const directory of['assets','web/assets']){const relative=`${directory}/atelier-understanding-map${suffix}.svg`;await fs.writeFile(path.join(root,relative),out,'utf8');outputs.push(relative);}}
+console.log(JSON.stringify({width:WIDTH,height:HEIGHT,sourceView,ourView,minimumAuthoredFontSize:30,bytes:Buffer.byteLength(svg),sourceScenes:13,sourcePhotos:14,sourceTextCards:2,productScenes:11,additionalResearchEntries:2,sourceWindows,photos,evidence,outputs},null,2));

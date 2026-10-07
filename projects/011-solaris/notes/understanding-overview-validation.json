@@ -108,5 +108,12 @@
     "../assets/atelier-understanding-overview-page.jpg",
     "../assets/atelier-understanding-map-on-page.jpg",
     "../assets/atelier-understanding-scene-gallery.jpg"
-  ]
+  ],
+  "status": "historical-first-edition",
+  "artifactCommit": "3d747bf13808d96e0b7dff04b2b6eea3b63e2274",
+  "historicalArtifactUrls": {
+    "svg": "https://github.com/yydshly/1002_codex_project/blob/3d747bf13808d96e0b7dff04b2b6eea3b63e2274/projects/011-solaris/assets/atelier-understanding-map.svg",
+    "png": "https://github.com/yydshly/1002_codex_project/blob/3d747bf13808d96e0b7dff04b2b6eea3b63e2274/projects/011-solaris/assets/atelier-understanding-map.png"
+  },
+  "supersededBy": "effect-display-validation.json"
 }
