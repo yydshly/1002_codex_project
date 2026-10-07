@@ -74,6 +74,7 @@ const nextSteps = {
 const data = {
   version: research.currentRelease.version, updatedAt: research.updatedAt, total: research.capabilityRoutes.length,
   connected: connectedCount,
+  researchWorkbenches: research.currentRelease.tableSupportResearch ? [research.currentRelease.tableSupportResearch] : [],
   scenePrinciple: sceneCatalog.principle,
   scenes: sceneCatalog.scenes.map(scene => {
     const capabilities = scene.capabilities.map(capability => ({
@@ -93,6 +94,7 @@ const data = {
     }),
   },
   editorTools: [
+    { name: '新桌支撑独立研究', entrance: '客厅顶栏 → 新桌支撑研究；明确选择自动检测面后操作', scope: '三种真实静态桌与独立圆底灯共用冻结规则；原网格三角并集、完整灯底加2mm、连续灯扫掠、整桌关系和严格备份。保留25候选/22失败及夹装灯语义失败，不替换客厅旧规则、不加入十份整套备份、不增加35/36。' },
     { name: '对象复制', entrance: '属性 → 复制对象 / Ctrl+D', scope: '寻找附近空位；副本独立材质和尺寸；台灯随茶几复制，最多24个对象（含可恢复对象）。' },
     { name: '移除与恢复', entrance: '属性 → 移除对象 / Delete；左侧 → 已移除的对象', scope: '移除茶几同时移除台灯；恢复时检查占位，先恢复茶几再恢复台灯；可撤销和重做。' },
     { name: '独立宽、深、高', entrance: '属性 → 位置与尺寸', scope: '输入米制尺寸后离开输入框提交；各轴50–150%，整体比例另行控制。网格拉伸会改变外观。' },

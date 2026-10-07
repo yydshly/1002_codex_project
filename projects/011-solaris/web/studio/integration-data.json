@@ -1,8 +1,34 @@
 {
-  "version": "0.17.1",
+  "version": "0.18.0",
   "updatedAt": "2026-10-07",
   "total": 36,
   "connected": 35,
+  "researchWorkbenches": [
+    {
+      "entry": "../web/support.html",
+      "status": "bounded-experimental-workbench",
+      "policy": "atelier-support-v1",
+      "registeredTables": 3,
+      "registeredFreestandingLamps": 1,
+      "candidateSurfaces": 25,
+      "failedRecommendationsRetained": 22,
+      "originalClampLampSemanticFailureRetained": true,
+      "sameTablesRevalidationIsNewUnseenSet": false,
+      "storageKey": "atelier-support-workspace-v1",
+      "includedInWholeWorkspaceBackup": false,
+      "oldLivingRoomRulesReplaced": false,
+      "document": "table-support-plan.md",
+      "staticAnalysisDocument": "support-asset-analysis.json",
+      "validationDocument": "support-validation.json",
+      "pending": [
+        "真实鼠标Escape/捕获中断/线程故障专项",
+        "新灯之外的独立语义登记与多脚/曲底",
+        "任意上传/柜架/斜面/曲面",
+        "真实承重、重心稳定和接触物理",
+        "设备性能、长期/离线/并发存储专项"
+      ]
+    }
+  ],
   "scenePrinciple": "场景说明分别记录目标能力、操作与预期现象、已做验证、待专项验收和实现边界。产品支撑能力不重复计入 36 项研究清单。",
   "scenes": [
     {
@@ -1654,6 +1680,11 @@
     ]
   },
   "editorTools": [
+    {
+      "name": "新桌支撑独立研究",
+      "entrance": "客厅顶栏 → 新桌支撑研究；明确选择自动检测面后操作",
+      "scope": "三种真实静态桌与独立圆底灯共用冻结规则；原网格三角并集、完整灯底加2mm、连续灯扫掠、整桌关系和严格备份。保留25候选/22失败及夹装灯语义失败，不替换客厅旧规则、不加入十份整套备份、不增加35/36。"
+    },
     {
       "name": "对象复制",
       "entrance": "属性 → 复制对象 / Ctrl+D",

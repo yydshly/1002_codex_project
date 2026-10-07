@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-10-07",
-  "purpose": "36项研发映射；0.17.1完善整套备份的公开导出：实际195925字节下载文件与完整可见JSON逐字一致，SHA256为100d627d8356821997c256a45321a4d69aa1a957f1e1f72a5ce9e6de3ed118d5；实际文件选择器重新打开十项全相同且恢复禁用。新版检查后下载与复制对195926字节含尾部LF文本均逐字一致；12MiB以上真实文件拒绝且上一份完整文本保留，坏JSON检查拒绝且输入保留。九个已保存目标的首次打开与同画布尺寸重开完整公开JSON全部9/9一致，八页与已保存基线逐值一致，影像仅按画布变化平移两原片视图中心，比例、标注、校准和其余内容保持；九页截图均显示实际加载，访问前后十份已保存原文逐字保持。九页核查不属于本轮从整套文件恢复全部九目标后的复开验收。完整248/248项产品Node测试（含新增5项UTF8/容量纯测试）与16/16项仓库检查实际通过，exit0。35/36、十一场景、C35九目标、阶段5的2/3及C19待接保持；试衣/真人继续暂缓扩展。",
+  "purpose": "36项研究映射；0.18.0增加独立的新桌支撑研究工作台，在冻结规则下核查三个真实静态桌、完整独立灯底、鼠标操作与桌灯状态恢复。保留夹装灯首轮语义失败与全部候选拒绝，真实操作和静态/纯几何证据分别记录；35/36与11场景不变。",
   "proposedApproach": "independent-scene-runtime",
   "implementationStatus": "partial-implemented",
   "scopeBoundary": "既有三维/像素场景使用自有状态与登记资产；C17新增限定正面上装的真人研究参考，由本机FASHN预训练后端生成。照片效果可能改动人物、服装或下装细节；未知体型/衣物、多视角一致性、尺码/舒适度、真实商品业务与商业授权不由样板证明。",
@@ -1067,9 +1067,9 @@
     "implementedBoundedCount": 35,
     "remainingCount": 1,
     "releaseDocument": "product-release.md",
-    "validationDocument": "workspace-export-validation.json",
+    "validationDocument": "support-validation.json",
     "runtimeExternalGenerationApi": false,
-    "version": "0.17.1",
+    "version": "0.18.0",
     "integrationDocument": "integration.md",
     "sceneEntries": [
       "../web/index.html",
@@ -1545,6 +1545,17 @@
       "finalTenRawExactlyBaseline": true
     },
     "releaseChanges": {
+      "release": "0.18.0",
+      "role": "registered-new-table-support-research",
+      "summary": "独立研究工作台从三张真实静态桌原网格识别水平候选面，以独立圆底管灯核查完整底座支撑、连续移动扫掠、桌灯关系及严格保存恢复；原夹装灯语义失败保留。声明输入域内几何研究，不替换旧客厅规则，不增加11场景/35of36或C35九目标。",
+      "validationDocument": "support-validation.json",
+      "productTestsPassed": 327,
+      "repositoryTestsPassed": 16,
+      "capabilityCountsUnchanged": true,
+      "remainingCapability": "C19",
+      "fittingAndRealPersonExpansion": "paused"
+    },
+    "historicalWorkspaceExportChanges": {
       "release": "0.17.1",
       "role": "workspace-export-verification-and-usability",
       "summary": "0.17.1完善整套备份的公开导出：实际195925字节下载文件与完整可见JSON逐字一致，SHA256为100d627d8356821997c256a45321a4d69aa1a957f1e1f72a5ce9e6de3ed118d5；实际文件选择器重新打开十项全相同且恢复禁用。新版检查后下载与复制对195926字节含尾部LF文本均逐字一致；12MiB以上真实文件拒绝且上一份完整文本保留，坏JSON检查拒绝且输入保留。九个已保存目标的首次打开与同画布尺寸重开完整公开JSON全部9/9一致，八页与已保存基线逐值一致，影像仅按画布变化平移两原片视图中心，比例、标注、校准和其余内容保持；九页截图均显示实际加载，访问前后十份已保存原文逐字保持。九页核查不属于本轮从整套文件恢复全部九目标后的复开验收。完整248/248项产品Node测试（含新增5项UTF8/容量纯测试）与16/16项仓库检查实际通过，exit0。35/36、十一场景、C35九目标、阶段5的2/3及C19待接保持；试衣/真人继续暂缓扩展。 最终新版单展厅pearl选择恢复后，仅展厅原文变化、其他九份保持；实际展厅重开完整配置一致，再恢复原baseline后十份raw逐字还原。",
@@ -1605,6 +1616,30 @@
         "independentDownloadedBackupRetained": true
       },
       "validationStatus": "final-browser-and-regression-verified-with-bounded-pending-specialties"
+    },
+    "tableSupportResearch": {
+      "entry": "../web/support.html",
+      "status": "bounded-experimental-workbench",
+      "policy": "atelier-support-v1",
+      "registeredTables": 3,
+      "registeredFreestandingLamps": 1,
+      "candidateSurfaces": 25,
+      "failedRecommendationsRetained": 22,
+      "originalClampLampSemanticFailureRetained": true,
+      "sameTablesRevalidationIsNewUnseenSet": false,
+      "storageKey": "atelier-support-workspace-v1",
+      "includedInWholeWorkspaceBackup": false,
+      "oldLivingRoomRulesReplaced": false,
+      "document": "table-support-plan.md",
+      "staticAnalysisDocument": "support-asset-analysis.json",
+      "validationDocument": "support-validation.json",
+      "pending": [
+        "真实鼠标Escape/捕获中断/线程故障专项",
+        "新灯之外的独立语义登记与多脚/曲底",
+        "任意上传/柜架/斜面/曲面",
+        "真实承重、重心稳定和接触物理",
+        "设备性能、长期/离线/并发存储专项"
+      ]
     }
   }
 }

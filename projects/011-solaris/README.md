@@ -1,18 +1,18 @@
 # 011 · ATELIER · 独立场景设计工作台
 
-2026-10-07发布 **0.17.1**：补齐整套备份的保存/重开路径，并修复展厅、影像、地标顶栏文字挤压。仍为11个场景、35/36项受控研究映射，不增加研究编号；旧验收按版本保留。
+2026-10-07推进 **0.18.0**：新增[新桌与阅读灯研究工作台](http://localhost:4189/projects/011-solaris/support.html)。三个独立真实桌模型和一盏真实圆底工业灯，共用冻结的原网格支撑规则，探索新素材接入后能否完成可解释、可恢复的桌灯摆放。
 
-本轮可直接使用[改进后的整套备份](http://localhost:4189/projects/011-solaris/collection.html)：读取、下载、重新打开核对，再按工作台选择恢复。文件名与实际UTF-8容量可见，已检查的编辑文本也能下载，读取失败保留原文本。实际下载/复制全文一致、文件重开、新版仅恢复展厅及还原已核查；九工作台的稳定配置逐页重开一致，访问前后十份保存原文保持。影像在不同画布尺寸下仅按中心适配显示偏移，测量/校准等内容保持。详见[0.17.1操作与证据](notes/workspace-export-validation.json)，不外推为整套恢复九页后的全流程验收。
+这项工作深化对象关系能力，不增加Solaris研究编号或业务场景：原**11个场景、35/36映射、C35九个目标和十份整套备份保持**。新工作台独立保存，尚未替换客厅的旧茶几规则，也没有加入陈列任务或整套备份。
 
-新桌支撑的[分阶段实现与验收协议](notes/table-support-plan.md)已整理，当前只是设计，尚未接入。
+完整产品Node327/327、仓库检查16/16已实际通过，新增79项为提取/加载19、几何24、状态22、控制器14；三个真实桌各7项静态代表检查通过。三个桌也均在实际浏览器完成合法拖灯、越边释放整次回滚、拖桌/15°转桌/XZ尺寸后的关系保持与保存重开；各次保存重开及非法释放的公开完整JSON逐字一致。严格备份文本、实际下载与部分撤销/重做另获真实证据；设备事件等仍待专项，不宣布A–E全部验收。[实施状态与原协议](notes/table-support-plan.md)、[冻结规则](notes/support-policy.md)、[真实资产重复验证](notes/support-asset-analysis.json)分别可查。
 
-本轮真实界面：[新版整套备份](assets/atelier-workspace-export.png) · [修复后的展厅导航](assets/atelier-showroom-navigation.png) · [九页完整公开状态对照](assets/atelier-workspace-reopen-state-checks.json)。文件哈希、逐页截图与七组导航尺寸/键盘核查均在本轮证据中登记。
+本轮[乡村桌研究工作台](assets/atelier-support-workbench.jpg)、[圆桌](assets/atelier-support-round.jpg)、[复古茶几](assets/atelier-support-coffee.jpg)与[窄屏布局](assets/atelier-support-mobile.jpg)均为实际页面截图，专项记录见[support-validation.json](notes/support-validation.json)。0.17.1的[新版整套备份](assets/atelier-workspace-export.png)、[导航修复](assets/atelier-showroom-navigation.png)与[九页公开状态对照](assets/atelier-workspace-reopen-state-checks.json)保留为上一版证据。
 
-[先看项目总览](http://localhost:4189/projects/011-solaris/overview.html) · [体验客厅](http://localhost:4189/projects/011-solaris/) · [进入跨场景任务](http://localhost:4189/projects/011-solaris/collection.html) · [查能力清单与规划](http://localhost:4189/projects/011-solaris/integration.html) · [查原始研究](http://localhost:4189/projects/011-solaris/research.html#demo) · [接入说明](notes/integration.md) · [交付与验收](notes/product-release.md)
+[先看项目总览](http://localhost:4189/projects/011-solaris/overview.html) · [进入新桌支撑研究](http://localhost:4189/projects/011-solaris/support.html) · [体验客厅](http://localhost:4189/projects/011-solaris/) · [进入跨场景任务](http://localhost:4189/projects/011-solaris/collection.html) · [查能力清单与规划](http://localhost:4189/projects/011-solaris/integration.html) · [查原始研究](http://localhost:4189/projects/011-solaris/research.html#demo) · [接入说明](notes/integration.md) · [交付与验收](notes/product-release.md)
 
 ![ATELIER项目总览：研究来源、自主实现、十一场景、证据边界与下一步](assets/atelier-project-overview.png)
 
-总览图用于导航，不是运行截图或新增验收证据。提供[可编辑矢量原图](assets/atelier-project-overview.svg)和[3840像素PNG](assets/atelier-project-overview.png)；图源可在本目录运行 `node scripts/project-overview-figure.mjs` 重建。[网页接入截图](assets/atelier-project-overview-page.png)与[本次发布检查](notes/project-overview-validation.json)另行留档；[0.17.0整套备份实际页面](assets/atelier-workspace-backup.png)与[完整原文对照](assets/atelier-workspace-backup-state-checks.json)继续保留。
+总览图继续作为入口，保留0.17.0首次汇总的11场景与研究边界；0.18.0独立支撑研究见下文，不改旧图冒充本轮验收。它不是运行截图。提供[可编辑矢量原图](assets/atelier-project-overview.svg)和[3840像素PNG](assets/atelier-project-overview.png)；图源可在本目录运行 `node scripts/project-overview-figure.mjs` 重建。[网页接入截图](assets/atelier-project-overview-page.png)与[原总览发布检查](notes/project-overview-validation.json)另行留档；[0.17.0整套备份实际页面](assets/atelier-workspace-backup.png)与[完整原文对照](assets/atelier-workspace-backup-state-checks.json)继续保留。
 
 ## 从Solaris研究到我们的产品
 
@@ -23,6 +23,22 @@
 ATELIER选择本地受控交互路线：鼠标拾取稳定对象 → 选择工具/解析有限命令 → 校验几何与业务规则 → 提交可取消、可撤销的结构化状态 → 本地渲染 → 保存并重建。家具、图像、动作、材质与内容有明确来源；已登记对象可编辑、关系可保持、结果可恢复。不借用Solaris后台，也不把预先制作的网格与规则称为任意图像世界生成。
 
 大部分场景使用本地Three.js、图像/画布工具和自有状态；料理另使用Cannon-es近似刚体。**真人上装参考是例外**：本机部署FASHN预训练模型与解析组件生成照片外观参考，不调用外部推理API，但不是从零训练或全部算法自研。该入口已有细节改动、实拍对照与非商业许可限制，当前暂缓扩展。
+
+## 新桌支撑：这次探索什么
+
+旧客厅的两张茶几已有预先登记的矩形边界。新工作台直接读取三个此前未接入的Poly Haven桌模型的原三角面，应用完整节点变换后按统一设计高度归一化，再检测水平连通候选面。台面的有效区域仍为实际三角并集，完整灯底加2 mm保守安全边距必须全部被覆盖，不能用中心、四角或桌子包围矩形代替。
+
+用户先选桌并明确选择检测台面，再拖动灯具或桌子、旋转、提交桌宽深比例。多个候选保持歧义，不自动选择最高面；灯具平移与转灯核查连续扫掠，桌子旋转/宽深变更为离散整套提交。非法释放或取消回滚整次鼠标事务，一次撤销/重做恢复桌、灯、面与锚点。桌拉伸后灯保持自身尺寸，不自动缩灯、夹位或挪灯来掩盖失败。
+
+“保存方案”只写独立键 `atelier-support-workspace-v1`。备份保存桌/灯源包指纹、规则版本、面ID、局部锚点与姿态；打开时用当前几何重验，源改变、无效面、坏位置或坏文本拒绝，原方案保留。文件不包含模型，当前只接受登记静态glTF包，不提供任意模型上传。
+
+真实样本为圆形木桌、乡村木桌与复古茶几；统一75 cm桌高与52 cm灯高是产品设计约定，非实测尺寸。首轮折臂灯的3.527 mm最低小接触片通过了数学覆盖，但官方资产实际为夹装灯，不能当作站立底座；这项语义失败原样保留。另登记独立圆底工业灯，在同一规则及同一三桌上复验，识别约150.071 mm的完整接触底面。它不是新的一套未见桌测试集。静态报告保留25候选、22个推荐失败，三桌各7项代表检查通过；真实孔洞/复杂节点差异用明确标注的几何夹具验证，不用这三桌宣称任意模型泛化。
+
+这项探索的价值是把“逐件手写桌灯约束”推进为“符合声明输入范围的新资产可复用规则，失败有原因，关系可恢复”。目前仍是独立研究工作台；保守AABB灯体碰撞和完整圆旋转包络可能误拒绝，几何条件不判断承重、重心或真实物理稳定性。详见[真实资产与语义核查](notes/support-assets.md)、[原夹装灯首轮记录](notes/support-first-asset-analysis.json)与[当前交付范围](notes/product-release.md)。
+
+![新桌与阅读灯研究工作台：乡村木桌和真实圆底灯](assets/atelier-support-workbench.jpg)
+
+实际文件选择已验证从复古茶几打开797字节乡村桌备份，恢复后的完整公开JSON与乡村基线逐字一致；65,537字节文件拒绝并保留原文本。请求390×844窄屏布局后，镜头适配完整模型，页面可视/滚动宽度实测均375像素，无横向溢出；这项[窄屏核查](assets/atelier-support-mobile.jpg)证明布局适配，触摸操作仍待专项。
 
 ## 十一个场景：现在可以做什么
 
@@ -55,14 +71,14 @@ ATELIER选择本地受控交互路线：鼠标拾取稳定对象 → 选择工�
 
 ## 下一步：按实际任务验收
 
-以下四步按证据逐项推进，不承诺工期；第一步已有0.17.1进展，后三步尚未实现。C19与试衣/真人继续暂停扩展。
+以下四步按证据逐项推进，不承诺工期；第一步已有0.17.1进展，第二步已有0.18.0独立实现、静态证据和三桌真实主流程证据，柜架复用和完整阅读角接入仍待后续。C19与试衣/真人继续暂停扩展。
 
-1. **可靠性收尾。** 本轮完成实际下载/复制全文一致、文件重开、新版单展厅选择恢复与还原、九个已保存工作台逐页重开和十份原文保持。继续验证整套恢复全部九页后的重建、真实存储故障、并发竞争、设备/离线/长期性能；Node模拟不算完成。
-2. **新桌模型的支撑面与台灯关系。** 输入带声明单位/尺寸的静态GLB，先限定平面桌面；至少三种未逐件适配、未参与调参的桌模型共用一套规则，不为每件手写桌面边界或摆放点。验证完整灯底贴面、不越边缘/孔洞、桌面移动/旋转/声明范围内缩放后关系保持，并覆盖取消、撤销、保存和重开；歧义或无法判定时明确拒绝且状态不变。
+1. **可靠性收尾。** 0.17.1已完成实际下载/复制全文一致、文件重开、新版单展厅选择恢复与还原、九个已保存工作台逐页重开和十份原文保持。继续验证整套恢复全部九页后的重建、真实存储故障、并发竞争、设备/离线/长期性能；Node模拟不算完成。
+2. **补齐新桌研究的可靠性与接入契约。** 当前独立工作台的21项静态代表检查、三桌真实鼠标主流程和保存重开逐字对照已完成；严格文本恢复、坏指纹拒绝、下载字节一致、实际文件选择重开与超限拒绝保留原文也已核查。继续单独验证Escape/捕获中断等真实事件、存储/线程故障与设备范围，再决定客厅安全接入、迁移和共享契约。客厅旧规则、任务往返与十份整套备份尚未接入该研究。
 3. **柜面/架面复用。** 桌面验收后，再处理多层候选面与上方净空，整理共同输入、单位、变换、支撑域、失败说明和恢复契约；保留柜架与各场景的专用约束，不因一张桌通过就宣称任意物体摆放。
 4. **完整阅读角任务。** 用户实际完成摆放 → 午后/黄昏方案比较 → 保存 → 恢复，核对几何关系、两套方案和画面；以任务价值验收，不新增页面或研究编号充当成果。
 
-这里的“通用”仅指在静态GLB、明确单位和限定平面条件内复用规则；不等于任意模型自动语义理解、真实承重判断或完整物理求解。
+这里的“通用”仅指在登记静态glTF三角包、明确单位和限定平面条件内复用规则；原规划的静态GLB范围仍作为后续输入目标。它不等于任意模型自动语义理解、真实承重判断或完整物理求解。
 
 ## 证据怎样读
 
@@ -70,9 +86,17 @@ ATELIER选择本地受控交互路线：鼠标拾取稳定对象 → 选择工�
 | --- | --- | --- |
 | 公开研究 | 原帖、Runway介绍、论文与[能力来源清单](notes/capability-catalog.md) | 公开展示不是本项目对Solaris的实测，也不确认源码/权重或可用API。 |
 | 本地实现与历史检查 | 0.17.0记录243/243产品Node测试、16/16仓库检查；见[备份验收](notes/workspace-backup-validation.json) | 本次资料整理重新运行同一套243项产品与16项仓库检查，全部通过；见[总览发布检查](notes/project-overview-validation.json)。容量、半写、读写故障与回滚仍只做Node模拟。 |
-| 0.17.1当前检查 | 248项产品（新增5项UTF-8导出边界）与16项仓库检查；[本轮证据](notes/workspace-export-validation.json) | 下载/复制全文、真实文件重开、单项恢复/还原、九页稳定存档重开分别记载；总览图仍保留0.17.0首次整理依据。 |
+| 0.17.1历史检查 | 248项产品（新增5项UTF-8导出边界）与16项仓库检查；[该轮证据](notes/workspace-export-validation.json) | 下载/复制全文、真实文件重开、单项恢复/还原、九页稳定存档重开分别记载；不能作为0.18.0支撑研究验收。 |
+| 0.18.0当前专项 | 完整产品327/327与仓库16/16通过；新增19提取/加载、24几何、22状态、14控制器，共79项；[真实三桌静态重复验证](notes/support-asset-analysis.json)另记21个代表检查、25候选与22推荐失败 | 三桌真实拖灯/越边回滚/桌变换/保存重开逐字对照、严格文本恢复与实际下载范围由[support-validation.json](notes/support-validation.json)单独登记；纯夹具、源资产分析与鼠标操作分开，不宣称全部A–E完成。 |
 | 实际浏览器主流程 | 十份公开原文、实际文件选择、选择恢复、坏/空项拒绝、陈旧预览禁用；六旧目标与三新目标按各轮留证 | 不是同一轮全部场景、全部设备或所有故障通过；[总验收聚合](notes/product-validation.json)保留旧版本，后续专项以各自文件为准。 |
 | 明确待验 | 整套恢复全部九页后的重建、真实故障/竞争写入、进行中转场、触屏/多浏览器、完整断网和长期性能 | 不能用现有测试量或一张实景图宣布全面产品化。 |
+
+<details>
+<summary>0.17.1备份与导航验收摘要（历史保留）</summary>
+
+0.17.1补齐整套备份的保存/重开路径，并修复展厅、影像、地标顶栏文字挤压。文件名与实际UTF-8容量可见，已检查的编辑文本也能下载，读取失败保留原文本。实际下载/复制全文一致、文件重开、新版仅恢复展厅及还原已核查；九工作台的稳定配置逐页重开一致，访问前后十份保存原文保持。影像在不同画布尺寸下仅按中心适配显示偏移，测量/校准等内容保持。248项产品与16项仓库检查通过。详见[0.17.1操作与证据](notes/workspace-export-validation.json)，不外推为整套恢复九页后的全流程验收。该轮新桌支撑仅完成调查与协议，尚未实施。
+
+</details>
 
 <details>
 <summary>此前首页版本说明与工作区证据（历史保留，不作为新验收）</summary>
