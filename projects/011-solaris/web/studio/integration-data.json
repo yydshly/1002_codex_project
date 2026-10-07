@@ -1,5 +1,5 @@
 {
-  "version": "0.18.1",
+  "version": "0.18.2",
   "updatedAt": "2026-10-07",
   "total": 36,
   "connected": 35,
@@ -19,7 +19,7 @@
       "oldLivingRoomRulesReplaced": false,
       "document": "table-support-plan.md",
       "staticAnalysisDocument": "support-asset-analysis.json",
-      "validationDocument": "support-reliability-validation.json",
+      "validationDocument": "support-draft-validation.json",
       "pending": [
         "真实鼠标持按Escape/捕获中断/布局变化与线程故障专项",
         "真正同时竞争写入和跨窗口原子存储；损坏/超限存档的独立修复流程",
@@ -28,7 +28,7 @@
         "真实承重、重心稳定和接触物理",
         "真实存储故障、触屏/其他浏览器、设备性能与长期/离线专项"
       ],
-      "previousValidationDocument": "support-validation.json",
+      "previousValidationDocument": "support-reliability-validation.json",
       "saveReliability": {
         "version": "0.18.1",
         "module": "../web/support/storage.js",
@@ -42,6 +42,25 @@
         "actualEvidence": "same-origin-two-tabs-sequential-save-and-explicit-adoption",
         "storageFaults": "Node fixtures only",
         "lifecycleFaults": "VM fixture running actual app.js only"
+      },
+      "originalGeometryValidationDocument": "support-validation.json",
+      "draftProtection": {
+        "version": "0.18.2",
+        "module": "../web/support/draft.js",
+        "comparison": "validated-state-value-separate-from-exact-raw-storage",
+        "savedAcknowledgement": "verified-save-or-explicit-current-adoption-only",
+        "autosave": false,
+        "leavingChoices": [
+          "save-then-leave",
+          "backup-and-stay",
+          "continue",
+          "explicit-leave-without-save"
+        ],
+        "pendingSurfaceChoiceBlocksExport": true,
+        "nativeBeforeUnload": "requested-only-browser-dependent-not-real-prompt-verified",
+        "actualReturn": "cold-document-return-not-bfcache-proof",
+        "lateNavigationCancellation": "actual-app-VM-verified",
+        "narrowLayoutThisRound": "requested390x844-but-actual1280-not-accepted"
       }
     }
   ],
@@ -1699,7 +1718,7 @@
     {
       "name": "新桌支撑独立研究",
       "entrance": "客厅顶栏 → 新桌支撑研究；明确选择自动检测面后操作",
-      "scope": "三种真实静态桌与独立圆底灯共用冻结规则；原网格三角并集、完整灯底加2mm、连续灯扫掠、整桌关系和严格备份。0.18.1增加完整原文旧页保存保护、写后读回、最新存档重验与可撤销打开；两标签顺序任务已核查，非原子锁。保留25候选/22失败及夹装灯语义失败，不替换客厅旧规则、不加入十份整套备份、不增加35/36。"
+      "scope": "三种真实静态桌与独立圆底灯共用冻结规则；原网格三角并集、完整灯底加2mm、连续灯扫掠、整桌关系和严格备份。0.18.1增加完整原文旧页保存保护、写后读回、最新存档重验与可撤销打开；两标签顺序任务已核查，非原子锁。0.18.2准确显示草稿状态，离开前保存/备份/继续/明确离开，备份不当作保存；真实全文与跳转已核查，原生关闭/返回缓存/本轮窄屏另验。保留25候选/22失败及夹装灯语义失败，不替换客厅旧规则、不加入十份整套备份、不增加35/36。"
     },
     {
       "name": "对象复制",

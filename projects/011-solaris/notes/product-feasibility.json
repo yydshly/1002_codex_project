@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-10-07",
-  "purpose": "36项研究映射；0.18.1补齐独立新桌工作台的原文保存冲突保护和异步初始化/故障隔离。原网格支撑规则与0.18.0三桌证据保留；真实两标签保存任务、VM生命周期夹具与存储模拟分别记录。11场景、35/36、九任务、十份整套存档不变。",
+  "purpose": "36项研究映射；0.18.2补齐独立新桌的准确草稿状态、页面跳转前处理成果和迟到导航隔离。冻结几何与历史存储冲突证据保留；真实页面任务、Node/VM模拟和未完成窄屏分别记录。11场景、35/36、九任务、十份备份不变。",
   "proposedApproach": "independent-scene-runtime",
   "implementationStatus": "partial-implemented",
   "scopeBoundary": "既有三维/像素场景使用自有状态与登记资产；C17新增限定正面上装的真人研究参考，由本机FASHN预训练后端生成。照片效果可能改动人物、服装或下装细节；未知体型/衣物、多视角一致性、尺码/舒适度、真实商品业务与商业授权不由样板证明。",
@@ -1067,9 +1067,9 @@
     "implementedBoundedCount": 35,
     "remainingCount": 1,
     "releaseDocument": "product-release.md",
-    "validationDocument": "support-reliability-validation.json",
+    "validationDocument": "support-draft-validation.json",
     "runtimeExternalGenerationApi": false,
-    "version": "0.18.1",
+    "version": "0.18.2",
     "integrationDocument": "integration.md",
     "sceneEntries": [
       "../web/index.html",
@@ -1545,24 +1545,25 @@
       "finalTenRawExactlyBaseline": true
     },
     "releaseChanges": {
-      "release": "0.18.1",
-      "focus": "独立研究页的成果保存与异步可靠性",
+      "release": "0.18.2",
+      "focus": "准确草稿状态与离开前保留成果",
       "implementation": [
-        "保存前比较完整原文，写后读回确认；旧页面不自动覆盖变化存档",
-        "检查最新存档后明确打开；检查后再次变化则失效",
-        "本页方案可备份，打开最新后可撤销找回原方案",
-        "原模型prepare完成前禁操作，线程故障后晚到结果不能恢复编辑或触发保存",
-        "视角和布局变化前取消拖动，begin拒绝释放指针捕获"
+        "以已核查方案内容比较草稿与确认保存基线，编辑/撤销/重做更新提示",
+        "只有写后核对成功或明确采纳最新存档才确认已保存；备份和检查不清未保存",
+        "当前标签页面跳转前提供保存后离开/先备份/继续编辑/明确离开",
+        "关闭提示使导航意图失效，迟到保存结果不能突然跳转；返回时重启保护",
+        "未选完整台面时禁止保存/备份并引导撤销或选择；按需请求浏览器关闭提醒"
       ],
       "automatic": {
-        "productTests": 358,
+        "productTests": 386,
         "repositoryTests": 16,
-        "newStorageTests": 27,
-        "newLifecycleFixtureTests": 4
+        "newDraftTests": 19,
+        "newAppVmTests": 9,
+        "existingAppVmTests": 4
       },
-      "actual": "同源两标签页的先后保存冲突、草稿保留、最新检查失效、明确打开、完整撤销/重做与存档还原按专项报告留证",
-      "boundary": "原文比较并非跨窗口原子锁；存储故障/真正同时写入、实际持按取消/线程失败、触屏/其他浏览器和长期性能仍待专项",
-      "document": "support-reliability-validation.json"
+      "actual": "完整公开JSON的编辑/撤销/重做、继续编辑、备份不自动保存、保存后跳转与冷返回、最新存档采纳后重开、候选面等待保护、恢复仍未保存、明确离开不写草稿和最终797字节还原分别留证",
+      "boundary": "原生beforeunload弹框、实际bfcache、故障和同时写入另验；本轮请求390×844但实际1280，窄屏未完成；备份仅全文/链接未新增下载落盘",
+      "document": "support-draft-validation.json"
     },
     "historicalWorkspaceExportChanges": {
       "release": "0.17.1",
@@ -1641,7 +1642,7 @@
       "oldLivingRoomRulesReplaced": false,
       "document": "table-support-plan.md",
       "staticAnalysisDocument": "support-asset-analysis.json",
-      "validationDocument": "support-reliability-validation.json",
+      "validationDocument": "support-draft-validation.json",
       "pending": [
         "真实鼠标持按Escape/捕获中断/布局变化与线程故障专项",
         "真正同时竞争写入和跨窗口原子存储；损坏/超限存档的独立修复流程",
@@ -1650,7 +1651,7 @@
         "真实承重、重心稳定和接触物理",
         "真实存储故障、触屏/其他浏览器、设备性能与长期/离线专项"
       ],
-      "previousValidationDocument": "support-validation.json",
+      "previousValidationDocument": "support-reliability-validation.json",
       "saveReliability": {
         "version": "0.18.1",
         "module": "../web/support/storage.js",
@@ -1664,6 +1665,25 @@
         "actualEvidence": "same-origin-two-tabs-sequential-save-and-explicit-adoption",
         "storageFaults": "Node fixtures only",
         "lifecycleFaults": "VM fixture running actual app.js only"
+      },
+      "originalGeometryValidationDocument": "support-validation.json",
+      "draftProtection": {
+        "version": "0.18.2",
+        "module": "../web/support/draft.js",
+        "comparison": "validated-state-value-separate-from-exact-raw-storage",
+        "savedAcknowledgement": "verified-save-or-explicit-current-adoption-only",
+        "autosave": false,
+        "leavingChoices": [
+          "save-then-leave",
+          "backup-and-stay",
+          "continue",
+          "explicit-leave-without-save"
+        ],
+        "pendingSurfaceChoiceBlocksExport": true,
+        "nativeBeforeUnload": "requested-only-browser-dependent-not-real-prompt-verified",
+        "actualReturn": "cold-document-return-not-bfcache-proof",
+        "lateNavigationCancellation": "actual-app-VM-verified",
+        "narrowLayoutThisRound": "requested390x844-but-actual1280-not-accepted"
       }
     },
     "historicalTableSupportChanges": {
@@ -1676,6 +1696,26 @@
       "capabilityCountsUnchanged": true,
       "remainingCapability": "C19",
       "fittingAndRealPersonExpansion": "paused"
+    },
+    "historicalSupportReliabilityChanges": {
+      "release": "0.18.1",
+      "focus": "独立研究页的成果保存与异步可靠性",
+      "implementation": [
+        "保存前比较完整原文，写后读回确认；旧页面不自动覆盖变化存档",
+        "检查最新存档后明确打开；检查后再次变化则失效",
+        "本页方案可备份，打开最新后可撤销找回原方案",
+        "原模型prepare完成前禁操作，线程故障后晚到结果不能恢复编辑或触发保存",
+        "视角和布局变化前取消拖动，begin拒绝释放指针捕获"
+      ],
+      "automatic": {
+        "productTests": 358,
+        "repositoryTests": 16,
+        "newStorageTests": 27,
+        "newLifecycleFixtureTests": 4
+      },
+      "actual": "同源两标签页的先后保存冲突、草稿保留、最新检查失效、明确打开、完整撤销/重做与存档还原按专项报告留证",
+      "boundary": "原文比较并非跨窗口原子锁；存储故障/真正同时写入、实际持按取消/线程失败、触屏/其他浏览器和长期性能仍待专项",
+      "document": "support-reliability-validation.json"
     }
   }
 }

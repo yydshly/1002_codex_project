@@ -1,0 +1,659 @@
+{
+  "format": "atelier-support-draft-validation",
+  "version": 1,
+  "release": "0.18.2",
+  "date": "2026-10-07",
+  "status": "draft-status-and-explicit-link-navigation-verified-native-prompt-and-real-faults-pending",
+  "purpose": "补全独立桌灯工作台的方案保留体验：明确区分已保存、未保存、待选面及外部存档变化；当前标签内的页面跳转先提供继续编辑、先备份、核对保存后离开和明确放弃；检查文件、打开备份或下载入口不能冒充保存成功。",
+  "releaseCounts": {
+    "existingScenes": 11,
+    "implementedBounded": 35,
+    "totalResearch": 36,
+    "c35Destinations": 9,
+    "wholeWorkspaceBackupRecords": 10,
+    "changed": false
+  },
+  "scope": {
+    "entry": "web/support.html",
+    "ownStorageKey": "atelier-support-workspace-v1",
+    "storageWrites": "explicit-save-only",
+    "automaticPersistenceAdded": false,
+    "wholeWorkspaceBackupIntegrated": false,
+    "newScenesOrResearchCapabilities": 0,
+    "newUnseenAssetSet": false,
+    "geometryThresholdsChanged": false,
+    "arbitraryAssetUpload": false,
+    "physicalBearingValidated": false,
+    "otherStorageKeys": "No hidden browser-storage inspection or mutation. The implementation and isolated storage fixtures address this workbench key; this run does not claim a browser comparison of the other ten workspace records."
+  },
+  "historicalEvidence": [
+    {
+      "release": "0.18.1",
+      "report": "notes/support-reliability-validation.json",
+      "reportSha256": "ca918b043b87120da6a71fe57a96acf95e5b1f9a25142d3b22ac5b868612a27e",
+      "retainedUnmodified": true,
+      "productTests": 358,
+      "addedStorageTests": 27,
+      "addedActualAppLifecycleVmTests": 4,
+      "meaning": "Prior stale-page save, explicit latest-record adoption and asynchronous lifecycle evidence remains historical. The non-atomic storage guard is retained."
+    },
+    {
+      "release": "0.18.0",
+      "report": "notes/support-validation.json",
+      "reportSha256": "66eb8438c148fef9b368f97a9698f945fdf3e0e843f5b36462e9b7a497195928",
+      "retainedUnmodified": true,
+      "productTests": 327,
+      "addedGeometryStateMeshControllerTests": 79,
+      "tables": 3,
+      "representativeStaticCases": 21,
+      "meaning": "Prior three-table geometry, actual mouse-drag, native-file and actual disk-download records are retained. This draft-navigation run is not a new asset evaluation or a new actual disk download."
+    }
+  ],
+  "frozenPolicy": {
+    "version": "atelier-support-v1",
+    "sha256": "7659e054bd72dd87f4f1d12dfb03499cff358167874a0c628833e973e9980633",
+    "marginMeters": 0.002,
+    "contactHeightToleranceMeters": 0.0005,
+    "coreModuleByteHashesMatchHistoricalReport": [
+      "mesh.js",
+      "load.js",
+      "geometry.js",
+      "state.js",
+      "controller.js",
+      "worker.js"
+    ],
+    "previousReliabilityModulesByteHashesMatch": [
+      "web/support/storage.js",
+      "web/support/scene.js",
+      "tests/support-storage.test.mjs"
+    ],
+    "meaning": "Source-triangle coverage, conservative collision checks and exact-raw storage protection are unchanged. Status equality does not replace any fingerprint or geometry validation."
+  },
+  "implementation": {
+    "draft": {
+      "module": "web/support/draft.js",
+      "persistence": false,
+      "geometryValidation": false,
+      "comparison": "Canonical structural JSON state signatures; nested object property order and serialized whitespace do not affect equality, while array order and scalar types do.",
+      "currentState": "Only an accepted finite plain-JSON root object changes the retained signature. Null or undefined pending replies retain the last valid scheme.",
+      "savedState": "Caller marks a state saved only after verified initial stored-state loading, exact write/readback success, or explicit latest-stored-state restoration and baseline adoption. Merely exporting, checking or restoring another backup does not mark it saved.",
+      "lateSave": "A verified saved signature advances separately from the last observed current signature. Saving an older version cannot mark a newer current edit clean.",
+      "flags": [
+        "hasState",
+        "dirty",
+        "pendingSelection",
+        "transactionActive",
+        "externalChanged"
+      ],
+      "distinctFlags": "Pending face choice and active transaction stay separate from dirty geometry; a preview at its original value can remain an active gesture. An external-record event stays dirty until explicit verified save/adoption.",
+      "boundedComparison": {
+        "maximumDepth": 32,
+        "maximumNodes": 4096,
+        "maximumSignatureCharacters": 65536
+      },
+      "rejection": "Cycles, non-finite numbers, non-JSON values, non-plain prototypes, sparse/extended arrays, accessors/symbol fields and comparison limits reject atomically, preserving prior signatures and flags.",
+      "isolation": "Retained signatures are strings; mutating the supplied state or a returned flag snapshot cannot silently alter the observation or saved baseline."
+    },
+    "ui": {
+      "header": "Current public status follows observed worker states, verified save/adoption and external change; camera changes do not create a dirty scheme.",
+      "leaveProtection": "Coordinator also protects pending selection, active gesture/transaction, in-flight work and unconfirmed save results. It cancels a current gesture before resolving an ordinary navigation request.",
+      "ordinaryLinks": "Primary unmodified self-target http(s) links leaving the current document are guarded. Same-document hashes, download links, explicit new targets and browser-owned modified-link actions remain available.",
+      "choices": [
+        "Continue editing and preserve current scheme",
+        "Open a public backup on this page without saving",
+        "Save, require verified write/readback and no remaining protection, then navigate",
+        "Explicitly discard this page draft and navigate without saving"
+      ],
+      "pendingFace": "Incomplete face selection disables save/backup from the leave dialog and directs the user to finish selection or Undo.",
+      "cancelledIntent": "Closing the dialog invalidates the pending navigation epoch; a late save result cannot unexpectedly navigate after the user returns to editing.",
+      "verifiedFailure": "Save rejection or changed readback opens save-problem flow, keeps the draft and blocks save-and-leave.",
+      "externalChange": "Another record change updates status but does not silently replace the displayed local scene. Latest full raw text must be checked and explicitly opened."
+    },
+    "browserLifecycle": {
+      "beforeUnload": "A listener is attached while protection is needed and removed when clean or during explicitly chosen navigation. It requests the browser default reminder; no guarantee that the browser will display it.",
+      "pageshow": "Resets the explicit-navigation suppression and refreshes protection. The actual tested back navigation cold-loaded the page; retained-page/bfcache behavior is covered only by the app VM event fixture.",
+      "actualNativePromptVerified": false,
+      "actualBfcachePersistedVerified": false,
+      "mobileBackgroundReliabilityVerified": false
+    },
+    "storage": {
+      "module": "web/support/storage.js",
+      "atomicCrossTabLock": false,
+      "limitation": "The retained localStorage read/compare/write/read guard detects controlled stale-page conflicts but is not an atomic compare-and-swap. This run does not establish truly simultaneous-write safety."
+    }
+  },
+  "automatic": {
+    "observation": "Parent task executed the final complete suites. This evidence assembly independently counts new test definitions, checks historical byte hashes and recomputes public-state equalities; it does not rewrite historical reports.",
+    "product": {
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "pass": 386,
+      "fail": 0,
+      "exitCode": 0
+    },
+    "repository": {
+      "command": "node --test scripts/tests/*.test.mjs",
+      "pass": 16,
+      "fail": 0,
+      "exitCode": 0
+    },
+    "added": {
+      "draft": 19,
+      "actualAppLifecycleVm": 9,
+      "total": 28,
+      "lifecycleVmFileTotalIncludingPreviousFour": 13
+    },
+    "draftCoverage": [
+      "Initial unsaved state and verified saved baseline",
+      "Edit, Undo/Redo and preview cancellation by value",
+      "Null/undefined pending replies, distinct incomplete selection and active transaction",
+      "External change and explicit verified adoption",
+      "Late older save cannot make a newer draft clean; export/read alone cannot advance baseline",
+      "Nested key order, whitespace, array order and scalar type equality",
+      "Mutation isolation and invalid-input atomic rejection",
+      "Noncyclic shared references, null-prototype JSON and depth/node/aggregate text limits"
+    ],
+    "addedActualAppVmCases": [
+      "Status follows edits, rejection, Undo/Redo while camera changes stay clean",
+      "Backup export/check/open cannot certify saved status",
+      "Ordinary nested links guard drafts; browser-owned link actions stay available",
+      "Save-and-leave only navigates after verified storage and removes the duplicate native leave request",
+      "pageshow reactivates draft protection after explicit discard navigation",
+      "Closing a delayed save-and-leave invalidates navigation intent; backup stays on the page",
+      "Write rejection, readback change and stale record preserve draft and block navigation",
+      "External record event requires explicit adoption; Undo returns the former draft",
+      "Pending choice, active gesture and worker interruption retain protection without inventing a saved scheme"
+    ],
+    "limits": "The app tests execute actual app.js and draft.js coordination in a VM with controlled DOM, Worker, renderer and storage adapters. They establish code-level regressions, not actual browser native prompts, bfcache retention, pointer-hold or browser/device failure injection."
+  },
+  "actualBrowser": {
+    "browser": "Codex in-app browser on Windows",
+    "topology": {
+      "sameOriginTabs": 2,
+      "sequentialControlledActions": true,
+      "simultaneousWrites": false,
+      "osWindowOrCrossBrowserTest": false
+    },
+    "method": "Actual IAB visible controls and complete public JSON only; two sequential test tabs with actual cold returns/reloads. No hidden storage access, native dialog or persisted bfcache proof.",
+    "storageInspection": "Visible controls and complete public JSON text fields only; no hidden storage inspection or mutation.",
+    "initial": {
+      "utf8Bytes": 797,
+      "tableAssetId": "wooden_table_02",
+      "lampAssetId": "industrial_pipe_lamp",
+      "header": "方案与存档一致"
+    },
+    "steps": [
+      {
+        "action": "Nudge the lamp right 5 cm, then Undo and Redo.",
+        "result": "Edit and Redo show unsaved modification. Undo matches the whole initial text and shows the saved-consistent status.",
+        "evidence": [
+          "initial",
+          "edited",
+          "undo",
+          "redo"
+        ]
+      },
+      {
+        "action": "Use the project-progress link and choose Continue editing.",
+        "result": "Navigation is cancelled; the complete edited draft is retained on the workbench.",
+        "evidence": [
+          "edited",
+          "continued"
+        ]
+      },
+      {
+        "action": "Use the same link and choose Backup first; open a fresh observer tab.",
+        "result": "The public backup exactly equals the edited draft and has a download href, but the page stays dirty. The fresh observer loads the unchanged original record: backup did not autosave.",
+        "evidence": [
+          "edited",
+          "navigationBackup",
+          "initial",
+          "freshAfterBackup"
+        ]
+      },
+      {
+        "action": "Load the final app build, make the same edit and choose Save and leave.",
+        "result": "The full draft matches the earlier edit, then actual navigation reaches overview.html#next-steps only after verified save.",
+        "evidence": [
+          "edited",
+          "finalBuildEdited"
+        ],
+        "destination": "http://localhost:4189/projects/011-solaris/overview.html#next-steps"
+      },
+      {
+        "action": "Use actual browser Back to return to the workbench.",
+        "result": "Cold model loading is observed; the complete exported text equals the saved edit and status is clean. A subsequent edit and link attempt shows protection again.",
+        "evidence": [
+          "edited",
+          "returnedSaved"
+        ],
+        "coldLoadingObserved": true,
+        "retainedPageBfcacheProven": false
+      },
+      {
+        "action": "Inspect the older observer after the external save, then explicitly check and adopt the latest record before a confirmed reload.",
+        "result": "The old displayed scheme is retained instead of silently replaced. An early reload request did not establish a new document and still exported the initial text. The explicitly checked full raw equals the saved draft; after adoption, the confirmed safe reload exports that full draft. No native-prompt success is inferred.",
+        "evidence": [
+          "initial",
+          "oldObserverAfterRequestedReload",
+          "edited",
+          "checkedSaved",
+          "confirmedReopen"
+        ]
+      },
+      {
+        "action": "Select the retro table without choosing a face and try to leave; then Undo.",
+        "result": "The leave dialog disables save and backup and asks to finish selection or Undo. Undo restores the complete saved edit and clean status.",
+        "evidence": [
+          "edited",
+          "pendingUndo"
+        ],
+        "incompleteChoiceExplanation": "先继续编辑并选择台面，或撤销回完整方案，再保存或备份。"
+      },
+      {
+        "action": "Open the original backup through public controls, then explicitly save.",
+        "result": "Restoration exports the whole original text while status remains unsaved. Only the later verified explicit save marks it saved.",
+        "evidence": [
+          "initial",
+          "restoredBeforeSave"
+        ],
+        "statusBeforeExplicitSave": "本页有未保存修改"
+      },
+      {
+        "action": "Make a separate left 5 cm draft and explicitly choose Directly leave without preserving changes.",
+        "result": "Actual navigation reaches overview.html#next-steps. The observer checks the latest complete stored text, which is still the original baseline: discard did not autosave.",
+        "evidence": [
+          "discardedDraft",
+          "initial",
+          "finalStored"
+        ],
+        "destination": "http://localhost:4189/projects/011-solaris/overview.html#next-steps"
+      },
+      {
+        "action": "Return again through actual browser Back and read complete public text after cold loading.",
+        "result": "Final reopened and wide-layout public texts both exactly equal the original baseline and status is saved-consistent.",
+        "evidence": [
+          "initial",
+          "finalReopen",
+          "finalWide"
+        ],
+        "finalStatus": "方案与存档一致"
+      }
+    ],
+    "finalConsole": {
+      "tabsInspected": 1,
+      "error": 0,
+      "warn": 0,
+      "scope": "Only the final primary test tab was inspected. No second-tab console result is claimed."
+    },
+    "cleanup": {
+      "originalStoredBaselineRestoredAndColdReopened": true,
+      "originalPublicExistingPageWholeRawUnchanged": true,
+      "originalPrivateExistingPageDraftUnchanged": true,
+      "originalPrivateDraftBytes": 833,
+      "privateDraftRawPublished": false,
+      "originalExistingPagesNotReloaded": true,
+      "temporaryObserverAndNarrowProbeTabsClosed": true,
+      "originalPageChecks": "Parent compared the original public 797-byte page and private 833-byte draft before/after through public fields. Only the private comparison outcome is published."
+    },
+    "layout": {
+      "desktopCapturePixels": {
+        "width": 1280,
+        "height": 720
+      },
+      "requestedNarrowProbe": {
+        "width": 390,
+        "height": 844,
+        "existingTabActualWidth": 1280,
+        "newTabActualWidth": 1280,
+        "acceptedAsNarrowEvidence": false,
+        "overrideReset": true
+      },
+      "narrowLayoutVerified": false,
+      "reason": "Requested 390×844 viewport did not take effect: both existing and temporary new tabs remained 1280 px wide. The override was reset and the temporary probe closed; no narrow/mobile screenshot is accepted as evidence.",
+      "actualTouchInputVerified": false
+    },
+    "actualNativeBeforeUnloadPromptVerified": false,
+    "actualBfcachePersistedVerified": false,
+    "actualNewDiskDownload": false,
+    "availableDownloadHrefObserved": true,
+    "limits": "Actual link navigation and cold re-opening are separate from native browser close/refresh prompts. A download href was observed, not a new disk download. Narrow asynchronous faults and simultaneous writes were not forced in the real browser."
+  },
+  "publicArtifactVerification": {
+    "artifact": "assets/atelier-support-draft-state-checks.json",
+    "sha256": "8b5e5fb54c8f79df17aed9d4f6bfd323c8fb0981878a6ccf93a58aff4dc12244",
+    "recordedUiChecks": 14,
+    "allRecordedUiChecksTrue": true,
+    "independentlyRecomputedWholeRawEquality": [
+      {
+        "left": "initial",
+        "right": "undo",
+        "exact": true
+      },
+      {
+        "left": "edited",
+        "right": "redo",
+        "exact": true
+      },
+      {
+        "left": "edited",
+        "right": "continued",
+        "exact": true
+      },
+      {
+        "left": "edited",
+        "right": "navigationBackup",
+        "exact": true
+      },
+      {
+        "left": "initial",
+        "right": "freshAfterBackup",
+        "exact": true
+      },
+      {
+        "left": "edited",
+        "right": "finalBuildEdited",
+        "exact": true
+      },
+      {
+        "left": "initial",
+        "right": "oldObserverAfterRequestedReload",
+        "exact": true
+      },
+      {
+        "left": "edited",
+        "right": "returnedSaved",
+        "exact": true
+      },
+      {
+        "left": "edited",
+        "right": "checkedSaved",
+        "exact": true
+      },
+      {
+        "left": "edited",
+        "right": "confirmedReopen",
+        "exact": true
+      },
+      {
+        "left": "edited",
+        "right": "pendingUndo",
+        "exact": true
+      },
+      {
+        "left": "initial",
+        "right": "restoredBeforeSave",
+        "exact": true
+      },
+      {
+        "left": "initial",
+        "right": "finalStored",
+        "exact": true
+      },
+      {
+        "left": "initial",
+        "right": "finalReopen",
+        "exact": true
+      },
+      {
+        "left": "initial",
+        "right": "finalWide",
+        "exact": true
+      }
+    ],
+    "independentlyRecomputedWholeRawDifference": [
+      {
+        "left": "initial",
+        "right": "edited",
+        "different": true
+      },
+      {
+        "left": "initial",
+        "right": "discardedDraft",
+        "different": true
+      },
+      {
+        "left": "edited",
+        "right": "discardedDraft",
+        "different": true
+      }
+    ],
+    "rawSummaries": {
+      "initial": {
+        "utf8Bytes": 797,
+        "sha256": "6cc8598d7e56c761ce1254e64367a00e9ac75ff8afd113c247e0b77f6dd840b9",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": -5.455395311881883e-8,
+          "z": 0.0065133390485582685
+        }
+      },
+      "edited": {
+        "utf8Bytes": 796,
+        "sha256": "23a6c57471750881efa2d2f8a388add341511c7957e1475abce2e95f83548b5a",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": 0.049999945446046884,
+          "z": 0.0065133390485582685
+        }
+      },
+      "undo": {
+        "utf8Bytes": 797,
+        "sha256": "6cc8598d7e56c761ce1254e64367a00e9ac75ff8afd113c247e0b77f6dd840b9",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": -5.455395311881883e-8,
+          "z": 0.0065133390485582685
+        }
+      },
+      "redo": {
+        "utf8Bytes": 796,
+        "sha256": "23a6c57471750881efa2d2f8a388add341511c7957e1475abce2e95f83548b5a",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": 0.049999945446046884,
+          "z": 0.0065133390485582685
+        }
+      },
+      "continued": {
+        "utf8Bytes": 796,
+        "sha256": "23a6c57471750881efa2d2f8a388add341511c7957e1475abce2e95f83548b5a",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": 0.049999945446046884,
+          "z": 0.0065133390485582685
+        }
+      },
+      "navigationBackup": {
+        "utf8Bytes": 796,
+        "sha256": "23a6c57471750881efa2d2f8a388add341511c7957e1475abce2e95f83548b5a",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": 0.049999945446046884,
+          "z": 0.0065133390485582685
+        }
+      },
+      "freshAfterBackup": {
+        "utf8Bytes": 797,
+        "sha256": "6cc8598d7e56c761ce1254e64367a00e9ac75ff8afd113c247e0b77f6dd840b9",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": -5.455395311881883e-8,
+          "z": 0.0065133390485582685
+        }
+      },
+      "finalBuildEdited": {
+        "utf8Bytes": 796,
+        "sha256": "23a6c57471750881efa2d2f8a388add341511c7957e1475abce2e95f83548b5a",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": 0.049999945446046884,
+          "z": 0.0065133390485582685
+        }
+      },
+      "oldObserverAfterRequestedReload": {
+        "utf8Bytes": 797,
+        "sha256": "6cc8598d7e56c761ce1254e64367a00e9ac75ff8afd113c247e0b77f6dd840b9",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": -5.455395311881883e-8,
+          "z": 0.0065133390485582685
+        }
+      },
+      "returnedSaved": {
+        "utf8Bytes": 796,
+        "sha256": "23a6c57471750881efa2d2f8a388add341511c7957e1475abce2e95f83548b5a",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": 0.049999945446046884,
+          "z": 0.0065133390485582685
+        }
+      },
+      "checkedSaved": {
+        "utf8Bytes": 796,
+        "sha256": "23a6c57471750881efa2d2f8a388add341511c7957e1475abce2e95f83548b5a",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": 0.049999945446046884,
+          "z": 0.0065133390485582685
+        }
+      },
+      "confirmedReopen": {
+        "utf8Bytes": 796,
+        "sha256": "23a6c57471750881efa2d2f8a388add341511c7957e1475abce2e95f83548b5a",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": 0.049999945446046884,
+          "z": 0.0065133390485582685
+        }
+      },
+      "pendingUndo": {
+        "utf8Bytes": 796,
+        "sha256": "23a6c57471750881efa2d2f8a388add341511c7957e1475abce2e95f83548b5a",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": 0.049999945446046884,
+          "z": 0.0065133390485582685
+        }
+      },
+      "restoredBeforeSave": {
+        "utf8Bytes": 797,
+        "sha256": "6cc8598d7e56c761ce1254e64367a00e9ac75ff8afd113c247e0b77f6dd840b9",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": -5.455395311881883e-8,
+          "z": 0.0065133390485582685
+        }
+      },
+      "discardedDraft": {
+        "utf8Bytes": 796,
+        "sha256": "63540c2ab9dab44a32e118bf57346eb686c5adb61623a2b645c08bef1db627ef",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": -0.05000005455395312,
+          "z": 0.0065133390485582685
+        }
+      },
+      "finalStored": {
+        "utf8Bytes": 797,
+        "sha256": "6cc8598d7e56c761ce1254e64367a00e9ac75ff8afd113c247e0b77f6dd840b9",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": -5.455395311881883e-8,
+          "z": 0.0065133390485582685
+        }
+      },
+      "finalReopen": {
+        "utf8Bytes": 797,
+        "sha256": "6cc8598d7e56c761ce1254e64367a00e9ac75ff8afd113c247e0b77f6dd840b9",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": -5.455395311881883e-8,
+          "z": 0.0065133390485582685
+        }
+      },
+      "finalWide": {
+        "utf8Bytes": 797,
+        "sha256": "6cc8598d7e56c761ce1254e64367a00e9ac75ff8afd113c247e0b77f6dd840b9",
+        "tableAssetId": "wooden_table_02",
+        "lampAssetId": "industrial_pipe_lamp",
+        "localAnchor": {
+          "x": -5.455395311881883e-8,
+          "z": 0.0065133390485582685
+        }
+      }
+    },
+    "assertedControlledNudgesMeters": {
+      "editedXDelta": 0.05,
+      "discardedDraftXDelta": -0.05,
+      "remainingCompleteStateFieldsEqualOriginal": true
+    },
+    "distinction": "Full text equality, UTF-8 lengths, envelope identities and controlled coordinate differences can be reproduced from the public artifact. Header labels, disabled buttons, navigation destinations, actual cold loading, layout, available href, console and excluded private-draft preservation are recorded UI observations."
+  },
+  "artifacts": [
+    {
+      "file": "assets/atelier-support-unsaved-navigation.jpg",
+      "format": "JPEG",
+      "capturedPixels": {
+        "width": 1280,
+        "height": 720
+      },
+      "bytes": 60729,
+      "sha256": "e839ececd435d2578fe91fce3256b14f361d6f7ebcacadc45df3b40e88ba79f9",
+      "meaning": "Actual desktop browser capture of unsaved navigation choices. The interface was unchanged during final pageshow/description updates and the final built main workflow was rechecked. Not an AI-generated image or native browser beforeunload prompt."
+    },
+    {
+      "file": "assets/atelier-support-draft-state-checks.json",
+      "format": "JSON",
+      "bytes": 19156,
+      "sha256": "8b5e5fb54c8f79df17aed9d4f6bfd323c8fb0981878a6ccf93a58aff4dc12244",
+      "meaning": "Complete public baseline, edited, undone, redone, backed-up, saved, adopted, reopened and restored texts plus recorded UI outcomes. The original private existing-page draft text is excluded."
+    }
+  ],
+  "sourceCodeSnapshot": {
+    "capturedAtUtc": "2026-10-07T11:36:37.488Z",
+    "hashing": "SHA-256 over exact working-tree file bytes at assembly time without line-ending normalization; this identifies the observed source snapshot and does not claim identical Git-normalized blob bytes.",
+    "sha256": {
+      "web/support/draft.js": "c2f4f3d333e781793d68ad6ed9bbb16e724a1908d9845fdd1f2c43001001c719",
+      "web/support/app.js": "48f4ac5371955b13f6c1b496d6ceca3b009963e9137b37887279b546cc6fb12a",
+      "web/support/storage.js": "654e0b495024ef2c60e4b074262a9a5918289ae787f5b75f7840d6ebed259b36",
+      "web/support/scene.js": "376a3c24e9d72b54ed17087a3e930fc32e739f132f29ac50bf2dbcce012a0dbb",
+      "web/support/support.css": "c0b383537df4d94e280dbea10ab750c338c9252b83c27159748416f90dc922e5",
+      "web/support.html": "93b6444ce4491ea00d87b15b0e1737f1118fedd7d90ee4ff53b1798bfad94d9b",
+      "tests/support-draft.test.mjs": "5f7af5b218fe84bebb28be98901f742ee7bd36e217de1e0946df1a217b584464",
+      "tests/support-app-lifecycle.test.mjs": "9b08e754bf2881f6eae4a6d2ea57d458980b2cb7b8c7dc343c15a7631acb90db",
+      "tests/support-storage.test.mjs": "54e93b5a93031397b6b858d5531cefa4a345b6e3fb4d6863f491323e1b8f30d7"
+    }
+  },
+  "stillPending": [
+    "Native browser refresh/close reminders under activation and browser-specific policies",
+    "Narrow-layout validation: requested viewport override did not take effect, so no successful narrow-screen claim is made",
+    "Actual bfcache retained-page lifecycle; current real back navigation cold-loaded while pageshow has a VM regression",
+    "Real Escape while pointer held, lost capture, blur/hidden and camera/resize interruption during active gestures",
+    "Real worker failure and blocked storage/quota/write/readback faults; current evidence is Node/VM fixtures",
+    "Truly simultaneous writes and atomic persistence design; retained localStorage guard is not an atomic lock",
+    "Record changes inside asynchronous restoration/adoption window in the actual browser",
+    "Malformed/oversize existing-record repair, true touch devices, other browsers and OS windows",
+    "Mobile background termination, offline sessions and sustained latency/memory budgets",
+    "Additional genuinely unseen assets and semantic categories, cabinet/shelf levels and clearance rules",
+    "Arbitrary upload, slopes, curved support, multiple feet and real physical bearing/stability",
+    "Separate acceptance before old living-room migration or whole-workspace backup integration",
+    "Full A–E asset protocol and the remaining bounded research capability"
+  ]
+}
