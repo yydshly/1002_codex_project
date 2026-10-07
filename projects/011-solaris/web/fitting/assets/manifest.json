@@ -1,0 +1,235 @@
+{
+  "schema": 1,
+  "date": "2026-10-05",
+  "purpose": "Fixed local three-dimensional virtual fitting of two registered complete garments; no external generation/inference backend.",
+  "source": {
+    "id": "quaternius-universal-animation-library-standard",
+    "author": "Quaternius",
+    "pageUrl": "https://quaternius.com/packs/universalanimationlibrary.html",
+    "authorMirrorUrl": "https://opengameart.org/content/universal-animation-library",
+    "archiveUrl": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceModel": "Animation Library[Standard]/Godot/AnimationLibrary_Godot_Standard.glb / Mannequin"
+  },
+  "authoredAdditions": {
+    "geometry": "Independent continuous torso/shoulder/underarm/sleeve lofts with Catmull-Clark curvature, fused topology, real 0.0022 shell thickness, exact cuff/hem cuts, wide rounded neck openings, separate edge trim, densely projected curved pockets/yoke/seams and metallic zipper/teeth/pull. Full original source body geometry retained.",
+    "weights": "Project-authored continuous torso/shoulder weights blend with original nearest-source upperarm/forearm skin weights; no body masks or deleted limbs. All 53-bone shared hierarchy and compatible inverse binds retained within 2e-6 in three separate skins.",
+    "poses": "Two locally authored finite constant registered poses, neutral and reach. Whole 53-bone clips remain constant for two seconds, so frozen selected pose is deterministic without animation phase persistence.",
+    "copyrightScope": "Complete CC0 Quaternius mannequin reused; all garments, tailoring geometry, local weight blending, poses and replacement PBR materials authored in this workspace.",
+    "bodyGeometry": "Source has 13,744 indexed faces including one exact duplicate; Blender removes duplicate and all 13,743 unique faces remain. Independent packed skin bind-rest restoration maps every output triangle to original source coordinate connectivity. No body decimation, primitive substitution or mask."
+  },
+  "runtime": {
+    "avatar": "avatar.glb",
+    "garments": [
+      {
+        "id": "tee-01",
+        "path": "core-tee.glb",
+        "name": "Core Tee",
+        "shape": "wide round-neck short sleeves, edge trim and curved chest pocket"
+      },
+      {
+        "id": "jacket-01",
+        "path": "field-jacket.glb",
+        "name": "Field Jacket",
+        "shape": "full sleeves, wide rounded neck opening/edge trim, central zipper, two chest and two diagonal hand pockets"
+      }
+    ],
+    "up": "+Y",
+    "front": "+Z",
+    "outerScale": 1,
+    "groundY": 0,
+    "virtualReferenceHeight": 1.78,
+    "realMeasurementClaim": false,
+    "bodyMasks": false,
+    "clips": [
+      "Fitting_Neutral",
+      "Fitting_Reach"
+    ],
+    "poseInstructions": "Load each gltf.scene directly under same outer root without animated Box3 recentering; choose matching constant clip and mixer.setTime(0) on avatar and garment. Fitting_Fabric is the only recolorable main cloth material. Keep trim/stitch/hardware materials independent. Independent stand displays keep neutral pose.",
+    "finiteVerification": {
+      "checks": 11,
+      "status": "passed-with-finite-domain",
+      "totalProbes": 3414,
+      "intersectedProbes": 3350,
+      "unverifiedRays": 64,
+      "unverifiedByGarmentPose": {
+        "teeNeutral": 6,
+        "teeReach": 22,
+        "jacketNeutral": 10,
+        "jacketReach": 26
+      },
+      "scope": "Selected fixed-pose torso/sleeve outward shell intersections; 64 non-intersecting shoulder/underarm rays remain unverified by this method and are kept in the report. 12 front/back/side asset views reviewed. No assertion of legal openings for missing rays, no full-body zero-intersection proof, arbitrary shape/pose fitting or cloth simulation."
+    }
+  },
+  "files": [
+    {
+      "path": "avatar.glb",
+      "role": "runtime-complete-avatar",
+      "byteLength": 682176,
+      "sha256": "9b236207c5256cb79e699d451c8345b7790717c2a06f151fe9e2814aa57be631"
+    },
+    {
+      "path": "core-tee.glb",
+      "role": "runtime-tee",
+      "byteLength": 3533168,
+      "sha256": "79b645eb26a89f3c755d7dc25ed26c15129e905381d8e47b3f89b144638d1d15"
+    },
+    {
+      "path": "field-jacket.glb",
+      "role": "runtime-jacket",
+      "byteLength": 6209244,
+      "sha256": "72b28ac1219ba2f848fb3000374680d12b02738d8672e7152e7ca557dcf7fade"
+    },
+    {
+      "path": "fit-registration.json",
+      "role": "finite-fit-registration",
+      "byteLength": 1212,
+      "sha256": "ec5bd56929fa52daf92691eafa0e09d1b21ca33c2fe913f2fe9fa74798ca4402"
+    },
+    {
+      "path": "quaternius-cc0-license.txt",
+      "role": "source-license-copy",
+      "byteLength": 446,
+      "sha256": "11eac7504a28077e9d8dbac8ddfca2566510efba7eef46e11f21cdd2bc96d4d5"
+    },
+    {
+      "repositoryPath": "assets/diver-source-archives/original/universal-animation-library-standard.zip",
+      "role": "original-archive",
+      "byteLength": 14541205,
+      "sha256": "18ff1a7215f4852b320203e8aaf02a1578b5c8eef9027fbaedfcedc7b85a3ac2"
+    },
+    {
+      "repositoryPath": "assets/diver-source-archives/original/quaternius-ual/Animation Library[Standard]/Godot/AnimationLibrary_Godot_Standard.glb",
+      "role": "original-body-glb",
+      "byteLength": 6671104,
+      "sha256": "1b7bf67866360665426bb99e4c71bd619f19b408453c24e30f0c3071601eee5c"
+    },
+    {
+      "repositoryPath": "assets/diver-source-archives/original/source-body-topology.json",
+      "role": "source-topology-snapshot",
+      "byteLength": 751354,
+      "sha256": "a065aca463b6e50f211ffc58ac17bdeebd0fce2a50731a2741d7b445dae8c95c"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/build_fitting.py",
+      "role": "local-build-recipe",
+      "byteLength": 19674,
+      "sha256": "23e575a1f20614471f9f19d37db6ca863fbffea54a2888ecb9874df4e1715fe0"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/atelier-fitting-complete.blend",
+      "role": "complete-editable-model",
+      "byteLength": 6421575,
+      "sha256": "32bba9f33f3a925bdb3578da69dca2898d872c34d7da4277a6cb85d33410acb8"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/jacket-01-neutral-preview.png",
+      "role": "visual-jacket-neutral",
+      "byteLength": 1066157,
+      "sha256": "3697af892098d8c57bf0092b14bbf36528de77ffc03aa57cfde7874783d0b9c4"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/jacket-01-reach-preview.png",
+      "role": "visual-jacket-reach",
+      "byteLength": 1073867,
+      "sha256": "83111a7dadc4baca46883d71d4941abda211064e4a78aaa2d0625a41f2dfd019"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/tee-01-neutral-preview.png",
+      "role": "visual-tee-neutral",
+      "byteLength": 1053979,
+      "sha256": "40e62e69be47dd54b377dc4314511e212f40a79743b426f5a3e9a3d838bbaa32"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/tee-01-reach-preview.png",
+      "role": "visual-tee-reach",
+      "byteLength": 1062732,
+      "sha256": "e4fcbf4ba4273b7cca6064cf7a6de01a25364c3afe18fc27f96eec59e95f4294"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/review_fitting.py",
+      "role": "visual-review-recipe",
+      "byteLength": 2578,
+      "sha256": "cac24d1b75fa41c049af980027c688c76b9cf5e8044ed2141979a3dfec0d9cc0"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/tee-01-neutral-front-review.png",
+      "role": "visual-tee-01-neutral-front",
+      "byteLength": 1141256,
+      "sha256": "c0efed3d0f02906edf5181851369d998bedb2dcb6fc9f4c48ab3aaea96107065"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/tee-01-neutral-back-review.png",
+      "role": "visual-tee-01-neutral-back",
+      "byteLength": 1144567,
+      "sha256": "009e906b3a11d08d07f7d54f72f95b59cae73b1661ae24b7e1a93569f69b68c2"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/tee-01-neutral-side-review.png",
+      "role": "visual-tee-01-neutral-side",
+      "byteLength": 1113769,
+      "sha256": "282779a520678244592277e6ee1600fc006b924a93c6d836212475bbaeff3919"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/tee-01-reach-front-review.png",
+      "role": "visual-tee-01-reach-front",
+      "byteLength": 1148311,
+      "sha256": "0429f17f31870ddbef9e97f240c31e21cf0e74c82cbfd531f12bb579a1f77386"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/tee-01-reach-back-review.png",
+      "role": "visual-tee-01-reach-back",
+      "byteLength": 1149012,
+      "sha256": "d54245a90bd6b8be6a6ecbcf59ddc65c8367b0b3364a8a6471c49e100d650b48"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/tee-01-reach-side-review.png",
+      "role": "visual-tee-01-reach-side",
+      "byteLength": 1118550,
+      "sha256": "d03c7d96840254ae1d008e70a21b74c13612541226c8aa79932e5bb49b677fcc"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/jacket-01-neutral-front-review.png",
+      "role": "visual-jacket-01-neutral-front",
+      "byteLength": 1147985,
+      "sha256": "83152155f29f9744423de6895e1fac064c66f6693ba88cee828e079264eac9d8"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/jacket-01-neutral-back-review.png",
+      "role": "visual-jacket-01-neutral-back",
+      "byteLength": 1141765,
+      "sha256": "84474d27c5714e3e546f03ebdbea27849ffa839667a2110b3bec258ec5141e4c"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/jacket-01-neutral-side-review.png",
+      "role": "visual-jacket-01-neutral-side",
+      "byteLength": 1116287,
+      "sha256": "388c2b176e099987be074ad5d5aaeae7e05553043604da6be9de2d8a42b84b99"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/jacket-01-reach-front-review.png",
+      "role": "visual-jacket-01-reach-front",
+      "byteLength": 1159607,
+      "sha256": "7f74724058f7aefb134fcc1706a686b277182b7c59b80e303f0651efd8c54742"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/jacket-01-reach-back-review.png",
+      "role": "visual-jacket-01-reach-back",
+      "byteLength": 1150461,
+      "sha256": "71799b3fc1a7a37af68e62bcec8907c293d69925a42d97753b67d6d8b2c0350d"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/jacket-01-reach-side-review.png",
+      "role": "visual-jacket-01-reach-side",
+      "byteLength": 1117281,
+      "sha256": "85adaaf83a59bbde7438d0eabf28cecffa44782aabee3bd8fe7dc7de4845f38f"
+    },
+    {
+      "repositoryPath": "assets/fitting-source-archives/finite-fit-verification.json",
+      "role": "finite-packed-skin-verification",
+      "byteLength": 8786,
+      "sha256": "1fba338d98dd519847e49547859da2b4ddab97563927bb612a1800788807f78c"
+    }
+  ]
+}

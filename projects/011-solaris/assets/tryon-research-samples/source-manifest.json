@@ -1,0 +1,118 @@
+{
+  "schema": 1,
+  "date": "2026-10-06",
+  "use": "non-commercial research only",
+  "samplePairs": 2,
+  "originalJpegs": 4,
+  "originalJpegBytes": 410536,
+  "inputRoleCount": 5,
+  "roleReuse": [
+    {
+      "roleId": "garment-model-14627",
+      "reusedFromRoleId": "person-14627",
+      "image": "person-14627.jpg",
+      "sha256": "f02b595b9068354a731c2d43658d92a4d47f23a7d9c73f2c1db651139e2cb2d4",
+      "newPhotograph": false,
+      "pixelsOrBytesEdited": false,
+      "description": "One original photograph is registered in two input roles; this does not add cross-person ground truth."
+    }
+  ],
+  "sourceLicense": {
+    "id": "CC-BY-NC-4.0",
+    "label": "VITON-HD 研究样本 · 署名 / 非商业 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "sourceUrl": "https://github.com/shadow2496/VITON-HD#license",
+    "copy": "viton-hd-CC-BY-NC-4.0.txt",
+    "commercialUse": false,
+    "attribution": "Seunghwan Choi, Sunghyun Park, Minsoo Lee, Jaegul Choo. VITON-HD: High-Resolution Virtual Try-On via Misalignment-Aware Normalization. CVPR 2021. Official repository LICENSE: Copyright (c) 2021, NeStyle Inc.",
+    "changes": "Original JPEG pixels / bytes unchanged. Renamed files only; source README, license, stable retrieval URLs and hashes archived."
+  },
+  "metadataExtraction": "Only two relevant records retained from official vitonhd_test_tagged.json; full dataset and weights not downloaded.",
+  "files": [
+    {
+      "repositoryPath": "assets/tryon-research-samples/download-record.json",
+      "byteLength": 2537,
+      "sha256": "34f06afcd58279418962f0eb1c9f4211037594e210d129446cc77d8d9d794f79"
+    },
+    {
+      "repositoryPath": "assets/tryon-research-samples/idm-vton-readme.md",
+      "byteLength": 5604,
+      "sha256": "411f12d92515a44a2880f6d5a9e19ce838e4af474c4136237567b01306073d71"
+    },
+    {
+      "repositoryPath": "assets/tryon-research-samples/ootdiffusion-readme.md",
+      "byteLength": 2750,
+      "sha256": "02b4b0d0a907e24001686c8d8c4346b310ddf2c0adbe66766e20da0290d4a45e"
+    },
+    {
+      "repositoryPath": "assets/tryon-research-samples/original/garment-00055.jpg",
+      "byteLength": 94754,
+      "sha256": "c9c13719456663be040a63711d0ee92c6bac2e259017b072d396d874bdc367ad"
+    },
+    {
+      "repositoryPath": "assets/tryon-research-samples/original/garment-14627.jpg",
+      "byteLength": 62788,
+      "sha256": "3fd079502958281685d739cd88e3b2a2c0300f67c7370bfc0146d7c549cf4346"
+    },
+    {
+      "repositoryPath": "assets/tryon-research-samples/original/person-00055.jpg",
+      "byteLength": 152937,
+      "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78"
+    },
+    {
+      "repositoryPath": "assets/tryon-research-samples/original/person-14627.jpg",
+      "byteLength": 100057,
+      "sha256": "f02b595b9068354a731c2d43658d92a4d47f23a7d9c73f2c1db651139e2cb2d4"
+    },
+    {
+      "repositoryPath": "assets/tryon-research-samples/register_samples.py",
+      "byteLength": 7312,
+      "sha256": "c11a29f2bcea06f44d3698c1353d522a4b4070b376caf171c86da344c971c737"
+    },
+    {
+      "repositoryPath": "assets/tryon-research-samples/viton-hd-license.txt",
+      "byteLength": 19398,
+      "sha256": "7c828abdb303d97cc4a0a9638445567eb9ccadf10e554e49db431f0f177f9836"
+    },
+    {
+      "repositoryPath": "assets/tryon-research-samples/viton-hd-readme.md",
+      "byteLength": 4951,
+      "sha256": "b8b8a317b91830cd05fc84766c84c14ca32f0e7d53e4f607d231757dcba2ef11"
+    },
+    {
+      "repositoryPath": "assets/tryon-research-samples/vitonhd-target-annotations.json",
+      "byteLength": 3650,
+      "sha256": "ebd108eda8cf72044dd93e6cddf456c4315c23c63650e289dd1d671f457fd48f"
+    },
+    {
+      "repositoryPath": "web/tryon/samples/garment-00055.jpg",
+      "byteLength": 94754,
+      "sha256": "c9c13719456663be040a63711d0ee92c6bac2e259017b072d396d874bdc367ad"
+    },
+    {
+      "repositoryPath": "web/tryon/samples/garment-14627.jpg",
+      "byteLength": 62788,
+      "sha256": "3fd079502958281685d739cd88e3b2a2c0300f67c7370bfc0146d7c549cf4346"
+    },
+    {
+      "repositoryPath": "web/tryon/samples/manifest.json",
+      "byteLength": 11769,
+      "sha256": "df46865e724fd4c864d0d243eec906b537b3b048abd484b534a418e37ef06706"
+    },
+    {
+      "repositoryPath": "web/tryon/samples/person-00055.jpg",
+      "byteLength": 152937,
+      "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78"
+    },
+    {
+      "repositoryPath": "web/tryon/samples/person-14627.jpg",
+      "byteLength": 100057,
+      "sha256": "f02b595b9068354a731c2d43658d92a4d47f23a7d9c73f2c1db651139e2cb2d4"
+    },
+    {
+      "repositoryPath": "web/tryon/samples/viton-hd-CC-BY-NC-4.0.txt",
+      "byteLength": 19398,
+      "sha256": "7c828abdb303d97cc4a0a9638445567eb9ccadf10e554e49db431f0f177f9836"
+    }
+  ]
+}

@@ -1,0 +1,711 @@
+{
+  "date": "2026-10-06",
+  "beforeShop": {
+    "version": 1,
+    "order": [
+      "chair",
+      "lamp",
+      "table-glass",
+      "table-solid",
+      "plant",
+      "sofa"
+    ],
+    "pinned": [
+      "sofa"
+    ],
+    "selected": "table-solid",
+    "wishlist": [
+      "sofa",
+      "chair"
+    ],
+    "preference": "reading",
+    "lastScene": "creative"
+  },
+  "targets": {
+    "underwater": {
+      "before": {
+        "version": 2,
+        "view": "custom",
+        "camera": {
+          "position": [
+            -6.991626516213311,
+            3.4572601118110167,
+            9.340045466828183
+          ],
+          "target": [
+            0,
+            0.65,
+            0
+          ]
+        },
+        "fish": {
+          "position": [
+            -0.939885090849307,
+            0.5357663103418918
+          ],
+          "heading": 0.5582672201802401
+        },
+        "records": [
+          {
+            "id": 1,
+            "path": [
+              [
+                -1.85,
+                0.9
+              ],
+              [
+                -1.2643305357201662,
+                0.7487414599979999
+              ],
+              [
+                -1.1133727799884117,
+                0.6441160126208819
+              ],
+              [
+                -0.939885090849307,
+                0.5357663103418918
+              ]
+            ],
+            "diver": {
+              "from": {
+                "position": [
+                  -1.85,
+                  -0.95
+                ],
+                "heading": -1.5707963267948966
+              },
+              "to": {
+                "position": [
+                  -1.85,
+                  -0.95
+                ],
+                "heading": -1.5707963267948966
+              },
+              "path": [
+                [
+                  -1.85,
+                  -0.95
+                ]
+              ],
+              "legacy": true
+            }
+          }
+        ],
+        "nextId": 2,
+        "diver": {
+          "position": [
+            -1.85,
+            -0.95
+          ],
+          "heading": -1.5707963267948966
+        }
+      },
+      "entered": {
+        "version": 2,
+        "view": "custom",
+        "camera": {
+          "position": [
+            -6.991626516213311,
+            3.4572601118110167,
+            9.340045466828183
+          ],
+          "target": [
+            0,
+            0.65,
+            0
+          ]
+        },
+        "fish": {
+          "position": [
+            -0.939885090849307,
+            0.5357663103418918
+          ],
+          "heading": 0.5582672201802401
+        },
+        "records": [
+          {
+            "id": 1,
+            "path": [
+              [
+                -1.85,
+                0.9
+              ],
+              [
+                -1.2643305357201662,
+                0.7487414599979999
+              ],
+              [
+                -1.1133727799884117,
+                0.6441160126208819
+              ],
+              [
+                -0.939885090849307,
+                0.5357663103418918
+              ]
+            ],
+            "diver": {
+              "from": {
+                "position": [
+                  -1.85,
+                  -0.95
+                ],
+                "heading": -1.5707963267948966
+              },
+              "to": {
+                "position": [
+                  -1.85,
+                  -0.95
+                ],
+                "heading": -1.5707963267948966
+              },
+              "path": [
+                [
+                  -1.85,
+                  -0.95
+                ]
+              ],
+              "legacy": true
+            }
+          }
+        ],
+        "nextId": 2,
+        "diver": {
+          "position": [
+            -1.85,
+            -0.95
+          ],
+          "heading": -1.5707963267948966
+        }
+      },
+      "returnStatus": "已从水下工作台返回；陈列、锁定与选品完整保留。",
+      "returnedShop": {
+        "version": 1,
+        "order": [
+          "chair",
+          "lamp",
+          "table-glass",
+          "table-solid",
+          "plant",
+          "sofa"
+        ],
+        "pinned": [
+          "sofa"
+        ],
+        "selected": "table-solid",
+        "wishlist": [
+          "sofa",
+          "chair"
+        ],
+        "preference": "reading",
+        "lastScene": "underwater"
+      },
+      "reopened": {
+        "version": 2,
+        "view": "custom",
+        "camera": {
+          "position": [
+            -6.991626516213311,
+            3.4572601118110167,
+            9.340045466828183
+          ],
+          "target": [
+            0,
+            0.65,
+            0
+          ]
+        },
+        "fish": {
+          "position": [
+            -0.939885090849307,
+            0.5357663103418918
+          ],
+          "heading": 0.5582672201802401
+        },
+        "records": [
+          {
+            "id": 1,
+            "path": [
+              [
+                -1.85,
+                0.9
+              ],
+              [
+                -1.2643305357201662,
+                0.7487414599979999
+              ],
+              [
+                -1.1133727799884117,
+                0.6441160126208819
+              ],
+              [
+                -0.939885090849307,
+                0.5357663103418918
+              ]
+            ],
+            "diver": {
+              "from": {
+                "position": [
+                  -1.85,
+                  -0.95
+                ],
+                "heading": -1.5707963267948966
+              },
+              "to": {
+                "position": [
+                  -1.85,
+                  -0.95
+                ],
+                "heading": -1.5707963267948966
+              },
+              "path": [
+                [
+                  -1.85,
+                  -0.95
+                ]
+              ],
+              "legacy": true
+            }
+          }
+        ],
+        "nextId": 2,
+        "diver": {
+          "position": [
+            -1.85,
+            -0.95
+          ],
+          "heading": -1.5707963267948966
+        }
+      }
+    },
+    "materials": {
+      "before": {
+        "version": 1,
+        "view": "custom",
+        "camera": {
+          "position": [
+            2.493074792243768,
+            2.8646814404432135,
+            3.9889196675900283
+          ],
+          "target": [
+            0,
+            0.15,
+            0
+          ]
+        },
+        "source": [
+          0,
+          0
+        ],
+        "selected": "aluminum",
+        "energies": {
+          "copper": 40,
+          "aluminum": 313.9994991463235,
+          "ice": 333.4
+        },
+        "records": [
+          {
+            "id": 3,
+            "material": "ice",
+            "energyJ": 4.1839999985694885,
+            "seconds": 0.41839999985694887
+          },
+          {
+            "id": 4,
+            "material": "ice",
+            "energyJ": 131.85200000047683,
+            "seconds": 13.185200000047685
+          },
+          {
+            "id": 5,
+            "material": "copper",
+            "energyJ": 40,
+            "seconds": 4
+          },
+          {
+            "id": 6,
+            "material": "aluminum",
+            "energyJ": 40,
+            "seconds": 4
+          },
+          {
+            "id": 7,
+            "material": "ice",
+            "energyJ": 197.36400000095367,
+            "seconds": 19.736400000095365
+          },
+          {
+            "id": 8,
+            "material": "aluminum",
+            "energyJ": 273.9994991463235,
+            "seconds": 27.39994991463235
+          }
+        ],
+        "nextId": 9
+      },
+      "entered": {
+        "version": 1,
+        "view": "custom",
+        "camera": {
+          "position": [
+            2.493074792243768,
+            2.8646814404432135,
+            3.9889196675900283
+          ],
+          "target": [
+            0,
+            0.15,
+            0
+          ]
+        },
+        "source": [
+          0,
+          0
+        ],
+        "selected": "aluminum",
+        "energies": {
+          "copper": 40,
+          "aluminum": 313.9994991463235,
+          "ice": 333.4
+        },
+        "records": [
+          {
+            "id": 3,
+            "material": "ice",
+            "energyJ": 4.1839999985694885,
+            "seconds": 0.41839999985694887
+          },
+          {
+            "id": 4,
+            "material": "ice",
+            "energyJ": 131.85200000047683,
+            "seconds": 13.185200000047685
+          },
+          {
+            "id": 5,
+            "material": "copper",
+            "energyJ": 40,
+            "seconds": 4
+          },
+          {
+            "id": 6,
+            "material": "aluminum",
+            "energyJ": 40,
+            "seconds": 4
+          },
+          {
+            "id": 7,
+            "material": "ice",
+            "energyJ": 197.36400000095367,
+            "seconds": 19.736400000095365
+          },
+          {
+            "id": 8,
+            "material": "aluminum",
+            "energyJ": 273.9994991463235,
+            "seconds": 27.39994991463235
+          }
+        ],
+        "nextId": 9
+      },
+      "returnStatus": "已从材料教学台返回；陈列、锁定与选品完整保留。",
+      "returnedShop": {
+        "version": 1,
+        "order": [
+          "chair",
+          "lamp",
+          "table-glass",
+          "table-solid",
+          "plant",
+          "sofa"
+        ],
+        "pinned": [
+          "sofa"
+        ],
+        "selected": "table-solid",
+        "wishlist": [
+          "sofa",
+          "chair"
+        ],
+        "preference": "reading",
+        "lastScene": "materials"
+      },
+      "reopened": {
+        "version": 1,
+        "view": "custom",
+        "camera": {
+          "position": [
+            2.493074792243768,
+            2.8646814404432135,
+            3.9889196675900283
+          ],
+          "target": [
+            0,
+            0.15,
+            0
+          ]
+        },
+        "source": [
+          0,
+          0
+        ],
+        "selected": "aluminum",
+        "energies": {
+          "copper": 40,
+          "aluminum": 313.9994991463235,
+          "ice": 333.4
+        },
+        "records": [
+          {
+            "id": 3,
+            "material": "ice",
+            "energyJ": 4.1839999985694885,
+            "seconds": 0.41839999985694887
+          },
+          {
+            "id": 4,
+            "material": "ice",
+            "energyJ": 131.85200000047683,
+            "seconds": 13.185200000047685
+          },
+          {
+            "id": 5,
+            "material": "copper",
+            "energyJ": 40,
+            "seconds": 4
+          },
+          {
+            "id": 6,
+            "material": "aluminum",
+            "energyJ": 40,
+            "seconds": 4
+          },
+          {
+            "id": 7,
+            "material": "ice",
+            "energyJ": 197.36400000095367,
+            "seconds": 19.736400000095365
+          },
+          {
+            "id": 8,
+            "material": "aluminum",
+            "energyJ": 273.9994991463235,
+            "seconds": 27.39994991463235
+          }
+        ],
+        "nextId": 9
+      }
+    },
+    "skate": {
+      "before": {
+        "version": 1,
+        "view": "custom",
+        "camera": {
+          "position": [
+            12.997144700771555,
+            9.924321814053295,
+            -1.4092965259257506
+          ],
+          "target": [
+            0,
+            0.7,
+            0
+          ]
+        },
+        "height": 0.7,
+        "trials": [
+          {
+            "id": 1,
+            "rise": 68,
+            "durationMs": 194,
+            "height": 0.5588235294117647
+          },
+          {
+            "id": 2,
+            "rise": 160,
+            "durationMs": 195.9000000357628,
+            "height": 1.1
+          },
+          {
+            "id": 3,
+            "rise": 198.66665649414062,
+            "durationMs": 282.10000002384186,
+            "height": 1.1
+          },
+          {
+            "id": 4,
+            "rise": 138.66665649414062,
+            "durationMs": 282.30000001192093,
+            "height": 0.9745097440831803
+          }
+        ],
+        "nextId": 5,
+        "selectedTrial": 4
+      },
+      "entered": {
+        "version": 1,
+        "view": "custom",
+        "camera": {
+          "position": [
+            12.997144700771555,
+            9.924321814053295,
+            -1.4092965259257506
+          ],
+          "target": [
+            0,
+            0.7,
+            0
+          ]
+        },
+        "height": 0.7,
+        "trials": [
+          {
+            "id": 1,
+            "rise": 68,
+            "durationMs": 194,
+            "height": 0.5588235294117647
+          },
+          {
+            "id": 2,
+            "rise": 160,
+            "durationMs": 195.9000000357628,
+            "height": 1.1
+          },
+          {
+            "id": 3,
+            "rise": 198.66665649414062,
+            "durationMs": 282.10000002384186,
+            "height": 1.1
+          },
+          {
+            "id": 4,
+            "rise": 138.66665649414062,
+            "durationMs": 282.30000001192093,
+            "height": 0.9745097440831803
+          }
+        ],
+        "nextId": 5,
+        "selectedTrial": 4
+      },
+      "returnStatus": "已从滑板练习场返回；陈列、锁定与选品完整保留。",
+      "returnedShop": {
+        "version": 1,
+        "order": [
+          "chair",
+          "lamp",
+          "table-glass",
+          "table-solid",
+          "plant",
+          "sofa"
+        ],
+        "pinned": [
+          "sofa"
+        ],
+        "selected": "table-solid",
+        "wishlist": [
+          "sofa",
+          "chair"
+        ],
+        "preference": "reading",
+        "lastScene": "skate"
+      },
+      "reopened": {
+        "version": 1,
+        "view": "custom",
+        "camera": {
+          "position": [
+            12.997144700771555,
+            9.924321814053295,
+            -1.4092965259257506
+          ],
+          "target": [
+            0,
+            0.7,
+            0
+          ]
+        },
+        "height": 0.7,
+        "trials": [
+          {
+            "id": 1,
+            "rise": 68,
+            "durationMs": 194,
+            "height": 0.5588235294117647
+          },
+          {
+            "id": 2,
+            "rise": 160,
+            "durationMs": 195.9000000357628,
+            "height": 1.1
+          },
+          {
+            "id": 3,
+            "rise": 198.66665649414062,
+            "durationMs": 282.10000002384186,
+            "height": 1.1
+          },
+          {
+            "id": 4,
+            "rise": 138.66665649414062,
+            "durationMs": 282.30000001192093,
+            "height": 0.9745097440831803
+          }
+        ],
+        "nextId": 5,
+        "selectedTrial": 4
+      }
+    }
+  },
+  "checks": [
+    {
+      "name": "task-preview-cancel",
+      "unchanged": true
+    },
+    {
+      "command": "去水下再去材料",
+      "feedback": "请选择一个场景任务，或输入明确去向，例如：去水下、去材料、去滑板",
+      "dialogCount": 0
+    },
+    {
+      "command": "不要去滑板",
+      "feedback": "请选择一个场景任务，或输入明确去向，例如：去水下、去材料、去滑板",
+      "dialogCount": 0
+    },
+    {
+      "command": "去https://outside.invalid",
+      "feedback": "请选择一个场景任务，或输入明确去向，例如：去水下、去材料、去滑板",
+      "dialogCount": 0
+    },
+    {
+      "name": "recent-destination-preview",
+      "sceneId": "skate",
+      "matchesTask": true
+    },
+    {
+      "name": "loaded-underwater-render-and-return",
+      "preserved": true
+    }
+  ],
+  "finalShop": {
+    "version": 1,
+    "order": [
+      "chair",
+      "lamp",
+      "table-glass",
+      "table-solid",
+      "plant",
+      "sofa"
+    ],
+    "pinned": [
+      "sofa"
+    ],
+    "selected": "table-solid",
+    "wishlist": [
+      "sofa",
+      "chair"
+    ],
+    "preference": "reading",
+    "lastScene": "underwater"
+  },
+  "console": []
+}

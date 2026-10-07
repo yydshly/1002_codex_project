@@ -1,0 +1,17 @@
+.object-actions,.table-options{display:flex;gap:7px;margin:14px 0}
+.object-actions button,.table-options button{flex:1;border:1px solid var(--line);padding:9px 6px;border-radius:5px;background:#f7f8f2;font-size:12px}
+.object-actions button:hover,.table-options button:hover{background:#edf0e5}
+.table-options button.active{background:#e7ecdf;border-color:#97ab89;color:#40583b}
+.dimension-inputs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:18px}
+.dimension-inputs label{font-size:11px;color:#8a9480;display:flex;flex-direction:column;gap:6px}
+.dimension-inputs input{width:100%;min-width:0;padding:9px 5px;border:1px solid var(--line);border-radius:5px;background:#fff;color:#485542;font-size:12px}
+.removed-objects{margin-top:18px;border-top:1px solid var(--line);padding-top:13px;color:#7a8771;font-size:12px}
+.removed-objects summary{cursor:pointer;padding:7px 0}
+.removed-objects button{display:block;width:100%;padding:10px 6px;margin-top:4px;text-align:left;border-radius:5px;background:#f0f2e9}
+.removed-objects button:hover{background:#e7ecdf}
+.library-note .text-link{font-size:11px;line-height:1.8}
+.guide-card{margin-top:22px;padding:14px 12px;background:#edf0e5;border:1px solid #dce4d3;border-radius:7px}
+.guide-card h3{font-size:12px;margin:0}.guide-card p{font-size:11px;line-height:1.8;color:#718167}
+.guide-card ol{padding:0;list-style:none;margin:12px 0}.guide-card li{font-size:11px;padding:5px 0;display:flex;gap:8px;color:#819175}.guide-card li.done{color:#4a6940}.guide-card li.current{color:#3f5537;font-weight:600}
+.guide-card button{font-size:11px;color:#607454}.guide-card #guide-close{font-size:19px}.guide-card #guide-restart{border-top:1px solid #d8dfcf;padding:9px 0 0;width:100%;text-align:left}
+.product-scenes{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid #e0e2d8;font-size:10px}.product-scenes a{padding:8px 5px;border:1px solid #d9decf;border-radius:5px;text-align:center;color:#718167;text-decoration:none}.product-scenes a.active{background:#e6ecdf;border-color:#acbba1;color:#4e6540}.product-scenes a:last-child{grid-column:1/-1;border:0;text-align:left;padding:3px 0}.product-scenes a:hover{background:#ebf0e4}

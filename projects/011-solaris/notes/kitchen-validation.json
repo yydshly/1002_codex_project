@@ -1,0 +1,197 @@
+{
+  "product": "ATELIER",
+  "release": "0.6.0",
+  "date": "2026-10-05",
+  "entry": "http://localhost:4189/projects/011-solaris/kitchen.html",
+  "acceptedBoundedIds": [
+    "C20",
+    "C29"
+  ],
+  "method": "Actual in-app browser UI at its natural 1280×720 viewport. Native mouse drags, clicks and wheel; semantic buttons and the visible JSON backup field. No private application state, synthetic physics result or generated screenshot used for acceptance.",
+  "asset": {
+    "library": "Poly Haven",
+    "license": "CC0-1.0",
+    "models": [
+      "food_apple_01",
+      "lemon",
+      "yellow_onion",
+      "food_avocado_01"
+    ],
+    "originalFiles": 20,
+    "originalTextures": 12,
+    "textureResolution": "1k",
+    "triangles": 24211,
+    "bytes": 4716226,
+    "integrity": "All upstream MD5 and local SHA-256 match; original glTF, buffers, JPEGs and node transforms retained.",
+    "scope": "Whole unpeeled food scans. Authored uniform display normalization and independent sphere collision envelopes; bowl, board and arrangement authored locally. Existing CC0 wood_floor, fabric_pattern_07 and coastal-day environment reused."
+  },
+  "checks": [
+    {
+      "name": "Actual food and local rendering",
+      "status": "passed",
+      "evidence": "Four original scanned meshes and PBR textures visibly render on the reusable source board and in the authored ceramic bowl. Raised overview exposes every source ingredient. No proxy spheres replace render geometry."
+    },
+    {
+      "name": "Native source-to-bowl drag",
+      "status": "passed",
+      "evidence": "Native apple drag changed 4→5 instances, created ingredient-5, preserved all prior IDs/templates and the exact camera. Physical settling produced position [0.0041260756159117165,0.21473053437648515,0.00772809618180124] and a normalized non-identity quaternion."
+    },
+    {
+      "name": "One complete drop, one history entry",
+      "status": "passed",
+      "evidence": "One undo after the apple settled returned the entire initial JSON exactly, including all old poses and nextId. Redo restored the completed five-item composition."
+    },
+    {
+      "name": "Repeated source copy and composition",
+      "status": "passed",
+      "evidence": "Native avocado drag changed 5→6, created ingredient-6, preserved prior IDs/types and left the source board reusable. The new item settled at [-0.009590023160715805,0.24470176668441143,-0.11053511142594616]."
+    },
+    {
+      "name": "All four ingredient types by native drag",
+      "status": "passed",
+      "evidence": "After apple and avocado, native lemon and onion drags to a spare location each changed6→7 and settled. Lemon position[-0.33502018516730864,0.17498051325260539,-0.08266528877966703]; onion[-0.3305634591916697,0.1799805102088817,-0.07997950030696198], both near the bowl wall. Each complete operation undone once returned the exact original six-item JSON."
+    },
+    {
+      "name": "Solver failure rollback",
+      "status": "passed",
+      "evidence": "Native seventh lemon release on the occupied centre initially failed the8-second quiet limit. UI displayed the actual stability error and rolled back. Reopened complete JSON equalled the six-item baseline exactly; no ingredient deletion, clamping or fake completed drop was recorded."
+    },
+    {
+      "name": "Invalid release rollback",
+      "status": "passed",
+      "evidence": "Native lemon drag released on the tabletop outside the opening showed an explicit bowl-area error. Quantity remained five and reopened backup equalled the prior full JSON exactly."
+    },
+    {
+      "name": "Native relocation of an existing ingredient",
+      "status": "passed",
+      "evidence": "Native drag of apple ingredient-2 to another bowl location changed its position and resettled the mixture. Quantity remained six and every ID remained. One undo returned the complete six-item state exactly."
+    },
+    {
+      "name": "Undo an unfinished drop",
+      "status": "passed",
+      "evidence": "Added a lemon using the auxiliary control and immediately clicked undo during settling. Only that pending operation rolled back; the prior six-item state remained exact."
+    },
+    {
+      "name": "Remove and clear are reversible",
+      "status": "passed",
+      "evidence": "Removed lemon ingredient-1: 6→5 and remaining ingredients settled. Undo restored all six. Clear produced 0/16; one undo restored the complete six-item JSON exactly."
+    },
+    {
+      "name": "Native click and controlled inspection",
+      "status": "passed",
+      "evidence": "Native click on apple ingredient-5 entered rising and then held inspection, visibly translating the original mesh without rotating or changing it. Save during inspection recorded the stable mixture; return restored the full original JSON exactly."
+    },
+    {
+      "name": "Cancel inspection",
+      "status": "passed",
+      "evidence": "Selected settled avocado ingredient-6 and used the inspection control. Cancelling after its visible held stage restored the complete six-item JSON exactly. The physics solver does not run during this temporary observation."
+    },
+    {
+      "name": "Blocked path rejects inspection",
+      "status": "passed",
+      "evidence": "Native click on apple ingredient-2, beneath the new avocado envelope, displayed ‘上方食材阻挡，无法浮起观察’. Phase remained stable and the entire JSON was unchanged."
+    },
+    {
+      "name": "Strict invalid import is atomic",
+      "status": "passed",
+      "evidence": "Pasted an otherwise valid six-item JSON with nextId=1. Application rejected it as a duplicate/too-small instance counter; closing and reopening backup showed the prior full state unchanged."
+    },
+    {
+      "name": "Valid import updates the actual mesh",
+      "status": "passed",
+      "evidence": "Imported the same ingredient-1 ID with template changed from lemon to apple. The rendered object became a red apple and a native click selected 苹果·1 and began inspection. Cancel then one undo restored the original lemon state exactly."
+    },
+    {
+      "name": "Stable save and reload",
+      "status": "passed",
+      "evidence": "Saved and reloaded six ingredients. Reopened backup matched every ID, template, position, quaternion, nextId, camera and view exactly. No idle simulation drift; temporary inspection is not persisted."
+    },
+    {
+      "name": "Native camera orbit",
+      "status": "passed",
+      "evidence": "Native drag on empty stage changed the camera and marked custom view without changing ingredients. One undo restored the original camera and complete composition."
+    },
+    {
+      "name": "Native wheel and grouped history",
+      "status": "passed",
+      "evidence": "Native wheel reduced camera-target distance 3.554208772708772→2.4567043372563138, preserving the target and ingredient array. A single undo restored the entire overview six-item JSON exactly. Pointer-held gestures use start/end; wheel bursts use a 220ms completion window."
+    },
+    {
+      "name": "Three registered camera presets",
+      "status": "passed",
+      "evidence": "Overview, top and close-up buttons returned their registered camera positions/targets and pressed states while preserving the complete ingredient array. Returning to overview restored [1.2,2.5,2.3]/[-0.2,0.18,0]."
+    },
+    {
+      "name": "Natural desktop layout",
+      "status": "passed",
+      "evidence": "Natural browser client width and scroll width both1280. No viewport override. Source board labels, five-scene navigation, scrollable inspector and stage controls fit this desktop viewport."
+    },
+    {
+      "name": "Temporary close-up inspection camera",
+      "status": "passed",
+      "evidence": "Close-up previously let the rising food leave the frame. The revised temporary target follows the inspection while keeping the camera position. The actual lemon remains fully visible at its held observation point. Return restored the complete starting close-up JSON exactly; save while floating then reload restored that exact stable JSON and idle phase, without the temporary target."
+    },
+    {
+      "name": "Actual image export and proof artifacts",
+      "status": "passed",
+      "evidence": "Snapshot control displayed a decoded1470×969 JPEG from the actual WebGL canvas. Saved that image plus1280×720 workspace and close-up inspection browser captures. Six-item overview config was read from the visible JSON field and saved as a reopenable example."
+    },
+    {
+      "name": "Scene capability dialog",
+      "status": "passed",
+      "evidence": "Actual scene modal displayed C20/C29, source provenance, direct mouse actions, expected results, verification procedures, completed versus pending checks and whole-food/sphere/fixed-trajectory boundaries. Product support is separately listed without adding capability counts."
+    },
+    {
+      "name": "Browser runtime diagnostics",
+      "status": "passed",
+      "evidence": "Actual completed workspace error/warning log was empty."
+    },
+    {
+      "name": "Final research integration webpage",
+      "status": "passed",
+      "evidence": "Actual integration page displayed0.6.0, all36 capabilities,24 bounded connections and12 pending; five scene cards include kitchen C20/C29. Phase4 is current2/5, while C30–C32 remain pending. The updated scene modal shows completed checks separately from capacity/device/performance work."
+    },
+    {
+      "name": "Central stacked-drop convergence regression",
+      "status": "passed",
+      "evidence": "Contact iterations increased24→60 without loosening quiet, boundary or penetration checks. The real six-item fixture plus exact centre seventh lemon settles in about3.067 simulation seconds at20/30/60/120Hz with identical snapshots. Native UI repeated the original centre drag:6→7 settled, all original IDs/templates retained, new lemon position[-0.29697464990657324,0.174980512978345,-0.17562481892394535]. One undo returned the entire six-item JSON exactly. The previous failed-drop rollback is retained above as an actual pre-fix observation."
+    }
+  ],
+  "automatedChecks": [
+    {
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "status": "passed",
+      "tests": 66,
+      "kitchenCoreTests": 8,
+      "kitchenPhysicsTests": 9
+    },
+    {
+      "command": "node projects/011-solaris/scripts/verify-kitchen-assets.mjs",
+      "status": "passed",
+      "sourceHashMatched": true,
+      "allCoordinatesFinite": true
+    },
+    {
+      "command": "npm test",
+      "status": "passed",
+      "tests": 16
+    },
+    {
+      "command": "node --check projects/011-solaris/web/kitchen/app.js; node --check projects/011-solaris/web/kitchen/scene.js",
+      "status": "passed"
+    }
+  ],
+  "pending": [
+    "Device-level held Escape, blur, pointer cancellation/lost capture, long pause then continued dragging, native right-button pan and touchscreen gestures; code reviewed, these hardware interruptions were not reproduced.",
+    "Native edge extremes in multiple directions, repeated food drops up to16, overflow/spill recovery and prolonged repeated interaction; core/physics tests cover quantity bounds and eight near-edge releases, but full capacity was not exercised in the browser.",
+    "Target GPU frame time, memory, interaction latency and long-duration stability; mobile hardware and accessibility audit.",
+    "Entire workflow with third-party networking disabled and download controls confirmed to write destination files.",
+    "Independent visual quality review; exact mesh contact, soft bodies, food preparation/cooking, nutrition and physical weighing are outside this release."
+  ],
+  "screenshots": [
+    "../assets/atelier-kitchen-workspace.jpg",
+    "../assets/atelier-kitchen-inspection.jpg",
+    "../assets/atelier-kitchen-render.jpg"
+  ],
+  "reopenableExample": "../assets/atelier-kitchen-config.json"
+}

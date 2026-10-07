@@ -1,0 +1,268 @@
+{
+  "product": "ATELIER",
+  "release": "0.13.0",
+  "date": "2026-10-05",
+  "capability": "C17",
+  "entry": "http://localhost:4189/projects/011-solaris/fitting.html",
+  "status": "passed-for-listed-workflows; finite-fit-domain-and-device-specialties-pending",
+  "purpose": "验证鼠标把独立上装拖到完整人体胸腹区域后，真实衣型预览、合法释放替换、有限骨架姿态检查和整套搭配恢复。",
+  "implementation": {
+    "backend": "none; all assets, rig fitting, pointer rules and state run locally",
+    "body": "Quaternius CC0 complete 53-bone stylized mannequin, not a real-person scan",
+    "registeredGarments": [
+      "tee-01",
+      "jacket-01"
+    ],
+    "poses": {
+      "neutral": "Fitting_Neutral",
+      "reach": "Fitting_Reach"
+    },
+    "poseSampling": "matching constant clips on independently cloned full skins, mixer.setTime(0); no live animation phase",
+    "pick": "nearest visible registered gallery garment mesh, excluding invisible ancestors",
+    "drop": "nearest visible avatar/worn-cloth mesh hit in registered local chest/abdomen box",
+    "targetBox": {
+      "x": [
+        -0.375,
+        0.375
+      ],
+      "y": [
+        0.82,
+        1.61
+      ],
+      "z": [
+        -0.225,
+        0.225
+      ]
+    },
+    "minimumDragPixels": 6,
+    "preview": "temporary visual garment only; stable config remains entire original baseline until legal release",
+    "slot": "one complete upper garment; switching garment/color does not change body pose or camera",
+    "fabric": "only Fitting_Fabric recolored; trim, stitching and metal materials remain independent",
+    "units": "uncalibrated scene units; 1.78 reference is virtual normalization, not a measured person or size recommendation"
+  },
+  "state": {
+    "schema": 1,
+    "key": "atelier-fitting-room-v1",
+    "maximumFileBytes": 32768,
+    "historyLimit": 40,
+    "fields": [
+      "version",
+      "avatarId",
+      "garment",
+      "pose",
+      "view",
+      "camera"
+    ],
+    "strictImport": "closed IDs, exact keys, finite bounded camera, registered-preset agreement and UTF-8 size; validate before edit",
+    "invalidStoredRaw": "read-only-reviewed preservation until explicit successful save/import; storage failure not injected",
+    "noOp": "same garment ID plus same color creates no history and preserves redo; a different color is a real change",
+    "isolation": "new independent local key; other scene keys and C35 six registered routes untouched"
+  },
+  "automated": {
+    "productSuite": {
+      "passed": 171,
+      "total": 171,
+      "fittingCore": 15,
+      "log": "fitting-test-output.txt"
+    },
+    "repositorySuite": {
+      "passed": 16,
+      "total": 16
+    },
+    "syntax": [
+      "web/fitting/core.js",
+      "web/fitting/app.js",
+      "web/fitting/scene.js",
+      "scripts/integration.mjs"
+    ],
+    "review": "independent read-only review of rig instances, actual mesh ray hits, atomic preview/history, external pointer capture, camera cancel cleanup and strict import; defects corrected before release",
+    "cameraBoundarySamples": {
+      "passed": 128,
+      "total": 128,
+      "method": "Independent execution of actual scene clampCamera function over eight target heights, eight distances and two boundary polar angles; not native pointer evidence and not included in product test count."
+    }
+  },
+  "nativeDesktop": {
+    "browser": "Codex In-app Browser",
+    "isolatedOrigin": "http://localhost:4194",
+    "viewport": [
+      1280,
+      720
+    ],
+    "passed": [
+      "Real 3D tee mesh dragged to chest/abdomen and worn; independent jacket mesh dragged to replace it.",
+      "Replacement undone to tee and redone to jacket in one action each.",
+      "Real tee drag released in blank space: entire before/after JSON exactly equal.",
+      "Escape while real garment drag is active: entire before/after JSON exactly equal.",
+      "Real valid held drag observed with dragActive=true/dropValid=true and real worn preview; legal release finishes one garment change.",
+      "Sidebar garment card dragged to chest/abdomen; one undo restores prior garment and color.",
+      "Real blank-space camera orbit changes custom camera only; one undo restores full prior JSON.",
+      "Escape during active real camera orbit restores full prior JSON.",
+      "Main cloth color changed, saved, reloaded, and stable entire JSON recovered exactly.",
+      "Three legal UI-imported setup fixtures restore complete exact JSON and are undoable: initial, jacket-moss-reach-back, tee-ink-custom-camera.",
+      "Seven illegal UI-imported fixtures rejected with explicit messages; full stable JSON unchanged: unknown garment/color/pose, null coordinate, preset mismatch, extra shopping field and over-32-KiB input.",
+      "Empty outfit disables cloth color changes; actual pose/view controls apply registered frozen geometry and camera."
+    ],
+    "fixturesAreSetupNotNativeGestureProof": true,
+    "consoleWarningsAndErrors": [],
+    "finalAssetVisualReview": "passed for listed natural/reach front/back/detail views and real pointer wears; no obvious visible body breakthrough or buried pockets in reviewed views; finite views do not prove arbitrary pose collision freedom",
+    "renderPNG": {
+      "status": "passed",
+      "mime": "image/png",
+      "width": 1431,
+      "height": 969,
+      "bytes": 215036,
+      "source": "current scene renderer, HTML labels and controls excluded"
+    },
+    "artifacts": [
+      "../assets/atelier-fitting-workspace.jpg",
+      "../assets/atelier-fitting-drag.jpg",
+      "../assets/atelier-fitting-back.jpg",
+      "../assets/atelier-fitting-example.json",
+      "../assets/atelier-fitting-render.png"
+    ],
+    "frozenPackage": {
+      "realMeshDrags": [
+        "tee-01",
+        "jacket-01"
+      ],
+      "heldPreviewObserved": true,
+      "stableExampleReloadExact": true,
+      "layout": {
+        "viewportWidth": 1280,
+        "pageWidth": 1280,
+        "bodyWidth": 1280,
+        "horizontalOverflow": false
+      }
+    },
+    "formalOrigin": {
+      "origin": "http://localhost:4189",
+      "initial": "empty independent fitting key",
+      "realMeshWear": "jacket-01",
+      "pose": "reach",
+      "color": "moss",
+      "saved": true,
+      "consoleWarningsAndErrors": [],
+      "stableExampleReloadExact": true
+    }
+  },
+  "pending": [
+    "64 of 3414 finite radial probes have no intersection in shoulder/underarm turning domains and remain unverified by that method; selected-view visual review supplements but does not prove general zero-intersection.",
+    "Real lost-pointer-capture, pointercancel, window blur, visibility loss and storage-failure fault injection; safeguards implemented/read-only-reviewed only.",
+    "Touch/mobile, other browsers, complete offline operation, native download writes, long sessions and specified hardware performance."
+  ],
+  "boundaries": [
+    "One fixed stylized body and two authored registered complete upper garments with two frozen poses; no arbitrary photo/body/clothing reconstruction.",
+    "Finite preadapted rig/mesh fitting and selected geometric checks are not general zero-intersection proof, cloth physics, continuous collision or real fit/size prediction.",
+    "C18 footwear and C19 outfit shopping remain pending; ordinary navigation does not expand C35 six finite destinations."
+  ],
+  "assets": {
+    "sourceDocument": "fitting-sources.md",
+    "manifest": "../web/fitting/assets/manifest.json",
+    "runtimeFiles": 6,
+    "registeredFiles": 28,
+    "bodyBones": 53,
+    "originalUniqueFacesPreserved": 13743,
+    "checks": 11,
+    "checkStatus": "passed-with-finite-domain",
+    "finiteRadialProbes": {
+      "total": 3414,
+      "intersections": 3350,
+      "unverified": 64,
+      "reason": "shoulder/underarm turning domains have no radial hit; not proven legal openings, not a general zero-intersection proof"
+    },
+    "models": [
+      {
+        "file": "avatar.glb",
+        "bytes": 682176,
+        "sha256": "9b236207c5256cb79e699d451c8345b7790717c2a06f151fe9e2814aa57be631"
+      },
+      {
+        "file": "core-tee.glb",
+        "bytes": 3533168,
+        "sha256": "79b645eb26a89f3c755d7dc25ed26c15129e905381d8e47b3f89b144638d1d15"
+      },
+      {
+        "file": "field-jacket.glb",
+        "bytes": 6209244,
+        "sha256": "72b28ac1219ba2f848fb3000374680d12b02738d8672e7152e7ca557dcf7fade"
+      }
+    ],
+    "garments": [
+      {
+        "id": "tee-01",
+        "meshes": 9,
+        "triangles": 119996
+      },
+      {
+        "id": "jacket-01",
+        "meshes": 20,
+        "triangles": 178366
+      }
+    ],
+    "visualAuthorReview": "12 front/back/side images across both poses; complete stylized body remains visible with no body masks",
+    "frozen": true
+  },
+  "publication": {
+    "planning": "passed; actual scene dialog C17 only and roadmap 34/36, two pending C18/C19, eleven scenes and avatar-commerce 1/3",
+    "sourcePublishedHashes": "passed",
+    "checked": [
+      {
+        "file": "fitting.html",
+        "sha256": "913930228968554b674def34a3eb83bc9ecb25106030b029ab9d4a984c36952d"
+      },
+      {
+        "file": "fitting/app.js",
+        "sha256": "012b4fc86dfecc106ea8817d128f75c890cc09e4e5e328510fdbf1c8bc06b79f"
+      },
+      {
+        "file": "fitting/core.js",
+        "sha256": "c56eb7eddd2a4e1048a6c9490dc1fa4815d55ffc4eb560c5ded9b16f665b2fe7"
+      },
+      {
+        "file": "fitting/scene.js",
+        "sha256": "103e3aea7919e6537c176ed7a35ad2ef9c1dcff09cdfe5adbb158e76121de8f3"
+      },
+      {
+        "file": "fitting/fitting.css",
+        "sha256": "c1e763bdeb85e7e0603a12f2f17dc960fa510b3aea332afca2e0afc01d60f198"
+      },
+      {
+        "file": "studio/integration-data.json",
+        "sha256": "479d8bc92d31017aab84a1c453df9782b45bf0af8bf35072798a214cbab380c9"
+      },
+      {
+        "file": "studio/vendor/addons/utils/SkeletonUtils.js",
+        "sha256": "0761b1e003917b215d25dd81439d854b36034b5a57ce84c2cfe3b02428d7b253"
+      },
+      {
+        "file": "fitting/assets/avatar.glb",
+        "sha256": "9b236207c5256cb79e699d451c8345b7790717c2a06f151fe9e2814aa57be631"
+      },
+      {
+        "file": "fitting/assets/core-tee.glb",
+        "sha256": "79b645eb26a89f3c755d7dc25ed26c15129e905381d8e47b3f89b144638d1d15"
+      },
+      {
+        "file": "fitting/assets/field-jacket.glb",
+        "sha256": "72b28ac1219ba2f848fb3000374680d12b02738d8672e7152e7ca557dcf7fade"
+      },
+      {
+        "file": "fitting/assets/fit-registration.json",
+        "sha256": "ec5bd56929fa52daf92691eafa0e09d1b21ca33c2fe913f2fe9fa74798ca4402"
+      },
+      {
+        "file": "fitting/assets/manifest.json",
+        "sha256": "593acdd821a603830c723479a139b2d75e82dff37bcaa0a7b324ac1c18bd060c"
+      },
+      {
+        "file": "fitting/assets/quaternius-cc0-license.txt",
+        "sha256": "11eac7504a28077e9d8dbac8ddfca2566510efba7eef46e11f21cdd2bc96d4d5"
+      },
+      {
+        "file": "cover",
+        "sha256": "e9fedd181cbd7c7994707163c251d3f3dbbf8cb9f2784b59c601944ca87cfdee"
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "0ad56a0218ee4639ad6f2ac38af3cd0b",
+  "status": "succeeded",
+  "created_at": "2026-10-05T18:54:49.337+00:00",
+  "updated_at": "2026-10-05T18:55:38.923+00:00",
+  "progress": {
+    "stage": "succeeded",
+    "completed_steps": 20,
+    "total_steps": 20
+  },
+  "settings": {
+    "model": "FASHN VTON 1.5",
+    "category": "tops",
+    "garment_photo_type": "flat-lay",
+    "num_samples": 1,
+    "num_timesteps": 20,
+    "seed": 42,
+    "guidance_scale": 1.5,
+    "skip_cfg_last_n_steps": 1,
+    "segmentation_free": true
+  },
+  "inputs": {
+    "person": {
+      "format": "JPEG",
+      "uploaded_bytes": 100057,
+      "sha256": "f02b595b9068354a731c2d43658d92a4d47f23a7d9c73f2c1db651139e2cb2d4",
+      "decoded_size": [
+        768,
+        1024
+      ],
+      "normalized_size": [
+        768,
+        1024
+      ],
+      "metadata_stripped": true
+    },
+    "garment": {
+      "format": "JPEG",
+      "uploaded_bytes": 94754,
+      "sha256": "c9c13719456663be040a63711d0ee92c6bac2e259017b072d396d874bdc367ad",
+      "decoded_size": [
+        768,
+        1024
+      ],
+      "normalized_size": [
+        768,
+        1024
+      ],
+      "metadata_stripped": true
+    }
+  },
+  "licenses": {
+    "tryon": "Apache-2.0",
+    "human_parser": "nvidia-segformer; research/evaluation only",
+    "human_parser_url": "https://github.com/NVlabs/SegFormer/blob/master/LICENSE"
+  },
+  "started_at": "2026-10-05T18:54:49.425+00:00",
+  "execution": {
+    "generation": "cuda",
+    "pose_detection": "cpu",
+    "human_parser": "cpu",
+    "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+    "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+    "preprocessor_lifetime": "CPU networks released before sampling; recreated for next input",
+    "pose_session_memory": "CPU arena/pattern disabled; intra/inter threads 2/1; original Wholebody and detector operations",
+    "dtype": "torch.bfloat16",
+    "model_resolution": [
+      576,
+      864
+    ],
+    "algorithm": "official Euler sampler/CFG; unchanged"
+  },
+  "gpu_memory": {
+    "peak_allocated_mib": 2784.11,
+    "peak_reserved_mib": 3584.0,
+    "scope": "sampling in this process; excludes other applications"
+  },
+  "output": {
+    "width": 576,
+    "height": 768,
+    "bytes": 347920,
+    "sha256": "22e21ad66df195f580f7497754c55b35a2d88efa7073c088b6cb9d3b5a3a8f4f",
+    "mime": "image/png"
+  },
+  "elapsed_seconds": 49.58,
+  "execution_seconds": 49.48,
+  "queue_seconds": 0.09,
+  "result_url": "/jobs/0ad56a0218ee4639ad6f2ac38af3cd0b/result.png",
+  "metadata_url": "/jobs/0ad56a0218ee4639ad6f2ac38af3cd0b/metadata.json"
+}

@@ -1,0 +1,34 @@
+{
+  "product": "ATELIER",
+  "release": "0.3.0",
+  "date": "2026-10-04",
+  "entry": "http://localhost:4189/projects/011-solaris/showroom.html",
+  "qaOrigin": "http://localhost:4307/projects/011-solaris/showroom.html",
+  "status": "bounded-functional-and-browser-validated",
+  "implementedIds": ["C24", "C25", "C26"],
+  "scope": "授权精细概念车的灯组、轨道相机与原装盖板铰链；机械舱为原模型简化网格及烘焙纹理。",
+  "automatedChecks": [
+    {"name":"状态与事务","command":"node --test projects/011-solaris/tests/showroom.test.mjs","tests":6,"status":"passed"},
+    {"name":"资产与PNG核查","command":"node projects/011-solaris/scripts/verify-car-assets.mjs","status":"passed","bytes":11268100,"embeddedImages":14,"nodes":101,"meshes":97,"selfContained":true,"license":"CC-BY-4.0"},
+    {"name":"客厅回归","command":"node --test projects/011-solaris/tests/studio.test.mjs","tests":22,"status":"passed"},
+    {"name":"网页数据同步","command":"node projects/011-solaris/scripts/integration.mjs --check","status":"passed","total":36,"connected":17,"pending":19,"phases":7}
+  ],
+  "browserChecks": [
+    {"name":"嵌入纹理与正式入口","status":"passed","evidence":"本地blob纹理加载修复后，完整轮胎、玻璃、内饰与车漆可见；4189新标签ready=true，有canvas，无横向溢出，warn/error为空。"},
+    {"name":"鼠标直接点灯","status":"passed","evidence":"在经典视角中点击实际灯组，车灯pressed由true变false，提示点击灯具切换车灯；发光表面和地面光束同步关闭，面板开启恢复。"},
+    {"name":"鼠标直接点盖板","status":"passed","evidence":"点击三维盖板，开度0→100，原部件实际开合；一次撤销恢复0，重做100。"},
+    {"name":"连续开度","status":"passed","evidence":"通过浏览器原生滑块调整45%，一次撤销恢复0%；前舱近景能看见原机械舱网格与烘焙细节。"},
+    {"name":"真实环绕与一次撤销","status":"passed","evidence":"原生鼠标拖动改变camera.position，view变custom；经备份窗口读取实际状态，一次撤销后完整配置文本与拖动前一致。"},
+    {"name":"真实滚轮缩放","status":"passed","evidence":"原生滚轮将相机距离7.9082缩为5.4662；备份包含实际位置与目标，恢复经典视角有效。"},
+    {"name":"材质与预设视角","status":"passed","evidence":"珍珠白与赛道红实际改变车漆；经典视角、车头与前舱近景切换保持灯光和盖板。"},
+    {"name":"非法配置拒绝","status":"passed","evidence":"界面粘贴version99损坏JSON，提示展厅文件结构无效，当前配置未覆盖。"},
+    {"name":"配置恢复与重开","status":"passed","evidence":"先关闭盖板改为车头视角，再粘贴完整开盖配置；恢复文本与原文本精确相同，保存重开后完整配置仍精确相同。"},
+    {"name":"真实图片导出","status":"passed","evidence":"导出图片预览打开，data:image/jpeg真实图像解码为1494×975。"},
+    {"name":"全量网页规划","status":"passed","evidence":"实际页面显示0.3.0、36/17/19，7阶段覆盖36项；客厅14/14、汽车3/3，所有未接入条目仍标记待研发。"},
+    {"name":"组合筛选与展开","status":"passed","evidence":"选择影像与地标阶段显示5项；叠加待接入与C23搜索剩1项，展开显示依赖、入口、范围、算法、数据与验收；切回所有阶段已接入显示17项。"}
+  ],
+  "proofs": ["../assets/atelier-car-showroom.jpg", "../assets/atelier-car-mechanical-bay.jpg", "../assets/atelier-roadmap.jpg"],
+  "restorableExample": "../assets/atelier-car-config.json",
+  "remainingVerification": ["右键平移单独的原生输入验收", "新汽车和规划页面的移动端专项交互", "指定硬件的帧时间、长时间稳定性和显存", "完整阻断第三方网络后的端到端流程"],
+  "scopeExclusions": ["具体车型发动机结构及检修", "法规车灯光束或工程光强", "照片未知视角补全", "页面链接导航不计作C35意图转场"]
+}

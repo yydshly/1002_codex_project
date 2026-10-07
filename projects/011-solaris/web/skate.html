@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ebe8df">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-src 'none'">
+  <title>ATELIER · 滑板练习场</title>
+  <link rel="stylesheet" href="./skate/skate.css"><link rel="stylesheet" href="./capabilities/scene-capabilities.css">
+  <script type="importmap">{"imports":{"three":"./studio/vendor/three.module.js","three/addons/":"./studio/vendor/addons/"}}</script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./"><span class="brand-mark">a</span><span>ATELIER<small>场景设计工作台</small></span></a>
+    <nav class="scene-navigation" aria-label="场景导航"><a href="./">客厅</a><a href="./showroom.html">汽车</a><a href="./imaging.html">影像</a><a href="./landmark.html">地标</a><a href="./kitchen.html">料理</a><a href="./creative.html">创作</a><a href="./collection.html">陈列</a><a href="./skate.html" aria-current="page">滑板</a><a href="./materials.html">材料教学</a><a href="./underwater.html">水下拖动 ↗</a><a href="./fitting.html">试衣间 ↗</a></nav>
+    <div class="header-actions"><span id="save-status">本地练习</span><button id="undo" class="icon-button" aria-label="撤销" disabled>↶</button><button id="redo" class="icon-button" aria-label="重做" disabled>↷</button><button id="save" class="primary">保存练习</button></div>
+  </header>
+  <main class="workspace">
+    <section id="stage" aria-label="真实骨架骑手与滑板的三维练习场" tabindex="0">
+      <div id="canvas-host"></div>
+      <div class="stage-heading"><span class="eyebrow">ONE GOOD LANDING / 08</span><h1>轻轻离地，<br>稳稳回来。</h1><p>一次向上拖动，一次完整的起落。</p><button data-scene-capabilities="skate">本场景验证什么 ↗</button></div>
+      <span id="phase" class="phase" role="status">站姿 · 等待手势</span>
+      <div id="board-marker" aria-hidden="true"><span>↑</span><strong>向上拖动滑板</strong></div>
+      <div id="drag-feedback" aria-hidden="true" hidden><span id="drag-distance">0 px</span><small>松手开始 · 回撤可取消</small></div>
+      <div class="stage-caption"><span class="caption-number">08</span><div><strong>街角练习场</strong><span>Kenney 原始骨架 · 固定平地练习点</span></div></div>
+      <div class="stage-toolbar"><button id="snapshot">保留这一刻 ↗</button></div>
+      <div class="stage-bottom"><span>拖滑板向上 · 松手触发 · Esc 取消</span><span>拖空白看角度 · 滚轮缩放</span></div>
+      <div id="loading" class="loading" role="status"><span class="brand-mark">a</span><strong>正在布置练习场</strong><p>载入完整角色、骨架和滑板…</p></div>
+      <div id="load-error" class="loading" hidden><strong>练习场暂时无法载入</strong><p id="error-detail"></p><button id="retry">重新载入</button></div>
+    </section>
+    <aside class="control-panel" aria-label="跳跃与练习记录">
+      <div class="panel-intro"><span class="eyebrow">A LITTLE LIFT</span><h2>把一个动作练完整。</h2><p>在画面里抓住滑板，向上拖再松手。<br>距离决定高度，落地后才留下记录。</p></div>
+      <section class="panel-section"><div class="section-heading"><h3>当前动作</h3><output id="motion-label">准备好了</output></div><div class="motion-phases" aria-label="动作过程"><span data-phase="preparation">准备</span><span data-phase="air">腾空</span><span data-phase="landing">落地</span></div><progress id="motion-progress" value="0" max="1" aria-label="动作进度"></progress><div class="motion-readings"><div><strong id="live-height">0.00</strong><span>当前高度 · 展示单位</span></div><div><strong id="contact-status" title="原几何脚底支撑点与板面对齐；不是完整足底接触或专业IK认证">站稳</strong><span>人板关系</span></div></div><button id="cancel-motion" class="wide" disabled>取消动作 · Esc</button><label class="fine" for="scrub">预览 / 重播 · 逐帧观察</label><input id="scrub" type="range" min="0" max="1" step="0.01" value="0" disabled><button id="resume-motion" class="wide" disabled>继续播放</button></section>
+      <section class="panel-section"><div class="section-heading"><h3>辅助预览</h3><output id="height-output">0.70</output></div><label class="fine" for="height">预览高度 · 0.30–1.10 展示单位</label><input id="height" type="range" min="0.3" max="1.1" step="0.05" value="0.7"><button id="preview" class="primary wide">预览这个高度 ↟</button><p class="fine">预览不计入手势记录。向上拖至少 24 px；160 px 达到高度上限。速度只记录，不改变高度。</p></section>
+      <section class="panel-section"><div class="section-heading"><h3>完成的练习</h3><output id="trial-count">0 / 40</output></div><div id="trial-list" aria-label="已完成跳跃记录"></div><div class="paired-actions"><button id="replay" disabled>重播所选</button><button id="clear" disabled>清空记录</button></div><p id="trial-note" class="fine">完成落地后，一次手势是一条记录。取消、回撤与重播不会增加条目。</p></section>
+      <section class="panel-section"><div class="section-heading"><h3>观察视角</h3><span>同一真实角色</span></div><div class="views"><button data-view="hero" aria-pressed="true">总览</button><button data-view="side" aria-pressed="false">正侧</button><button data-view="front" aria-pressed="false">正面</button></div></section>
+      <footer class="panel-footer"><button id="backup">备份 / 打开练习</button><details><summary>素材、动作与验证范围</summary><p>完整骑手、7 骨节、原始动作片段、滑板与场地模型来自 Kenney Mini Skate，CC0。场地陈列和动作组合由 ATELIER 制作。</p><p>有限骨骼片段组合与共同升降轨迹，不是任意动作生成、真实运动力学或完整 ollie；原骨架没有膝/脚关节。坡道与栏杆属于场景陈列，当前动作只在固定平地练习点完成。</p><a href="https://kenney.nl/assets/mini-skate" target="_blank" rel="noopener">原始素材与 CC0 许可 ↗</a><a href="./assets/skate/manifest.json" target="_blank" rel="noopener">本地素材清单 ↗</a></details><a href="./integration.html#scenes">能力说明与接入规划 ↗</a><span class="local-note">本地动作 · 本地保存</span></footer>
+    </aside>
+  </main>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="json-dialog" aria-labelledby="json-title"><div class="dialog-heading"><div><span class="eyebrow">KEEP YOUR PRACTICE</span><h2 id="json-title">保留练习记录</h2></div><button data-close aria-label="关闭练习备份">×</button></div><p>只保留已完成动作、预览参数与视角。未完成的动作会先取消，不写入记录。</p><textarea id="json-text" spellcheck="false" aria-label="滑板练习 JSON"></textarea><p id="json-message" role="status"></p><div class="dialog-actions"><button id="download-json">下载 JSON</button><button id="import-json" class="primary">应用练习</button></div></dialog>
+  <dialog id="snapshot-dialog" aria-labelledby="snapshot-title"><div class="dialog-heading"><div><span class="eyebrow">ONE GOOD MOMENT</span><h2 id="snapshot-title">练习场的这一刻</h2></div><button data-close aria-label="关闭滑板图片预览">×</button></div><img id="snapshot-image" alt="当前滑板练习场的真实渲染"><div class="dialog-actions"><button id="download-snapshot" class="primary">下载图片</button></div></dialog>
+  <script type="module" src="./capabilities/scene-capabilities.js"></script><script type="module" src="./skate/app.js"></script>
+  <script type="module" src="./collection/scene-return.js"></script>
+</body>
+</html>

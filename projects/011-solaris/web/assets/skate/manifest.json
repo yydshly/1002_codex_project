@@ -1,0 +1,1201 @@
+{
+  "schema": 1,
+  "title": "Mini Skate",
+  "version": "1.2",
+  "author": "Kenney",
+  "license": "CC0-1.0",
+  "checkedAt": "2026-10-05",
+  "sourcePage": "https://kenney.nl/assets/mini-skate",
+  "authorDistributionPage": "https://kenney-assets.itch.io/mini-skate",
+  "archiveURL": "https://kenney.nl/media/pages/assets/mini-skate/00b0c2b304-1709221152/kenney_mini-skate.zip",
+  "archiveBytes": 721232,
+  "archiveSHA256": "82582f6de507e93090c16bb4802a7c361015fe246eddd571e6e96f816b12e8c6",
+  "licensePath": "original/License.txt",
+  "preservation": "Official archive and complete extracted source retained. Runtime models and colormap are byte-identical copies of original GLB distribution.",
+  "runtimeFiles": [
+    {
+      "path": "models/bowl-corner-inner.glb",
+      "bytes": 14028,
+      "sha256": "a3b9da2b85aca971aaee2ffe07da6c7ae50229425c6218247d3d83b41784b039"
+    },
+    {
+      "path": "models/bowl-corner-outer.glb",
+      "bytes": 14024,
+      "sha256": "d366a87add562bfd35fcd2fdebcec316089e5689fd2f9c60e7bc85f045de65a3"
+    },
+    {
+      "path": "models/bowl-side.glb",
+      "bytes": 5268,
+      "sha256": "cd0a1b866b456ded4139e56630ad32df2c50851de8dfa8a7d477405f2323eeb5"
+    },
+    {
+      "path": "models/character-skate-boy.glb",
+      "bytes": 190900,
+      "sha256": "f2540556bb1bae1aabe08de36b7e6b2c19d366a6fa0f6fd31970ad7272a413d8"
+    },
+    {
+      "path": "models/character-skate-girl.glb",
+      "bytes": 190388,
+      "sha256": "e611f7d99adb6aa7340c5dfadd82696bb590918b4451698184b9bfeccec71d76"
+    },
+    {
+      "path": "models/floor-concrete.glb",
+      "bytes": 1840,
+      "sha256": "1e78ba83dbd6ee02382029f830abc493058a5e4dd3e9aa49e4850bfafa5e4f21"
+    },
+    {
+      "path": "models/floor-wood.glb",
+      "bytes": 5320,
+      "sha256": "82945c686fb2b0b184958a86447adac7b35b54b464b0c68297229d5dbf90492b"
+    },
+    {
+      "path": "models/half-pipe.glb",
+      "bytes": 5268,
+      "sha256": "5390fcbf9519d74ca16110af655ed4beeb7570f456e18483f927d5c0c4077e5a"
+    },
+    {
+      "path": "models/obstacle-box.glb",
+      "bytes": 4524,
+      "sha256": "4c7d92d5860792b48312846cf2057f07ac238ddd2ef546c0844b4bb37977d915"
+    },
+    {
+      "path": "models/obstacle-end.glb",
+      "bytes": 10336,
+      "sha256": "b2e0a25923709469a7d775b66f30b63bc7351bbb9dc31a3629a83e4c4165cfd8"
+    },
+    {
+      "path": "models/obstacle-middle.glb",
+      "bytes": 13228,
+      "sha256": "dc4cd22bbc9cae646d67e29af729a8d99e34d93fb8f27321f549ee5e0e6a89d3"
+    },
+    {
+      "path": "models/pallet.glb",
+      "bytes": 11704,
+      "sha256": "90312cbba080e0852f4ab92a50744fa0349ddf4683f48ce92f24f29a2bcb2e75"
+    },
+    {
+      "path": "models/rail-curve.glb",
+      "bytes": 8576,
+      "sha256": "5856b90196264a8d5a260049a6150b68693629abc7cdcfed4d5f756d42c87823"
+    },
+    {
+      "path": "models/rail-high.glb",
+      "bytes": 9640,
+      "sha256": "5d54f136b77aaa855519b90c585a8ab3408139e57a071e8595d5e5babe4720d6"
+    },
+    {
+      "path": "models/rail-low.glb",
+      "bytes": 9620,
+      "sha256": "49c35dc5d4c3979462d06b96de02ff123d6aedde93e6ef9fa8625628c213b757"
+    },
+    {
+      "path": "models/rail-slope.glb",
+      "bytes": 9676,
+      "sha256": "ca6c7194dfcd0bcd1cedda9abf7285ba155f002f6a5146ad8a78d5918bb34913"
+    },
+    {
+      "path": "models/skateboard.glb",
+      "bytes": 21060,
+      "sha256": "97b142329a99d637af238bdd9edec50b6465e19e3402b847a6486952791f28a4"
+    },
+    {
+      "path": "models/steps.glb",
+      "bytes": 8248,
+      "sha256": "b155f844f725bb278d1928c4e43f411aa2343d157ece1d1aa5f64b0d200a8640"
+    },
+    {
+      "path": "models/structure-platform.glb",
+      "bytes": 12412,
+      "sha256": "2eb9b56cccc95cd10cdd6abc6e3583e757ee794ac1fb0704efa7ba40443f109b"
+    },
+    {
+      "path": "models/structure-wood.glb",
+      "bytes": 20476,
+      "sha256": "7c1ae7fde737f3c7126ce0b938b115b8ecf5ef37983da8dc3229f13125133fe5"
+    },
+    {
+      "path": "models/Textures/colormap.png",
+      "bytes": 7529,
+      "sha256": "66fd49be148f32e88f6c8cace67120250d1943a7856601158ad0ff24651db0b0"
+    }
+  ],
+  "models": [
+    {
+      "path": "models/bowl-corner-inner.glb",
+      "meshes": 1,
+      "triangles": 136,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/bowl-corner-outer.glb",
+      "meshes": 1,
+      "triangles": 140,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/bowl-side.glb",
+      "meshes": 1,
+      "triangles": 44,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/character-skate-boy.glb",
+      "meshes": 2,
+      "triangles": 419,
+      "skins": 2,
+      "jointNames": [
+        "root",
+        "leg-left",
+        "leg-right",
+        "torso",
+        "arm-left",
+        "arm-right",
+        "head"
+      ],
+      "clips": [
+        {
+          "name": "static",
+          "seconds": 0.10000000149011612
+        },
+        {
+          "name": "idle",
+          "seconds": 1.3333333730697632
+        },
+        {
+          "name": "walk",
+          "seconds": 0.6666666865348816
+        },
+        {
+          "name": "sprint",
+          "seconds": 0.5
+        },
+        {
+          "name": "jump",
+          "seconds": 0.5
+        },
+        {
+          "name": "fall",
+          "seconds": 0.3333333432674408
+        },
+        {
+          "name": "crouch",
+          "seconds": 0.1666666716337204
+        },
+        {
+          "name": "sit",
+          "seconds": 0.1666666716337204
+        },
+        {
+          "name": "drive",
+          "seconds": 0.1666666716337204
+        },
+        {
+          "name": "die",
+          "seconds": 0.3333333432674408
+        },
+        {
+          "name": "pick-up",
+          "seconds": 0.3333333432674408
+        },
+        {
+          "name": "emote-yes",
+          "seconds": 0.6666666865348816
+        },
+        {
+          "name": "emote-no",
+          "seconds": 0.6666666865348816
+        },
+        {
+          "name": "holding-right",
+          "seconds": 0.1666666716337204
+        },
+        {
+          "name": "holding-left",
+          "seconds": 0.1666666716337204
+        },
+        {
+          "name": "holding-both",
+          "seconds": 0.1666666716337204
+        },
+        {
+          "name": "holding-right-shoot",
+          "seconds": 0.20000000298023224
+        },
+        {
+          "name": "holding-left-shoot",
+          "seconds": 0.20000000298023224
+        },
+        {
+          "name": "holding-both-shoot",
+          "seconds": 0.20000000298023224
+        },
+        {
+          "name": "attack-melee-right",
+          "seconds": 0.4166666567325592
+        },
+        {
+          "name": "attack-melee-left",
+          "seconds": 0.4166666567325592
+        },
+        {
+          "name": "attack-kick-right",
+          "seconds": 0.5333333611488342
+        },
+        {
+          "name": "attack-kick-left",
+          "seconds": 0.5333333611488342
+        },
+        {
+          "name": "interact-right",
+          "seconds": 0.6666666865348816
+        },
+        {
+          "name": "interact-left",
+          "seconds": 0.6666666865348816
+        },
+        {
+          "name": "skate",
+          "seconds": 0.5166666507720947
+        },
+        {
+          "name": "skate-stand",
+          "seconds": 0.5
+        },
+        {
+          "name": "skate-air",
+          "seconds": 0.6666666865348816
+        },
+        {
+          "name": "skate-grab",
+          "seconds": 0.5
+        }
+      ]
+    },
+    {
+      "path": "models/character-skate-girl.glb",
+      "meshes": 2,
+      "triangles": 408,
+      "skins": 2,
+      "jointNames": [
+        "root",
+        "leg-left",
+        "leg-right",
+        "torso",
+        "arm-left",
+        "arm-right",
+        "head"
+      ],
+      "clips": [
+        {
+          "name": "static",
+          "seconds": 0.10000000149011612
+        },
+        {
+          "name": "idle",
+          "seconds": 1.3333333730697632
+        },
+        {
+          "name": "walk",
+          "seconds": 0.6666666865348816
+        },
+        {
+          "name": "sprint",
+          "seconds": 0.5
+        },
+        {
+          "name": "jump",
+          "seconds": 0.5
+        },
+        {
+          "name": "fall",
+          "seconds": 0.3333333432674408
+        },
+        {
+          "name": "crouch",
+          "seconds": 0.1666666716337204
+        },
+        {
+          "name": "sit",
+          "seconds": 0.1666666716337204
+        },
+        {
+          "name": "drive",
+          "seconds": 0.1666666716337204
+        },
+        {
+          "name": "die",
+          "seconds": 0.3333333432674408
+        },
+        {
+          "name": "pick-up",
+          "seconds": 0.3333333432674408
+        },
+        {
+          "name": "emote-yes",
+          "seconds": 0.6666666865348816
+        },
+        {
+          "name": "emote-no",
+          "seconds": 0.6666666865348816
+        },
+        {
+          "name": "holding-right",
+          "seconds": 0.1666666716337204
+        },
+        {
+          "name": "holding-left",
+          "seconds": 0.1666666716337204
+        },
+        {
+          "name": "holding-both",
+          "seconds": 0.1666666716337204
+        },
+        {
+          "name": "holding-right-shoot",
+          "seconds": 0.20000000298023224
+        },
+        {
+          "name": "holding-left-shoot",
+          "seconds": 0.20000000298023224
+        },
+        {
+          "name": "holding-both-shoot",
+          "seconds": 0.20000000298023224
+        },
+        {
+          "name": "attack-melee-right",
+          "seconds": 0.4166666567325592
+        },
+        {
+          "name": "attack-melee-left",
+          "seconds": 0.4166666567325592
+        },
+        {
+          "name": "attack-kick-right",
+          "seconds": 0.5333333611488342
+        },
+        {
+          "name": "attack-kick-left",
+          "seconds": 0.5333333611488342
+        },
+        {
+          "name": "interact-right",
+          "seconds": 0.6666666865348816
+        },
+        {
+          "name": "interact-left",
+          "seconds": 0.6666666865348816
+        },
+        {
+          "name": "skate",
+          "seconds": 0.5166666507720947
+        },
+        {
+          "name": "skate-stand",
+          "seconds": 0.5
+        },
+        {
+          "name": "skate-air",
+          "seconds": 0.6666666865348816
+        },
+        {
+          "name": "skate-grab",
+          "seconds": 0.5
+        }
+      ]
+    },
+    {
+      "path": "models/floor-concrete.glb",
+      "meshes": 1,
+      "triangles": 2,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/floor-wood.glb",
+      "meshes": 1,
+      "triangles": 32,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/half-pipe.glb",
+      "meshes": 1,
+      "triangles": 44,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/obstacle-box.glb",
+      "meshes": 1,
+      "triangles": 28,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/obstacle-end.glb",
+      "meshes": 1,
+      "triangles": 94,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/obstacle-middle.glb",
+      "meshes": 1,
+      "triangles": 136,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/pallet.glb",
+      "meshes": 1,
+      "triangles": 108,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/rail-curve.glb",
+      "meshes": 1,
+      "triangles": 86,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/rail-high.glb",
+      "meshes": 1,
+      "triangles": 90,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/rail-low.glb",
+      "meshes": 1,
+      "triangles": 90,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/rail-slope.glb",
+      "meshes": 1,
+      "triangles": 90,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/skateboard.glb",
+      "meshes": 1,
+      "triangles": 240,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/steps.glb",
+      "meshes": 1,
+      "triangles": 84,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/structure-platform.glb",
+      "meshes": 1,
+      "triangles": 108,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    },
+    {
+      "path": "models/structure-wood.glb",
+      "meshes": 1,
+      "triangles": 184,
+      "skins": 0,
+      "jointNames": [],
+      "clips": []
+    }
+  ],
+  "files": [
+    {
+      "path": "kenney_mini-skate.zip",
+      "bytes": 721232,
+      "sha256": "82582f6de507e93090c16bb4802a7c361015fe246eddd571e6e96f816b12e8c6"
+    },
+    {
+      "path": "models/bowl-corner-inner.glb",
+      "bytes": 14028,
+      "sha256": "a3b9da2b85aca971aaee2ffe07da6c7ae50229425c6218247d3d83b41784b039"
+    },
+    {
+      "path": "models/bowl-corner-outer.glb",
+      "bytes": 14024,
+      "sha256": "d366a87add562bfd35fcd2fdebcec316089e5689fd2f9c60e7bc85f045de65a3"
+    },
+    {
+      "path": "models/bowl-side.glb",
+      "bytes": 5268,
+      "sha256": "cd0a1b866b456ded4139e56630ad32df2c50851de8dfa8a7d477405f2323eeb5"
+    },
+    {
+      "path": "models/character-skate-boy.glb",
+      "bytes": 190900,
+      "sha256": "f2540556bb1bae1aabe08de36b7e6b2c19d366a6fa0f6fd31970ad7272a413d8"
+    },
+    {
+      "path": "models/character-skate-girl.glb",
+      "bytes": 190388,
+      "sha256": "e611f7d99adb6aa7340c5dfadd82696bb590918b4451698184b9bfeccec71d76"
+    },
+    {
+      "path": "models/floor-concrete.glb",
+      "bytes": 1840,
+      "sha256": "1e78ba83dbd6ee02382029f830abc493058a5e4dd3e9aa49e4850bfafa5e4f21"
+    },
+    {
+      "path": "models/floor-wood.glb",
+      "bytes": 5320,
+      "sha256": "82945c686fb2b0b184958a86447adac7b35b54b464b0c68297229d5dbf90492b"
+    },
+    {
+      "path": "models/half-pipe.glb",
+      "bytes": 5268,
+      "sha256": "5390fcbf9519d74ca16110af655ed4beeb7570f456e18483f927d5c0c4077e5a"
+    },
+    {
+      "path": "models/obstacle-box.glb",
+      "bytes": 4524,
+      "sha256": "4c7d92d5860792b48312846cf2057f07ac238ddd2ef546c0844b4bb37977d915"
+    },
+    {
+      "path": "models/obstacle-end.glb",
+      "bytes": 10336,
+      "sha256": "b2e0a25923709469a7d775b66f30b63bc7351bbb9dc31a3629a83e4c4165cfd8"
+    },
+    {
+      "path": "models/obstacle-middle.glb",
+      "bytes": 13228,
+      "sha256": "dc4cd22bbc9cae646d67e29af729a8d99e34d93fb8f27321f549ee5e0e6a89d3"
+    },
+    {
+      "path": "models/pallet.glb",
+      "bytes": 11704,
+      "sha256": "90312cbba080e0852f4ab92a50744fa0349ddf4683f48ce92f24f29a2bcb2e75"
+    },
+    {
+      "path": "models/rail-curve.glb",
+      "bytes": 8576,
+      "sha256": "5856b90196264a8d5a260049a6150b68693629abc7cdcfed4d5f756d42c87823"
+    },
+    {
+      "path": "models/rail-high.glb",
+      "bytes": 9640,
+      "sha256": "5d54f136b77aaa855519b90c585a8ab3408139e57a071e8595d5e5babe4720d6"
+    },
+    {
+      "path": "models/rail-low.glb",
+      "bytes": 9620,
+      "sha256": "49c35dc5d4c3979462d06b96de02ff123d6aedde93e6ef9fa8625628c213b757"
+    },
+    {
+      "path": "models/rail-slope.glb",
+      "bytes": 9676,
+      "sha256": "ca6c7194dfcd0bcd1cedda9abf7285ba155f002f6a5146ad8a78d5918bb34913"
+    },
+    {
+      "path": "models/skateboard.glb",
+      "bytes": 21060,
+      "sha256": "97b142329a99d637af238bdd9edec50b6465e19e3402b847a6486952791f28a4"
+    },
+    {
+      "path": "models/steps.glb",
+      "bytes": 8248,
+      "sha256": "b155f844f725bb278d1928c4e43f411aa2343d157ece1d1aa5f64b0d200a8640"
+    },
+    {
+      "path": "models/structure-platform.glb",
+      "bytes": 12412,
+      "sha256": "2eb9b56cccc95cd10cdd6abc6e3583e757ee794ac1fb0704efa7ba40443f109b"
+    },
+    {
+      "path": "models/structure-wood.glb",
+      "bytes": 20476,
+      "sha256": "7c1ae7fde737f3c7126ce0b938b115b8ecf5ef37983da8dc3229f13125133fe5"
+    },
+    {
+      "path": "models/Textures/colormap.png",
+      "bytes": 7529,
+      "sha256": "66fd49be148f32e88f6c8cace67120250d1943a7856601158ad0ff24651db0b0"
+    },
+    {
+      "path": "original/License.txt",
+      "bytes": 713,
+      "sha256": "6a075a1edb319f16d86cb6b9065436ce89dd851c234704ad160b4255b85e1b67"
+    },
+    {
+      "path": "original/Models/FBX format/bowl-corner-inner.fbx",
+      "bytes": 30432,
+      "sha256": "7b6fd80e2f2f21292ac0bfe752d3a70045f390c26cc09b94f1cb4fa589076f22"
+    },
+    {
+      "path": "original/Models/FBX format/bowl-corner-outer.fbx",
+      "bytes": 30304,
+      "sha256": "c4075c3c1e093a3b283fd049fdc2c7784279ce788e7b606f9ccf20ce649835e0"
+    },
+    {
+      "path": "original/Models/FBX format/bowl-side.fbx",
+      "bytes": 25840,
+      "sha256": "5a26c39cdd226081f73f3fb9fb63df82f224349a1ceb0a89bc73cde8a6002f78"
+    },
+    {
+      "path": "original/Models/FBX format/character-skate-boy.fbx",
+      "bytes": 634560,
+      "sha256": "9498aeb58f6722727cff002a9704e4b471fb687f0c7567036a57aaeed3432d18"
+    },
+    {
+      "path": "original/Models/FBX format/character-skate-girl.fbx",
+      "bytes": 632592,
+      "sha256": "436ba451c6e6ff9961d783a557218b6b3c5a6c0b214701a56d5d719639f23971"
+    },
+    {
+      "path": "original/Models/FBX format/floor-concrete.fbx",
+      "bytes": 23968,
+      "sha256": "283fb975f87ebbe078a6b802c1c8bd571b9e28872b1bce613e9ea6a70f11f2c5"
+    },
+    {
+      "path": "original/Models/FBX format/floor-wood.fbx",
+      "bytes": 28080,
+      "sha256": "35b313697e4d7156e45f0b05b78990c88356f506ba5b65713a6342701f561e1f"
+    },
+    {
+      "path": "original/Models/FBX format/half-pipe.fbx",
+      "bytes": 25840,
+      "sha256": "705c774a73ada3bd211853d5adc9dbed9248aff8ea3abd95cc8df715730d49e8"
+    },
+    {
+      "path": "original/Models/FBX format/obstacle-box.fbx",
+      "bytes": 27584,
+      "sha256": "60d0bb709be38469310158773144611c8f9c21221bf8e39361eeb62056be03a5"
+    },
+    {
+      "path": "original/Models/FBX format/obstacle-end.fbx",
+      "bytes": 28352,
+      "sha256": "0365d8631378fe62d34bd9bd33e05f5df4b4b6680b26aaf98806a8f15162ce6d"
+    },
+    {
+      "path": "original/Models/FBX format/obstacle-middle.fbx",
+      "bytes": 27200,
+      "sha256": "bbde7c0cef7921157ac5b26f7cae0969a4e848a39f853cf44349ee03879f4e23"
+    },
+    {
+      "path": "original/Models/FBX format/pallet.fbx",
+      "bytes": 26096,
+      "sha256": "a181e9e52db52d8b2dab46a94614e73774962285ecdf85de06730a2773fbe220"
+    },
+    {
+      "path": "original/Models/FBX format/rail-curve.fbx",
+      "bytes": 27344,
+      "sha256": "bdffc890ad54228d1151f4b44e8cf07f491da213de2b7bc60b7832b4daaedca6"
+    },
+    {
+      "path": "original/Models/FBX format/rail-high.fbx",
+      "bytes": 25728,
+      "sha256": "27aa71bad89af887d2e8daf7395e0d93dd2294f47417982b34967330ed8b26fe"
+    },
+    {
+      "path": "original/Models/FBX format/rail-low.fbx",
+      "bytes": 25744,
+      "sha256": "145c0a08a30807a2ed48279f5451f12110748cb0ece4530f759cfc545dc1e686"
+    },
+    {
+      "path": "original/Models/FBX format/rail-slope.fbx",
+      "bytes": 26208,
+      "sha256": "3e6678b3210da26e4f50aa6b63cfcea83096828b0a6a33c5179e00bfa7b93113"
+    },
+    {
+      "path": "original/Models/FBX format/skateboard.fbx",
+      "bytes": 29200,
+      "sha256": "65c420ed7361be2d9d26836d8079abd39917ad402626b2a86ab665e1272827b2"
+    },
+    {
+      "path": "original/Models/FBX format/steps.fbx",
+      "bytes": 26320,
+      "sha256": "fa9c0d56a65a1bfda456373c9582c02185a5cac83304e6ad54de345fe779efa1"
+    },
+    {
+      "path": "original/Models/FBX format/structure-platform.fbx",
+      "bytes": 25920,
+      "sha256": "e23a213d663215eab2555da218613629a7b552b5ddf18ab82cd718146d3c9778"
+    },
+    {
+      "path": "original/Models/FBX format/structure-wood.fbx",
+      "bytes": 27792,
+      "sha256": "44afc1afd0f5b7258e66573e105cf040dad525531f1df586021ed10d68f45210"
+    },
+    {
+      "path": "original/Models/FBX format/Textures/colormap.png",
+      "bytes": 7529,
+      "sha256": "66fd49be148f32e88f6c8cace67120250d1943a7856601158ad0ff24651db0b0"
+    },
+    {
+      "path": "original/Models/GLB format/bowl-corner-inner.glb",
+      "bytes": 14028,
+      "sha256": "a3b9da2b85aca971aaee2ffe07da6c7ae50229425c6218247d3d83b41784b039"
+    },
+    {
+      "path": "original/Models/GLB format/bowl-corner-outer.glb",
+      "bytes": 14024,
+      "sha256": "d366a87add562bfd35fcd2fdebcec316089e5689fd2f9c60e7bc85f045de65a3"
+    },
+    {
+      "path": "original/Models/GLB format/bowl-side.glb",
+      "bytes": 5268,
+      "sha256": "cd0a1b866b456ded4139e56630ad32df2c50851de8dfa8a7d477405f2323eeb5"
+    },
+    {
+      "path": "original/Models/GLB format/character-skate-boy.glb",
+      "bytes": 190900,
+      "sha256": "f2540556bb1bae1aabe08de36b7e6b2c19d366a6fa0f6fd31970ad7272a413d8"
+    },
+    {
+      "path": "original/Models/GLB format/character-skate-girl.glb",
+      "bytes": 190388,
+      "sha256": "e611f7d99adb6aa7340c5dfadd82696bb590918b4451698184b9bfeccec71d76"
+    },
+    {
+      "path": "original/Models/GLB format/floor-concrete.glb",
+      "bytes": 1840,
+      "sha256": "1e78ba83dbd6ee02382029f830abc493058a5e4dd3e9aa49e4850bfafa5e4f21"
+    },
+    {
+      "path": "original/Models/GLB format/floor-wood.glb",
+      "bytes": 5320,
+      "sha256": "82945c686fb2b0b184958a86447adac7b35b54b464b0c68297229d5dbf90492b"
+    },
+    {
+      "path": "original/Models/GLB format/half-pipe.glb",
+      "bytes": 5268,
+      "sha256": "5390fcbf9519d74ca16110af655ed4beeb7570f456e18483f927d5c0c4077e5a"
+    },
+    {
+      "path": "original/Models/GLB format/obstacle-box.glb",
+      "bytes": 4524,
+      "sha256": "4c7d92d5860792b48312846cf2057f07ac238ddd2ef546c0844b4bb37977d915"
+    },
+    {
+      "path": "original/Models/GLB format/obstacle-end.glb",
+      "bytes": 10336,
+      "sha256": "b2e0a25923709469a7d775b66f30b63bc7351bbb9dc31a3629a83e4c4165cfd8"
+    },
+    {
+      "path": "original/Models/GLB format/obstacle-middle.glb",
+      "bytes": 13228,
+      "sha256": "dc4cd22bbc9cae646d67e29af729a8d99e34d93fb8f27321f549ee5e0e6a89d3"
+    },
+    {
+      "path": "original/Models/GLB format/pallet.glb",
+      "bytes": 11704,
+      "sha256": "90312cbba080e0852f4ab92a50744fa0349ddf4683f48ce92f24f29a2bcb2e75"
+    },
+    {
+      "path": "original/Models/GLB format/rail-curve.glb",
+      "bytes": 8576,
+      "sha256": "5856b90196264a8d5a260049a6150b68693629abc7cdcfed4d5f756d42c87823"
+    },
+    {
+      "path": "original/Models/GLB format/rail-high.glb",
+      "bytes": 9640,
+      "sha256": "5d54f136b77aaa855519b90c585a8ab3408139e57a071e8595d5e5babe4720d6"
+    },
+    {
+      "path": "original/Models/GLB format/rail-low.glb",
+      "bytes": 9620,
+      "sha256": "49c35dc5d4c3979462d06b96de02ff123d6aedde93e6ef9fa8625628c213b757"
+    },
+    {
+      "path": "original/Models/GLB format/rail-slope.glb",
+      "bytes": 9676,
+      "sha256": "ca6c7194dfcd0bcd1cedda9abf7285ba155f002f6a5146ad8a78d5918bb34913"
+    },
+    {
+      "path": "original/Models/GLB format/skateboard.glb",
+      "bytes": 21060,
+      "sha256": "97b142329a99d637af238bdd9edec50b6465e19e3402b847a6486952791f28a4"
+    },
+    {
+      "path": "original/Models/GLB format/steps.glb",
+      "bytes": 8248,
+      "sha256": "b155f844f725bb278d1928c4e43f411aa2343d157ece1d1aa5f64b0d200a8640"
+    },
+    {
+      "path": "original/Models/GLB format/structure-platform.glb",
+      "bytes": 12412,
+      "sha256": "2eb9b56cccc95cd10cdd6abc6e3583e757ee794ac1fb0704efa7ba40443f109b"
+    },
+    {
+      "path": "original/Models/GLB format/structure-wood.glb",
+      "bytes": 20476,
+      "sha256": "7c1ae7fde737f3c7126ce0b938b115b8ecf5ef37983da8dc3229f13125133fe5"
+    },
+    {
+      "path": "original/Models/GLB format/Textures/colormap.png",
+      "bytes": 7529,
+      "sha256": "66fd49be148f32e88f6c8cace67120250d1943a7856601158ad0ff24651db0b0"
+    },
+    {
+      "path": "original/Models/OBJ format/bowl-corner-inner.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/bowl-corner-inner.obj",
+      "bytes": 12620,
+      "sha256": "62d466bde33a8eee57f30aeccf1a10b0e1f7e9bb621e2314ce740788d9657063"
+    },
+    {
+      "path": "original/Models/OBJ format/bowl-corner-outer.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/bowl-corner-outer.obj",
+      "bytes": 12486,
+      "sha256": "1b9756edc8a8cbd0cd4ed662fec160e4bcd84ac37a029eed889c2d58f0a9da24"
+    },
+    {
+      "path": "original/Models/OBJ format/bowl-side.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/bowl-side.obj",
+      "bytes": 3849,
+      "sha256": "6cbad9e75164c79b2c8bcb00dd7717fa94d8f4c7ac7c2325f0729967d797a618"
+    },
+    {
+      "path": "original/Models/OBJ format/character-skate-boy.mtl",
+      "bytes": 39,
+      "sha256": "6776649c1e56bd02583f7f84e6d917a1315773018c79ce87ad71831ce7c093ca"
+    },
+    {
+      "path": "original/Models/OBJ format/character-skate-boy.obj",
+      "bytes": 72,
+      "sha256": "131837c5135b2a5a2b85c1bea426145714a3670e553b62d5ce8095791fa3e190"
+    },
+    {
+      "path": "original/Models/OBJ format/character-skate-girl.mtl",
+      "bytes": 39,
+      "sha256": "6776649c1e56bd02583f7f84e6d917a1315773018c79ce87ad71831ce7c093ca"
+    },
+    {
+      "path": "original/Models/OBJ format/character-skate-girl.obj",
+      "bytes": 73,
+      "sha256": "bad17f6dc727d805315ea817c0a0fb30e77a831cfb5e08c88eb5589c27e595e0"
+    },
+    {
+      "path": "original/Models/OBJ format/floor-concrete.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/floor-concrete.obj",
+      "bytes": 349,
+      "sha256": "a28acfbc67276b30ccd66ccb8e1ce35046d5c2f05e2ad4d4de0149099d69efa3"
+    },
+    {
+      "path": "original/Models/OBJ format/floor-wood.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/floor-wood.obj",
+      "bytes": 3132,
+      "sha256": "18f4f3467458c13500a41926efa103e2d0d03a5e29245056dc291a9beea4ff46"
+    },
+    {
+      "path": "original/Models/OBJ format/half-pipe.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/half-pipe.obj",
+      "bytes": 3625,
+      "sha256": "5cb5c437009f5cfca41dba24e006630ac7cf2d1517c5a9b23441230fc17990cc"
+    },
+    {
+      "path": "original/Models/OBJ format/obstacle-box.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/obstacle-box.obj",
+      "bytes": 2244,
+      "sha256": "759021d4d0da9994d929611e1cbb9e9b7ad07b6230884eeccc898d4e73263c47"
+    },
+    {
+      "path": "original/Models/OBJ format/obstacle-end.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/obstacle-end.obj",
+      "bytes": 8520,
+      "sha256": "96724ffdf0585cb23dda56d85636b2cb445ff06ea20bf238ccbba4630b515dc4"
+    },
+    {
+      "path": "original/Models/OBJ format/obstacle-middle.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/obstacle-middle.obj",
+      "bytes": 11832,
+      "sha256": "a10a4ba0dcadfae86c916a891ede4a9d6259e65db4d5f7bab6bb594622570d97"
+    },
+    {
+      "path": "original/Models/OBJ format/pallet.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/pallet.obj",
+      "bytes": 8251,
+      "sha256": "5f78ca118347988601db168e62e8cc3f76b78e98c26db9adedc7088f6ef21c9b"
+    },
+    {
+      "path": "original/Models/OBJ format/rail-curve.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/rail-curve.obj",
+      "bytes": 7450,
+      "sha256": "5516a695c0bae38a907e5f33abfdb73028ce3d2e9ad3777c04b40bcff4b6c949"
+    },
+    {
+      "path": "original/Models/OBJ format/rail-high.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/rail-high.obj",
+      "bytes": 6943,
+      "sha256": "a1388ae185d97d101aebd1d3d7433306598521182916fa7ea3c9116b4ea7498c"
+    },
+    {
+      "path": "original/Models/OBJ format/rail-low.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/rail-low.obj",
+      "bytes": 6934,
+      "sha256": "d50c652c7d432113844862d03178007b9cc9fbac47f42d42b702607b472a4599"
+    },
+    {
+      "path": "original/Models/OBJ format/rail-slope.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/rail-slope.obj",
+      "bytes": 7536,
+      "sha256": "b0996a340554a0ca8fa211ca397256894cc89014105be71205e7a974049b7146"
+    },
+    {
+      "path": "original/Models/OBJ format/skateboard.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/skateboard.obj",
+      "bytes": 18509,
+      "sha256": "5b1a5fec0107ad6940a150e219f204df769da82dbaf97d3982e74fb06a4b0701"
+    },
+    {
+      "path": "original/Models/OBJ format/steps.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/steps.obj",
+      "bytes": 5590,
+      "sha256": "d1d797270979f9e3a2cb992b7a2697aa9035888c420787398e495b5458c5d1ca"
+    },
+    {
+      "path": "original/Models/OBJ format/structure-platform.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/structure-platform.obj",
+      "bytes": 7705,
+      "sha256": "9eca968a7c7f340104e1bbcc0e42fecf5372b43afbb381ea77e09cac7c8cc4ce"
+    },
+    {
+      "path": "original/Models/OBJ format/structure-wood.mtl",
+      "bytes": 98,
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "path": "original/Models/OBJ format/structure-wood.obj",
+      "bytes": 14265,
+      "sha256": "6fa39ad244cadc908108590126e5367b97c9d3d858996f3da568ca2c534b8e3c"
+    },
+    {
+      "path": "original/Models/OBJ format/Textures/colormap.png",
+      "bytes": 7529,
+      "sha256": "66fd49be148f32e88f6c8cace67120250d1943a7856601158ad0ff24651db0b0"
+    },
+    {
+      "path": "original/Models/Textures/variation-a.png",
+      "bytes": 6465,
+      "sha256": "3e64e2bcf17ab67792a79f5b6983e56a92a2dd02ed18fea0bc8aec24af10950a"
+    },
+    {
+      "path": "original/Overview.html",
+      "bytes": 6450,
+      "sha256": "dd58391faf69e18a2c1e57d984d1cc7ac26a20318beb7241199a8eb136ac2324"
+    },
+    {
+      "path": "original/Preview.png",
+      "bytes": 86209,
+      "sha256": "0bdf59ab81be81f9dd70b6e7bc0789c4493b413529b022dcb2fbec6a4f2f3dab"
+    },
+    {
+      "path": "original/Previews/bowl-corner-inner.png",
+      "bytes": 1927,
+      "sha256": "7879d0523f0510bec3501a6319f12704f60622489cdfc7eff3cebbddd574a87c"
+    },
+    {
+      "path": "original/Previews/bowl-corner-outer.png",
+      "bytes": 1695,
+      "sha256": "e4e13fe503cd63da3437c108c576075b97548cebd39ddd7651682e7ff8400104"
+    },
+    {
+      "path": "original/Previews/bowl-side.png",
+      "bytes": 1829,
+      "sha256": "587e622d9d01341c665088dc7d93ea3f0b8ec7636093b93f9c5f89147bc03b94"
+    },
+    {
+      "path": "original/Previews/character-skate-boy.png",
+      "bytes": 1835,
+      "sha256": "f2dbc7273088652eb801eab60dace5c272bdc20d429d66edbfc89c0dab6c7240"
+    },
+    {
+      "path": "original/Previews/character-skate-girl.png",
+      "bytes": 1767,
+      "sha256": "05ef611127bebcc22598215d7ce7e79ab670552ab8fa639b8ab4a907cec19f2a"
+    },
+    {
+      "path": "original/Previews/floor-concrete.png",
+      "bytes": 781,
+      "sha256": "5a448c9b87c39ffba6bc19344e03da02e753695178daff113e072d799cae729c"
+    },
+    {
+      "path": "original/Previews/floor-wood.png",
+      "bytes": 1481,
+      "sha256": "9312f920542c69d039059a15a5ba5fee327de77920a8f24dfe8b0eb153aeb301"
+    },
+    {
+      "path": "original/Previews/half-pipe.png",
+      "bytes": 1868,
+      "sha256": "f270f98fce8b184fea2b674728b62d97107505a7e6da31378c5953c80d1e33f6"
+    },
+    {
+      "path": "original/Previews/obstacle-box.png",
+      "bytes": 1648,
+      "sha256": "94bd3f688db26c22d52056c7bf45113f953041011c10b27941802865194513af"
+    },
+    {
+      "path": "original/Previews/obstacle-end.png",
+      "bytes": 1754,
+      "sha256": "d6b01b07500eec57d00a24cb55d8af8ec8b33bb1019c3750aed5217caaa48ac2"
+    },
+    {
+      "path": "original/Previews/obstacle-middle.png",
+      "bytes": 1686,
+      "sha256": "6fc2b2650bbc4d9814c0ccda7a0f1e09f70008b410b0d91106002a86d1a0f16d"
+    },
+    {
+      "path": "original/Previews/pallet.png",
+      "bytes": 1969,
+      "sha256": "83549cff5da9d9806a07e288c9aabf31e11acb5d0ddbb52d774ff41fea8f7313"
+    },
+    {
+      "path": "original/Previews/rail-curve.png",
+      "bytes": 1410,
+      "sha256": "4381fc0032ed87d23a5ca4db2cb5db888063f3840411e219fde2fac17b534741"
+    },
+    {
+      "path": "original/Previews/rail-high.png",
+      "bytes": 1507,
+      "sha256": "2530e9483eb674a1b4d9822f1d3fc8f629b1b3be339aab62c3a134e666c17e24"
+    },
+    {
+      "path": "original/Previews/rail-low.png",
+      "bytes": 1585,
+      "sha256": "327fda60022086c6b0162963b3ed026c847051a86e9dedcaec4f35087fbec387"
+    },
+    {
+      "path": "original/Previews/rail-slope.png",
+      "bytes": 1541,
+      "sha256": "9a94205bbc165e27c323987ec90d7e37d270a256a24b932d1f2afa3c6a01a12b"
+    },
+    {
+      "path": "original/Previews/skateboard.png",
+      "bytes": 1646,
+      "sha256": "b6b3e61e702dccaa8dfcdb9be2c4ecaa80f4c3887104a8b60078b65b998b217b"
+    },
+    {
+      "path": "original/Previews/steps.png",
+      "bytes": 1884,
+      "sha256": "a38dbcedfc4bdbc09d97dd6c0c0cd278df90377e66391d8219b5625b9a3be0a1"
+    },
+    {
+      "path": "original/Previews/structure-platform.png",
+      "bytes": 1908,
+      "sha256": "bdec1806bb9c02ceb0091f97fba368d7ef566c6bd3fb952248c5768d7b914011"
+    },
+    {
+      "path": "original/Previews/structure-wood.png",
+      "bytes": 1875,
+      "sha256": "bf682238f0a7a5e6911454b75d1051041e90a13178af4c8d956dbde792c7c785"
+    },
+    {
+      "path": "original/Sample.png",
+      "bytes": 88905,
+      "sha256": "496540b71bd796ee0642c55d44f1d7de108688b6283d90da8cdca1fb6ccd7df4"
+    },
+    {
+      "path": "original/View Documentation.url",
+      "bytes": 185,
+      "sha256": "04e97bd6cafb469c1d38fd8c0b7db896d4f40ae14a4892de49690e2339977ef5"
+    },
+    {
+      "path": "original/Visit Kenney.url",
+      "bytes": 118,
+      "sha256": "773515aff299de98f621b769e3ad1ac5552eed54ea686791f75000014911e203"
+    },
+    {
+      "path": "original/Visit Patreon.url",
+      "bytes": 55,
+      "sha256": "84be5ef26b07905fa7e196e943c9807bf84138c3a71d87f51c6fd57b85c48c34"
+    }
+  ]
+}

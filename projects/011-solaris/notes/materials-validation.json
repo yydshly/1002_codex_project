@@ -1,0 +1,263 @@
+{
+  "product": "ATELIER",
+  "release": "0.10.0",
+  "date": "2026-10-05",
+  "entry": "http://localhost:4189/projects/011-solaris/materials.html",
+  "capabilityIds": [
+    "C21"
+  ],
+  "status": "passed-bounded-desktop-workflow",
+  "scope": "完整自建三样品教学台；真实射线拾取与火源拖动，固定名义吸收功率下的铜铝温升和冰熔化；能量账本、整次事务、相机、严格备份与真实图片导出。",
+  "implementation": {
+    "runtimeLlmRequired": false,
+    "externalGenerationApi": false,
+    "dependencies": "本地打包Three.js、OrbitControls、HDRLoader、SSAO与OutputPass",
+    "geometry": "台面、完整三脚支架、接皿、金属样品、冰水示意、完整燃烧头、阀门、软管和供应盒由产品设计；不是品牌设备、实物扫描或原厂GLB。",
+    "appearanceAssets": "复用已登记Poly Haven CC0的三张原木纹PBR图与一份原HDR环境；四文件共3120669字节，独立核对原哈希。",
+    "scientificSources": "materials-sources.md",
+    "referenceData": "../web/materials/reference-data.json",
+    "recordSchema": {
+      "fields": [
+        "id",
+        "material",
+        "energyJ",
+        "seconds"
+      ],
+      "inputOriginPersisted": false,
+      "boundary": "账本不区分鼠标拖放和辅助按钮入口；真实鼠标操作与按钮续供能分别由独立验收记录证明。"
+    }
+  },
+  "model": {
+    "absorbedPowerW": 10,
+    "teachingTimeRate": 4,
+    "temperatureIsCalculatedNotMeasured": true,
+    "metalMassG": 10,
+    "metalInitialTemperatureC": 25,
+    "metalTeachingLimitC": 60,
+    "constantHeatCapacityAtK": 298.15,
+    "copperHeatCapacityJPerKgK": 385.083479137046,
+    "aluminumHeatCapacityJPerKgK": 897.141426132353,
+    "iceMassG": 1,
+    "iceInitialTemperatureC": 0,
+    "iceReferencePressureKPa": 101.325,
+    "iceLatentHeatJPerG": 333.4,
+    "energyEquation": "Q=10t，其中t为教学秒；铜铝ΔT=Q/(mCp)，熔点冰的熔化质量比例=Q/(mL)。",
+    "assumptions": [
+      "样品温度均匀",
+      "忽略环境交换和散热",
+      "铜铝在25–60°C采用25°C比热常数近似",
+      "移开火源停止供能而不计算冷却",
+      "融尽后停止而不计算热水或蒸发"
+    ],
+    "visualMapping": "冰立方体边长按剩余质量比例的立方根缩小，水层按融化比例归一化显示；外观和网格尺寸不构成真实密度、体积测量或流体求解。",
+    "comparisonBoundary": "铜和铝是同质量同初温对照；冰的质量和初始温度不同，用于展示相变，不是三个相同初始条件的实验。"
+  },
+  "browser": {
+    "type": "Codex in-app browser",
+    "naturalViewport": [
+      1280,
+      720
+    ],
+    "scrollWidth": 1280,
+    "viewportOverrideUsed": false,
+    "warningAndErrorLogs": [],
+    "checks": [
+      {
+        "name": "原始场景加载与完整器具画面",
+        "status": "passed",
+        "evidence": "三样品、支架、接皿、完整燃烧头与供应软管、木台和辅助陈设真实渲染；本地PBR与HDR正常加载。"
+      },
+      {
+        "name": "限定区内未命中",
+        "status": "passed",
+        "evidence": "原生鼠标移动至[-0.626707109361067,0.20738221342002497]，保留火源移动，三种能量仍为0且账本为空，界面明确提示未对准样品。"
+      },
+      {
+        "name": "铜真实拾取释放与自动截止",
+        "status": "passed",
+        "evidence": "原生鼠标释放位置[-0.8028101337751767,0.01078951452425625]命中铜端口；134.77921769796612J、13.477921769796612教学秒、60°C，自动暂停且仅新增一条记录。"
+      },
+      {
+        "name": "一次拖动供能整体撤销与重做",
+        "status": "passed",
+        "evidence": "铜操作一次撤销后完整公开JSON等于此前未命中状态，一次重做等于供能后状态，包含火源、选择、能量、记录和相机。"
+      },
+      {
+        "name": "铝真实拾取释放与自动截止",
+        "status": "passed",
+        "evidence": "原生鼠标释放[0.07076790904274999,0.003310858337614908]命中铝端口；313.9994991463235J、31.39994991463235教学秒、60°C，铜状态保持。"
+      },
+      {
+        "name": "冰真实拾取释放与部分熔化",
+        "status": "passed",
+        "evidence": "原生鼠标释放[0.8514274176283092,0.037007657188874665]命中冰；手动暂停后4.1839999985694885J、融化1.3%、0°C，新增一条独立记录。"
+      },
+      {
+        "name": "供能中换正面视角",
+        "status": "passed",
+        "evidence": "供能中选择正面后状态仍显示供能中·冰，能量继续增长；之后融尽自动暂停。撤销供能事务同时恢复原视角、火源和账本。自动截止后另一次总览操作作为独立相机事务撤销。"
+      },
+      {
+        "name": "冰融尽截止",
+        "status": "passed",
+        "evidence": "冰累计333.4J、融化100.0%、0°C，自动暂停并禁用继续供能；实际目视确认冰体消失、水层保留；从136.0359999990463J继续融尽后新增第五条记录，一次撤销完整恢复部分熔化基线，不继续计算升温。"
+      },
+      {
+        "name": "定长供能与可见冰水共存",
+        "status": "passed",
+        "evidence": "由部分冰状态继续供能，UI操作之间安排3秒观察窗口后暂停；该次记录131.85200000047683J、13.185200000047685教学秒，总计136.0359999990463J、40.8%融化、0°C。真实截图显示缩小冰体和水层。",
+        "wallMsIncludingUiActions": 3610,
+        "timingBoundary": "UI动作窗口包括传输与点击耗时，不作为精密时钟校准；×4单位换算另由独立参数检查验证。"
+      },
+      {
+        "name": "Esc供能整体取消",
+        "status": "passed",
+        "evidence": "在136.0359999990463J的冰基线继续供能并换正面，再按原生Escape；完整公开JSON精确等于基线，未增加记录，相机也恢复。"
+      },
+      {
+        "name": "重置与一次撤销",
+        "status": "passed",
+        "evidence": "重置后三种能量全0且记录为空，nextId保持5；一次撤销使完整JSON恢复136.0359999990463J冰基线。"
+      },
+      {
+        "name": "三视角与热账分离",
+        "status": "passed",
+        "evidence": "正面、俯视和总览均实际显示同一实验台；俯视与总览前后累计能量和记录保持。"
+      },
+      {
+        "name": "原生鼠标环绕与滚轮缩放",
+        "status": "passed",
+        "evidence": "空白拖动与滚轮各改变公开相机配置，能量保持；分别一次撤销后完整JSON精确等于起点。"
+      },
+      {
+        "name": "火源越界释放",
+        "status": "passed",
+        "evidence": "真实鼠标把冰下火源拖到台面允许区域外松手，完整JSON精确恢复基线。"
+      },
+      {
+        "name": "非法能量账本原子拒绝",
+        "status": "passed",
+        "evidence": "将JSON冰累计能量增加1J而保留原账本，应用显示没有应用：样品能量与完整热输入账本不一致；关闭后完整JSON仍等于原状态。"
+      },
+      {
+        "name": "有效JSON完整导入、撤销与重做",
+        "status": "passed",
+        "evidence": "通过公开文本框导入不同视角、选择与火源位置的有效配置；导入后的完整JSON等于输入，一次撤销等于原状态，一次重做等于导入状态。"
+      },
+      {
+        "name": "供能中保存和备份",
+        "status": "passed",
+        "evidence": "Save与Backup分别在供能中触发，各暂停供能并新增一条热输入记录，累计冰能量增加；各一次撤销精确恢复完整基线。"
+      },
+      {
+        "name": "保存并重载",
+        "status": "passed",
+        "evidence": "保存后通过实际浏览器重载，再从公开备份读出的完整JSON精确相等，包括四条热输入记录、选择、火源与相机。"
+      },
+      {
+        "name": "运行中图片保护与稳定图片导出",
+        "status": "passed",
+        "evidence": "运行中图片按钮明确提示先暂停并记录或取消；Escape还原基线。稳定时公开预览图片实际解码1443×969，保存原PNG149990字节，画面为当前真实三维渲染。"
+      },
+      {
+        "name": "桌面布局与运行日志",
+        "status": "passed",
+        "evidence": "自然1280×720视口，scrollWidth1280，无横向溢出；实际运行和重载的warning/error日志为空。"
+      },
+      {
+        "name": "最终网页能力说明与全量接入规划",
+        "status": "passed",
+        "evidence": "实际打开材料场景验证对话框与规划页，确认七条清晰结果、科学条件、鼠标首次与按钮续供能区别、账本不记录入口来源；0.10.0九场景31/36、五项待接入C17/C18/C19/C30/C31，七阶段覆盖全部，阶段六3/3，C35仍六登记目标。最终两页warning/error日志均为空。"
+      }
+    ]
+  },
+  "automatedChecks": [
+    {
+      "name": "九场景产品状态与事务测试",
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "status": "passed",
+      "tests": 107,
+      "materialsTests": 12
+    },
+    {
+      "name": "仓库工具回归",
+      "command": "npm test",
+      "status": "passed",
+      "tests": 16
+    },
+    {
+      "name": "独立科学参数、模型量纲与登记素材原哈希",
+      "command": "node projects/011-solaris/scripts/verify-materials-reference.mjs",
+      "status": "passed",
+      "checks": 14,
+      "materials": 3,
+      "appearanceAssetFiles": 4,
+      "appearanceAssetBytes": 3120669
+    },
+    {
+      "name": "新运行脚本语法",
+      "command": "node --check",
+      "status": "passed",
+      "files": [
+        "web/materials/core.js",
+        "web/materials/scene.js",
+        "web/materials/app.js"
+      ]
+    },
+    {
+      "name": "全量能力与网页说明同步",
+      "command": "node projects/011-solaris/scripts/integration.mjs --check",
+      "status": "passed",
+      "release": "0.10.0",
+      "scenes": 9,
+      "total": 36,
+      "connected": 31,
+      "pending": 5,
+      "phases": 7
+    }
+  ],
+  "evidence": {
+    "reopenableExample": "../assets/atelier-materials-example.json",
+    "partialIceEnergyJ": 136.0359999990463,
+    "records": 4,
+    "screenshots": [
+      {
+        "file": "../assets/atelier-materials-workspace.jpg",
+        "type": "actual-browser-capture",
+        "viewport": [
+          1280,
+          720
+        ]
+      },
+      {
+        "file": "../assets/atelier-materials-melting.jpg",
+        "type": "actual-browser-capture",
+        "viewport": [
+          1280,
+          720
+        ],
+        "detail": "铜铝60°C、冰融化40.8%，右侧显示四条真实保留记录"
+      },
+      {
+        "file": "../assets/atelier-materials-render.png",
+        "type": "actual-renderer-png-export",
+        "dimensions": [
+          1443,
+          969
+        ],
+        "bytes": 149990
+      }
+    ],
+    "workspaceJpegBytes": 84067
+  },
+  "limits": [
+    "C21仅为铜、铝与熔点冰的有限热响应教学，不是开放式化学、燃烧、传热或材料工程预测。",
+    "火焰尺寸、材质颜色、触发半径和网格大小是交互或视觉设计，不是热功率、真实表面或质量测量。",
+    "水层是归一化形态示意，未求解密度体积、传导、液体流动、蒸发、结冰或化学反应。",
+    "40条记录预算和非法结构边界由核心测试覆盖；未实际浏览器填满40条或对所有存储故障注入。",
+    "中途blur/pagehide/失去指针取消路径已代码审查；未模拟全部设备中断、持鼠标时Escape或触摸硬件。",
+    "未测目标设备性能、长时间稳定性、精确外部计时或操作系统级断网。",
+    "真实PNG预览与原字节留存已验；浏览器自动下载回调未专项验证。",
+    "新增普通九场景导航不扩展C35六个受控意图去向；其检查点往返范围保持六场景。"
+  ]
+}

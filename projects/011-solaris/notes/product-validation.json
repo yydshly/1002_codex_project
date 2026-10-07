@@ -1,0 +1,2222 @@
+{
+  "product": "ATELIER",
+  "release": "0.14.0",
+  "date": "2026-10-06",
+  "entry": "http://localhost:4189/projects/011-solaris/fitting.html",
+  "overallStatus": "functional-first-release; full-36-item-product-incomplete",
+  "scope": {
+    "scene": "十一个独立场景：客厅编辑、汽车探索、影像测量、建筑光影、料理备料、图像创作、精选陈列、骨架练习、材料教学、水下双角色操控和完整人体上装与鞋履试穿。",
+    "sceneCount": 11,
+    "implementedBoundedIds": [
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15",
+      "C16",
+      "C17",
+      "C18",
+      "C20",
+      "C21",
+      "C22",
+      "C23",
+      "C24",
+      "C25",
+      "C26",
+      "C27",
+      "C28",
+      "C29",
+      "C30",
+      "C31",
+      "C32",
+      "C33",
+      "C34",
+      "C35",
+      "C36"
+    ],
+    "implementedBoundedCount": 35,
+    "remainingCount": 1,
+    "externalGenerationApi": false,
+    "runtimeDependencies": "local-bundled",
+    "sceneMeasurementCountsAsXray": false,
+    "atmospherePresetsCountAsCrossSceneGeneration": false,
+    "imagingHasIndependentImageCoordinateMeasurements": true,
+    "kitchenPhysics": "本地Cannon-es固定时间步求解，登记球包络与真实扫描显示网格分别负责接触和外观",
+    "kitchenInspection": "临时竖直浮起与镜头跟随；保持其他食材，归位或取消恢复原姿态和原视角，不写入摆放配置",
+    "compositionMotionPhase": {
+      "connected": 5,
+      "total": 5
+    },
+    "creativeCanvas": [
+      1200,
+      900
+    ],
+    "creativeBrushes": "真实可见选区转为持续纹理印章，或提取五色/亮暗方向的有限参数笔刷；逐笔捕获来源与设置，距离重采样，两层和显式目标裁剪，取消不越撤前一笔",
+    "creativeSourceImagesRemainUnmodified": true,
+    "generalNeuralStyleTransferImplemented": false,
+    "collectionAssets": {
+      "models": 6,
+      "files": 37,
+      "textures": 24,
+      "triangles": 62824,
+      "bytes": 13845953,
+      "source": "Poly Haven CC0真实模型、完整PBR纹理与本地环境"
+    },
+    "collectionArrangement": "六项完整排列、两槽交换、锁定ID保持原索引；有效拖动聚焦所拖素材，选品清单独立保存且不随重排变化",
+    "collectionPreference": "四种明确偏好，由作者标签与固定权重稳定整理未锁槽；先看原因预览再应用，一次撤销",
+    "collectionIntent": "仅登记的有限中文命令匹配六个安全本地场景，经确认保存严格检查点；往返不改六场景已有独立存储",
+    "collectionCountsAsC19Morphology": false,
+    "commerceFulfillmentImplemented": false,
+    "runtimeLlmRequired": false,
+    "skateRig": "Kenney Mini Skate 1.2 CC0原始boy GLB，两片蒙皮、七关节、29原始动画；运行仅混合skate-stand与skate-air",
+    "skateGesture": "直接射线拾取滑板，净上拖24–160px映射0.30–1.10展示高度，释放后完成落地才增加一条记录；取消、预览与重播不增加记录",
+    "skateContact": "从原始蒙皮采样12/18保守足底顶点，拟合两支撑点与真实平板面；滑板与骑手共同上移避免原始板顶点穿过固定平地",
+    "skateNotImplemented": [
+      "完整ollie动作或运动捕捉",
+      "全足IK与人体生物力学",
+      "坡面、栏杆、台阶滑行与碰撞",
+      "任意角色或地形生成"
+    ],
+    "materialInteractionPhase": {
+      "connected": 3,
+      "total": 3
+    },
+    "materialsThermalResponse": "固定名义已吸收功率10W；默认1×慢速、暂停可选4×。铜铝25–60°C常温比热近似、熔点冰潜热相变；可见蓝焰和热流、温度与温升条、单样品重试。新增40/80/120J铜→铝同热量对照与只读实时Q–T图，两步合为一次可取消/撤销的完整操作。",
+    "materialsScience": "NIST铜铝固相Shomate公式在298.15K计算Cp及NIST纯冰Ih标准大气压0°C熔化焓；显示结果为计算而非实测",
+    "materialsGeometry": "自主设计器具、空心支架、抬高托皿、完整燃烧头和样品；四份CC0木纹/HDR原素材。蓝焰、热流箭头、温升环和水层均标明教学示意，金属保持固态。",
+    "generalChemicalOrHeatTransferPredictionImplemented": false,
+    "materialsComparison": {
+      "dosesJ": [
+        40,
+        80,
+        120
+      ],
+      "burners": 1,
+      "sequence": [
+        "copper",
+        "aluminum"
+      ],
+      "metalMassG": 10,
+      "initialMetalTemperatureC": 25,
+      "keepsIce": true,
+      "records": 2,
+      "undoOperations": 1,
+      "liveChart": "actual-Q-state-points; bounded25–60C; copper-circle/aluminum-square",
+      "observerSettingsPersisted": false,
+      "thermalSchemaVersion": 1
+    },
+    "underwater": {
+      "capabilities": [
+        "C30",
+        "C31"
+      ],
+      "movement": "直接拾取完整小丑鱼，位置和方向由鼠标控制；松手后鱼保持准确落点与朝向，完整潜水员以有限速度继续跟随、停稳后朝向鱼。",
+      "constraints": "单鱼与单潜水员共享固定水平水层。鱼每段扫掠检查水域、三处礁石和当前潜水员；潜水员采用当前三处保守礁石及鱼体保护范围的有限采样可见图，所有路径段仍做精确圆包络扫掠。可安全绕行或受阻原位停止，不声明任意场景全局最短路径。",
+      "records": 40,
+      "fishPathPoints": 64,
+      "diverPathPoints": 128,
+      "JSONBytes": 524288,
+      "fishLedgerJSONBytes": 65536,
+      "schemaVersion": 2,
+      "storageKey": "atelier-underwater-workspace-v2",
+      "legacyStorageKey": "atelier-underwater-workspace-v1",
+      "legacyStorageKeyPreserved": true,
+      "legacyMigration": "保留原鱼位置、方向、相机、完整鱼 ledger 与编号；为潜水员选择安全当前初始化站位，旧行标 legacy 静止初始化，不伪造过去跟随。",
+      "swimY": 0.95,
+      "fishSafetyRadius": 0.3,
+      "diverSafetyRadius": 0.4,
+      "minimumActorSeparation": 0.7,
+      "targetDistanceUnits": 1,
+      "targetDistanceToleranceUnits": 0.025,
+      "units": "authored-scene-units",
+      "diverSpeedUnitsPerSecond": 0.82,
+      "diverTurnRadiansPerSecond": 2.8,
+      "fixedStepSeconds": 0.016666666666666666,
+      "followTargetIsGuaranteedWhenBlocked": false,
+      "transaction": "一次鱼拖动与随后潜水员停稳共一条 ledger、一次撤销；非法释放、Escape或保存/备份打断会完整恢复两主体的事务起点。",
+      "animationPhasePersisted": false,
+      "tailCycleChangesOverallPosition": false,
+      "diverClipsChangeOverallPosition": false,
+      "diverFollowingImplemented": true,
+      "schoolSimulationImplemented": false,
+      "fluidDynamicsImplemented": false,
+      "fullBodyIKImplemented": false,
+      "fishReefSandAssets": {
+        "files": 12,
+        "bytes": 1675391
+      },
+      "diverModel": {
+        "source": "Quaternius Universal Animation Library Standard CC0完整Mannequin；本项目自主设计潜水装具、配色与两段有限水平踢腿/悬停动作。",
+        "bones": 53,
+        "meshes": 45,
+        "equipmentMeshes": 44,
+        "materials": 7,
+        "GLBBytes": 2253380,
+        "sourceBodyUniqueTriangles": 13743,
+        "originalDuplicateTriangleRemovedDuringImport": true,
+        "clips": [
+          "Diver_Hover",
+          "Diver_Swim"
+        ],
+        "rootLocomotionFromAnimation": false,
+        "sampledPoses": 1005,
+        "sampledMaximumHorizontalRadius": 0.38301518586032507,
+        "samplingIsContinuousProof": false,
+        "manifest": "../web/underwater/assets/diver/manifest.json"
+      }
+    },
+    "remainingIds": [
+      "C19"
+    ],
+    "avatarCommercePhase": {
+      "connected": 2,
+      "total": 3
+    },
+    "intentRegisteredTargets": 6,
+    "fitting": {
+      "capabilities": [
+        "C17",
+        "C18"
+      ],
+      "avatarId": "atelier-mannequin-v1",
+      "schemaVersion": 2,
+      "storageKey": "atelier-fitting-room-v2",
+      "purpose": "通过真实鼠标把独立成对鞋拖到完整原人体脚部，验证合法部位、左右脚一起换款、与上装独立、配色细节和整套搭配恢复。",
+      "pick": "最近可见登记展样的真实蒙皮网格射线交点，排除隐藏祖先；侧栏卡片可通过独立指针捕获拖到同一人体目标。",
+      "drop": "最近可见人体或已穿服装网格交点必须在登记胸腹盒内；头部、手臂、脚部及空白释放均不接受上装。",
+      "dropBox": {
+        "x": [
+          -0.375,
+          0.375
+        ],
+        "y": [
+          0.82,
+          1.61
+        ],
+        "z": [
+          -0.225,
+          0.225
+        ]
+      },
+      "minimumDragPixels": 6,
+      "registeredGarments": [
+        "tee-01",
+        "jacket-01"
+      ],
+      "colors": [
+        "ivory",
+        "moss",
+        "ink"
+      ],
+      "slot": "one-upper-garment plus one-independent-complete-pair",
+      "poses": {
+        "neutral": "Fitting_Neutral",
+        "reach": "Fitting_Reach"
+      },
+      "clipSeconds": 2,
+      "constantClips": true,
+      "poseRelationship": "人体和服装独立克隆完整同53骨蒙皮，匹配恒定clip后同时setTime(0)；选择静态姿态，不运行持续动画相位。",
+      "recolor": "Fitting_Fabric main cloth and same-material chest pockets change together; trim, stitches and metal stay fixed. Independent Fitting_ShoeUpper changes shoe uppers only; sole, laces, trim and hardware stay fixed.",
+      "virtualReferenceHeight": 1.78,
+      "units": "uncalibrated-scene-units",
+      "realSizePrediction": false,
+      "sourceBodyUniqueTriangles": 13743,
+      "sourceBoneCount": 53,
+      "bodyMasks": false,
+      "bodyDecimation": false,
+      "runtimeFiles": 6,
+      "manifestRegisteredFiles": 28,
+      "models": {
+        "avatar": {
+          "GLBBytes": 682176
+        },
+        "tee": {
+          "meshes": 9,
+          "triangles": 119996,
+          "GLBBytes": 3533168
+        },
+        "jacket": {
+          "meshes": 20,
+          "triangles": 178366,
+          "GLBBytes": 6209244
+        }
+      },
+      "assetManifest": "../web/fitting/assets/manifest.json",
+      "finiteFitVerification": {
+        "checks": 11,
+        "status": "passed-with-finite-domain",
+        "totalProbes": 3414,
+        "intersectedProbes": 3350,
+        "unverifiedShoulderUnderarmRays": 64,
+        "limit": "3350条命中光线通过选定外壳覆盖检查；64条肩腋下未命中光线仍未验证。有限光线与登记姿态检查不是全身零穿透或任意衣体适配证明。"
+      },
+      "historyLimit": 40,
+      "JSONBytes": 32768,
+      "transaction": "Temporary garment/pair visual preview comes from the whole pending baseline; only legal release commits the independent slot. Cancel and undo restore garment, shoes/colors, pose and exact camera.",
+      "sameGarmentAndColorCreatesHistory": false,
+      "historyPersisted": false,
+      "observerCatalogSelectionIsCart": false,
+      "strictImport": "Strict v2 exact fields and registered garment/shoe/color/pose/camera; strict original v1 migration adds only shoes:null and version2. Partial pair, real size, gait and shopping fields rejected before mutation.",
+      "clothPhysicsImplemented": false,
+      "arbitraryBodyFittingImplemented": false,
+      "footwearImplemented": true,
+      "shoppingImplemented": false,
+      "legacyStorageKey": "atelier-fitting-room-v1",
+      "legacyStorageKeyPreserved": true,
+      "registeredShoes": [
+        "court-01",
+        "boot-01"
+      ],
+      "shoeRelationship": "rigid preadapted complete pairs under the same full avatar root; no feet mask or animated gait",
+      "footDropBox": {
+        "x": [
+          -0.36,
+          0.36
+        ],
+        "y": [
+          -0.01,
+          0.3
+        ],
+        "z": [
+          -0.18,
+          0.34
+        ]
+      },
+      "footwearAssets": {
+        "status": "frozen",
+        "sourceDocument": "footwear-sources.md",
+        "manifest": "../web/fitting/footwear/manifest.json",
+        "runtimeFiles": 5,
+        "registeredFiles": 35,
+        "bodyBones": 53,
+        "originalBodyUniqueFaces": 13743,
+        "bodyMasks": false,
+        "originalC17ThreeGLBsUnchanged": true,
+        "models": [
+          {
+            "path": "court.glb",
+            "role": "runtime-court-pair",
+            "byteLength": 2898476,
+            "sha256": "9f6e8db208e6d1e622bf0327934829e1842838e8fb2b52207f9402307cd68838"
+          },
+          {
+            "path": "ridge.glb",
+            "role": "runtime-ridge-pair",
+            "byteLength": 3228204,
+            "sha256": "3454599203fc1f103a2f9583c5b9d59db8c37b993168567447e9cef78c2e5dc9"
+          }
+        ],
+        "finiteGeometryReport": "../assets/fitting-footwear-source-archives/finite-foot-verification.json",
+        "finiteGeometry": {
+          "checks": 8,
+          "passed": 8,
+          "results": [
+            "frozen C17 avatar and both garments remain byte-for-byte unchanged",
+            "original complete 53-bone avatar and all 13,743 body triangles retained; shoes have no body copy or mask",
+            "independent packed skin evaluation confirms original feet stationary in both constant registered poses",
+            "both local rigid pairs have complete independently shaped left/right upper, sole, tongue, collar, lace and hardware",
+            "registered roots remain zero with unit scale, soles touch y=0 and shape extents fit fixed foot interaction registration",
+            "finite ground projection and non-portal upper-ray coverage of every registered original foot sample",
+            "short boot quarter encloses all sampled original lower-shin vertices in its declared shaft-height domain",
+            "independent closed paired sole topology and contact plane retained without body masking"
+          ],
+          "status": "passed-with-finite-foot-domain",
+          "scope": "Fixed 1.78 virtual reference avatar only; both poses have stationary feet. All foot ground projections and outside-ankle-portal upward rays sampled. Open ankle portal deliberately remains open. This is not a volumetric collision certificate or real-world sizing/sole-padding simulation.",
+          "reports": [
+            {
+              "file": "court.glb",
+              "originalFootSamples": 264,
+              "groundProjectionHits": 264,
+              "nonPortalUpwardHits": 120,
+              "declaredOpenAnklePortalSamples": 144,
+              "failures": [],
+              "bounds": {
+                "min": [
+                  -0.1807592362165451,
+                  0,
+                  -0.12189999967813492
+                ],
+                "max": [
+                  0.18350617587566376,
+                  0.18920312821865082,
+                  0.24788787961006165
+                ]
+              },
+              "meshCount": 64,
+              "triangles": 157584
+            },
+            {
+              "file": "ridge.glb",
+              "originalFootSamples": 264,
+              "groundProjectionHits": 264,
+              "nonPortalUpwardHits": 120,
+              "declaredOpenAnklePortalSamples": 144,
+              "failures": [],
+              "bounds": {
+                "min": [
+                  -0.1807556450366974,
+                  0,
+                  -0.1428000032901764
+                ],
+                "max": [
+                  0.18350471556186676,
+                  0.31501755118370056,
+                  0.24788787961006165
+                ]
+              },
+              "meshCount": 88,
+              "triangles": 176984,
+              "shaftSampling": {
+                "heightDomain": [
+                  0.155,
+                  0.284
+                ],
+                "source": "all original lower-shin vertices plus 8th-order barycentric original-body-triangle surface samples crossing the height domain",
+                "sampled": 2830,
+                "covered": 2830,
+                "misses": []
+              }
+            }
+          ]
+        },
+        "reviews": 18
+      }
+    }
+  },
+  "automatedChecks": [
+    {
+      "name": "0.14.0十一场景产品回归含独立鞋槽与严格旧版迁移",
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "release": "0.14.0",
+      "status": "passed",
+      "tests": 181,
+      "fittingCoreTests": 25,
+      "historical": false
+    },
+    {
+      "name": "0.14.0完整原足、固定姿态、真实鞋壳与来源哈希独立核查",
+      "command": "node projects/011-solaris/scripts/verify-footwear-assets.mjs",
+      "release": "0.14.0",
+      "status": "passed-with-finite-foot-domain",
+      "checks": 9,
+      "geometryChecks": 8,
+      "registeredFiles": 35,
+      "ridgeLowerShinSamples": 2830,
+      "historical": false
+    },
+    {
+      "name": "0.14.0仓库工具回归",
+      "command": "node --test scripts/tests/*.test.mjs",
+      "release": "0.14.0",
+      "status": "passed",
+      "tests": 16,
+      "historical": false
+    },
+    {
+      "name": "0.13.0十一个场景产品回归含固定人体上装事务",
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "release": "0.13.0",
+      "status": "passed",
+      "tests": 171,
+      "fittingCoreTests": 15,
+      "historical": true
+    },
+    {
+      "name": "0.13.0完整身体、同53骨服装与有限姿态外壳独立核查",
+      "command": "node projects/011-solaris/scripts/verify-fitting-assets.mjs",
+      "release": "0.13.0",
+      "status": "passed-with-finite-domain",
+      "checks": 11,
+      "bones": 53,
+      "bodyUniqueTriangles": 13743,
+      "totalProbes": 3414,
+      "intersectedProbes": 3350,
+      "unverifiedRays": 64,
+      "continuousFullBodyProof": false,
+      "historical": true
+    },
+    {
+      "name": "0.13.0实际相机球面边界数学采样",
+      "command": "独立执行web/fitting/scene.js实际clampCamera函数：8目标高度×8距离×2边界极角",
+      "release": "0.13.0",
+      "status": "passed",
+      "samples": 128,
+      "includedInProductTestCount": false,
+      "nativePointerEvidence": false,
+      "historical": true
+    },
+    {
+      "name": "0.13.0仓库工具回归",
+      "command": "npm test",
+      "release": "0.13.0",
+      "status": "passed",
+      "tests": 16,
+      "historical": true
+    },
+    {
+      "name": "0.13.0十一个场景说明与七阶段规划同步",
+      "command": "node projects/011-solaris/scripts/integration.mjs --check",
+      "release": "0.13.0",
+      "status": "passed",
+      "total": 36,
+      "connected": 34,
+      "pending": 2,
+      "scenes": 11,
+      "phases": 7,
+      "avatarCommerce": "1/3",
+      "intentRegisteredTargets": 6,
+      "historical": true
+    },
+    {
+      "name": "0.13.0总索引同步、静态构建和发布文件哈希",
+      "command": "npm run sync; npm run check; node scripts/catalog.mjs build",
+      "release": "0.13.0",
+      "status": "passed",
+      "expectedProjects": 14,
+      "historical": true,
+      "sourcePublishedHashes": 14
+    },
+    {
+      "name": "0.12.0十场景产品回归含有限跟随与双角色工作区",
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "release": "0.12.0",
+      "status": "passed",
+      "tests": 156,
+      "followerTests": 11,
+      "workspaceTests": 12,
+      "underwaterFishCoreTests": 12,
+      "historical": true
+    },
+    {
+      "name": "0.12.0完整潜水员骨架、装具、原身体与混合姿态包络独立核查",
+      "command": "node projects/011-solaris/scripts/verify-diver-assets.mjs",
+      "release": "0.12.0",
+      "status": "passed",
+      "checks": 12,
+      "posedSamples": 1005,
+      "bones": 53,
+      "meshes": 45,
+      "materials": 7,
+      "historical": true
+    },
+    {
+      "name": "0.12.0仓库构建回归",
+      "command": "npm test",
+      "release": "0.12.0",
+      "status": "passed",
+      "historical": true,
+      "tests": 16
+    },
+    {
+      "name": "0.12.0十场景说明与七阶段规划同步",
+      "command": "node projects/011-solaris/scripts/integration.mjs --check",
+      "release": "0.12.0",
+      "status": "passed",
+      "total": 36,
+      "connected": 33,
+      "pending": 3,
+      "scenes": 10,
+      "phases": 7,
+      "compositionMotion": "5/5",
+      "historical": true
+    },
+    {
+      "name": "0.12.0总索引清单与静态构建",
+      "command": "npm run sync; npm run check; node scripts/catalog.mjs build",
+      "release": "0.12.0",
+      "status": "passed",
+      "expectedProjects": 14,
+      "historical": true
+    },
+    {
+      "name": "0.11.0十场景说明与七阶段规划同步",
+      "command": "node projects/011-solaris/scripts/integration.mjs --check",
+      "release": "0.11.0",
+      "status": "passed",
+      "total": 36,
+      "connected": 32,
+      "pending": 4,
+      "scenes": 10,
+      "phases": 7,
+      "historical": true
+    },
+    {
+      "name": "0.11.0总索引清单和静态构建",
+      "command": "npm run sync; npm run check; node scripts/catalog.mjs build",
+      "release": "0.11.0",
+      "status": "passed",
+      "projects": 14,
+      "historical": true
+    },
+    {
+      "name": "0.11.0十场景产品回归含水下事务与跨环境朝向校验",
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "status": "passed",
+      "tests": 133,
+      "underwaterTests": 12,
+      "release": "0.11.0",
+      "historical": true
+    },
+    {
+      "name": "0.11.0完整水下模型、骨架动作与原素材独立核查",
+      "command": "node projects/011-solaris/scripts/verify-underwater-assets.mjs",
+      "status": "passed",
+      "checks": 11,
+      "release": "0.11.0",
+      "historical": true
+    },
+    {
+      "name": "0.11.0仓库构建回归",
+      "command": "npm test",
+      "status": "passed",
+      "tests": 16,
+      "release": "0.11.0",
+      "historical": true
+    },
+    {
+      "name": "0.10.2九场景产品回归含同热量对照事务",
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "status": "passed",
+      "tests": 121,
+      "materialsCoreTests": 17,
+      "comparisonTests": 9,
+      "release": "0.10.2",
+      "historical": true
+    },
+    {
+      "name": "0.10.2材料独立科学参数、倍率与登记素材核查",
+      "command": "node projects/011-solaris/scripts/verify-materials-reference.mjs",
+      "status": "passed",
+      "checks": 15,
+      "materials": 3,
+      "files": 4,
+      "bytes": 3120669,
+      "release": "0.10.2",
+      "historical": true
+    },
+    {
+      "name": "0.10.2九场景接入说明生成与同步",
+      "command": "node projects/011-solaris/scripts/integration.mjs --check",
+      "status": "passed",
+      "release": "0.10.2",
+      "total": 36,
+      "connected": 31,
+      "pending": 5,
+      "scenes": 9,
+      "phases": 7,
+      "historical": true
+    },
+    {
+      "name": "0.10.2仓库构建回归",
+      "command": "npm test",
+      "status": "passed",
+      "tests": 16,
+      "release": "0.10.2",
+      "historical": true
+    },
+    {
+      "name": "0.10.1九场景接入说明生成与同步",
+      "command": "node projects/011-solaris/scripts/integration.mjs --check",
+      "status": "passed",
+      "release": "0.10.1",
+      "total": 36,
+      "connected": 31,
+      "pending": 5,
+      "scenes": 9,
+      "phases": 7,
+      "historical": true
+    },
+    {
+      "name": "0.10.1仓库构建回归",
+      "command": "npm test",
+      "status": "passed",
+      "tests": 16,
+      "release": "0.10.1",
+      "historical": true
+    },
+    {
+      "name": "0.10.1九场景产品回归含单样品重试事务",
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "status": "passed",
+      "tests": 112,
+      "materialsCoreTests": 17,
+      "release": "0.10.1",
+      "historical": true
+    },
+    {
+      "name": "0.10.1材料独立科学参数、倍率与登记素材核查",
+      "command": "node projects/011-solaris/scripts/verify-materials-reference.mjs",
+      "status": "passed",
+      "checks": 15,
+      "materials": 3,
+      "files": 4,
+      "bytes": 3120669,
+      "release": "0.10.1",
+      "historical": true
+    },
+    {
+      "name": "0.10.0全部接入说明同步",
+      "command": "node projects/011-solaris/scripts/integration.mjs --check",
+      "status": "passed",
+      "release": "0.10.0",
+      "total": 36,
+      "connected": 31,
+      "pending": 5,
+      "scenes": 9,
+      "phases": 7,
+      "materialInteraction": "3/3",
+      "compositionMotion": "3/5",
+      "historical": true
+    },
+    {
+      "name": "九场景产品状态、物理、像素、骨架与热响应事务全集",
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "status": "passed",
+      "tests": 107,
+      "materialsCoreTests": 12,
+      "release": "0.10.0",
+      "historical": true
+    },
+    {
+      "name": "0.10.0仓库构建工具回归",
+      "command": "npm test",
+      "status": "passed",
+      "tests": 16,
+      "release": "0.10.0",
+      "historical": true
+    },
+    {
+      "name": "材料独立科学参数、量纲和已登记外观原哈希",
+      "command": "node projects/011-solaris/scripts/verify-materials-reference.mjs",
+      "status": "passed",
+      "checks": 14,
+      "materials": 3,
+      "files": 4,
+      "bytes": 3120669,
+      "release": "0.10.0",
+      "historical": true
+    },
+    {
+      "name": "0.9.0全部接入说明同步",
+      "command": "node projects/011-solaris/scripts/integration.mjs --check",
+      "status": "passed",
+      "release": "0.9.0",
+      "total": 36,
+      "connected": 30,
+      "pending": 6,
+      "scenes": 8,
+      "phases": 7,
+      "compositionMotion": "3/5",
+      "historical": true
+    },
+    {
+      "name": "八场景产品核心、刚体与有限骨架事务全集",
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "status": "passed",
+      "tests": 95,
+      "skateCoreTests": 11,
+      "release": "0.9.0",
+      "historical": true
+    },
+    {
+      "name": "0.9.0仓库构建工具回归",
+      "command": "npm test",
+      "status": "passed",
+      "tests": 16,
+      "release": "0.9.0",
+      "historical": true
+    },
+    {
+      "name": "滑板原始资产许可、哈希与完整GLB检查",
+      "command": "node projects/011-solaris/scripts/verify-skate-assets.mjs",
+      "status": "passed",
+      "files": 133,
+      "models": 20,
+      "release": "0.9.0",
+      "historical": true
+    },
+    {
+      "name": "原始蒙皮支撑点与滑板地面几何独立检查",
+      "command": "node projects/011-solaris/scripts/verify-skate-contact.mjs",
+      "status": "passed",
+      "samples": 3003,
+      "boardVertices": 372,
+      "soleVertices": [
+        12,
+        18
+      ],
+      "tolerance": 1e-8,
+      "boundary": "仅两保守足底支撑点与采样顶点，不代表全足IK或人体动力学",
+      "release": "0.9.0",
+      "historical": true
+    },
+    {
+      "name": "地标状态、相机范围、知识卡与连续事务",
+      "command": "node --test projects/011-solaris/tests/landmark.test.mjs",
+      "status": "passed",
+      "tests": 8,
+      "historical": true
+    },
+    {
+      "name": "真实CC0建筑打印几何许可、哈希与全部坐标",
+      "command": "node projects/011-solaris/scripts/verify-landmark-assets.mjs",
+      "status": "passed",
+      "triangles": 343281,
+      "bytes": 17164134,
+      "historical": true
+    },
+    {
+      "name": "影像几何、单位、事务与源图隔离",
+      "command": "node --test projects/011-solaris/tests/imaging.test.mjs",
+      "status": "passed",
+      "tests": 13,
+      "historical": true
+    },
+    {
+      "name": "真实影像原片许可、哈希及尺寸",
+      "command": "node projects/011-solaris/scripts/verify-imaging-assets.mjs",
+      "status": "passed",
+      "assets": 2,
+      "historical": true
+    },
+    {
+      "name": "汽车状态、输入校验与连续事务",
+      "command": "node --test projects/011-solaris/tests/showroom.test.mjs",
+      "status": "passed",
+      "tests": 6,
+      "historical": true
+    },
+    {
+      "name": "车辆嵌入资产、PNG完整性与部件层级",
+      "command": "node projects/011-solaris/scripts/verify-car-assets.mjs",
+      "status": "passed",
+      "bytes": 11268100,
+      "embeddedPngImages": 14,
+      "pngChunkCrcAndScanlines": true,
+      "hoodAndEngine": true,
+      "selfContained": true,
+      "historical": true
+    },
+    {
+      "name": "核心状态、事务和约束",
+      "command": "node --test projects/011-solaris/tests/studio.test.mjs",
+      "status": "passed",
+      "tests": 22,
+      "historical": true
+    },
+    {
+      "name": "固定模型尺寸校准",
+      "command": "node projects/011-solaris/scripts/calibrate.mjs --check",
+      "status": "passed",
+      "models": 6,
+      "historical": true
+    },
+    {
+      "name": "第三方资产哈希、大小与本地引用",
+      "command": "node projects/011-solaris/scripts/verify-assets.mjs",
+      "status": "passed",
+      "files": 67,
+      "bytes": 21009742,
+      "gltfReferencedFiles": 30,
+      "historical": true
+    },
+    {
+      "name": "仓库清单和生成索引",
+      "command": "npm run check",
+      "status": "passed",
+      "projects": 14,
+      "historical": true
+    },
+    {
+      "name": "仓库构建工具回归",
+      "command": "npm test",
+      "status": "passed",
+      "tests": 16,
+      "historical": true
+    },
+    {
+      "name": "静态产品构建",
+      "command": "node scripts/catalog.mjs build",
+      "status": "passed",
+      "historical": true
+    },
+    {
+      "name": "运行脚本语法",
+      "command": "node --check",
+      "status": "passed",
+      "files": [
+        "web/studio/core.js",
+        "web/studio/scene.js",
+        "web/studio/app.js",
+        "scripts/assets.mjs",
+        "scripts/calibrate.mjs",
+        "web/app.js",
+        "web/studio/integration.js",
+        "scripts/integration.mjs",
+        "web/imaging/core.js",
+        "web/imaging/app.js",
+        "web/capabilities/scene-capabilities.js"
+      ],
+      "historical": true
+    },
+    {
+      "name": "研究状态与产品接入说明同步",
+      "command": "node projects/011-solaris/scripts/integration.mjs --check",
+      "status": "passed",
+      "total": 36,
+      "connected": 19,
+      "pending": 17,
+      "phases": 7,
+      "scenes": 3,
+      "historical": true
+    },
+    {
+      "name": "料理登记包络、严格状态、浮起路径与事务",
+      "command": "node --test projects/011-solaris/tests/kitchen.test.mjs",
+      "status": "passed",
+      "tests": 8,
+      "release": "0.6.0",
+      "historical": true
+    },
+    {
+      "name": "料理固定时间步、四种球包络接触、边缘投放与失败恢复",
+      "command": "node --test projects/011-solaris/tests/kitchen-physics.test.mjs",
+      "status": "passed",
+      "tests": 8,
+      "release": "0.6.0",
+      "evidencePhase": "Initial 0.6.0 validation before adding the central stacked-drop convergence regression; final current total is66.",
+      "historical": true
+    },
+    {
+      "name": "四种真实CC0食材原始文件、哈希与几何坐标",
+      "command": "node projects/011-solaris/scripts/verify-kitchen-assets.mjs",
+      "status": "passed",
+      "models": 4,
+      "files": 20,
+      "textures": 12,
+      "triangles": 24211,
+      "bytes": 4716226,
+      "release": "0.6.0",
+      "historical": true
+    },
+    {
+      "name": "五场景产品核心与刚体测试全集",
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "status": "passed",
+      "tests": 65,
+      "release": "0.6.0",
+      "evidencePhase": "Initial 0.6.0 validation before adding the central stacked-drop convergence regression; final current total is66.",
+      "historical": true
+    },
+    {
+      "name": "0.6.0接入数据、阶段与五场景说明同步",
+      "command": "node projects/011-solaris/scripts/integration.mjs --check",
+      "status": "passed",
+      "release": "0.6.0",
+      "total": 36,
+      "connected": 24,
+      "pending": 12,
+      "scenes": 5,
+      "phases": 7,
+      "compositionMotion": "2/5",
+      "historical": true
+    },
+    {
+      "name": "料理堆叠求解收敛回归与最终产品测试",
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "status": "passed",
+      "release": "0.6.0",
+      "tests": 66,
+      "kitchenCoreTests": 8,
+      "kitchenPhysicsTests": 9,
+      "detail": "真实六件与中心第七件投放回归；接触迭代60，不放宽稳定/越界/穿透阈值，四帧率结果相同，真实UI复验和一步撤销通过",
+      "historical": true
+    },
+    {
+      "name": "创作严校验、坐标与局部几何、距离重采样、笔迹回放与事务预算",
+      "command": "node --test projects/011-solaris/tests/creative.test.mjs",
+      "status": "passed",
+      "release": "0.7.0",
+      "tests": 10,
+      "totalStampBudget": 200000,
+      "perStrokeStampBudget": 100000,
+      "historical": true
+    },
+    {
+      "name": "六场景产品核心与刚体测试全集",
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "status": "passed",
+      "release": "0.7.0",
+      "tests": 76,
+      "historical": true
+    },
+    {
+      "name": "0.7.0仓库构建工具回归",
+      "command": "npm test",
+      "status": "passed",
+      "release": "0.7.0",
+      "tests": 16,
+      "historical": true
+    },
+    {
+      "name": "创作真实开放图像与完整构图派生、许可和哈希",
+      "command": "node projects/011-solaris/scripts/verify-creative-assets.mjs",
+      "status": "passed",
+      "release": "0.7.0",
+      "images": 4,
+      "bytes": 7602490,
+      "capturedMetPublicDomainRecords": 3,
+      "fullFrameDerivatives": true,
+      "sha256Matched": true,
+      "runtimeRequiresNetwork": false,
+      "historical": true
+    },
+    {
+      "name": "精选陈列完整排列、锁槽稳定排序、严格导入、有限路由与事务",
+      "command": "node --test projects/011-solaris/tests/collection.test.mjs",
+      "status": "passed",
+      "release": "0.8.0",
+      "tests": 8,
+      "historical": true
+    },
+    {
+      "name": "七场景产品核心与刚体测试全集",
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "status": "passed",
+      "release": "0.8.0",
+      "tests": 84,
+      "historical": true
+    },
+    {
+      "name": "0.8.0仓库构建工具回归",
+      "command": "npm test",
+      "status": "passed",
+      "release": "0.8.0",
+      "tests": 16,
+      "historical": true
+    },
+    {
+      "name": "六件真实CC0设计模型、原始PBR纹理与本地资源校验",
+      "command": "node projects/011-solaris/scripts/verify-collection-assets.mjs",
+      "status": "passed",
+      "release": "0.8.0",
+      "models": 6,
+      "files": 37,
+      "textures": 24,
+      "triangles": 62824,
+      "bytes": 13845953,
+      "sha256Matched": true,
+      "runtimeRequiresNetwork": false,
+      "historical": true
+    },
+    {
+      "name": "0.14.0能力说明与七阶段接入清单生成核对",
+      "command": "node projects/011-solaris/scripts/integration.mjs --check",
+      "status": "passed",
+      "release": "0.14.0",
+      "connected": 35,
+      "total": 36,
+      "scenes": 11,
+      "phases": 7
+    },
+    {
+      "name": "0.14.0项目目录同步、检查与展示站点构建",
+      "command": "node scripts/catalog.mjs sync / check / build",
+      "status": "passed",
+      "release": "0.14.0",
+      "projects": 14
+    },
+    {
+      "name": "0.14.0鞋履页面、模型、规划与项目封面源文件和发布文件哈希",
+      "status": "passed",
+      "release": "0.14.0",
+      "pairs": 20,
+      "evidence": "footwear-publication-hashes.json"
+    }
+  ],
+  "browserChecks": [
+    {
+      "name": "原生鼠标移动",
+      "status": "passed",
+      "evidence": "植物X 2.12→2.50，Z -1.74→-0.66，房间边界有效"
+    },
+    {
+      "name": "一次拖动事务",
+      "status": "passed",
+      "evidence": "一次撤销恢复拖动起点，一次重做恢复终点"
+    },
+    {
+      "name": "桌灯关系",
+      "status": "passed",
+      "evidence": "茶几拖到X0.11/Z1.13，台灯与实际灯光随父级移动；台灯单独拖动受桌面约束"
+    },
+    {
+      "name": "旋转与缩放",
+      "status": "passed",
+      "evidence": "植物实际拖动100%→124%，0°→31°；约束随旋转尺寸变化"
+    },
+    {
+      "name": "挂画锚点与墙色",
+      "status": "passed",
+      "evidence": "挂画原生拖动100%→120%保持贴墙；浅苔绿墙面实际更新"
+    },
+    {
+      "name": "布料和颜色",
+      "status": "passed",
+      "evidence": "提花纹理实际更新且保留木脚、轮廓；亚麻、苔绿与陶土切换可见"
+    },
+    {
+      "name": "时间与太阳联动",
+      "status": "passed",
+      "evidence": "太阳原生拖动35°→-46°，18.5对应18:30，照明和阴影实际变化"
+    },
+    {
+      "name": "阅读灯开关",
+      "status": "passed",
+      "evidence": "环境面板关闭实际灯具；点光源随灯具移动"
+    },
+    {
+      "name": "俯视相机",
+      "status": "passed",
+      "evidence": "切换真实顶部相机，再恢复默认相机"
+    },
+    {
+      "name": "地面两点测量",
+      "status": "passed",
+      "evidence": "点击两点显示2.51m，仅为本场景单位标定"
+    },
+    {
+      "name": "有限中文指令",
+      "status": "passed",
+      "evidence": "沙发向右移动20厘米使X -0.90→-0.70，撤销恢复；换成苔绿生效；不支持的指令明确拒绝"
+    },
+    {
+      "name": "方案A/B比较",
+      "status": "passed",
+      "evidence": "存入午后、黄昏；同视角真实渲染，两图均解码727×830"
+    },
+    {
+      "name": "保存与重开",
+      "status": "passed",
+      "evidence": "当前对象、环境与A/B恢复；相机position/target在导出DOM数据中保存前后精确一致"
+    },
+    {
+      "name": "项目文件导入",
+      "status": "passed",
+      "evidence": "实际界面导出JSON数据，恢复初始场景后通过文件选择器导入，陶土配色恢复并提示项目已打开"
+    },
+    {
+      "name": "本地挂画图片",
+      "status": "passed",
+      "evidence": "上传本产品测试截图，实际出现在墙面，保存重开保持；最终恢复原创画作"
+    },
+    {
+      "name": "真实图片导出预览",
+      "status": "passed",
+      "evidence": "预览解码727×830，不含选择框，提供图片另存入口"
+    },
+    {
+      "name": "手机布局",
+      "status": "passed",
+      "evidence": "360×800和320×800无横向溢出；最小文字11px；项目菜单、对象搜索与抽屉有效",
+      "touchHardwareTested": false
+    },
+    {
+      "name": "浏览器运行错误",
+      "status": "passed",
+      "evidence": "本轮检查错误日志为空"
+    }
+  ],
+  "scalingUpdateChecks": {
+    "entry": "http://localhost:4191/projects/011-solaris/",
+    "purpose": "独立端口验收，避免替换用户原工作区的编辑数据",
+    "checks": [
+      {
+        "name": "沙发鼠标缩放",
+        "status": "passed",
+        "evidence": "原生拖动100%→127%，尺寸更新为3.37×1.52×1.32m；一次撤销回到100%"
+      },
+      {
+        "name": "椅子鼠标缩放",
+        "status": "passed",
+        "evidence": "原生拖动100%→135%，实际模型和尺寸同时更新"
+      },
+      {
+        "name": "尺寸滑块上下限",
+        "status": "passed",
+        "evidence": "椅子滑块键盘Home→60%，End→160%，不再禁用"
+      },
+      {
+        "name": "占位反馈",
+        "status": "passed",
+        "evidence": "沙发尝试160%因占位被拒绝，保留100%，明确显示空间不足提示"
+      },
+      {
+        "name": "缩放后的桌灯关系",
+        "status": "passed",
+        "evidence": "茶几130%，台灯独立120%，导出数据台灯Y=0.559与桌面0.43×1.3一致"
+      },
+      {
+        "name": "缩放项目重开",
+        "status": "passed",
+        "evidence": "椅子160%、茶几130%、台灯120%保存重开；通过UI导出读取的完整project保存前后完全一致；错误日志为空"
+      }
+    ]
+  },
+  "reopenableExample": "../assets/example-project.json",
+  "screenshots": [
+    {
+      "file": "../assets/atelier-fitting-workspace.jpg",
+      "type": "actual-browser-capture",
+      "width": 1280,
+      "height": 720,
+      "release": "0.13.0",
+      "description": "最终冻结资产的真实试衣间：完整53骨虚拟人体、两款独立上装、配色、姿态与相机观察。"
+    },
+    {
+      "file": "../assets/atelier-fitting-drag.jpg",
+      "type": "actual-active-browser-screenshot",
+      "width": 1280,
+      "height": 720,
+      "release": "0.13.0",
+      "description": "真实鼠标按住登记服装并命中胸腹区域，dragActive=true/dropValid=true，尚未提交的真实穿衣预览。"
+    },
+    {
+      "file": "../assets/atelier-fitting-back.jpg",
+      "type": "actual-browser-capture",
+      "width": 1280,
+      "height": 720,
+      "release": "0.13.0",
+      "description": "最终登记服装与完整人体的背面检查，衣型、袖部和背面细节为真实三维网格。"
+    },
+    {
+      "file": "../assets/atelier-fitting-render.png",
+      "type": "actual-renderer-png-export",
+      "width": 1431,
+      "height": 969,
+      "bytes": 215036,
+      "release": "0.13.0",
+      "description": "真实解码的三维场景PNG，不含侧栏、标签或拖动提示；未宣称原生下载写盘已验证。"
+    },
+    {
+      "file": "../assets/atelier-underwater-follow-workspace.jpg",
+      "type": "actual-browser-capture",
+      "width": 1280,
+      "height": 720,
+      "release": "0.12.0",
+      "description": "真实双角色水下工作区：完整小丑鱼、完整潜水员与三处礁石；两主体位置、目标间距和恢复操作公开显示。"
+    },
+    {
+      "file": "../assets/atelier-underwater-follow-during.jpg",
+      "type": "actual-active-browser-screenshot",
+      "width": 1280,
+      "height": 720,
+      "release": "0.12.0",
+      "description": "真实鼠标释放鱼后，鱼的落点及朝向保持，潜水员仍沿有限跟随路径移动。"
+    },
+    {
+      "file": "../assets/atelier-underwater-follow-blocked.jpg",
+      "type": "actual-browser-capture",
+      "width": 1280,
+      "height": 720,
+      "release": "0.12.0",
+      "description": "真实右侧受阻场景：潜水员安全停留，移动鱼后可重新规划恢复跟随。"
+    },
+    {
+      "file": "../assets/atelier-underwater-follow-render.png",
+      "type": "actual-renderer-png-export",
+      "width": 1443,
+      "height": 969,
+      "release": "0.12.0",
+      "description": "真实解码的三维画面 PNG；不包含 HTML 操作面板或文字覆盖。"
+    },
+    {
+      "file": "../assets/atelier-materials-comparison-heating.jpg",
+      "type": "actual-active-browser-screenshot",
+      "width": 1280,
+      "height": 720,
+      "release": "0.10.2",
+      "description": "80J同热量对照第二步，火源已从铜移到铝，蓝焰、实时图和控制同屏可见"
+    },
+    {
+      "file": "../assets/atelier-materials-comparison.jpg",
+      "type": "actual-completed-browser-screenshot",
+      "width": 1280,
+      "height": 720,
+      "release": "0.10.2",
+      "description": "铜铝各80J，铜45.8°C/铝33.9°C，两个同横坐标状态点与原冰状态"
+    },
+    {
+      "file": "../assets/atelier-materials-heating.jpg",
+      "type": "actual-active-browser-screenshot",
+      "width": 1280,
+      "height": 720,
+      "release": "0.10.1",
+      "description": "可见蓝焰、橙色热流、温度与ΔT、慢速观察状态"
+    },
+    {
+      "file": "../assets/atelier-materials-feedback-workspace.jpg",
+      "type": "actual-paused-browser-screenshot",
+      "width": 1280,
+      "height": 720,
+      "release": "0.10.1",
+      "description": "暂停后累计读数保留、单样品重新观察入口"
+    },
+    {
+      "file": "../assets/atelier-materials-workspace.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.10.0"
+    },
+    {
+      "file": "../assets/atelier-materials-melting.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.10.0",
+      "detail": "真实火源供能后的铜铝60°C、冰融化40.8%与四条稳定热输入记录"
+    },
+    {
+      "file": "../assets/atelier-materials-render.png",
+      "type": "actual-renderer-png-export",
+      "dimensions": [
+        1443,
+        969
+      ],
+      "release": "0.10.0"
+    },
+    {
+      "file": "../assets/atelier-skate-workspace.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.9.0"
+    },
+    {
+      "file": "../assets/atelier-skate-air.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.9.0",
+      "detail": "真实第一条手势重播到0.5腾空位，不增加记录"
+    },
+    {
+      "file": "../assets/atelier-skate-preparation.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.9.0"
+    },
+    {
+      "file": "../assets/atelier-skate-landing.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.9.0"
+    },
+    {
+      "file": "../assets/atelier-skate-render.png",
+      "type": "actual-renderer-png-export",
+      "dimensions": [
+        1467,
+        969
+      ],
+      "release": "0.9.0"
+    },
+    {
+      "file": "../assets/atelier-studio.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "file": "../assets/atelier-comparison.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "file": "../assets/atelier-chair-scaling.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "../assets/atelier-editor.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.2.0"
+    },
+    {
+      "file": "../assets/atelier-integration.jpg",
+      "type": "actual-browser-capture-full-page",
+      "dimensions": [
+        1264,
+        2035
+      ],
+      "release": "0.2.0"
+    },
+    {
+      "file": "../assets/atelier-landmark-workspace.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.5.0"
+    },
+    {
+      "file": "../assets/atelier-landmark-knowledge.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.5.0"
+    },
+    {
+      "file": "../assets/atelier-kitchen-workspace.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.6.0"
+    },
+    {
+      "file": "../assets/atelier-kitchen-inspection.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.6.0"
+    },
+    {
+      "file": "../assets/atelier-kitchen-render.jpg",
+      "type": "actual-renderer-export",
+      "dimensions": [
+        1470,
+        969
+      ],
+      "release": "0.6.0"
+    },
+    {
+      "file": "../assets/atelier-creative-mouse-proof.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.7.0",
+      "detail": "四笔真实鼠标操作：猫纹理点击与拖动、麦田与河桥连续参数笔触"
+    },
+    {
+      "file": "../assets/atelier-creative-render.png",
+      "type": "actual-canvas-png-export",
+      "dimensions": [
+        1200,
+        900
+      ],
+      "release": "0.7.0"
+    },
+    {
+      "file": "../assets/atelier-creative-workspace.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.7.0",
+      "detail": "干净初始专业静物底图与参考取样工具；临时验收笔迹恢复后截图"
+    },
+    {
+      "file": "../assets/atelier-collection-preference.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.8.0",
+      "detail": "真实偏好整理预览：保留锁定槽位并说明登记标签与固定分数"
+    },
+    {
+      "file": "../assets/atelier-collection-kitchen-return.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.8.0",
+      "detail": "从精选陈列进入料理后，登记检查点匹配显示返回选品台入口"
+    },
+    {
+      "file": "../assets/atelier-collection-workspace.jpg",
+      "type": "actual-browser-capture",
+      "viewport": [
+        1280,
+        720
+      ],
+      "release": "0.8.0",
+      "detail": "可恢复阅读角策展示例：六件真实PBR素材、沙发锁定第六位、两件选品及有限场景去向"
+    },
+    {
+      "file": "../assets/collection-chair-front.png",
+      "type": "actual-browser-renderer-png",
+      "dimensions": [
+        900,
+        650
+      ],
+      "release": "0.8.0",
+      "detail": "完整原始阅读椅模型与PBR的正面观察；观察方向不改陈列配置"
+    },
+    {
+      "file": "../assets/collection-chair-side.png",
+      "type": "actual-browser-renderer-png",
+      "dimensions": [
+        900,
+        650
+      ],
+      "release": "0.8.0",
+      "detail": "同一原始阅读椅模型与PBR的侧面观察；保留完整几何与纹理"
+    }
+  ],
+  "limits": [
+    "34项为限定范围实现，不代表原模型的开放式生成能力；C18鞋子试穿与C19服装购物联动仍未接入。",
+    "按已标定资产操作；完整动态全局光照、工程照度与制造尺寸未验证。",
+    "客厅占位采用保守包围盒；料理已提供球包络刚体接触，准确网格接触、软体、衣物与烹饪仿真尚未接入。",
+    "目标硬件的指针到画面延迟、帧时间、显存和长时间稳定性未测。",
+    "依赖和资产本地打包，CSP禁止第三方连接；未进行操作系统断网的完整验收。",
+    "浏览器自动下载完成回调未确认；JSON复制与真实图片预览可用。",
+    "原生拖动取消的核心事务已测试；未模拟设备级中途失联与所有触屏手势。",
+    "未执行独立第三方的画面质量评价。",
+    "0.2.0新增界面在桌面浏览器验收；手机布局记录来自前版，新增字段与引导未做触屏硬件验收。",
+    "地标是无纹理、无物理单位的简化中空打印几何；时段是审美光照，没有真实太阳历、照度或完整场地/室内。",
+    "料理数量上限16与质量参数属于演示范围；全容量、所有设备中断、触屏硬件与长时间交互仍待专项验收，浮起观察为临时受控轨迹。",
+    "创作工具以显式原图选区和有限参数绘制，未提供任意对象语义提取、通用神经风格迁移或艺术家风格完整复现；坐标属于1200×900创作纸。",
+    "精选陈列提供CC0设计素材收藏，不是实售商品，没有品牌、价格、库存或尺寸适配数据；标签与权重属于作者策展规则，显示外观不作实物材质认证。",
+    "C35仅为六个明确去向与检查点往返，没有运行时LLM、开放式意图理解或自动把素材放进目标场景；卡片交换不代表C19对象形态替换。",
+    "材料场景只验证指定铜铝温升与熔点冰潜热相变；10W是名义已吸收功率，×4是教学时钟，几何、火焰与水层为展示设计，没有通用燃烧、传热、流体、冷却或化学预测。",
+    "水下仅单鱼与单潜水员、固定水平水层、当前三处保守圆形礁石和有限采样可见图；没有群游、流体/压力、真实潜水训练、人体动力学或全身IK，不能据此断言任意障碍场景有解或连续全局最短路径。",
+    "潜水员完整模型包络已检查1005个混合姿态样本，最大水平半径0.38301518586032507小于登记0.40；有限采样不是连续时间的数学证明。动画相位不保存，恢复的是主体位置、朝向、路径、视角与记录。",
+    "移动中重新抓鱼的纯接口与实现已检查；真实鼠标复验尚未稳定命中，当前不列为已通过的原生鼠标操作。",
+    "试衣间仅一个完整固定53骨虚拟人体、两款自主预适配上装与两种恒定展示姿态；没有任意人物或衣服重建、现实尺码推荐、衣料物理、鞋子试穿或购物履约。",
+    "服装登记核查3414条选定光线，其中3350条命中通过有限外壳覆盖检查，64条肩腋下光线仍未验证；不能据此声称全身零穿透、连续碰撞或任意体型姿态适配。1.78是虚拟参考归一化，非真人测量。",
+    "试衣场景中真实lost-pointer-capture、pointercancel、失焦、隐藏页面及存储失败故障注入未做；防护实现只读审查通过。触屏、其他浏览器、完整断网、原生下载写盘、长时与指定硬件性能仍待验证。"
+  ],
+  "previousBrowserChecksRelease": "0.1.0 / 0.1.1；保留历史证据，下方 editorUpdateChecks 为0.2.0新增验收",
+  "editorUpdateChecks": {
+    "entry": "http://localhost:4192/projects/011-solaris/",
+    "purpose": "独立端口验证，保留用户4189工作区",
+    "checks": [
+      {
+        "name": "复制与独立属性",
+        "status": "passed",
+        "evidence": "阅读椅生成chair-2，07→08；副本陶土色，原椅保持苔绿；导出中两件对象stretch独立"
+      },
+      {
+        "name": "独立高度实际提交",
+        "status": "passed",
+        "evidence": "原生键盘将副本高度输入1.41m，导出stretch.y=1.3149343363742505；Enter再改为1.35m"
+      },
+      {
+        "name": "软移除与恢复",
+        "status": "passed",
+        "evidence": "副本移除08→07，左侧展开恢复后08；颜色与保存的尺寸恢复"
+      },
+      {
+        "name": "副本鼠标缩放与一次撤销",
+        "status": "passed",
+        "evidence": "原生拖动100%→79%，高度1.35→1.06m；一次撤销回100%和1.35m"
+      },
+      {
+        "name": "茶几真实型号替换",
+        "status": "passed",
+        "evidence": "玻璃款切换modern_coffee_table_02，宽深显示1.40m，场景模型真实变化，再切回玻璃款"
+      },
+      {
+        "name": "独立桌面高度与台灯",
+        "status": "passed",
+        "evidence": "桌高0.60m，导出lamp.y=0.60；复制茶几同时产生table-2与lamp-2，lamp-2.parent=table-2"
+      },
+      {
+        "name": "组合移除与一次撤销",
+        "status": "passed",
+        "evidence": "移除复制茶几10→08，左侧可恢复2件；一次撤销10，灯具关系恢复"
+      },
+      {
+        "name": "带副本的A/B实际渲染",
+        "status": "passed",
+        "evidence": "A为10对象方案，B为7对象黄昏方案；两张真实图片解码宽度1090；比较后场景仍可编辑"
+      },
+      {
+        "name": "教程实际完成条件",
+        "status": "passed",
+        "evidence": "有效尺寸和材质编辑2/5；时间键盘调整、植物原生拖动X2.12→2.50/Z-1.74→-0.65；保存后5/5"
+      },
+      {
+        "name": "保存重开完全一致",
+        "status": "passed",
+        "evidence": "通过UI导出读取，重开前后完整project及slots JSON精确一致，10对象与5/5教程恢复"
+      },
+      {
+        "name": "JSON实际导入",
+        "status": "passed",
+        "evidence": "恢复初始客厅后使用文件选择器导入atelier-editor-project.json，提示项目已打开，10对象与5/5进度恢复"
+      },
+      {
+        "name": "预设保留教程",
+        "status": "passed",
+        "evidence": "最终版本选择黄昏预设，当前对象07，教程仍5/5；撤销恢复10对象方案"
+      },
+      {
+        "name": "完整接入说明",
+        "status": "passed",
+        "evidence": "全部36项、已接入14项、待接入22项；搜索C34仅1项，展开显示入口、范围、方案、数据、体验与验收"
+      },
+      {
+        "name": "运行错误",
+        "status": "passed",
+        "evidence": "最终产品和接入说明页面的浏览器warn/error记录为空"
+      }
+    ]
+  },
+  "reopenableEditorExample": "../assets/atelier-editor-project.json",
+  "integrationDescription": "integration.md",
+  "automotiveAndRoadmapValidation": "car-showroom-validation.json",
+  "roadmapEntry": "http://localhost:4189/projects/011-solaris/integration.html#roadmap",
+  "sceneNavigationCountsAsIntentTransition": false,
+  "imagingAndSceneExplanationValidation": "imaging-validation.json",
+  "reopenableImagingExample": "../assets/atelier-imaging-config.json",
+  "sceneCapabilityDescriptions": "../web/capabilities/scene-catalog.json",
+  "landmarkValidation": "landmark-validation.json",
+  "reopenableLandmarkExample": "../assets/atelier-landmark-config.json",
+  "kitchenValidation": "kitchen-validation.json",
+  "reopenableKitchenExample": "../assets/atelier-kitchen-config.json",
+  "creativeValidation": "creative-validation.json",
+  "reopenableCreativeExample": "../assets/atelier-creative-example.json",
+  "collectionValidation": "collection-validation.json",
+  "reopenableCollectionExample": "../assets/atelier-collection-example.json",
+  "skateValidation": "skate-validation.json",
+  "reopenableSkateExample": "../assets/atelier-skate-example.json",
+  "currentScreenshot": "../assets/atelier-footwear-workspace.jpg",
+  "currentAutomatedTotal": {
+    "productTests": 181,
+    "productStatus": "passed",
+    "fittingCoreTests": 25,
+    "footwearAssetChecks": 9,
+    "footwearAssetStatus": "passed-with-finite-foot-domain",
+    "repositoryTests": 16,
+    "repositoryStatus": "passed",
+    "planningGeneratorStatus": "passed",
+    "syncBuildStatus": "passed",
+    "sourcePublishedHashPairs": 20,
+    "sourcePublishedHashStatus": "passed"
+  },
+  "materialsValidation": "materials-validation.json",
+  "reopenableMaterialsExample": "../assets/atelier-materials-example.json",
+  "materialsSources": "materials-sources.md",
+  "materialsDescriptionValidation": {
+    "status": "passed",
+    "sceneCapabilityDialog": true,
+    "roadmapPage": true,
+    "completedDescriptions": 7,
+    "inputOriginStoredInThermalLedger": false,
+    "fullList": {
+      "total": 36,
+      "connected": 31,
+      "pending": 5,
+      "scenes": 9
+    },
+    "pendingIds": [
+      "C17",
+      "C18",
+      "C19",
+      "C30",
+      "C31"
+    ],
+    "intentRegisteredTargets": 6,
+    "release": "0.10.0",
+    "historical": true
+  },
+  "materialsFeedbackValidation": "materials-feedback-validation.json",
+  "reopenableMaterialsFeedbackExample": "../assets/atelier-materials-feedback-example.json",
+  "materialsFeedbackDescriptionValidation": {
+    "release": "0.10.1",
+    "status": "passed",
+    "sceneCapabilityDialog": true,
+    "roadmapPage": true,
+    "scopeAndPlanningContainActualFeedbackVerification": true,
+    "fullList": {
+      "total": 36,
+      "connected": 31,
+      "pending": 5,
+      "scenes": 9
+    },
+    "inputOriginStoredInThermalLedger": false
+  },
+  "materialsComparisonValidation": "materials-comparison-validation.json",
+  "reopenableMaterialsComparisonExample": "../assets/atelier-materials-comparison-example.json",
+  "materialsComparisonDescriptionValidation": {
+    "release": "0.10.2",
+    "status": "passed",
+    "sceneCapabilityDialog": true,
+    "planningPage": true,
+    "sceneOverviewChecks": 6,
+    "capabilityChecks": 2,
+    "conciseUserSteps": true,
+    "fullList": {
+      "total": 36,
+      "connected": 31,
+      "pending": 5,
+      "scenes": 9
+    },
+    "pendingIds": [
+      "C17",
+      "C18",
+      "C19",
+      "C30",
+      "C31"
+    ],
+    "intentRegisteredTargets": 6,
+    "inputOriginStoredInThermalLedger": false
+  },
+  "underwaterValidation": "underwater-validation.json",
+  "reopenableUnderwaterExample": "../assets/atelier-underwater-example.json",
+  "underwaterSources": "underwater-sources.md",
+  "underwaterDescriptionValidation": {
+    "release": "0.11.0",
+    "status": "passed",
+    "sceneCapabilityDialog": true,
+    "planningPage": true,
+    "fullList": {
+      "total": 36,
+      "connected": 32,
+      "pending": 4,
+      "scenes": 10
+    },
+    "pendingIds": [
+      "C17",
+      "C18",
+      "C19",
+      "C31"
+    ],
+    "intentRegisteredTargets": 6,
+    "conciseUserSteps": true,
+    "compositionMotionPhase": {
+      "connected": 4,
+      "total": 5
+    },
+    "historical": true
+  },
+  "previousCurrentAutomatedTotal": {
+    "release": "0.12.0",
+    "historical": true,
+    "productTests": 156,
+    "productStatus": "passed",
+    "followerTests": 11,
+    "workspaceTests": 12,
+    "underwaterCoreTests": 12,
+    "diverAssetChecks": 12,
+    "diverAssetStatus": "passed",
+    "repositoryTests": 16,
+    "repositoryStatus": "passed",
+    "planningGeneratorStatus": "passed",
+    "syncBuildStatus": "passed"
+  },
+  "previousCurrentScreenshot": {
+    "release": "0.12.0",
+    "historical": true,
+    "file": "../assets/atelier-underwater-follow-workspace.jpg"
+  },
+  "diverValidation": "diver-validation.json",
+  "reopenableDiverExample": "../assets/atelier-underwater-follow-example.json",
+  "diverSources": "diver-sources.md",
+  "diverBrowserValidation": {
+    "release": "0.12.0",
+    "status": "passed-for-listed-workflows",
+    "entry": "http://localhost:4193/projects/011-solaris/underwater.html",
+    "userEntry": "http://localhost:4189/projects/011-solaris/underwater.html",
+    "checks": [
+      {
+        "name": "有限跟随与安全受阻恢复",
+        "status": "passed",
+        "evidence": "真实鼠标多次移动鱼并观察有限速度跟随；右侧受阻原位停留，再移动鱼后恢复规划。"
+      },
+      {
+        "name": "松手鱼位稳定，潜水员继续移动",
+        "status": "passed",
+        "evidence": "鱼释放后的准确位置与朝向固定，潜水员仍继续移动和转向。"
+      },
+      {
+        "name": "双角色完整取消",
+        "status": "passed",
+        "evidence": "拖动期间Escape及松手后following阶段Escape恢复完整双角色基线；礁石与出界非法释放同样回滚。"
+      },
+      {
+        "name": "整段撤销重做",
+        "status": "passed",
+        "evidence": "通过真实备份UI读取，undo/redo前后整个schema2 JSON精确一致，含视角、两主体、鱼和潜水员轨迹及编号。"
+      },
+      {
+        "name": "保存与备份打断",
+        "status": "passed",
+        "evidence": "following期间手动保存完整取消未完成事务；按住拖动期间打开备份完整取消并保留稳定工作区。"
+      },
+      {
+        "name": "容量和编号 UI 保护",
+        "status": "passed",
+        "evidence": "合法程序夹具40条及nextId=1000000导入后，真实鱼体鼠标动作被拒绝且相机与完整JSON不变；这些夹具不是40次实际鼠标记录。"
+      },
+      {
+        "name": "五个故意坏 JSON 原子拒绝",
+        "status": "passed",
+        "evidence": "坏鱼朝向、坏潜水员朝向、穿礁轨迹、未来版本和缺少v1鱼ledger均通过备份UI拒绝，保留原工作区。"
+      },
+      {
+        "name": "旧版重叠站位安全初始化",
+        "status": "passed",
+        "evidence": "合法v1鱼占INITIAL_DIVER位置时，保留原鱼及旧鱼ledger，为潜水员选择安全当前站位，旧行标legacy而不伪造过去跟随。"
+      },
+      {
+        "name": "4193示例保存重开",
+        "status": "passed",
+        "evidence": "真实schema2联动示例保存后reload，完整工作区JSON精确一致。"
+      },
+      {
+        "name": "4189用户工作区迁移与恢复",
+        "status": "passed",
+        "evidence": "保留用户原鱼位置、朝向与旧轨迹，并保留用户最新相机而非覆盖为早前snapshot；v2保存重开完整状态精确一致。"
+      },
+      {
+        "name": "观察设置隔离",
+        "status": "passed",
+        "evidence": "相机视角不改两主体与records；路径显示checkbox不改JSON。"
+      },
+      {
+        "name": "真实三维 PNG",
+        "status": "passed",
+        "evidence": "预览实际解码1443x969，画面导出不包含HTML操作界面。"
+      },
+      {
+        "name": "浏览器运行错误",
+        "status": "passed",
+        "evidence": "本轮已列出的真实界面流程warn/error日志为空。"
+      }
+    ],
+    "recatchWhileFollowingNativePassed": false,
+    "logs": [],
+    "hardwareTouchTested": false,
+    "deviceStorageFaultsTested": false,
+    "historical": true
+  },
+  "diverDescriptionValidation": {
+    "release": "0.12.0",
+    "status": "passed",
+    "currentPlanningPassed": "passed",
+    "sceneCapabilityDialog": "passed",
+    "planningPage": "passed",
+    "fullList": {
+      "total": 36,
+      "connected": 33,
+      "pending": 3,
+      "scenes": 10,
+      "phases": 7
+    },
+    "pendingIds": [
+      "C17",
+      "C18",
+      "C19"
+    ],
+    "intentRegisteredTargets": 6,
+    "compositionMotionPhase": {
+      "connected": 5,
+      "total": 5
+    },
+    "validation": "diver-validation.json",
+    "reopenableExample": "../assets/atelier-underwater-follow-example.json",
+    "planningGeneratorPassed": true,
+    "actualCapabilityIds": [
+      "C30",
+      "C31"
+    ],
+    "actualCapabilityCount": 2,
+    "actualSceneCompletedDescriptions": 9,
+    "currentPendingFilterPassed": true,
+    "compositionMotionLabel": "场景组合与主体联动",
+    "planningLogs": [],
+    "actualC31CompletedDescriptions": 5,
+    "historicalSceneCompletedDescriptions": 5,
+    "currentSceneCompletedDescriptions": 4,
+    "historical": true
+  },
+  "historicalCurrentAutomatedTotals": [
+    {
+      "release": "0.11.0",
+      "historical": true,
+      "productTests": 133,
+      "repositoryTests": 16,
+      "underwaterAssetChecks": 11,
+      "underwaterCoreTests": 12,
+      "materialsReferenceChecks": 15
+    },
+    {
+      "release": "0.12.0",
+      "historical": true,
+      "productTests": 156,
+      "productStatus": "passed",
+      "followerTests": 11,
+      "workspaceTests": 12,
+      "underwaterCoreTests": 12,
+      "diverAssetChecks": 12,
+      "diverAssetStatus": "passed",
+      "repositoryTests": 16,
+      "repositoryStatus": "passed",
+      "planningGeneratorStatus": "passed",
+      "syncBuildStatus": "passed"
+    },
+    {
+      "release": "0.13.0",
+      "productTests": 171,
+      "productStatus": "passed",
+      "fittingCoreTests": 15,
+      "fittingAssetChecks": 11,
+      "fittingAssetStatus": "passed-with-finite-domain",
+      "fittingTotalProbes": 3414,
+      "fittingIntersectedProbes": 3350,
+      "fittingUnverifiedRays": 64,
+      "cameraBoundarySamples": 128,
+      "cameraBoundaryStatus": "passed; separate from product test count",
+      "repositoryTests": 16,
+      "repositoryStatus": "passed",
+      "planningGeneratorStatus": "passed",
+      "syncBuildStatus": "passed"
+    }
+  ],
+  "historicalCurrentScreenshots": [
+    {
+      "release": "0.11.0",
+      "historical": true,
+      "file": "../assets/atelier-underwater-workspace.jpg"
+    },
+    {
+      "release": "0.12.0",
+      "historical": true,
+      "file": "../assets/atelier-underwater-follow-workspace.jpg"
+    },
+    {
+      "release": "0.13.0",
+      "file": "../assets/atelier-fitting-workspace.jpg"
+    }
+  ],
+  "fittingValidation": "fitting-validation.json",
+  "reopenableFittingExample": "../assets/atelier-fitting-example.json",
+  "fittingSources": "fitting-sources.md",
+  "fittingBrowserValidation": {
+    "release": "0.13.0",
+    "status": "passed-for-listed-workflows",
+    "entry": "http://localhost:4194/projects/011-solaris/fitting.html",
+    "userEntry": "http://localhost:4189/projects/011-solaris/fitting.html",
+    "finalFrozenAssetPackageRetested": true,
+    "checks": [
+      {
+        "name": "两件完整三维衣服直接拖放",
+        "status": "passed",
+        "evidence": "最终冻结包的真实短袖展样网格拖到胸腹穿上，再拖独立夹克展样替换；没有用换色冒充换衣型。"
+      },
+      {
+        "name": "合法位置的持有预览",
+        "status": "passed",
+        "evidence": "真实鼠标保持按住期间，公开DOM为dragActive=true/dropValid=true，画面显示真实待穿衣型；松手才提交。"
+      },
+      {
+        "name": "空白与Escape完整恢复",
+        "status": "passed",
+        "evidence": "真实衣服拖到空白释放及拖动中Escape取消，前后完整搭配JSON精确相等。"
+      },
+      {
+        "name": "整套撤销与重做",
+        "status": "passed",
+        "evidence": "一次undo恢复原衣型与颜色，一次redo恢复替换后搭配；姿态与相机属于同一工作区。"
+      },
+      {
+        "name": "外部卡片真实拖放",
+        "status": "passed",
+        "evidence": "侧栏衣服卡片真实拖到胸腹区域穿上；单次撤销恢复原衣款和面料颜色。"
+      },
+      {
+        "name": "相机与试衣隔离",
+        "status": "passed",
+        "evidence": "真实空白处Orbit改变自由相机而不改穿衣；一次撤销恢复完整JSON，活动相机中Escape恢复原视角。"
+      },
+      {
+        "name": "配色、两种姿态与多视角",
+        "status": "passed",
+        "evidence": "实际控制完成三种主面料配色、注册自然/举臂姿态与正面/背面/细节观察；人体与衣服匹配同一静态53骨姿态。"
+      },
+      {
+        "name": "三个合法搭配导入",
+        "status": "passed",
+        "evidence": "initial、jacket-moss-reach-back、tee-ink-custom-camera三个程序setup通过真实备份UI导入，完整JSON恢复且可撤销；夹具不充当真实拖动证据。"
+      },
+      {
+        "name": "七个坏搭配原子拒绝",
+        "status": "passed",
+        "evidence": "未知衣款/颜色/姿态、null相机坐标、预设坐标不一致、额外购物字段及超过32KiB输入均通过UI拒绝，稳定完整JSON不变。"
+      },
+      {
+        "name": "最终搭配保存重开",
+        "status": "passed",
+        "evidence": "最终冻结包导出的可重开示例保存后reload，完整衣款、颜色、静态姿态、view和精确相机JSON保持一致。"
+      },
+      {
+        "name": "真实PNG与自然桌面布局",
+        "status": "passed",
+        "evidence": "实际三维PNG解码1431×969、215036字节；自然1280宽页面与body均宽1280，无横向溢出。"
+      },
+      {
+        "name": "浏览器日志",
+        "status": "passed",
+        "evidence": "上述真实界面流程console warn/error均为空。"
+      }
+    ],
+    "setupFixtures": {
+      "valid": 3,
+      "invalid": 7,
+      "nativeGestureProof": false
+    },
+    "logs": [],
+    "layout": {
+      "pageWidth": 1280,
+      "bodyWidth": 1280,
+      "horizontalOverflow": false
+    },
+    "renderPNG": {
+      "file": "../assets/atelier-fitting-render.png",
+      "width": 1431,
+      "height": 969,
+      "bytes": 215036
+    },
+    "hardwareTouchTested": false,
+    "deviceStorageFaultsTested": false,
+    "nativeDownloadWritesTested": false,
+    "pointerCancelLostCaptureBlurVisibilityFaultInjectionTested": false,
+    "safeguardsReadOnlyReviewed": [
+      "atomic cancel",
+      "external pointer capture",
+      "camera pointer cleanup",
+      "strict import",
+      "preserve invalid stored raw until explicit accepted save/import"
+    ],
+    "formalOriginReloadFullJSONExact": true
+  },
+  "fittingDescriptionValidation": {
+    "release": "0.13.0",
+    "status": "passed",
+    "currentPlanningPassed": "passed",
+    "sceneCapabilityDialog": "passed",
+    "planningPage": "passed",
+    "fullList": {
+      "total": 36,
+      "connected": 34,
+      "pending": 2,
+      "scenes": 11,
+      "phases": 7
+    },
+    "pendingIds": [
+      "C18",
+      "C19"
+    ],
+    "intentRegisteredTargets": 6,
+    "avatarCommercePhase": {
+      "connected": 1,
+      "total": 3
+    },
+    "actualCapabilityIds": [
+      "C17"
+    ],
+    "actualCapabilityCount": 1,
+    "validation": "fitting-validation.json",
+    "reopenableExample": "../assets/atelier-fitting-example.json",
+    "planningGeneratorPassed": true,
+    "currentPendingFilterPassed": true,
+    "actualSceneCompletedDescriptions": 7,
+    "actualC17CompletedDescriptions": 4,
+    "planningLogs": [],
+    "publicationHashes": "14 source/published files equal, including three frozen GLBs, manifest, fitting runtime, integration data, SkeletonUtils and cover"
+  },
+  "footwearValidation": "footwear-validation.json",
+  "reopenableFootwearExample": "../assets/atelier-footwear-example.json",
+  "footwearSources": "footwear-sources.md",
+  "footwearBrowserValidation": {
+    "status": "passed-for-listed-workflows",
+    "browser": "Codex In-app Browser",
+    "isolatedOrigin": "http://localhost:4195",
+    "viewport": [
+      1280,
+      720
+    ],
+    "passed": [
+      "Real Court and Ridge meshes dragged to the registered foot region; whole pairs replace atomically.",
+      "A single undo restores the prior complete outfit and a single redo restores the replacement.",
+      "Real shoe release over the chest or blank space leaves full JSON exactly unchanged.",
+      "Escape while a real shoe gesture is active restores full prior JSON before release.",
+      "Corrected frozen Ridge held preview captured with dragActive=true/dropValid=true; real release wears the complete pair.",
+      "Sidebar Court card physically dragged to feet; one undo restores full prior upper, shoe/color, pose and camera.",
+      "Real upper jacket mesh dragged to chest while shoes remain; shoe color changes do not change the upper slot.",
+      "All three shoe colors and both registered poses applied; feet stay fixed in both poses.",
+      "Removing shoes keeps the upper slot; empty shoe slot disables all three palette buttons; undo restores full JSON.",
+      "Native blank-space orbit observes the shoe side/back, changes only camera, and is undoable.",
+      "Escape during an active real camera orbit restores the full baseline.",
+      "Three legal UI-imported setup fixtures restore exact state and can be undone: strict-v1 jacket migration, v2 shoe-detail and v2 high-precision custom camera.",
+      "Eight illegal UI-imported fixtures explicitly rejected, full JSON unchanged: unknown shoe/color, partial pair, cart, size, extra v1 shoe field, new v1 view and over-32KiB.",
+      "Final corrected outfit saved and reloaded: upper, shoes/colors, pose, preset and full camera JSON exact.",
+      "Final corrected Ridge side/back visually reviewed; former exposed lower-leg triangle eliminated by geometric shaft correction, full original body remains.",
+      "Switching upper category while close to feet offers a return-to-overview action; shoe-detail selection opens the shoe controls."
+    ],
+    "fixturesAreSetupNotNativeGestureProof": true,
+    "setupFixtures": {
+      "valid": 3,
+      "invalid": 8
+    },
+    "frozenPairMeshesRetested": [
+      "court-01",
+      "boot-01"
+    ],
+    "heldPreviewObserved": true,
+    "finalStableExampleReloadExact": true,
+    "consoleWarningsAndErrors": [],
+    "layout": {
+      "viewportWidth": 1280,
+      "pageWidth": 1280,
+      "bodyWidth": 1280,
+      "horizontalOverflow": false
+    },
+    "renderPNG": {
+      "width": 1431,
+      "height": 969,
+      "bytes": 253545,
+      "source": "actual scene renderer; HTML labels and controls excluded"
+    },
+    "artifacts": [
+      "../assets/atelier-footwear-workspace.jpg",
+      "../assets/atelier-footwear-detail.jpg",
+      "../assets/atelier-footwear-side.jpg",
+      "../assets/atelier-footwear-drag.jpg",
+      "../assets/atelier-footwear-example.json",
+      "../assets/atelier-footwear-render.png"
+    ],
+    "formalOrigin": {
+      "status": "passed",
+      "origin": "http://localhost:4189",
+      "entry": "/projects/011-solaris/fitting.html",
+      "legacyMigrationObserved": true,
+      "initialShoeSlot": null,
+      "priorUpperPreserved": {
+        "id": "jacket-01",
+        "color": "moss"
+      },
+      "priorPosePreserved": "reach",
+      "priorCustomCameraPreservedExactly": true,
+      "realRidgeDragToFeet": true,
+      "shoePaletteApplied": "ivory",
+      "savedReloadJSONExact": true,
+      "postReloadMigratedFlag": false,
+      "state": {
+        "version": 2,
+        "avatarId": "atelier-mannequin-v1",
+        "garment": {
+          "id": "jacket-01",
+          "color": "moss"
+        },
+        "shoes": {
+          "id": "boot-01",
+          "color": "ivory"
+        },
+        "pose": "reach",
+        "view": "custom",
+        "camera": {
+          "position": [
+            -1.6809556680608373,
+            0.5292698798977893,
+            4.971426337311051
+          ],
+          "target": [
+            0,
+            0.9499999999999998,
+            0
+          ]
+        }
+      },
+      "stateEvidence": "footwear-formal-state.json",
+      "consoleWarningsAndErrors": [],
+      "oldKeyPreservation": "Implementation review: v1 key is only read and new saves use v2; old key raw bytes were not directly inspected."
+    },
+    "selectedCategoryHoverReadable": true
+  },
+  "footwearDescriptionValidation": {
+    "status": "passed",
+    "origin": "http://localhost:4189",
+    "entry": "/projects/011-solaris/integration.html#roadmap",
+    "release": "0.14.0",
+    "actualCapabilityIds": [
+      "C17",
+      "C18"
+    ],
+    "sceneTargetCount": 2,
+    "fullList": {
+      "total": 36,
+      "connected": 35,
+      "pending": 1,
+      "scenes": 11,
+      "phases": 7
+    },
+    "pendingIds": [
+      "C19"
+    ],
+    "pendingFilterActualText": "显示 1 / 36 项; C19 试穿与购物车关联响应",
+    "intentRegisteredTargets": 6,
+    "avatarCommercePhase": {
+      "connected": 2,
+      "total": 3
+    },
+    "shoeEntry": "/projects/011-solaris/fitting.html",
+    "c18ExpandedScopeObserved": true,
+    "purposeStepsExpectedOutcomeVerificationAndBoundariesObserved": true,
+    "internalHeldPreviewFlagsRemovedFromUserText": true,
+    "validation": "footwear-validation.json",
+    "reopenableExample": "../assets/atelier-footwear-example.json"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "paint": "racing",
+  "lights": {
+    "on": true,
+    "power": 160
+  },
+  "hood": 1,
+  "camera": {
+    "position": [
+      2.35,
+      3.65,
+      2.75
+    ],
+    "target": [
+      0,
+      0.65,
+      1.35
+    ]
+  },
+  "view": "engine"
+}

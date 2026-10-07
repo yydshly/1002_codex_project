@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "date": "2026-10-05",
+  "purpose": "Complete locally authored scuba equipment and finite kick/trim clips on full CC0 source humanoid, supports C31 local follow controller.",
+  "source": {
+    "id": "quaternius-universal-animation-library-standard",
+    "author": "Quaternius",
+    "pageUrl": "https://quaternius.com/packs/universalanimationlibrary.html",
+    "authorMirrorUrl": "https://opengameart.org/content/universal-animation-library",
+    "archiveUrl": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceModel": "Animation Library[Standard]/Godot/AnimationLibrary_Godot_Standard.glb / Mannequin"
+  },
+  "authoredAdditions": {
+    "geometry": "Project-designed full scuba BCD/backplate, compressed-air tank with neck/valve/bands, twin-lens mask/nose pocket/head strap, regulators, flexible breathing/inflator hoses, wrist gauge and two complete tapered reinforced fins; 44 mesh components on unchanged complete source body.",
+    "animations": "Project-authored Diver_Hover fixed horizontal trim and Diver_Swim 1.6-second limited flutter kick; six real thigh/shin/foot bones move, full source 53-bone hierarchy retained. Source freestyle swimming clips are archived but not used in runtime.",
+    "copyrightScope": "Original source body is CC0-1.0. Equipment and the two finite motion clips were authored in this workspace; no third-party branded equipment or additional external asset license.",
+    "bodyGeometry": "13,744 source indexed triangles include one exact duplicate. Blender import removes that duplicate; all 13,743 unique source body triangles preserved, no body decimation or primitive replacement.",
+    "materials": "Source material colors replaced with project-authored neoprene, flexible rubber, amber equipment, teal fin blades, brushed metal, glass and gauge face PBR materials; no source/body geometry regions removed."
+  },
+  "runtime": {
+    "path": "scuba-diver.glb",
+    "up": "+Y",
+    "forward": "+X (head end)",
+    "scale": 1,
+    "fixedCenterEmbedded": true,
+    "wrapperInstructions": "Load gltf.scene directly; place root at controller [x, fixed swim Y, z], rotate Y by atan2(-dz, dx). Do not re-center animated Box3. Full original source body plus all equipment is already uniformly scaled inside the fixed anchor.",
+    "safetyRadius": 0.4,
+    "sampledMaximumHorizontalRadius": 0.38301518586032507,
+    "bodyLength": 0.7545180318395618,
+    "bodyWidth": 0.21035490133148893,
+    "clips": [
+      {
+        "name": "Diver_Hover",
+        "durationSeconds": 1.6,
+        "rootTranslation": "constant, near-zero export epsilon below 1e-8; no root locomotion",
+        "purpose": "fixed horizontal trim / stopped state"
+      },
+      {
+        "name": "Diver_Swim",
+        "durationSeconds": 1.6,
+        "rootTranslation": "constant, near-zero export epsilon below 1e-8; no root locomotion",
+        "purpose": "limited alternating kick at real hip/knee/ankle joints, root position controlled by local follow state"
+      }
+    ],
+    "defaultPose": "Diver_Hover first-key TRS values written into GLB node defaults; horizontal before mixer playback. Animation buffers and inverse bind matrices unchanged.",
+    "geometryVerification": "Independent packed-buffer skin sampling at 201 common clip times and hover/swim blend weights 0, .25, .5, .75, 1 (1005 posed samples); finite sampling only.",
+    "sampledBlendWeights": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "sampledPoseCount": 1005,
+    "sampledVerticalExtents": [
+      -0.09299610846348838,
+      0.09299591739878126
+    ]
+  },
+  "files": [
+    {
+      "path": "scuba-diver.glb",
+      "role": "runtime-model",
+      "byteLength": 2253380,
+      "sha256": "0640e202b52476b34d7ab1e7490a442fdc124cfcf107be05d8fe72d134e80e59"
+    },
+    {
+      "path": "motion-envelope.json",
+      "role": "sampled-motion-envelope",
+      "byteLength": 1188,
+      "sha256": "a6a84700f033ce637c86450c4cc8e4ef672dfe2121d666c2026aa4f27ac4bdbe"
+    },
+    {
+      "path": "quaternius-cc0-license.txt",
+      "role": "source-license-copy",
+      "byteLength": 446,
+      "sha256": "11eac7504a28077e9d8dbac8ddfca2566510efba7eef46e11f21cdd2bc96d4d5"
+    },
+    {
+      "repositoryPath": "assets/diver-source-archives/original/universal-animation-library-standard.zip",
+      "role": "original-archive",
+      "byteLength": 14541205,
+      "sha256": "18ff1a7215f4852b320203e8aaf02a1578b5c8eef9027fbaedfcedc7b85a3ac2"
+    },
+    {
+      "repositoryPath": "assets/diver-source-archives/original/quaternius-ual/Animation Library[Standard]/Godot/AnimationLibrary_Godot_Standard.glb",
+      "role": "original-body-glb",
+      "byteLength": 6671104,
+      "sha256": "1b7bf67866360665426bb99e4c71bd619f19b408453c24e30f0c3071601eee5c"
+    },
+    {
+      "repositoryPath": "assets/diver-source-archives/original/quaternius-ual/Animation Library[Standard]/License.txt",
+      "role": "original-license",
+      "byteLength": 446,
+      "sha256": "11eac7504a28077e9d8dbac8ddfca2566510efba7eef46e11f21cdd2bc96d4d5"
+    },
+    {
+      "repositoryPath": "assets/diver-source-archives/original/atelier-scuba-diver.blend",
+      "role": "editable-authored-model",
+      "byteLength": 1295816,
+      "sha256": "4f1a4a7921aef0f85658c46ec0a03e1461982364816c011f319513ac814ec4d6"
+    },
+    {
+      "repositoryPath": "assets/diver-source-archives/original/build_diver.py",
+      "role": "reproducible-authoring-recipe",
+      "byteLength": 16962,
+      "sha256": "2fae537a3e3d993b143124b0334dfbcad73351a9e12aca505ef110e5cc915906"
+    },
+    {
+      "repositoryPath": "assets/diver-source-archives/original/source-body-topology.json",
+      "role": "source-topology-snapshot",
+      "byteLength": 751354,
+      "sha256": "a065aca463b6e50f211ffc58ac17bdeebd0fce2a50731a2741d7b445dae8c95c"
+    }
+  ],
+  "archivalBoundary": "Full original ZIP, extracted pack, editable authored blend, authoring/inspection recipes and preview are retained outside web in assets/diver-source-archives. Runtime only loads the single GLB; manifesto, license and finite pose report remain locally inspectable.",
+  "limitations": [
+    "Stylized complete mannequin base, not a photogrammetric scan or realistic human anatomy.",
+    "Finite sampled pose bound; not continuous proof, biomechanics, real dive training or safety equipment.",
+    "No automatic following/pathfinding/controller claims validated by this asset file checker."
+  ]
+}

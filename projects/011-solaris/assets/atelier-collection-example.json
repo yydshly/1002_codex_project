@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "order": [
+    "chair",
+    "lamp",
+    "table-glass",
+    "table-solid",
+    "plant",
+    "sofa"
+  ],
+  "pinned": [
+    "sofa"
+  ],
+  "selected": "chair",
+  "wishlist": [
+    "sofa",
+    "chair"
+  ],
+  "preference": "reading",
+  "lastScene": "creative"
+}

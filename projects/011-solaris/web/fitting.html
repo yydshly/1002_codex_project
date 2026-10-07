@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#efeee8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-src 'none'">
+<title>ATELIER · 穿搭试衣间</title><link rel="stylesheet" href="./fitting/fitting.css"><link rel="stylesheet" href="./capabilities/scene-capabilities.css">
+<script type="importmap">{"imports":{"three":"./studio/vendor/three.module.js","three/addons/":"./studio/vendor/addons/"}}</script>
+</head><body>
+<header><a class="brand" href="./"><span class="brand-mark">a</span><span>ATELIER<small>场景设计工作台</small></span></a><nav aria-label="场景导航"><a href="./">客厅</a><a href="./showroom.html">汽车</a><a href="./imaging.html">影像</a><a href="./landmark.html">地标</a><a href="./kitchen.html">料理</a><a href="./creative.html">创作</a><a href="./collection.html">陈列</a><a href="./skate.html">滑板</a><a href="./materials.html">材料</a><a href="./underwater.html">水下</a><a href="./fitting.html" class="active" aria-current="page">试衣</a></nav><div class="header-actions"><span id="save-status">本地试衣间</span><button id="undo" aria-label="撤销" title="Ctrl+Z">↶</button><button id="redo" aria-label="重做" title="Ctrl+Shift+Z">↷</button><button id="save" class="primary">保存搭配</button></div></header>
+<main>
+<section class="stage" id="stage" aria-label="可直接拖上装与整双鞋到人体的三维试衣间">
+  <div id="canvas-host" tabindex="0"></div>
+  <div class="stage-heading"><span class="eyebrow">SHAPE / FIT / OBSERVE</span><h1>把选择，<br>穿在身上。</h1><p id="stage-instruction">按住展样，拖向人体上身。从袖口到背面，检查同一件衣服。</p><a class="real-person-entry" href="./tryon.html">真人照片试穿 ↗</a><button data-scene-capabilities="fitting">本场景验证什么 ↗</button></div>
+  <div class="stage-phase" id="phase" role="status">拖动一件上装，开始试穿</div>
+  <div class="garment-label" id="tee-label" aria-hidden="true"><i></i><strong>01 · 圆领短袖</strong><span>按住衣服拖动</span></div>
+  <div class="garment-label" id="jacket-label" aria-hidden="true"><i></i><strong>02 · 轻夹克</strong><span>按住衣服拖动</span></div>
+  <div class="garment-label" id="court-label" aria-hidden="true" hidden><i></i><strong>03 · Court 低帮鞋</strong><span>按住整双鞋拖动</span></div>
+  <div class="garment-label" id="boot-label" aria-hidden="true" hidden><i></i><strong>04 · Ridge 短靴</strong><span>按住整双鞋拖动</span></div>
+  <div id="drag-feedback" class="drag-feedback" role="status" hidden><strong id="drag-message"></strong><span id="drag-detail"></span></div>
+  <div id="loading" class="loading"><span class="brand-mark">a</span><strong>正在准备试衣间</strong><p>加载完整人体、两款上装、两双鞋与本地光照…</p></div>
+  <div id="load-error" class="loading" hidden><strong>试衣间暂时无法打开</strong><p id="error-detail"></p><button id="retry">重新打开</button></div>
+  <div class="stage-caption"><span>11</span><div><strong id="caption-title">同一体型，两种剪裁</strong><small id="caption-detail">拖到上身 · 多方向观察 · 举臂检查</small></div></div>
+  <button id="snapshot" class="snapshot">保留这一刻 ↗</button>
+  <div class="stage-hints"><span>拖展样试穿 · Esc 取消</span><span>拖空白看角度 · 滚轮缩放</span></div>
+</section>
+<aside aria-label="试穿结果与展样选择">
+  <div class="panel-intro"><span class="eyebrow">PICK / DROP / INSPECT</span><h2>把一套，搭完整</h2><p>同一人体，两款上装与两双鞋。拖到对应部位，验证换款、配色与贴合观察。</p><div class="category-options" aria-label="选择展样类型"><button data-category="garment" aria-pressed="true">上装</button><button data-category="shoes" aria-pressed="false">鞋履</button></div><div class="gesture-steps"><span id="step-pick">01 按住</span><span id="step-drop">02 到上身</span><span id="step-wear">03 松手</span></div></div>
+  <section class="current-card" aria-label="当前试穿"><div class="section-heading"><h3>当前试穿</h3><span id="current-color">展示基体</span></div><div class="outfit-summary"><span id="outfit-upper">上装 · 未选择</span><span id="outfit-shoes">鞋履 · 未选择</span></div><strong id="current-garment">尚未穿上展样</strong><p id="fit-explanation">选择一件衣服，拖到人体胸腹区域；在空处松手不会穿上。</p><div class="current-actions"><button id="inspect-shoes" hidden>近看鞋脚 ↗</button><button id="remove">脱下上装</button><button id="cancel-drag">取消当前试穿</button></div></section>
+  <section class="control-section"><div class="section-heading"><h3 id="sample-heading">两款展样</h3><span id="slot-description">同一上装位置</span></div><div class="garment-options" id="garment-options"></div><div class="garment-options" id="shoe-options" hidden></div><p class="fine">直接拖画面中的展样，或使用“穿上”按钮。上装到胸腹，整双鞋到脚部；两个位置独立保留。</p></section>
+  <section class="control-section"><div class="section-heading"><h3 id="color-heading">面料配色</h3><span id="fabric-name">穿上后可调整</span></div><div id="color-options" class="color-options"></div><p class="fine" id="color-description">主面料与同材质胸袋一起换色；包边、缝线与金属保持原色。</p></section>
+  <section class="control-section"><div class="section-heading"><h3>姿态检查</h3><span>两种登记姿态</span></div><div id="pose-options" class="pose-options"></div><p class="fine">站姿看整体；举臂检查袖腋。两姿态脚部固定，验证鞋脚对齐；这里不演示步行。</p></section>
+  <section class="control-section"><div class="section-heading"><h3>观察视角</h3><span id="view-name">陈列总览</span></div><div id="view-options" class="view-options"></div></section>
+  <div class="panel-footer"><button id="backup">备份 / 打开搭配</button><button id="reset">恢复初始试衣间</button><details><summary>素材与适配范围</summary><p>完整53骨人体来自Quaternius CC0，两款独立上装与两双完整鞋由本项目为该人体制作。鞋适配原足部，不删除人体。只验证登记体型与两种静态姿态，不预测现实尺码，也不自动适配任意人物、步态或商品。</p><a href="./fitting/assets/manifest.json" target="_blank" rel="noopener">上装素材与许可 ↗</a><a href="./fitting/footwear/manifest.json" target="_blank" rel="noopener">鞋履素材与有限适配 ↗</a></details><a href="./integration.html#scenes">能力说明与接入规划 ↗</a><a href="./tryon.html">真人 + 商品照片试穿 · 本机研究入口 ↗</a><span>三维适配 · 本地状态 · 独立真人研究入口</span></div>
+</aside></main>
+<div id="toast" class="toast" role="status" hidden></div>
+<dialog id="json-dialog" aria-labelledby="json-title"><div class="dialog-heading"><h2 id="json-title">保留这套搭配</h2><button data-close aria-label="关闭试衣备份">×</button></div><p>复制完整JSON，或粘贴已保存的搭配，恢复上装、整双鞋、各自配色、人体姿态与视角。兼容原v1上装搭配，旧文件与旧本机记录保留。正在拖动的试穿会先取消。</p><label class="sr-only" for="json-text">试衣搭配 JSON</label><textarea id="json-text" spellcheck="false"></textarea><p id="json-message" role="status"></p><div class="dialog-actions"><button id="download-json">下载JSON</button><button id="import-json" class="primary">应用搭配</button></div></dialog>
+<dialog id="snapshot-dialog" aria-labelledby="snapshot-title"><div class="dialog-heading"><h2 id="snapshot-title">当前试穿画面</h2><button data-close aria-label="关闭试衣图片预览">×</button></div><img id="snapshot-image" alt="当前完整人体、上装与鞋履的真实三维渲染"><p>图片来自当前三维场景，不含侧栏、标签和拖动提示。</p><div class="dialog-actions"><button id="download-snapshot" class="primary">保存图片</button></div></dialog>
+<script type="module" src="./fitting/app.js"></script><script type="module" src="./capabilities/scene-capabilities.js"></script>
+</body></html>

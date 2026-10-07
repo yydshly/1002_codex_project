@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Solaris 生成式界面研究：通过 Runway 官方录制与论文原图，系统拆解鼠标动作、操作目标、关联效果和验证边界。">
+  <title>Solaris · 生成式界面观察室</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#demo">跳到官方场景</a>
+  <header class="site-header">
+    <a class="brand" href="../../" aria-label="返回项目研究库"><span class="brand-mark">011</span><span>Solaris<span class="brand-sub">INTERFACE OBSERVATORY</span></span></a>
+    <nav aria-label="主要导航"><a href="./overview.html">项目总览</a><a href="./">工作台</a><a href="./materials.html">材料教学 ↗</a><a href="./underwater.html">水下拖动 ↗</a><a href="./fitting.html">试衣间 ↗</a><a href="#demo">真实场景</a><a href="#capabilities">能力目录</a><a href="#research">研究方法</a></nav>
+    <a class="header-source" href="https://runway.com/news/research/introducing-solaris" target="_blank" rel="noopener noreferrer">Runway 原文 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-title"><p class="eyebrow">SOLARIS / 界面世界模型研究</p><h1 id="page-title">从鼠标动作，<br>读懂生成式界面。</h1></div>
+      <div class="intro-copy"><p>移动、拖拽、点击，怎样成为改变空间、材质、光影与视角的输入？从真实的官方场景出发，逐项看清<strong>动作、目标与连带变化</strong>。</p><p class="intro-status"><span class="status-dot" aria-hidden="true"></span>公开证据研究 · 本机未接入 Solaris</p></div>
+    </section>
+    <section id="demo" class="scene-section" aria-labelledby="scene-library-title">
+      <div class="section-top"><div><p class="eyebrow">01 / 真实场景观察</p><h2 id="scene-library-title">看见变化，再讨论能力。</h2></div><p class="section-aside">这里播放 Runway 官方录制、展示论文原图。<br>选场景和能力是在浏览证据；不会向模型发送鼠标操作。</p></div>
+      <div class="scene-rail-header"><span id="scene-counter" class="mono">正在载入场景</span><div class="rail-arrows"><button id="rail-prev" class="icon-button" type="button" aria-label="向前浏览场景">←</button><button id="rail-next" class="icon-button" type="button" aria-label="向后浏览场景">→</button></div></div>
+      <div id="scene-rail" class="scene-rail" role="group" aria-label="选择官方场景"></div>
+      <div class="viewer-shell">
+        <div class="viewer-main">
+          <div class="viewer-topline"><span id="media-kind">官方媒体</span><span class="model-status">Solaris 未接入</span></div>
+          <div id="media-stage" class="media-stage" aria-label="官方场景证据"><div class="media-placeholder"><span class="spinner" aria-hidden="true"></span><p>正在读取官方场景目录…</p></div></div>
+          <div class="media-bottom"><p id="media-caption">媒体来自官方公开资料。</p><a id="media-source" class="source-link" href="https://runway.com/news/research/introducing-solaris" target="_blank" rel="noopener noreferrer">打开原始来源 ↗</a></div>
+          <div id="media-options" class="media-options" role="group" aria-label="选择证据媒体"></div>
+        </div>
+        <aside class="scene-dossier" aria-labelledby="selected-scene-title">
+          <div class="dossier-heading"><span id="scene-number" class="eyebrow">SCENE 01</span><h3 id="selected-scene-title">室内设计</h3><p id="scene-description">正在读取真实场景的操作与研究资料。</p></div>
+          <div class="dossier-label">观察这些操作<span id="scene-operation-count"></span></div>
+          <div id="scene-operations" class="scene-operations"></div>
+          <div id="scene-operation-detail" class="operation-detail"></div>
+          <p class="dossier-footnote">录像保留官方原始顺序，具体手势与证据见所选条目。</p>
+        </aside>
+      </div>
+      <div class="evidence-key"><span><i class="key-dot video-dot" aria-hidden="true"></i>官方录制：可播放的结果展示</span><span><i class="key-dot figure-dot" aria-hidden="true"></i>论文原图：静态操作过程</span><span><i class="key-dot text-dot" aria-hidden="true"></i>文字说明：尚无对应回放</span></div>
+    </section>
+    <section id="capabilities" class="inventory-section" aria-labelledby="inventory-title">
+      <div class="section-top light"><div><p class="eyebrow">02 / 鼠标能力目录</p><h2 id="inventory-title">把每一种操作，拆到可验证。</h2></div><p class="section-aside">覆盖当前核验的官方公开条目。<br>证据等级跟随具体操作，不将整段视频视为每项能力的证明。</p></div>
+      <div class="inventory-toolbar"><label class="search-box"><span aria-hidden="true">⌕</span><input id="capability-search" type="search" placeholder="搜索动作、对象或效果" aria-label="搜索能力目录"></label><label class="select-box"><span>证据</span><select id="evidence-filter" aria-label="按证据等级筛选"><option value="">全部证据</option></select></label><button id="reset-filters" class="reset-filter" type="button">重置筛选</button></div>
+      <div id="family-filters" class="family-filters" role="group" aria-label="按能力族筛选"></div>
+      <div class="inventory-topline"><p id="inventory-count" aria-live="polite">正在载入能力目录</p><span>点击条目，阅读完整研究</span></div>
+      <div class="inventory-layout">
+        <div id="capability-list" class="capability-list" role="group" aria-label="全部鼠标能力"></div>
+        <aside id="capability-detail" class="capability-detail" aria-label="选中能力的研究详情"><p class="eyebrow">能力研究</p><h3>从目录选择一个条目。</h3><p>查看具体输入、视觉效果、机制分析和待验证的问题。</p></aside>
+      </div>
+    </section>
+    <section id="research" class="research-section" aria-labelledby="research-title">
+      <div class="section-top light"><div><p class="eyebrow">03 / 怎样研究控制能力</p><h2 id="research-title">“能拖动”只是研究的起点。</h2></div><p class="section-aside">公开展示提供观察线索。<br>精度、响应、稳定性需要真实接入与重复实验。</p></div>
+      <div class="research-body"><p class="research-lead">真正需要解释的是：<strong>这一条轨迹为什么对应这个目标和效果？</strong>相同鼠标输入可以因场景、选中对象和语言定义而产生不同结果；漂亮画面还需要经得住反向、连续与细微操作。</p><ol class="research-questions"><li><span>01</span><div><h3>动作与语义</h3><p>固定初始画面与轨迹，只改交互描述。比较移动、缩放、测量是否按定义发生。</p></div></li><li><span>02</span><div><h3>目标与关联效果</h3><p>点选相邻、遮挡与边缘对象。跟踪目标、背景、阴影、反射和材质分别如何变化。</p></div></li><li><span>03</span><div><h3>控制与连续状态</h3><p>测试短拖、慢拖、回拖、重复操作。记录误触、漂移和返回原状态的能力。</p></div></li><li><span>04</span><div><h3>可测量的系统行为</h3><p>接入后记录输入和真实输出时间、跨帧一致性、操作失败及可导出的结构化状态。</p></div></li></ol></div>
+      <div class="research-boundary"><span>当前边界</span><p>本项目整理官方录制与论文图文，未运行 Solaris。视频中的视觉连续性不能直接证明精确三维几何、物理求解、尺寸或内部对象模型。具体能力和限制见各条目的来源与验证问题。</p><a href="https://arxiv.org/html/2609.00776v1" target="_blank" rel="noopener noreferrer">阅读全文与实验图 ↗</a></div>
+    </section>
+    <noscript><div class="noscript-message">场景切换与能力查询需要启用 JavaScript。可直接阅读 <a href="https://runway.com/news/research/introducing-solaris">Runway 官方介绍</a> 和 <a href="https://arxiv.org/html/2609.00776v1">论文原文</a>。</div></noscript>
+  </main>
+  <footer><div><span class="footer-brand">Solaris / 011</span><p>生成式界面观察室 · 来源核查 2026-10-04</p></div><div class="footer-links"><a href="../../">返回项目库</a><a href="https://x.com/GKev1n/status/2106629610590888065" target="_blank" rel="noopener noreferrer">原始帖子 ↗</a><a href="archived-demo.html">归档：本地输入教学样例</a></div></footer>
+  <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>

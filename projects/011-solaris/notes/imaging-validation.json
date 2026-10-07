@@ -1,0 +1,133 @@
+{
+  "product": "ATELIER",
+  "release": "0.4.0",
+  "date": "2026-10-05",
+  "entry": "http://localhost:4189/projects/011-solaris/imaging.html",
+  "status": "bounded-functional-and-native-input-validated",
+  "implementedIds": [
+    "C22",
+    "C23"
+  ],
+  "scope": "两张已登记真实 CC0 X-ray JPEG 的本地视口、图像坐标测量及用户参考校准；没有可靠源比例时只显示 px。",
+  "automatedChecks": [
+    {
+      "name": "影像几何、单位、历史与源图隔离",
+      "command": "node --test projects/011-solaris/tests/imaging.test.mjs",
+      "tests": 13,
+      "status": "passed"
+    },
+    {
+      "name": "原片许可、哈希、字节与JPEG尺寸",
+      "command": "node projects/011-solaris/scripts/verify-imaging-assets.mjs",
+      "assets": 2,
+      "status": "passed"
+    }
+  ],
+  "browserChecks": [
+    {
+      "name": "真实原片入口",
+      "status": "passed",
+      "evidence": "手部1466×2082与胸部侧位1769×2453实际解码显示；来源链接、CC0标识和无PixelSpacing提示可见。"
+    },
+    {
+      "name": "原生鼠标创建测量",
+      "status": "passed",
+      "evidence": "测量工具拖动(594,358)→(594,494)，UI记录780.0 px，配置包含measure-1及原图端点。"
+    },
+    {
+      "name": "拖动缩放保持锚点和测量",
+      "status": "passed",
+      "evidence": "缩放工具拖动(594,358)→(594,260)，倍率0.17435158501440923→0.3138998117304221，UI约17%→31%。动作前后实际备份的测量坐标完全一致，起点锚点重投影差为0 px；长度仍780.0 px。"
+    },
+    {
+      "name": "原生滚轮与平移",
+      "status": "passed",
+      "evidence": "原生滚轮在同一特征附近将UI放大至90%，测量仍780.0 px；切换平移工具拖动画面后保持长度，撤销恢复视角。"
+    },
+    {
+      "name": "端点与整线拖动",
+      "status": "passed",
+      "evidence": "原生拖动测量端点将780.0 px变为737.9 px，一次撤销回780.0 px；原生拖动整条线改变两端原图坐标，长度仍780.0 px。"
+    },
+    {
+      "name": "校准输入和单位",
+      "status": "passed",
+      "evidence": "原生拖出318.6 px参考线。空输入明确拒绝；验收使用测试输入100 mm，测量换算为244.9 mm，界面显示手动校准与用户参考校准。该测试数值只验证比例公式，不代表图中真实尺寸。"
+    },
+    {
+      "name": "原片状态隔离",
+      "status": "passed",
+      "evidence": "手部有校准/测量时切换胸部，胸部仍0条、未校准px且有独立倍率；切回手部测量与校准保持。"
+    },
+    {
+      "name": "清除与取消校准",
+      "status": "passed",
+      "evidence": "清除校准恢复780.0 px；再次拖出参考线并点击取消，仍未校准px，没有残留参考段或错误毫米单位。"
+    },
+    {
+      "name": "显示调整",
+      "status": "passed",
+      "evidence": "原生控件亮度15、对比135提交到备份为0.15/1.35；反相改变原片预览，测量线颜色与数值保留，恢复灰度可用。"
+    },
+    {
+      "name": "删除、撤销和重做",
+      "status": "passed",
+      "evidence": "删除measure-1为0条；撤销恢复780.0 px；重做0条；再次撤销恢复测量。"
+    },
+    {
+      "name": "非法工作区拒绝",
+      "status": "passed",
+      "evidence": "在UI粘贴原片宽度改为1500的配置，明确报原片编号或尺寸不匹配，当前工作区未覆盖。"
+    },
+    {
+      "name": "合法配置恢复与重开",
+      "status": "passed",
+      "evidence": "实际配置JSON通过UI导入；保存重开后手部仍31%、780.0 px、亮度15、对比1.35×、未校准px。源图、视口、显示与标注保留，历史按设计重新开始。"
+    },
+    {
+      "name": "真实图片预览",
+      "status": "passed",
+      "evidence": "导出当前视图打开真实Canvas PNG预览，DOM图片解码1173×620，含原片显示与实际标注。"
+    },
+    {
+      "name": "场景验证说明",
+      "status": "passed",
+      "evidence": "影像入口可打开C22/C23说明；汽车说明可见C24灯光、C25相机探索、C26机械开合，操作、预期、已做和待验收及边界分别显示。最终规划页与客厅说明统一验收见下方。"
+    }
+  ],
+  "sceneExplanationChecks": {
+    "schema": "每项已接入能力必须有对应场景的操作、预期、验证方法、已做与待验收及边界；缺少说明会阻止integration生成。",
+    "catalog": "../web/capabilities/scene-catalog.json",
+    "connectedByScene": {
+      "living": 14,
+      "car": 3,
+      "imaging": 2
+    },
+    "total": 36,
+    "connected": 19,
+    "pending": 17,
+    "browserStatus": "passed",
+    "evidence": "真实规划页面显示0.4.0、36/19/17与客厅14/14、汽车3/3、影像2/2；组合筛选已接入+影像阶段+C23仅1项，展开操作入口、范围、算法、数据和验收。客厅、汽车、影像均可打开独立能力说明；规划默认窗口684px宽布局无横向溢出。"
+  },
+  "proofs": [
+    "../assets/atelier-imaging-workspace.jpg",
+    "../assets/atelier-car-capabilities.jpg",
+    "../assets/atelier-scene-verification.jpg"
+  ],
+  "restorableExample": "../assets/atelier-imaging-config.json",
+  "remainingVerification": [
+    "真实已知标尺的物理准确度与参考端点选取误差；非方形像素与医学标定不在当前实现中",
+    "设备级按住拖动期间的Escape、失焦或指针中断；核心取消与持久化规则已检查",
+    "移动端布局、触屏硬件与辅助技术专项",
+    "指定硬件性能、长时间稳定性与极限输入视觉评价",
+    "完整阻断第三方网络后的端到端流程",
+    "浏览器自动文件下载完成回调"
+  ],
+  "scopeExclusions": [
+    "从JPEG DPI或人体比例猜测物理尺寸",
+    "DICOM窗宽窗位",
+    "任意上传或远程图像请求",
+    "医学诊断或临床测量认证",
+    "超分辨率生成细节"
+  ]
+}

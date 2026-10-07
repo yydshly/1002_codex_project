@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-07",
+  "use_case": "infographic-diagram",
+  "mode": "Editable SVG diagram generated from project data; PNG rendered from native SVG",
+  "status": "completed: native SVG diagram and PNG integrated",
+  "sources": [
+    "https://runway.com/news/research/introducing-solaris",
+    "https://arxiv.org/html/2609.00776v1"
+  ],
+  "intended_assets": [
+    "assets/atelier-project-overview.png",
+    "web/assets/atelier-project-overview.png",
+    "assets/atelier-project-overview.svg",
+    "web/assets/atelier-project-overview.svg"
+  ],
+  "scope": "Conceptual project guide; not a runtime screenshot or new capability evidence.",
+  "built_in_attempts": {
+    "count": 3,
+    "outcome": "All failed with image generation network error; no output received."
+  },
+  "note": "No image API/CLI fallback used. This is a complete native information diagram with exact Chinese text, not a substitute mockup or runtime screenshot.",
+  "initial_raster_prompt": "Use case: infographic-diagram\nAsset type: a single comprehensive Chinese project map, used as the main guide image on the ATELIER website and repository landing page.\nPrimary request: create a polished editorial infographic in a wide 16:9 layout, target 3840×2160 high resolution. All Chinese labels must be crisp, correctly written, legible when opened full size. A refined warm ivory background, olive and dark charcoal type, restrained teal and terracotta accents, soft realistic isometric miniature illustrations, generous aligned spacing. It must feel like an excellent product research atlas rather than a dense generic flowchart. No invented performance claims, no fabricated logos, no extraneous text. Treat illustrations as explanatory miniatures, not screenshots. Display all eleven scene names exactly once as scene cards. Exact facts and text below.\n\nComposition: prominent title and subtitle across the top. Below, three clear numbered columns: narrow source research column on left (about 22%), broad independent implementation column in center (about 51%), value and future roadmap column on right (about 27%). Each column has quiet border/card structure. Center contains a compact 3-column × 4-row card grid: eleven scene cards plus one visually distinct shared foundation card. Add a full-width truth-and-status footer. Make major labels and scene cards visually scannable at thumbnail size; retain complete supporting content at full size.\n\nTitle text:\n\"ATELIER × Solaris\"\n\"鼠标交互能力 · 项目全景\"\nSubtitle:\n\"原始研究 → 独立实现 → 验证边界 → 后续价值\"\nSmall date/version:\n\"ATELIER 0.17.0 · 资料整理 2026.10.07\"\n\nLEFT COLUMN:\n\"01 原始研究 · Solaris\"\n\"界面世界模型\"\nA simple explanatory flow, not a claimed internal implementation blueprint:\n\"起始画面 + 已发生的鼠标动作\"\n\"LLM：解释意图与行为\"\n\"世界模型：持续生成后续帧\"\nThen three method pills:\n\"自回归帧生成\"\n\"少步蒸馏\"\n\"自生成输出训练\"\nCapability tags with small precise pictograms:\n\"对象与尺寸编辑\"\n\"材质、纹理与光照\"\n\"视角探索\"\n\"取样对象成为工具\"\n\"主体联动与场景转场\"\nA modest evidence box:\n\"公开介绍与论文依据\"\n\"未实测原模型；未确认源码与权重可用\"\nA source limitation box:\n\"文字稳定、长会话、事实可信、业务接入仍是挑战\"\n\nCENTER COLUMN:\n\"02 独立实现 · ATELIER\"\n\"11 个场景 · 35/36 条目有受限对应实现\"\nA horizontal or stacked local implementation flow:\n\"鼠标工具 → 约束校验 → 结构化状态 → 本地渲染 → 保存恢复\"\nEleven miniature scene cards. They are representative illustrations, with no decorative text inside the miniatures. Exact card titles and summaries:\n1 \"客厅设计\" / \"拖放 · 缩放 · 材质 · 光照 · A/B\"\n2 \"汽车展厅\" / \"车灯 · 视角 · 引擎盖\"\n3 \"影像测量\" / \"缩放 · 标尺 · 原图坐标\"\n4 \"建筑探索\" / \"白模 · 光照 · 知识热点\"\n5 \"料理备料\" / \"完整食材 · 拖入 · 浮起检视\"\n6 \"取样创作\" / \"纹理印章 · 参数笔刷 · 图层\"\n7 \"精选陈列\" / \"重排 · 显式偏好 · 九目标往返\"\n8 \"滑板动作\" / \"拖动起跳 · 落地 · 记录\"\n9 \"材料教学\" / \"铜铝温升 · 冰熔化 · 同热量对照\"\n10 \"水下联动\" / \"拖鱼 · 绕礁追随 · 双主体恢复\"\n11 \"试衣研究\" / \"固定衣鞋 · 真人照片参考\"\n12 distinct foundation card, clearly not a twelfth scene:\n\"共用基础\"\n\"拾取 · 相机 · 事务 · 撤销 · 校验 · 资产\"\n\nA lower center work-preservation strip:\n\"整套备份：陈列 + 九工作台 = 十份已保存记录\"\n\"保留 A/B · 检查差异 · 选择恢复 · 陈旧预览拒绝\"\nValidation strip:\n\"已有验收记录：243 项产品测试 · 16 项仓库检查\"\n\"待验：下载落盘、剪贴板、九页面恢复重开、真实故障与设备性能\"\n\nRIGHT COLUMN:\n\"03 后续价值与路线\"\nPotential-value box:\n\"空间方案工具\"\n\"产品交互展示\"\n\"创作与教学\"\n\"可复用交互基础\"\n\"以上为潜在产品方向\"\nFour clearly distinguishable action classes:\n\"内容丰富：更多素材、颜色与视角\"\n\"产品收尾：可靠保存、恢复与多窗口\"\n\"业务接入：商品、账户与购物列表\"\n\"能力探索：新模型、新布局、新条件\"\nFour numbered next steps:\n\"1 可靠备份与恢复验收\"\n\"2 新桌通用支撑与灯具关系\"\n\"3 柜面 / 架面复用\"\n\"4 完整阅读角方案任务\"\nAmber pending box:\n\"待接 C19：试穿与购物列表\"\n\"试衣 / 真人扩展暂缓\"\nUnresolved-research note:\n\"任意模型理解、真实合身、复杂物理与开放生成仍待研发\"\n\nFOOTER, exact sentences:\n\"35/36 是条目映射，不是产品完成度。\"\n\"本地代码 + 开源引擎 + 授权素材；真人参考另用 FASHN 预训练模型。\"\n\"概念总览图；实际操作与验证证据见网页。\"\nSmall source credit:\n\"来源：Runway 官方介绍 · Solaris 论文 arXiv:2609.00776v1\"\n\nConstraints: Do not claim all algorithms or engines are built from scratch. Do not claim all mouse functionality is arbitrary or universal. Do not claim medical diagnosis, accurate real physics, true clothing fit or commercial readiness. Do not label 35/36 as 97% finished. Retain proper Chinese characters, clean hierarchy, complete text, stylish soft miniatures.",
+  "vector_generation": {
+    "script": "scripts/project-overview-figure.mjs",
+    "command": "node scripts/project-overview-figure.mjs",
+    "canvas": {
+      "width": 2560,
+      "height": 1800
+    },
+    "minimumBodyFontSize": 23,
+    "externalResources": false,
+    "foreignObject": false
+  },
+  "png_render": {
+    "renderer": "Bundled Sharp 0.35.4 / librsvg 2.62.91",
+    "width": 3840,
+    "height": 2700,
+    "source": "assets/atelier-project-overview.svg",
+    "method": "Directly render native SVG; no raster photo/mockup substituted."
+  },
+  "artifacts": [
+    {
+      "path": "assets/atelier-project-overview.png",
+      "bytes": 1360893,
+      "sha256": "38a681bd52ecbf8721df0368fff8a5a44d29edca6f028c17b9fb9938796b7b6e"
+    },
+    {
+      "path": "web/assets/atelier-project-overview.png",
+      "bytes": 1360893,
+      "sha256": "38a681bd52ecbf8721df0368fff8a5a44d29edca6f028c17b9fb9938796b7b6e"
+    },
+    {
+      "path": "assets/atelier-project-overview.svg",
+      "bytes": 44008,
+      "sha256": "91436476196fb463f2a4ef232c876ebf1232b5cf054e6b22e01b734bad537fc6"
+    },
+    {
+      "path": "web/assets/atelier-project-overview.svg",
+      "bytes": 44008,
+      "sha256": "91436476196fb463f2a4ef232c876ebf1232b5cf054e6b22e01b734bad537fc6"
+    }
+  ]
+}

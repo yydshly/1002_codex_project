@@ -1,0 +1,460 @@
+{
+  "product": "ATELIER",
+  "version": "0.17.0",
+  "date": "2026-10-06",
+  "recordedAt": "2026-10-06T02:46:19.360Z",
+  "status": "bounded-core-and-real-browser-workspace-backup-validated",
+  "purpose": "一次跨场景工作的已保存成果共同保留，按工作台选择恢复；深化既有C35工作流。",
+  "entry": "http://localhost:4189/projects/011-solaris/collection.html",
+  "scope": {
+    "researchCapabilities": 36,
+    "implementedBounded": 35,
+    "scenes": 11,
+    "c35Destinations": 9,
+    "workspaceRecords": 10,
+    "activeStage5": "2/3",
+    "remainingCapability": "C19",
+    "fittingAndTryon": "暂缓扩展",
+    "newScene": false,
+    "newResearchCapability": false
+  },
+  "implementation": {
+    "protocol": "atelier-workspace",
+    "version": 1,
+    "maximumBytes": 12582912,
+    "records": [
+      "collection",
+      "living",
+      "showroom",
+      "imaging",
+      "landmark",
+      "kitchen",
+      "creative",
+      "skate",
+      "materials",
+      "underwater"
+    ],
+    "storageGuardKeys": 12,
+    "rawStringsWrittenUnchanged": true,
+    "emptyItemsDeleteLocalRecords": false,
+    "invalidItemsSelectable": false,
+    "arbitraryStorageKeysAccepted": false,
+    "legacyWaterV1AndTrip": "只读守卫；不包含在文件中",
+    "includes": "最近已持久化的陈列与九工作台，客厅含完整A/B project、thumbnail和date及个人挂画",
+    "excludes": "未保存编辑、撤销历史、进行中动作/供热/追随、检查点、试衣/真人任务及本地模型纹理和权重",
+    "atomicCrossWindowTransaction": false,
+    "requiredWorkflow": "恢复前保存并关闭其他编辑页；恢复后重新打开对应工作台"
+  },
+  "tests": {
+    "product": {
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "passed": 243,
+      "failed": 0,
+      "scope": "完整回归含新增25项；在核心验证规则修复后执行，后续仅错误文案和UI预览/反馈保护调整"
+    },
+    "repository": {
+      "command": "node --test scripts/tests/*.test.mjs",
+      "passed": 16,
+      "failed": 0
+    },
+    "backup": {
+      "command": "node --test projects/011-solaris/tests/workspace-backup.test.mjs",
+      "passed": 25,
+      "failed": 0,
+      "scope": "中文错误文案更新后重新执行；覆盖十二基线键、容量、半写、读失败、owned rollback与外部较新值保留，均为Node模拟"
+    },
+    "finalChecks": [
+      "workspace-ui.js语法检查通过",
+      "integration数据生成与--check通过",
+      "catalog sync/check通过",
+      "14项目本地站点build通过"
+    ],
+    "browserFaultInjection": false
+  },
+  "browser": {
+    "environment": "Codex内置浏览器，localhost:4189，自然1280×720视口；通过可见界面、实际文件选择器和公开JSON文本核查",
+    "tenRecordsValid": true,
+    "rawComparison": "逐项UTF-8原文字符串完全一致，不只比较摘要或标准化后的对象",
+    "sameFile": {
+      "actualFileChooserOpened": true,
+      "tenSame": true,
+      "applyDisabled": true,
+      "noStorageWrite": true,
+      "provenance": "公开备份文本框完整导出内容保存为本地QA文件，再经实际选择器打开；不作为下载落盘证据"
+    },
+    "selectiveRestore": {
+      "changedIds": [
+        "collection",
+        "showroom"
+      ],
+      "invalidLandmarkDisabled": true,
+      "emptyKitchenDisabled": true,
+      "otherEightRawUnchanged": true
+    },
+    "pastedRestore": {
+      "publicTextarea": true,
+      "originalTenRawRestored": true
+    },
+    "unselectedRestore": {
+      "changedIds": [
+        "collection"
+      ],
+      "showroomUnselectedAndUnchanged": true
+    },
+    "updatedWindow": {
+      "oldPreviewApplyDisabled": true,
+      "expiredBeforeBackupLinkHidden": true,
+      "latestTenRawBackAtOriginal": true
+    },
+    "editedPasteAfterPreview": {
+      "applyImmediatelyDisabled": true,
+      "expiredBeforeBackupLinkHidden": true,
+      "recheckRequired": true,
+      "tenRawOriginal": true
+    },
+    "rejectedFiles": {
+      "badOuterStructure": true,
+      "malformedJsonChineseMessage": "未预览：文件不是完整JSON，请选择整套工作台导出的有效备份",
+      "invalidPastedTextRetained": true
+    },
+    "finalReload": {
+      "tenOriginalRawExact": true,
+      "consoleWarnError": [],
+      "documentation": {
+        "url": "http://localhost:4189/projects/011-solaris/integration.html#scenes",
+        "versionVisible": true,
+        "count35of36Visible": true,
+        "backupVisible": true,
+        "editedTextGuardVisible": true,
+        "downloadAndClipboardPendingVisible": true
+      }
+    },
+    "sourceReviewedOnly": [
+      "模块加载失败前先保留输入文本；未注入实际加载故障",
+      "恢复前整套备份超限时不再误称仍可下载；core超限测试已覆盖，UI超限分支未实际注入"
+    ],
+    "download": {
+      "fileEventTimeout": true,
+      "downloadMediaTimeout": true,
+      "diskWriteVerified": false
+    },
+    "clipboard": {
+      "uiFeedbackObserved": true,
+      "toolReadReturnedEmpty": true,
+      "clipboardIntegrityVerified": false
+    },
+    "reopenedAllNineRenderersThisRound": false
+  },
+  "rawRecordBaseline": [
+    {
+      "id": "collection",
+      "bytes": 200,
+      "sha256": "114b9f8fd083a55de8408f7ec4f14dd683c3800f95962c06b43aafdeb549a8f7"
+    },
+    {
+      "id": "living",
+      "bytes": 178539,
+      "sha256": "af9b019a724afcaaa7b7ce4c4fc61c023b70f7b3c6eee1ab592373102dd1938f"
+    },
+    {
+      "id": "showroom",
+      "bytes": 194,
+      "sha256": "988f22726fdbca86ef16c2f0d97e735dc3878668db172078718a65610aaf831e"
+    },
+    {
+      "id": "imaging",
+      "bytes": 791,
+      "sha256": "44b6d8b09c18f86718c92ae1318104c78d827130c5fbc8406beac8e79de61eda"
+    },
+    {
+      "id": "landmark",
+      "bytes": 172,
+      "sha256": "9d7cfb52bec0b474c2892a554932e896e53947a5b7cfb917a4787ef663a593ae"
+    },
+    {
+      "id": "kitchen",
+      "bytes": 2010,
+      "sha256": "f6bbf1d2241228f309bd2b0e94358d2b630c43225f845479152990f9961ed628"
+    },
+    {
+      "id": "creative",
+      "bytes": 10565,
+      "sha256": "87a53dcdaa66afb7706bcc86372f6193321806f9a3657215a948619fcf794258"
+    },
+    {
+      "id": "skate",
+      "bytes": 485,
+      "sha256": "fff11ce92acafe7b8bad31e58b7977c3cfb684c359aec16ffdfe2b750b569e68"
+    },
+    {
+      "id": "materials",
+      "bytes": 705,
+      "sha256": "fdaa4f7814db0257d4031d7ce5c2c479d49fbe8aa07de76220605e753d19fe43"
+    },
+    {
+      "id": "underwater",
+      "bytes": 631,
+      "sha256": "eea1191212fe4b42e95e3be7ac4c496770107ba94405fb4390ae88daae33f691"
+    }
+  ],
+  "rawChecks": {
+    "twoSelectedChangedOnly": [
+      "collection",
+      "showroom"
+    ],
+    "oneSelectedChangedOnly": [
+      "collection"
+    ],
+    "restoredAll": true,
+    "afterConflict": true,
+    "afterEditedTextGuard": true,
+    "finalReleaseReload": true,
+    "originalCollectionAllFields": true
+  },
+  "artifactProvenance": {
+    "mainScreenshot": "最终本地构建重载后的实际1280×720十行备份界面",
+    "conflictScreenshot": "本轮真实旧窗口预览拒绝时截图，采集早于最后文案与编辑文本保护修复",
+    "fullStateProof": "仅从公开可见的JSON文本框读取；保存原基线及各步骤十份完整原文",
+    "originalFile": "由公开完整导出内容写为QA文件；经实际选择器读取，不声称浏览器下载落盘",
+    "selectiveFixture": "QA变体：陈列/展厅两有效差异、地标非法原文和料理null，验证选择和拒绝行为"
+  },
+  "artifacts": [
+    {
+      "path": "assets/atelier-workspace-backup.png",
+      "bytes": 81938,
+      "sha256": "03351bbeb21df1ae49ccc01e8080b3480b1a7e7be4b6c49549a1118fb165d4d3"
+    },
+    {
+      "path": "assets/atelier-workspace-backup-conflict.png",
+      "bytes": 83615,
+      "sha256": "4b534f8fdb3c92cd51dc33cfa55452b1c1e0eade9a19ece3338a9446fe3e3350"
+    },
+    {
+      "path": "assets/atelier-workspace-backup-state-checks.json",
+      "bytes": 1570644,
+      "sha256": "057b7b720f27348cf4682d69518f187be9a20b65b96297ae8a170db5c4d6a28f"
+    },
+    {
+      "path": "assets/atelier-workspace-backup.json",
+      "bytes": 195925,
+      "sha256": "bc4afaf9226b9f5f91074fe92d126cd1ec7060e987dcac704a1cf0e6df1a720d"
+    },
+    {
+      "path": "assets/atelier-workspace-selective-fixture.json",
+      "bytes": 193632,
+      "sha256": "e505e1ecd60efbe2f68bf66143e45d69fe565e8175027a60053674dd0fc5f386"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "web/collection.html",
+      "bytes": 12899,
+      "sha256": "74c486d7bae54cc1b883cd5ea020de1158793d75d3ba03202bd91ec8f0270d71"
+    },
+    {
+      "path": "web/collection/app.js",
+      "bytes": 20760,
+      "sha256": "174950c6eb8be168610b24bf495a9f9dc4e46a6c8610727b81514eb2d9f3efd1"
+    },
+    {
+      "path": "web/collection/collection.css",
+      "bytes": 17270,
+      "sha256": "099526944a443a748f7a794df5cf74f8aae45e7755d38cd3e8d5a26d8c4e3369"
+    },
+    {
+      "path": "web/collection/core.js",
+      "bytes": 15193,
+      "sha256": "8e3d2eadcac6d4528c634bafcc32d69eef5496f26d49bf2842a6c87c56ec768f"
+    },
+    {
+      "path": "web/collection/scene-return.js",
+      "bytes": 3023,
+      "sha256": "bf87e8df8de90c0d6918be96707b85ff0b85fd99111a2fc4f937f7395b737b08"
+    },
+    {
+      "path": "web/collection/storage.js",
+      "bytes": 9625,
+      "sha256": "89ce649b9195927fb90365f02b9d03e187670547feeb6307c359df81e4d07be7"
+    },
+    {
+      "path": "web/collection/workspace.js",
+      "bytes": 17924,
+      "sha256": "caf82d59dcffe392bb209b6d3b33ef29193bae054a094993390bdbbbdeb65d0a"
+    },
+    {
+      "path": "web/collection/workspace-ui.js",
+      "bytes": 11366,
+      "sha256": "ae0a781b18b8d0a6e6e8fb6403793abfe93d60dbdf55e3aea20f67c4ab210f41"
+    },
+    {
+      "path": "web/integration.html",
+      "bytes": 5851,
+      "sha256": "ab795593b0cd8d7dd7ba6d810145c8e1ee182c9caa72f166a605c3d2f2373a79"
+    },
+    {
+      "path": "web/studio/integration-data.json",
+      "bytes": 207845,
+      "sha256": "e4909f0c0fa1be00d59f4bb47349ecea0bda1d0bed19c93b90aa96ac6127fe2c"
+    },
+    {
+      "path": "web/capabilities/scene-catalog.json",
+      "bytes": 118875,
+      "sha256": "9b64eb04fa176d59e8d922da58432eb0ce38ae108ad2f5d094cdf8f45cf7f2e4"
+    },
+    {
+      "path": "tests/workspace-backup.test.mjs",
+      "bytes": 25981,
+      "sha256": "97002c4bdb4cb9ee2c8b6212d86805395130011e47d3ba47f14ed46cf2ffd337"
+    },
+    {
+      "path": "README.md",
+      "bytes": 61244,
+      "sha256": "d698abc62e2bed23a7055c5de73ebc438ff494567408e4039256f6b2e2be435c"
+    },
+    {
+      "path": "notes/integration.md",
+      "bytes": 104778,
+      "sha256": "0b8e39abff42a552e017a22078135a65b39d742f9da116d3b7a4f632be2d5f8f"
+    },
+    {
+      "path": "notes/product-release.md",
+      "bytes": 85482,
+      "sha256": "b3adfce9bbd181f62d36770061d60d61e1b1f738f7c50b4c7f4a0b2bfa9497ef"
+    },
+    {
+      "path": "notes/product-feasibility.json",
+      "bytes": 127124,
+      "sha256": "165eb6109ae8d2952de2d293bccfd15595f73975bac49275c5a6a8f77952a4a6"
+    },
+    {
+      "path": "notes/roadmap.json",
+      "bytes": 35103,
+      "sha256": "30e9ceaec98490b0e304419ecce54755971ec276633906f55a0c1ffda1ad3ae4"
+    }
+  ],
+  "rootMetadata": [
+    {
+      "path": "projects/catalog.json",
+      "bytes": 37464,
+      "sha256": "f2b61db870a5fe235844aebf2cffb3daaf669ea6b06f3b7c0a021ec878defaf7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 43909,
+      "sha256": "6ebcc1712211969ed10196ab7ea01f0eb49e0ca3c8c06ab3199b3ce359cd057e"
+    }
+  ],
+  "publication": {
+    "checkedWebFiles": [
+      {
+        "source": "web/collection.html",
+        "published": "_site/projects/011-solaris/collection.html",
+        "bytes": 12899,
+        "sha256": "74c486d7bae54cc1b883cd5ea020de1158793d75d3ba03202bd91ec8f0270d71",
+        "equal": true
+      },
+      {
+        "source": "web/collection/app.js",
+        "published": "_site/projects/011-solaris/collection/app.js",
+        "bytes": 20760,
+        "sha256": "174950c6eb8be168610b24bf495a9f9dc4e46a6c8610727b81514eb2d9f3efd1",
+        "equal": true
+      },
+      {
+        "source": "web/collection/collection.css",
+        "published": "_site/projects/011-solaris/collection/collection.css",
+        "bytes": 17270,
+        "sha256": "099526944a443a748f7a794df5cf74f8aae45e7755d38cd3e8d5a26d8c4e3369",
+        "equal": true
+      },
+      {
+        "source": "web/collection/core.js",
+        "published": "_site/projects/011-solaris/collection/core.js",
+        "bytes": 15193,
+        "sha256": "8e3d2eadcac6d4528c634bafcc32d69eef5496f26d49bf2842a6c87c56ec768f",
+        "equal": true
+      },
+      {
+        "source": "web/collection/scene-return.js",
+        "published": "_site/projects/011-solaris/collection/scene-return.js",
+        "bytes": 3023,
+        "sha256": "bf87e8df8de90c0d6918be96707b85ff0b85fd99111a2fc4f937f7395b737b08",
+        "equal": true
+      },
+      {
+        "source": "web/collection/storage.js",
+        "published": "_site/projects/011-solaris/collection/storage.js",
+        "bytes": 9625,
+        "sha256": "89ce649b9195927fb90365f02b9d03e187670547feeb6307c359df81e4d07be7",
+        "equal": true
+      },
+      {
+        "source": "web/collection/workspace.js",
+        "published": "_site/projects/011-solaris/collection/workspace.js",
+        "bytes": 17924,
+        "sha256": "caf82d59dcffe392bb209b6d3b33ef29193bae054a094993390bdbbbdeb65d0a",
+        "equal": true
+      },
+      {
+        "source": "web/collection/workspace-ui.js",
+        "published": "_site/projects/011-solaris/collection/workspace-ui.js",
+        "bytes": 11366,
+        "sha256": "ae0a781b18b8d0a6e6e8fb6403793abfe93d60dbdf55e3aea20f67c4ab210f41",
+        "equal": true
+      },
+      {
+        "source": "web/integration.html",
+        "published": "_site/projects/011-solaris/integration.html",
+        "bytes": 5851,
+        "sha256": "ab795593b0cd8d7dd7ba6d810145c8e1ee182c9caa72f166a605c3d2f2373a79",
+        "equal": true
+      },
+      {
+        "source": "web/studio/integration-data.json",
+        "published": "_site/projects/011-solaris/studio/integration-data.json",
+        "bytes": 207845,
+        "sha256": "e4909f0c0fa1be00d59f4bb47349ecea0bda1d0bed19c93b90aa96ac6127fe2c",
+        "equal": true
+      },
+      {
+        "source": "web/capabilities/scene-catalog.json",
+        "published": "_site/projects/011-solaris/capabilities/scene-catalog.json",
+        "bytes": 118875,
+        "sha256": "9b64eb04fa176d59e8d922da58432eb0ce38ae108ad2f5d094cdf8f45cf7f2e4",
+        "equal": true
+      }
+    ],
+    "cover": {
+      "source": "assets/atelier-workspace-backup.png",
+      "published": "_site/assets/011-solaris.png",
+      "bytes": 81938,
+      "sha256": "03351bbeb21df1ae49ccc01e8080b3480b1a7e7be4b6c49549a1118fb165d4d3",
+      "equal": true
+    },
+    "runtimeFilesExcluded": true,
+    "unexpectedRuntimeFiles": []
+  },
+  "historicalEvidence": [
+    {
+      "version": "0.16.1",
+      "tests": 218,
+      "validation": "notes/collection-workflow-completion-validation.json",
+      "scope": "原六工作台完整JSON进入前/目标页/返回后重开核查，保持原证据和计数"
+    },
+    {
+      "version": "0.16.0",
+      "tests": 195,
+      "validation": "notes/collection-workflow-validation.json",
+      "scope": "三个新增去向历史核查，保持原证据和计数"
+    }
+  ],
+  "pending": [
+    "内置浏览器两种下载等待超时，下载文件落盘未验",
+    "复制有成功反馈，工具剪贴板读为空，完整性未验",
+    "本轮未逐一重开九个渲染工作台；跨设备影像视口适配另验",
+    "真实容量、读写故障、回滚与异步模块加载故障注入未验",
+    "原文比较非原子，多窗口同时写入和所有场景的统一同步仍待专项",
+    "进行中编辑/动作转场、触屏、其他浏览器、断网和长期性能另验",
+    "C19购物联动仍待接入；试衣/真人继续暂缓扩展"
+  ]
+}

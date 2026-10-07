@@ -1,0 +1,1518 @@
+{
+  "updatedAt": "2026-10-06",
+  "purpose": "36项研发映射与0.17.0在精选陈列增加整套工作台备份：一份文件保留当前陈列与九个登记工作台的最近已保存原文，客厅包含完整A/B方案。真实界面已核对十份完整原文、打开实际JSON文件、逐项差异/选择恢复、坏项/空项禁恢复、只恢复勾选项及另一窗口更新后的拒绝；恢复后十份原文逐字回到基线。完整243/243项产品Node测试（含25项新增备份测试）和16/16项仓库检查通过。下载落盘与剪贴板完整性尚未验收；九个渲染页本轮未逐一重开。整套备份支撑既有工作流，35/36、十一场景、C35九目标、阶段5的2/3及C19待接保持；试衣/真人继续暂缓扩展。",
+  "proposedApproach": "independent-scene-runtime",
+  "implementationStatus": "partial-implemented",
+  "scopeBoundary": "既有三维/像素场景使用自有状态与登记资产；C17新增限定正面上装的真人研究参考，由本机FASHN预训练后端生成。照片效果可能改动人物、服装或下装细节；未知体型/衣物、多视角一致性、尺码/舒适度、真实商品业务与商业授权不由样板证明。",
+  "decision": {
+    "ownedProductCore": true,
+    "solarisBackendRequired": false,
+    "externalGenerationApiRequired": false,
+    "hostedLanguageModelRequired": false,
+    "thirdPartyLibrariesAllowed": true,
+    "firstVersionInput": "有对象结构、真实单位、材质与操作语义的场景资产",
+    "backendRole": "原三维与像素工具在浏览器运行；真人研究入口使用我们本机部署的FASHN预训练推理服务和离线权重，不请求Solaris或外部推理API，也不称从零训练/全部算法自研。",
+    "offlineAcceptance": "既有浏览器场景依赖与资产本地打包；真人需另行准备Python/CUDA/模型与解析缓存，本轮离线权重/解析缓存已核查，完整网页到模型的断网验收分别记录，不以缓存核查代替全部流程通过。"
+  },
+  "sharedCore": [
+    "稳定对象ID与资产版本",
+    "目标拾取、模式和工具协议",
+    "命令校验、事务、取消、撤销与重做",
+    "统一场景、业务与教程状态",
+    "固定时间步仿真与明确同步点",
+    "保存与状态重建"
+  ],
+  "modules": [
+    {
+      "id": "scene-runtime",
+      "description": "场景图、对象变换、灯光、相机、可放置区域与可编辑资产。",
+      "requires": [
+        "专业资产与许可",
+        "稳定对象ID、单位与组件",
+        "真实渲染与约束校验"
+      ],
+      "implementationStatus": "partial-implemented",
+      "externalGenerationApiRequired": false,
+      "currentScope": "客厅、汽车与Carnegie建筑白模展览：对象变换、约束、相机、视觉光照与原装汽车铰链；地标6–22时陈列氛围不代表天文日照；不含影像视口；0.9.0新增完整Kenney滑板场陈列与固定平地练习点，观察同一真实骨架角色与板，滑板运动规则归属motion-composition。 0.10.0材料台、热源头与样品为本项目原创完整造型，木纹/HDR沿用原CC0素材，金属/冰水PBR为本项目设定；热响应公式由education-viewport实现。 0.10.1增加空心支架与蓝焰/热流示意、独立热量示意环和端口吸附；可见反馈已完成桌面浏览器验收，不把示意图形称为实测热场。 0.11.0水下陈列使用Quaternius完整小丑鱼与原六骨节Swim、Kenney三完整石礁和Poly Haven沙纹理，均CC0；本项目设计固定水域、拾取与指针反馈，动作/约束由motion-composition负责。 0.12.0增加完整Quaternius CC0的53骨人体，本项目制作潜水装具及Hover/Swim有限动作，完整45网格和七PBR材质本地打包；跟随与路径由motion-composition负责。"
+    },
+    {
+      "id": "appearance-engine",
+      "description": "材质、纹理、画布与图层的本地编辑。",
+      "requires": [
+        "材质与纹理数据",
+        "UV和颜色管理",
+        "局部绘制、变体与撤销"
+      ],
+      "implementationStatus": "partial-implemented",
+      "externalGenerationApiRequired": false,
+      "currentScope": "客厅材质/配色及0.7.0创作台：1200×900固定画纸坐标、真实图像可见选区、纹理印章与五色/亮暗方向参数笔刷、两图层和整纸/几何试片范围；真实鼠标、范围外像素保持、逐笔撤销和保存PNG恢复已验收，设备/容量/性能等专项另验。"
+    },
+    {
+      "id": "intent-tools",
+      "description": "工具语义、对象取样、有限中文指令及内容热点。",
+      "requires": [
+        "自有命令协议与解析器",
+        "工具与目标适用规则",
+        "核查过的内容与风格参考"
+      ],
+      "implementationStatus": "partial-implemented",
+      "externalGenerationApiRequired": false,
+      "currentScope": "客厅有限中文编辑、地标有出处知识卡、创作台可见取样工具；0.8.0有限中文前缀/场景别名解析、六场景注册表及只读安全返回桥，六目标实际往返与陈列恢复已验收；目标自身完整JSON前后对照仅料理已验收，其余五另验。不提供任意语义路由、艺术家风格复现或新场景生成。 0.16.0将既有C35登记去向深化至九目标，增加滑板/材料/水下任务、全部任务预览、最近去向及只读返回桥；三新增目标真实往返及进入前/目标页/返回后重开公共JSON稳定配置一致已验收，不把六目标旧验收改为九。 0.16.1陈列原文比较与受保护写入、常驻冲突提示和最新只读恢复；旧窗口pagehide不覆盖已检测的新记录。原六目标6/6完整公开JSON进入/重开逐值一致，客厅含完整A/B；每次返回陈列仅更新lastScene；CAS不是原子跨窗口锁，故障与容量只有Node模拟。 0.17.0整套工作台备份是工作流支撑：固定陈列加九目标十记录的已保存raw、一份12MiB以内文件、逐项状态/差异与选择恢复、恢复前本机备份；未选及空项不删除，坏原文原样抢救但禁恢复。导入前关闭其他编辑页、恢复后重开；不保存进行中动作、撤销或TRIP，不作为十记录原子事务或全局同步。本轮公开文件/选择恢复/冲突提示已实际验收，故障与设备等专项边界保留。 0.17.0实际公开导出十项有效原文并通过文件选择器打开：同内容十项相同/应用禁用；两差异选择恢复仅陈列/展厅变化，其余八原文保持，坏地标与空料理禁恢复，粘贴原文件后十原文逐字回基线。取消展厅选择仅恢复陈列；另一窗口更新使旧预览禁恢复、旧备份链接撤销，读取最新后十原文保持。243/243完整产品（新增25备份）与16/16仓库通过；故障/容量/十二基线键变化/回滚仅Node模拟。下载落盘/剪贴板完整性与九渲染页逐一重开未验，保持关闭其他编辑页和恢复后重开要求。"
+    },
+    {
+      "id": "avatar-commerce",
+      "description": "三维衣鞋搭配、真人正面上装外观参考与待接入的商品业务状态。",
+      "requires": [
+        "人体骨架与标定",
+        "服装与鞋资产",
+        "体型适配、碰撞与商品数据",
+        "真人/上装实拍来源与分别许可、自己部署的预训练模型与本机GPU服务",
+        "任务与输入/输出关联、生成标记、原图比较和独立人工评审"
+      ],
+      "implementationStatus": "partial-implemented",
+      "externalGenerationApiRequired": false,
+      "currentScope": "0.14.0受控接入C18：Court低帮鞋/Ridge短靴为本项目原创完整左右鞋对，刚性挂同固定完整人体根节点，原双足/53骨/13,743唯一面和C17三GLB哈希不变。脚掌/脚踝合法释放整双替换；上装/鞋两槽、各自三主色、两个原固定姿态、鞋脚近看与五预设组成完整搭配。两实体鞋/侧栏、错位/Escape、衣鞋互相保持、脱鞋/一次撤销重做、三合法/八坏JSON主流程已桌面验收；181产品含25试衣核心/16仓库、9鞋素材有限域检查通过。每双264足点投影/120非踝口上射线，144真开放域不作封口证明；Ridge2830三角面八阶样点只验证登记低腿高度，不证明完整体积/缓冲/尺码或步态。C19购物联动仍待研发；原0.13.0 C17/11素材与0.12.0水下及材料历史验收保留。 0.15.0增加C17真人研究入口：真实照片+登记衣图送本机FASHN服务；照片卡片拖放只是选衣，点击开始才推理。四组实际生成已有可见细节问题，原衣重建与实拍不一致；分界/放大/平移/复位、选款撤销和导出内容已实际核查；自动下载写盘/剪贴板一致性与异常专项另验。自部署预训练不是从零训练，跨人换衣无实拍对照，不判尺码或商用；不扩C18/C19。"
+    },
+    {
+      "id": "motion-composition",
+      "description": "场景组合、状态机、多主体关系与接触。",
+      "requires": [
+        "碰撞形状与物理参数",
+        "动作库与骨架",
+        "自有路径、约束与关联行为"
+      ],
+      "implementationStatus": "partial-implemented",
+      "externalGenerationApiRequired": false,
+      "currentScope": "料理备料台继续提供四种CC0完整带皮食材、16实例上限、固定时间步近似刚体组合与稳定食材受控检视；0.9.0滑板练习场接入C32：Kenney CC0完整角色/滑板/场地，七骨节原rig与有限姿态、本地受控轨迹；净向上拖动24–160px决定0.3–1.1展示高度，完整落地记一次、取消/预览/重播不增记录，40条记录与一次事务恢复。68px与160px真实跳跃、短/下拖拒绝、动作中Escape、撤销重做与重播状态保持已验收；保存/刷新及合法非法JSON精确恢复，3,003帧保守支撑点几何与95产品/16仓库回归已通过，设备/性能等专项另验。0.11.0的C30已在固定水层、完整小丑鱼与三礁石保守包络中受控接入；三次真实鱼体拖动、朝向反馈、受阻/越界、按住Escape、整次撤销重做及严格保存恢复已验收。原摆尾只作外观，不自动巡游。0.12.0接入C31有限潜水员跟随：鱼由鼠标直接控制，潜水员沿有限visibility-graph合法路径连续转向、混合悬停/踢腿，目标间距1.00场景单位、到位带0.025；较大包络不可达时明确停留，鱼移回可达区域恢复追随。原生松手后鱼位/朝向保持而潜水员继续移动；绕礁、不可达恢复、拖动/释放追随阶段Escape、非法释放、一次双主体undo/redo及严格导入已桌面验收。156产品、跟随11、双主体配置12及潜水员素材12检查通过；稳定v2保存重开完整JSON一致，用户最新旧v1鱼/账/相机保值迁移后重开一致；实际PNG解码通过，设备专项继续。不提供IK、刚体运动求解、越障或任意动作生成。"
+    },
+    {
+      "id": "education-viewport",
+      "description": "图像视口、校准测量和受限教学实验。",
+      "requires": [
+        "合法图像与可靠校准",
+        "核查过的材料规则",
+        "自有过程计算与记录"
+      ],
+      "implementationStatus": "partial-implemented",
+      "externalGenerationApiRequired": false,
+      "currentScope": "真实X-ray视口与校准测量继续受控接入；C21在铜/铝各10g25–60°C常温Cp近似与冰1g0°C333.4J/g潜热模型中受控接入。输入仍为已吸收10W均匀功率、零散热。0.10.0三接口拖放、响应/截止、整体恢复、本机/JSON、视角与稳定PNG已经验收（当时教学×4、107产品/16仓库/14科学素材检查）。0.10.1为材料教学体验修复，不新增研究项。九场景31/36受控接入、5项待接入，C35仍六登记去向。材料核心17项单测及15项独立科学/素材检查已通过；完整112项产品回归已通过，新界面桌面实际操作已通过本轮验收。 本轮加入可见温度/ΔT、供能常驻状态、蓝焰热流示意、接口吸附、累计读数、单样品重新观察与默认×1/暂停切×4。新界面桌面真实操作验收已完成；不提供燃烧化学、探头读数、真实温场、冷却或流体。 0.10.2增加同热量对照：选择每样品40/80/120J（默认40J），一只10W火源先铜后铝依次供能；两者各10g、从25°C开始。启动先清铜铝能量及相关旧账，冰和冰账保持。重置、铜输入与铝输入合为一条事务，取消恢复原完整基线，暂停提交已经输入的部分，一次撤销/重做恢复整次对照。 只读温升图横轴为Q=0–340J、纵轴25–60°C，铜曲线止于134.779J/60°C、铝止于313.999J/60°C，当前点随实际热量更新。它呈现登记Cp公式，不是可拖动输入、探头曲线或生成模型；只有铜铝采用相同质量/初温，冰不加入同条件对照。 0.10.2对照新增9项核心测试与完整121项产品回归通过，40/80/120J顺序对照、温升图状态点、两阶段取消、部分暂停与整次撤销重做已完成1280×720桌面真实操作验收；容量不足拒绝和冰账保持通过。稳定态保存重开、曲线按Q恢复和普通供能回归本轮已验收，设备/故障/离线/性能与精确外部时钟专项继续分别记录。"
+    },
+    {
+      "id": "adaptive-workflow",
+      "description": "陈列布局、偏好适配、教程进度与恢复。",
+      "requires": [
+        "自有布局约束与规则",
+        "流程状态图",
+        "检查点、版本与业务状态"
+      ],
+      "implementationStatus": "partial-implemented",
+      "externalGenerationApiRequired": false,
+      "currentScope": "客厅五步引导；0.8.0精选陈列六真实设计素材/六槽位交换、锁定与选择/收藏、四显式策展偏好和可解释排序；真实拖放/偏好/撤销保存主流程已验收。有限场景往返由登记指令/检查点与只读桥支撑，不是自由生成。 0.16.0为当前主线：九目标登记任务、三快捷入口、全部任务/预览/最近去向和原陈列检查点；新增滑板/材料/水下稳定配置进入及返回后重开核对与实际往返已验收。试衣/真人暂缓扩展，C19、商业条件与任意人体/尺寸另行研发。 0.16.1陈列原文比较与受保护写入、常驻冲突提示和最新只读恢复；旧窗口pagehide不覆盖已检测的新记录。原六目标6/6完整公开JSON进入/重开逐值一致，客厅含完整A/B；每次返回陈列仅更新lastScene；CAS不是原子跨窗口锁，故障与容量只有Node模拟。 0.17.0整套工作台备份是工作流支撑：固定陈列加九目标十记录的已保存raw、一份12MiB以内文件、逐项状态/差异与选择恢复、恢复前本机备份；未选及空项不删除，坏原文原样抢救但禁恢复。导入前关闭其他编辑页、恢复后重开；不保存进行中动作、撤销或TRIP，不作为十记录原子事务或全局同步。本轮公开文件/选择恢复/冲突提示已实际验收，故障与设备等专项边界保留。 0.17.0实际公开导出十项有效原文并通过文件选择器打开：同内容十项相同/应用禁用；两差异选择恢复仅陈列/展厅变化，其余八原文保持，坏地标与空料理禁恢复，粘贴原文件后十原文逐字回基线。取消展厅选择仅恢复陈列；另一窗口更新使旧预览禁恢复、旧备份链接撤销，读取最新后十原文保持。243/243完整产品（新增25备份）与16/16仓库通过；故障/容量/十二基线键变化/回滚仅Node模拟。下载落盘/剪贴板完整性与九渲染页逐一重开未验，保持关闭其他编辑页和恢复后重开要求。"
+    }
+  ],
+  "bindings": {
+    "C01": "scene-runtime",
+    "C02": "scene-runtime",
+    "C03": "scene-runtime",
+    "C04": "intent-tools",
+    "C05": "adaptive-workflow",
+    "C06": "appearance-engine",
+    "C07": "intent-tools",
+    "C08": "appearance-engine",
+    "C09": "appearance-engine",
+    "C10": "scene-runtime",
+    "C11": "scene-runtime",
+    "C12": "scene-runtime",
+    "C13": "scene-runtime",
+    "C14": "intent-tools",
+    "C15": "scene-runtime",
+    "C16": "scene-runtime",
+    "C17": "avatar-commerce",
+    "C18": "avatar-commerce",
+    "C19": "avatar-commerce",
+    "C20": "motion-composition",
+    "C21": "education-viewport",
+    "C22": "education-viewport",
+    "C23": "education-viewport",
+    "C24": "scene-runtime",
+    "C25": "scene-runtime",
+    "C26": "scene-runtime",
+    "C27": "intent-tools",
+    "C28": "intent-tools",
+    "C29": "motion-composition",
+    "C30": "motion-composition",
+    "C31": "motion-composition",
+    "C32": "motion-composition",
+    "C33": "adaptive-workflow",
+    "C34": "adaptive-workflow",
+    "C35": "intent-tools",
+    "C36": "scene-runtime"
+  },
+  "capabilityRoutes": [
+    {
+      "capabilityId": "C01",
+      "name": "灯具移动",
+      "family": "物体空间操作",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "scene-runtime",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "射线拾取、放置面交点、抓取偏移、碰撞与灯光绑定",
+      "inputRequirement": "可编辑灯具网格、放置面和灯光组件",
+      "scopeLimit": "动态间接光与反射需要单独评估，不能以固定环境贴图替代完整响应",
+      "acceptance": "接地、越界、逆向拖动、遮挡、照明响应与撤销",
+      "releaseScope": "台灯随所属茶几移动、旋转和宽深高变化；复制茶几带上台灯，仍不跨放置面",
+      "implementationFiles": [
+        "../web/studio/core.js",
+        "../web/studio/scene.js",
+        "../web/studio/app.js"
+      ],
+      "validation": "product-validation.json"
+    },
+    {
+      "capabilityId": "C02",
+      "name": "挂画尺寸调整",
+      "family": "物体空间操作",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "scene-runtime",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "墙面锚点与尺寸命令，画框和画面共同变换",
+      "inputRequirement": "挂画网格与比例约束",
+      "scopeLimit": "仅对拥有对象结构的挂画进行编辑",
+      "acceptance": "宽高比、中心锚点、边框和往返尺寸恢复",
+      "releaseScope": "挂画贴墙移动、等比缩放及独立宽高深调整；图像随平面拉伸，未自动重绘内容",
+      "implementationFiles": [
+        "../web/studio/core.js",
+        "../web/studio/scene.js",
+        "../web/studio/app.js"
+      ],
+      "validation": "product-validation.json"
+    },
+    {
+      "capabilityId": "C03",
+      "name": "植物尺寸调整",
+      "family": "物体空间操作",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "scene-runtime",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "底部锚点与整体缩放",
+      "inputRequirement": "植物网格、单位和允许的缩放范围",
+      "scopeLimit": "不在照片中生成新枝叶",
+      "acceptance": "接地、盆株比例、对象身份和撤销",
+      "releaseScope": "本地植物资产，可复制、移除、恢复、等比缩放及独立宽深高调整；不生成新枝叶",
+      "implementationFiles": [
+        "../web/studio/core.js",
+        "../web/studio/scene.js",
+        "../web/studio/app.js"
+      ],
+      "validation": "product-validation.json"
+    },
+    {
+      "capabilityId": "C04",
+      "name": "语言指定家具移动",
+      "family": "物体空间操作",
+      "sourceEvidenceLevel": "official-description",
+      "primaryModule": "intent-tools",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "有限中文语法将对象、方向、距离解析成受校验的移动命令",
+      "inputRequirement": "对象词表、位置与允许动作",
+      "scopeLimit": "歧义需提示；不承诺任意自然语言理解",
+      "acceptance": "对象解析、距离单位、边界限制与未知指令恢复",
+      "releaseScope": "有限中文语法和登记对象、方向、单位；不是通用LLM",
+      "implementationFiles": [
+        "../web/studio/core.js",
+        "../web/studio/scene.js",
+        "../web/studio/app.js"
+      ],
+      "validation": "product-validation.json"
+    },
+    {
+      "capabilityId": "C05",
+      "name": "商品陈列重排",
+      "family": "物体空间操作",
+      "sourceEvidenceLevel": "official-prospect",
+      "primaryModule": "adaptive-workflow",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "六件Poly Haven CC0设计资产稳定ID与六槽位完整排列；直接拖放交换两槽，任一端锁定拒绝，选择/收藏独立，完整重排一条事务。",
+      "inputRequirement": "sofa/chair/table-glass/table-solid/lamp/plant六个登记资产、原始纹理/来源、中性名和有限槽位。",
+      "scopeLimit": "原来源是官方陈列设想；本轮只准备登记资产的有限槽位重排，不实现任意新物品生成、衣鞋试穿或下单。",
+      "acceptance": "原生sofa/plant槽位交换、按钮undo/redo精确恢复；越界与source/target双端锁定均保持完整JSON。保存重载、非法ID拒绝和合法导入键盘undo/redo通过；硬件按住取消/失焦、触屏/多浏览器、故障/断网/下载和性能另验。",
+      "releaseScope": "0.8.0已验收：六件真实PBR设计素材拖放交换两槽、双端锁定拒绝、越界保持与一步撤销重做。成功拖动聚焦所拖素材；收藏/锁槽保持，选择不是购买。非在售品牌/价格/库存或真实空间摆放。",
+      "browserValidation": "bounded-functional-and-browser-validated; all-six-registered-roundtrips passed; five-target-full-state-comparisons/held-Escape/blur/lostcapture/touch/multi-browser/quota/corrupt-store/offline/performance/download pending separately",
+      "validation": "collection-validation.json",
+      "implementationFiles": [
+        "../web/collection/core.js",
+        "../web/collection/app.js",
+        "../web/collection/render-products.js"
+      ]
+    },
+    {
+      "capabilityId": "C06",
+      "name": "沙发布料替换",
+      "family": "外观与材质",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "appearance-engine",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "PBR材质变体、UV与纹理尺度管理",
+      "inputRequirement": "专业沙发网格、布料材质和使用许可",
+      "scopeLimit": "仅替换已有材质或导入兼容材质；几何褶皱需要真实资产",
+      "acceptance": "轮廓与接缝保持、纹理尺度、不同视角和光照下的外观",
+      "releaseScope": "原始、亚麻、提花三种本地材质，不生成任意纹理",
+      "implementationFiles": [
+        "../web/studio/core.js",
+        "../web/studio/scene.js",
+        "../web/studio/app.js"
+      ],
+      "validation": "product-validation.json"
+    },
+    {
+      "capabilityId": "C07",
+      "name": "语言指定沙发换色",
+      "family": "外观与材质",
+      "sourceEvidenceLevel": "official-description",
+      "primaryModule": "intent-tools",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "有限颜色词和对象词解析到材质命令",
+      "inputRequirement": "对象与材质槽词表",
+      "scopeLimit": "不承诺开放式外观生成",
+      "acceptance": "目标正确、颜色正确、其他参数保持和撤销",
+      "releaseScope": "四种登记坐具配色，不是开放式语义换色",
+      "implementationFiles": [
+        "../web/studio/core.js",
+        "../web/studio/scene.js",
+        "../web/studio/app.js"
+      ],
+      "validation": "product-validation.json"
+    },
+    {
+      "capabilityId": "C08",
+      "name": "墙面换色",
+      "family": "外观与材质",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "appearance-engine",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "独立墙面材质槽与颜色参数",
+      "inputRequirement": "可编辑墙面、纹理和材质数据",
+      "scopeLimit": "仍受实际照明和颜色管理影响",
+      "acceptance": "材质槽、纹理保持、相邻对象保持",
+      "releaseScope": "四种灰泥墙色，不改变墙结构",
+      "implementationFiles": [
+        "../web/studio/core.js",
+        "../web/studio/scene.js",
+        "../web/studio/app.js"
+      ],
+      "validation": "product-validation.json"
+    },
+    {
+      "capabilityId": "C09",
+      "name": "画作内容修改",
+      "family": "外观与材质",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "appearance-engine",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "画布纹理替换、图层和笔刷绘制",
+      "inputRequirement": "画布、授权图像或用户绘制内容",
+      "scopeLimit": "任意描述生成新画作不在基础实现中",
+      "acceptance": "画作内容、图层保存、撤销和缩放后质量",
+      "releaseScope": "三幅原创画作及本地图片替换，不提供局部绘画或语义编辑",
+      "implementationFiles": [
+        "../web/studio/core.js",
+        "../web/studio/scene.js",
+        "../web/studio/app.js"
+      ],
+      "validation": "product-validation.json"
+    },
+    {
+      "capabilityId": "C10",
+      "name": "室内时段调整",
+      "family": "时间与光照",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "scene-runtime",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "时间参数驱动太阳、天空、人工灯和环境参数",
+      "inputRequirement": "完整房间与昼夜参数",
+      "scopeLimit": "不以单张照片自动重建房间",
+      "acceptance": "连续时间变化、先前编辑保持和重开恢复",
+      "releaseScope": "7–21时设计氛围参数，不是基于位置和日期的太阳计算",
+      "implementationFiles": [
+        "../web/studio/core.js",
+        "../web/studio/scene.js",
+        "../web/studio/app.js"
+      ],
+      "validation": "product-validation.json"
+    },
+    {
+      "capabilityId": "C11",
+      "name": "室内光照调整",
+      "family": "时间与光照",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "scene-runtime",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "灯光、曝光、动态阴影与环境参数联动",
+      "inputRequirement": "真实灯光组件与渲染预算",
+      "scopeLimit": "固定烘焙光照不能证明移动后的动态照明一致",
+      "acceptance": "移动和开关灯后的阴影、照明与状态恢复",
+      "releaseScope": "动态直射光与阴影、点光灯、HDR和SSAO；没有完整动态间接照明",
+      "implementationFiles": [
+        "../web/studio/core.js",
+        "../web/studio/scene.js",
+        "../web/studio/app.js"
+      ],
+      "validation": "product-validation.json"
+    },
+    {
+      "capabilityId": "C12",
+      "name": "地标时段切换",
+      "family": "时间与光照",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "scene-runtime",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "时间参数联动陈列直射光、环境与展示补光，保持建筑几何和相机",
+      "inputRequirement": "CC0授权简化外部打印STL；本项目白模材质与设计光照参数",
+      "scopeLimit": "白模展览6–22时审美氛围，不含真实日期经纬度太阳、工程照度或现场灯具",
+      "acceptance": "连续时间变化、直射光与阴影响应、建筑和相机保持；取消、撤销、保存恢复",
+      "releaseScope": "Carnegie建筑白模展览：6–22时连续氛围控制与实际陈列光影；343281三角简化中空外部打印STL，无原色纹理/源材质/完整室内；显示单位不代表米。",
+      "implementationFiles": [
+        "../web/landmark/core.js",
+        "../web/landmark/scene.js",
+        "../web/landmark/app.js",
+        "../web/assets/landmark/hotspots.json"
+      ],
+      "validation": "landmark-validation.json",
+      "browserValidation": "bounded-functional-and-browser-validated; device cancellation/right-button/touch/offline/performance pending separately"
+    },
+    {
+      "capabilityId": "C13",
+      "name": "地标视角探索",
+      "family": "视角与场景导航",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "scene-runtime",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "真实轨道相机、缩放和平移工具与四个登记相机预设，连续导航以事务保存",
+      "inputRequirement": "授权打印几何、观察方向与相机状态协议",
+      "scopeLimit": "总览、外立面、背侧观察和屋顶四个展示视角；背侧是相机预设，不确认现场方位，不表示完整花园或室内存在",
+      "acceptance": "原生环绕、滚轮、平移模式和四预设；一次动作撤销、保存重开和JSON恢复相机一致；右键平移与设备取消仍待专项",
+      "releaseScope": "Carnegie简化建筑白模的轨道旋转/缩放/平移与四注册视角；相机位置和目标可保存；无照片未知视角补全、完整室内或工程测量。",
+      "implementationFiles": [
+        "../web/landmark/core.js",
+        "../web/landmark/scene.js",
+        "../web/landmark/app.js",
+        "../web/assets/landmark/hotspots.json"
+      ],
+      "validation": "landmark-validation.json",
+      "browserValidation": "bounded-functional-and-browser-validated; device cancellation/right-button/touch/offline/performance pending separately"
+    },
+    {
+      "capabilityId": "C14",
+      "name": "场景中的地标学习",
+      "family": "交互教学实验",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "intent-tools",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "稳定热点ID、原创资料卡和文字观察建议；官方直接来源、事实范围与知识边界绑定，点击保留当前相机",
+      "inputRequirement": "introduction/facade/garden/museum四ID，Cooper Hewitt博物馆官方历史、模型、花园和时间线资料",
+      "scopeLimit": "有限四张有出处知识卡，不从模型猜事实或生成开放问答；2014扫描、2015花园改造与今日现场分开",
+      "acceptance": "实际点击四编号热点打开对应正文/来源/范围，相机保持；卡片和时间状态随JSON及重开恢复，设备级取消另验",
+      "releaseScope": "四张原创中文知识卡及直接博物馆官网链接，介绍1899–1902建筑、乔治亚式、花园与1976/2014馆舍变迁；打印白模不复原原色/完整花园/展览，热点不是历史房间测绘定位。",
+      "implementationFiles": [
+        "../web/landmark/core.js",
+        "../web/landmark/scene.js",
+        "../web/landmark/app.js",
+        "../web/assets/landmark/hotspots.json"
+      ],
+      "validation": "landmark-validation.json",
+      "browserValidation": "bounded-functional-and-browser-validated; device cancellation/right-button/touch/offline/performance pending separately"
+    },
+    {
+      "capabilityId": "C15",
+      "name": "室内视角探索",
+      "family": "视角与场景导航",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "scene-runtime",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "轨道或自由相机与导航限制",
+      "inputRequirement": "完整室内几何",
+      "scopeLimit": "隐藏几何必须由资产提供",
+      "acceptance": "相机和编辑输入隔离、边界与视角保存",
+      "releaseScope": "已建模房间的轨道相机，不从照片补全未知区域",
+      "implementationFiles": [
+        "../web/studio/core.js",
+        "../web/studio/scene.js",
+        "../web/studio/app.js"
+      ],
+      "validation": "product-validation.json"
+    },
+    {
+      "capabilityId": "C16",
+      "name": "相机平移与俯视",
+      "family": "视角与场景导航",
+      "sourceEvidenceLevel": "official-comparison",
+      "primaryModule": "scene-runtime",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "独立相机平移、俯仰与俯视模式",
+      "inputRequirement": "相机数据与场景边界",
+      "scopeLimit": "我们的控制协议不代表原示例已披露的手势",
+      "acceptance": "位移与旋转分别验证",
+      "releaseScope": "现有房间内右键平移、俯视、默认视角",
+      "implementationFiles": [
+        "../web/studio/core.js",
+        "../web/studio/scene.js",
+        "../web/studio/app.js"
+      ],
+      "validation": "product-validation.json"
+    },
+    {
+      "capabilityId": "C17",
+      "name": "拖衣服到人像试穿",
+      "family": "试穿与商品联动",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "avatar-commerce",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "specialized-research",
+      "algorithm": "完整登记上衣射线拾取与胸腹落点校验；按住时可见拖动和上身预览，合法释放将单一上装槽替换为衣款+颜色。人物与服装共用完整53骨与两种冻结登记姿态，独立衣片蒙皮及主布材质；一次事务、取消和严格工作区恢复保持人体姿态与相机。 真人研究入口另以照片卡片拖放/点选确定衣物，点击开始将锁定人物/衣物/照片形式送入本机FASHN VTON1.5；按任务ID和输入组合呈现实际生成，原图比较、生成标签与人工评分分开，不把拖放直接当作图像推理。",
+      "inputRequirement": "固定Quaternius CC0完整53骨人体（13,743唯一面）；本项目制作tee-01短袖上衣与jacket-01轻夹克完整独立网格、厚度、口袋/边口/线迹/拉链与连续骨架权重；自然站姿/抬臂两固定姿态与三登记主布色，来源/许可/哈希本地登记。 真人研究入口采用两组VITON-HD实拍人像与衣图，非商业研究许可、无真实SKU和跨人换衣实拍；需Python3.10/CUDA、本机FASHN预训练权重与分别受限的人体解析缓存。用户本机选图路径属待验证实验输入。",
+      "scopeLimit": "三维入口仍限定一个展示体型、两款上衣、一个上装槽、三色和两固定姿态，1.78只为虚拟高度，有限采样不证明全身零穿插。真人入口只作登记正面上装的生成外观参考，已有下装纽扣改变/搭扣偏软问题，不能保证脸体型或全部衣物细节不变；无跨人实拍对照，不判断尺码、松紧、舒适或商业授权。任意人物/未知衣物/任意姿态与动态布料另验；不覆盖C18真人鞋履或C19购物。",
+      "acceptance": "0.13.0三维历史：两真实网格/侧栏胸腹拖入、替换/取消/Escape、完整JSON恢复、三色/固定姿态/视角、三合法/七坏JSON、保存重开与1431×969PNG已验收；171产品/15试衣核心/16仓库与11素材有限域检查保留。0.15.0真人：三组跨衣与一组原衣重建均已本机完成20步，63.34/49.58/41.84/52.58秒、576×768；首轮内存不足无图保留。原衣重建与实拍穿着不一致，三组跨衣无同人同目标衣实拍，不宣称商品保真或合身。189项产品含8真人核心、18项Python后端测试通过；分界/放大/平移/复位、选款撤销恢复与PNG预览/评审JSON内容已原生核查；自动下载写盘、剪贴板一致性和故障专项未验证。",
+      "releaseScope": "0.13.0受控接入：将真实独立短袖/轻夹克拖到固定完整三维人体胸腹，合法松手后适配替换。人物姿态和相机保持，可换三种主布色、自然站姿/抬臂检查并从前背侧看细节；取消和一次撤销重做、稳定JSON/本机与真实PNG已验收。同衣款且同颜色不增加历史，单同款但颜色不同仍是合法改色。 0.15.0同一场景深化：真人正面上装研究入口提供真实人物/衣图、本机生成、原图比较与人工观察；已有四组实际生成，原衣重建不一致、三组跨衣缺实拍与首次内存不足记录可查。保留三维原范围，整体仍35/36和11场景，不接真实商品购买。",
+      "browserValidation": "bounded-desktop-main-flow-validated; native-two-3D-meshes-and-sidebar-drag / valid-preview / invalid-release-held-Escape / whole-state-undo-redo / color-pose-views / camera-isolation / legal3-invalid7-JSON / exact-save-reload / decoded-PNG passed; assets11 passed-with-finite-domain; device/fault/offline/download/performance/long-run remain separate; photo extension: four local generations and one OOM failure recorded; reconstruction fails real-wearing consistency, crossed cases lack paired ground truth; product189/backend18 passed; native comparison/zoom/pan/reset/choice-undo and marked-PNG-preview/review-JSON-content validated; browser-download-write/clipboard-bytes/fault/offline pending",
+      "implementationFiles": [
+        "../web/fitting/core.js",
+        "../web/fitting/scene.js",
+        "../web/fitting/app.js",
+        "../web/fitting/assets/manifest.json",
+        "../web/tryon.html",
+        "../web/tryon/core.js",
+        "../web/tryon/app.js",
+        "../web/tryon/samples/manifest.json",
+        "../scripts/tryon-service.py"
+      ],
+      "validation": "fitting-validation.json",
+      "supplementaryValidation": [
+        "real-person-tryon-validation.json",
+        "tryon-runtime.md",
+        "tryon-sources.md",
+        "tryon-runs/initial-failed-0702f8eb.json"
+      ]
+    },
+    {
+      "capabilityId": "C18",
+      "name": "拖鞋子到人像试穿",
+      "family": "试穿与商品联动",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "avatar-commerce",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "specialized-research",
+      "algorithm": "完整登记鞋对的射线拾取、连续指针反馈与可见人体/所穿网格的脚掌/脚踝命中校验；合法预览松手后原子替换左右鞋，鞋履槽独立于上装。鞋组直接按同人物根节点和原足坐标刚性注册，两个原固定姿态足部不动；只改主鞋面材质，整次取消/撤销与严格v2搭配恢复。",
+      "inputRequirement": "完整Quaternius CC0人体原双足/53骨及13,743唯一面保持；本项目制作court-01 Court低帮鞋与boot-01 Ridge短靴完整左右鞋壳/开放踝口/鞋底、鞋舌/带/金属等细节。三主鞋面色、neutral/reach固定足位、原坐标刚性登记；来源许可/哈希、18真实原人体图与9独立素材有限域核查。",
+      "scopeLimit": "固定1.78虚拟参考人体、两双完整预适配鞋、成对左右鞋与两个静态姿态；脚掌/脚踝为登记落点，较高小腿/上身拒绝。足底固定零高，展示外包围鞋壳，不推断尺码/合脚/缓冲、步态或摩擦物理；有限足/低腿采样不证明完整体积零碰撞。C19购物待研发，C35当前九登记目标；本试衣入口暂不追加意图路由。",
+      "acceptance": "已验收：两最终实体鞋及侧栏真实拖入、成对替换一次undo/redo、胸腹/空白拒绝和活动Escape完整JSON保持；上装与鞋互不改写、三鞋面色、两静态姿态、鞋脚细节/侧后相机及脱鞋恢复。三合法/八坏UI配置、181产品（25试衣核心）/16仓库及9鞋素材有限域检查通过；稳定保存/迁移/图片及发布结果见footwear-validation.json，设备/故障/离线/下载/性能另验。 最终修后v2保存重开完整JSON一致，实际PNG1431×969解码与console空已验证；旧本机key迁移是实现协议，实际最终本机观察按验收记录另记。",
+      "releaseScope": "0.14.0受控接入：Court低帮鞋/Ridge短靴拖到固定人体脚掌或脚踝，合法松手左右一起替换，上装、姿态和相机保持。两槽各自配色、鞋脚近看与原两固定姿态；错区域/取消回完整基线，一次撤销重做恢复整套搭配。同鞋款且同颜色不增历史，改色仍是合法变化；严格v2读取旧v1为shoes:null且旧key保留。",
+      "browserValidation": "bounded-native-desktop-main-flow-validated; two-final-3D-pairs/sidebar / valid-preview / wrong-chest-blank-held-Escape / atomic-undo-redo / upper-shoe-slot-isolation / colors-poses-foot-detail-side-orbit / remove-only-shoes / legal3-invalid8-JSON passed; assets9 passed-with-finite-foot-domain; device/fault/offline/download/performance/long-run remain separate",
+      "implementationFiles": [
+        "../web/fitting/core.js",
+        "../web/fitting/scene.js",
+        "../web/fitting/app.js",
+        "../web/fitting/footwear/manifest.json"
+      ],
+      "validation": "footwear-validation.json"
+    },
+    {
+      "capabilityId": "C19",
+      "name": "试穿与购物车关联响应",
+      "family": "试穿与商品联动",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "avatar-commerce",
+      "implementationStatus": "not-started",
+      "workClass": "bounded-engineering",
+      "algorithm": "商品ID、变体与数量作为业务状态，试穿事件驱动事务更新",
+      "inputRequirement": "真实商品数据与可撤销选择",
+      "scopeLimit": "购物外观不作为订单真值；下单另需实际业务授权",
+      "acceptance": "换装、取消、撤销与商品列表一致"
+    },
+    {
+      "capabilityId": "C20",
+      "name": "拖食材组合沙拉",
+      "family": "场景组合",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "motion-composition",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "场景内射线拾取、拖放落点与稳定实例ID；Cannon-es 0.20.0球形包络/有限容器刚体碰撞，固定1/120秒时间步、60次求解迭代，沉降结束提交一次事务",
+      "inputRequirement": "Poly Haven CC0完整apple/lemon/onion/avocado网格与原纹理；作者陶瓷碗/案板/台面；显示归一化、近似碰撞参数和数量规则",
+      "scopeLimit": "球形包络近似刚体与有限容器边界；不是精确网格接触、软体、切割、液体、烹饪、营养或称重。原资产尺寸与显示归一化区分。",
+      "acceptance": "真实场景拖入、越界释放、容器/食材接触与沉降、连续添加/16件上限/稳定ID；一次撤销与重做、取消、本机/JSON恢复、实际截图；主工作流已实际验收，容量/设备/性能等专项仍待完成",
+      "implementationFiles": [
+        "../web/kitchen/core.js",
+        "../web/kitchen/physics.js",
+        "../web/kitchen/scene.js",
+        "../web/kitchen/app.js"
+      ],
+      "validation": "kitchen-validation.json",
+      "browserValidation": "bounded-functional-and-browser-validated; capacity/device-cancellation/paused-drag/right-pan/touch/offline/performance/download pending separately",
+      "releaseScope": "料理备料组合：从场景内可重复取用托盘拖入完整带皮食材，默认4件、最多16件；不宣称切丁或已完成沙拉。稳定组合保存实例ID、类型、位置与姿态；拖放/沉降中取消恢复原组合。"
+    },
+    {
+      "capabilityId": "C21",
+      "name": "拖火源触发材料反应",
+      "family": "交互教学实验",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "education-viewport",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "固定三吸能接口命中与热源拖放，命中释放后吸附接口中心；已吸收10W均匀零散热假设下Q=Pt，铜/铝常温Cp温升及0°C冰潜热分数，上限自动停止。累计读数、暂停保留、整体基线取消与严格热账；单样品重置再供能合为一次可取消/撤销事务。倍率仅为UI观察工具，不入物性schema。 0.10.2增加同热量对照：选择每样品40/80/120J（默认40J），一只10W火源先铜后铝依次供能；两者各10g、从25°C开始。启动先清铜铝能量及相关旧账，冰和冰账保持。重置、铜输入与铝输入合为一条事务，取消恢复原完整基线，暂停提交已经输入的部分，一次撤销/重做恢复整次对照。 只读温升图横轴为Q=0–340J、纵轴25–60°C，铜曲线止于134.779J/60°C、铝止于313.999J/60°C，当前点随实际热量更新。它呈现登记Cp公式，不是可拖动输入、探头曲线或生成模型；只有铜铝采用相同质量/初温，冰不加入同条件对照。",
+      "inputRequirement": "自有完整热源头/样品与三个固定port；NIST298.15K铜385.083479137046、铝897.1414261323531 J/(kg·K)，各10g25°C；冰Ih1g0°C101.325kPa潜热333.4J/g；参数/假设公开，木纹和HDR原CC0素材。 对照仅使用同初始条件的铜铝，预设每样品40/80/120J，单火源依次供能。 清金属账后须留下两条记录容量与两个可用ID，否则开始拒绝且状态保持。",
+      "scopeLimit": "铜/铝仅25–60°C常温Cp近似，冰仅0°C熔化；已吸收10W均匀零散热，默认×1、暂停可切×4观察。样品质量/初温不同，不称三个同条件实验。状态是计算量；温度条、热量环、蓝焰和热流箭头为教学示意，非探头读数、火焰温度、燃烧/化学预测、真实热场、冷却或流体。 同热量对照是按钮启动的顺序流程，不增加鼠标拖放验收或双火源同时供能；温升图只读。 对照剂量选择、进行步骤/完成标签与观察倍率不保存在schema；保存热量/账本，重开按Q恢复状态点并以×1观察，不续跑临时对照。 普通开始、单样品重试和原生接口释放也检查一条输入所需ID余量，编号耗尽启动前拒绝并保留整态。",
+      "acceptance": "0.10.0已有验收：三接口真实鼠标释放与错位拒绝，金属60°C/冰融尽截止，整体撤销重做/Escape、重置、本机与合法非法JSON、三视角和稳定PNG；当时107产品/16仓库/14科学素材检查通过。0.10.1完整112产品回归（含材料核心17）与独立科学素材15检查通过；新温度/供能反馈、三接口真实拖放吸附、累计读数、三样品重新观察/恢复以及×1/×4桌面实际操作已验收。 0.10.2对照新增9项核心测试与完整121项产品回归通过，40/80/120J顺序对照、温升图状态点、两阶段取消、部分暂停与整次撤销重做已完成1280×720桌面真实操作验收；容量不足拒绝和冰账保持通过。稳定态保存重开、曲线按Q恢复和普通供能回归本轮已验收，设备/故障/离线/性能与精确外部时钟专项继续分别记录。 0.10.2编号耗尽边界实际验收：合法导入nextId=1000000后普通开始/单样品重新观察禁用并明确原因；原生拖火源从冰到铝命中时启动前拒绝，蓝焰未开，全JSON保持导入基线，不重置、丢账或移位。再次导入/保存/重载精确恢复原实验。 0.10.2本轮重新运行独立科学/素材核查15/15通过，功率、质量、Cp与冰潜热参数未新增或改变；121项产品测试含原材料17项与新增对照9项。",
+      "releaseScope": "0.10.2增加同热量对照：选择每样品40/80/120J（默认40J），一只10W火源先铜后铝依次供能；两者各10g、从25°C开始。启动先清铜铝能量及相关旧账，冰和冰账保持。重置、铜输入与铝输入合为一条事务，取消恢复原完整基线，暂停提交已经输入的部分，一次撤销/重做恢复整次对照。 只读温升图横轴为Q=0–340J、纵轴25–60°C，铜曲线止于134.779J/60°C、铝止于313.999J/60°C，当前点随实际热量更新。它呈现登记Cp公式，不是可拖动输入、探头曲线或生成模型；只有铜铝采用相同质量/初温，冰不加入同条件对照。 0.10.2对照新增9项核心测试与完整121项产品回归通过，40/80/120J顺序对照、温升图状态点、两阶段取消、部分暂停与整次撤销重做已完成1280×720桌面真实操作验收；容量不足拒绝和冰账保持通过。稳定态保存重开、曲线按Q恢复和普通供能回归本轮已验收，设备/故障/离线/性能与精确外部时钟专项继续分别记录。 0.10.1七项可见反馈与单样品重试的桌面验收（112产品/17材料/15参考）保留，0.10.0原主流程与稳定保存验收仍有独立记录。",
+      "implementationFiles": [
+        "../web/materials/core.js",
+        "../web/materials/scene.js",
+        "../web/materials/app.js",
+        "../web/materials/reference-data.json",
+        "../web/materials/comparison.js",
+        "../web/materials/comparison-view.js"
+      ],
+      "sceneEntry": "../web/materials.html",
+      "validation": "materials-comparison-validation.json",
+      "browserValidation": "0.10.0 bounded-functional-and-browser-validated (native-three-port/response/whole-state-recovery/JSON/cameras/stable-PNG; then 107-product/16-root/14-reference checks); 0.10.1 material-core17 and independent-reference15 passed, 112-product regression passed and seven experience fixes desktop-browser-validation passed; device/fault/offline/performance/download/external-clock-calibration remain separate; 0.10.2 comparison-core9 / product121 passed, equal-dose40-80-120 / plot / stage-cancel / partial-pause / single-undo-redo / capacity-rejection / ice-preservation desktop-main-flow validated; stable-save-reload / current-Q-plot-recovery / manual-ice-heating-Escape / original-workspace-restoration validated",
+      "historicalValidations": [
+        "materials-validation.json",
+        "materials-feedback-validation.json"
+      ]
+    },
+    {
+      "capabilityId": "C22",
+      "name": "X光图上的拖动放大",
+      "family": "同手势不同语义",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "education-viewport",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "图像视口矩阵与指针锚定缩放",
+      "inputRequirement": "有来源和许可的真实X-ray JPEG；本地打包CC0手部与胸部侧位原片",
+      "scopeLimit": "二维JPEG视口，保留源像素；亮度、对比度、反相是显示调整，不是DICOM窗宽窗位、诊断或影像重建",
+      "acceptance": "指针锚定缩放，平移和模式切换后原图坐标一致；取消、一次撤销、保存重开与本地配置保持视口和显示状态",
+      "releaseScope": "影像工作台：滚轮锚定缩放、缩放工具上下拖动、平移工具拖动、适应画面与1:1；两张真实CC0影像与显示调整在本地运行。",
+      "implementationFiles": [
+        "../web/imaging/app.js",
+        "../web/imaging/core.js",
+        "../web/assets/imaging/manifest.json"
+      ],
+      "validation": "imaging-validation.json",
+      "browserValidation": "bounded-native-input-validated; see imaging-validation.json",
+      "sceneEntry": "../web/imaging.html"
+    },
+    {
+      "capabilityId": "C23",
+      "name": "X光图上的拖动测量",
+      "family": "同手势不同语义",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "education-viewport",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "视口逆变换、测量点与像素间距或标尺校准",
+      "inputRequirement": "原始图像和图像坐标；毫米转换必须由用户提供可信的已知参考长度",
+      "scopeLimit": "JPEG没有可靠PixelSpacing，默认仅px；用户校准mm明确标记，不推定临床精度或把JPEG DPI当作物理尺度",
+      "acceptance": "两点与端点拖动使用原图坐标；同一标注在缩放和平移后长度不变；校准前后单位明确，参考线、撤销、保存与配置恢复一致",
+      "releaseScope": "影像工作台：拖动绘制测量线、拖拽端点、测量清单与删除；原图像素长度默认px，用户提供已知参考才转换mm；校准和标注随本地图像配置保存。",
+      "implementationFiles": [
+        "../web/imaging/app.js",
+        "../web/imaging/core.js",
+        "../web/assets/imaging/manifest.json"
+      ],
+      "validation": "imaging-validation.json",
+      "browserValidation": "bounded-native-input-validated; see imaging-validation.json",
+      "sceneEntry": "../web/imaging.html"
+    },
+    {
+      "capabilityId": "C24",
+      "name": "汽车灯光开关",
+      "family": "产品功能探索",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "scene-runtime",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "车灯材质和光源状态绑定",
+      "inputRequirement": "授权汽车网格、灯组和灯光数据",
+      "scopeLimit": "一个授权概念车型的发光灯组与投射光，视觉亮度参数不代表工程照度",
+      "acceptance": "鼠标点击或开关改变灯组发光与地面光束；亮度、撤销、保存与重开一致",
+      "releaseScope": "汽车展厅：点击灯具或车灯开关，0–300亮度参数绑定发光材质、两束实际投射光与阴影；前灯随盖板的原始组件关系运动。",
+      "implementationFiles": [
+        "../web/showroom/app.js",
+        "../web/showroom/scene.js",
+        "../web/showroom/core.js"
+      ],
+      "validation": "car-showroom-validation.json"
+    },
+    {
+      "capabilityId": "C25",
+      "name": "拖车查看不同角度",
+      "family": "产品功能探索",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "scene-runtime",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "汽车轨道相机或受约束车体旋转",
+      "inputRequirement": "完整汽车网格",
+      "scopeLimit": "完整概念车网格上的相机导航；不推断照片未知视角",
+      "acceptance": "真实拖动环绕、滚轮缩放、右键平移和六个视角；取消、撤销、保存重开与配置备份保持相机一致",
+      "releaseScope": "汽车展厅：拖动环绕、滚轮缩放、右键平移，六个注册相机预设；导航手势合并为一次编辑，配置包含实际位置与目标。",
+      "implementationFiles": [
+        "../web/showroom/app.js",
+        "../web/showroom/scene.js",
+        "../web/showroom/core.js"
+      ],
+      "validation": "car-showroom-validation.json"
+    },
+    {
+      "capabilityId": "C26",
+      "name": "打开汽车引擎盖",
+      "family": "产品功能探索",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "scene-runtime",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "铰链轴、开合限位和部件动画",
+      "inputRequirement": "汽车引擎盖、铰链及内部资产",
+      "scopeLimit": "原模型概念车机械舱的简化网格与烘焙纹理；不等于具体车型发动机构造或检修模拟",
+      "acceptance": "鼠标点击盖板或拖动滑块，原装铰链0–60°限位开合；机械舱网格实际存在，开度撤销、保存重开与备份恢复一致",
+      "releaseScope": "汽车展厅：原BodyHood独立部件沿局部铰链X轴连续开合，子部件与车灯一起运动；独立Engine留在车身，通过前舱近景查看简化机械结构。",
+      "implementationFiles": [
+        "../web/showroom/app.js",
+        "../web/showroom/scene.js",
+        "../web/showroom/core.js",
+        "../web/assets/car/inspection.json"
+      ],
+      "validation": "car-showroom-validation.json"
+    },
+    {
+      "capabilityId": "C27",
+      "name": "猫的颜色纹理变成工具",
+      "family": "对象变成工具",
+      "sourceEvidenceLevel": "official-description",
+      "primaryModule": "intent-tools",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "在登记猫照片的归一化原图坐标中保留可见矩形选区，从真实像素建立柔边纹理印章；在1200×900固定画纸坐标Canvas2D目标图层中点击/拖动重复落印，由有限矩形试片蒙版约束范围。",
+      "inputRequirement": "OboeBlanket的CC0 Cat in towel本地整幅sRGB展示派生图、可见用户选区与登记画纸/试片范围。",
+      "scopeLimit": "仅用户明确选择的图像纹理取样；不自动识别毛发、移植猫形态或提取任意对象的语义风格，不把图像笔刷称为三维材质重建。",
+      "acceptance": "真实鼠标点击印章与拖印、重新框选后调色板变化；已有每笔来源保持，局部范围外变化0，撤销/重做PNG完全一致；保存重开JSON和PNG一致。设备持笔取消、触屏/压感、容量/硬件/断网/下载专项仍待验。",
+      "releaseScope": "0.7.0已验收：真实CC0猫照片可见选区取样为持续纹理印章；整纸/左右矩形试片与独立纹理图层、逐笔记录、取消/撤销保存。点击和持续拖印、范围外变化0、重开JSON与1200×900 PNG完全一致；设备取消等专项待验。",
+      "sourceEvidenceNote": "官方论文§3 Redefining the mouse文字描述点击猫后，后续点击应用毛色与纹理；不是已核实的视频逐帧演示。",
+      "browserValidation": "bounded-functional-and-browser-validated; held-Escape/blur/pointer-cancel/touch/pressure/multi-browser/capacity/performance/offline/download pending separately",
+      "validation": "creative-validation.json",
+      "sourceUrl": "https://arxiv.org/html/2609.00776v1#S3.SS0.SSS0.Px5",
+      "implementationFiles": [
+        "../web/creative/core.js",
+        "../web/creative/renderer.js",
+        "../web/creative/app.js"
+      ]
+    },
+    {
+      "capabilityId": "C28",
+      "name": "画作风格变成绘画工具",
+      "family": "对象变成工具",
+      "sourceEvidenceLevel": "official-description",
+      "primaryModule": "intent-tools",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "在登记Met画作的可见矩形选区中采样五色调色板、亮暗主方向和对比纹理，结合手势方向、笔刷直径及透明度构建有限参数笔刷，持续工具状态驱动1200×900固定画纸坐标Canvas2D局部绘制。",
+      "inputRequirement": "Met Open Access的梵高436535《麦田与柏树》、西斯莱437680《维勒讷夫拉加伦桥》参考；塞尚435882《苹果与报春花盆静物》作底图，亦可用空白画纸；本地图片与馆藏API依据。",
+      "scopeLimit": "仅可解释的像素调色板、亮暗纹理与方向参数笔刷；不宣称复现艺术家风格、任意神经风格迁移、语义改写或全画面自动生成。",
+      "acceptance": "两幅参考画作实际持续绘画；相同路径只换参考产生真实PNG差异，已有笔画不受后续工具变更影响；局部范围外变化0，隐藏/清空图层、底图切换、逐笔撤销与保存恢复、实际1200×900 PNG通过。设备/容量/硬件等专项另验。",
+      "releaseScope": "0.7.0已验收：Met公版画作可见选区的五色/亮暗方向与手势参数笔刷；两图层及整纸/矩形试片，直径8–140px、透明度15–100%。两参考实际鼠标绘画、同路径仅换来源PNG有真实差异、逐笔撤销保存恢复已通过；非艺术家风格复现或任意神经迁移。",
+      "sourceEvidenceNote": "官方论文§3将点击画作后可能按其风格绘画作为条件文字举例；不是已核实的视频证据，本产品缩窄为有限参数笔刷。",
+      "browserValidation": "bounded-functional-and-browser-validated; held-Escape/blur/pointer-cancel/touch/pressure/multi-browser/capacity/performance/offline/download pending separately",
+      "validation": "creative-validation.json",
+      "sourceUrl": "https://arxiv.org/html/2609.00776v1#S3.SS0.SSS0.Px5",
+      "implementationFiles": [
+        "../web/creative/core.js",
+        "../web/creative/renderer.js",
+        "../web/creative/app.js"
+      ]
+    },
+    {
+      "capabilityId": "C29",
+      "name": "点击对象触发浮起",
+      "family": "动作触发与对象联动",
+      "sourceEvidenceLevel": "official-comparison",
+      "primaryModule": "motion-composition",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "稳定食材拾取与状态机；检测浮起通路、受控运动曲线、原姿态保留、归位或取消；检视期间暂停全部物理；观察镜头临时抬升目标点，归位/取消恢复原相机，不写入稳定存档",
+      "inputRequirement": "登记食材网格、稳定实例ID、允许检视状态、近似包络与观察位",
+      "scopeLimit": "受控路径与球形包络避碰，不生成新动作、形状或食材；受阻拒绝检视。镜头临时跟随，归位/取消恢复原视角；临时食材姿态与镜头不写入稳定存档。",
+      "acceptance": "实际点击目标/空白、拖动与点击分流、下落/受阻拒绝、浮起形状和其他食材保持、归位/取消精确恢复；主工作流已实际验收，容量/设备/性能等专项仍待完成",
+      "implementationFiles": [
+        "../web/kitchen/core.js",
+        "../web/kitchen/physics.js",
+        "../web/kitchen/scene.js",
+        "../web/kitchen/app.js"
+      ],
+      "validation": "kitchen-validation.json",
+      "browserValidation": "bounded-functional-and-browser-validated; capacity/device-cancellation/paused-drag/right-pan/touch/offline/performance/download pending separately",
+      "releaseScope": "只允许settled且通路无阻的已组合食材缓慢浮起检视；镜头临时跟随，归位/取消恢复原食材姿态与视角，临时镜头不写入稳定存档。其他食材保持原位置，不是任意元素动作生成。"
+    },
+    {
+      "capabilityId": "C30",
+      "name": "拖鱼改变位置",
+      "family": "动作触发与对象联动",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "motion-composition",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "射线拾取鱼身与固定水层指针投影；连续位置/朝向反馈，水域边界与登记礁石的保守包络及扫掠约束；有效释放保留落点，一次事务取消/撤销重做。",
+      "inputRequirement": "Quaternius CC0完整小丑鱼与六骨节原Swim、Kenney CC0三块完整石礁及Poly Haven沙纹理；固定水平水层、水域边界和登记礁石保守包络。",
+      "scopeLimit": "固定水平水层中的完整登记鱼模型；水域边界和三个礁石采用保守包络与逐段扫掠检查，鱼体不会自动绕路或改写合法落点。潜水员关联响应另由C31验证，不提供自动鱼群或海洋流体仿真。",
+      "acceptance": "真实三次原生鱼体拖动形成不同位置与heading，一次撤销/重做完整JSON精确；按住鱼体Escape、礁石受阻非法释放和越界非法释放均全JSON恢复。零位移不记录，相机原生环绕与按住Escape、三视角、本机保存重载、非法结构导入、编号耗尽拒绝及重置恢复已实际验收；40/40合法完整链导入保值精确，原生鱼体拖动因满账拒绝且完整JSON保持，相机不误转。自然1280×720无横向溢出、warn/error为空，1443×969真实PNG；12项水下核心、133项完整产品、16项仓库测试与11项独立素材核查通过。",
+      "sceneEntry": "../web/underwater.html",
+      "validation": "underwater-validation.json",
+      "browserValidation": "bounded-desktop-browser-validated; native-three-drags/heading/exact-undo-redo/held-fish-Escape/reef-and-boundary-invalid-release/zero-displacement/native-orbit-and-held-camera-Escape/three-views/exact-save-reload/invalid-JSON/id-limit/reset/native-PNG passed; native-full-record-capacity-refusal-with-camera-unchanged passed; device-loss/touch/multi-browser/storage/offline/performance/download pending separately",
+      "implementationFiles": [
+        "../web/underwater/core.js",
+        "../web/underwater/scene.js",
+        "../web/underwater/app.js"
+      ],
+      "releaseScope": "0.11.0受控接入：直接按住小丑鱼拖动，位置随指针、朝向随路径改变；有效松手精确保留最终落点，非法释放或Escape恢复完整拖动起点。一次拖动一次记录和历史，取消/零位移不记账；本机/严格JSON保存恢复稳定鱼位、朝向、路径与相机。"
+    },
+    {
+      "capabilityId": "C31",
+      "name": "潜水员跟随鱼的关联响应",
+      "family": "动作触发与对象联动",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "motion-composition",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "specialized-research",
+      "algorithm": "固定水层内目标关系、有限visibility-graph安全路径、逐段扫掠、登记间距、限速/连续转向与Hover/Swim有限骨架混合；一次拖鱼与潜水员停稳或安全停留为一次事务。",
+      "inputRequirement": "完整Quaternius CC0的53骨人体、本项目完整潜水装具与Hover/Swim动作、三登记礁石保守圆包络和小丑鱼状态。",
+      "scopeLimit": "单潜水员和单鱼位于固定水平水层；目标间距1.00场景单位，到位带0.025。较大潜水员包络使左右通路可断开，有限路径未找到合法路线时停留，不穿礁、不瞬移。无通用IK、海洋流体、生物预测或开放式动作生成；稳定配置不保存骨架循环相位。",
+      "acceptance": "真实拖鱼和松手后鱼位/heading不变而潜水员连续移动；绕礁到位、右侧不可达停留及回可达处恢复；非法穿礁/越界与拖动/释放追随阶段Escape整段双主体恢复，一次undo/redo鱼/潜水员/采样路径/相机完整JSON精确。五类非法JSON拒绝且状态不变，40条与编号耗尽鼠标拒绝不误转相机，合法v1安全初始化且旧鱼账/相机保持并标legacy。156完整产品、跟随11、配置12及潜水员素材12检查通过；两次真实联动及观察相机的稳定v2保存重开完整JSON一致；实际PNG1443×969解码通过、warn/error为空。用户旧v1鱼/路径/ID及最新custom相机保持，潜水员安全初始化并标legacy，迁移后v2保存重开一致。",
+      "releaseScope": "0.12.0受控接入：亲手拖鱼，完整潜水员连续转向并沿可见安全路径追随；鱼合法松手保留落点，潜水员继续到目标间距或在不可达处明确停留。整次双主体联动可取消和一次撤销重做，稳定配置v2保存两者位置/heading、合法采样路径及相机；旧v1只初始化安全潜水员，不伪造旧跟随。",
+      "sceneEntry": "../web/underwater.html",
+      "sourceDocument": "diver-sources.md",
+      "validation": "diver-validation.json",
+      "browserValidation": "bounded-core-and-desktop-main-flow-validated; stable-v2-save-reload/actual-PNG/v1-latest-workspace-preservation passed; recatch/touch/multi-browser/blur/lostcapture/storage-fault/offline/download/performance pending separately",
+      "implementationFiles": [
+        "../web/underwater/follower.js",
+        "../web/underwater/workspace.js",
+        "../web/underwater/scene.js",
+        "../web/underwater/app.js"
+      ]
+    },
+    {
+      "capabilityId": "C32",
+      "name": "上拖滑板触发骑手跳跃",
+      "family": "动作触发与对象联动",
+      "sourceEvidenceLevel": "official-figure",
+      "primaryModule": "motion-composition",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "登记滑板的原生净向上拖动阈值与高度映射；七骨节原rig有限姿态混合和本地准备/抛物线空中/落地状态机，骑手与滑板共同升降并对齐支撑；完整落地才提交稳定练习记录和一次事务，取消回原站姿，预览/重播不重复记账。",
+      "inputRequirement": "Kenney Mini Skate 1.2 CC0完整角色、原七骨节rig/登记动作、滑板与场地；固定平地练习点、可命中板面、有限手势与展示单位。",
+      "scopeLimit": "只在固定平地练习点组合有限骨架姿态与受控轨迹；原rig无膝/脚骨节，skate-air只是循环腾空姿态，不宣称原厂完整ollie、脚部IK、刚体接触求解、越障或任意动作生成。高度为展示单位而非现实物理标定。",
+      "acceptance": "真实68px/160px上拖形成约0.5588/1.1展示高度，完整落地共两条记录；10px短拖/40px下拖拒绝、真实动作中Escape、首条一次撤销重做与重播结束均完整JSON精确保持。辅助逐帧预览准备/腾空/落地公开gap0、三个相机预设实际显示；保存刷新完整JSON一致，height99拒绝不变、合法height0.3/相机3导入一次恢复通过。3,003帧原蒙皮/原板顶点有限支撑几何、95产品/16仓库测试通过；原生设备/存储故障/断网/性能专项另验。 原生空白环绕/滚轮均一次撤销完整JSON精确恢复，1467×969真实PNG及两条实际练习总览JSON已留档。",
+      "releaseScope": "0.9.0已验收：净向上至少24px、横向偏移绝对值不超过100px，24–160px对应0.3–1.1展示高度，速度仅记录。完整原骨架角色与滑板同步准备/腾空/落地，只有有效手势完整落地新增一次记录；动作中Escape回站姿，辅助预览/重播不增条目，最多40条。真实手势、一次撤销重做、逐帧预览/重播、本机与合法非法JSON主流程已验收；3,003帧仅保守支撑点对板面，非整足IK/物理；设备等专项另验。",
+      "implementationFiles": [
+        "../web/skate/core.js",
+        "../web/skate/scene.js",
+        "../web/skate/app.js"
+      ],
+      "sceneEntry": "../web/skate.html",
+      "validation": "skate-validation.json",
+      "browserValidation": "bounded-functional-and-browser-validated; native-jumps/rejections/Escape-cancel/undo-redo/preview-and-replay/exact-save-refresh-and-valid-invalid-JSON/three-preset-cameras/native-orbit-and-wheel-with-exact-undo/1467x969-PNG/public-two-trial-JSON passed; 3003-frame-original-skin-and-board-support-point-geometry plus 95-product-and-16-root-tests passed; held-input-cancellation/touch/multi-browser/storage/offline/performance/download pending separately"
+    },
+    {
+      "capabilityId": "C33",
+      "name": "商店随意图适配",
+      "family": "体验适配与流程",
+      "sourceEvidenceLevel": "official-prospect",
+      "primaryModule": "adaptive-workflow",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "all/reading/compact/natural四种显式策展偏好；作者标签加权，未锁槽位稳定排序，锁定原索引与同分当前相对顺序保持，逐项公开标签得分理由。",
+      "inputRequirement": "六件设计素材的作者策展外观/用途标签、四偏好权重与用户锁定/选择/收藏状态。",
+      "scopeLimit": "原来源是官方商店适配设想；本轮仅有限显式偏好/可解释规则，不推断隐私偏好、生成任意品牌环境或预测购买意愿。",
+      "acceptance": "真实阅读角/compact/natural得到不同排序，锁定原位与选品保持；预览取消、应用一次undo/redo及保存重载完整JSON通过。硬件、故障注入/坏store、长期性能与断网下载专项另验。",
+      "releaseScope": "0.8.0已验收：阅读角/紧凑陈列/自然质感依作者标签和固定权重整理未锁槽位，锁定/选择/收藏保持；预览取消不改陈列，应用一条事务可撤销。外观策展不代表实物材质认证、空间尺寸适配或潜在偏好推断。",
+      "browserValidation": "bounded-functional-and-browser-validated; all-six-registered-roundtrips passed; five-target-full-state-comparisons/held-Escape/blur/lostcapture/touch/multi-browser/quota/corrupt-store/offline/performance/download pending separately",
+      "validation": "collection-validation.json",
+      "implementationFiles": [
+        "../web/collection/core.js",
+        "../web/collection/app.js",
+        "../web/collection/render-products.js"
+      ]
+    },
+    {
+      "capabilityId": "C34",
+      "name": "教程按进度调整与恢复",
+      "family": "体验适配与流程",
+      "sourceEvidenceLevel": "official-prospect",
+      "primaryModule": "adaptive-workflow",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "product-design",
+      "algorithm": "教程状态图、完成条件、检查点和版本迁移",
+      "inputRequirement": "已设计的教程内容和任务状态",
+      "scopeLimit": "原来源是官方设想；不承诺自动生成任意教程",
+      "acceptance": "重开、恢复、跳步、错误与版本升级",
+      "releaseScope": "当前客厅五步操作引导；实际有效编辑记录进度，保存重开和项目导入恢复，支持收起与重新开始",
+      "implementationFiles": [
+        "../web/studio/core.js",
+        "../web/studio/app.js",
+        "../web/index.html"
+      ],
+      "validation": "product-validation.json"
+    },
+    {
+      "capabilityId": "C35",
+      "name": "按意图改变场景或转场",
+      "family": "体验适配与流程",
+      "sourceEvidenceLevel": "official-description",
+      "primaryModule": "intent-tools",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "有限中文前缀+九登记场景别名、固定任务说明与SCENES路径；严格version/token/sceneId/shop检查点，16位小写hex行程绑同源页面，只读桥构建固定选品返回入口；目标工作台独立保存稳定配置。 0.16.1先比较STORE/TRIP原文快照再写入，已检测冲突暂停并只读恢复最新；坏TRIP校验JSON语法和严格v1业务，原raw可备份且明确重建，不作为原子跨窗口锁。 0.17.0整套工作台备份是工作流支撑：固定陈列加九目标十记录的已保存raw、一份12MiB以内文件、逐项状态/差异与选择恢复、恢复前本机备份；未选及空项不删除，坏原文原样抢救但禁恢复。导入前关闭其他编辑页、恢复后重开；不保存进行中动作、撤销或TRIP，不作为十记录原子事务或全局同步。本轮公开文件与选择恢复已实际验收，故障与设备边界另列。",
+      "inputRequirement": "九个已交付本地目标、明确任务/有限去向、操作结果边界说明与严格检查点，各场景独立存档。 整套文件使用固定十个已保存原文，不从目标页活动状态采集。",
+      "scopeLimit": "只到九登记同源目标并返回原陈列，新增滑板/材料/水下；不会生成新场景、自动植入物品或续播动作/供能/追随。转场支撑不增加能力或场景计数，C19购物、真人商业及任意人体/尺寸另行研发。 整套备份作为支撑不增加计数，试衣/真人与行程令牌不收集。",
+      "acceptance": "未知“去月球”和复合“去客厅和料理”拒绝、去向取消精确保持；六目标真实命令进入与匹配入口返回，陈列主字段精确恢复并记录最近场景。料理原9食材、相机与ID完整JSON前后完全一致；22项返回桥协议检查通过。其余五目标自身完整JSON前后对照、设备、存储故障/坏store、离线性能下载另验。 0.16.0另核对九任务预览、快捷任务、最近去向和取消；新增滑板/材料/水下真实往返与原陈列字段恢复、进入前、目标页与返回后重开公共JSON稳定配置一致已验收；预览取消和复合/否定/外部URL拒绝、最近去向已实测；195产品/16仓库通过。本轮只验三个新增目标，不重写旧六证据；动作中往返、设备/实际存储故障/多窗口等继续专项。 0.16.1实际旧窗口冲突常驻提示、保存/进入禁用、原配置备份和pagehide后新记录保持已验；living含完整A/B、showroom、imaging、landmark、kitchen、creative六目标公开完整JSON before=entered=reopened全部一致，返回陈列仅lastScene变化。218项完整产品通过，含23项新存储测试；16项仓库检查通过；故障/容量/回滚仅Node模拟，并发非原子。 最终读取最新的常驻提示隐藏、保存启用、undo禁用及另一窗口lamp选品正确加载已实测；还原两项原选品保存，创作最终初始化后备份正常且完整JSON保持。 0.17.0新增整套文件导出、只检查不写入、逐项差异与选择恢复、恢复前备份、坏项/空项和陈旧变化拒绝；本轮实际验收见新增整套备份记录。 0.17.0实际公开导出十项有效原文并通过文件选择器打开：同内容十项相同/应用禁用；两差异选择恢复仅陈列/展厅变化，其余八原文保持，坏地标与空料理禁恢复，粘贴原文件后十原文逐字回基线。取消展厅选择仅恢复陈列；另一窗口更新使旧预览禁恢复、旧备份链接撤销，读取最新后十原文保持。243/243完整产品（新增25备份）与16/16仓库通过；故障/容量/十二基线键变化/回滚仅Node模拟。下载落盘/剪贴板完整性与九渲染页逐一重开未验，保持关闭其他编辑页和恢复后重开要求。 0.17.0最终发布版重新构建/加载后十份raw仍逐字等于原基线；粘贴{bad JSON}明确显示中文“未预览：文件不是完整JSON，请选择整套工作台导出的有效备份”，错误输入保留可修正。界面显示“10 / 10份存档已保存”，1280×720完整十行截图与公开完整状态对照已留档；当前陈列页console warn/error为空。 0.17.0真实浏览器还核对了预览后修改粘贴文本：输入{edited after preview}立即禁用恢复按钮、撤销旧的恢复前备份链接并提示重新检查；随后读取备份，十份原始raw完整一致。",
+      "releaseScope": "0.8.0有限场景指令与返回检查点：客厅、展厅、影像、地标、料理、创作均真实进入/返回，陈列/锁定/选择/选品/偏好精确恢复并记录最近场景；原9件料理及相机/ID完整JSON前后精确保持，其余五目标自身完整JSON对照另验。未知/复合指令拒绝，去向取消不改状态。不生成新场景或自动植入商品。 0.16.0深化：九目标有限任务、三快捷入口、全部任务/预览/最近去向和返回检查点；新增三目标实际往返、进入前、目标页与返回后重开独立稳定配置一致和原陈列恢复已验收，历史六目标事实保持。 0.16.1既有工作流补全：检测陈列/检查点变化暂停旧写，保留备份、明确读取最新/恢复坏STORE/重建坏TRIP；原六目标完整JSON当前6/6核查已通过，创作载入期按钮保护最终新版已真实复验，加载完成后保存/备份启用且备份JSON保持。 0.17.0整套工作台备份是工作流支撑：固定陈列加九目标十记录的已保存raw、一份12MiB以内文件、逐项状态/差异与选择恢复、恢复前本机备份；未选及空项不删除，坏原文原样抢救但禁恢复。导入前关闭其他编辑页、恢复后重开；不保存进行中动作、撤销或TRIP，不作为十记录原子事务或全局同步。本轮公开文件与选择恢复已实际验收，故障与设备边界另列。 0.17.0实际公开导出十项有效原文并通过文件选择器打开：同内容十项相同/应用禁用；两差异选择恢复仅陈列/展厅变化，其余八原文保持，坏地标与空料理禁恢复，粘贴原文件后十原文逐字回基线。取消展厅选择仅恢复陈列；另一窗口更新使旧预览禁恢复、旧备份链接撤销，读取最新后十原文保持。243/243完整产品（新增25备份）与16/16仓库通过；故障/容量/十二基线键变化/回滚仅Node模拟。下载落盘/剪贴板完整性与九渲染页逐一重开未验，保持关闭其他编辑页和恢复后重开要求。",
+      "browserValidation": "0.16.1-stale-window-warning/save-and-enter-disabled/original-window-public-backup/pagehide-latest-record-preserved browser verified; all-six-original-targets living-with-full-A-B/showroom/imaging/landmark/kitchen/creative before-entered-reopened-full-JSON exact; returned collection except lastScene exact; creative-loading-disabled-final-browser-repeat passed: enabled after init, backup dialog and full JSON equal baseline; 218 product tests passed including 23 new storage tests; 16 repository tests passed; raw-compare-CAS non-atomic; capacity/fault/rollback Node simulations only; active-action/device/offline/performance separately pending; latest-reload-banner-cleared/save-enabled/undo-disabled/other-window-lamp-loaded and original-wishlist-restored browser verified; 0.17.0 ten-raw-public-export/actual-file-open/unchanged-preview/two-selected-restore/invalid-null-row-disabled/unselected-preserved/paste-ten-raw-baseline/stale-preview-disabled/raw-original-restored browser verified; 243 product/16 repository/25 backup tests passed; fault-quota-rollback-twelve-guard-keys Node simulations only; download-clipboard-all-nine-rendered-reopen unverified; final-published-build-reload-ten-raw-exact/Chinese-malformed-paste-rejection/input-preserved/ten-row-1280x720-screenshot/current-collection-console-empty verified; edited-paste-after-preview-immediately-disables-apply/revokes-old-before-backup/recheck-prompt/ten-original-raw-unchanged browser verified; module-load-failure-text-preservation source-reviewed only",
+      "validation": "workspace-backup-validation.json",
+      "implementationFiles": [
+        "../web/collection/core.js",
+        "../web/collection/app.js",
+        "../web/collection/render-products.js",
+        "../web/collection/scene-return.js",
+        "../web/collection/storage.js",
+        "../web/collection/workspace.js",
+        "../web/collection/workspace-ui.js"
+      ],
+      "historicalValidations": [
+        "collection-validation.json",
+        "collection-workflow-validation.json",
+        "collection-workflow-completion-validation.json"
+      ],
+      "historicalBrowserValidation": "0.8.0-six-destination-roundtrips historically validated; 0.16.0-new-three-destination-real-roundtrips/public-before-entered-reopened-stable-JSON/collection-return-except-lastScene/preview-cancel/compound-negative-externalURL-rejection/recent-task passed; all-nine-task-UI observed; 195 product/16 repository tests passed; other-old-five-full-state/active-action-transitions/held-Escape/blur/lostcapture/touch/multi-browser/multi-window/quota/corrupt-store/offline/performance/download separately pending"
+    },
+    {
+      "capabilityId": "C36",
+      "name": "太阳位置与场景光照联动",
+      "family": "时间与光照",
+      "sourceEvidenceLevel": "official-video-observation",
+      "primaryModule": "scene-runtime",
+      "implementationStatus": "implemented-bounded",
+      "workClass": "bounded-engineering",
+      "algorithm": "太阳方位和高度绑定天空、直射光与阴影",
+      "inputRequirement": "场景、太阳控制器和渲染参数",
+      "scopeLimit": "原录像未明确全部按下与松开事件；真实日照另需位置日期",
+      "acceptance": "输入与光照同步、其他编辑保持和保存恢复",
+      "releaseScope": "可拖太阳方向与光照绑定，设计参数不等于真实太阳位置",
+      "implementationFiles": [
+        "../web/studio/core.js",
+        "../web/studio/scene.js",
+        "../web/studio/app.js"
+      ],
+      "validation": "product-validation.json"
+    }
+  ],
+  "firstAcceptanceTask": {
+    "scene": "高质量客厅",
+    "objective": "为阅读角制作两套完整设计方案，并保存后重新打开。",
+    "workflow": [
+      "选择并移动灯具",
+      "调整挂画和植物尺寸",
+      "更换沙发材质与墙色",
+      "调整太阳、时间与室内灯光",
+      "改变视角并比较方案",
+      "撤销、重做、取消与保存",
+      "重新打开后恢复全部编辑状态"
+    ],
+    "conditions": [
+      "使用有许可的专业真实资产，完整几何包含可探索的隐藏区域",
+      "动态光照与材质质量实测，固定烘焙不得代替动态响应",
+      "真实连续输入、越界与取消可测试",
+      "保存恢复后对象、材质、灯光、相机与业务状态一致",
+      "指定设备与分辨率后测量交互延迟和帧时间，未测前不承诺帧率",
+      "阻断第三方网络后仍可完成工作流",
+      "占位模型仅用于内部验证，不作为优秀场景交付"
+    ],
+    "status": "functional-workflow-verified",
+    "remainingGates": [
+      "目标硬件延迟、帧时间与显存基准未完成",
+      "操作系统断网下的完整工作流未验收；当前采用本地打包与CSP第三方连接限制",
+      "独立第三方画面质量评价未执行",
+      "完整动态间接光与反射不在首版范围"
+    ]
+  },
+  "phases": [
+    {
+      "id": 1,
+      "name": "场景核心与客厅",
+      "deliverable": "完整客厅工作流及画面、交互、状态、独立运行验收",
+      "implementationStatus": "functional-first-release"
+    },
+    {
+      "id": 2,
+      "name": "工具与专业场景",
+      "deliverable": "图像放大与测量、车辆、地标和料理组合",
+      "implementationStatus": "bounded-functional-and-browser-validated; automotive, imaging and landmark connected; advanced composition pending"
+    },
+    {
+      "id": 3,
+      "name": "穿搭与主体关系",
+      "deliverable": "已标定三维人体穿搭、商品联动、跟随和跳跃专项验收",
+      "implementationStatus": "partial-implemented; C17/C18 fixed-avatar garments/paired-footwear and C31/C32 bounded motion validated, C19 pending"
+    },
+    {
+      "id": 4,
+      "name": "进阶算法与适配",
+      "deliverable": "纹理与风格工具、材料响应、有限指令、陈列和教程适配；当前0.16.0主线为九目标任务与检查点往返，保留既有能力和各目标稳定配置",
+      "implementationStatus": "bounded capabilities connected; 0.16.0 adaptive-workflow current focus; three new destination roundtrips and before-entered-reopened stable public JSON verified; active-action/device/storage/multi-window and open algorithms/commercial/size modules pending separately"
+    }
+  ],
+  "unresolvedResearch": [
+    "任意单张照片重建与遮挡补全",
+    "人物照片上的写实换装与人体服装估计",
+    "通用风格迁移和开放式图像生成",
+    "复杂衣物接触与多主体动作质量",
+    "材料响应的适用范围与内容依据"
+  ],
+  "openDecisions": [
+    "目标设备、分辨率与性能预算",
+    "具体工期与专项算法实验预算"
+  ],
+  "planDocument": "independent-implementation.md",
+  "technicalReferences": [
+    {
+      "url": "https://github.com/mrdoob/three.js/blob/r180/src/core/Raycaster.js",
+      "supports": "鼠标拾取基础"
+    },
+    {
+      "url": "https://github.com/mrdoob/three.js/blob/r180/examples/jsm/controls/TransformControls.js",
+      "supports": "对象变换基础"
+    },
+    {
+      "url": "https://github.com/mrdoob/three.js/blob/r180/examples/jsm/loaders/GLTFLoader.js",
+      "supports": "glTF资产加载基础"
+    },
+    {
+      "url": "https://github.com/mrdoob/three.js/blob/r180/src/animation/AnimationMixer.js",
+      "supports": "动画混合基础"
+    },
+    {
+      "url": "https://rapier.rs/docs/user_guides/javascript/rigid_body_type/",
+      "supports": "运动学刚体需要额外障碍约束"
+    },
+    {
+      "url": "https://github.com/mrdoob/three.js/blob/r180/examples/jsm/controls/OrbitControls.js",
+      "supports": "当前产品相机基础，目标变换由自有指针工具执行"
+    }
+  ],
+  "currentRelease": {
+    "name": "ATELIER",
+    "date": "2026-10-06",
+    "entry": "../web/index.html",
+    "implementedBoundedIds": [
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15",
+      "C16",
+      "C17",
+      "C18",
+      "C20",
+      "C21",
+      "C22",
+      "C23",
+      "C24",
+      "C25",
+      "C26",
+      "C27",
+      "C28",
+      "C29",
+      "C30",
+      "C31",
+      "C32",
+      "C33",
+      "C34",
+      "C35",
+      "C36"
+    ],
+    "implementedBoundedCount": 35,
+    "remainingCount": 1,
+    "releaseDocument": "product-release.md",
+    "validationDocument": "product-validation.json",
+    "runtimeExternalGenerationApi": false,
+    "version": "0.17.0",
+    "integrationDocument": "integration.md",
+    "sceneEntries": [
+      "../web/index.html",
+      "../web/showroom.html",
+      "../web/imaging.html",
+      "../web/landmark.html",
+      "../web/kitchen.html",
+      "../web/creative.html",
+      "../web/collection.html",
+      "../web/skate.html",
+      "../web/materials.html",
+      "../web/underwater.html",
+      "../web/fitting.html"
+    ],
+    "webRoadmap": "../web/integration.html#roadmap",
+    "roadmapDocument": "roadmap.json",
+    "experienceChanges": {
+      "scene": "materials",
+      "version": "0.10.1",
+      "status": "desktop-browser-validated",
+      "changes": [
+        "温度看得见：金属显示大号温度、ΔT和25–60°C温度条，金属保持固态；示意环与实物材质分开。",
+        "状态看得见：火源持续显示供能或熄火状态，暂停后的状态可以继续确认。",
+        "过程看得见：空心支架底座露出蓝焰，热流箭头只作供能示意，不称真实温场。",
+        "命中更明确：释放命中圆环后吸附固定接口中心，错位不开始供能。",
+        "暂停不归零：所选样品的累计吸收热量和累计教学时间持续显示，可从已存状态继续。",
+        "终点可重看：60°C或融尽有明确提示；“重新观察铜/铝/冰”只重置该样品再开始，其余样品与热账保留，整次可取消或撤销。",
+        "默认慢速：默认×1观察，暂停后可选×4快放；倍率只改变观察速度，功率与物性仍为原10W教学模型。"
+      ],
+      "validationDocument": "materials-feedback-validation.json",
+      "historicalValidationDocument": "materials-validation.json",
+      "evidence": [
+        "../assets/atelier-materials-heating.jpg",
+        "../assets/atelier-materials-feedback-workspace.jpg"
+      ]
+    },
+    "comparisonChanges": {
+      "scene": "materials",
+      "version": "0.10.2",
+      "status": "core-and-desktop-browser-validated",
+      "changes": [
+        "0.10.2增加同热量对照：选择每样品40/80/120J（默认40J），一只10W火源先铜后铝依次供能；两者各10g、从25°C开始。启动先清铜铝能量及相关旧账，冰和冰账保持。重置、铜输入与铝输入合为一条事务，取消恢复原完整基线，暂停提交已经输入的部分，一次撤销/重做恢复整次对照。",
+        "只读温升图横轴为Q=0–340J、纵轴25–60°C，铜曲线止于134.779J/60°C、铝止于313.999J/60°C，当前点随实际热量更新。它呈现登记Cp公式，不是可拖动输入、探头曲线或生成模型；只有铜铝采用相同质量/初温，冰不加入同条件对照。",
+        "默认×1观察，暂停后可选×4；倍率只改变观察速度，10W吸收功率与schema v1热账不变。",
+        "仅保存现有schema v1样品能量、热输入记录和工作区；对照剂量选择、步骤/完成标签与观察倍率都是临时工具设定，不恢复未完成对照，图中当前点按保存Q重建。"
+      ],
+      "validationDocument": "materials-comparison-validation.json",
+      "historicalValidationDocuments": [
+        "materials-validation.json",
+        "materials-feedback-validation.json"
+      ],
+      "completed": [
+        "0.10.2新增9项同热量对照核心测试和完整121项产品回归通过；原基材17项测试仍包含在产品回归中，原15项物性/素材独立检查保持已通过结果，没有新增物性参数。",
+        "0.10.2真实按钮顺序对照40/80/120J均完成：一只火源先铜后铝，两者各10g、25°C起温，完成Q相同而ΔT不同。80J完成时铜45.8°C、铝33.9°C，每种8教学秒，Q/t仍10W。",
+        "0.10.2只读图在40J对照后两状态点同x=59.17647058823529，铜/铝y约94.354/112.987，温度不同；横轴0–340J、纵轴25–60°C及各60°C截止保持原公式边界。",
+        "0.10.2铜供能第一阶段取消完整JSON回原基线；铜已完成、铝预览的第二阶段Escape也完整恢复原基线，不留下中间铜账。",
+        "0.10.2完整40J对照一次undo/redo全JSON精确恢复。×4的40J对照第二步暂停得到铜40J/铝5.384J；一次undo精确回原120J基线，redo精确回暂停态，重置与两阶段输入仍是一条事务。",
+        "0.10.2保留39条冰记录时对照容量预检拒绝且全JSON不改；普通对照中原冰136.0359999990463J及两行冰账全程保持，不为金属对照清空冰。",
+        "0.10.2实际1280×720的80J第二阶段供能与完成截图、公开JSON备份独立留档：atelier-materials-comparison-heating.jpg、atelier-materials-comparison.jpg、atelier-materials-comparison-example.json；原两轮证据继续保留。",
+        "0.10.2稳定80J结果通过保存→重载→公开备份完整JSON逐值一致，曲线状态点按现存Q恢复，观察速度默认×1。对照剂量选择与临时完成标签不进入schema或保存；重开保留样品热量与热账，不恢复临时对照会话。",
+        "0.10.2普通冰供能冒烟测试：蓝焰可用，冰由136.036J到138.129J，铜铝80J保持；原生Escape全JSON精确回普通供能基线。",
+        "0.10.2通过公开JSON导入、保存和重载恢复原实验：冰136.0359999990463J、四行原记录、相机、火源、所选样品与nextId=5均逐值一致。",
+        "0.10.2自然1280×720视口scrollWidth=1280，无横向溢出，浏览器warn/error为空。",
+        "0.10.2编号耗尽边界实际验收：合法导入nextId=1000000后普通开始/单样品重新观察禁用并明确原因；原生拖火源从冰到铝命中时启动前拒绝，蓝焰未开，全JSON保持导入基线，不重置、丢账或移位。再次导入/保存/重载精确恢复原实验。",
+        "0.10.2本轮重新运行独立科学/素材核查15/15通过，功率、质量、Cp与冰潜热参数未新增或改变；121项产品测试含原材料17项与新增对照9项。"
+      ],
+      "pending": [
+        "设备、存储故障、离线、下载写盘、指定硬件性能、长期运行及精确外部时钟校准仍待专项。"
+      ],
+      "evidence": [
+        "../assets/atelier-materials-comparison-heating.jpg",
+        "../assets/atelier-materials-comparison.jpg",
+        "../assets/atelier-materials-comparison-example.json"
+      ]
+    },
+    "dragChanges": {
+      "scene": "underwater",
+      "version": "0.11.0",
+      "status": "core-and-desktop-browser-validated",
+      "changes": [
+        "直接鱼体拾取、固定水平水层指针投影、连续位置/朝向反馈，合法释放保留最终落点。",
+        "水域边界、三个登记礁石保守包络和逐段扫掠检查；受阻不自动绕路，非法释放或取消恢复整个拖起点。",
+        "完整路径账和稳定配置：一动作一事务，零位移/取消不记录，撤销重做、本机及严格JSON恢复鱼位、朝向、记录和相机。",
+        "完整本地授权资产与原Swim外观；无潜水员、自动鱼群或完整海洋物理，C35仍六登记去向。"
+      ],
+      "validationDocument": "underwater-validation.json",
+      "sourceDocument": "underwater-sources.md",
+      "completed": [
+        "三次真实鱼体拖动与不同朝向；整段undo/redo和按住鱼体Escape完整JSON精确恢复。",
+        "礁石受阻及越界非法释放完整恢复；零位移点击不记账。",
+        "真实空白环绕与按住相机Escape、三视角保持鱼位；保存重载、非法导入、编号耗尽拒绝、重置保留编号及一次恢复通过。",
+        "自然1280×720无横溢出，warn/error为空；1443×969真实canvas PNG已实际预览。",
+        "40/40合法完整路径链原生导入保值精确；满容量鱼体拖动拒绝且完整JSON不变，不误动相机。跨运行时方向末位舍入容差增加独立回归；12项水下核心与完整133项产品、16项仓库及11项素材检查通过。",
+        "1280×720按住拖动过程实景与初始干净工作区、三段真实原生拖动公开备份及1443×969真实PNG留档；测试后原空工作区已导入、保存、重载逐值恢复。"
+      ],
+      "pending": [
+        "失焦/lostcapture/多指、触屏、多浏览器、存储故障、完整断网、下载写盘、长期运行和指定硬件性能。"
+      ],
+      "evidence": [
+        "../assets/atelier-underwater-workspace.jpg",
+        "../assets/atelier-underwater-movement.jpg",
+        "../assets/atelier-underwater-example.json",
+        "../assets/atelier-underwater-render.png"
+      ]
+    },
+    "followChanges": {
+      "scene": "underwater",
+      "version": "0.12.0",
+      "status": "core-and-desktop-browser-validated",
+      "changes": [
+        "C31有限潜水员追随C30鼠标目标：连续转向、可见安全路径、悬停/踢腿混合、到位及不可达停留。",
+        "单鱼/单潜水员固定水平水层，目标间距1.00场景单位、到位带0.025；三礁石保守包络，有限visibility-graph可保守拒绝。",
+        "鱼松手后保持落点，潜水员停稳或安全停留才提交整次联动；取消/非法释放/未完成保存备份回起点，一次历史恢复双主体。",
+        "v2保存两者位置/方向、合法采样路径和相机；读取v1安全初始化潜水员并将原鱼账标legacy，不伪造跟随历史、不恢复骨架动作相位。"
+      ],
+      "validationDocument": "diver-validation.json",
+      "sourceDocument": "diver-sources.md",
+      "historicalValidationDocuments": [
+        "underwater-validation.json"
+      ],
+      "completed": [
+        "完整53骨、45网格、七PBR材质潜水员与Hover/Swim1.6秒动作本地加载；12独立素材检查、1,005蒙皮混合采样在登记0.40半径内。",
+        "真实拖鱼及松手后，鱼位/heading保持而潜水员连续移动；绕礁到1.00、右侧安全停留及回可达处恢复已实测。",
+        "非法穿礁/越界、拖动与释放后追随阶段Escape，整段双主体恢复；一次undo/redo完整JSON一致。",
+        "未完成追随手动保存回滚、拖动中备份回滚；联动期间相机预设及PNG按钮禁用。",
+        "五类坏JSON明确拒绝，40条/编号耗尽原生拒绝不误转相机；合法v1占用初始潜水员位时安全初始化、旧鱼/相机/ledger保持且legacy=true。",
+        "156完整产品回归通过，包含11跟随算法和12双主体配置测试。",
+        "两次真实联动与观察相机通过稳定v2保存→重开完整JSON逐值一致；实际三维PNG1443×969已预览、解码完整且warn/error为空。",
+        "用户当前旧v1的鱼位/heading、四点路径账、ID及最新custom相机保留，潜水员安全初始化且旧记录legacy=true；v2保存重开完整JSON一致。",
+        "真实稳定工作区、追随途中、受阻安全停留截图及实际鼠标联动JSON与PNG五件留档，0.11.0单鱼原证据全部保留。",
+        "本轮16项仓库检查通过，接入规划与实际产品状态按33/36、10场景、阶段4的5/5及C35六登记目标核对。"
+      ],
+      "pending": [
+        "追随途中重新抓鱼的原生鼠标主流程、失焦/lostcapture/触屏/多浏览器、存储故障、完全断网、下载写盘、长期运行与指定硬件性能。"
+      ],
+      "evidence": [
+        "../assets/atelier-underwater-follow-workspace.jpg",
+        "../assets/atelier-underwater-follow-during.jpg",
+        "../assets/atelier-underwater-follow-blocked.jpg",
+        "../assets/atelier-underwater-follow-example.json",
+        "../assets/atelier-underwater-follow-render.png"
+      ]
+    },
+    "fittingChanges": {
+      "scene": "fitting",
+      "version": "0.13.0",
+      "status": "core-and-desktop-browser-validated",
+      "changes": [
+        "C17固定三维人体上衣试穿：两个独立三维展样直接拖到胸腹、合法松手上身替换，侧栏卡片亦可拖入。",
+        "完整CC0原人体与两款原创连续厚衣片、共享53骨；两个冻结姿态、三主布色及前背侧观察，不隐藏身体回避适配。",
+        "单一上装槽保留人物姿态与相机，一次完整事务；错位/取消回基线，同衣款且同颜色不增历史，颜色变化仍可提交。",
+        "配置v1严格保存固定人体ID、衣款/颜色、固定姿态与相机，32KiB上限；40会话历史不持久，姿态冻结无需循环相位。"
+      ],
+      "validationDocument": "fitting-validation.json",
+      "sourceDocument": "fitting-sources.md",
+      "historicalValidationDocuments": [
+        "diver-validation.json",
+        "underwater-validation.json",
+        "materials-validation.json",
+        "materials-feedback-validation.json",
+        "materials-comparison-validation.json"
+      ],
+      "completed": [
+        "两个场景内三维展样各用真实鼠标拖到人体胸腹成功上身；替换一件上装后一次撤销/重做恢复完整JSON。侧栏卡片拖入也已实际验收。",
+        "合法上身持有预览已观察；空白处非法释放与按住时Escape完整恢复原衣物、颜色、姿态和相机，不消耗先前事务。",
+        "自然站姿/抬臂检查、暖白/苔绿/墨蓝主布颜色及四观察预设已操作；空白环绕与按住相机Escape保持衣物，衣物与人体共享同一固定姿态。",
+        "三个合法JSON逐值恢复并可撤销本次导入，七类坏JSON拒绝且原完整状态保持；稳定保存→重开完整JSON逐值一致。",
+        "完整Quaternius CC0人体的13,743唯一面与53骨保留，两款原创独立连续衣片、真实厚度、口袋/线迹和夹克拉链本地加载；素材独立11项在有限域通过。",
+        "两个固定姿态下3,414个选定躯干/袖部径向采样中3,350有壳命中且无超出，肩/腋下64个无命中并未被该方法验证；前/背/侧、抬臂与上身细节实际视觉复核补充检查。",
+        "171项完整产品测试通过（含15项试衣核心），16项仓库测试通过；实际三维PNG1431×969已解码。",
+        "冻结包再做两款真实拖入与夹克持有上身预览，jacket-01/moss/reach/hero备份和重开全等；五件正式图/配置落盘，1280无横向溢出、console为空。"
+      ],
+      "pending": [
+        "失焦/lostcapture/触屏/其他浏览器、实际存储故障、完整断网、下载写盘、长期运行和指定硬件性能继续专项验收。",
+        "任意体型/未知衣物/任意姿态适配、人物照片写实试穿、真实尺码与布料物理另设研发；有限采样不证明全身零穿插。"
+      ],
+      "evidence": [
+        "../assets/atelier-fitting-workspace.jpg",
+        "../assets/atelier-fitting-drag.jpg",
+        "../assets/atelier-fitting-back.jpg",
+        "../assets/atelier-fitting-example.json",
+        "../assets/atelier-fitting-render.png"
+      ]
+    },
+    "footwearChanges": {
+      "scene": "fitting",
+      "version": "0.14.0",
+      "status": "core-and-native-desktop-main-flow-validated",
+      "changes": [
+        "C18完整左右鞋对脚掌/脚踝拖放、合法持有预览和整双原子替换，在已有试衣间接入，不新增场景。",
+        "完整原双足/53骨与C17三GLB保持；原创Court/Ridge刚性原坐标适配、开放踝口与独立鞋底/鞋舌/带/金属细节。",
+        "上装/鞋两槽独立、各自三色、两原静态姿态与鞋脚近看；错误区域/Escape、一次整态历史恢复。",
+        "严格v2双槽搭配保存，读strict-v1只新增shoes:null和版本，保留原上装/姿态/精确相机以及旧本机key；32KiB/40会话历史限制不变。"
+      ],
+      "validationDocument": "footwear-validation.json",
+      "sourceDocument": "footwear-sources.md",
+      "historicalValidationDocuments": [
+        "fitting-validation.json",
+        "diver-validation.json",
+        "underwater-validation.json",
+        "materials-validation.json",
+        "materials-feedback-validation.json",
+        "materials-comparison-validation.json"
+      ],
+      "completed": [
+        "两双最终冻结完整三维鞋展样实际拖到脚掌/脚踝成功上身；按住时合适位置的整双试穿预览可见，左右鞋成对替换。Ridge替换一次undo/redo完整JSON恢复。",
+        "胸腹及空白处非法释放不改完整搭配；活动拖动Escape整体恢复。侧栏Court实际拖入与撤销保持上装、鞋色、姿态和相机。",
+        "鞋履操作保留上装；再次原生拖夹克保留短靴。三鞋面色、自然站姿/抬臂、鞋脚细节与空白环绕侧后观察、相机一次撤销已验收。脱鞋只清鞋槽并禁用鞋色，一次撤销完整恢复。",
+        "三份合法UI配置（严格旧v1迁移、v2鞋脚细节、高精度自由相机）应用正确；八类坏配置明确拒绝且完整状态不变。",
+        "完整原人体53骨/13,743唯一面和C17三GLB哈希保持；两双原创完整鞋的9独立检查通过，18原人体复审图、35来源登记/5运行文件。",
+        "每双264原足/低踝点投影落入鞋底，120非踝口点上射线命中；144点是真实开放踝口域，不作封口测试。Ridge低腿高度[.155,.284]的2,830三角面八阶有限采样全部被鞋帮覆盖，修复后从同一侧后角度复查无原长三角穿出。",
+        "181项完整产品测试通过（含25试衣核心，新增10鞋履），16项仓库测试通过；原0.13.0上衣、0.12.0水下和所有材料历史验收保留。",
+        "最终修后Ridge实体重新拖穿与持有合法预览，原上装/姿态保持；v2实际JSON保存重开逐值一致，PNG1431×969已实际解码，console为空。"
+      ],
+      "pending": [
+        "失焦/lostcapture/触屏/其他浏览器、实际存储故障、完整断网、下载写盘、长期运行和指定硬件性能继续专项验收。",
+        "任意体型/未知鞋/任意姿态、人物照片试穿、真实鞋码/舒适度、步态、鞋面与摩擦仿真另设研发；有限采样不证明完整体积无交叉或足底缓冲空腔。"
+      ],
+      "evidence": [
+        "../assets/atelier-footwear-workspace.jpg",
+        "../assets/atelier-footwear-detail.jpg",
+        "../assets/atelier-footwear-side.jpg",
+        "../assets/atelier-footwear-drag.jpg",
+        "../assets/atelier-footwear-example.json",
+        "../assets/atelier-footwear-render.png"
+      ]
+    },
+    "supplementaryEntries": [
+      "../web/tryon.html"
+    ],
+    "realPersonChanges": {
+      "scene": "fitting",
+      "entry": "../web/tryon.html",
+      "version": "0.15.0",
+      "status": "bounded-local-real-person-reference-demonstrated; fidelity-limits-and-unverified-workflows-recorded",
+      "changes": [
+        "C17真人研究深化，与原三维入口并列，不新增研究项或场景",
+        "真实照片与登记衣图、本机FASHN预训练后端、生成标记与人工评审",
+        "真实首失败/首成功与可见问题分别记录，缺跨衣实拍、不判断尺码或商用"
+      ],
+      "sourceDocument": "tryon-sources.md",
+      "runtimeDocument": "tryon-runtime.md",
+      "completed": [
+        "0.15.0真人研究前置：两组VITON-HD原衣配对实拍、4张原JPEG已登记来源与CC BY-NC 4.0；无可售商品编号，所有跨人换衣均无同人同目标衣实拍对照。45项已安装包、离线权重/解析缓存和4项GPU小内核核查已有记录。",
+        "0.15.0真实运行：首次61.49秒在0/20步内存不足失败且无图，失败记录保留；调整预处理网络驻留后，两组无人衣图跨衣、一组原衣重建及一组模特衣图跨衣各完成20步，分别63.34、49.58、41.84、52.58秒，实际PNG均576×768。有限运行不证明所有输入或硬件可用。",
+        "0.15.0可见质量：三组跨衣能辨认目标上装主要结构，但裤腰/纽扣与细小搭扣、文字比例可能改变，真实穿着缺依据；同人同原衣重建变得更贴身平整，褶皱、字样比例和裤腰改变，与原实拍穿着不一致。四张生成完成不等于四张质量合格。",
+        "0.15.0代码核查：189项产品测试（含8项真人核心）与18项Python后端测试通过；真实网页操作、导出和异常恢复另行记录，不以测试数量替代效果判断。",
+        "0.15.0网页观察：真实分界拖动50%→30%、滚轮放大、画面平移与复位通过；选款后一次撤销恢复原跨衣选择、评分和对应实际图。原始4张实拍复用为5个输入角色，两种照片输入均有真实完成任务。",
+        "0.15.0导出核查：PNG实际预览576×812（原图加44px生成注记）；评审JSON全文与真实输入组合/任务ID/元数据/缺实拍依据核对并留档。提供复制/保存入口，内置浏览器自动下载落盘及剪贴板字节一致性未验证。"
+      ],
+      "pending": [
+        "更多输入/人工评分组合、服务与存储故障、上传与任务读取中断、坏存档恢复、长期运行及完整断网待专项；内置浏览器自动下载落盘和剪贴板字节一致性未验证。",
+        "更多人物、体型、衣物结构、图案文字、遮挡、背景、侧背面和重复运行未覆盖；本机上传仍属实验输入，没有跨衣实拍时不计算虚构还原率，不判断尺码、舒适或商用。"
+      ],
+      "evidence": [
+        "real-person-tryon-validation.json",
+        "../web/tryon/experiments.json",
+        "tryon-runs/initial-failed-0702f8eb.json",
+        "tryon-runs/initial-failed-0702f8eb.stderr.log",
+        "../assets/atelier-real-person-workspace.png",
+        "../assets/atelier-real-person-baseline.png",
+        "../assets/atelier-real-person-export-preview.png",
+        "../assets/atelier-real-person-review.json",
+        "../assets/atelier-real-person-review-dialog.png"
+      ]
+    },
+    "workflowChanges": {
+      "release": "0.16.0",
+      "capabilityId": "C35",
+      "sceneCount": 11,
+      "registeredDestinationCount": 9,
+      "newDestinations": [
+        "skate",
+        "materials",
+        "underwater"
+      ],
+      "activePhaseId": "adaptive-workflow",
+      "status": "bounded-current-three-destination-roundtrips-and-before-entered-reopened-stable-state-browser-validated; targeted-boundaries-pending",
+      "scope": [
+        "水下追随/同热量对照/滑板起跳三快捷任务、全部九任务弹窗",
+        "预览操作/预期结果/边界，最近去向，保存检查点/返回继续原陈列",
+        "滑板/材料/水下独立稳定配置保持，往返不自动续播动作/供能/追随",
+        "试衣/真人产品方向保留并暂缓，C19/商业授权/任意人体尺寸另行研发"
+      ],
+      "validation": "collection-workflow-validation.json",
+      "pending": [
+        "动作、供能或追随进行中的进入/返回、暂停/取消与稳定保存边界待专项；本轮从既有稳定配置出发，没有重新执行三种动作验证续播。",
+        "原六目标中除料理外的五个工作台完整公共JSON进入前后对照待验；旧六目标实际往返证据保留，本轮只新增验收三个目标。",
+        "持鼠按下的Escape/失焦/lostcapture、触屏/多浏览器、多窗口行程冲突与重复返回待专项。",
+        "实际存储配额故障、坏store恢复、完全断网、下载落盘、长期运行及指定硬件性能待专项；源码与代码测试不替代这些验收。"
+      ],
+      "historicalValidation": "collection-validation.json",
+      "completed": [
+        "0.16.0三个新增目标分别真实保存检查点、进入工作台并点击匹配返回桥；每次返回公开陈列JSON与原配置一致，仅lastScene更新为对应目标。原顺序、sofa锁定、两项选品、reading偏好及selected table-solid保持。",
+        "0.16.0进入前、目标页与返回后重开公开备份JSON逐值一致：水下v2保留原鱼/潜水员位置方向、custom相机及一条legacy路径；材料v1保留铜40J、铝313.9994991463235J、冰333.4J、六条账本及custom相机；滑板v1保留四次已有试验、选第四次及custom相机。",
+        "0.16.0任务预览取消后完整陈列JSON不变；复合、否定、外部URL三类命令在真实界面明确拒绝且不打开对话框；最近滑板按钮准确打开对应任务预览。",
+        "0.16.0九任务弹窗、三快捷入口及任务操作/预期结果/边界界面已实际观察并保存三张工作流截图。真人页五个后续产品方向可见并截图，AI换装生成边界标记正确；试衣/真人暂停扩展。",
+        "0.16.0完整195/195项产品Node测试通过（原189，加新增核心1项和返回桥5项），16/16项仓库测试通过；35/36、11场景、阶段5的2/3及C35九目标结构保持。"
+      ],
+      "artifacts": [
+        "../assets/atelier-scene-workflow.png",
+        "../assets/atelier-scene-tasks.png",
+        "../assets/atelier-scene-return.png",
+        "../assets/atelier-tryon-product-directions.png",
+        "../assets/atelier-scene-workflow-state-checks.json"
+      ]
+    },
+    "workflowCompletionChanges": {
+      "release": "0.16.1",
+      "capabilityId": "C35",
+      "sceneCount": 11,
+      "registeredDestinationCount": 9,
+      "activePhaseId": "adaptive-workflow",
+      "status": "bounded-multi-window-browser-protection-latest-reload-all-six-original-target-stable-state-and-final-creative-loading-guard-verified; actual-fault-concurrency-device-pending",
+      "scope": [
+        "陈列与检查点存储原文比较保护，冲突常驻提示并停止旧窗口自动/明确写入及进入",
+        "保留本窗口公开JSON备份；只读加载最新稳定配置并清本窗口预览/撤销",
+        "STORE原raw保留，受保护Save/import恢复；TRIP语法及v1业务校验、原始raw备份和明确重建",
+        "原文比较/CAS并非原子跨窗口锁；故障/容量/回滚仅Node模拟"
+      ],
+      "completed": [
+        "0.16.1真实多窗口：另一窗口修改后旧窗口出现常驻提示，保存和进入禁用；旧窗口公开备份仍是原配置；旧窗口pagehide后新记录保持，完成核查后恢复原wishlist。",
+        "0.16.1原六目标公开完整JSON：客厅（project与完整A/B project/thumbnail/date）、展厅、影像、地标、料理及创作6/6均before=entered=reopened逐值一致；每次返回陈列仅更新lastScene；仅稳定作品与配置作核查，临时预览和会话撤销不入稳定存档。",
+        "0.16.1存储恢复实现：STORE坏raw保留，Save/import明确受保护恢复；TRIP除JSON语法还校验严格v1业务结构，可备份原始raw，明确“重建检查点并进入”；读取最新只读并清本窗口预览/撤销。故障/容量/回滚只有Node模拟，未作真实浏览器故障注入。",
+        "0.16.1完整218/218项产品Node测试（含23项新存储测试）与16/16项仓库测试实际通过；失败均为0。",
+        "0.16.1最终真实恢复：读取最新后常驻提示隐藏、保存重新启用、undo禁用以清本窗口会话，loadedLatest保留另一窗口lamp新选品；随后移除临时lamp并保存，原两项选品保持。最终创作载入保护复验：初始化后save/backup启用、备份dialog正常出现，公开完整JSON与原基线逐值一致。",
+        "0.16.1最终还原用户陈列：再次经水下工作流往返，公开完整JSON与originalCollectionJson完全一致，包括lastScene underwater；原order、sofa锁定、selected table-solid、两项wishlist与reading偏好全部恢复，返回说明匹配水下。六原目标各次returnedShop除lastScene更新外其余字段逐值相同。"
+      ],
+      "pending": [
+        "动作/供能/追随/笔迹未完成时的跨场景往返、暂停/取消与稳定保存边界待专项。",
+        "原文比较/CAS不是原子跨窗口锁；同时竞争写入、多窗口行程冲突与重复返回、设备级按住Escape/失焦/lostcapture、触屏/多浏览器继续专项。",
+        "实际存储故障注入、容量与回滚、坏记录在真实浏览器恢复、完全断网、下载落盘、长期运行和指定硬件性能待专项；Node模拟不替代浏览器验收。"
+      ],
+      "validation": "collection-workflow-completion-validation.json",
+      "historicalValidations": [
+        "collection-validation.json",
+        "collection-workflow-validation.json"
+      ],
+      "artifacts": [
+        "../assets/atelier-workflow-completion-state-checks.json",
+        "../assets/atelier-collection-conflict.png"
+      ],
+      "verifiedOldDestinationIds": [
+        "living",
+        "showroom",
+        "imaging",
+        "landmark",
+        "kitchen",
+        "creative"
+      ],
+      "oldDestinationIdsPendingCurrentConfirmation": [],
+      "productTestsPassed": 218,
+      "additionalTestsStatus": "final actual218 passed, 0 failed",
+      "creativeLoadingGuard": {
+        "scope": "save/backup/export disabled until init binds handlers",
+        "sourceVerification": "syntax and build passed",
+        "browserVerification": "final published version verified: save and backup enabled after init, backup dialog opens, public full JSON equals baseline",
+        "stableStateEvidence": "six original target records captured before loading guard, stable state logic unchanged; final creative patched UI separately rechecked against unchanged baseline"
+      },
+      "observedBrowserIncident": "One in-app-browser page crashed and recovered in a fresh tab; not proof of application or performance reliability.",
+      "newStorageTestCount": 23,
+      "repositoryTestsPassed": 16,
+      "finalUserCollectionRestored": true
+    },
+    "workspaceBackupChanges": {
+      "release": "0.17.0",
+      "role": "workflow-supporting-deepening",
+      "capabilityId": "C35",
+      "sceneCount": 11,
+      "registeredDestinationCount": 9,
+      "savedRecordCount": 10,
+      "activePhaseId": "adaptive-workflow",
+      "status": "bounded-public-raw-export-actual-file-open-selective-restore-paste-recovery-and-stale-preview-browser-validated; download-clipboard-reopen-concurrency-device-pending",
+      "scope": [
+        "陈列入口单弹窗汇总九工作台与陈列的最近已保存原文，12MiB整套文件上限",
+        "逐项状态、文件与本机差异、勾选有效工作台，恢复前备份与明确覆盖",
+        "未选和空项保持本机；坏原文原样导出但禁恢复",
+        "恢复前保存并关闭其他编辑页，完成后重开；不承诺全局同步或原子十记录事务"
+      ],
+      "stableArchiveIncludes": [
+        "客厅当前project、个人挂画与完整A/B project/thumbnail/date",
+        "每工作台既有稳定业务JSON及相机；完整测量、笔触、试验或双主体路径账"
+      ],
+      "excluded": [
+        "撤销/重做历史",
+        "临时预览及未完成动作、供能、追随",
+        "返回检查点和会话令牌",
+        "试衣/真人任务",
+        "项目模型/纹理/运行依赖和真人权重"
+      ],
+      "completed": [
+        "0.17.0真实公开导出10/10有效已保存记录，并读取完整textarea JSON；实际文件选择器打开同内容文件，十项与本机相同且应用禁用。",
+        "0.17.0实际文件仅陈列新增阅读灯选品和展厅pearl车漆两差异；地标坏raw和料理null不可恢复。恢复两项后仅陈列/展厅raw改变，其余八份完整raw保持；粘贴原整套JSON恢复两项，十份逐字回原基线。",
+        "0.17.0取消展厅勾选只恢复陈列，展厅保持；另一窗口移除临时灯后旧预览应用禁用且恢复前旧链接撤销，读取最新后十份raw仍完全原文。{}坏外层拒绝且无rows，核查后用户原陈列保持。",
+        "0.17.0完整243/243产品Node与16/16仓库检查通过；新增25/25备份测试包括故障、容量、半写、回滚与十二基线键变化，故障均为Node模拟。",
+        "0.17.0最终发布版重新构建/加载后十份raw仍逐字等于原基线；粘贴{bad JSON}明确显示中文“未预览：文件不是完整JSON，请选择整套工作台导出的有效备份”，错误输入保留可修正。界面显示“10 / 10份存档已保存”，1280×720完整十行截图与公开完整状态对照已留档；当前陈列页console warn/error为空。",
+        "0.17.0真实浏览器还核对了预览后修改粘贴文本：输入{edited after preview}立即禁用恢复按钮、撤销旧的恢复前备份链接并提示重新检查；随后读取备份，十份原始raw完整一致。"
+      ],
+      "pending": [
+        "自动下载等待和媒体下载均超时，未验文件落盘；复制有UI成功反馈但工具剪贴板读取为空，完整性未验证。可见完整JSON、实际文件打开和粘贴恢复已验。",
+        "本轮未逐一复开九个渲染工作台，不外推跨设备影像视口与相机精确原文；恢复前关闭其他编辑页、恢复后重开仍为必要操作说明。",
+        "九工作台尚无统一同步；原文比较与条件回滚不是原子事务。真实并发竞争、存储故障/容量/回滚、进行中编辑、触屏/多浏览器、完全断网和长期性能继续专项。",
+        "人为注入异步界面错误和真实存储故障/容量尚未验证；console为空仅记录最终陈列页面本次观察。",
+        "模块加载失败时保留文本属于代码修复与审阅，尚未在浏览器注入该故障验证。"
+      ],
+      "historicalValidations": [
+        "collection-validation.json",
+        "collection-workflow-validation.json",
+        "collection-workflow-completion-validation.json"
+      ],
+      "protocol": {
+        "format": "atelier-workspace",
+        "version": 1,
+        "records": "ten exact IDs, raw string or null",
+        "underwaterLegacy": "v1-only is reported as upgrade-needed; retain legacy key, do not export/write it",
+        "concurrencyBaseline": "ten workspace keys plus legacy underwater v1 and collection TRIP; neither extra key is restored"
+      },
+      "validation": "workspace-backup-validation.json",
+      "artifacts": [
+        "../assets/atelier-workspace-backup-state-checks.json",
+        "../assets/atelier-workspace-backup.png"
+      ],
+      "productTestsPassed": 243,
+      "repositoryTestsPassed": 16,
+      "newBackupTestsPassed": 25,
+      "testBoundary": "Quota/fault/partial-write/twelve-baseline-key-conflict/rollback cases are Node simulations; no real browser storage faults injected.",
+      "browserVerified": [
+        "full visible exported raw JSON",
+        "actual file chooser import with unchanged preview",
+        "two selected changes preserve other eight raw records",
+        "invalid and null rows not restorable",
+        "one selected change preserves unselected showroom",
+        "paste original restores ten raw strings exactly",
+        "stale preview apply disabled and pre-restore link revoked",
+        "bad outer JSON rejected with no rows",
+        "editing pasted text after preview disables apply and revokes old pre-restore backup link; recheck prompt visible, ten original raw records unchanged"
+      ],
+      "automaticDownloadVerified": false,
+      "clipboardIntegrityVerified": false,
+      "allNineRenderedWorkbenchesReopenedThisRound": false,
+      "finalPublishedUIRegression": "build/reload public ten raw exactly baseline; malformed pasted JSON Chinese rejection with input retained; 10/10 saved summary and full ten-row 1280x720 screenshot; current collection console warn/error empty",
+      "finalUserRawRecordsRestored": true,
+      "moduleLoadFailureBrowserVerified": false
+    }
+  }
+}
+

@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-06",
+  "status": "original official-input files acquired; paired/dataset provenance under verification",
+  "files": [
+    {
+      "file": "original/person-00055.jpg",
+      "sourceUrl": "https://raw.githubusercontent.com/yisol/IDM-VTON/0d5f3ec2d737487a9bb24e4100936ad254780383/gradio_demo/example/human/00055_00.jpg",
+      "byteLength": 152937,
+      "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78"
+    },
+    {
+      "file": "original/garment-00055.jpg",
+      "sourceUrl": "https://raw.githubusercontent.com/levihsu/OOTDiffusion/13ef0faba266cdde9febc8ad39be2395bbb89d9c/run/examples/garment/00055_00.jpg",
+      "byteLength": 94754,
+      "sha256": "c9c13719456663be040a63711d0ee92c6bac2e259017b072d396d874bdc367ad"
+    },
+    {
+      "file": "original/person-14627.jpg",
+      "sourceUrl": "https://raw.githubusercontent.com/levihsu/OOTDiffusion/13ef0faba266cdde9febc8ad39be2395bbb89d9c/run/examples/model/14627_00.jpg",
+      "byteLength": 100057,
+      "sha256": "f02b595b9068354a731c2d43658d92a4d47f23a7d9c73f2c1db651139e2cb2d4"
+    },
+    {
+      "file": "original/garment-14627.jpg",
+      "sourceUrl": "https://raw.githubusercontent.com/yisol/IDM-VTON/0d5f3ec2d737487a9bb24e4100936ad254780383/gradio_demo/example/cloth/14627_00.jpg",
+      "byteLength": 62788,
+      "sha256": "3fd079502958281685d739cd88e3b2a2c0300f67c7370bfc0146d7c549cf4346"
+    },
+    {
+      "file": "viton-hd-license.txt",
+      "sourceUrl": "https://raw.githubusercontent.com/shadow2496/VITON-HD/main/LICENSE",
+      "byteLength": 19398,
+      "sha256": "7c828abdb303d97cc4a0a9638445567eb9ccadf10e554e49db431f0f177f9836"
+    },
+    {
+      "file": "viton-hd-readme.md",
+      "sourceUrl": "https://raw.githubusercontent.com/shadow2496/VITON-HD/main/README.md",
+      "byteLength": 4951,
+      "sha256": "b8b8a317b91830cd05fc84766c84c14ca32f0e7d53e4f607d231757dcba2ef11"
+    },
+    {
+      "file": "idm-vton-readme.md",
+      "sourceUrl": "https://raw.githubusercontent.com/yisol/IDM-VTON/0d5f3ec2d737487a9bb24e4100936ad254780383/README.md",
+      "byteLength": 5604,
+      "sha256": "411f12d92515a44a2880f6d5a9e19ce838e4af474c4136237567b01306073d71"
+    },
+    {
+      "file": "ootdiffusion-readme.md",
+      "sourceUrl": "https://raw.githubusercontent.com/levihsu/OOTDiffusion/13ef0faba266cdde9febc8ad39be2395bbb89d9c/README.md",
+      "byteLength": 2750,
+      "sha256": "02b4b0d0a907e24001686c8d8c4346b310ddf2c0adbe66766e20da0290d4a45e"
+    }
+  ]
+}

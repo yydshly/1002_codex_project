@@ -1,0 +1,1070 @@
+{
+  "asset": "CarConcept",
+  "bytes": 11268100,
+  "sha256": "264751256325a607a338f0c5c5bf62a7ba02b250ffef29a8d2f3473e81e5ae25",
+  "copyright": "© 2015, Khronos Group, Khronos logo. © 2017, Khronos Group, 3D Commerce logo. Asset is CC BY 4.0 International, created by Eric Chadwick of Darmstadt Graphics Group GmbH, 2024",
+  "generator": "Created by RapidPipeline 3D Processor v7.1.0 | rapidpipeline.com",
+  "extensionsUsed": [
+    "KHR_materials_clearcoat",
+    "KHR_materials_emissive_strength",
+    "KHR_materials_iridescence",
+    "KHR_materials_transmission",
+    "KHR_materials_variants",
+    "KHR_texture_transform"
+  ],
+  "extensionsRequired": [],
+  "nodes": 101,
+  "meshes": 97,
+  "materialCount": 29,
+  "embeddedImages": 14,
+  "embeddedImageTypes": [
+    "image/png"
+  ],
+  "animations": 0,
+  "triangles": 213347,
+  "engineTriangles": 60,
+  "bounds": {
+    "min": [
+      -1.36329630006263,
+      -0.1592990412232851,
+      -1.940231204032898
+    ],
+    "max": [
+      1.3528623973425553,
+      1.1486550569534302,
+      2.4171547889709473
+    ],
+    "size": [
+      2.7161586974051852,
+      1.3079540981767153,
+      4.357385993003845
+    ],
+    "center": [
+      -0.005216951360037303,
+      0.49467800786507254,
+      0.23846179246902466
+    ]
+  },
+  "components": {
+    "BodyUnderside": {
+      "index": 0,
+      "parentName": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "min": [
+        -1.0939888954162598,
+        0.08852825313806534,
+        -1.8939281702041626
+      ],
+      "max": [
+        1.0939888954162598,
+        0.8328235149383545,
+        2.389533042907715
+      ],
+      "center": [
+        0,
+        0.4606758840382099,
+        0.24780243635177612
+      ],
+      "localTranslation": [
+        0,
+        0,
+        0
+      ],
+      "childNames": [
+        "BodyWindshield",
+        "BodyWindshieldGasket",
+        "BodyWindshieldWipers",
+        "BodyWindshieldWipersBase",
+        "Engine",
+        "InteriorCage",
+        "InteriorDashMid",
+        "InteriorDashSides",
+        "InteriorFloor",
+        "InteriorFloormats",
+        "InteriorMid",
+        "InteriorPedalAccel",
+        "InteriorPedalAccelArm",
+        "InteriorPedalBrake",
+        "InteriorPedalBrakeArm",
+        "InteriorPillar",
+        "InteriorSeatsColor1",
+        "InteriorSeatsColor2",
+        "InteriorSeatsFrame1",
+        "InteriorSeatsFrame2",
+        "InteriorSteeringBase",
+        "InteriorSteeringCylinder",
+        "InteriorSteeringDash",
+        "InteriorSteeringDashColumn",
+        "InteriorSteeringHandleL",
+        "InteriorSteeringHandleR",
+        "License Plate",
+        "BodyRoofPanel",
+        "BodyRearPanelsColor1",
+        "BodyPillars",
+        "BodyPanelsColor2",
+        "BodyHood",
+        "BodyDoorRColor1",
+        "BodyDoorLColor1",
+        "WheelFrontL",
+        "WheelFrontR",
+        "WheelRearL",
+        "WheelRearR",
+        "Axles"
+      ],
+      "mesh": 0,
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "Engine": {
+      "index": 5,
+      "parentName": "BodyUnderside",
+      "pivot": [
+        0,
+        0.13999998569488523,
+        2.0756940841674805
+      ],
+      "min": [
+        -0.602276086807251,
+        0.13999998569488523,
+        1.603248655796051
+      ],
+      "max": [
+        0.602276086807251,
+        0.7481319308280945,
+        2.3254517018795013
+      ],
+      "center": [
+        0,
+        0.44406595826148987,
+        1.9643501788377762
+      ],
+      "localTranslation": [
+        0,
+        0,
+        0
+      ],
+      "childNames": [],
+      "mesh": 5,
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -2.0756940841674805,
+        0.13999998569488523,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.13999998569488523,
+        2.0756940841674805,
+        1
+      ]
+    },
+    "BodyHood": {
+      "index": 44,
+      "parentName": "BodyUnderside",
+      "pivot": [
+        -1.0882532652800592e-9,
+        0.17601461708545685,
+        2.3793885707855225
+      ],
+      "min": [
+        -1.106044412747494,
+        0.12852323055267334,
+        1.1681395769119263
+      ],
+      "max": [
+        1.106044291361698,
+        0.8774470239877701,
+        2.4171547889709473
+      ],
+      "center": [
+        -6.069289804067068e-8,
+        0.5029851272702217,
+        1.7926471829414368
+      ],
+      "localTranslation": [
+        -1.0882532652800592e-9,
+        -2.3793885707855225,
+        0.17601461708545685
+      ],
+      "childNames": [
+        "BodyHoodInterior01",
+        "BodyHoodInterior02",
+        "BodyHoodTopgrill",
+        "BodyHoodUnder",
+        "BodyHeadlights"
+      ],
+      "mesh": 42,
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -1.0882532652800592e-9,
+        -2.3793885707855225,
+        0.17601461708545685,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1.0882532652800592e-9,
+        0.17601461708545685,
+        2.3793885707855225,
+        1
+      ]
+    },
+    "BodyHoodInterior01": {
+      "index": 45,
+      "parentName": "BodyHood",
+      "pivot": [
+        0,
+        -0.01245598495006564,
+        0.0009543895721435547
+      ],
+      "min": [
+        -1.100501298904419,
+        0.12954424321651456,
+        1.1792680025100708
+      ],
+      "max": [
+        1.100501298904419,
+        0.8739000111818314,
+        2.393637180328369
+      ],
+      "center": [
+        0,
+        0.501722127199173,
+        1.78645259141922
+      ],
+      "localTranslation": [
+        0,
+        0,
+        0
+      ],
+      "childNames": [],
+      "mesh": 43,
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1.0882532652800592e-9,
+        2.378434181213379,
+        -0.1884706020355225,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.01245598495006564,
+        0.0009543895721435547,
+        1
+      ]
+    },
+    "BodyHoodInterior02": {
+      "index": 46,
+      "parentName": "BodyHood",
+      "pivot": [
+        0,
+        -0.01245598495006564,
+        0.0009543895721435547
+      ],
+      "min": [
+        -0.5150869488716125,
+        0.72691710293293,
+        1.5785768032073975
+      ],
+      "max": [
+        0.5150869488716125,
+        0.8236563950777054,
+        2.0398573875427246
+      ],
+      "center": [
+        0,
+        0.7752867490053177,
+        1.809217095375061
+      ],
+      "localTranslation": [
+        0,
+        0,
+        0
+      ],
+      "childNames": [],
+      "mesh": 44,
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1.0882532652800592e-9,
+        2.378434181213379,
+        -0.1884706020355225,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.01245598495006564,
+        0.0009543895721435547,
+        1
+      ]
+    },
+    "BodyHoodUnder": {
+      "index": 48,
+      "parentName": "BodyHood",
+      "pivot": [
+        0,
+        -0.01245598495006564,
+        0.0009543895721435547
+      ],
+      "min": [
+        -0.6087756156921387,
+        0.14132651686668393,
+        2.3157873153686523
+      ],
+      "max": [
+        0.6087756156921387,
+        0.2643291801214218,
+        2.3895552158355713
+      ],
+      "center": [
+        0,
+        0.2028278484940529,
+        2.352671265602112
+      ],
+      "localTranslation": [
+        0,
+        0,
+        0
+      ],
+      "childNames": [],
+      "mesh": 46,
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1.0882532652800592e-9,
+        2.378434181213379,
+        -0.1884706020355225,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.01245598495006564,
+        0.0009543895721435547,
+        1
+      ]
+    },
+    "BodyHeadlights": {
+      "index": 49,
+      "parentName": "BodyHood",
+      "pivot": [
+        0,
+        -0.01245598495006564,
+        0.0009543895721435547
+      ],
+      "min": [
+        -0.8048748970031738,
+        0.6212474852800369,
+        2.0957326889038086
+      ],
+      "max": [
+        0.8048750162124634,
+        0.6914216428995132,
+        2.2670865058898926
+      ],
+      "center": [
+        5.960464477539063e-8,
+        0.6563345640897751,
+        2.1814095973968506
+      ],
+      "localTranslation": [
+        0,
+        0,
+        0
+      ],
+      "childNames": [],
+      "mesh": 47,
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1.0882532652800592e-9,
+        2.378434181213379,
+        -0.1884706020355225,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -0.01245598495006564,
+        0.0009543895721435547,
+        1
+      ]
+    },
+    "BodyTaillights": {
+      "index": 40,
+      "parentName": "BodyRearPanelsColor1",
+      "pivot": [
+        0,
+        -0.006729632616043091,
+        -0.0014874935150146484
+      ],
+      "min": [
+        -0.6392277479171753,
+        0.943942520100336,
+        -1.6200745058972075
+      ],
+      "max": [
+        0.6392277479171753,
+        0.9834609791691946,
+        -1.5296013120045302
+      ],
+      "center": [
+        0,
+        0.9637017496347653,
+        -1.5748379089508688
+      ],
+      "localTranslation": [
+        0,
+        0,
+        0
+      ],
+      "childNames": [],
+      "mesh": 38,
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -4.76837158203125e-7,
+        0,
+        0,
+        4.76837158203125e-7,
+        1,
+        0,
+        0,
+        -1.927039623260498,
+        -0.4297434091567993,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        -4.76837158203125e-7,
+        -1,
+        0,
+        0,
+        1,
+        -4.76837158203125e-7,
+        0,
+        0,
+        -0.006729632616043091,
+        -0.0014874935150146484,
+        1
+      ]
+    },
+    "BodyDoorLColor1": {
+      "index": 65,
+      "parentName": "BodyUnderside",
+      "pivot": [
+        1.0886822938919067,
+        0.6430185437202454,
+        0.9975706934928894
+      ],
+      "min": [
+        0.9213293194770813,
+        0.15559881925582886,
+        -0.6748121380805969
+      ],
+      "max": [
+        1.1100066900253296,
+        0.9599902033805847,
+        0.994156002998352
+      ],
+      "center": [
+        1.0156680047512054,
+        0.5577945113182068,
+        0.15967193245887756
+      ],
+      "localTranslation": [
+        1.0886822938919067,
+        -0.9975706934928894,
+        0.6430185437202454
+      ],
+      "childNames": [
+        "InteriorDoorL04",
+        "InteriorDoorL01",
+        "InteriorDoorL02",
+        "InteriorDoorL03",
+        "InteriorDoorL05",
+        "InteriorDoorL06",
+        "BodyDoorLColor2",
+        "BodyDoorLHandle01",
+        "BodyDoorLHandle02",
+        "BodyDoorLMirror",
+        "BodyDoorLMirrorColor1",
+        "BodyDoorLWindowGasket",
+        "BodyDoorLWindow",
+        "BodyDoorLMirrorColor2"
+      ],
+      "mesh": 62,
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1.0886822938919067,
+        -0.9975706934928894,
+        0.6430185437202454,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.0886822938919067,
+        0.6430185437202454,
+        0.9975706934928894,
+        1
+      ]
+    },
+    "BodyDoorRColor1": {
+      "index": 50,
+      "parentName": "BodyUnderside",
+      "pivot": [
+        -1.0871999263763428,
+        0.6429661512374878,
+        0.997542679309845
+      ],
+      "min": [
+        -1.1100070476531982,
+        0.1552782952785492,
+        -0.6748754382133484
+      ],
+      "max": [
+        -0.9213294982910156,
+        0.9599902629852295,
+        0.9941507577896118
+      ],
+      "center": [
+        -1.015668272972107,
+        0.5576342791318893,
+        0.1596376597881317
+      ],
+      "localTranslation": [
+        -1.0871999263763428,
+        -0.997542679309845,
+        0.6429661512374878
+      ],
+      "childNames": [
+        "BodyDoorRColor2",
+        "BodyDoorRHandle01",
+        "BodyDoorRHandle02",
+        "BodyDoorRMirror",
+        "BodyDoorRMirrorColor1",
+        "BodyDoorRMirrorColor2",
+        "BodyDoorRWindow",
+        "BodyDoorRWindowGasket",
+        "InteriorDoorR01",
+        "InteriorDoorR02",
+        "InteriorDoorR03",
+        "InteriorDoorR04",
+        "InteriorDoorR05",
+        "InteriorDoorR06"
+      ],
+      "mesh": 48,
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -1.0871999263763428,
+        -0.997542679309845,
+        0.6429661512374878,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1.0871999263763428,
+        0.6429661512374878,
+        0.997542679309845,
+        1
+      ]
+    },
+    "BodyRearPanelsColor1": {
+      "index": 34,
+      "parentName": "BodyUnderside",
+      "pivot": [
+        0,
+        0.4230137765407562,
+        -1.9285271167755127
+      ],
+      "min": [
+        -1.1180148124694824,
+        0.3472527861595154,
+        -1.940231204032898
+      ],
+      "max": [
+        1.118014931678772,
+        1.1366990506649017,
+        -0.4599189758300781
+      ],
+      "center": [
+        5.960464477539063e-8,
+        0.7419759184122086,
+        -1.200075089931488
+      ],
+      "localTranslation": [
+        0,
+        1.9285271167755127,
+        0.4230137765407562
+      ],
+      "childNames": [
+        "InteriorRearHatch",
+        "InteriorRearPanels",
+        "BodyWindowsRearSides",
+        "BodyTurnsignalsRear",
+        "BodyTaillightsPanels",
+        "BodyTaillights",
+        "BodyRearwindow"
+      ],
+      "mesh": 33,
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1.9285271167755127,
+        0.4230137765407562,
+        1
+      ],
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.4230137765407562,
+        -1.9285271167755127,
+        1
+      ]
+    }
+  },
+  "hoodOpenedPositive60": {
+    "min": [
+      -1.106044412747494,
+      0.11956241946562136,
+      1.7326353266503876
+    ],
+    "max": [
+      1.106044291361698,
+      1.5757032195394896,
+      3.005729963293301
+    ],
+    "center": [
+      -6.069289804067068e-8,
+      0.8476328195025554,
+      2.3691826449718443
+    ]
+  },
+  "materials": [
+    {
+      "index": 0,
+      "name": "Mechanical"
+    },
+    {
+      "index": 1,
+      "name": "Glass"
+    },
+    {
+      "index": 2,
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "name": "Interior 1"
+    },
+    {
+      "index": 4,
+      "name": "Floormat"
+    },
+    {
+      "index": 5,
+      "name": "Hardware",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "name": "Interior 3 Carmine"
+    },
+    {
+      "index": 7,
+      "name": "Interior 2"
+    },
+    {
+      "index": 8,
+      "name": "Dashboard",
+      "emissiveFactor": [
+        1,
+        0.259027361869812,
+        0
+      ],
+      "emissiveStrength": 3
+    },
+    {
+      "index": 9,
+      "name": "License"
+    },
+    {
+      "index": 10,
+      "name": "Paint 2 Carmine"
+    },
+    {
+      "index": 11,
+      "name": "Paint 1 Carmine"
+    },
+    {
+      "index": 12,
+      "name": "Signallight",
+      "emissiveFactor": [
+        0.8,
+        0.35,
+        0
+      ],
+      "emissiveStrength": 2
+    },
+    {
+      "index": 13,
+      "name": "Brakelight",
+      "emissiveFactor": [
+        0.7,
+        0,
+        0
+      ],
+      "emissiveStrength": 2
+    },
+    {
+      "index": 14,
+      "name": "Headlight",
+      "emissiveFactor": [
+        0.54179847240448,
+        0.737204909324646,
+        1
+      ],
+      "emissiveStrength": 10
+    },
+    {
+      "index": 15,
+      "name": "Mirror",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 16,
+      "name": "Brake",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 17,
+      "name": "Disc"
+    },
+    {
+      "index": 18,
+      "name": "Tireside"
+    },
+    {
+      "index": 19,
+      "name": "Tiretread"
+    },
+    {
+      "index": 20,
+      "name": "Rim2",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 21,
+      "name": "Rim1",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 22,
+      "name": "Paint 1 Pearl"
+    },
+    {
+      "index": 23,
+      "name": "Paint 1 Graphite"
+    },
+    {
+      "index": 24,
+      "name": "Paint 2 Pearl"
+    },
+    {
+      "index": 25,
+      "name": "Paint 2 Graphite"
+    },
+    {
+      "index": 26,
+      "name": "Interior 3 Pearl"
+    },
+    {
+      "index": 27,
+      "name": "Interior 3 Graphite"
+    },
+    {
+      "index": 28,
+      "name": "Panel Sides"
+    }
+  ],
+  "variants": [
+    {
+      "name": "Carmine Candy"
+    },
+    {
+      "name": "Pearly Swirly"
+    },
+    {
+      "name": "Torched Graphite"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "camera": {
+    "position": [
+      5,
+      3.6,
+      6
+    ],
+    "target": [
+      0,
+      0.7,
+      0
+    ]
+  },
+  "height": 0.7,
+  "nextId": 3,
+  "selectedTrial": 2,
+  "trials": [
+    {
+      "durationMs": 194,
+      "height": 0.5588235294117647,
+      "id": 1,
+      "rise": 68
+    },
+    {
+      "durationMs": 195.9000000357628,
+      "height": 1.1,
+      "id": 2,
+      "rise": 160
+    }
+  ],
+  "version": 1,
+  "view": "hero"
+}

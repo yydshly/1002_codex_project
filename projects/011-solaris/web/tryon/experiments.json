@@ -1,0 +1,572 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "cross-00055-14627",
+      "jobId": "101182fc0b9f4663b81bfda3fd666620",
+      "personId": "person-00055",
+      "garmentId": "garment-14627",
+      "photoType": "flat-lay",
+      "name": "换穿交叉搭扣上衣",
+      "review": {
+        "identity": "pass",
+        "body": "uncertain",
+        "shape": "pass",
+        "detail": "uncertain",
+        "occlusion": "uncertain",
+        "wear": "no-reference"
+      },
+      "note": "人工目视初审：脸、发型与头部姿态大致保持；黑色V领交叉结构、肩带与侧挂带已迁移。裤腰、纽扣位置与原人物图发生变化，人物下装未完全保持；小搭扣细节发软。挂带接近前臂，需要同人同衣实拍进一步核对，不能据此判断实际合身程度。",
+      "inputKey": "[\"person-00055\",\"garment-14627\",\"flat-lay\"]",
+      "image": "./results/cross-00055-14627.png",
+      "metadataFile": "./results/cross-00055-14627.metadata.json",
+      "metadata": {
+        "id": "101182fc0b9f4663b81bfda3fd666620",
+        "status": "succeeded",
+        "created_at": "2026-10-05T18:51:58.149+00:00",
+        "updated_at": "2026-10-05T18:53:01.493+00:00",
+        "progress": {
+          "stage": "succeeded",
+          "completed_steps": 20,
+          "total_steps": 20
+        },
+        "settings": {
+          "model": "FASHN VTON 1.5",
+          "category": "tops",
+          "garment_photo_type": "flat-lay",
+          "num_samples": 1,
+          "num_timesteps": 20,
+          "seed": 42,
+          "guidance_scale": 1.5,
+          "skip_cfg_last_n_steps": 1,
+          "segmentation_free": true
+        },
+        "inputs": {
+          "person": {
+            "format": "JPEG",
+            "uploaded_bytes": 152937,
+            "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          },
+          "garment": {
+            "format": "JPEG",
+            "uploaded_bytes": 62788,
+            "sha256": "3fd079502958281685d739cd88e3b2a2c0300f67c7370bfc0146d7c549cf4346",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          }
+        },
+        "licenses": {
+          "tryon": "Apache-2.0",
+          "human_parser": "nvidia-segformer; research/evaluation only",
+          "human_parser_url": "https://github.com/NVlabs/SegFormer/blob/master/LICENSE"
+        },
+        "started_at": "2026-10-05T18:51:58.223+00:00",
+        "execution": {
+          "generation": "cuda",
+          "pose_detection": "cpu",
+          "human_parser": "cpu",
+          "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+          "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+          "preprocessor_lifetime": "CPU networks released before sampling; recreated for next input",
+          "pose_session_memory": "CPU arena/pattern disabled; intra/inter threads 2/1; original Wholebody and detector operations",
+          "dtype": "torch.bfloat16",
+          "model_resolution": [
+            576,
+            864
+          ],
+          "algorithm": "official Euler sampler/CFG; unchanged"
+        },
+        "gpu_memory": {
+          "peak_allocated_mib": 2782.73,
+          "peak_reserved_mib": 3584.0,
+          "scope": "sampling in this process; excludes other applications"
+        },
+        "output": {
+          "width": 576,
+          "height": 768,
+          "bytes": 422481,
+          "sha256": "f918848abb8db18eec06866685527668804dc51e4527007de696ffb41a8a1302",
+          "mime": "image/png"
+        },
+        "elapsed_seconds": 63.34,
+        "execution_seconds": 63.27,
+        "queue_seconds": 0.08,
+        "result_url": "/jobs/101182fc0b9f4663b81bfda3fd666620/result.png",
+        "metadata_url": "/jobs/101182fc0b9f4663b81bfda3fd666620/metadata.json"
+      },
+      "sha256": "f918848abb8db18eec06866685527668804dc51e4527007de696ffb41a8a1302",
+      "metadataSha256": "c6e94d2f5ea57cc4ca2a72d6c2fa8495e44252a695b67ca465a620b6a978de1a",
+      "reviewedBy": "agent-visual-first-review",
+      "reference": {
+        "available": false,
+        "kind": "no-cross-person-ground-truth"
+      },
+      "scope": "front-facing-upper-appearance; no-size-or-comfort-proof"
+    },
+    {
+      "id": "cross-14627-00055",
+      "jobId": "0ad56a0218ee4639ad6f2ac38af3cd0b",
+      "personId": "person-14627",
+      "garmentId": "garment-00055",
+      "photoType": "flat-lay",
+      "name": "换穿撞色字样短袖",
+      "review": {
+        "identity": "pass",
+        "body": "uncertain",
+        "shape": "pass",
+        "detail": "uncertain",
+        "occlusion": "pass",
+        "wear": "no-reference"
+      },
+      "note": "代理目视初审：人物脸、耳饰和手臂姿态大致保持；圆领、撞色袖与VANS字样迁移且可辨。裤腰和原有腰部细节被重新生成，袖口缝线、布料纹理及字样比例需商品近照核对；没有同人同目标衣实拍，不能评价真实合身。",
+      "inputKey": "[\"person-14627\",\"garment-00055\",\"flat-lay\"]",
+      "image": "./results/cross-14627-00055.png",
+      "metadataFile": "./results/cross-14627-00055.metadata.json",
+      "metadata": {
+        "id": "0ad56a0218ee4639ad6f2ac38af3cd0b",
+        "status": "succeeded",
+        "created_at": "2026-10-05T18:54:49.337+00:00",
+        "updated_at": "2026-10-05T18:55:38.923+00:00",
+        "progress": {
+          "stage": "succeeded",
+          "completed_steps": 20,
+          "total_steps": 20
+        },
+        "settings": {
+          "model": "FASHN VTON 1.5",
+          "category": "tops",
+          "garment_photo_type": "flat-lay",
+          "num_samples": 1,
+          "num_timesteps": 20,
+          "seed": 42,
+          "guidance_scale": 1.5,
+          "skip_cfg_last_n_steps": 1,
+          "segmentation_free": true
+        },
+        "inputs": {
+          "person": {
+            "format": "JPEG",
+            "uploaded_bytes": 100057,
+            "sha256": "f02b595b9068354a731c2d43658d92a4d47f23a7d9c73f2c1db651139e2cb2d4",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          },
+          "garment": {
+            "format": "JPEG",
+            "uploaded_bytes": 94754,
+            "sha256": "c9c13719456663be040a63711d0ee92c6bac2e259017b072d396d874bdc367ad",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          }
+        },
+        "licenses": {
+          "tryon": "Apache-2.0",
+          "human_parser": "nvidia-segformer; research/evaluation only",
+          "human_parser_url": "https://github.com/NVlabs/SegFormer/blob/master/LICENSE"
+        },
+        "started_at": "2026-10-05T18:54:49.425+00:00",
+        "execution": {
+          "generation": "cuda",
+          "pose_detection": "cpu",
+          "human_parser": "cpu",
+          "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+          "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+          "preprocessor_lifetime": "CPU networks released before sampling; recreated for next input",
+          "pose_session_memory": "CPU arena/pattern disabled; intra/inter threads 2/1; original Wholebody and detector operations",
+          "dtype": "torch.bfloat16",
+          "model_resolution": [
+            576,
+            864
+          ],
+          "algorithm": "official Euler sampler/CFG; unchanged"
+        },
+        "gpu_memory": {
+          "peak_allocated_mib": 2784.11,
+          "peak_reserved_mib": 3584.0,
+          "scope": "sampling in this process; excludes other applications"
+        },
+        "output": {
+          "width": 576,
+          "height": 768,
+          "bytes": 347920,
+          "sha256": "22e21ad66df195f580f7497754c55b35a2d88efa7073c088b6cb9d3b5a3a8f4f",
+          "mime": "image/png"
+        },
+        "elapsed_seconds": 49.58,
+        "execution_seconds": 49.48,
+        "queue_seconds": 0.09,
+        "result_url": "/jobs/0ad56a0218ee4639ad6f2ac38af3cd0b/result.png",
+        "metadata_url": "/jobs/0ad56a0218ee4639ad6f2ac38af3cd0b/metadata.json"
+      },
+      "sha256": "22e21ad66df195f580f7497754c55b35a2d88efa7073c088b6cb9d3b5a3a8f4f",
+      "metadataSha256": "32282ffbc33b1b0ea4d5842a94e0f70dc356bf6934e340bf161c4cb024c318bb",
+      "reviewedBy": "agent-visual-first-review",
+      "reference": {
+        "available": false,
+        "kind": "no-cross-person-ground-truth"
+      },
+      "scope": "front-facing-upper-appearance; no-size-or-comfort-proof"
+    },
+    {
+      "id": "reconstruction-00055",
+      "jobId": "aa5cad627f3b4c1cae95de9f159241bd",
+      "personId": "person-00055",
+      "garmentId": "garment-00055",
+      "photoType": "flat-lay",
+      "name": "同人同原衣重建基线",
+      "inputKey": "[\"person-00055\",\"garment-00055\",\"flat-lay\"]",
+      "image": "./results/reconstruction-00055.png",
+      "metadataFile": "./results/reconstruction-00055.metadata.json",
+      "metadata": {
+        "id": "aa5cad627f3b4c1cae95de9f159241bd",
+        "status": "succeeded",
+        "created_at": "2026-10-05T18:56:47.475+00:00",
+        "updated_at": "2026-10-05T18:57:29.327+00:00",
+        "progress": {
+          "stage": "succeeded",
+          "completed_steps": 20,
+          "total_steps": 20
+        },
+        "settings": {
+          "model": "FASHN VTON 1.5",
+          "category": "tops",
+          "garment_photo_type": "flat-lay",
+          "num_samples": 1,
+          "num_timesteps": 20,
+          "seed": 42,
+          "guidance_scale": 1.5,
+          "skip_cfg_last_n_steps": 1,
+          "segmentation_free": true
+        },
+        "inputs": {
+          "person": {
+            "format": "JPEG",
+            "uploaded_bytes": 152937,
+            "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          },
+          "garment": {
+            "format": "JPEG",
+            "uploaded_bytes": 94754,
+            "sha256": "c9c13719456663be040a63711d0ee92c6bac2e259017b072d396d874bdc367ad",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          }
+        },
+        "licenses": {
+          "tryon": "Apache-2.0",
+          "human_parser": "nvidia-segformer; research/evaluation only",
+          "human_parser_url": "https://github.com/NVlabs/SegFormer/blob/master/LICENSE"
+        },
+        "started_at": "2026-10-05T18:56:47.555+00:00",
+        "execution": {
+          "generation": "cuda",
+          "pose_detection": "cpu",
+          "human_parser": "cpu",
+          "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+          "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+          "preprocessor_lifetime": "CPU networks released before sampling; recreated for next input",
+          "pose_session_memory": "CPU arena/pattern disabled; intra/inter threads 2/1; original Wholebody and detector operations",
+          "dtype": "torch.bfloat16",
+          "model_resolution": [
+            576,
+            864
+          ],
+          "algorithm": "official Euler sampler/CFG; unchanged"
+        },
+        "gpu_memory": {
+          "peak_allocated_mib": 2784.11,
+          "peak_reserved_mib": 3584.0,
+          "scope": "sampling in this process; excludes other applications"
+        },
+        "output": {
+          "width": 576,
+          "height": 768,
+          "bytes": 420440,
+          "sha256": "e35847d2f722b75106f5215f5951a33e3427f424b111c3a875e3ce1829b8428d",
+          "mime": "image/png"
+        },
+        "elapsed_seconds": 41.84,
+        "execution_seconds": 41.76,
+        "queue_seconds": 0.08,
+        "result_url": "/jobs/aa5cad627f3b4c1cae95de9f159241bd/result.png",
+        "metadata_url": "/jobs/aa5cad627f3b4c1cae95de9f159241bd/metadata.json"
+      },
+      "sha256": "e35847d2f722b75106f5215f5951a33e3427f424b111c3a875e3ce1829b8428d",
+      "metadataSha256": "b6c9b392ba33e1ebd0eff510ff9f86ed2c4825207acf5a2b42a7d1e6d71001be",
+      "review": {
+        "identity": "pass",
+        "body": "fail",
+        "shape": "pass",
+        "detail": "uncertain",
+        "occlusion": "pass",
+        "wear": "fail"
+      },
+      "note": "代理目视初审：脸与头部姿态大致保持；同款字样和撞色结构能辨认。原实拍衣服较宽松并有明显褶皱，生成变得更贴身平整，衣服字样比例、裤腰倾角和纽扣位置也改变。同人同原衣实拍已存在，本次重建不能视为与实穿一致。",
+      "reviewedBy": "agent-visual-first-review",
+      "reference": {
+        "available": true,
+        "kind": "original-worn-reconstruction",
+        "referenceImage": "./samples/person-00055.jpg",
+        "independentDifferentOutfitTriplet": false
+      },
+      "scope": "front-facing-upper-appearance; no-size-or-comfort-proof"
+    },
+    {
+      "id": "model-reference-00055-14627",
+      "jobId": "55598b6b6418464a833443cc78a24e04",
+      "personId": "person-00055",
+      "garmentId": "garment-model-14627",
+      "photoType": "model",
+      "name": "用模特穿着照换上黑色上衣",
+      "inputKey": "[\"person-00055\",\"garment-model-14627\",\"model\"]",
+      "image": "./results/model-reference-00055-14627.png",
+      "metadataFile": "./results/model-reference-00055-14627.metadata.json",
+      "metadata": {
+        "id": "55598b6b6418464a833443cc78a24e04",
+        "status": "succeeded",
+        "created_at": "2026-10-05T19:05:28.506+00:00",
+        "updated_at": "2026-10-05T19:06:21.091+00:00",
+        "progress": {
+          "stage": "succeeded",
+          "completed_steps": 20,
+          "total_steps": 20
+        },
+        "settings": {
+          "model": "FASHN VTON 1.5",
+          "category": "tops",
+          "garment_photo_type": "model",
+          "num_samples": 1,
+          "num_timesteps": 20,
+          "seed": 42,
+          "guidance_scale": 1.5,
+          "skip_cfg_last_n_steps": 1,
+          "segmentation_free": true
+        },
+        "inputs": {
+          "person": {
+            "format": "JPEG",
+            "uploaded_bytes": 152937,
+            "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          },
+          "garment": {
+            "format": "JPEG",
+            "uploaded_bytes": 100057,
+            "sha256": "f02b595b9068354a731c2d43658d92a4d47f23a7d9c73f2c1db651139e2cb2d4",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          }
+        },
+        "licenses": {
+          "tryon": "Apache-2.0",
+          "human_parser": "nvidia-segformer; research/evaluation only",
+          "human_parser_url": "https://github.com/NVlabs/SegFormer/blob/master/LICENSE"
+        },
+        "started_at": "2026-10-05T19:05:28.574+00:00",
+        "execution": {
+          "generation": "cuda",
+          "pose_detection": "cpu",
+          "human_parser": "cpu",
+          "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+          "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+          "preprocessor_lifetime": "CPU networks released before sampling; recreated for next input",
+          "pose_session_memory": "CPU arena/pattern disabled; intra/inter threads 2/1; original Wholebody and detector operations",
+          "dtype": "torch.bfloat16",
+          "model_resolution": [
+            576,
+            864
+          ],
+          "algorithm": "official Euler sampler/CFG; unchanged"
+        },
+        "gpu_memory": {
+          "peak_allocated_mib": 2782.73,
+          "peak_reserved_mib": 3584.0,
+          "scope": "sampling in this process; excludes other applications"
+        },
+        "output": {
+          "width": 576,
+          "height": 768,
+          "bytes": 430325,
+          "sha256": "147fcf318395f59a0f0eec76d0de8ad928c25b98b714e9a140648f3df29546c7",
+          "mime": "image/png"
+        },
+        "elapsed_seconds": 52.58,
+        "execution_seconds": 52.52,
+        "queue_seconds": 0.06,
+        "result_url": "/jobs/55598b6b6418464a833443cc78a24e04/result.png",
+        "metadata_url": "/jobs/55598b6b6418464a833443cc78a24e04/metadata.json"
+      },
+      "sha256": "147fcf318395f59a0f0eec76d0de8ad928c25b98b714e9a140648f3df29546c7",
+      "metadataSha256": "f3d88cb062fa62a92a1ddafa8b3c4fbf0c9ebc16a0faed9145de67202be4f2f7",
+      "review": {
+        "identity": "pass",
+        "body": "uncertain",
+        "shape": "pass",
+        "detail": "uncertain",
+        "occlusion": "pass",
+        "wear": "no-reference"
+      },
+      "note": "代理目视初审：通过另一位模特的穿着照片迁移黑色V领、肩带和褶皱；人物脸与手臂姿态大致保持。原人物裤腰、纽扣位置被改动，肩带搭扣与侧带细节需商品近照复查。参考模特的实拍不是此人物的同人同衣实拍，不能证明实穿或尺码。",
+      "reviewedBy": "agent-visual-first-review",
+      "reference": {
+        "available": false,
+        "kind": "no-cross-person-ground-truth",
+        "otherModelReferenceImage": "./samples/person-14627.jpg"
+      },
+      "scope": "front-facing-upper-appearance; no-size-or-comfort-proof"
+    }
+  ],
+  "failedRuns": [
+    {
+      "id": "initial-failed-0702f8eb",
+      "name": "首次运行：CUDA 显存不足",
+      "jobId": "0702f8ebda354a11b07958e6db4ef579",
+      "personId": "person-00055",
+      "garmentId": "garment-14627",
+      "photoType": "flat-lay",
+      "inputKey": "[\"person-00055\",\"garment-14627\",\"flat-lay\"]",
+      "metadata": {
+        "id": "0702f8ebda354a11b07958e6db4ef579",
+        "status": "failed",
+        "created_at": "2026-10-05T18:34:38.611+00:00",
+        "updated_at": "2026-10-05T18:35:40.085+00:00",
+        "progress": {
+          "stage": "failed",
+          "completed_steps": 0,
+          "total_steps": 20
+        },
+        "settings": {
+          "model": "FASHN VTON 1.5",
+          "category": "tops",
+          "garment_photo_type": "flat-lay",
+          "num_samples": 1,
+          "num_timesteps": 20,
+          "seed": 42,
+          "guidance_scale": 1.5,
+          "skip_cfg_last_n_steps": 1,
+          "segmentation_free": true
+        },
+        "inputs": {
+          "person": {
+            "format": "JPEG",
+            "uploaded_bytes": 152937,
+            "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          },
+          "garment": {
+            "format": "JPEG",
+            "uploaded_bytes": 62788,
+            "sha256": "3fd079502958281685d739cd88e3b2a2c0300f67c7370bfc0146d7c549cf4346",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          }
+        },
+        "licenses": {
+          "tryon": "Apache-2.0",
+          "human_parser": "nvidia-segformer; research/evaluation only",
+          "human_parser_url": "https://github.com/NVlabs/SegFormer/blob/master/LICENSE"
+        },
+        "started_at": "2026-10-05T18:34:38.702+00:00",
+        "execution": {
+          "generation": "cuda",
+          "pose_detection": "cpu",
+          "human_parser": "cpu",
+          "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+          "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+          "dtype": "torch.bfloat16",
+          "model_resolution": [
+            576,
+            864
+          ],
+          "algorithm": "official Euler sampler/CFG; unchanged"
+        },
+        "error": {
+          "type": "OutOfMemoryError",
+          "message": "OutOfMemoryError: CUDA out of memory. Tried to allocate 120.00 MiB. GPU 0 has a total capacity of 8.00 GiB of which 4.79 GiB is free. Of the allocated memory 1.93 GiB is allocated by PyTorch, and 136.94 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        },
+        "elapsed_seconds": 61.49,
+        "execution_seconds": 61.39,
+        "queue_seconds": 0.09
+      },
+      "sourceRecord": "notes/tryon-runs/initial-failed-0702f8eb.json",
+      "note": "首次运行因 CUDA OutOfMemoryError 失败，未完成任何采样步，未生成结果图。"
+    }
+  ],
+  "notice": "真实本地运行记录；输出为模型生成图，供非商业研究核查。代理目视初审不代表用户亲自评分，不证明真实尺码、合身或舒适度。"
+}

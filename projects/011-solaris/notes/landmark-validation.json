@@ -1,0 +1,121 @@
+{
+  "product": "ATELIER",
+  "release": "0.5.0",
+  "date": "2026-10-05",
+  "entry": "http://localhost:4189/projects/011-solaris/landmark.html",
+  "acceptedBoundedIds": [
+    "C12",
+    "C13",
+    "C14"
+  ],
+  "method": "Actual in-app browser UI. Native mouse drags and wheel input; semantic UI buttons and JSON textarea. Saved values read only from the visible backup field, not from private application state.",
+  "asset": {
+    "file": "CooperHewitt_print.stl",
+    "license": "CC0-1.0",
+    "bytes": 17164134,
+    "triangles": 343281,
+    "sha256": "2158098219d3f2e8030d26edc3d7cdf119d1fb01f3d9a9bef62c4a45d8a2c49d",
+    "orientation": "Y-up confirmed by actual front, back and roof renders; STL encodes neither axis nor physical unit",
+    "scope": "Simplified hollow exterior printing model, without source textures, source materials, complete garden or complete interior; authored exhibition material and display scale only"
+  },
+  "checks": [
+    {
+      "name": "Actual geometry and preset views",
+      "status": "passed",
+      "evidence": "343281 source triangles loaded locally. Overview, +X facade, -X back and roof presets produced distinct actual mesh views. Selected preset exposes aria-pressed. No invented building geometry substitutes for the scan."
+    },
+    {
+      "name": "Native mouse orbit and one-step history",
+      "status": "passed",
+      "evidence": "Native left drag changed position [19,13,22] to [-20.38014772206186,7.244998331581311,22.517228218790052], target [0,3.4,0] unchanged. One undo returned exact full baseline JSON; redo restored free view."
+    },
+    {
+      "name": "Native wheel zoom",
+      "status": "passed",
+      "evidence": "Native wheel changed orbit position to [-14.086960137841139,6.057700963002235,15.56413136247258], preserving target, time and lights; one undo returned prior camera."
+    },
+    {
+      "name": "Native pan tool",
+      "status": "passed",
+      "evidence": "Pan drag translated camera and target by [0.13674685335722,-0.74318942041968,1.51211032730774] together. One undo returned the facade preset. Right-button pan is implemented but was not separately exercised by native input."
+    },
+    {
+      "name": "Time and independent exhibition fill",
+      "status": "passed",
+      "evidence": "Morning 09:00, afternoon 15:00, sunset 18:00 and night 22:00 visibly changed authored light, background and mesh shadows. Night fill switched off independently. These are artistic exhibition parameters, not geographic solar or lux measurements."
+    },
+    {
+      "name": "Continuous native time drag",
+      "status": "passed",
+      "evidence": "Native range drag 18:00→10:00 preserved exact camera and selected museum card. One undo returned 18:00. Morning 09:00 dragged to lower boundary 06:00 and one undo returned 09:00."
+    },
+    {
+      "name": "Four projected learning entries",
+      "status": "passed",
+      "evidence": "UI clicked each projected numbered button: introduction, facade, garden from back view, and museum. Each displayed matching card, original Chinese synopsis, official source links and a knowledge boundary. Card selection does not change camera. Learning entries are not survey locations."
+    },
+    {
+      "name": "Invalid import preserves workspace",
+      "status": "passed",
+      "evidence": "Pasted time=25 was rejected with visible range error. Closing and reopening backup showed exact prior full JSON unchanged. Core tests also reject unknown keys, invalid IDs and nonfinite/out-of-range poses."
+    },
+    {
+      "name": "Strict valid boundary import and undo",
+      "status": "passed",
+      "evidence": "UI restored position [40,18,25], target [18,4,0], time 15.9999 exactly. Display rounded correctly to 16:00. Reopened backup equalled input full JSON; one undo returned prior 18:00 overview/museum workspace."
+    },
+    {
+      "name": "Save and reload",
+      "status": "passed",
+      "evidence": "Saved and reloaded time18, lights=true, overview camera position[19,13,22]/target[0,3.4,0], selected museum. After loading finished, full backup JSON equalled the saved state exactly. History intentionally starts a fresh session."
+    },
+    {
+      "name": "Actual image preview",
+      "status": "passed",
+      "evidence": "Export UI displayed a decoded 1455×975 JPEG from the actual WebGL canvas with current camera/light, saved as atelier-landmark-render.jpg. No source textures or scan color are implied."
+    },
+    {
+      "name": "Scene capability description and research roadmap",
+      "status": "passed",
+      "evidence": "Actual scene modal shows C12/C13/C14, operations, expected effects, completed and pending checks, source-model bounds. Integration UI shows 36/22/14, four scene cards, phase3 5/5 and active composition-motion 0/5."
+    },
+    {
+      "name": "Natural desktop page layout",
+      "status": "passed",
+      "evidence": "Existing planning window client/scroll width 930/930; second natural desktop viewport client/scroll width 1265/1265 with four scene cards in two columns, each549px. No viewport override. Not a mobile or touchscreen test."
+    }
+  ],
+  "automatedChecks": [
+    {
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "status": "passed",
+      "tests": 49,
+      "landmarkTests": 8
+    },
+    {
+      "command": "node projects/011-solaris/scripts/verify-landmark-assets.mjs",
+      "status": "passed",
+      "sourceHashMatched": true,
+      "allCoordinatesFinite": true,
+      "originalZeroNormalFacesRetained": 1163
+    },
+    {
+      "command": "npm test",
+      "status": "passed",
+      "tests": 16
+    }
+  ],
+  "pending": [
+    "Device input during a held gesture: Escape, blur, pointer cancellation and lost capture; code and core rollback were reviewed, but hardware interruption was not simulated",
+    "Native right-button pan and touchscreen gestures; native left-button pan mode was verified",
+    "Mobile hardware, target GPU frame time/memory, latency and long-duration stability",
+    "Full workflow with third-party network blocked, and automatic download completion",
+    "Independent visual quality review; geographic solar data, real lighting/units and complete interior/site are outside the delivered scope"
+  ],
+  "screenshots": [
+    "../assets/atelier-landmark-workspace.jpg",
+    "../assets/atelier-landmark-knowledge.jpg",
+    "../assets/atelier-landmark-render.jpg"
+  ],
+  "reopenableExample": "../assets/atelier-landmark-config.json"
+}

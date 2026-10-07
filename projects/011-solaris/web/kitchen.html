@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee9df">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-src 'none'">
+  <title>ATELIER · 料理备料台</title>
+  <link rel="stylesheet" href="./kitchen/kitchen.css">
+  <link rel="stylesheet" href="./capabilities/scene-capabilities.css">
+  <script type="importmap">{"imports":{"three":"./studio/vendor/three.module.js","three/addons/":"./studio/vendor/addons/"}}</script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./"><span class="brand-mark">a</span><span>ATELIER<small>场景设计工作台</small></span></a>
+    <nav class="scene-navigation" aria-label="场景导航">
+      <a href="./">客厅</a><a href="./showroom.html">汽车展厅</a><a href="./imaging.html">影像工作台</a><a href="./landmark.html">地标档案</a><a href="./kitchen.html" aria-current="page">料理备料</a><a href="./creative.html">创作台</a><a href="./collection.html">精选陈列</a><a href="./skate.html">滑板练习</a><a href="./materials.html">材料教学</a><a href="./underwater.html">水下拖动 ↗</a><a href="./fitting.html">试衣间 ↗</a>
+    </nav>
+    <div class="header-actions">
+      <span id="save-status">本地工作区</span>
+      <button id="undo" class="icon-button" title="撤销 · Ctrl+Z" aria-label="撤销" disabled>↶</button>
+      <button id="redo" class="icon-button" title="重做 · Ctrl+Shift+Z" aria-label="重做" disabled>↷</button>
+      <button id="save" class="primary">保存摆放</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section id="stage" aria-label="完整扫描食材与陶瓷碗的三维备料台" tabindex="0">
+      <div class="stage-heading">
+        <span class="eyebrow">THE PREPARATION TABLE / 05</span>
+        <h1>一碗新鲜，<br>由你开始。</h1>
+        <p>真实食材，自然聚在一起。</p>
+        <button data-scene-capabilities="kitchen">本场景验证什么 <span aria-hidden="true">↗</span></button>
+      </div>
+      <span id="phase" class="phase" role="status">准备中</span>
+      <div id="source-labels" aria-hidden="true"></div>
+      <div class="stage-caption"><span class="caption-number">05</span><div><strong>料理备料台</strong><span>完整食材扫描 · 陶瓷碗 · 自主交互</span></div></div>
+      <div class="stage-toolbar"><button id="snapshot">保留这一刻 <span aria-hidden="true">↗</span></button></div>
+      <div class="stage-bottom"><span>拖入碗中松手 · 点击食材检视</span><span>空白处拖动视角 · 滚轮缩放</span></div>
+      <div id="loading" class="loading" role="status"><span class="brand-mark">a</span><strong>正在布置备料台</strong><p>载入真实扫描与本地物理环境…</p></div>
+    </section>
+
+    <aside class="control-panel" aria-label="食材与观察操作">
+      <div class="panel-intro"><span class="eyebrow">A LITTLE HANDS-ON</span><h2>新鲜的开始</h2><p>从左侧取一份食材，拖入碗中。<br>松手后，观察它落下、碰撞与停稳。</p></div>
+
+      <section class="panel-section" aria-labelledby="source-title">
+        <div class="section-heading"><h3 id="source-title">取用食材</h3><span>4 种完整原料</span></div>
+        <div id="source-buttons" class="source-buttons">
+          <button data-add="apple" aria-label="向碗中添加一份苹果"><span class="ingredient-dot apple"></span><span>苹果</span><span class="add-mark" aria-hidden="true">+</span></button>
+          <button data-add="lemon" aria-label="向碗中添加一份柠檬"><span class="ingredient-dot lemon"></span><span>柠檬</span><span class="add-mark" aria-hidden="true">+</span></button>
+          <button data-add="onion" aria-label="向碗中添加一份洋葱"><span class="ingredient-dot onion"></span><span>洋葱</span><span class="add-mark" aria-hidden="true">+</span></button>
+          <button data-add="avocado" aria-label="向碗中添加一份牛油果"><span class="ingredient-dot avocado"></span><span>牛油果</span><span class="add-mark" aria-hidden="true">+</span></button>
+        </div>
+        <p class="fine">也可用按钮取用；画面左侧的食材可重复拖取。</p>
+      </section>
+
+      <section class="panel-section" aria-labelledby="bowl-title">
+        <div class="section-heading"><h3 id="bowl-title">这一碗</h3><output id="quantity" aria-label="碗内食材数量">4 / 16</output></div>
+        <div id="item-list" class="item-list" aria-label="碗内食材清单"></div>
+        <button id="clear" class="text-button">清空碗内食材</button>
+      </section>
+
+      <section class="panel-section inspection-section" aria-labelledby="selection-name">
+        <span class="eyebrow">TAKE A CLOSER LOOK</span>
+        <h3 id="selection-name">选择一份碗内食材</h3>
+        <p id="inspection-note">待食材停稳后点击。上方没有遮挡时，可浮起观察原始表面。</p>
+        <button id="inspect" class="primary wide" disabled>浮起检视 <span aria-hidden="true">↑</span></button>
+        <div class="paired-actions"><button id="return" disabled>归位</button><button id="cancel" disabled>取消观察 · Esc</button></div>
+        <button id="remove" class="text-button" disabled>移除所选食材</button>
+      </section>
+
+      <section class="panel-section" aria-labelledby="views-title">
+        <div class="section-heading"><h3 id="views-title">观察视角</h3><span>自由调整</span></div>
+        <div id="views" class="views"><button data-view="hero" aria-pressed="true">总览</button><button data-view="top" aria-pressed="false">俯视</button><button data-view="bowl" aria-pressed="false">近景</button></div>
+      </section>
+
+      <section class="panel-section explanation" aria-label="操作与能力边界">
+        <div class="section-heading"><h3>这次可以验证</h3><a href="./integration.html#scenes">能力计划 ↗</a></div>
+        <p><span class="capability-id">C20</span> 从取料到入碗：拖放、重力碰撞、停稳，以及摆放恢复。</p>
+        <p><span class="capability-id">C29</span> 从选中到归位：无遮挡的食材浮起观察，再回到原姿态。</p>
+        <p class="fine">碰撞使用简化球包络。检视沿固定竖直轨迹，镜头临时跟随，其他食材位置保持不变；归位时还原视角。临时观察与未完成动作不写入摆放配置，数量和质量参数属于演示范围。</p>
+      </section>
+
+      <footer class="panel-footer">
+        <button id="backup">备份 / 打开摆放</button>
+        <details><summary>食材来源与实现边界</summary><p>苹果、柠檬、洋葱与牛油果使用 Poly Haven 的 CC0 扫描几何和纹理，保留完整外观。陶瓷碗与台面由本产品构建。</p><p>本场景演示刚体摆放与观察，不提供切片、软体形变或烹饪过程。</p><div class="source-links"><a href="https://polyhaven.com/a/food_apple_01" target="_blank" rel="noopener">苹果 ↗</a><a href="https://polyhaven.com/a/lemon" target="_blank" rel="noopener">柠檬 ↗</a><a href="https://polyhaven.com/a/yellow_onion" target="_blank" rel="noopener">洋葱 ↗</a><a href="https://polyhaven.com/a/food_avocado_01" target="_blank" rel="noopener">牛油果 ↗</a></div><a href="./assets/kitchen/manifest.json" target="_blank" rel="noopener">本地资产与许可清单 ↗</a></details>
+        <span class="local-note"><span aria-hidden="true"></span>本地渲染 · 本地保存</span>
+      </footer>
+    </aside>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="json-dialog" aria-labelledby="json-title"><div class="dialog-heading"><div><span class="eyebrow">KEEP YOUR ARRANGEMENT</span><h2 id="json-title">保留这一碗</h2></div><button id="close-json" class="close-button" aria-label="关闭摆放备份">×</button></div><p>复制 JSON 保留已完成的摆放，或粘贴已有配置恢复。浮起观察与未完成的投放不包含在备份中。</p><textarea id="json-text" spellcheck="false" aria-label="料理摆放 JSON"></textarea><p id="json-message" class="dialog-message" role="status"></p><div class="dialog-actions"><button id="download-json">下载 JSON</button><button id="import-json" class="primary">应用摆放</button></div></dialog>
+  <dialog id="snapshot-dialog" aria-labelledby="snapshot-title"><div class="dialog-heading"><div><span class="eyebrow">A MOMENT AT THE TABLE</span><h2 id="snapshot-title">当前备料台</h2></div><button id="close-snapshot" class="close-button" aria-label="关闭图片预览">×</button></div><img id="snapshot-image" alt="当前完整食材与陶瓷碗的实际三维渲染"><div class="dialog-actions"><button id="download-snapshot" class="primary">下载图片</button></div></dialog>
+  <script type="module" src="./capabilities/scene-capabilities.js"></script>
+  <script type="module" src="./kitchen/app.js"></script>
+<script type="module" src="./collection/scene-return.js"></script>
+</body>
+</html>

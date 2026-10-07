@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "view": "top",
+  "camera": {
+    "position": [
+      0,
+      6.8,
+      0.1
+    ],
+    "target": [
+      0,
+      0.6,
+      0
+    ]
+  },
+  "fish": {
+    "position": [
+      -1.85,
+      -0.95
+    ],
+    "heading": 1.5707963267948966
+  },
+  "records": [],
+  "nextId": 2
+}

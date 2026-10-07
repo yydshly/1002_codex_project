@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "avatarId": "atelier-mannequin-v1",
+  "garment": {
+    "id": "tee-01",
+    "color": "ink"
+  },
+  "pose": "neutral",
+  "view": "hero",
+  "camera": {
+    "position": [
+      2.17364518273456,
+      1.712340098721,
+      -3.895670987123
+    ],
+    "target": [
+      0.1245678991234,
+      1.172340898723,
+      -0.084567098123
+    ]
+  }
+}

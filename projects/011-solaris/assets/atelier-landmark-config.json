@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "time": 18,
+  "lights": true,
+  "camera": {
+    "position": [
+      19,
+      13,
+      22
+    ],
+    "target": [
+      0,
+      3.4,
+      0
+    ]
+  },
+  "view": "overview",
+  "hotspot": "museum"
+}

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-05",
+  "landmark": "Carnegie Mansion · Cooper Hewitt, Smithsonian Design Museum",
+  "modelScope": "博物馆2014年6月扫描所衍生的CC0简化中空外部打印STL；343281个三角面，无原始纹理、源材质、室内或编码长度单位。ATELIER制作白模陈列材质，显示比例不作为物理尺度。",
+  "contentPolicy": "历史事实依据博物馆官方资料；模型可见形式与事实陈述分开。热点为学习入口，不是历史事件的测绘定位。",
+  "hotspots": [
+    {
+      "id": "introduction",
+      "title": "一座住宅的历史",
+      "kicker": "HISTORY · 1899–1902",
+      "body": "卡内基宅邸建于1899至1902年，原是安德鲁·卡内基一家在纽约的住宅。博物馆记载，建筑由巴布、库克与威拉德事务所设计，采用乔治亚式乡间住宅风格。此处采用2014年扫描衍生的简化外部打印几何，建筑历史与数字模型属于不同时间层。",
+      "observation": "环绕简化外部打印几何观察建筑体量，对照建筑年代与数字模型采集时间。",
+      "sources": [
+        {
+          "title": "Cooper Hewitt · About the Carnegie Mansion",
+          "url": "https://www.cooperhewitt.org/about-the-carnegie-mansion-2/"
+        },
+        {
+          "title": "Cooper Hewitt · Download the Mansion",
+          "url": "https://www.cooperhewitt.org/open-source-at-cooper-hewitt/mansionmodel/"
+        }
+      ],
+      "sourceScope": "博物馆历史页支持1899–1902建造、家庭住宅、建筑事务所与风格；模型页支持2014年6月扫描、制作与捐赠记录。",
+      "knowledgeBoundary": "建筑历史来自官方资料。STL是简化中空打印几何，没有原色纹理、完整室内和可靠物理单位，不表示全部64个房间或今日现场。"
+    },
+    {
+      "id": "facade",
+      "title": "外立面与建筑形式",
+      "kicker": "ARCHITECTURE · GEORGIAN",
+      "body": "博物馆官方介绍将宅邸设计描述为乔治亚式，并强调其钢结构等技术创新。这些建筑解释来自史料；简化打印模型供我们观察外立面、窗洞与转角的层次。陈列材质由ATELIER制作，不是扫描原色；模型也不展示墙体内部结构。",
+      "observation": "从外立面视角比较窗洞、转角与建筑层次，改变观察角度与陈列光线；细节以简化打印几何实际保留内容为准。",
+      "sources": [
+        {
+          "title": "Cooper Hewitt · About the Carnegie Mansion",
+          "url": "https://www.cooperhewitt.org/about-the-carnegie-mansion-2/"
+        },
+        {
+          "title": "Cooper Hewitt · Download the Mansion",
+          "url": "https://www.cooperhewitt.org/open-source-at-cooper-hewitt/mansionmodel/"
+        }
+      ],
+      "sourceScope": "历史页支持乔治亚式乡间住宅风格和钢结构创新；模型页说明扫描来源，并明确STL是简化中空打印版本，区别于含原色纹理的FBX。",
+      "knowledgeBoundary": "白模材质由本项目制作，不是原建筑色彩或扫描纹理。不推断当前修复、病害或墙内结构；陈列光照不是原建筑日照测量。"
+    },
+    {
+      "id": "garden",
+      "title": "花园与时间层次",
+      "kicker": "GARDEN · SCAN / PRESENT",
+      "body": "围合花园是原宅邸的重要组成部分。博物馆官网说明，花园经过重新设计，于2015年重新开放，也用于活动、课程与展览。当前打印几何源于2014年扫描，不包含完整花园；切换另一立面可了解模型覆盖边界，不能把它当作今天的庭院复原。",
+      "observation": "切换至另一立面，区分模型实际覆盖范围与花园史料；相机预设不确认现场花园方向或地理方位。",
+      "sources": [
+        {
+          "title": "Cooper Hewitt · The Arthur Ross Terrace and Garden",
+          "url": "https://www.cooperhewitt.org/garden/"
+        },
+        {
+          "title": "Cooper Hewitt · Download the Mansion",
+          "url": "https://www.cooperhewitt.org/open-source-at-cooper-hewitt/mansionmodel/"
+        }
+      ],
+      "sourceScope": "花园官方页支持原有围合花园、后续重新设计、2015重开以及活动用途；模型页支持扫描采集于2014年6月。",
+      "knowledgeBoundary": "2014扫描早于2015花园重开。简化打印几何没有完整花园、原始纹理和植被；不说明今日植物、设施或开放时间。"
+    },
+    {
+      "id": "museum",
+      "title": "从住宅到设计博物馆",
+      "kicker": "MUSEUM · 1976 / 2014",
+      "body": "这座住宅后来成为设计博物馆的馆舍。官方时间线记录，宅邸于1976年以库珀·休伊特博物馆身份开放；2014年，整修后的博物馆重新迎接公众。本场景用于探索外观与学习有出处的历史，简化打印模型不提供完整室内或当前展览的复原。",
+      "observation": "对照建筑白模与历史卡，区分原住宅和后来的博物馆用途；当前相机探索简化打印几何的外部。",
+      "sources": [
+        {
+          "title": "Cooper Hewitt · Timeline: Interlocking Histories",
+          "url": "https://www.cooperhewitt.org/timeline/"
+        },
+        {
+          "title": "Cooper Hewitt · Download the Mansion",
+          "url": "https://www.cooperhewitt.org/open-source-at-cooper-hewitt/mansionmodel/"
+        }
+      ],
+      "sourceScope": "官方时间线支持1976改馆开放和2014整修重开。模型页区分简化中空打印STL与全几何和纹理FBX；本产品只加载前者。",
+      "knowledgeBoundary": "热点关联历史学习内容，不表示点击位置是特定展厅或历史人物房间。中空打印几何不等于真实可参观室内，当前展览未复原。"
+    }
+  ]
+}

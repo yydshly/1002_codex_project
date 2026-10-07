@@ -1,0 +1,99 @@
+.materials-comparison-view {
+  margin: 0;
+  width: 100%;
+  color: #5a5047;
+  font: inherit;
+}
+
+.materials-comparison-view__chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.materials-comparison-view__grid line {
+  stroke: #ddd7ce;
+  stroke-width: .7;
+}
+
+.materials-comparison-view__grid text {
+  fill: #746a5e;
+  font: 9px Arial, sans-serif;
+}
+
+.materials-comparison-view__curve {
+  fill: none;
+  stroke-width: 2.1;
+  stroke-linecap: round;
+}
+
+.materials-comparison-view__copper {
+  --comparison-material-color: #b76b36;
+}
+
+.materials-comparison-view__aluminum {
+  --comparison-material-color: #437fa2;
+}
+
+.materials-comparison-view__curve.materials-comparison-view__copper {
+  stroke: var(--comparison-material-color);
+}
+
+.materials-comparison-view__curve.materials-comparison-view__aluminum {
+  stroke: var(--comparison-material-color);
+  stroke-dasharray: 5 3;
+}
+
+.materials-comparison-view__point {
+  fill: var(--comparison-material-color);
+  stroke: #fffdf8;
+  stroke-width: 1.5;
+}
+
+.materials-comparison-view__readings {
+  display: grid;
+  gap: 5px;
+  margin: 0 0 9px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.materials-comparison-view__reading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.materials-comparison-view__legend {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 5px;
+  color: var(--comparison-material-color);
+}
+
+.materials-comparison-view__legend::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--comparison-material-color);
+}
+
+.materials-comparison-view__copper .materials-comparison-view__legend::before {
+  border-radius: 50%;
+}
+
+.materials-comparison-view__value {
+  white-space: nowrap;
+  color: #4f483e;
+  font-variant-numeric: tabular-nums;
+}
+
+.materials-comparison-view__caption {
+  font-size: 10px;
+  line-height: 1.6;
+  color: #847869;
+}

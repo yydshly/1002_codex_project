@@ -1,0 +1,279 @@
+{
+  "updatedAt": "2026-10-04",
+  "scope": "覆盖截至2026-10-04的Runway官方介绍与Solaris论文v1公开条目；全量指这两份公开材料，不包含未公开能力。本项目未访问或实测Solaris。图注核验不等于视频逐帧核验。",
+  "evidenceLevels": [
+    {"id": "official-figure", "label": "论文图示", "meaning": "已核查论文图注；发布者展示的示例，未由本项目实测"},
+    {"id": "official-video-observation", "label": "官方视频观察", "meaning": "团队目视核查官方回放；可见鼠标标记与视觉变化，不代表已核实完整输入事件或实测模型"},
+    {"id": "official-comparison", "label": "官方对比任务", "meaning": "已核查官方对比任务说明；所述手势与任务效果须分开判断"},
+    {"id": "official-description", "label": "官方文字描述", "meaning": "官方方法或交互文字说明；本项目未核验对应动态回放"},
+    {"id": "official-prospect", "label": "官方设想", "meaning": "设想或展望；不能计为已展示或可用功能"}
+  ],
+  "families": [
+    {"id": "spatial", "label": "物体空间操作"},
+    {"id": "appearance", "label": "外观与材质"},
+    {"id": "environment", "label": "时间与光照"},
+    {"id": "camera", "label": "视角与场景导航"},
+    {"id": "tryon", "label": "试穿与商品联动"},
+    {"id": "composition", "label": "场景组合"},
+    {"id": "experiment", "label": "交互教学实验"},
+    {"id": "semantic", "label": "同手势不同语义"},
+    {"id": "product", "label": "产品功能探索"},
+    {"id": "tools", "label": "对象变成工具"},
+    {"id": "motion", "label": "动作触发与对象联动"},
+    {"id": "adaptive", "label": "体验适配与流程"}
+  ],
+  "capabilities": [
+    {
+      "id": "C01", "name": "灯具移动", "family": "物体空间操作", "gesture": "未披露（图注仅述移动）", "sceneId": "interior",
+      "observed": "灯的位置改变。",
+      "mechanism": "要研究的是目标位置与整幅画面的共同变化。灯移走后的背景补全、落点遮挡、阴影和反射都影响真实感；这些视觉结果不能单独证明内部存在三维灯具资产。",
+      "verification": "标注灯的锚点，执行直线、折线与往返移动；分别记录目标位移误差、背景残留、遮挡顺序和释放后的漂移。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F2", "sourceSection": "图2：室内设计"
+    },
+    {
+      "id": "C02", "name": "挂画尺寸调整", "family": "物体空间操作", "gesture": "未披露（图注仅述缩放）", "sceneId": "interior",
+      "observed": "挂画尺寸改变。",
+      "mechanism": "尺寸控制需要稳定的缩放锚点。应把边框、画面内容、墙面接触关系作为同一目标检查，避免只放大一块像素却改坏透视或画作身份。",
+      "verification": "连续放大后缩回原尺寸；记录中心位移、宽高比、边框形状和原画内容保持程度，再改变拖动起点检查锚点规则。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F2", "sourceSection": "图2：室内设计"
+    },
+    {
+      "id": "C03", "name": "植物尺寸调整", "family": "物体空间操作", "gesture": "未披露（图注仅述缩放）", "sceneId": "interior",
+      "observed": "植物尺寸改变。",
+      "mechanism": "植物具有细小枝叶和不规则轮廓，适合检验生成式缩放能否保留对象身份。盆、茎、叶是否一起改变，以及与地面的接触是否稳定，比单次画面观感更有解释力。",
+      "verification": "以不同倍率往返缩放，检查盆径与株高比例、枝叶消失或增生、地面接触点和旁边物体误改。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F2", "sourceSection": "图2：室内设计"
+    },
+    {
+      "id": "C04", "name": "语言指定家具移动", "family": "物体空间操作", "gesture": "语言请求；鼠标手势未披露", "sceneId": "interior",
+      "observed": "文字举例：移动桌子。",
+      "mechanism": "语言可以先规定对象和意图，再由视觉环境呈现结果。研究时需要区别纯语言发起的编辑与语言设定模式后的连续鼠标控制，两者的延迟和精度要求不同。",
+      "verification": "对照仅语言、仅拖动、语言设定后拖动三种条件，测目标识别、位置可指定性和操作中修正能力。",
+      "evidenceLevel": "official-description", "sourceUrl": "https://runway.com/news/research/introducing-solaris", "sourceSection": "What's New：living environment 的文字例子"
+    },
+    {
+      "id": "C05", "name": "商品陈列重排", "family": "物体空间操作", "gesture": "设想中的直接操作；具体手势未披露", "sceneId": "fashion",
+      "observed": "文字设想：重排陈列。",
+      "mechanism": "这是把商品同时作为可购买对象和可布置对象的设计方向。两种意图需要明确区分，否则移动展示位置可能误触发试穿或加入购物车。",
+      "verification": "获得访问后，分别设定重排、试穿、购买意图并使用相同路径；检查商品身份、陈列位置和购物状态是否独立保持。",
+      "evidenceLevel": "official-prospect", "sourceUrl": "https://runway.com/news/research/introducing-solaris", "sourceSection": "What's New：虚拟服装店设想"
+    },
+    {
+      "id": "C06", "name": "沙发布料替换", "family": "外观与材质", "gesture": "未披露（图注仅述应用布料）", "sceneId": "interior",
+      "observed": "沙发换布料。",
+      "mechanism": "材质编辑应改变表面表现并保留家具形状。褶皱、接缝和光照是检验纹理与几何是否被混淆的线索；看起来像布料不等于获得了可编辑的材质参数。",
+      "verification": "在同一沙发反复切换两种布料，检查接缝和轮廓、纹理尺度、受光区域和邻近靠垫的修改范围。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F2", "sourceSection": "图2：室内设计"
+    },
+    {
+      "id": "C07", "name": "语言指定沙发换色", "family": "外观与材质", "gesture": "语言请求；鼠标手势未披露", "sceneId": "interior",
+      "observed": "文字举例：沙发换色。",
+      "mechanism": "颜色意图与材质意图应分别检验。选择红色时，暗部仍应保留合理亮度层次；颜色成功也不能说明能够按色卡精确匹配或保持布料型号。",
+      "verification": "指定颜色并往返切换，记录目标表面的色差、阴影层次、沙发形状和周边墙面是否被连带改色。",
+      "evidenceLevel": "official-description", "sourceUrl": "https://runway.com/news/research/introducing-solaris", "sourceSection": "What's New：living environment 的文字例子"
+    },
+    {
+      "id": "C08", "name": "墙面换色", "family": "外观与材质", "gesture": "未披露（图注仅述换色）", "sceneId": "interior-extended",
+      "observed": "墙面颜色改变。",
+      "mechanism": "墙面是大范围表面编辑，需保留门窗、挂画、踢脚线等边界。物体受墙面反射影响的变化与误涂邻物应分开评估。",
+      "verification": "在墙角、门框和画框附近操作，记录色彩作用范围和边缘泄漏；重复换色检查墙纹和室内布局保持。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S5.F14", "sourceSection": "图14：扩展室内设计"
+    },
+    {
+      "id": "C09", "name": "画作内容修改", "family": "外观与材质", "gesture": "未披露（图注仅述修改画作）", "sceneId": "interior-extended",
+      "observed": "画作可修改。",
+      "mechanism": "内容替换与尺寸变化是两种能力。研究应固定边框和安装位置，只改变框内内容，判断模型是否能隔离语义编辑与几何编辑。",
+      "verification": "保持画框不动，修改主题或内容；检查框内作用范围、边框透视、返回原作的可恢复性及旁边装饰的保持。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S5.F14", "sourceSection": "图14：扩展室内设计"
+    },
+    {
+      "id": "C10", "name": "室内时段调整", "family": "时间与光照", "gesture": "未披露（图注仅述调整时段）", "sceneId": "interior-extended",
+      "observed": "室内时段改变。",
+      "mechanism": "时间变化牵动窗外环境和室内受光，适合研究全场景一致性。应检查不同物体是否共享同一日照方向，而非各自独立发生明暗变化。",
+      "verification": "执行白天到夜晚再返回，记录窗外、主光方向、阴影和物体身份；使用相同时长无操作基线区分自然动画。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S5.F14", "sourceSection": "图14：扩展室内设计"
+    },
+    {
+      "id": "C11", "name": "室内光照调整", "family": "时间与光照", "gesture": "未披露（图注仅述调整光照）", "sceneId": "interior-extended",
+      "observed": "室内光照改变。",
+      "mechanism": "局部灯光调整与整体时间变化需要分开测试。关键是亮度、阴影与反射能否围绕同一控制规律连续变化；视觉合理并不等于准确的照度模拟。",
+      "verification": "固定时段后调整一个光照条件，往返操作检查响应是否单调、阴影是否连续以及未照区域的变化幅度。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S5.F14", "sourceSection": "图14：扩展室内设计"
+    },
+    {
+      "id": "C12", "name": "地标时段切换", "family": "时间与光照", "gesture": "未披露（图注仅述改变时段）", "sceneId": "landmark",
+      "observed": "地标时段改变。",
+      "mechanism": "外景时段控制同时影响天空、远景和建筑照明。需要检验地标结构是否保持，避免把场景重生成造成的结构变化误当成光照效果。",
+      "verification": "固定视角往返切换时段，比较建筑轮廓、周边布局、天空和照明，并记录时段转换是否产生中间结构变形。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F6", "sourceSection": "图6：地标探索"
+    },
+    {
+      "id": "C13", "name": "地标视角探索", "family": "视角与场景导航", "gesture": "未披露（图注仅述不同视角）", "sceneId": "landmark",
+      "observed": "地标视角改变。",
+      "mechanism": "视角探索要求多个画面中的同一建筑具有可辨认关系。新视点显露的背面与空间布局需要检查；连续感本身不能证明模型维护精确的三维地理结构。",
+      "verification": "围绕地标往返切换视角，标注显著结构点和遮挡顺序，比较返回起点时的身份、比例与环境一致性。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F6", "sourceSection": "图6：地标探索"
+    },
+    {
+      "id": "C14", "name": "场景中的地标学习", "family": "交互教学实验", "gesture": "未披露（图注仅述学习地标）", "sceneId": "landmark",
+      "observed": "地标学习示例。",
+      "mechanism": "场景学习把信息需求放回视觉上下文。研究要分别评估视觉指向是否正确、说明是否有依据和文字是否稳定，不能用漂亮场景替代知识准确度。",
+      "verification": "针对可指认部位提问并核对权威资料；记录对象指代、说明可读性和切换视角后的信息关联是否保持。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F6", "sourceSection": "图6：地标探索"
+    },
+    {
+      "id": "C15", "name": "室内视角探索", "family": "视角与场景导航", "gesture": "未披露（图注仅述不同视角）", "sceneId": "interior-extended",
+      "observed": "室内视角改变。",
+      "mechanism": "换视角后应保留此前布置和材质编辑。该能力可以检验会话状态是否超越当前可见像素，尤其是暂时被遮住的家具能否在再次出现时保留身份。",
+      "verification": "先换布料或移动物体，再换视角并返回；检查对象位置、材质、隐藏后重现的细节和房间几何关系。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S5.F14", "sourceSection": "图14：扩展室内设计"
+    },
+    {
+      "id": "C16", "name": "相机平移与俯视", "family": "视角与场景导航", "gesture": "文字指定相机运动；鼠标手势未披露", "sceneId": "camera",
+      "observed": "对比任务：平移、俯视。",
+      "mechanism": "全场景相机运动与单物体拖动具有不同的受控对象。任务文字能描述相机路线，但不能由此推出鼠标轨迹和相机位姿一一对应。",
+      "verification": "记录任务触发方式；检查前景视差、远近遮挡和运动终点，再做用户暂停、反向和中途修正测试。",
+      "evidenceLevel": "official-comparison", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S4.F12", "sourceSection": "图12：灯塔相机运动对比任务"
+    },
+    {
+      "id": "C17", "name": "拖衣服到人像试穿", "family": "试穿与商品联动", "gesture": "拖动到人像（图注明确）", "sceneId": "fashion",
+      "observed": "拖衣服试穿。",
+      "mechanism": "这里的拖动目标是把商品语义施加到人像，并非将商品平移覆盖在照片上。身体、姿态和服装应共同形成合理的穿着关系，同时保持人物身份。",
+      "verification": "同件衣服拖到身体不同落点，检查人物身份、衣服样式、袖口与遮挡；换装后再换回，记录细节与状态漂移。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F1", "sourceSection": "图1：虚拟服装店"
+    },
+    {
+      "id": "C18", "name": "拖鞋子到人像试穿", "family": "试穿与商品联动", "gesture": "拖动到人像（图注明确）", "sceneId": "fashion",
+      "observed": "拖鞋子试穿。",
+      "mechanism": "鞋与衣服共享试穿语义，却具有更小目标和成对结构。脚部姿态、左右配对和鞋型保持能检验模型是否真正区分不同商品类别的穿着关系。",
+      "verification": "拖到脚、腿和人像边界等位置，检查是否正确作用于双脚、鞋款保持和裤脚遮挡，再与衣服交替操作检验类别混淆。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F1", "sourceSection": "图1：虚拟服装店"
+    },
+    {
+      "id": "C19", "name": "试穿与购物车关联响应", "family": "试穿与商品联动", "gesture": "关联响应；非独立购物车拖放手势", "sceneId": "fashion",
+      "observed": "试穿后购物车更新。",
+      "mechanism": "一个动作关联多个界面区域，体现跨区域状态一致性的研究价值。购物车像素出现商品不能证明真实SKU、库存、订单或支付系统已接通。",
+      "verification": "记录一次拖动是否恰好增加一件对应商品；重复、替换、撤销试穿时检查数量和SKU映射，并独立验证业务数据而非仅看画面。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F1", "sourceSection": "图1：试穿与购物车更新"
+    },
+    {
+      "id": "C20", "name": "拖食材组合沙拉", "family": "场景组合", "gesture": "拖动到碗（图注明确）", "sceneId": "salad",
+      "observed": "食材拖入碗中。",
+      "mechanism": "组合动作包含取走来源、加入容器以及与已有内容形成遮挡。需要研究多个连续添加是否保持成分状态，而不只是每次生成一张看起来丰富的沙拉。",
+      "verification": "按不同顺序加入同一组食材，记录来源减少、碗内成分、数量和遮挡；尝试重复添加、边界释放和拿出食材。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F4", "sourceSection": "图4：沙拉组合"
+    },
+    {
+      "id": "C21", "name": "拖火源触发材料反应", "family": "交互教学实验", "gesture": "拖动火焰到材料（图注明确）；反应为关联响应", "sceneId": "combustion",
+      "observed": "拖火焰观察材料反应。",
+      "mechanism": "输入控制接触位置，后续火焰、烟和材料变化由场景生成。视觉因果关系和科学正确性需要独立评分；物理上像真的不能代替材料性质与反应条件核验。",
+      "verification": "在相同接触时长下比较材料及无火源基线；核对反应条件、结果和可解释性，检查移走火源后是否仍以合理规则演化。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F5", "sourceSection": "图5：燃烧教学"
+    },
+    {
+      "id": "C22", "name": "X光图上的拖动放大", "family": "同手势不同语义", "gesture": "拖动（图注明确）；缩放语义由上下文指定", "sceneId": "xray",
+      "observed": "同一拖动用于放大。",
+      "mechanism": "该例的核心是手势语义可以重载。拖动路径只提供空间输入，任务上下文决定它是框选或缩放；需要确认用户能明确知道并切换当前模式。",
+      "verification": "固定起始图与轨迹，只改变任务语义；记录缩放中心、倍率规律、旧模式残留和相同模式下的重复性。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F3", "sourceSection": "图3：同一拖动的两种解释（上）"
+    },
+    {
+      "id": "C23", "name": "X光图上的拖动测量", "family": "同手势不同语义", "gesture": "拖动（图注明确）；测量语义由上下文指定", "sceneId": "xray",
+      "observed": "同一拖动用于测量。",
+      "mechanism": "测量标线和数字可以作为生成的视觉响应，但定量测量还需要像素标定、端点和单位依据。该示例支持研究模式切换，不能证明测量值具有精确或临床意义。",
+      "verification": "使用带已知比例尺的非临床测试图，比较端点与生成数字；固定端点重复测量，检验误差、单位、文字稳定性和缩放后的标定保持。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F3", "sourceSection": "图3：同一拖动的两种解释（下）"
+    },
+    {
+      "id": "C24", "name": "汽车灯光开关", "family": "产品功能探索", "gesture": "未披露（图注仅述开灯）", "sceneId": "car",
+      "observed": "汽车灯光开启。",
+      "mechanism": "产品局部开关应改变指定灯组并影响周围受光，同时保持车身身份。触发成功与具体车型灯组真实性是两种评估。",
+      "verification": "分别操作不同灯组并做开关往返，检查命中目标、光源位置、邻近反射和车型外观；对照真实产品资料核验灯组。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F7", "sourceSection": "图7：汽车产品探索"
+    },
+    {
+      "id": "C25", "name": "拖车查看不同角度", "family": "产品功能探索", "gesture": "拖动汽车（图注明确）", "sceneId": "car",
+      "observed": "拖车改变观察角度。",
+      "mechanism": "这里拖动被解释为产品角度控制，区别于把车移到另一位置。应测方向与角度的连续关系以及多视角的车型一致性，不能直接推导出精确三维旋转。",
+      "verification": "水平往返拖动及闭环转一周，比较车头、车轮、车标和比例；记录反向响应、停顿、角度规律与回到起点的残差。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F7", "sourceSection": "图7：汽车产品探索"
+    },
+    {
+      "id": "C26", "name": "打开汽车引擎盖", "family": "产品功能探索", "gesture": "未披露（图注仅述打开引擎盖）", "sceneId": "car",
+      "observed": "引擎盖打开。",
+      "mechanism": "开合同时涉及运动部件和原本隐藏的内部内容。内部图像可信与符合真实车型是两个层次；隐藏区域生成尤其需要产品资料约束。",
+      "verification": "反复开合并从不同角度查看，记录铰链位置、盖板形状和部件一致性；对照真实车型内部资料核验出现的结构。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S1.F7", "sourceSection": "图7：汽车产品探索"
+    },
+    {
+      "id": "C27", "name": "猫的颜色纹理变成工具", "family": "对象变成工具", "gesture": "先点击猫，再点击目标（官方文字明确）", "sceneId": "tools",
+      "observed": "文字描述：取猫的颜色纹理。",
+      "mechanism": "点击来源改变后续操作的含义，形成持续的工具状态。关键是来源与目标的关系，以及工具状态能否取消、替换和保持；不能据此断言内部使用传统吸管或纹理映射。",
+      "verification": "选择来源后点击多种目标，检查颜色与纹理的保持、作用边界和目标形状；切换来源、点击空白并取消，观察是否残留旧工具状态。",
+      "evidenceLevel": "official-description", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S3.SS0.SSS0.Px5", "sourceSection": "§3 Redefining the mouse：猫工具文字描述"
+    },
+    {
+      "id": "C28", "name": "画作风格变成绘画工具", "family": "对象变成工具", "gesture": "点击画作；随后绘制的手势细节未披露", "sceneId": "tools",
+      "observed": "文字举例：沿画作风格绘制。",
+      "mechanism": "风格工具把来源对象的视觉特征转化为后续表达规则。需要区分一次性风格变化和持续受笔触控制的绘制，研究线条路径、局部性与风格保持。",
+      "verification": "以同一路径选择不同来源风格，比较笔触跟随和作用范围；暂停与反向绘制，再换工具检查旧风格残留。",
+      "evidenceLevel": "official-description", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S3.SS0.SSS0.Px5", "sourceSection": "§3 Redefining the mouse：画作工具条件性文字例子"
+    },
+    {
+      "id": "C29", "name": "点击对象触发浮起", "family": "动作触发与对象联动", "gesture": "点击（对比任务明确）；上浮由后续生成完成", "sceneId": "floating",
+      "observed": "对比任务：点击后浮起。",
+      "mechanism": "点击是离散触发，上浮是持续演化。此类效果不要求光标一直跟随对象，因此必须把动作触发准确率与后续动画自然程度分开测。",
+      "verification": "点击对象、边界和空白处；检查目标正确率、形状保持、上浮起始延迟，以及释放鼠标或再次点击是否影响动作终止。",
+      "evidenceLevel": "official-comparison", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S4.F12", "sourceSection": "图12：点击对象上浮对比任务"
+    },
+    {
+      "id": "C30", "name": "拖鱼改变位置", "family": "动作触发与对象联动", "gesture": "拖动鱼（图注明确）；移动场景也使用拖动描述", "sceneId": "mobile-fish",
+      "observed": "鱼被拖到新位置。",
+      "mechanism": "小型动态目标适合检验选择与持续跟随。鱼可能自主游动，因而要把环境动画造成的位移和输入造成的位移分开。移动界面示例不能单独证明触摸事件与鼠标完全相同。",
+      "verification": "固定鱼的起点，分别静止、直线、折线和中途暂停；比较鱼锚点、路径误差、尾部动画和无输入漂移。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S5.F13", "sourceSection": "图13：移动界面（上）"
+    },
+    {
+      "id": "C31", "name": "潜水员跟随鱼的关联响应", "family": "动作触发与对象联动", "gesture": "关联响应；非独立拖动潜水员", "sceneId": "mobile-fish",
+      "observed": "潜水员随鱼移动。",
+      "mechanism": "用户只控制一个对象，另一个对象依照场景关系行动。它可检验生成模型是否保持跨对象行为约束，不能把跟随效果直接算作用户同时控制两个对象。",
+      "verification": "拖鱼后停顿、反向和绕过潜水员；记录跟随延迟、距离规律、相交或穿透、鱼停止后潜水员是否继续追随。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S5.F13", "sourceSection": "图13：鱼与潜水员联动（上）"
+    },
+    {
+      "id": "C32", "name": "上拖滑板触发骑手跳跃", "family": "动作触发与对象联动", "gesture": "向上拖滑板（图注明确）；骑手动作是关联响应", "sceneId": "mobile-skateboard",
+      "observed": "上拖滑板，骑手跳跃。",
+      "mechanism": "位移输入被解释为动作意图，骑手身体与滑板共同演化。应研究跳跃高度是否可控、拖动是否只触发一次动作，以及身体与器械的关系能否保持。",
+      "verification": "用不同向上距离和速度重复操作，记录动作触发率、跳跃幅度、腾空与落地接触；中途反向和停止检查动作可中断性。",
+      "evidenceLevel": "official-figure", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S5.F13", "sourceSection": "图13：滑板动作（下）"
+    },
+    {
+      "id": "C33", "name": "商店随意图适配", "family": "体验适配与流程", "gesture": "官方展望；具体输入和手势未披露", "sceneId": "adaptive",
+      "observed": "展望：个性化商店。",
+      "mechanism": "适配应在改变布局或推荐时保留品牌与真实商品身份。研究重点是用户意图改变后哪些状态可变、哪些必须稳定，以及已有购物操作是否被意外覆盖。",
+      "verification": "获得访问后使用一组真实商品和相反偏好，检查品牌、SKU与价格保持，并比较适配前后的目标可发现性和任务完成率。",
+      "evidenceLevel": "official-prospect", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S6", "sourceSection": "§6：个性化storefront展望"
+    },
+    {
+      "id": "C34", "name": "教程按进度调整与恢复", "family": "体验适配与流程", "gesture": "官方展望；具体输入和手势未披露", "sceneId": "adaptive",
+      "observed": "展望：教程随进度恢复。",
+      "mechanism": "可适配教程需要知道用户已完成什么，并在偏离步骤后给出可执行的下一步。流畅的视觉衔接与正确的教学状态需要分别验证。",
+      "verification": "设计正确、跳步和错误三种路径，检查下一步是否对应真实进度、能否恢复、是否保留已完成工作，并核对教学内容。",
+      "evidenceLevel": "official-prospect", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S6", "sourceSection": "§6：自适配教程展望"
+    },
+    {
+      "id": "C35", "name": "按意图改变场景或转场", "family": "体验适配与流程", "gesture": "意图或请求；触发转场的具体鼠标手势未披露", "sceneId": "adaptive",
+      "observed": "方法描述：决定编辑或转场。",
+      "mechanism": "局部编辑和转到另一场景是不同状态转换。研究应记录转场决策、已选对象与历史状态是否被保留，以及返回时能否恢复用户此前的工作。",
+      "verification": "在相同起始图分别要求局部修改与探索新场景，检查决策是否符合意图；执行往返转场并核对选择、布局和购物等持久状态。",
+      "evidenceLevel": "official-description", "sourceUrl": "https://arxiv.org/html/2609.00776v1#S3.SS0.SSS0.Px3", "sourceSection": "§3 Reasoning and rendering"
+    },
+    {
+      "id": "C36", "name": "太阳位置与场景光照联动", "family": "时间与光照", "gesture": "可见鼠标标记随太阳移动；按下、拖动和释放状态未核实", "sceneId": "streetlight",
+      "observed": "鼠标标记移动，太阳和环境光照共同改变。",
+      "mechanism": "单个画面位置控制可能关联全场景照明，但仍要区分鼠标与太阳的可见相关性和真实输入因果关系。关键是天空、建筑受光、阴影能否围绕同一规律连续变化；视觉合理并不等于准确照度模拟。",
+      "verification": "记录原始输入及画面时间戳，在同一位置停顿、反向与释放；检查太阳跟随、亮度响应、阴影连续性，并用无操作基线排除预设动画。",
+      "evidenceLevel": "official-video-observation", "sourceUrl": "https://runway.com/news/research/introducing-solaris", "sourceSection": "How Solaris Works：街景光照官方回放（ePes…，约0–7秒）"
+    }
+  ]
+}

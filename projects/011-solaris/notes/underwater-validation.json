@@ -1,0 +1,197 @@
+{
+  "product": "ATELIER",
+  "release": "0.11.0",
+  "date": "2026-10-05",
+  "entry": "http://localhost:4189/projects/011-solaris/underwater.html",
+  "status": "passed-bounded-desktop-direct-drag-workflow",
+  "purpose": "验证鼠标按住真实鱼体、连续移动和转向、精确落点、空间保护与整段恢复；单鱼固定水平水层。",
+  "scope": {
+    "newCapability": "C30",
+    "sceneCount": 10,
+    "implementedBoundedCount": 32,
+    "totalCapabilities": 36,
+    "pendingIds": [
+      "C17",
+      "C18",
+      "C19",
+      "C31"
+    ],
+    "intentRegisteredTargets": 6,
+    "backendGeneration": false,
+    "swimY": 0.95,
+    "fishRadius": 0.3,
+    "reefCount": 3,
+    "maximumRecords": 40,
+    "maximumPathPoints": 64,
+    "maximumJSONBytes": 65536,
+    "schemaVersion": 1,
+    "headingImportAbsoluteTolerance": 1e-12,
+    "tailAnimationChangesRootPosition": false,
+    "obstaclePolicy": "矩形水域内的鱼体中心边界与三处保守圆形礁石包络；逐段扫掠拒绝，无自动寻路。"
+  },
+  "assets": {
+    "source": "Quaternius Animated Fish Pack、Kenney Nature Kit、Poly Haven sand_01，CC0",
+    "runtimeFiles": 12,
+    "runtimeBytes": 1675391,
+    "fishTriangles": 686,
+    "fishBones": 6,
+    "originalSwimTracks": 18,
+    "sampledAnimationPoses": 201,
+    "maximumSampledHorizontalFishRadius": 0.2874216457107428,
+    "meshDecimation": false,
+    "sandUse": "原始陆地砂材质的水下底面美术复用，并非真实海底扫描。",
+    "sourceManifest": "../web/underwater/assets/manifest.json",
+    "sources": "underwater-sources.md",
+    "newSceneAssetFiles": 12,
+    "reusedEnvironment": "../web/studio/assets/environment/coastal-day.hdr; registered CC0 Kloofendal sky; excluded from new asset count and bytes"
+  },
+  "automated": {
+    "status": "passed",
+    "productTests": 133,
+    "newUnderwaterTests": 12,
+    "independentAssetChecks": 11,
+    "repositoryTests": 16,
+    "syntaxChecks": [
+      "underwater/core.js",
+      "underwater/scene.js",
+      "underwater/app.js"
+    ],
+    "commands": [
+      "node --test projects/011-solaris/tests/*.test.mjs",
+      "node projects/011-solaris/scripts/verify-underwater-assets.mjs",
+      "npm test"
+    ],
+    "integrationGenerationCheck": "passed:0.11.0;10 scenes,32/36,4 pending,7 phases",
+    "repositoryCatalogCheck": "passed:14 projects",
+    "staticBuild": "passed"
+  },
+  "browser": {
+    "type": "Codex in-app browser",
+    "naturalViewport": [
+      1280,
+      720
+    ],
+    "horizontalOverflow": false,
+    "warnAndErrorLogs": [],
+    "pngExportDimensions": [
+      1443,
+      969
+    ],
+    "checks": [
+      {
+        "name": "原生拾取和多方向拖动",
+        "status": "passed",
+        "evidence": "按住完整GLB鱼体，实际生成三段路径；鼠标过程截图中active=true、172°转向和路径实时可见。"
+      },
+      {
+        "name": "准确最终落点",
+        "status": "passed",
+        "evidence": {
+          "lastPathEnd": [
+            -0.40179464379803287,
+            1.223187054679841
+          ],
+          "fish": {
+            "position": [
+              -0.40179464379803287,
+              1.223187054679841
+            ],
+            "heading": -3.073971766156583
+          },
+          "records": 3
+        }
+      },
+      {
+        "name": "整段撤销重做",
+        "status": "passed",
+        "evidence": "第二次原生拖动的一次撤销和重做与完整前后JSON精确相同。"
+      },
+      {
+        "name": "按住鱼体Escape取消",
+        "status": "passed",
+        "evidence": "等待实际拖动状态出现后按Escape，完整JSON回到起点。"
+      },
+      {
+        "name": "礁石扫掠阻挡",
+        "status": "passed",
+        "evidence": "原生拖向礁石，提示路径穿过礁石的鱼体保护范围，非法松手回滚完整JSON。"
+      },
+      {
+        "name": "越界释放",
+        "status": "passed",
+        "evidence": "原生拖出水域，提示鱼体超出可拖动水域，整段JSON原样恢复。"
+      },
+      {
+        "name": "无位移点击",
+        "status": "passed",
+        "evidence": "鱼体原生点击，无新记录，无位置或朝向变更。"
+      },
+      {
+        "name": "观察相机独立事务",
+        "status": "passed",
+        "evidence": "拖空白真实改变camera而鱼位不变，一次撤销完整JSON精确恢复；按住相机后Escape取消精确恢复。"
+      },
+      {
+        "name": "三种观察预设",
+        "status": "passed",
+        "evidence": "俯视和正面视角分别为top/front，鱼位与完整路径不变；返回hero。"
+      },
+      {
+        "name": "保存后重开",
+        "status": "passed",
+        "evidence": "通过UI保存再reload，完整JSON精确一致。"
+      },
+      {
+        "name": "有效与非法导入",
+        "status": "passed",
+        "evidence": "有效位置/路径链可恢复，错误结构拒绝且当前JSON不写；跨JS末段atan2舍入差异的40行合法fixture可精确保值导入。"
+      },
+      {
+        "name": "编号耗尽保护",
+        "status": "passed",
+        "evidence": "nextId=1000000有效备份导入后，原生拖鱼拒绝，不启动相机，全JSON保持。"
+      },
+      {
+        "name": "40条满账保护",
+        "status": "passed",
+        "evidence": "有效fixture显示40 / 40，原生拖鱼拒绝且相机、位置、朝向与40条记录完整保持。"
+      },
+      {
+        "name": "恢复初始位置可撤销",
+        "status": "passed",
+        "evidence": "清除路径但保留nextId，一次撤销恢复完整之前JSON。"
+      },
+      {
+        "name": "真实画面导出",
+        "status": "passed",
+        "evidence": "稳定renderer PNG预览成功解码1443×969；导出不含HTML侧栏、标签和拖动轨迹。"
+      },
+      {
+        "name": "桌面布局与运行日志",
+        "status": "passed",
+        "evidence": "自然1280×720，无横向溢出；warn/error为空。"
+      },
+      {
+        "name": "取消按钮的键盘激活",
+        "status": "passed",
+        "evidence": "实际鱼体按住过程，对已启用取消按钮按Enter，整段完整JSON精确回到原起点。"
+      }
+    ],
+    "descriptionDialog": "passed:实际打开水下拖动工作台·验证什么，C30操作/预期/验收/支撑/范围和C31待接均可见",
+    "planningPage": "passed:0.11.0/10 scenes/32 connected/4 pending;阶段04显示4/5、C31待接",
+    "testStateRestored": "passed:原初始完整JSON经应用、保存和reload精确恢复；材料原工作区使用独立key且未修改"
+  },
+  "artifacts": {
+    "workspace": "../assets/atelier-underwater-workspace.jpg",
+    "duringNativeDrag": "../assets/atelier-underwater-movement.jpg",
+    "reopenableExample": "../assets/atelier-underwater-example.json",
+    "canvasPNG": "../assets/atelier-underwater-render.png"
+  },
+  "limitations": [
+    "仅单鱼固定水层的鼠标位置与方向操作，未实现潜水员跟随C31、群游、路径规划、鱼类行为或水动力学。",
+    "尾鳍沿原始骨架Swim循环，水下色彩、光斑和底面属于场景设计，原素材均保留。",
+    "鱼体保护半径覆盖201次原动作取样，属于有限取样核查，不是连续时间的数学证明。",
+    "礁石采用包含实际网格的保守圆形包络；拒绝扫掠段，不是网格级碰撞求解。",
+    "本轮为桌面鼠标验收；触屏硬件、设备级失联、长期负载和所有GPU仍未专项验证。"
+  ]
+}

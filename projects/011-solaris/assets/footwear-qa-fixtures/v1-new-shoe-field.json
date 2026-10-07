@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "avatarId": "atelier-mannequin-v1",
+  "garment": {
+    "id": "jacket-01",
+    "color": "moss"
+  },
+  "pose": "reach",
+  "view": "hero",
+  "camera": {
+    "position": [
+      3.1,
+      1.85,
+      5.6
+    ],
+    "target": [
+      0,
+      0.95,
+      0
+    ]
+  },
+  "shoes": null
+}

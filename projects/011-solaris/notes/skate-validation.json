@@ -1,0 +1,91 @@
+{
+  "product": "ATELIER",
+  "release": "0.9.0",
+  "date": "2026-10-05",
+  "scene": "街角滑板练习场",
+  "entry": "http://localhost:4189/projects/011-solaris/skate.html",
+  "status": "bounded-main-workflows-verified; device-fault-performance-checks-pending",
+  "capabilityIds": ["C32"],
+  "researchEvidenceBoundary": "C32的原研究证据仍为官方图示。本次证明自有代码的限定平地手势映射、原始骨架动画混合及可恢复练习，不改变上游研究证据等级，也不证明调用或复现Solaris模型后台。",
+  "browser": {
+    "surface": "Codex in-app browser; native mouse, keyboard and public application controls",
+    "naturalViewport": [1280, 720],
+    "viewportOverride": false,
+    "documentClientWidth": 1280,
+    "documentScrollWidth": 1280,
+    "documentScrollHeight": 720,
+    "canvasAndPngDimensions": [1467, 969],
+    "consoleCheck": "Final generated skate reload and integration QA tab had no captured warnings or errors. Earlier null-selection initialization fault was fixed before the recorded acceptance actions.",
+    "consoleWarningsAndErrorsSinceFinalReload": []
+  },
+  "assets": {
+    "source": "https://kenney.nl/assets/mini-skate",
+    "sourceDocument": "skate-sources.md",
+    "manifest": "../web/assets/skate/manifest.json",
+    "rigAnalysis": "../web/assets/skate/rig-analysis.json",
+    "license": "Kenney Mini Skate 1.2 CC0",
+    "sourceArchiveSha256": "82582f6de507e93090c16bb4802a7c361015fe246eddd571e6e96f816b12e8c6",
+    "verifiedFiles": 133,
+    "runtimePackage": {"models": 20, "textureFiles": 1, "bytes": 574065, "triangles": 2563},
+    "displayedOriginalModels": ["character-skate-boy", "skateboard", "halfpipe", "rail-low", "steps", "obstacle-box", "structure-wood"],
+    "rig": {"skinnedMeshes": 2, "joints": 7, "originalClips": 29, "usedClips": ["skate-stand", "skate-air"]},
+    "geometryPolicy": "Complete original GLBs and original colormap, with source hashes preserved. Scene uses parent transforms and original animation tracks; geometry, joint hierarchy, skin weights and material texture remain unmodified. Courtyard stage, trees, markings and sign are authored locally.",
+    "boundary": "Runtime package totals describe all retained files, not initial page requests. The retained girl model is not an exposed character selector. Stylized licensed art, not a photoreal human or motion capture. Original rig has no separate knees, feet or ankles and no full ollie takeoff/landing clip."
+  },
+  "automatedChecks": [
+    {"command": "node --test projects/011-solaris/tests/*.test.mjs", "passed": 95, "failed": 0, "skateCorePassed": 11},
+    {"command": "npm test", "passed": 16, "failed": 0},
+    {"command": "node projects/011-solaris/scripts/verify-skate-assets.mjs", "result": "passed", "files": 133},
+    {"command": "node projects/011-solaris/scripts/verify-skate-contact.mjs", "result": "passed", "samples": 3003, "boardVertices": 372, "soleVertices": [12, 18], "heights": [0.3, 0.7, 1.1], "floorY": 0.01, "tolerance": 1e-8, "maximumSupportError": 7.893e-11, "maximumCommonFloorCorrection": 0.044743, "boundary": "Independent original GLB vertex/inverse-bind sampling of stand-air blending. Only the two conservative support points, sampled sole vertices and all board vertices; not complete foot IK, biomechanics, collision physics or browser acceptance."},
+    {"command": "node --check projects/011-solaris/web/skate/app.js", "result": "passed"},
+    {"command": "node --check projects/011-solaris/web/skate/scene.js", "result": "passed"}
+  ],
+  "browserChecks": [
+    {"id": "SK01", "action": "实际授权骑手与完整滑板加载", "result": "Original skinned character, colormap, board and licensed park props appear with local environment, lighting and shadows. No generated stand-in character or substitute board geometry."},
+    {"id": "SK02", "action": "原生鼠标上拖68px并落地", "result": "Native drag [478,466]→[478,398], duration194ms, produced numeric trial1 and height0.5588235294117647. Exactly one record after completion; preview height and camera unchanged."},
+    {"id": "SK03", "action": "一次撤销与重做", "result": "Undo restored the complete initial public JSON exactly; redo restored the complete first-trial JSON exactly."},
+    {"id": "SK04", "action": "10px短拖与40px下拖", "result": "Both native drags rejected. Complete first-trial JSON unchanged in each case."},
+    {"id": "SK05", "action": "重播第一条并逐帧观察", "result": "Public scrubber at0.5 showed actual air pose, displayed height0.56 and support gap0.00000000. Continue completed without adding a record; complete first-trial JSON unchanged."},
+    {"id": "SK06", "action": "160px上拖触发后Esc取消", "result": "Escape during preparation/motion returned to idle and the full first-trial JSON exactly. No new record. This is not held-pointer Escape hardware acceptance."},
+    {"id": "SK07", "action": "原生鼠标上拖160px并落地", "result": "Native drag [478,465]→[478,305], duration195.9000000357628ms, produced numeric trial2, height1.1. Exactly two completed records; one actual gesture is one history transaction."},
+    {"id": "SK08", "action": "保存并刷新", "result": "Complete second-trial public JSON exactly matched after reload, including trial IDs, gesture values, nextId, selected trial, preview height, view and camera."},
+    {"id": "SK09", "action": "非法高度99 JSON", "result": "Visible rejection stating permitted0.3–1.1 range; prior full JSON unchanged. No partial import."},
+    {"id": "SK10", "action": "合法自定义相机与高度JSON导入、撤销、重做", "result": "Public import height0.3, viewcustom, position[0,1.4,3], target[0,0.7,0] accepted exactly. One undo restored complete second-trial JSON; redo restored complete imported JSON; final undo returned to prior practice. One earlier automation fill inserted an extra literal character and was correctly rejected before the verified clean import."},
+    {"id": "SK11", "action": "正侧预览准备、腾空和落地", "result": "Actual side view at progress0.16/0.5/0.9 displayed all three poses, each support gap0.00000000. Saved real preparation and landing screenshots. Cancel left full side-view baseline JSON unchanged."},
+    {"id": "SK12", "action": "总览、正侧、正面", "result": "All three views show the same complete original character and board. Switching views does not alter completed trials."},
+    {"id": "SK13", "action": "原生鼠标环绕和一次撤销", "result": "Front camera position[0,2.4,6]→[4.6063213422618325,2.3999999999999995,3.8447111324289622], target[0,0.7,0], viewcustom. One undo restored complete prior JSON exactly."},
+    {"id": "SK14", "action": "原生滚轮缩放和一次撤销", "result": "Position[0,2.4,6]→[0,1.875056852429288,4.147259479162193]. One undo restored complete prior JSON exactly."},
+    {"id": "SK15", "action": "公开图片预览与真实PNG留档", "result": "保留这一刻 displayed a complete decoded1467×969 data:image/png. Actual public output saved as atelier-skate-render.png; no repainting or image generation."},
+    {"id": "SK16", "action": "原始几何穿透发现与修复复验", "result": "Independent review found a landing board edge below the floor. Common rider/board floor correction now preserves fitted support while keeping every original board vertex at or above floorY0.01 within1e-8, across3003 registered pose samples."},
+    {"id": "SK17", "action": "自然桌面布局与实际证明", "result": "1280×720 without override; document clientWidth=scrollWidth1280 and scrollHeight720. Actual clean workspace, air/preparation/landing JPEGs, renderer PNG and public recoverable JSON saved."}
+  ],
+  "integrationChecks": {
+    "generatedData": "integration.mjs generation and --check passed:0.9.0,30/36,seven phases and eight scene descriptions.",
+    "repository": "npm run sync, npm run check and node scripts/catalog.mjs build passed;14 projects indexed.95 product tests and16 repository tests passed.",
+    "actualBrowser": "Final build reload preserved the full saved two-trial skate JSON exactly. Its public capability dialog visibly showed C32 input, expected action, completed tests, pending device checks and scope. Integration QA visibly showed0.9.0,36/30/6, eight actual scene articles, phase4=3/5 and phase7=3/3; C35 still has six registered target scenes. Captured final reload and integration warning/error logs were empty.",
+    "proofFiles": "All six proof references contain data, all four browser JPEG signatures and the1467×969 PNG header checked. Public two-trial hero example passes validateState. Current product IDs count30, remaining6 and product test total95 checked.",
+    "deployment": "Local workspace and localhost preview only; no external deployment."
+  },
+  "proofs": {
+    "workspaceScreenshot": "../assets/atelier-skate-workspace.jpg",
+    "airScreenshot": "../assets/atelier-skate-air.jpg",
+    "preparationScreenshot": "../assets/atelier-skate-preparation.jpg",
+    "landingScreenshot": "../assets/atelier-skate-landing.jpg",
+    "rendererPng": "../assets/atelier-skate-render.png",
+    "recoverableExample": "../assets/atelier-skate-example.json"
+  },
+  "pending": [
+    "Native gesture reversal and excessive horizontal displacement acceptance; core rejection rules are tested separately.",
+    "Held-pointer Escape, blur and lost capture on actual devices, including camera press/drag cancellation; touch, other browser engines and assistive-device workflows.",
+    "Storage quota, malformed stored data and cross-tab fault injection; guarded source code is not fault acceptance.",
+    "Full workflow under network isolation, actual browser download file writes, specified-device performance and long-running renderer/memory stability."
+  ],
+  "boundaries": [
+    "One fixed flat practice point. Ramps, rails, steps and obstacles are scenery, with no skate traversal, ramp dynamics, grind or obstacle collision implementation.",
+    "Net up-drag24–160px maps to0.3–1.1 display units; larger valid up-drags are capped. Recorded speed does not affect height. Reject short, downward and more than100px horizontal displacements.",
+    "Authored display trajectory:0.28s preparation,2sqrt(2h/9.8) air and0.30s landing. Original skate-stand/skate-air are mixed continuously; original air clip alone does not move the rider root upward. No full ollie, foot IK or athlete physics claim.",
+    "Only12/18 conservative original sole vertices and their two support points are evaluated. Real flat board deck is fitted and a common upward correction preserves that relation while preventing original board floor penetration. Entire foot, shoe contact patch, friction and biomechanical accuracy are unverified.",
+    "Only completed actual gestures create trials. Previews, seek, replay and cancellation do not. Stable JSON stores camera, preset/custom view, preview height and at most40 completed numeric trial records; transient animation is not persisted.",
+    "Local bundled assets and self-owned runtime code, with no runtime language model or external generation API. Header navigation is ordinary scene access and does not expand the six registered C35 return routes."
+  ]
+}

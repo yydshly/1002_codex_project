@@ -1,0 +1,63 @@
+{
+  "format": "atelier-imaging",
+  "version": 1,
+  "activeId": "hand",
+  "viewport": {
+    "width": 782,
+    "height": 413
+  },
+  "states": {
+    "hand": {
+      "version": 1,
+      "imageId": "hand",
+      "image": {
+        "width": 1466,
+        "height": 2082
+      },
+      "view": {
+        "scale": 0.3138998117304221,
+        "offsetX": 171.8500240091413,
+        "offsetY": -66.51057164235064
+      },
+      "appearance": {
+        "brightness": 0.15,
+        "contrast": 1.35,
+        "invert": false
+      },
+      "calibration": null,
+      "measurements": [
+        {
+          "id": "measure-1",
+          "a": {
+            "x": 762.9291107813657,
+            "y": 706.734733819914
+          },
+          "b": {
+            "x": 762.9291107813657,
+            "y": 1486.7677916711536
+          }
+        }
+      ]
+    },
+    "chest-lateral": {
+      "version": 1,
+      "imageId": "chest-lateral",
+      "image": {
+        "width": 1769,
+        "height": 2453
+      },
+      "view": {
+        "scale": 0.14798206278026907,
+        "offsetX": 260.109865470852,
+        "offsetY": 25
+      },
+      "appearance": {
+        "brightness": 0,
+        "contrast": 1,
+        "invert": false
+      },
+      "calibration": null,
+      "measurements": []
+    }
+  }
+}

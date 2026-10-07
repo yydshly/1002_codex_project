@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ebe6dd">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-src 'none'">
+  <title>ATELIER · 材质与笔触创作台</title>
+  <link rel="stylesheet" href="./creative/creative.css">
+  <link rel="stylesheet" href="./capabilities/scene-capabilities.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./"><span class="brand-mark">a</span><span>ATELIER<small>场景设计工作台</small></span></a>
+    <nav class="scene-navigation" aria-label="场景导航"><a href="./">客厅</a><a href="./showroom.html">汽车展厅</a><a href="./imaging.html">影像工作台</a><a href="./landmark.html">地标档案</a><a href="./kitchen.html">料理备料</a><a href="./creative.html" aria-current="page">材质创作</a><a href="./collection.html">精选陈列</a><a href="./skate.html">滑板练习</a><a href="./materials.html">材料教学</a><a href="./underwater.html">水下拖动 ↗</a><a href="./fitting.html">试衣间 ↗</a></nav>
+    <div class="header-actions"><span id="save-status">本地创作</span><button id="undo" aria-label="撤销" title="撤销 · Ctrl+Z" disabled>↶</button><button id="redo" aria-label="重做" title="重做 · Ctrl+Shift+Z" disabled>↷</button><button id="save" disabled class="primary">保存作品</button></div>
+  </header>
+  <main class="workspace">
+    <aside class="reference-panel" aria-label="真实参考与取样选区">
+      <div class="reference-intro"><span class="eyebrow">THE REFERENCE LIBRARY</span><h2>从真实参考开始</h2><p>选择来源，再在原图上圈一块。<br>这块参考会成为持续使用的工具。</p></div>
+      <div id="references" class="reference-cards">
+        <button data-source="cat" aria-label="选择猫照片作为参考" aria-pressed="true"><img src="./assets/creative/cat-fur.jpg" alt="作者CC0真实猫照片"><span><strong>猫的毛纹</strong><small>真实实拍 · CC0</small></span><span class="ref-number">01</span></button>
+        <button data-source="wheat" aria-label="选择梵高麦田作为参考" aria-pressed="false"><img src="./assets/creative/wheat-cypresses.jpg" alt="梵高麦田与柏树公版原作"><span><strong>麦田与柏树</strong><small>Vincent van Gogh · 1889</small></span><span class="ref-number">02</span></button>
+        <button data-source="river" aria-label="选择西斯莱河桥作为参考" aria-pressed="false"><img src="./assets/creative/river-bridge.jpg" alt="西斯莱河桥公版原作"><span><strong>河上的光</strong><small>Alfred Sisley · 1872</small></span><span class="ref-number">03</span></button>
+      </div>
+      <section class="sample-section" aria-label="来源选区">
+        <div class="section-heading"><h3>来源选区</h3><button id="full-source">使用整幅</button></div>
+        <div id="reference-stage" tabindex="0" role="img" aria-label="在来源原图上拖动选择取样范围"><img id="reference-image" alt="当前完整来源原图"><div id="crop-overlay"><span>取样</span></div></div>
+        <div class="sample-caption"><span id="source-region">正在载入</span><span>点击 / 拖出选区</span></div>
+        <p class="source-credit" id="source-credit"></p>
+        <a id="source-link" target="_blank" rel="noopener">查看原作与许可 ↗</a>
+      </section>
+      <div class="reference-note"><span class="small-dot"></span><p>原图保持完整。取样只改变工具，<br>不会修改或上传来源图像。</p></div>
+    </aside>
+    <section class="art-workspace" aria-label="固定原图坐标的创作画纸">
+      <div class="workspace-heading"><div><span class="eyebrow">THE MATERIAL &amp; MARK STUDIO / 06</span><h1>让参考，成为笔触。</h1><p>取一块纹理，留下一笔自己的表达。</p></div><button data-scene-capabilities="creative">本场景验证什么 <span aria-hidden="true">↗</span></button></div>
+      <div class="canvas-topline"><div class="canvas-tools"><button id="draw-tool" aria-pressed="true" title="绘制 · B">笔刷</button><button id="pan-tool" aria-pressed="false" title="移动画纸 · H / 按住空格">移动画纸</button><span class="divider"></span><button id="zoom-out" aria-label="缩小画纸">−</button><output id="zoom-label">适应</output><button id="zoom-in" aria-label="放大画纸">+</button><button id="fit">适应</button></div><span id="tool-status" role="status">正在准备参考</span></div>
+      <div id="canvas-viewport" tabindex="0"><div id="paper"><canvas id="art-canvas" width="1200" height="900" aria-label="创作画布：点击印章，拖动连续绘制"></canvas><div id="brush-cursor" hidden></div><div id="target-guide" hidden><span>修改范围</span></div></div><div id="loading" role="status"><span class="brand-mark">a</span><strong>打开真实参考</strong><p>载入本地原作与画纸…</p></div></div>
+      <div class="canvas-footer"><div><strong>一张画纸，无限次尝试</strong><span id="canvas-credit">塞尚公版静物底图 · 1200 × 900 工作坐标</span></div><button id="export" disabled>预览 / 导出 PNG <span aria-hidden="true">↗</span></button></div>
+    </section>
+    <aside class="control-panel" aria-label="笔刷、局部范围与图层">
+      <section class="tool-intro"><span class="eyebrow">YOUR ACTIVE TOOL</span><h2 id="active-tool-name">毛纹印章</h2><p id="active-tool-description">真实选区变成局部纹理，沿每次落笔继续使用。</p><div class="tool-preview"><canvas id="sample-preview" width="180" height="100" aria-label="当前来源生成的真实笔刷预览"></canvas><div><span id="sample-kind">真实像素</span><strong id="sample-detail">—</strong></div></div><div id="palette" aria-label="从选区提取的五色调色板"></div></section>
+      <section class="panel-section"><div class="section-heading"><h3>笔刷语义</h3><span>C27 / C28</span></div><div class="two-buttons"><button data-mode="texture" aria-pressed="true">纹理印章</button><button data-mode="paint" aria-pressed="false">参考笔触</button></div><label class="range-label" for="brush-size"><span>笔刷直径</span><output id="size-value">72 px</output></label><input id="brush-size" type="range" min="8" max="140" step="1" value="72"><label class="range-label" for="brush-opacity"><span>落笔透明度</span><output id="opacity-value">80%</output></label><input id="brush-opacity" type="range" min="15" max="100" step="1" value="80"><p class="fine" id="brush-analysis">像素纹理直接取自可见选区。绘制使用固定画纸坐标。</p></section>
+      <section class="panel-section"><div class="section-heading"><h3>修改范围</h3><span>显式几何边界</span></div><select id="target" aria-label="修改范围"><option value="all">整张画纸</option><option value="left">左侧试片区域</option><option value="right">右侧试片区域</option></select><p class="fine">笔触只写入所选范围。来源与底图不被改写，越过边界的部分会被裁掉。</p></section>
+      <section class="panel-section"><div class="section-heading"><h3>两层创作</h3><output id="stroke-count">0 笔</output></div><div id="layers"><div class="layer-row"><button data-layer="paint" aria-pressed="false"><span class="layer-symbol">≈</span><span>参考笔触<small>颜色与方向</small></span></button><button data-visibility="paint" aria-label="隐藏参考笔触图层" aria-pressed="true">◉</button></div><div class="layer-row"><button data-layer="texture" aria-pressed="true"><span class="layer-symbol">▦</span><span>纹理印章<small>原图选区</small></span></button><button data-visibility="texture" aria-label="隐藏纹理印章图层" aria-pressed="true">◉</button></div></div><button id="clear-layer" class="text-button">清空当前图层</button></section>
+      <section class="panel-section"><div class="section-heading"><h3>画纸底图</h3><span>非破坏叠加</span></div><div class="two-buttons"><button data-base="stilllife" aria-pressed="true">公版静物</button><button data-base="paper" aria-pressed="false">空白画纸</button></div></section>
+      <section class="panel-section explanation"><div class="section-heading"><h3>这次验证什么</h3><a href="./integration.html#scenes">能力计划 ↗</a></div><p><span>C27</span> 可见来源取样，变成持续使用的纹理工具。</p><p><span>C28</span> 选区调色板与亮暗方向，变成跟随手势的参数笔刷。</p><p class="fine">有限取样与参数化绘制；不提供任意对象语义提取或通用风格迁移。</p></section>
+      <footer class="panel-footer"><button id="backup" disabled>备份 / 打开作品</button><details><summary>素材来源与实现边界</summary><p>猫照片为作者CC0实拍；梵高、西斯莱和塞尚使用Met官方开放图像。界面、像素取样、笔刷、分层与状态协议由本产品实现。</p><p>2400px长边完整构图派生图用于本地显示。笔刷坐标与大小属于1200×900创作纸，不是来源作品真实尺寸。</p><a href="./assets/creative/manifest.json" target="_blank" rel="noopener">资产与派生过程清单 ↗</a></details><span class="local-note"><span class="small-dot"></span>本地取样 · 本地绘制 · 本地保存</span></footer>
+    </aside>
+  </main>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="json-dialog" aria-labelledby="json-title"><div class="dialog-heading"><div><span class="eyebrow">KEEP YOUR CREATIVE WORK</span><h2 id="json-title">保存笔触与来源</h2></div><button id="close-json" aria-label="关闭作品备份">×</button></div><p>保存完整笔触、选区、图层与底图。复制JSON备份，或粘贴已有作品恢复；进行中的一笔不会写入。</p><textarea id="json-text" aria-label="创作作品 JSON" spellcheck="false"></textarea><p id="json-message" role="status"></p><div class="dialog-actions"><button id="download-json">下载 JSON</button><button id="import-json" class="primary">应用作品</button></div></dialog>
+  <dialog id="png-dialog" aria-labelledby="png-title"><div class="dialog-heading"><div><span class="eyebrow">FROM A REFERENCE TO YOUR MARK</span><h2 id="png-title">当前作品的实际画面</h2></div><button id="close-png" aria-label="关闭作品图片预览">×</button></div><img id="png-image" alt="当前真实画布的1200乘900像素PNG"><p>图层可见性和底图按当前作品导出，不包含选区框与界面。来源编号写入作品JSON；参考原作的署名与出处见素材清单。</p><div class="dialog-actions"><button id="download-png" class="primary">下载 PNG</button></div></dialog>
+  <script type="module" src="./capabilities/scene-capabilities.js"></script><script type="module" src="./creative/app.js"></script>
+<script type="module" src="./collection/scene-return.js"></script>
+</body>
+</html>

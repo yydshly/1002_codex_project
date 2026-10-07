@@ -1,0 +1,23 @@
+[
+  {
+    "size": 485088,
+    "md5": "c914c8edb419f040e04224081a3f79a5",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sand_01/sand_01_diff_1k.jpg",
+    "path": "textures/sand_01/sand_01_diff_1k.jpg",
+    "channel": "Diffuse"
+  },
+  {
+    "size": 877821,
+    "md5": "369b82aa417c77ec85c4c07c4c7b60a0",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sand_01/sand_01_nor_gl_1k.jpg",
+    "path": "textures/sand_01/sand_01_nor_gl_1k.jpg",
+    "channel": "nor_gl"
+  },
+  {
+    "size": 189667,
+    "md5": "663d0ddf782a427b7da4e247c939e73b",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sand_01/sand_01_rough_1k.jpg",
+    "path": "textures/sand_01/sand_01_rough_1k.jpg",
+    "channel": "Rough"
+  }
+]

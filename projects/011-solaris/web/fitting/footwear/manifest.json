@@ -1,0 +1,288 @@
+{
+  "schema": 1,
+  "date": "2026-10-06",
+  "purpose": "Local mouse-operated fixed-avatar paired three-dimensional footwear fitting; no external model inference or image try-on.",
+  "source": {
+    "id": "quaternius-universal-animation-library-standard",
+    "author": "Quaternius",
+    "pageUrl": "https://quaternius.com/packs/universalanimationlibrary.html",
+    "authorMirrorUrl": "https://opengameart.org/content/universal-animation-library",
+    "archiveUrl": "https://opengameart.org/sites/default/files/universal_animation_librarystandard.zip",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceModel": "Animation Library[Standard]/Godot/AnimationLibrary_Godot_Standard.glb / Mannequin"
+  },
+  "authoredAdditions": {
+    "externalFootwearAssets": false,
+    "geometry": "Original complete left/right court shoes and ankle boots: continuous cubic last, independent leather shells with real elliptical ankle openings, hollow boot quarter, closed rounded soles, separately projected toe/quarter/heel panels and tongue, padded rim/lining, actual lace curves, metal eyelets, sidewall grooves and heel pull details. Rubber block geometry is embedded within the flat registered sole and does not imply traction physics.",
+    "copyrightScope": "Complete Quaternius CC0 mannequin reused unchanged from frozen C17 runtime; every shoe shell, sole, panel, lace, hardware shape and PBR material authored locally without external shoe mesh or brand artwork.",
+    "registration": "Rigid full pairs at original foot anchors. Packed original avatar foot points independently evaluated in both finite poses and confirmed stationary. Shoes deliberately have no duplicated rig or gait clips.",
+    "pipeline": "Editable Blender 5.2.2 LTS model, Python build/inspection/review/registration recipes, final GLBs and full original source archive retained locally outside web except small runtime GLBs/license/registration/manifest."
+  },
+  "runtime": {
+    "avatar": "../assets/avatar.glb",
+    "footwear": [
+      {
+        "id": "court-01",
+        "path": "court.glb",
+        "name": "Court",
+        "category": "shoes"
+      },
+      {
+        "id": "boot-01",
+        "path": "ridge.glb",
+        "name": "Ridge",
+        "category": "shoes"
+      }
+    ],
+    "up": "+Y",
+    "front": "+Z",
+    "outerScale": 1,
+    "outerOrigin": [
+      0,
+      0,
+      0
+    ],
+    "groundY": 0,
+    "virtualReferenceHeight": 1.78,
+    "bodyMasks": false,
+    "realMeasurementClaim": false,
+    "gaitSupported": false,
+    "externalRequests": 0,
+    "materialInstructions": "Only Fitting_ShoeUpper is recolorable. Sole, rubber, trim/lining, cotton laces, stitches and metallic eyelets retain separate fixed PBR materials.",
+    "poseInstructions": "Load paired footwear gltf.scene directly under avatar outer root with scale 1. Rigid pairs need no AnimationMixer; original avatar and garments retain Fitting_Neutral / Fitting_Reach setTime(0). Original feet and all body meshes remain visible, with no mask or replacement body geometry.",
+    "finiteVerification": {
+      "checks": 9,
+      "status": "passed-with-finite-foot-domain",
+      "geometryChecksStored": 8,
+      "originalFootSamplesPerPair": 264,
+      "groundProjectionHitsPerPair": 264,
+      "outsidePortalUpwardHitsPerPair": 120,
+      "declaredOpenAnklePortalSamplesPerPair": 144,
+      "ridgeLowerShinSamples": 2830,
+      "ridgeLowerShinCovered": 2830,
+      "shaftHeightDomain": [
+        0.155,
+        0.284
+      ],
+      "registeredPoses": [
+        "neutral",
+        "reach"
+      ],
+      "reviewImages": 18,
+      "limits": "Fixed original 1.78 virtual reference body and two stationary-foot poses only. Foot samples are unique packed body points with Y<0.155. All floor projections are tested. Vertical upper rays are tested only outside the actual elliptical ankle opening; its 144 samples are explicitly declared open. Ridge lower-shin radial shell probes use Y in [0.155,0.284] and include original vertices plus 8th-order barycentric samples of every body triangle crossing the domain. Not a volumetric collision certificate, production shoe last, foot/sole padding simulation, real sizing, walk cycle, cloth or friction solver."
+    }
+  },
+  "files": [
+    {
+      "path": "court.glb",
+      "role": "runtime-court-pair",
+      "byteLength": 2898476,
+      "sha256": "9f6e8db208e6d1e622bf0327934829e1842838e8fb2b52207f9402307cd68838"
+    },
+    {
+      "path": "ridge.glb",
+      "role": "runtime-ridge-pair",
+      "byteLength": 3228204,
+      "sha256": "3454599203fc1f103a2f9583c5b9d59db8c37b993168567447e9cef78c2e5dc9"
+    },
+    {
+      "path": "fit-registration.json",
+      "role": "finite-foot-registration",
+      "byteLength": 1466,
+      "sha256": "decfd54bc02894f66ddd2d808294d1d487263bb0837c9f7a17038d8767440f18"
+    },
+    {
+      "path": "quaternius-cc0-license.txt",
+      "role": "source-license-copy",
+      "byteLength": 446,
+      "sha256": "11eac7504a28077e9d8dbac8ddfca2566510efba7eef46e11f21cdd2bc96d4d5"
+    },
+    {
+      "repositoryPath": "web/fitting/assets/avatar.glb",
+      "role": "frozen-complete-reference-avatar",
+      "byteLength": 682176,
+      "sha256": "9b236207c5256cb79e699d451c8345b7790717c2a06f151fe9e2814aa57be631"
+    },
+    {
+      "repositoryPath": "web/fitting/assets/core-tee.glb",
+      "role": "frozen-c17-tee",
+      "byteLength": 3533168,
+      "sha256": "79b645eb26a89f3c755d7dc25ed26c15129e905381d8e47b3f89b144638d1d15"
+    },
+    {
+      "repositoryPath": "web/fitting/assets/field-jacket.glb",
+      "role": "frozen-c17-jacket",
+      "byteLength": 6209244,
+      "sha256": "72b28ac1219ba2f848fb3000374680d12b02738d8672e7152e7ca557dcf7fade"
+    },
+    {
+      "repositoryPath": "assets/diver-source-archives/original/universal-animation-library-standard.zip",
+      "role": "original-archive",
+      "byteLength": 14541205,
+      "sha256": "18ff1a7215f4852b320203e8aaf02a1578b5c8eef9027fbaedfcedc7b85a3ac2"
+    },
+    {
+      "repositoryPath": "assets/diver-source-archives/original/quaternius-ual/Animation Library[Standard]/Godot/AnimationLibrary_Godot_Standard.glb",
+      "role": "original-body-glb",
+      "byteLength": 6671104,
+      "sha256": "1b7bf67866360665426bb99e4c71bd619f19b408453c24e30f0c3071601eee5c"
+    },
+    {
+      "repositoryPath": "assets/diver-source-archives/original/source-body-topology.json",
+      "role": "source-topology-snapshot",
+      "byteLength": 751354,
+      "sha256": "a065aca463b6e50f211ffc58ac17bdeebd0fce2a50731a2741d7b445dae8c95c"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/build_footwear.py",
+      "role": "original-footwear-build-recipe",
+      "byteLength": 16881,
+      "sha256": "74a50fa56d86af5f67a1a195388cf9c9aedcb7c2593b725a65156da30612647e"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/inspect_feet.py",
+      "role": "original-foot-registration-recipe",
+      "byteLength": 1667,
+      "sha256": "4aabc541908831d827841d1725503a05c908cdf84f94374302f5ecec1d9a7dc0"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/review_footwear.py",
+      "role": "actual-avatar-review-recipe",
+      "byteLength": 3170,
+      "sha256": "05aa139ff70e8da68e8d61463c6acff6385f515f505c8fb87740781192062b5d"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/build_manifest.py",
+      "role": "local-source-registration-recipe",
+      "byteLength": 5579,
+      "sha256": "b98c0005f08c9ac62fc4b92250b47205aedcf99045675ee24dd5ba5a4d4bda72"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/atelier-footwear-complete.blend",
+      "role": "complete-editable-paired-shoes-and-original-avatar",
+      "byteLength": 4570725,
+      "sha256": "41023ab4700b4ceffa7ab060b84d41207cdf52a64eeb791905c3b812824558e7"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/avatar-feet-inspection.json",
+      "role": "actual-avatar-foot-registration",
+      "byteLength": 39449,
+      "sha256": "d8b7c774943c68fd104f0c3f36c3486b8d7208594ce03699ccaf9cac264c2787"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/finite-foot-verification.json",
+      "role": "finite-packed-foot-verification",
+      "byteLength": 2687,
+      "sha256": "0197b923daad53d71d8af70d85d13030803a9800fdd3b275f05b14793e408731"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/boot-01-neutral-back-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1261617,
+      "sha256": "643a436acfb9e2d8b95d431986dcb1fb9e5922e1b6a71f531ee1ff4e57171e1f"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/boot-01-neutral-detail-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1345142,
+      "sha256": "b2e2d42263bdbf8c2a853897dc0f082c96e9ad403d9841577c740694146afbbf"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/boot-01-neutral-front-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1386043,
+      "sha256": "ddede8a773bc7b2eb819d13410da1a0620f59f3e5c4fe1688b6cd8c7a3f62efb"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/boot-01-neutral-side-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1272037,
+      "sha256": "a395021d82b3d99e136f6b9d3c634b9b2ebec7d115f6bf7406bc6ec563c7139f"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/boot-01-reach-back-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1261369,
+      "sha256": "aa35961a827ff522928d9e29d11890c220b4137c5911dd8f83c86427a02011e7"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/boot-01-reach-detail-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1345547,
+      "sha256": "ffcbb6f0031a3f7195835c75b613deb4386b9335b0ce83b696814abdb32a0219"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/boot-01-reach-front-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1385071,
+      "sha256": "901a9e683b6883cd52ed4218770d51809c3509d153981c99adc46442e5be1766"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/boot-01-reach-side-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1272290,
+      "sha256": "519ddbe83ccf4412b64c18cb6f5dd2d43eb114210682addb25a9e1a7eaa67994"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/boot-01-underside-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1236461,
+      "sha256": "582b4adf4b2a8c609a45ac99bfcc68d65b2ae6067d772caed6a654e59ddee5b6"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/court-01-neutral-back-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1218559,
+      "sha256": "0ca2577d77d456b56ef04c428034102d12fd10b113da61dacfbde1c1bbe59c23"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/court-01-neutral-detail-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1283499,
+      "sha256": "13cfbdbb9e71dbaa2af5103cd3bfd80b4a98716dc720d70dd7f4075bb142d23e"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/court-01-neutral-front-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1280916,
+      "sha256": "9283573916245b9f64aac19186f08aa5a625ea63f95962f0259522a6bf216254"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/court-01-neutral-side-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1195366,
+      "sha256": "d9eb54d96095bc860bb18e47e140b9cd38756200d2c8d723399785d5b1745c1b"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/court-01-reach-back-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1218800,
+      "sha256": "e00987a5fa48a8e1d4d6a84055c96a6d76764c24137209f0e4a1b777e319d911"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/court-01-reach-detail-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1283088,
+      "sha256": "0fe0652528626bf22f1ba014f754a7519b153151ef624731408cc6d91b0e41be"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/court-01-reach-front-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1280896,
+      "sha256": "c171200bfe9f7d42ab147d965a895ef4e456356a5f4fad033c945dc1c08e4d91"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/court-01-reach-side-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1195361,
+      "sha256": "86b0b3331942e7c6aeb4f711729d6a8d4a4c1c9918c0ba7fdfa8df7981ba6008"
+    },
+    {
+      "repositoryPath": "assets/fitting-footwear-source-archives/court-01-underside-review.png",
+      "role": "actual-avatar-view",
+      "byteLength": 1300989,
+      "sha256": "d82e370b6c6bdf30023b41665162ab18c72d456def5da503c4460cd7ff87b24b"
+    }
+  ]
+}

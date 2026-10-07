@@ -1,0 +1,340 @@
+{
+  "product": "ATELIER",
+  "release": "0.14.0",
+  "date": "2026-10-06",
+  "capability": "C18",
+  "entry": "http://localhost:4189/projects/011-solaris/fitting.html",
+  "status": "passed-for-listed-workflows; finite-fitting-and-device-specialties-pending",
+  "purpose": "通过真实鼠标把独立成对鞋拖到完整原人体脚部，验证合法部位、左右脚一起换款、与上装独立、配色细节和整套搭配恢复。",
+  "implementation": {
+    "backend": "none; local Three.js, authored geometry, pointer rules and strict state",
+    "shoeIds": [
+      "court-01",
+      "boot-01"
+    ],
+    "shoeRelationship": "rigid preadapted complete pairs under the same full avatar root; no feet mask or animated gait",
+    "body": "unchanged original complete 53-bone Quaternius CC0 mannequin",
+    "poses": [
+      "neutral",
+      "reach"
+    ],
+    "poseLimit": "two registered static poses have identical fixed foot locations; no walking",
+    "shoeUpper": "Fitting_ShoeUpper recolored; sole, lace, stitching and hardware remain independent",
+    "drop": "nearest visible actual avatar or worn mesh hit within bounded foot box",
+    "footDropBox": {
+      "x": [
+        -0.36,
+        0.36
+      ],
+      "y": [
+        -0.01,
+        0.3
+      ],
+      "z": [
+        -0.18,
+        0.34
+      ]
+    },
+    "minimumDragPixels": 6,
+    "slots": [
+      "one-upper-garment",
+      "one-complete-pair"
+    ],
+    "view": "shoe-detail",
+    "preview": "render-only before a legal release; history retains the complete baseline"
+  },
+  "state": {
+    "schema": 2,
+    "key": "atelier-fitting-room-v2",
+    "legacyKey": "atelier-fitting-room-v1",
+    "legacyKeyPreserved": true,
+    "migration": "strict original six fields and four original presets; only version2 and shoes:null are added; old garment, pose, view and exact finite camera retained",
+    "maximumFileBytes": 32768,
+    "historyLimit": 40,
+    "cart": false,
+    "realSize": false
+  },
+  "automated": {
+    "productSuite": {
+      "passed": 181,
+      "total": 181,
+      "fittingCore": 25,
+      "log": "footwear-test-output.txt"
+    },
+    "repositorySuite": {
+      "passed": 16,
+      "total": 16
+    },
+    "assetVerification": {
+      "status": "passed-with-finite-foot-domain",
+      "command": "node projects/011-solaris/scripts/verify-footwear-assets.mjs",
+      "checks": 9,
+      "geometryChecks": 8,
+      "registeredFileCheck": 1
+    },
+    "syntax": [
+      "web/fitting/core.js",
+      "web/fitting/app.js",
+      "web/fitting/scene.js"
+    ]
+  },
+  "nativeDesktop": {
+    "status": "passed-for-listed-workflows",
+    "browser": "Codex In-app Browser",
+    "isolatedOrigin": "http://localhost:4195",
+    "viewport": [
+      1280,
+      720
+    ],
+    "passed": [
+      "Real Court and Ridge meshes dragged to the registered foot region; whole pairs replace atomically.",
+      "A single undo restores the prior complete outfit and a single redo restores the replacement.",
+      "Real shoe release over the chest or blank space leaves full JSON exactly unchanged.",
+      "Escape while a real shoe gesture is active restores full prior JSON before release.",
+      "Corrected frozen Ridge held preview captured with dragActive=true/dropValid=true; real release wears the complete pair.",
+      "Sidebar Court card physically dragged to feet; one undo restores full prior upper, shoe/color, pose and camera.",
+      "Real upper jacket mesh dragged to chest while shoes remain; shoe color changes do not change the upper slot.",
+      "All three shoe colors and both registered poses applied; feet stay fixed in both poses.",
+      "Removing shoes keeps the upper slot; empty shoe slot disables all three palette buttons; undo restores full JSON.",
+      "Native blank-space orbit observes the shoe side/back, changes only camera, and is undoable.",
+      "Escape during an active real camera orbit restores the full baseline.",
+      "Three legal UI-imported setup fixtures restore exact state and can be undone: strict-v1 jacket migration, v2 shoe-detail and v2 high-precision custom camera.",
+      "Eight illegal UI-imported fixtures explicitly rejected, full JSON unchanged: unknown shoe/color, partial pair, cart, size, extra v1 shoe field, new v1 view and over-32KiB.",
+      "Final corrected outfit saved and reloaded: upper, shoes/colors, pose, preset and full camera JSON exact.",
+      "Final corrected Ridge side/back visually reviewed; former exposed lower-leg triangle eliminated by geometric shaft correction, full original body remains.",
+      "Switching upper category while close to feet offers a return-to-overview action; shoe-detail selection opens the shoe controls."
+    ],
+    "fixturesAreSetupNotNativeGestureProof": true,
+    "setupFixtures": {
+      "valid": 3,
+      "invalid": 8
+    },
+    "frozenPairMeshesRetested": [
+      "court-01",
+      "boot-01"
+    ],
+    "heldPreviewObserved": true,
+    "finalStableExampleReloadExact": true,
+    "consoleWarningsAndErrors": [],
+    "layout": {
+      "viewportWidth": 1280,
+      "pageWidth": 1280,
+      "bodyWidth": 1280,
+      "horizontalOverflow": false
+    },
+    "renderPNG": {
+      "width": 1431,
+      "height": 969,
+      "bytes": 253545,
+      "source": "actual scene renderer; HTML labels and controls excluded"
+    },
+    "artifacts": [
+      "../assets/atelier-footwear-workspace.jpg",
+      "../assets/atelier-footwear-detail.jpg",
+      "../assets/atelier-footwear-side.jpg",
+      "../assets/atelier-footwear-drag.jpg",
+      "../assets/atelier-footwear-example.json",
+      "../assets/atelier-footwear-render.png"
+    ],
+    "formalOrigin": {
+      "status": "passed",
+      "origin": "http://localhost:4189",
+      "entry": "/projects/011-solaris/fitting.html",
+      "legacyMigrationObserved": true,
+      "initialShoeSlot": null,
+      "priorUpperPreserved": {
+        "id": "jacket-01",
+        "color": "moss"
+      },
+      "priorPosePreserved": "reach",
+      "priorCustomCameraPreservedExactly": true,
+      "realRidgeDragToFeet": true,
+      "shoePaletteApplied": "ivory",
+      "savedReloadJSONExact": true,
+      "postReloadMigratedFlag": false,
+      "state": {
+        "version": 2,
+        "avatarId": "atelier-mannequin-v1",
+        "garment": {
+          "id": "jacket-01",
+          "color": "moss"
+        },
+        "shoes": {
+          "id": "boot-01",
+          "color": "ivory"
+        },
+        "pose": "reach",
+        "view": "custom",
+        "camera": {
+          "position": [
+            -1.6809556680608373,
+            0.5292698798977893,
+            4.971426337311051
+          ],
+          "target": [
+            0,
+            0.9499999999999998,
+            0
+          ]
+        }
+      },
+      "stateEvidence": "footwear-formal-state.json",
+      "consoleWarningsAndErrors": [],
+      "oldKeyPreservation": "Implementation review: v1 key is only read and new saves use v2; old key raw bytes were not directly inspected."
+    },
+    "selectedCategoryHoverReadable": true
+  },
+  "pending": [
+    "Native lost-pointer-capture/pointercancel/blur/visibility and storage-failure fault injection.",
+    "Touch hardware, other browsers, offline operation, native file download writes, long sessions and device performance."
+  ],
+  "boundaries": [
+    "Only one fixed registered body and two authored complete shoe pairs in neutral/reach frozen poses.",
+    "Finite preadapted shoe geometry and selected-view checks do not predict real fit/size or prove arbitrary body/pose collision freedom.",
+    "C19 shopping remains pending; ordinary navigation does not expand C35 six destinations."
+  ],
+  "assets": {
+    "status": "frozen",
+    "sourceDocument": "footwear-sources.md",
+    "manifest": "../web/fitting/footwear/manifest.json",
+    "runtimeFiles": 5,
+    "registeredFiles": 35,
+    "bodyBones": 53,
+    "originalBodyUniqueFaces": 13743,
+    "bodyMasks": false,
+    "originalC17ThreeGLBsUnchanged": true,
+    "models": [
+      {
+        "path": "court.glb",
+        "role": "runtime-court-pair",
+        "byteLength": 2898476,
+        "sha256": "9f6e8db208e6d1e622bf0327934829e1842838e8fb2b52207f9402307cd68838"
+      },
+      {
+        "path": "ridge.glb",
+        "role": "runtime-ridge-pair",
+        "byteLength": 3228204,
+        "sha256": "3454599203fc1f103a2f9583c5b9d59db8c37b993168567447e9cef78c2e5dc9"
+      }
+    ],
+    "finiteGeometryReport": "../assets/fitting-footwear-source-archives/finite-foot-verification.json",
+    "finiteGeometry": {
+      "checks": 8,
+      "passed": 8,
+      "results": [
+        "frozen C17 avatar and both garments remain byte-for-byte unchanged",
+        "original complete 53-bone avatar and all 13,743 body triangles retained; shoes have no body copy or mask",
+        "independent packed skin evaluation confirms original feet stationary in both constant registered poses",
+        "both local rigid pairs have complete independently shaped left/right upper, sole, tongue, collar, lace and hardware",
+        "registered roots remain zero with unit scale, soles touch y=0 and shape extents fit fixed foot interaction registration",
+        "finite ground projection and non-portal upper-ray coverage of every registered original foot sample",
+        "short boot quarter encloses all sampled original lower-shin vertices in its declared shaft-height domain",
+        "independent closed paired sole topology and contact plane retained without body masking"
+      ],
+      "status": "passed-with-finite-foot-domain",
+      "scope": "Fixed 1.78 virtual reference avatar only; both poses have stationary feet. All foot ground projections and outside-ankle-portal upward rays sampled. Open ankle portal deliberately remains open. This is not a volumetric collision certificate or real-world sizing/sole-padding simulation.",
+      "reports": [
+        {
+          "file": "court.glb",
+          "originalFootSamples": 264,
+          "groundProjectionHits": 264,
+          "nonPortalUpwardHits": 120,
+          "declaredOpenAnklePortalSamples": 144,
+          "failures": [],
+          "bounds": {
+            "min": [
+              -0.1807592362165451,
+              0,
+              -0.12189999967813492
+            ],
+            "max": [
+              0.18350617587566376,
+              0.18920312821865082,
+              0.24788787961006165
+            ]
+          },
+          "meshCount": 64,
+          "triangles": 157584
+        },
+        {
+          "file": "ridge.glb",
+          "originalFootSamples": 264,
+          "groundProjectionHits": 264,
+          "nonPortalUpwardHits": 120,
+          "declaredOpenAnklePortalSamples": 144,
+          "failures": [],
+          "bounds": {
+            "min": [
+              -0.1807556450366974,
+              0,
+              -0.1428000032901764
+            ],
+            "max": [
+              0.18350471556186676,
+              0.31501755118370056,
+              0.24788787961006165
+            ]
+          },
+          "meshCount": 88,
+          "triangles": 176984,
+          "shaftSampling": {
+            "heightDomain": [
+              0.155,
+              0.284
+            ],
+            "source": "all original lower-shin vertices plus 8th-order barycentric original-body-triangle surface samples crossing the height domain",
+            "sampled": 2830,
+            "covered": 2830,
+            "misses": []
+          }
+        }
+      ]
+    },
+    "reviews": 18
+  },
+  "publication": {
+    "status": "passed",
+    "planningGeneratorStatus": "passed",
+    "catalogSyncAndCheckStatus": "passed",
+    "buildCommand": "node scripts/catalog.mjs build",
+    "buildStatus": "passed",
+    "projectCount": 14,
+    "sourcePublishedHashStatus": "passed",
+    "sourcePublishedHashPairs": 20,
+    "hashEvidence": "footwear-publication-hashes.json",
+    "sourceArchivesOutsideWeb": true,
+    "description": {
+      "status": "passed",
+      "origin": "http://localhost:4189",
+      "entry": "/projects/011-solaris/integration.html#roadmap",
+      "release": "0.14.0",
+      "actualCapabilityIds": [
+        "C17",
+        "C18"
+      ],
+      "sceneTargetCount": 2,
+      "fullList": {
+        "total": 36,
+        "connected": 35,
+        "pending": 1,
+        "scenes": 11,
+        "phases": 7
+      },
+      "pendingIds": [
+        "C19"
+      ],
+      "pendingFilterActualText": "显示 1 / 36 项; C19 试穿与购物车关联响应",
+      "intentRegisteredTargets": 6,
+      "avatarCommercePhase": {
+        "connected": 2,
+        "total": 3
+      },
+      "shoeEntry": "/projects/011-solaris/fitting.html",
+      "c18ExpandedScopeObserved": true,
+      "purposeStepsExpectedOutcomeVerificationAndBoundariesObserved": true,
+      "internalHeldPreviewFlagsRemovedFromUserText": true,
+      "validation": "footwear-validation.json",
+      "reopenableExample": "../assets/atelier-footwear-example.json"
+    }
+  }
+}

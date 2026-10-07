@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "purpose": "201 finite Blender samples of complete authored scuba equipment and full source humanoid, not a continuous mathematical envelope proof",
+  "sampleCount": 201,
+  "sampledClip": "Diver_Swim",
+  "sourceBody": {
+    "vertices": 8546,
+    "polygons": 13743,
+    "triangles": 13743,
+    "bones": 53
+  },
+  "authoredEquipmentMeshes": 44,
+  "sourceCenterBlenderZUp": [
+    0.626757025718689,
+    0.0,
+    0.044524192810058594
+  ],
+  "sourceScale": 0.32015045861204866,
+  "outputUp": "+Y",
+  "outputForward": "+X",
+  "fixedRootTranslation": [
+    0,
+    0,
+    0
+  ],
+  "clipDurationSeconds": 1.6,
+  "sourceBoundsBlenderZUp": {
+    "min": [
+      -0.5516233444213867,
+      -0.3285250663757324,
+      -0.24595177173614502
+    ],
+    "max": [
+      1.8051373958587646,
+      0.3285250663757324,
+      0.3350001573562622
+    ]
+  },
+  "maximumHorizontalRadius": 0.383,
+  "recommendedSafetyRadius": 0.4,
+  "verticalExtents": [
+    -0.09299601326524427,
+    0.09299601326524427
+  ],
+  "horizontalLength": 0.7545180318395618,
+  "horizontalWidth": 0.21035490133148893,
+  "clips": [
+    "Diver_Hover",
+    "Diver_Swim"
+  ]
+}

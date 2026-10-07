@@ -1,0 +1,287 @@
+{
+  "schema": 1,
+  "date": "2026-10-05",
+  "purpose": "One complete fish and three registered rock meshes for C30 direct mouse dragging, original assets preserved. No diver or fish-school feature.",
+  "sources": [
+    {
+      "id": "quaternius-animated-fish",
+      "author": "Quaternius",
+      "pageUrl": "https://quaternius.com/packs/animatedfish.html",
+      "authorMirrorUrl": "https://opengameart.org/content/animated-fish",
+      "archiveUrl": "https://opengameart.org/sites/default/files/Animated%20Fish%20Pack%20by%20%40Quaternius.zip",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "id": "kenney-nature-kit",
+      "author": "Kenney",
+      "pageUrl": "https://kenney.nl/assets/nature-kit",
+      "archiveUrl": "https://kenney.nl/media/pages/assets/nature-kit/37ac38a37b-1677698939/kenney_nature-kit.zip",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "id": "polyhaven-sand-01",
+      "author": "Rob Tuytel",
+      "pageUrl": "https://polyhaven.com/a/sand_01",
+      "fileMetadataUrl": "https://api.polyhaven.com/files/sand_01",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ],
+  "fish": {
+    "id": "clownfish",
+    "path": "models/clownfish.glb",
+    "source": "quaternius-animated-fish",
+    "sourceName": "Fish3.blend / ClownFish",
+    "originalBlend": "assets/underwater-source-archives/original/animated-fish/Animated Fish Pack by @Quaternius/Blends/Fish3.blend",
+    "originalObj": "assets/underwater-source-archives/original/animated-fish/Animated Fish Pack by @Quaternius/OBJ/Fish3.obj",
+    "originalVertices": 345,
+    "originalPolygons": 356,
+    "triangles": 686,
+    "materialRegions": [
+      "Body",
+      "Stripes",
+      "Outline"
+    ],
+    "bones": [
+      "Root",
+      "Spine1",
+      "Spine2",
+      "Spine3",
+      "Tail",
+      "Face"
+    ],
+    "animation": {
+      "name": "Swim",
+      "sourceFrames": [
+        0,
+        31
+      ],
+      "sourceFps": 24,
+      "durationSeconds": 1.2916666666666667,
+      "channels": 18,
+      "rootTranslation": "constant, no tracks removed"
+    },
+    "sourceCenter": [
+      0,
+      0.3117998242378235,
+      -0.8143562078475952
+    ],
+    "sourceForward": "+Z",
+    "sourceUp": "+Y",
+    "wrapperYRotation": 1.5707963267948966,
+    "uniformScale": 0.073,
+    "fishSafetyRadius": 0.3,
+    "sourceBounds": {
+      "min": [
+        -0.4802404046058655,
+        -1.7198880910873413,
+        -4.7529191970825195
+      ],
+      "max": [
+        0.4802404046058655,
+        2.3434877395629883,
+        3.124206781387329
+      ]
+    },
+    "conversion": {
+      "tool": "Blender 5.2.2 LTS",
+      "geometry": "All source mesh vertices/faces preserved; triangulation and UV/normal seam splits only, no decimation",
+      "animation": "Original six-bone Swim, sampled export of original curves, no created motion",
+      "materials": "Legacy face colours transcribed exactly to three explicit Principled/PBR materials; metalness 0 and roughness .65 selected for runtime",
+      "textures": "None in the source; do not describe it as a textured or photorealistic fish"
+    }
+  },
+  "reefs": [
+    {
+      "id": "rock-a",
+      "path": "models/rock-a.glb",
+      "originalPath": "assets/underwater-source-archives/original/kenney-selected/rock_tallA.glb",
+      "source": "kenney-nature-kit",
+      "sourceName": "rock_tallA"
+    },
+    {
+      "id": "rock-b",
+      "path": "models/rock-b.glb",
+      "originalPath": "assets/underwater-source-archives/original/kenney-selected/rock_tallB.glb",
+      "source": "kenney-nature-kit",
+      "sourceName": "rock_tallB"
+    },
+    {
+      "id": "rock-c",
+      "path": "models/rock-c.glb",
+      "originalPath": "assets/underwater-source-archives/original/kenney-selected/rock_tallH.glb",
+      "source": "kenney-nature-kit",
+      "sourceName": "rock_tallH"
+    }
+  ],
+  "textureUsage": {
+    "asset": "Sand 01",
+    "maps": [
+      {
+        "path": "textures/sand_01/sand_01_diff_1k.jpg",
+        "channel": "Diffuse"
+      },
+      {
+        "path": "textures/sand_01/sand_01_nor_gl_1k.jpg",
+        "channel": "nor_gl"
+      },
+      {
+        "path": "textures/sand_01/sand_01_rough_1k.jpg",
+        "channel": "Rough"
+      }
+    ],
+    "sourceWidthMeters": 1.5,
+    "colourSpace": {
+      "Diffuse": "sRGB",
+      "nor_gl": "linear",
+      "Rough": "linear"
+    },
+    "interpretation": "Official terrestrial trampled sand-clay scan reused as underwater set decoration; not a scientific seafloor dataset. No files resized or recompressed."
+  },
+  "files": [
+    {
+      "repositoryPath": "assets/underwater-source-archives/original/animated-fish.zip",
+      "source": "quaternius-animated-fish",
+      "byteLength": 1024233,
+      "sha256": "c56a4bf3468e900ed9d881037334152dc203f93b656373347c8a7fc3dedb1855"
+    },
+    {
+      "repositoryPath": "assets/underwater-source-archives/original/animated-fish/Animated Fish Pack by @Quaternius/License.txt",
+      "source": "quaternius-animated-fish",
+      "byteLength": 361,
+      "sha256": "2832c27ece15255677c5a6d7437ed05d6a2f49ccb73d867ab13d2be3f93e84e2"
+    },
+    {
+      "repositoryPath": "assets/underwater-source-archives/original/animated-fish/Animated Fish Pack by @Quaternius/Blends/Fish3.blend",
+      "source": "quaternius-animated-fish",
+      "byteLength": 539140,
+      "sha256": "7fd1bc7633dfa6ceb46cb2b4b3024746c1c44ab3f5e7fa5dd31dbceeb048b096"
+    },
+    {
+      "repositoryPath": "assets/underwater-source-archives/original/animated-fish/Animated Fish Pack by @Quaternius/OBJ/Fish3.obj",
+      "source": "quaternius-animated-fish",
+      "byteLength": 31675,
+      "sha256": "834b14cae793bfced8dfcf34e0362f26035ecc3258d1aab7824ff728ee1ae62b"
+    },
+    {
+      "repositoryPath": "assets/underwater-source-archives/original/animated-fish/Animated Fish Pack by @Quaternius/OBJ/Fish3.mtl",
+      "source": "quaternius-animated-fish",
+      "byteLength": 591,
+      "sha256": "7de0b90232eef3eea0dbb57130e68701054bd5b64510476e4159096c68357853"
+    },
+    {
+      "path": "models/clownfish.glb",
+      "source": "quaternius-animated-fish",
+      "byteLength": 74532,
+      "sha256": "a0d209e81a8ad1472013b9fcdb974bb4a785b0c375e8db30ea3fc6d87602cfbf"
+    },
+    {
+      "path": "licenses/quaternius-animated-fish.txt",
+      "source": "quaternius-animated-fish",
+      "byteLength": 361,
+      "sha256": "2832c27ece15255677c5a6d7437ed05d6a2f49ccb73d867ab13d2be3f93e84e2"
+    },
+    {
+      "path": "motion-envelope.json",
+      "source": "project-independent-sampling",
+      "byteLength": 2305,
+      "sha256": "ebb66cfea08176fe477e08ba79cc956118d84bc281650f4b25e5a9cd95b38b82"
+    },
+    {
+      "repositoryPath": "assets/underwater-source-archives/original/kenney-nature-kit.zip",
+      "source": "kenney-nature-kit",
+      "byteLength": 10537521,
+      "sha256": "fa7974a0d342bfe63c38664ba9f8ec1a4aab8ea25f099bdc56870e33588c4d9d"
+    },
+    {
+      "repositoryPath": "assets/underwater-source-archives/original/kenney-selected/License.txt",
+      "source": "kenney-nature-kit",
+      "byteLength": 611,
+      "sha256": "cb96b75e3560ac78d7a53ce6f083f4cdb5c53faea6141b62d63458dcfe1e4b9d"
+    },
+    {
+      "path": "licenses/kenney-nature-kit.txt",
+      "source": "kenney-nature-kit",
+      "byteLength": 611,
+      "sha256": "cb96b75e3560ac78d7a53ce6f083f4cdb5c53faea6141b62d63458dcfe1e4b9d"
+    },
+    {
+      "path": "models/rock-a.glb",
+      "source": "kenney-nature-kit",
+      "byteLength": 12072,
+      "sha256": "88250f236a3b75f8b55c1d8afb6af020f8a91b1e81f9fb51f7ef513420d45a2d"
+    },
+    {
+      "repositoryPath": "assets/underwater-source-archives/original/kenney-selected/rock_tallA.glb",
+      "source": "kenney-nature-kit",
+      "byteLength": 12072,
+      "sha256": "88250f236a3b75f8b55c1d8afb6af020f8a91b1e81f9fb51f7ef513420d45a2d"
+    },
+    {
+      "path": "models/rock-b.glb",
+      "source": "kenney-nature-kit",
+      "byteLength": 14060,
+      "sha256": "b3fb7899c317a3b026fa6ced0e1eaaa596d9dd0d95efeacfb5e05d25322f19b9"
+    },
+    {
+      "repositoryPath": "assets/underwater-source-archives/original/kenney-selected/rock_tallB.glb",
+      "source": "kenney-nature-kit",
+      "byteLength": 14060,
+      "sha256": "b3fb7899c317a3b026fa6ced0e1eaaa596d9dd0d95efeacfb5e05d25322f19b9"
+    },
+    {
+      "path": "models/rock-c.glb",
+      "source": "kenney-nature-kit",
+      "byteLength": 7792,
+      "sha256": "bc1db23172176726c4f9fac55c1114a7619fb414e4ca62f242bc48a89d7a9300"
+    },
+    {
+      "repositoryPath": "assets/underwater-source-archives/original/kenney-selected/rock_tallH.glb",
+      "source": "kenney-nature-kit",
+      "byteLength": 7792,
+      "sha256": "bc1db23172176726c4f9fac55c1114a7619fb414e4ca62f242bc48a89d7a9300"
+    },
+    {
+      "path": "textures/sand_01/sand_01_diff_1k.jpg",
+      "source": "polyhaven-sand-01",
+      "byteLength": 485088,
+      "sha256": "a73b90eaa6d675ef57e7d48a8cf23e1f412e353ab2e29cf73930b8ecd4e76875",
+      "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sand_01/sand_01_diff_1k.jpg",
+      "sourceMd5": "c914c8edb419f040e04224081a3f79a5",
+      "channel": "Diffuse"
+    },
+    {
+      "path": "textures/sand_01/sand_01_nor_gl_1k.jpg",
+      "source": "polyhaven-sand-01",
+      "byteLength": 877821,
+      "sha256": "73984aecdc35b1ffbc322d64b7f8d8165b06970d11f37dd47010609fcb532704",
+      "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sand_01/sand_01_nor_gl_1k.jpg",
+      "sourceMd5": "369b82aa417c77ec85c4c07c4c7b60a0",
+      "channel": "nor_gl"
+    },
+    {
+      "path": "textures/sand_01/sand_01_rough_1k.jpg",
+      "source": "polyhaven-sand-01",
+      "byteLength": 189667,
+      "sha256": "ccb179b12c56a9032d60e4f4e2da690b3612a58e1784eb14576372690cdcd1cb",
+      "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sand_01/sand_01_rough_1k.jpg",
+      "sourceMd5": "663d0ddf782a427b7da4e247c939e73b",
+      "channel": "Rough"
+    },
+    {
+      "path": "licenses/polyhaven-sand-01.txt",
+      "source": "polyhaven-sand-01",
+      "byteLength": 333,
+      "sha256": "9a2bc1ad4b51609274a4d1c9cf7ab76104bf6a2dc695f9db0b210141f18595c8"
+    },
+    {
+      "repositoryPath": "assets/underwater-source-archives/original/polyhaven-sand-files.json",
+      "source": "polyhaven-sand-01",
+      "byteLength": 37369,
+      "sha256": "e92d9b4660834c96be6bf5fe004f1252a1d4926b32638eb3d5843cdac0284934"
+    }
+  ],
+  "archivalBoundary": "Original ZIPs, full extracted pack contents and conversion scripts are in assets/underwater-source-archives, outside web runtime publishing. Browser only fetches models and textures."
+}

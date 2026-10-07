@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-07",
+  "version": "0.17.0",
+  "scope": "Project documentation, project overview figure and navigation publication. No new product capability or scene added.",
+  "authoritativeInventory": {
+    "scenes": 11,
+    "capabilityMappings": 35,
+    "totalResearchEntries": 36,
+    "taskDestinations": 9,
+    "backupRecords": 10,
+    "pendingCapability": "C19",
+    "pausedExpansion": [
+      "fitting",
+      "tryon"
+    ]
+  },
+  "checks": [
+    {
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "exitCode": 0,
+      "tests": 243,
+      "passed": 243,
+      "failed": 0,
+      "executedThisPublication": true
+    },
+    {
+      "command": "node --test scripts/tests/*.test.mjs",
+      "exitCode": 0,
+      "tests": 16,
+      "passed": 16,
+      "failed": 0,
+      "executedThisPublication": true
+    },
+    {
+      "command": "node projects/011-solaris/scripts/integration.mjs --check",
+      "exitCode": 0,
+      "summary": "0.17.0, 35/36, 7 phases, 11 scene descriptions; data synchronized."
+    },
+    {
+      "command": "node scripts/catalog.mjs sync",
+      "exitCode": 0,
+      "scope": "Working catalog preserves unrelated local 014; publication index separately contains only HEAD projects plus 011."
+    },
+    {
+      "command": "node scripts/catalog.mjs build",
+      "exitCode": 0,
+      "scope": "Local static output includes all working-catalog projects; remote publication uses the scoped Git index."
+    }
+  ],
+  "documentationReview": {
+    "scope": [
+      "README.md",
+      "notes/integration.md",
+      "notes/product-release.md",
+      "web/overview.html"
+    ],
+    "localReferencesChecked": 409,
+    "result": "Final figure assets and validation record now exist; reviewed counts, plan and 409 existing local references; new SVG/script/screenshot references verified present.",
+    "planCorrection": "At least 3 independent static GLB tables not individually adapted or used in tuning share the support rule; no hand-written per-model support boundary/placement. Declared units and failure handling required."
+  },
+  "historicalEvidence": "Existing scenario browser operations remain historical per-release records; rerunning the same Node suite does not expand browser or fault evidence.",
+  "futureWorkNotCompleted": [
+    "Actual backup download to disk",
+    "Clipboard full-content verification",
+    "Nine rendering workbenches reopened after full-bundle restore",
+    "Real browser storage faults and concurrent writes",
+    "In-progress transitions",
+    "Touchscreen, other browsers, full offline, designated-device and long-term performance",
+    "Generalized support on unseen independent models",
+    "C19 shopping workflow (paused)"
+  ],
+  "browserPublicationCheck": {
+    "status": "passed",
+    "browser": "Codex In-app Browser",
+    "url": "http://localhost:4189/projects/011-solaris/overview.html",
+    "observedViewport": {
+      "clientWidth": 1265,
+      "documentScrollWidth": 1265
+    },
+    "image": {
+      "loaded": true,
+      "source": "./assets/atelier-project-overview.svg",
+      "naturalWidth": 2560,
+      "naturalHeight": 1800
+    },
+    "sceneRows": 11,
+    "sceneEntryLinks": 12,
+    "notes": "Fitting and tryon are two entries within a single scene. No product configuration was edited.",
+    "navigation": "Overview → capability/integration page → overview verified via visible links.",
+    "consoleWarnError": [],
+    "hubCover": {
+      "source": "assets/011-solaris.png",
+      "loadedAfterFocusScroll": true,
+      "naturalWidth": 3840,
+      "naturalHeight": 2700,
+      "objectFit": "contain"
+    },
+    "responsiveScope": "CSS media rules and accessible horizontal scene table reviewed; no touchscreen/mobile device runtime claim.",
+    "screenshot": "assets/atelier-project-overview-page.png"
+  },
+  "sources": [
+    {
+      "url": "https://runway.com/news/research/introducing-solaris",
+      "checked": "2026-10-07"
+    },
+    {
+      "url": "https://arxiv.org/html/2609.00776v1",
+      "checked": "2026-10-07"
+    }
+  ],
+  "gitPublicationScope": "Project 011 plus its root catalog/README entry and cover-display rule; unrelated uncommitted project 014 is excluded.",
+  "figureArtifacts": [
+    {
+      "path": "assets/atelier-project-overview.png",
+      "bytes": 1360893,
+      "sha256": "38a681bd52ecbf8721df0368fff8a5a44d29edca6f028c17b9fb9938796b7b6e"
+    },
+    {
+      "path": "web/assets/atelier-project-overview.png",
+      "bytes": 1360893,
+      "sha256": "38a681bd52ecbf8721df0368fff8a5a44d29edca6f028c17b9fb9938796b7b6e"
+    },
+    {
+      "path": "assets/atelier-project-overview.svg",
+      "bytes": 44008,
+      "sha256": "91436476196fb463f2a4ef232c876ebf1232b5cf054e6b22e01b734bad537fc6"
+    },
+    {
+      "path": "web/assets/atelier-project-overview.svg",
+      "bytes": 44008,
+      "sha256": "91436476196fb463f2a4ef232c876ebf1232b5cf054e6b22e01b734bad537fc6"
+    }
+  ],
+  "figureVisualReview": "Chinese rendered correctly, 11 scene cards visible, three branches separated, source capabilities and potential uses explicit; corrected a planned-action row overlap before final render. Concept figure remains distinct from real browser proof."
+}

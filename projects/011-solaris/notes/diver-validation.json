@@ -1,0 +1,285 @@
+{
+  "product": "ATELIER",
+  "release": "0.12.0",
+  "date": "2026-10-05",
+  "capability": "C31",
+  "entry": "http://localhost:4189/projects/011-solaris/underwater.html",
+  "status": "passed-for-listed-workflows; device-and-recapture-specialties-pending",
+  "purpose": "验证鼠标直接控制鱼以后，独立潜水员连续转向、按有限速度沿安全路线跟随；输出可观察的双主体关系和可恢复完整操作。",
+  "asset": {
+    "source": "Quaternius CC0完整人体；本地设计完整潜水装备与两段有限游姿",
+    "meshes": 45,
+    "bones": 53,
+    "materials": 7,
+    "authoredGearObjects": 44,
+    "clips": [
+      "Diver_Hover",
+      "Diver_Swim"
+    ],
+    "clipDurationSeconds": 1.6,
+    "bytes": 2253380,
+    "sha256": "0640e202b52476b34d7ab1e7490a442fdc124cfcf107be05d8fe72d134e80e59",
+    "checks": 12,
+    "skinPoseSamples": 1005,
+    "maxSampledHorizontalRadius": 0.38301518586032507,
+    "envelopeRadius": 0.4,
+    "sourceDocument": "diver-sources.md"
+  },
+  "controller": {
+    "fixedStepSeconds": 0.016666666666666666,
+    "maxFrameDt": 0.05,
+    "maxFollowerDt": 0.1,
+    "speed": 0.82,
+    "turnRadiansPerSecond": 2.8,
+    "targetDistance": 1,
+    "arrivalBand": 0.025,
+    "minimumSeparation": 0.7,
+    "swimY": 0.95,
+    "units": "scene-units; not calibrated metres",
+    "planning": "registered-three-reef conservative visibility graph; fixed horizontal layer",
+    "blockedPolicy": "safe stop, preserve valid fish endpoint, replan when fish moves",
+    "rootMotion": false
+  },
+  "state": {
+    "schema": 2,
+    "key": "atelier-underwater-workspace-v2",
+    "legacyKey": "atelier-underwater-workspace-v1",
+    "legacyKeyPreserved": true,
+    "maximumFileBytes": 524288,
+    "fishLedgerMaximumBytes": 65536,
+    "recordLimit": 40,
+    "fishPathLimit": 64,
+    "diverPathLimit": 128,
+    "saved": "fish/diver overall position and heading, safely compressed sampled trajectories, stable camera, records and next ID",
+    "animationPhasePersisted": false,
+    "rawInputTimelinePersisted": false,
+    "transaction": "release fish endpoint -> finite follow preview -> arrive/blocked -> one atomic commit; rollback/undo restores both actors"
+  },
+  "automatedChecks": [
+    {
+      "name": "product suite",
+      "tests": 156,
+      "followerTests": 11,
+      "workspaceTests": 12,
+      "status": "passed"
+    },
+    {
+      "name": "complete diver asset checks",
+      "checks": 12,
+      "status": "passed"
+    },
+    {
+      "name": "root repository tests",
+      "tests": 16,
+      "status": "passed"
+    },
+    {
+      "name": "integration and catalog sync/build",
+      "status": "passed"
+    }
+  ],
+  "nativeUi": {
+    "qaOrigin": "http://localhost:4193",
+    "isolatedFromUserOrigin": true,
+    "multipleActualMouseFollowOperations": true,
+    "reefDetour": true,
+    "releaseEvidence": {
+      "a": [
+        {
+          "active": "true",
+          "heading": "0.3243444275237998",
+          "id": "fish-label",
+          "x": "0.10907387695362683",
+          "z": "0.2413242654956032"
+        },
+        {
+          "active": "true",
+          "heading": "-0.523930925208431",
+          "id": "diver-label",
+          "x": "-1.0661869518461806",
+          "z": "0.4194761609244538"
+        }
+      ],
+      "b": [
+        {
+          "active": "true",
+          "heading": "0.3243444275237998",
+          "id": "fish-label",
+          "x": "0.10907387695362683",
+          "z": "0.2413242654956032"
+        },
+        {
+          "active": "true",
+          "heading": "-0.523930925208431",
+          "id": "diver-label",
+          "x": "-0.9360194399041253",
+          "z": "0.4946860668273739"
+        }
+      ],
+      "fishEndpointFixed": true,
+      "diverContinuesMoving": true
+    },
+    "blocked": {
+      "fish": {
+        "position": [
+          2.1191979414983795,
+          1.3879230690951245
+        ],
+        "heading": -0.013284051275739926
+      },
+      "diver": {
+        "position": [
+          -0.28905363234268633,
+          1.055321964438987
+        ],
+        "heading": -0.22698630378743093
+      },
+      "records": 2
+    },
+    "resume": {
+      "fish": {
+        "position": [
+          0.9478850692007097,
+          1.3879230690951245
+        ],
+        "heading": -3.141592653589793
+      },
+      "diver": {
+        "position": [
+          -0.01649109598408316,
+          1.123388360552988
+        ],
+        "heading": -0.26772141115161335
+      },
+      "distance": 1
+    },
+    "atomicUndoRedoExact": true,
+    "escapeHeldRollbackExact": true,
+    "escapeReleasedFollowRollbackExact": true,
+    "illegalReefReleaseRollbackExact": true,
+    "illegalBoundsReleaseRollbackExact": true,
+    "manualSavePendingFollowRollbackExact": true,
+    "backupHeldRollbackExact": true,
+    "activeCameraPresetAndSnapshotDisabled": true,
+    "capacity40FixtureNativeRejectExact": true,
+    "idExhaustedFixtureNativeRejectExact": true,
+    "fixturesAreNotFortyActualMouseGestures": true,
+    "invalidImports": [
+      {
+        "file": "invalid-v2-diver-heading.json",
+        "message": "没有应用：潜水员当前位置或方向与完整跟随记录不一致",
+        "stateUnchanged": true
+      },
+      {
+        "file": "invalid-v2-fish-heading.json",
+        "message": "没有应用：鱼的落点或方向与完整拖动记录不一致",
+        "stateUnchanged": true
+      },
+      {
+        "file": "invalid-v2-diver-path.json",
+        "message": "没有应用：潜水员路径穿过礁石保护范围",
+        "stateUnchanged": true
+      },
+      {
+        "file": "invalid-future-version.json",
+        "message": "没有应用：不支持的水下双角色工作区文件版本",
+        "stateUnchanged": true
+      },
+      {
+        "file": "invalid-v1-fish-at-diver-without-ledger.json",
+        "message": "没有应用：鱼的落点或方向与完整拖动记录不一致",
+        "stateUnchanged": true
+      }
+    ],
+    "legacyOccupiedStartMigration": {
+      "fishExact": true,
+      "cameraExact": true,
+      "legacy": true,
+      "stationaryOldDiverHistory": true,
+      "diver": {
+        "position": [
+          -2.2326834323650897,
+          -0.026120467488713217
+        ],
+        "heading": 1.1780972450961726
+      }
+    },
+    "cameraPresetsPreserveActorsAndRecords": true,
+    "routeVisibilityPreservesJSON": true,
+    "saveReloadExact": true,
+    "realCanvasPNG": {
+      "width": 1443,
+      "height": 969,
+      "decoded": true,
+      "HTMLOverlays": false,
+      "routeGuides": false
+    },
+    "layout": {
+      "clientWidth": 1280,
+      "followCardVisible": true,
+      "scrollWidth": 1280,
+      "stageWidth": 962
+    },
+    "warnAndErrorLogs": []
+  },
+  "userOrigin": {
+    "oldFishAndFishPathsPreserved": true,
+    "oldRecordsMarkedLegacy": true,
+    "newerUserCameraKept": {
+      "position": [
+        -8.383998679860854,
+        5.336285796277387,
+        1.0523938531520378
+      ],
+      "target": [
+        0,
+        0.65,
+        0
+      ]
+    },
+    "restoredFromEarlierSnapshot": false,
+    "saveReloadExact": true,
+    "qaExampleDidNotReplaceUserWorkspace": true
+  },
+  "descriptionVerification": {
+    "status": "passed",
+    "expected": {
+      "release": "0.12.0",
+      "total": 36,
+      "connected": 33,
+      "pending": 3,
+      "scenes": 10,
+      "compositionMotionPhase": "5/5",
+      "intentRegisteredDestinations": 6
+    },
+    "sceneCapabilityDialog": true,
+    "planningPage": true,
+    "actualCapabilityIds": [
+      "C30",
+      "C31"
+    ],
+    "actualCapabilityCount": 2,
+    "sceneCompletedDescriptions": 9,
+    "C31CompletedDescriptions": 5,
+    "pendingFilterIds": [
+      "C17",
+      "C18",
+      "C19"
+    ],
+    "logs": []
+  },
+  "artifacts": {
+    "workspace": "../assets/atelier-underwater-follow-workspace.jpg",
+    "during": "../assets/atelier-underwater-follow-during.jpg",
+    "blocked": "../assets/atelier-underwater-follow-blocked.jpg",
+    "example": "../assets/atelier-underwater-follow-example.json",
+    "render": "../assets/atelier-underwater-follow-render.png"
+  },
+  "limits": [
+    "Single diver and single fish in one fixed horizontal layer; registered conservative circular obstacles, no general 3D navigation or hydrodynamics.",
+    "The larger diver envelope can make left/right regions disconnected; finite route sampling may conservatively reject a feasible route.",
+    "Finite two-clip mixing, no full-body IK or motion capture; skin envelope verified by 1005 finite samples, not a continuous mathematical proof.",
+    "JSON does not save bone animation phase or a timestamped input replay.",
+    "Re-grab during released follow is implemented and code-reviewed; timing-sensitive native recapture was not reliably demonstrated in this run."
+  ]
+}

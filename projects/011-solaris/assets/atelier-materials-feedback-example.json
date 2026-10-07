@@ -1,0 +1,47 @@
+{
+  "camera": {
+    "position": [
+      2.25,
+      2.6,
+      3.6
+    ],
+    "target": [
+      0,
+      0.15,
+      0
+    ]
+  },
+  "energies": {
+    "aluminum": 4.976000000238418,
+    "copper": 134.77921769796612,
+    "ice": 2.994000000357628
+  },
+  "nextId": 16,
+  "records": [
+    {
+      "energyJ": 134.77921769796612,
+      "id": 7,
+      "material": "copper",
+      "seconds": 13.477921769796612
+    },
+    {
+      "energyJ": 2.994000000357628,
+      "id": 12,
+      "material": "ice",
+      "seconds": 0.2994000000357628
+    },
+    {
+      "energyJ": 4.976000000238418,
+      "id": 15,
+      "material": "aluminum",
+      "seconds": 0.4976000000238418
+    }
+  ],
+  "selected": "aluminum",
+  "source": [
+    0,
+    0
+  ],
+  "version": 1,
+  "view": "hero"
+}

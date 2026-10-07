@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eef3ef">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-src 'none'">
+  <title>ATELIER · 水下拖动工作台</title>
+  <link rel="stylesheet" href="./underwater/underwater.css"><link rel="stylesheet" href="./capabilities/scene-capabilities.css">
+  <script type="importmap">{"imports":{"three":"./studio/vendor/three.module.js","three/addons/":"./studio/vendor/addons/"}}</script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="./"><span class="brand-mark">a</span><span>ATELIER<small>场景设计工作台</small></span></a><nav class="scene-navigation" aria-label="场景导航"><a href="./">客厅</a><a href="./showroom.html">汽车</a><a href="./imaging.html">影像</a><a href="./landmark.html">地标</a><a href="./kitchen.html">料理</a><a href="./creative.html">创作</a><a href="./collection.html">陈列</a><a href="./skate.html">滑板</a><a href="./materials.html">材料</a><a href="./underwater.html" aria-current="page">水下</a><a href="./fitting.html">试衣间 ↗</a></nav><div class="header-actions"><span id="save-status">本地工作区</span><button id="undo" class="icon-button" aria-label="撤销" disabled>↶</button><button id="redo" class="icon-button" aria-label="重做" disabled>↷</button><button id="save" class="primary">保存位置</button></div></header>
+  <main class="workspace">
+    <section id="stage" aria-label="直接拖动小丑鱼的三维水下工作台" tabindex="0">
+      <div id="canvas-host"></div>
+      <div class="stage-heading"><span class="eyebrow">ONE GESTURE / TWO SWIMMERS</span><h1>游向，<br>由你决定。</h1><p>按住鱼体，亲手改变游向。<br>看潜水员转身、避礁，游向安全站位。</p><button data-scene-capabilities="underwater">本场景验证什么 ↗</button></div>
+      <span id="phase" class="phase" role="status">按住鱼体，开始拖动</span>
+      <div id="fish-label" aria-hidden="true"><i></i><strong>小丑鱼</strong><span>按住鱼体拖动</span></div>
+      <div id="diver-label" aria-hidden="true"><i></i><strong>潜水员</strong><span>准备跟随</span></div>
+      <div id="drag-feedback" hidden><strong id="drag-message">位置跟随指针</strong><span id="drag-detail">松手保留 · Esc 恢复起点</span></div>
+      <div class="stage-caption"><span class="caption-number">10</span><div><strong>一个动作，两条游向</strong><span>直接拖鱼 · 潜水员追随 · 避礁站位</span></div></div>
+      <div class="stage-toolbar"><button id="snapshot">保留这一刻 ↗</button></div>
+      <div class="stage-bottom"><span>按住鱼体拖动 · 松手提交 · Esc 取消</span><span>拖空白看角度 · 滚轮缩放</span></div>
+      <div id="loading" class="loading" role="status"><span class="brand-mark">a</span><strong>正在布置水下工作台</strong><p>载入完整鱼、潜水装备与骨架动作…</p></div>
+      <div id="load-error" class="loading" hidden><strong>水下工作台暂时无法载入</strong><p id="error-detail"></p><button id="retry">重新载入</button></div>
+    </section>
+    <aside class="control-panel" aria-label="拖动结果与位置记录">
+      <div class="panel-intro"><span class="eyebrow">PICK / DRAG / FOLLOW</span><h2>每次移动，彼此响应</h2><p>这一场景验证直接拖动与主体跟随。鱼由你的手控制，潜水员按有限速度转向、绕礁，保持目标间距。</p><div class="gesture-steps"><span id="step-pick">01 按住</span><span id="step-drag">02 移动</span><span id="step-drop">03 松手</span><span id="step-follow">04 到位</span></div><p id="gesture-status" role="status">在画面中按住小丑鱼，试着移动一段距离。</p></div>
+      <section class="follow-card" aria-label="潜水员跟随"><div class="follow-card-heading"><strong id="follow-status" role="status">准备跟随</strong><span>场景单位</span></div><p id="follow-explanation">拖动鱼，观察潜水员的转向和追随。</p><div class="follow-readings"><div><strong id="follow-distance">1.85</strong><span>当前间距</span></div><div><strong id="follow-target">1.00</strong><span>目标间距</span></div><div><strong id="diver-angle">−90°</strong><span>潜水员朝向</span></div></div><label class="route-option"><input id="show-follow-route" type="checkbox" checked>显示跟随轨迹与路线</label></section>
+      <section class="panel-section"><div class="section-top"><h3>鱼的落点与双主体位置</h3><span>场景单位</span></div><div class="position-readings"><div><strong id="position-x">−1.85</strong><span>鱼的横向 X</span></div><div><strong id="position-z">0.90</strong><span>鱼的纵向 Z</span></div><div><strong id="heading-value">0°</strong><span>鱼的朝向</span></div></div><div id="water-map"></div><p class="fine map-note">橙色为鱼，深色为潜水员；金线为跟随轨迹或剩余路线。浅圈按潜水员较大包络绘制，鱼按自身范围校验。</p><button id="cancel-drag" class="wide" disabled>取消当前联动</button></section>
+      <section class="panel-section"><div class="section-top"><h3>试着验证</h3><span>动作 → 结果</span></div><ol class="try-list"><li><strong>把鱼拖向左侧空旷处</strong><span>潜水员连续转向、踢腿追随，必要时绕开礁石。</span></li><li><strong>把鱼带向右侧水域</strong><span>较大的潜水员包络可能没有安全通路；明确停留，移回可达处后重新追随。</span></li><li><strong>松手，再取消或撤销</strong><span>松手后等追随停稳，一次撤销恢复两者；Esc 可在联动途中一起取消。</span></li></ol></section>
+      <section class="panel-section"><div class="section-top"><h3>已保留的联动</h3><span id="record-count">0 / 40</span></div><div id="record-list" aria-label="完整联动记录"></div><button id="reset" class="wide">恢复初始位置</button><p class="fine">鱼松手后，潜水员停稳或安全停留，整次联动才保存。联动期间视角固定；Esc、取消、备份或手动保存会恢复未完成联动的起点。</p></section>
+      <section class="panel-section"><div class="section-top"><h3>观察视角</h3><span>同一水域</span></div><div class="view-buttons"><button data-view="hero" aria-pressed="true">水下总览</button><button data-view="top" aria-pressed="false">俯视操作</button><button data-view="front" aria-pressed="false">正面观察</button></div></section>
+      <footer class="panel-footer"><button id="backup" class="wide">备份 / 打开位置</button><details><summary>素材与实现范围</summary><p>鱼与潜水员完整53骨人体源于Quaternius，完整岩礁来自Kenney，均CC0。本项目制作完整潜水装具、有限游姿与水域联动规则。</p><p>同一水平水层、单鱼与单潜水员，使用保守圆包络和安全路径；摆尾与踢腿只作姿态表现，没有海洋流体或生物运动预测。原单鱼备份可读取，旧文件保留。</p><a href="./underwater/assets/manifest.json" target="_blank" rel="noopener">鱼与岩礁素材清单 ↗</a><a href="./underwater/assets/diver/manifest.json" target="_blank" rel="noopener">潜水员素材清单 ↗</a></details><a href="./integration.html#scenes">能力说明与接入规划 ↗</a><span class="local-note">本地路径 · 本地状态 · 无模型后台</span></footer>
+    </aside>
+  </main>
+  <div id="toast" role="status" hidden></div>
+  <dialog id="json-dialog" aria-labelledby="json-title"><div class="dialog-heading"><h2 id="json-title">保留这段游向</h2><button data-close aria-label="关闭水下备份">×</button></div><p>复制完整JSON，或粘贴旧/新文件，恢复鱼、潜水员、路径记录与视角。未完成联动会先取消；仅保留稳定位置。</p><label class="sr-only" for="json-text">水下工作区 JSON</label><textarea id="json-text" spellcheck="false"></textarea><p id="json-message" role="status"></p><div class="dialog-actions"><button id="download-json">下载JSON</button><button id="import-json" class="primary">应用位置</button></div></dialog>
+  <dialog id="snapshot-dialog" aria-labelledby="snapshot-title"><div class="dialog-heading"><h2 id="snapshot-title">当前水下画面</h2><button data-close aria-label="关闭水下图片预览">×</button></div><img id="snapshot-image" alt="当前小丑鱼、完整潜水员、岩礁与水域的真实渲染"><p>可右键图片另存为。图片来自当前三维场景，不含侧栏、标签和鼠标轨迹提示。</p><div class="dialog-actions"><button id="download-snapshot" class="primary">保存图片</button></div></dialog>
+  <script type="module" src="./underwater/app.js"></script><script type="module" src="./capabilities/scene-capabilities.js"></script>
+  <script type="module" src="./collection/scene-return.js"></script>
+</body>
+</html>

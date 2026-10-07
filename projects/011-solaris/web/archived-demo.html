@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Solaris 能力分析：鼠标位置、拖动轨迹与语义上下文如何共同驱动画面生成。包含明确标注的本地规则演示。">
+  <title>归档 · 本地输入教学样例</title>
+  <link rel="stylesheet" href="archived-demo.css">
+  <script src="archived-demo.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#demo">跳到交互演示</a>
+<header class="header">
+  <a class="brand" href="../../"><span class="number">011</span> 项目研究库 <span class="separator">/</span> Solaris</a>
+  <nav aria-label="页面导航"><a href="#demo">试一试</a><a href="#principle">原理</a><a href="#evidence">证据与边界</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">SOLARIS / 生成式交互研究</p>
+      <h1>鼠标的轨迹，<br>如何变成画面的变化？</h1>
+      <p class="lead">鼠标提供位置、按下与拖动。<strong>当前画面与操作的语义</strong>，共同决定“这一拖”意味着移动、缩放，还是改变光照。</p>
+      <div class="hero-links"><a class="button primary" href="#demo">试试同一种拖动 <span aria-hidden="true">↓</span></a><a class="text-link" href="https://runway.com/news/research/introducing-solaris" target="_blank" rel="noopener noreferrer">Runway 官方介绍 ↗</a></div>
+      <p class="small muted">依据官方介绍与论文 · 来源核查日期：2026-10-04</p>
+    </div>
+    <aside class="hero-note" aria-label="关键区别">
+      <span class="note-tag">关键区别</span><h2>“坐标”不等于“意图”。</h2>
+      <div class="gesture" aria-hidden="true"><span class="gesture-start"></span><span class="gesture-path"></span><span class="gesture-end">↗</span></div>
+      <p>同一条向右上方的拖动轨迹，可以有不同含义。Solaris 的公开材料展示了通过自然语言描述点击与拖拽的含义。</p>
+      <p class="small">下面用预先编写的规则解释这个差别。它不是 Solaris 的运行结果。</p>
+    </aside>
+  </section>
+
+  <section id="demo" class="section" aria-labelledby="demo-title">
+    <div class="section-heading"><div><p class="eyebrow">01 / 输入与上下文</p><h2 id="demo-title">同一种拖动，三种效果。</h2></div><span class="disclosure">本地规则演示 · 未接入 Solaris</span></div>
+    <p class="section-intro">先选操作含义，再在场景里拖动。每次切换模式都会还原场景：这样可以比较相似的轨迹怎样产生不同结果。</p>
+    <div class="demo-shell">
+      <div class="demo-main">
+        <fieldset class="modes"><legend>拖动的含义</legend>
+          <label><input type="radio" name="mode" value="move" checked><span><strong>移动对象</strong><small>位置 → 台灯位移</small></span></label>
+          <label><input type="radio" name="mode" value="light"><span><strong>改变光照</strong><small>轨迹 → 亮度与色温</small></span></label>
+          <label><input type="radio" name="mode" value="resize"><span><strong>缩放挂画</strong><small>轨迹 → 挂画宽高</small></span></label>
+        </fieldset>
+        <div class="stage-wrap">
+          <svg id="stage" viewBox="0 0 960 540" tabindex="0" role="group" aria-label="本地规则场景。在画面任意位置拖动；也可按方向键调整，Shift 加方向键加大步长，Escape 重置。" aria-describedby="stage-help">
+            <defs>
+              <linearGradient id="wall-gradient" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ece4d8"/><stop offset="1" stop-color="#e0d6c7"/></linearGradient>
+              <linearGradient id="floor-gradient" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#cabba6"/><stop offset="1" stop-color="#ae9b81"/></linearGradient>
+              <radialGradient id="glow-gradient"><stop stop-color="#f8db8d" stop-opacity=".95"/><stop offset="1" stop-color="#f8db8d" stop-opacity="0"/></radialGradient>
+              <pattern id="grain" width="90" height="80" patternUnits="userSpaceOnUse"><path d="M0 79H90 M35 0V79" stroke="#5c513d" stroke-opacity=".12"/></pattern>
+              <clipPath id="art-clip"><rect id="art-clip-rect" x="530" y="105" width="225" height="175" rx="2"/></clipPath>
+            </defs>
+            <rect width="960" height="540" fill="url(#wall-gradient)"/>
+            <path d="M0 390H960V540H0Z" fill="url(#floor-gradient)"/>
+            <rect y="391" width="960" height="149" fill="url(#grain)"/>
+            <path d="M0 390H960" stroke="#a99a87" stroke-width="4"/>
+            <rect x="50" y="68" width="205" height="220" rx="5" fill="#c0b29e"/>
+            <rect x="60" y="78" width="185" height="200" fill="#c8d8d8"/>
+            <path d="M60 221L130 169L198 227L245 197V278H60Z" fill="#a2b7ad"/>
+            <path d="M151 78V278M60 174H245" stroke="#f9f3e9" stroke-width="8"/>
+            <rect x="426" y="339" width="386" height="115" rx="34" fill="#768d7d"/>
+            <rect x="441" y="294" width="355" height="103" rx="25" fill="#839b87"/>
+            <rect x="453" y="323" width="99" height="70" rx="17" fill="#99aa8f"/>
+            <path d="M615 302V384" stroke="#6d8475" stroke-width="3"/>
+            <rect x="425" y="369" width="44" height="74" rx="16" fill="#6b8373"/>
+            <rect x="770" y="369" width="44" height="74" rx="16" fill="#6b8373"/>
+            <path d="M463 450V472M782 450V472" stroke="#655844" stroke-width="10"/>
+            <ellipse cx="420" cy="465" rx="124" ry="29" fill="#594d38" opacity=".15"/>
+            <path d="M373 452L360 512M469 452L482 512" stroke="#5b523f" stroke-width="10"/>
+            <ellipse cx="421" cy="443" rx="78" ry="22" fill="#c59d6a"/>
+            <rect id="art-shadow" x="523" y="97" width="245" height="195" rx="4" fill="#615344" opacity=".15"/>
+            <rect id="art-frame" x="520" y="95" width="245" height="195" rx="4" fill="#876949"/>
+            <g id="art-content" clip-path="url(#art-clip)">
+              <rect id="art-paper" x="530" y="105" width="225" height="175" fill="#ede5cb"/>
+              <g id="art-shapes" transform="translate(530 105)"><circle cx="145" cy="48" r="28" fill="#d39556"/><path d="M0 141L67 51L143 147L225 93V175H0Z" fill="#7c9888"/><path d="M0 175L87 104L155 175Z" fill="#385f59"/></g>
+            </g>
+            <ellipse id="lamp-shadow" cx="330" cy="448" rx="51" ry="13" fill="#54442f" opacity=".2"/>
+            <ellipse id="lamp-glow" cx="326" cy="285" rx="175" ry="170" fill="url(#glow-gradient)" opacity=".25"/>
+            <g id="lamp" transform="translate(0 0)">
+              <ellipse cx="326" cy="441" rx="36" ry="9" fill="#776348"/>
+              <path d="M326 436V205" stroke="#776348" stroke-width="9"/>
+              <path d="M280 206L295 137H357L373 206Z" fill="#edce95" stroke="#b1966d" stroke-width="3"/>
+              <ellipse cx="327" cy="206" rx="46" ry="9" fill="#f6dfb4"/>
+            </g>
+            <rect id="light-overlay" width="960" height="540" fill="#f9cc82" opacity=".06" pointer-events="none"/>
+            <g aria-hidden="true"><rect x="27" y="22" width="273" height="37" rx="18" fill="#fcfaf4" opacity=".92"/><text id="scene-context" x="45" y="47" fill="#274f49" font-size="18" font-family="system-ui, sans-serif">上下文：移动台灯</text></g>
+            <g id="pointer-mark" visibility="hidden" pointer-events="none" aria-hidden="true"><circle id="pointer-dot" r="12" fill="none" stroke="#176d62" stroke-width="3"/><path id="pointer-track" fill="none" stroke="#176d62" stroke-width="2" stroke-dasharray="5 5"/></g>
+          </svg>
+          <span class="stage-badge">本地规则演示 · 未接入 Solaris</span>
+        </div>
+        <div class="stage-toolbar"><p id="stage-help">在画面任意位置拖动 · 鼠标 / 触控<br>聚焦画面后用方向键，Shift 加速，Esc 重置</p><button id="reset" type="button" class="button compact">重置场景</button></div>
+        <noscript><p class="notice">当前浏览器未启用 JavaScript，交互演示不可用。下方仍可阅读原理与证据。</p></noscript>
+      </div>
+      <aside class="inspector" aria-label="输入与结果">
+        <p class="eyebrow">本地事件观察</p>
+        <h3>浏览器收到什么？</h3>
+        <dl class="readouts">
+          <div><dt>当前事件</dt><dd id="event-value">等待输入</dd></div>
+          <div><dt>输入类型</dt><dd id="pointer-type">—</dd></div>
+          <div><dt>位置 / 归一化</dt><dd id="position-value">—</dd></div>
+          <div><dt>本次位移 / 场景坐标</dt><dd id="delta-value">Δx 0 · Δy 0</dd></div>
+        </dl>
+        <div class="context-box"><span class="small">本地预设的对象 / 上下文</span><strong id="context-value">台灯 / 改变位置</strong><p id="rule-value">水平和垂直拖动，分别改变台灯的 x、y 位置。</p></div>
+        <div class="result-box"><span class="small">预先编写的规则产生的结果</span><output id="result-value">台灯位置：x 326 · y 441</output></div>
+        <h4>最近的事件</h4><ol id="event-log" class="event-log" aria-label="最近六条浏览器事件"><li>拖动画面，观察事件顺序。</li></ol>
+        <p class="small muted">位置由浏览器事件换算。模式选择负责指定对象和含义；此处没有对象识别、模型推理或视频生成。</p>
+      </aside>
+    </div>
+    <p id="announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+    <div class="reading-note"><strong>从演示读出什么？</strong><p>事件层回答“在哪儿、怎样动”；语义层回答“对谁、做什么”。这里的图形直接按规则重绘，而 Solaris 公开描述的是用这些条件生成后续画面。两者可以共享交互入口，输出机制不同。</p></div>
+  </section>
+
+  <section id="principle" class="section" aria-labelledby="principle-title">
+    <div class="section-heading"><div><p class="eyebrow">02 / 生成闭环</p><h2 id="principle-title">每一次反馈，成为下一次输入。</h2></div><span class="subtle-tag">原理示意 · 非官方实测</span></div>
+    <ol class="flow">
+      <li><span class="step-number">01</span><h3>当前画面 + 操作</h3><p>用户看见已有画面，点击、拖拽，或提出文字要求。</p><span class="flow-arrow" aria-hidden="true">→</span></li>
+      <li><span class="step-number">02</span><h3>动作 + 语义条件</h3><p>操作位置与轨迹结合上下文；语言描述界定交互的含义。</p><span class="flow-arrow" aria-hidden="true">→</span></li>
+      <li><span class="step-number">03</span><h3>生成下一帧</h3><p>公开材料描述鼠标输入作为条件，逐帧自回归生成后续画面。</p><span class="flow-arrow" aria-hidden="true">→</span></li>
+      <li><span class="step-number">04</span><h3>看到结果，再操作</h3><p>新画面成为接下来交互的状态，形成持续反馈。</p><span class="flow-arrow" aria-hidden="true">↺</span></li>
+    </ol>
+    <p class="source-note">依据 <a href="https://runway.com/news/research/introducing-solaris" target="_blank" rel="noopener noreferrer">Runway 官方介绍</a> 与 <a href="https://arxiv.org/html/2609.00776v1" target="_blank" rel="noopener noreferrer">论文 v1</a> 整理。该图解释公开机制，不代表内部完整工程架构。</p>
+    <div class="two-columns"><article class="explanation"><h3>鼠标控制的是条件，生成器负责视觉结果。</h3><p>传统界面通常先定义对象、属性与事件处理代码。生成式界面可以让模型预测拖动之后的外观；位置、遮挡、光影可能一起变化。看起来合理的结果，仍需要检验其准确性与持续稳定性。</p><span class="evidence-tag inferred">分析推断</span></article><article class="explanation"><h3>“语义”不一定来自每一次事件的即时推理。</h3><p>论文图 8 中，语言模型维护状态、解释意图并指定行为，世界模型接收操作并生成画面。但公开资料没有说明每个 pointermove 都调用 LLM。具体事件编码与调度需要验证。</p><span class="evidence-tag inferred">事实 + 待验证实现</span></article></div>
+  </section>
+
+  <section id="evidence" class="section" aria-labelledby="evidence-title">
+    <div class="section-heading"><div><p class="eyebrow">03 / 证据与边界</p><h2 id="evidence-title">展示了什么，还没有证明什么。</h2></div></div>
+    <div class="evidence-grid">
+      <article class="evidence-card"><span class="evidence-tag known">公开事实</span><h3>交互含义可以改变结果。</h3><p>论文举例：同样的起始画面与拖动，因为语义描述不同，可以分别用于手部 X 光的放大与测量。</p><p>论文图 14 展示室内设计操作，包括墙色、时间与灯光、视角和画作调整。</p><a class="text-link" href="https://arxiv.org/html/2609.00776v1" target="_blank" rel="noopener noreferrer">阅读论文 v1 ↗</a></article>
+      <article class="evidence-card"><span class="evidence-tag inferred">分析推断</span><h3>效果好用，仍依赖交互约定。</h3><p>如果没有选中对象、操作模式或文字指令，同一条轨迹通常存在歧义。因此“可鼠标控制”应进一步拆成对象定位、动作含义、效果稳定性三项来评估。</p><p>本地演示中的模式选择，是为了显式呈现这个约定，不代表 Solaris 的官方界面。</p></article>
+      <article class="evidence-card"><span class="evidence-tag unknown">待验证边界</span><h3>演示画面不等于工程数据。</h3><p>公开材料未证明可编辑 3D、精确尺寸、真实物理求解，也未给出本项目可核验的事件编码、帧率或实测响应延迟。</p><p>官方列出文字、可信度、长期一致性，以及无障碍和集成方面的挑战。访问页面时提供早期访问申请。</p><a class="text-link" href="https://runway.com/news/research/introducing-solaris" target="_blank" rel="noopener noreferrer">查看官方限制说明 ↗</a></article>
+    </div>
+    <details class="validation"><summary>拿到真实访问权限后，应该怎么验证？</summary><div><ol><li><strong>同轨迹、不同语义：</strong>固定起始画面和拖动轨迹，只改变交互含义，记录结果是否按语义变化。</li><li><strong>精确控制：</strong>测试目标选择、细微移动、撤销与重复操作，检查物体、纹理和文字是否漂移。</li><li><strong>连续反馈：</strong>记录事件与可见响应的真实时间，长时间操作后检验一致性；保留原始采样条件。</li><li><strong>数据与接入：</strong>确认是否能导出结构化状态、3D 或尺寸，确认 API、授权、无障碍和键盘操作支持。</li></ol></div></details>
+  </section>
+</main>
+<footer><p>011 · Solaris 能力分析 / 2026-10-04<br><span class="small">原创示意与本地规则演示 · 未接入 Solaris · 非官方实测</span></p><div><a href="../../">返回总索引</a><a href="https://x.com/GKev1n/status/2106629610590888065" target="_blank" rel="noopener noreferrer">用户提供的帖子 ↗</a><a href="https://arxiv.org/abs/2609.00776" target="_blank" rel="noopener noreferrer">论文索引 ↗</a></div></footer>
+</body>
+</html>
+

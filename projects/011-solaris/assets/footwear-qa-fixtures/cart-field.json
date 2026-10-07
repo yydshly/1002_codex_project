@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "avatarId": "atelier-mannequin-v1",
+  "garment": {
+    "id": "jacket-01",
+    "color": "moss"
+  },
+  "shoes": {
+    "id": "boot-01",
+    "color": "ink"
+  },
+  "pose": "reach",
+  "view": "shoe-detail",
+  "camera": {
+    "position": [
+      1.05,
+      0.5,
+      1.65
+    ],
+    "target": [
+      0,
+      0.2,
+      0.05
+    ]
+  },
+  "cart": []
+}

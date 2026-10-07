@@ -1,0 +1,201 @@
+{
+  "date": "2026-10-06",
+  "release": "0.16.0",
+  "status": "bounded-ui-and-protocol-evidence-recorded",
+  "scope": "C35 deepening: six original destinations plus skate/materials/underwater; fitting and tryon not registered; no new capability or scene",
+  "counts": {
+    "connected": 35,
+    "total": 36,
+    "scenes": 11,
+    "registeredDestinations": 9,
+    "phase5Connected": 2,
+    "phase5Total": 3
+  },
+  "actualBrowser": {
+    "source": "visible public JSON backup dialogs and UI interactions through Codex in-app browser",
+    "targetRoundTrips": [
+      {
+        "sceneId": "underwater",
+        "publicJsonBeforeEqualsEnteredEqualsReopened": true,
+        "stateSha256": "489c92ee6e3e46fd1caf6bebffe5fe22e9040f00c5a3485f28f4e026a862abac",
+        "collectionOnlyLastSceneChanged": true,
+        "returnStatus": "已从水下工作台返回；陈列、锁定与选品完整保留。"
+      },
+      {
+        "sceneId": "materials",
+        "publicJsonBeforeEqualsEnteredEqualsReopened": true,
+        "stateSha256": "ad117947b50d4eee3ab7bcee58cae0081dd2cbfa6d7a43a6e765b79d457e7e03",
+        "collectionOnlyLastSceneChanged": true,
+        "returnStatus": "已从材料教学台返回；陈列、锁定与选品完整保留。"
+      },
+      {
+        "sceneId": "skate",
+        "publicJsonBeforeEqualsEnteredEqualsReopened": true,
+        "stateSha256": "6fe9a7cd67626283b1abafd7e8f06ef044ebc3c6d2fc14b9861780e08e1539fd",
+        "collectionOnlyLastSceneChanged": true,
+        "returnStatus": "已从滑板练习场返回；陈列、锁定与选品完整保留。"
+      }
+    ],
+    "collectionBaseline": {
+      "version": 1,
+      "order": [
+        "chair",
+        "lamp",
+        "table-glass",
+        "table-solid",
+        "plant",
+        "sofa"
+      ],
+      "pinned": [
+        "sofa"
+      ],
+      "selected": "table-solid",
+      "wishlist": [
+        "sofa",
+        "chair"
+      ],
+      "preference": "reading",
+      "lastScene": "creative"
+    },
+    "finalCollection": {
+      "version": 1,
+      "order": [
+        "chair",
+        "lamp",
+        "table-glass",
+        "table-solid",
+        "plant",
+        "sofa"
+      ],
+      "pinned": [
+        "sofa"
+      ],
+      "selected": "table-solid",
+      "wishlist": [
+        "sofa",
+        "chair"
+      ],
+      "preference": "reading",
+      "lastScene": "underwater"
+    },
+    "checks": [
+      {
+        "name": "task-preview-cancel",
+        "unchanged": true
+      },
+      {
+        "command": "去水下再去材料",
+        "feedback": "请选择一个场景任务，或输入明确去向，例如：去水下、去材料、去滑板",
+        "dialogCount": 0
+      },
+      {
+        "command": "不要去滑板",
+        "feedback": "请选择一个场景任务，或输入明确去向，例如：去水下、去材料、去滑板",
+        "dialogCount": 0
+      },
+      {
+        "command": "去https://outside.invalid",
+        "feedback": "请选择一个场景任务，或输入明确去向，例如：去水下、去材料、去滑板",
+        "dialogCount": 0
+      },
+      {
+        "name": "recent-destination-preview",
+        "sceneId": "skate",
+        "matchesTask": true
+      },
+      {
+        "name": "loaded-underwater-render-and-return",
+        "preserved": true
+      }
+    ],
+    "consoleCurrentMainPageWarnError": [],
+    "newModelRuns": 0,
+    "tryonDirections": {
+      "observed": true,
+      "directionCount": 5,
+      "anchor": "tryon.html#product-directions",
+      "label": "后续规划 · 尚未接入",
+      "aiGeneratedAppearanceBoundaryObserved": true
+    }
+  },
+  "tests": {
+    "productNode": {
+      "passed": 195,
+      "failed": 0
+    },
+    "repositoryNode": {
+      "passed": 16,
+      "failed": 0
+    },
+    "scopeNote": "Five new return-protocol tests include real exported resolver; initialization test executes original bridge logic in Node DOM/storage simulation with module URLs adapted to HTTP; three new destinations additionally verified in the real browser. The original six destination browser evidence is historical."
+  },
+  "build": {
+    "projectCount": 14,
+    "integrationCheckPassed": true,
+    "catalogCheckPassed": true,
+    "publishedSourcesByteIdentical": [
+      "web/collection.html",
+      "web/collection/app.js",
+      "web/collection/core.js",
+      "web/collection/collection.css",
+      "web/collection/scene-return.js",
+      "web/skate.html",
+      "web/materials.html",
+      "web/underwater.html",
+      "web/tryon.html",
+      "web/tryon/tryon.css",
+      "web/studio/integration-data.json",
+      "web/capabilities/scene-catalog.json"
+    ],
+    "runtimeExcluded": true
+  },
+  "sourceSha256": {
+    "web/collection.html": "cbcab820d7f7b0c70484afdef5f8ef4c568bded02a7da7f5897a217736b62a82",
+    "web/collection/app.js": "5acfdc4e53f44574e044a12bbe45627f3fc53bb7d0759ee196a290ec52cc3f97",
+    "web/collection/core.js": "8e3d2eadcac6d4528c634bafcc32d69eef5496f26d49bf2842a6c87c56ec768f",
+    "web/collection/collection.css": "9fedca1b319e50d7bd0c12213de41e04abcfbbc74e14520105a632863e79d5e7",
+    "web/collection/scene-return.js": "bf87e8df8de90c0d6918be96707b85ff0b85fd99111a2fc4f937f7395b737b08",
+    "web/skate.html": "01aa4e984cf54622113f42425d946f33a3507331bd316c39c4b9600fc21720bf",
+    "web/materials.html": "34bb09f58d9bdffadfe19e142b43720477e97d3764afdb332fa767c730c87299",
+    "web/underwater.html": "c731c1a8cc10c4f1a8e29e75c2420c33cb449d77fa650f09f8c54160895963a3",
+    "web/tryon.html": "4d4ab213b28bfbdfb4e96ce2e16a52d8f01909de6406c7e42a6cc07e621ed930",
+    "web/tryon/tryon.css": "dec924c3f9715b30940aa1f6bc1634e25f3dbffdda04a41b0092501b0ab8159f",
+    "web/studio/integration-data.json": "b375465b9dd36fd829295ae0a30f8f210bf9eb173291ea2d9d8013ef4266e9b8",
+    "tests/collection.test.mjs": "c3997ba6964847101de79d15de0b03df7406d259fabd83351a35bc151db99c5f",
+    "tests/scene-return.test.mjs": "9ec50e829a2db0ac3d6419e0df076190f52b35bc83feffd65db210be2ff66d30",
+    "notes/product-release.md": "3349b714fec4f0a7b0a4436d5841645488682d0752ec739c2190fbd51bbfe05d",
+    "notes/product-feasibility.json": "7df85990690c9213076abffe2d21603a8ea979998b6539a03d4d409ed8266bb8",
+    "notes/roadmap.json": "bf911e5bbb32c1cc66de7b1ed15a497e734fb0e5757b891c4b19c9795d3d4f2f",
+    "web/capabilities/scene-catalog.json": "17e8897225e8a453d5f95bb49eb58a64b9cd6a85fbefc2f04eb5c51b0fa7d9ea",
+    "README.md": "df1f683e0894b6990f9b35e6745404cc50ea4f39d48fb204afa2b4baa7efa7a7"
+  },
+  "artifacts": [
+    {
+      "path": "../assets/atelier-scene-workflow.png",
+      "sha256": "39e6949aa1e8b0f6f11addcda9d3c7d9cfba06a1eec4c1dd3d6e0d06007aa425"
+    },
+    {
+      "path": "../assets/atelier-scene-tasks.png",
+      "sha256": "c549ddf886c9b68517e12ddf304e4ff2e47399e877317153663926da25a2197f"
+    },
+    {
+      "path": "../assets/atelier-scene-return.png",
+      "sha256": "f47cbdea4d26beeba89c876722e8f5f523ce5d0b0efdc349f6b3434bdc88d6ba"
+    },
+    {
+      "path": "../assets/atelier-tryon-product-directions.png",
+      "sha256": "9a8748e424533fe96efedb1a5f42c9ca685aaf005b6a49232c6ec0f4f63d968a"
+    },
+    {
+      "path": "../assets/atelier-scene-workflow-state-checks.json",
+      "sha256": "af3acddf3e51f8291c7d2fb045f57cb0b006d3ce256aebf8823f2635355d18b6"
+    }
+  ],
+  "pending": [
+    "Navigation during unfinished dragging, jumping, heating or following was not exercised in this round; existing scene cancellation/stable-save rules remain.",
+    "Actual browser storage-quota failures, multi-window conflicts, alternate browsers, touch devices and full offline workflow remain separate checks.",
+    "Six original destinations were covered by protocol regression but not newly exercised end-to-end in this round.",
+    "Trip token links a same-origin local checkpoint; it is not a signature proving arbitrary valid-schema data has not been altered.",
+    "No C19 commerce, size/fit proof, new tryon category, model retraining or commercial-asset verification was added."
+  ]
+}

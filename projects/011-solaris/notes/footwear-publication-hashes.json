@@ -1,0 +1,108 @@
+{
+  "release": "0.14.0",
+  "date": "2026-10-06",
+  "status": "passed",
+  "count": 20,
+  "checks": [
+    {
+      "file": "fitting.html",
+      "sha256": "ec5657406aa24669c7843d13e8a7971b6a61eb7627bdf78f41fa7034b0f17810",
+      "bytes": 8476
+    },
+    {
+      "file": "fitting/app.js",
+      "sha256": "43e2add48870ebb36871c656e11e95ae876a5bcd30fbde01ce22fc4f26c74e4f",
+      "bytes": 19291
+    },
+    {
+      "file": "fitting/core.js",
+      "sha256": "29525cde9213a9d0033544549a1fdbbfa9e418d81666183fe4f0404a3004e097",
+      "bytes": 12894
+    },
+    {
+      "file": "fitting/scene.js",
+      "sha256": "16fb9d1ee2132f2456a69dd1b07aa0c3b2fc102811324d15b89977359f0277be",
+      "bytes": 19254
+    },
+    {
+      "file": "fitting/fitting.css",
+      "sha256": "6a14b46cf269f5157aaa566eb7e4a056c30f54c3223d2ed339aed75766598952",
+      "bytes": 11892
+    },
+    {
+      "file": "fitting/assets/avatar.glb",
+      "sha256": "9b236207c5256cb79e699d451c8345b7790717c2a06f151fe9e2814aa57be631",
+      "bytes": 682176
+    },
+    {
+      "file": "fitting/assets/core-tee.glb",
+      "sha256": "79b645eb26a89f3c755d7dc25ed26c15129e905381d8e47b3f89b144638d1d15",
+      "bytes": 3533168
+    },
+    {
+      "file": "fitting/assets/field-jacket.glb",
+      "sha256": "72b28ac1219ba2f848fb3000374680d12b02738d8672e7152e7ca557dcf7fade",
+      "bytes": 6209244
+    },
+    {
+      "file": "fitting/assets/fit-registration.json",
+      "sha256": "ec5bd56929fa52daf92691eafa0e09d1b21ca33c2fe913f2fe9fa74798ca4402",
+      "bytes": 1212
+    },
+    {
+      "file": "fitting/assets/manifest.json",
+      "sha256": "593acdd821a603830c723479a139b2d75e82dff37bcaa0a7b324ac1c18bd060c",
+      "bytes": 10812
+    },
+    {
+      "file": "fitting/assets/quaternius-cc0-license.txt",
+      "sha256": "11eac7504a28077e9d8dbac8ddfca2566510efba7eef46e11f21cdd2bc96d4d5",
+      "bytes": 446
+    },
+    {
+      "file": "fitting/footwear/court.glb",
+      "sha256": "9f6e8db208e6d1e622bf0327934829e1842838e8fb2b52207f9402307cd68838",
+      "bytes": 2898476
+    },
+    {
+      "file": "fitting/footwear/ridge.glb",
+      "sha256": "3454599203fc1f103a2f9583c5b9d59db8c37b993168567447e9cef78c2e5dc9",
+      "bytes": 3228204
+    },
+    {
+      "file": "fitting/footwear/fit-registration.json",
+      "sha256": "decfd54bc02894f66ddd2d808294d1d487263bb0837c9f7a17038d8767440f18",
+      "bytes": 1466
+    },
+    {
+      "file": "fitting/footwear/manifest.json",
+      "sha256": "e96ab69c9d0fb515dad12102d09a512aadba1194d69909ae000aa4d183a0df35",
+      "bytes": 13380
+    },
+    {
+      "file": "fitting/footwear/quaternius-cc0-license.txt",
+      "sha256": "11eac7504a28077e9d8dbac8ddfca2566510efba7eef46e11f21cdd2bc96d4d5",
+      "bytes": 446
+    },
+    {
+      "file": "studio/integration-data.json",
+      "sha256": "6960cc17a2d1a55c234ca970eac0627bd9420fe533904ba6f08df78e1a3761b1",
+      "bytes": 170274
+    },
+    {
+      "file": "capabilities/scene-catalog.json",
+      "sha256": "731fe9521d57913b5cecbe4bad059758ce432fa5a5f32a06715e91f47a795d91",
+      "bytes": 92390
+    },
+    {
+      "file": "studio/vendor/addons/utils/SkeletonUtils.js",
+      "sha256": "0761b1e003917b215d25dd81439d854b36034b5a57ce84c2cfe3b02428d7b253",
+      "bytes": 11062
+    },
+    {
+      "file": "cover: assets/atelier-footwear-workspace.jpg -> _site/assets/011-solaris.jpg",
+      "sha256": "6bb338f24ce729d0fcd20610252cd66cf607e0094d814d1594363ded97487678",
+      "bytes": 53520
+    }
+  ]
+}

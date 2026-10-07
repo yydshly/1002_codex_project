@@ -1,0 +1,90 @@
+{
+  "product": "ATELIER",
+  "release": "0.7.0",
+  "date": "2026-10-05",
+  "scene": "材质与笔触创作台",
+  "entry": "http://localhost:4189/projects/011-solaris/creative.html",
+  "status": "bounded-main-workflows-verified; device-capacity-performance-specialist-checks-pending",
+  "capabilityIds": ["C27", "C28"],
+  "researchEvidenceBoundary": "原研究两项来自论文§3文字说明，其中画作风格为条件性例子；此次验收只证明我们自己的像素取样和有限参数笔刷，不证明访问或复现Solaris模型。",
+  "browser": {
+    "surface": "Codex in-app browser, actual mouse and keyboard",
+    "naturalViewport": [1280, 720],
+    "viewportOverride": false,
+    "documentClientWidth": 1280,
+    "documentScrollWidth": 1280,
+    "canvasCoordinates": [1200, 900],
+    "actualPngDimensions": [1200, 900],
+    "consoleWarningsAndErrors": []
+  },
+  "assets": {
+    "manifest": "../web/assets/creative/manifest.json",
+    "localImageCount": 4,
+    "localImageBytes": 7602490,
+    "longEdgePixels": 2400,
+    "sources": [
+      {"id": "cat", "assetId": "cat-fur", "author": "OboeBlanket", "year": "2013", "source": "https://commons.wikimedia.org/wiki/File:Cat_in_towel.jpg", "license": "author CC0-1.0"},
+      {"id": "wheat", "assetId": "wheat-cypresses", "author": "Vincent van Gogh", "year": "1889", "objectId": 436535, "license": "Met public-domain image under CC0"},
+      {"id": "river", "assetId": "river-bridge", "author": "Alfred Sisley", "year": "1872", "objectId": 437680, "license": "Met public-domain image under CC0"},
+      {"id": "stilllife", "assetId": "still-life", "author": "Paul Cézanne", "year": "1890", "objectId": 435882, "license": "Met public-domain image under CC0"}
+    ],
+    "verified": "All local SHA256 digests, image dimensions, RGB ICC profiles, 4:4:4 sampling and three captured official Met isPublicDomain:true records pass. Full compositions preserved; documented build-time downsampling and sRGB JPEG conversion only.",
+    "visualInspection": "Four complete local images visually inspected. Browser actually displayed the cat, both painting references and full Cézanne still-life base. No image-generated reference or replacement artwork."
+  },
+  "automatedChecks": [
+    {"command": "node --test projects/011-solaris/tests/*.test.mjs", "passed": 76, "failed": 0, "creativeCorePassed": 10},
+    {"command": "npm test", "passed": 16, "failed": 0},
+    {"command": "node projects/011-solaris/scripts/verify-creative-assets.mjs", "result": "passed"},
+    {"command": "node --check projects/011-solaris/web/creative/app.js; node --check projects/011-solaris/web/creative/renderer.js", "result": "passed"}
+  ],
+  "browserChecks": [
+    {"id": "CR01", "action": "猫来源默认毛纹选区", "result": "Visible rect [.53,.23,.13,.15] corresponds to 312x270 source pixels; black/white forehead fur is sampled, not the towel."},
+    {"id": "CR02", "action": "真实鼠标点击印章，再连续拖动", "result": "One click creates stroke-1 with one point; one drag creates stroke-2 with nine points. Two independent texture strokes retain their own source/crop/size/opacity/target."},
+    {"id": "CR03", "action": "逐笔撤销重做", "result": "2→1→0 then 0→1→2. Undo output PNG equals the pre-drawing PNG byte for byte; redo equals the original texture PNG byte for byte."},
+    {"id": "CR04", "action": "左侧试片区域外点击", "result": "Explicit rejection; stroke count stays 2 and a visible message asks the user to draw inside the highlighted target."},
+    {"id": "CR05", "action": "真实鼠标从试片内部拖出边界", "result": "A third stroke is accepted, but changed pixels stop at x=469 and y=409. Exact whole-PNG pixel comparison finds zero changes outside the declared left target. One undo removes only this stroke."},
+    {"id": "CR06", "action": "在完整猫原图上真实圈取黑毛", "result": "Saved source rect [.6648550707360973,.15489113849142325,.15217391304347827,.14492753623188406]; extracted palette changes. Existing two strokes and their old source crops remain identical."},
+    {"id": "CR07", "action": "选择梵高参考并真实连续绘制", "result": "Paint layer gains stroke-3, source wheat, size140, opacity.8, target left. Palette ['#0a0d0c','#47573e','#897538','#728b8f','#a0a69d'] is derived from the visible full reference."},
+    {"id": "CR08", "action": "换到西斯莱参考", "result": "Palette changes to ['#010101','#525145','#74715b','#50758f','#8c8f87']; existing exported PNG remains exactly identical before new drawing. Tool changes never reinterpret old strokes."},
+    {"id": "CR09", "action": "西斯莱参考真实鼠标拖绘", "result": "Four saved strokes have source IDs [cat,cat,wheat,river], mode texture for first two and paint for last two."},
+    {"id": "CR10", "action": "落笔后真实键盘撤销重做", "result": "Ctrl+Z changes count4→3; Ctrl+Shift+Z restores4. Paper owns keyboard focus after a brush range input and a native drawing gesture."},
+    {"id": "CR11", "action": "保存作品并刷新重开", "result": "Entire validated JSON and 1200x900 actual PNG both equal the pre-reload four-stroke workspace exactly. No stroke/source/target/layer/brush/nextId change."},
+    {"id": "CR12", "action": "损坏来源编号JSON", "result": "Import rejects unknown source ID without applying anything. Reopened backup equals the original four-stroke state in every field."},
+    {"id": "CR13", "action": "通过公开JSON作精确同轨迹参考对照", "result": "Only the paint source is changed from wheat to river in a three-stroke file; recorded points, brush and target remain exactly identical. PNG differs. Import is one undo transaction and restores the original four-stroke PNG exactly."},
+    {"id": "CR14", "action": "隐藏参考笔触图层并尝试落笔", "result": "PNG equals the original two-cat-stroke texture proof. All four stroke records remain; drawing to the hidden active layer is rejected with a visible message."},
+    {"id": "CR15", "action": "显示、清空参考笔触图层、撤销", "result": "Clear affects only two paint strokes, count4→2; one undo restores both paint strokes and the full original PNG."},
+    {"id": "CR16", "action": "切换空白画纸并撤销", "result": "All stroke records remain identical; undo restores the still-life base and original output PNG exactly."},
+    {"id": "CR17", "action": "放大到135%并真实平移画纸", "result": "Navigation changes the presentation only. Actual exported PNG equals the original four-stroke PNG exactly."},
+    {"id": "CR18", "action": "放大和平移后真实点击预定纸面点[250,260]", "result": "Recorded point [250.83546222718712,260.6690772561461,1] differs by 1.0704 paper pixels after integer mouse targeting; one undo restores four strokes, then Fit restores the presentation."},
+    {"id": "CR19", "action": "实际PNG预览与留档", "result": "Native image natural dimensions1200x900; UI PNG data saved directly, without repainting or synthesizing proof. Real browser screenshots and four-stroke JSON also saved."},
+    {"id": "CR20", "action": "自然桌面布局与控制台", "result": "1280x720 without an explicit viewport override; clientWidth=scrollWidth=1280, no horizontal document overflow, no captured warnings or errors."}
+  ],
+  "pixelComparisons": [
+    {"before": "../assets/creative-baseline.png", "after": "../assets/creative-texture-proof.png", "target": [90,110,380,300], "changedPixels": 31005, "changedBounds": [102,186,365,197], "outsideChangedPixels": 0, "maxChannelDifference": 137, "method": "whole RGBA decode and exact per-pixel comparison; no threshold or image editing"},
+    {"before": "../assets/creative-texture-proof.png", "after": "../assets/creative-clipping-proof.png", "target": [90,110,380,300], "changedPixels": 6608, "changedBounds": [375,317,95,93], "inclusiveMaximum": [469,409], "outsideChangedPixels": 0, "maxChannelDifference": 124, "method": "whole RGBA decode and exact per-pixel comparison; no threshold or image editing"}
+  ],
+  "proofs": {
+    "cleanWorkspaceScreenshot": "../assets/atelier-creative-workspace.jpg",
+    "mouseOperationsScreenshot": "../assets/atelier-creative-mouse-proof.jpg",
+    "actualPngRender": "../assets/atelier-creative-render.png",
+    "fourStrokeWorkspace": "../assets/atelier-creative-example.json",
+    "wheatReferencePng": "../assets/creative-wheat-proof.png",
+    "sameExactPathRiverReferencePng": "../assets/creative-reference-comparison.png"
+  },
+  "pending": [
+    "Real hardware mid-gesture Escape, held-range cancellation, focus loss, interrupted crop and interrupted pen capture; source code handling does not replace device tests.",
+    "Touch, stylus pressure, multi-pointer and additional browser engines.",
+    "Large files, 300-stroke/100000-coordinate/200000-stamp capacity under actual hardware load, long-running performance and memory stability.",
+    "Full workflow under network isolation and browser download actual disk writes. Local files and PNG preview are verified separately.",
+    "Artistic quality evaluation or arbitrary semantic artist-style transfer, which the current parameter brush does not implement."
+  ],
+  "boundaries": [
+    "Known local source IDs and visible normalized crop only; no arbitrary source reconstruction, object recognition, segmentation or invented texture.",
+    "C28 derives a five-color palette, brightness-gradient principal direction and finite brush filaments. It does not learn curved artistic brushstrokes or reproduce an artist's semantic style.",
+    "Target boundaries are explicit rectangles, not detected objects. Drawing overlays do not modify the original images or original base artwork file.",
+    "Two fixed layers on a1200x900 Canvas2D paper, up to300 total strokes/200 per layer,5000 points per stroke/100000 total points, and200000 effective stamp budget. The canonical saved document must stay within3MiB.",
+    "Each stroke stores its own source crop and brush parameters. Deterministic replay is verified in this browser session; cross-browser color/pixel equality and broad performance are not promised.",
+    "Zoom and pan are presentation state; persisted JSON restores original paper coordinates, sources, strokes, layer visibility and base. It does not persist an entire undo stack or temporary pointer movement.",
+    "At the end of validation, only this initially empty creative workspace is restored to a clean starting paper. The actual four-stroke example is preserved in a separate recoverable JSON and PNG. Other scene workspaces are not touched."
+  ]
+}

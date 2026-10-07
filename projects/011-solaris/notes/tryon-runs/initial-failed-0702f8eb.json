@@ -1,0 +1,78 @@
+{
+  "id": "0702f8ebda354a11b07958e6db4ef579",
+  "status": "failed",
+  "created_at": "2026-10-05T18:34:38.611+00:00",
+  "updated_at": "2026-10-05T18:35:40.085+00:00",
+  "progress": {
+    "stage": "failed",
+    "completed_steps": 0,
+    "total_steps": 20
+  },
+  "settings": {
+    "model": "FASHN VTON 1.5",
+    "category": "tops",
+    "garment_photo_type": "flat-lay",
+    "num_samples": 1,
+    "num_timesteps": 20,
+    "seed": 42,
+    "guidance_scale": 1.5,
+    "skip_cfg_last_n_steps": 1,
+    "segmentation_free": true
+  },
+  "inputs": {
+    "person": {
+      "format": "JPEG",
+      "uploaded_bytes": 152937,
+      "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78",
+      "decoded_size": [
+        768,
+        1024
+      ],
+      "normalized_size": [
+        768,
+        1024
+      ],
+      "metadata_stripped": true
+    },
+    "garment": {
+      "format": "JPEG",
+      "uploaded_bytes": 62788,
+      "sha256": "3fd079502958281685d739cd88e3b2a2c0300f67c7370bfc0146d7c549cf4346",
+      "decoded_size": [
+        768,
+        1024
+      ],
+      "normalized_size": [
+        768,
+        1024
+      ],
+      "metadata_stripped": true
+    }
+  },
+  "licenses": {
+    "tryon": "Apache-2.0",
+    "human_parser": "nvidia-segformer; research/evaluation only",
+    "human_parser_url": "https://github.com/NVlabs/SegFormer/blob/master/LICENSE"
+  },
+  "started_at": "2026-10-05T18:34:38.702+00:00",
+  "execution": {
+    "generation": "cuda",
+    "pose_detection": "cpu",
+    "human_parser": "cpu",
+    "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+    "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+    "dtype": "torch.bfloat16",
+    "model_resolution": [
+      576,
+      864
+    ],
+    "algorithm": "official Euler sampler/CFG; unchanged"
+  },
+  "error": {
+    "type": "OutOfMemoryError",
+    "message": "OutOfMemoryError: CUDA out of memory. Tried to allocate 120.00 MiB. GPU 0 has a total capacity of 8.00 GiB of which 4.79 GiB is free. Of the allocated memory 1.93 GiB is allocated by PyTorch, and 136.94 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+  },
+  "elapsed_seconds": 61.49,
+  "execution_seconds": 61.39,
+  "queue_seconds": 0.09
+}

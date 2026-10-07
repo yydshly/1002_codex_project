@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "asset": "Car Concept",
+  "sourcePage": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/CarConcept",
+  "sourceMetadata": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/CarConcept/metadata.json",
+  "sourceDirectory": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/CarConcept/glTF/",
+  "license": "CC-BY-4.0",
+  "artist": "Eric Chadwick",
+  "copyright": "© 2024 Darmstadt Graphics Group GmbH",
+  "additionalMarks": [
+    "Khronos",
+    "3D Commerce"
+  ],
+  "changes": "glTF PNG images and original binary geometry embedded into one GLB; geometry, material values, transforms, pivots and textures unchanged. No procedural replacement vehicle components.",
+  "runtimeRequiresNetwork": false,
+  "downloadedSourceFiles": [
+    {
+      "name": "CarConcept.gltf",
+      "bytes": 333111,
+      "sha256": "1a2395a86bdef0a1e9b3d3875bb056f688c624c19cf27c867b6d5cde6f37722f"
+    },
+    {
+      "name": "CarConcept.data.bin",
+      "bytes": 8670516,
+      "sha256": "5cd6ceb6a502dc3c79863c2f11c06f6aa7474e53367bb212b3e3c3f1e7611d20"
+    },
+    {
+      "name": "Mechanical_N.png",
+      "bytes": 251901,
+      "sha256": "bc5865f15bffc94e5248cf0a4bb1beaec06150a640b5ca65ad6de3d58d394ca9"
+    },
+    {
+      "name": "Mechanical_ORM.png",
+      "bytes": 69809,
+      "sha256": "1e026202e92d8b701550d1a6803cb3597f1c0d89adce256b0e360a0f547e4da9"
+    },
+    {
+      "name": "Occlusion.png",
+      "bytes": 1411879,
+      "sha256": "766c01462c9b344871711c6af66bcd1f75371fc25f7c392a0185f6b62b2dd4f8"
+    },
+    {
+      "name": "Khronos_C.png",
+      "bytes": 7087,
+      "sha256": "50f16c5a514079b8ea27ba4eb03046b63cd0a9c29686423a2940a8fb2898f1b5"
+    },
+    {
+      "name": "Hex_N.png",
+      "bytes": 3331,
+      "sha256": "738427eb37d929a8a9dff41783cea37a10fd2dc98f53d6d320d9aa5c648beea7"
+    },
+    {
+      "name": "Rib_N.png",
+      "bytes": 143,
+      "sha256": "516aada2d1c574c59352e1221aaf75cc8fa48104aafe05716f02f30b7349c59f"
+    },
+    {
+      "name": "Dash_E.png",
+      "bytes": 27423,
+      "sha256": "23c7ee30e1bf5e2c243330d4d5be7624f96befca8a224a8eec0b9438a64b09a4"
+    },
+    {
+      "name": "Powdercoat_N.png",
+      "bytes": 41240,
+      "sha256": "3f1bf8d127374684c89b0d1963ca57d36a8ea59de96bef752b62daebc6362eeb"
+    },
+    {
+      "name": "Dot_C.png",
+      "bytes": 321,
+      "sha256": "ac7ca6bf9ee840b78e4a27c82c3c529a1063bba16b9eea120c981a041d922a40"
+    },
+    {
+      "name": "Dot_N.png",
+      "bytes": 7969,
+      "sha256": "ca9ef95997b387a597738e2f3e9dfa6e9f140c38d2f0baa7aadf226ce05c3635"
+    },
+    {
+      "name": "Tireside_C.png",
+      "bytes": 8094,
+      "sha256": "871509e74cc44ca8fa3b664e59460e62f0edf30007b035bb9f21ad957d6336c1"
+    },
+    {
+      "name": "Tireside_N.png",
+      "bytes": 396724,
+      "sha256": "a7335b72bf59441a4e1856c819c1e1655a5bb6c72661429f70cf5857eb26f1c2"
+    },
+    {
+      "name": "Tiretread_N.png",
+      "bytes": 49131,
+      "sha256": "cc8dd22a4b78dfcebdca12270e3db8a9c381d9b1b40b00d7a0043373abd0f72f"
+    },
+    {
+      "name": "Thickness.png",
+      "bytes": 137601,
+      "sha256": "09d0606c1f90caf3cc5d578d1f695e908df1c10288c9918971890d2d98dc5eae"
+    }
+  ],
+  "runtime": {
+    "file": "CarConcept.glb",
+    "bytes": 11268100,
+    "sha256": "264751256325a607a338f0c5c5bf62a7ba02b250ffef29a8d2f3473e81e5ae25",
+    "images": 14,
+    "imageFormat": "image/png",
+    "buffers": 1,
+    "nodes": 101,
+    "meshes": 97,
+    "materials": 29
+  }
+}

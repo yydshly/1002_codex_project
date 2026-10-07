@@ -1,0 +1,36 @@
+[
+  {
+    "command": "去客厅",
+    "sceneUrl": "http://localhost:4189/projects/011-solaris/index.html?from=collection&trip=2f5c2bce20938fd5",
+    "bridge": "从选品台进入\n返回选品台 ↗",
+    "lastScene": "living",
+    "collectionExact": true
+  },
+  {
+    "command": "去展厅",
+    "sceneUrl": "http://localhost:4189/projects/011-solaris/showroom.html?from=collection&trip=2016b9de735fd64a",
+    "bridge": "从选品台进入\n返回选品台 ↗",
+    "lastScene": "showroom",
+    "collectionExact": true
+  },
+  {
+    "command": "去影像",
+    "bridgeSeen": true,
+    "lastScene": "imaging",
+    "collectionExact": true
+  },
+  {
+    "command": "去地标",
+    "sceneUrl": "http://localhost:4189/projects/011-solaris/landmark.html?from=collection&trip=d0294dc8d6136e3a",
+    "bridge": "从选品台进入\n返回选品台 ↗",
+    "lastScene": "landmark",
+    "collectionExact": true
+  },
+  {
+    "command": "去创作",
+    "sceneUrl": "http://localhost:4189/projects/011-solaris/creative.html?from=collection&trip=3efe404431d5b5bb",
+    "bridge": "从选品台进入\n返回选品台 ↗",
+    "lastScene": "creative",
+    "collectionExact": true
+  }
+]

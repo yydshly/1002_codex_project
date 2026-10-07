@@ -1,0 +1,111 @@
+{
+  "purpose": "仅供真实备份 UI 导入、拒绝、容量与旧版迁移 QA；程序生成，不作为鼠标操作完成证据。",
+  "directory": "assets/diver-qa-fixtures/",
+  "files": [
+    {
+      "file": "valid-v2-initial-top.json",
+      "validity": "valid",
+      "schema": 2,
+      "records": 0,
+      "nextId": 1,
+      "bytes": 377,
+      "description": "schema 2 初始俯视工作区，零条记录。",
+      "validation": "strict validate + serialized round trip passed"
+    },
+    {
+      "file": "valid-v2-follow-single.json",
+      "validity": "valid",
+      "schema": 2,
+      "records": 1,
+      "nextId": 2,
+      "bytes": 2733,
+      "description": "schema 2 一次完整鱼移动和有限速度潜水员跟随；供错误夹具的合法基线。",
+      "validation": "strict validate + serialized round trip passed"
+    },
+    {
+      "file": "valid-v2-capacity-40.json",
+      "validity": "valid",
+      "schema": 2,
+      "records": 40,
+      "nextId": 41,
+      "bytes": 28689,
+      "description": "schema 2 恰好 40 条联动记录；下次正位移必须被 UI 容量保护拒绝。不是 40 次真实鼠标验收证据。",
+      "validation": "strict validate + serialized round trip passed"
+    },
+    {
+      "file": "valid-v2-id-exhausted.json",
+      "validity": "valid",
+      "schema": 2,
+      "records": 0,
+      "nextId": 1000000,
+      "bytes": 383,
+      "description": "schema 2 nextId=1000000，零条记录；下次正位移必须被 UI 编号保护拒绝。",
+      "validation": "strict validate + serialized round trip passed"
+    },
+    {
+      "file": "valid-v1-fish-at-diver-start.json",
+      "validity": "valid",
+      "schema": 1,
+      "records": 1,
+      "nextId": 2,
+      "bytes": 452,
+      "description": "合法 schema 1，鱼落在新潜水员默认起点。一条旧鱼 ledger、无任何潜水员历史；迁移必须选安全初始化站位。",
+      "validation": "strict validate + serialized round trip passed"
+    },
+    {
+      "file": "invalid-v2-diver-heading.json",
+      "validity": "deliberately-invalid",
+      "schema": 2,
+      "records": 1,
+      "nextId": 2,
+      "bytes": 2733,
+      "description": "当前潜水员朝向与最近记录的结束朝向不一致；有限角度本身仍合法。",
+      "validation": "strict parser rejected as intended",
+      "expectedError": "潜水员当前位置或方向与完整跟随记录不一致"
+    },
+    {
+      "file": "invalid-v2-fish-heading.json",
+      "validity": "deliberately-invalid",
+      "schema": 2,
+      "records": 1,
+      "nextId": 2,
+      "bytes": 2734,
+      "description": "当前鱼朝向与完整鱼路径推导方向不一致。",
+      "validation": "strict parser rejected as intended",
+      "expectedError": "鱼的落点或方向与完整拖动记录不一致"
+    },
+    {
+      "file": "invalid-v2-diver-path.json",
+      "validity": "deliberately-invalid",
+      "schema": 2,
+      "records": 1,
+      "nextId": 2,
+      "bytes": 2794,
+      "description": "潜水员路径插入 west 礁石中心，首末姿态未改；必须拒绝穿礁轨迹。",
+      "validation": "strict parser rejected as intended",
+      "expectedError": "潜水员路径穿过礁石保护范围"
+    },
+    {
+      "file": "invalid-future-version.json",
+      "validity": "deliberately-invalid",
+      "schema": 3,
+      "records": 1,
+      "nextId": 2,
+      "bytes": 2733,
+      "description": "未来 schema 3，不应猜测结构或覆盖现有工作区。",
+      "validation": "strict parser rejected as intended",
+      "expectedError": "不支持的水下双角色工作区文件版本"
+    },
+    {
+      "file": "invalid-v1-fish-at-diver-without-ledger.json",
+      "validity": "deliberately-invalid",
+      "schema": 1,
+      "records": 0,
+      "nextId": 2,
+      "bytes": 293,
+      "description": "故意缺少旧鱼 ledger，却将鱼放到 INITIAL_DIVER；旧 core 必须拒绝，不能用此文件验证合法迁移。",
+      "validation": "strict parser rejected as intended",
+      "expectedError": "鱼的落点或方向与完整拖动记录不一致"
+    }
+  ]
+}

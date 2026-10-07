@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#eeede8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-src 'none'">
+<title>ATELIER · 汽车展厅</title><link rel="stylesheet" href="./showroom/showroom.css"><link rel="stylesheet" href="./capabilities/scene-capabilities.css">
+<script type="importmap">{"imports":{"three":"./studio/vendor/three.module.js","three/addons/":"./studio/vendor/addons/"}}</script>
+</head><body>
+<header><a class="brand" href="./"><span class="brand-mark">a</span><span>ATELIER<small>场景设计工作台</small></span></a><nav aria-label="场景导航"><a href="./">客厅</a><a class="active" href="./showroom.html" aria-current="page">汽车展厅</a><a href="./imaging.html">影像工作台</a><a href="./landmark.html">地标探索</a><a href="./kitchen.html">料理备料</a><a href="./creative.html">创作台</a><a href="./collection.html">精选陈列</a><a href="./skate.html">滑板练习</a><a href="./materials.html">材料教学</a><a href="./underwater.html">水下拖动 ↗</a><a href="./fitting.html">试衣间 ↗</a><a href="./integration.html#roadmap">接入规划 ↗</a></nav><div class="header-actions"><span id="save-status">本地工作区</span><button id="undo" aria-label="撤销" title="Ctrl+Z">↶</button><button id="redo" aria-label="重做" title="Ctrl+Shift+Z">↷</button><button id="save" class="primary">保存配置</button></div></header>
+<main>
+<section class="stage" aria-label="可交互的三维汽车展厅">
+  <div class="stage-heading"><span class="eyebrow">FORM / LIGHT / DETAIL</span><h1>看见每一处设计</h1><p>环绕车身，打开盖板，观察光如何落在表面。</p><button type="button" data-scene-capabilities="car">本场景验证什么</button></div>
+  <div id="canvas-host" tabindex="0" aria-label="拖动环绕汽车，滚轮缩放，点击车灯或引擎盖操作"></div>
+  <div id="loading" class="loading"><span class="brand-mark">a</span><strong>正在准备展厅</strong><p id="loading-detail">加载精细模型与本地材质…</p><progress id="loading-progress" max="1" value="0"></progress></div>
+  <div id="load-error" class="loading" hidden><strong>展厅暂时无法打开</strong><p id="error-detail"></p><button id="retry">重新打开</button></div>
+  <div class="model-caption"><span class="model-index">02</span><div><strong>Car Concept</strong><small>精细车身 · 独立部件 · 铰链结构</small></div><button id="about" aria-label="查看模型与实现说明">ⓘ</button></div>
+  <div class="stage-tools"><button id="snapshot" title="导出当前真实渲染图片">导出图片 ↗</button><button id="reset-view">恢复视角</button></div>
+  <p class="gesture-hint" id="gesture-hint">拖动环绕 · 滚轮缩放 · 右键平移 · 点击灯具 / 引擎盖</p>
+  <span class="view-name" id="view-name">前侧视角</span>
+</section>
+<aside aria-label="汽车配置面板">
+  <div class="panel-intro"><span class="eyebrow">EXPLORE THE DETAILS</span><h2>从整体到细节</h2><p>把每一次观察，变成可保存的配置。</p></div>
+  <section class="control-section"><div class="section-heading"><h3>车身配色</h3><span id="paint-name">石墨灰</span></div><div class="paint-options" id="paint-options"></div><p class="fine">金属车漆，保留原始部件与材质层次。</p></section>
+  <section class="control-section"><div class="section-heading"><h3>车灯</h3><button class="switch" id="lights" aria-label="切换车灯" aria-pressed="false"><span></span></button></div><label class="range-heading" for="light-power">亮度<output id="power-output">160</output></label><input id="light-power" type="range" min="0" max="300" step="5" aria-label="车灯亮度"><p class="fine">点击画面中的灯具，也可以切换车灯。</p></section>
+  <section class="control-section"><div class="section-heading"><h3>引擎盖</h3><output id="hood-output">已关闭</output></div><input id="hood" type="range" min="0" max="100" step="1" aria-label="引擎盖开度"><div class="split-buttons"><button id="toggle-hood">打开引擎盖</button><button data-view="engine">查看前舱 ↗</button></div><p class="fine">原装铰链开合，展示概念车机械舱。</p></section>
+  <section class="control-section"><div class="section-heading"><h3>观察视角</h3><span>自由探索</span></div><div class="view-options" id="view-options"></div><p class="fine">切换视角不会改变车漆、车灯或盖板。</p></section>
+  <div class="panel-footer"><button id="backup">备份 / 打开配置</button><a href="./integration.html#roadmap">查看完整接入规划 ↗</a><span>交互与渲染在本机完成</span></div>
+</aside></main>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<dialog id="about-dialog"><div class="dialog-heading"><h2>模型与实现</h2><button data-close aria-label="关闭说明">×</button></div><p>Car Concept 为 Khronos 官方样例中的精细概念车型。模型与纹理由 Eric Chadwick 制作，© 2024 Darmstadt Graphics Group GmbH，采用 CC BY 4.0；模型保留其原始标记。场景灯光、鼠标交互、部件开合、配置与产品界面由本项目实现。</p><p>车灯包含发光表面、投射到地面的光束与阴影。引擎盖使用原模型独立部件与铰链。展示用角度、颜色和亮度不代表任何真实车型的工程参数。</p><a href="./assets/car/manifest.json" target="_blank" rel="noopener">本地资产与许可清单 ↗</a><a href="./integration.html">能力范围与验收条件 ↗</a></dialog>
+<dialog id="backup-dialog"><div class="dialog-heading"><h2>保留你的配置</h2><button data-close aria-label="关闭配置备份">×</button></div><p>配置包含车漆、灯光、引擎盖与当前视角。复制 JSON 可以备份，也可在此粘贴配置恢复。</p><textarea id="configuration" spellcheck="false" aria-label="汽车配置 JSON"></textarea><div class="dialog-actions"><button id="download-config">下载 JSON</button><button id="restore-config" class="primary">应用配置</button></div><p id="config-error" class="fine" role="status"></p></dialog>
+<dialog id="snapshot-dialog"><div class="dialog-heading"><h2>当前展厅图片</h2><button data-close aria-label="关闭图片预览">×</button></div><img id="snapshot-image" alt="汽车配置的实际渲染图片"><p>右键图片另存为，即可保留这个角度。</p></dialog>
+<script type="module" src="./capabilities/scene-capabilities.js"></script><script type="module" src="./showroom/app.js"></script><script type="module" src="./collection/scene-return.js"></script>
+</body></html>

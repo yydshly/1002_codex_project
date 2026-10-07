@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eeeee7">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: http://127.0.0.1:4197; connect-src 'self' http://127.0.0.1:4197; object-src 'none'; base-uri 'self'; frame-src 'none'">
+<title>ATELIER · AI 换装效果预览</title><link rel="stylesheet" href="./tryon/tryon.css">
+</head><body>
+<header><a class="brand" href="./"><span class="brand-mark">a</span><span>ATELIER<small>真人与真实衣服</small></span></a><nav aria-label="搭配预览与规划"><a href="./fitting.html">三维搭配</a><a href="./tryon.html" aria-current="page">AI 换装预览</a><a href="#product-directions">产品扩展方向</a><a href="./integration.html#scenes">能力与规划</a></nav><span class="research-label">研究样板 · 正面上装</span></header>
+<main>
+  <section class="intro"><div><span class="eyebrow">PERSON / GARMENT / EVIDENCE</span><h1>真实照片，<br>AI 换装效果预览。</h1><p>输入真人照片与真实衣服照片，由本机模型生成上身外观参考。生成图包含模型推测，不能验证真实尺码、松紧或穿着感受。</p><a class="intro-directions" href="#product-directions">查看可扩展产品方向与后续验证计划 ↓</a></div><button id="about-button" class="quiet">这次验证什么 ↗</button></section>
+  <div class="workspace">
+    <aside class="inputs" aria-label="人物与商品输入">
+      <div class="section-title"><h2>01 / 选择人物</h2><label class="upload">使用自己的照片<input id="person-upload" type="file" accept="image/jpeg,image/png,image/webp"></label></div>
+      <div id="people" class="people"></div><p id="person-source" class="fine"></p>
+      <div class="section-title"><h2>02 / 选择上装</h2><label class="upload">使用商品照片<input id="garment-upload" type="file" accept="image/jpeg,image/png,image/webp"></label></div>
+      <div id="garments" class="garments"></div>
+      <p class="fine">可把衣服照片拖到右侧人物区域，也可点选。拖放只确定对象；按下“开始试穿”后才进行本机生成。</p>
+      <label class="photo-type">商品照片形式<select id="photo-type"><option value="flat-lay">单件商品图（无人像）</option><option value="model">模特穿着商品图</option></select></label>
+      <p id="garment-source" class="fine"></p>
+      <div class="service"><span id="service-dot" class="dot"></span><strong id="service-status">正在检查本机推理</strong><p id="service-detail">输入与结果在本机处理。</p><button id="retry-health" class="text-button">重新检查</button></div>
+      <button id="generate" class="primary" disabled>开始试穿</button><button id="cancel-job" class="quiet" hidden>取消排队</button>
+      <p id="job-status" class="job-status" role="status">选择人物与衣服后，开始一次试穿。</p>
+    </aside>
+    <section class="result-panel" aria-label="人物原图与 AI 换装生成结果对照">
+      <div class="result-heading"><div><span class="eyebrow">03 / COMPARE</span><h2 id="result-title">先看人物原图</h2></div><span id="result-kind" class="result-kind">未生成</span></div>
+      <div id="comparison" class="comparison" tabindex="0" aria-label="人物原图与生成结果，拖入衣服可选择上装">
+        <div class="photo-plane"><img id="person-image" alt="所选人物的原始照片"><div id="result-layer" class="result-layer" hidden><img id="result-image" alt="本机模型生成的上装换装外观预览"></div><div id="split-line" class="split-line" hidden><span>↔</span></div></div>
+        <span class="photo-label original">人物原图</span><span id="generated-label" class="photo-label generated" hidden>模型生成 · 外观参考</span>
+        <div id="drop-message" class="drop-message" hidden>松手选择这件上装</div>
+        <div id="empty-message" class="empty-message">这里展示真实输入照片。生成完成后，可拖动分界线对照。</div>
+      </div>
+      <div class="comparison-tools"><label for="compare-range">原图 ↔ 生成图</label><input id="compare-range" type="range" min="0" max="100" value="50" disabled aria-label="原图与生成图分界"><button id="zoom" class="quiet" disabled>放大细看 ↗</button></div>
+      <div class="result-actions"><button id="download" class="quiet" disabled>保存生成图片</button><button id="download-review" class="quiet" disabled>导出本次评审</button><button id="undo-choice" class="text-button" disabled>撤销选款</button></div>
+      <p id="result-evidence" class="fine">结果必须来自实际本机推理；服务不可用时不会用参考照片替代生成结果。</p>
+      <details class="reference"><summary>查看商品的原穿着参考</summary><div id="reference-content"><p>尚未选择商品。</p></div></details>
+    </section>
+    <aside class="review" aria-label="生成效果人工评审">
+      <span class="eyebrow">04 / REVIEW</span><h2>看起来像，<br>也要是同一件。</h2><p>生成后逐项检查。评分由人填写，系统不会把图像生成成功标为效果合格。</p>
+      <div id="review-fields"></div>
+      <label class="review-note">观察与问题<textarea id="review-note" maxlength="1200" placeholder="例如：领口保留，但袖长或人物体型发生变化。"></textarea></label>
+      <p id="review-status" class="fine">尚未评审</p>
+      <div class="boundary"><strong>外观预览的边界</strong><p>当前只验证正面上装。生成图不证明现实尺码、松紧或舒适度；鞋履真人试穿、多角度连续一致性另行研发。</p><p>公开研究样本没有品牌、价格或库存。跨人换装若没有同人同衣的实拍照片，只能检查外观一致性，不能宣称与真实穿着一致。</p><p id="license-summary">素材与模型组件许可分别登记，本样板按研究用途提供。</p><a href="./tryon/samples/manifest.json" target="_blank" rel="noopener">样本来源与许可 ↗</a></div>
+    </aside>
+  </div>
+  <section class="records"><div class="section-title"><h2>本机实际生成留档</h2><span>输入、参数、结果与评审分开记录</span></div><p id="run-summary" class="fine"></p><div id="record-list"></div><details id="failed-runs" hidden><summary>查看生成失败记录</summary><div id="failure-list"></div></details></section>
+  <section id="product-directions" class="product-directions" aria-labelledby="directions-title">
+    <div class="directions-heading"><div><span class="eyebrow">PRODUCT DIRECTIONS / NEXT VALIDATION</span><h2 id="directions-title">从换装预览，走向真实选款。</h2></div><span class="direction-status">后续规划 · 尚未接入</span></div>
+    <p class="directions-lead">当前已接入的是照片输入、本机生成、鼠标对照与人工评审。以下是可以继续研发的产品方向；本场景先保留研究成果，暂缓扩展，项目继续推进其他能力。</p>
+    <div class="direction-grid">
+      <article class="direction-card direction-priority"><span class="direction-number">01 / 优先方向</span><h3>真实商品选款导购</h3><p class="direction-value">为门店导购、品牌客服和顾客比较几款真实衣服，保存候选清单，再查看商品或交给导购。</p><p><strong>需要补充</strong>真实商品编号（SKU）、颜色款、价格、库存与购买链接；原商品图始终可见，方便核对生成图有没有改错衣服。</p><span class="direction-tag">C19 购物联动仍待接入</span></article>
+      <article class="direction-card"><span class="direction-number">02 / 提案与沟通</span><h3>造型师提案工具</h3><p class="direction-value">为同一客户比较几个衣款，标注选择理由，把方案交给客户讨论。</p><p><strong>需要补充</strong>客户档案、方案保存、批量生成与批注。完整套装、多件搭配需要另行开发。</p></article>
+      <article class="direction-card"><span class="direction-number">03 / 实拍前筛选</span><h3>品牌视觉预演</h3><p class="direction-value">在正式拍摄前，初步筛选模特、衣款和构图，减少方案沟通的成本。</p><p><strong>需要补充</strong>授权模特与商品素材、批量处理和商品细节审核；生成预演不能替代商品实拍证据。</p></article>
+      <article class="direction-card"><span class="direction-number">04 / 衣物管理</span><h3>个人数字衣橱</h3><p class="direction-value">把已有衣物与待购商品放进同一清单，辅助日常搭配与采购规划。</p><p><strong>需要补充</strong>衣物归档、多件搭配、下装与鞋履，以及个人照片和衣物数据的保存管理。</p></article>
+      <article class="direction-card"><span class="direction-number">05 / 独立研发模块</span><h3>尺码与合身推荐</h3><p class="direction-value">根据人体和商品的真实数据，辅助选择尺码，与外观预览一起使用。</p><p><strong>需要补充</strong>人体测量、每款服装实测尺寸和实际试穿反馈。现有生成图片不能推导这些结论；布料模拟另需纸样与面料参数。</p></article>
+    </div>
+    <div class="direction-pilot">
+      <div><span class="eyebrow">PROPOSED FIRST PILOT</span><h3>先做一个品牌，10–20 款授权上装。</h3><p>这是建议的下一轮试点范围，尚未建立真实商品目录。用户选择三款上装，生成后并排比较，放大查看领口和图案，圈出问题、排序收藏，最后保存带真实商品信息的候选清单。</p><p>鼠标交互服务于选款、核对和沟通。是否有价值，要看用户是否更容易作出选择，以及生成图是否保留同一件商品的关键细节。</p></div>
+      <div class="direction-checks"><h3>继续前需要验证</h3><ul><li><strong>商品保真：</strong>采集人物原照片、目标商品图、同人实际穿着图三方对照，记录衣款、图案、身体与遮挡偏差。</li><li><strong>选款价值：</strong>记录无指导完成率、衣款辨认、候选缩小情况和等待时间；失败次数及误把生成图当实拍的情况一并记录。</li><li><strong>购物关系：</strong>真实商品信息和候选清单必须对应当前衣款，再验收 C19；图片生成成功不算购物联动完成。</li><li><strong>商业使用条件：</strong>取得人物与商品素材授权，替换有非商业限制的研究素材及组件，再评估上线。</li></ul></div>
+    </div>
+    <div class="direction-references"><strong>公开产品与能力边界参考</strong><p><a href="https://blog.google/products-and-platforms/products/shopping/studio-quality-digital-try-on/" target="_blank" rel="noopener noreferrer">Google：个人照片换装与购物商品目录 ↗</a><a href="https://fashn.ai/virtual-try-on" target="_blank" rel="noopener noreferrer">FASHN：图像试穿与尺码预测的区别 ↗</a></p><p>外链用于了解产品路线和边界。后续方案继续采用我们自己的部署与流程，不以接入这些服务的后台为前提。</p></div>
+  </section>
+</main>
+<dialog id="about-dialog" aria-labelledby="about-title"><div class="dialog-title"><h2 id="about-title">AI 换装预览 · 这次验证什么</h2><button data-close aria-label="关闭真人能力说明">×</button></div><p>目标是把真实人物照片和服装照片送入我们本机运行的模型，得到可以复查的生成上身外观预览。“真实”指输入照片来自实拍；输出是 AI 生成图片，不是真人实际穿着、布料物理模拟或尺码验证。现有三维拖放与状态能力继续作为独立搭配入口。</p><ol><li>照片输入：记录来源、商品照片形式，上传文件只送本机服务。</li><li>真实推理：记录输入哈希、模型、参数、设备、耗时及输出；失败明确反馈。</li><li>效果对照：拖动原图/生成图分界，放大看脸、体型、领袖、图案与遮挡。</li><li>实拍依据：有同人同衣实拍才进行真实穿着对照；缺失时明确标注。</li><li>人工评审：保留问题样例与评分，生成成功不等于效果通过。</li></ol><p>这是C17使用场景深化，不增加第37项研究能力，也不把C19购物联动提前算作完成。自部署采用现有模型权重，不能称为从零训练或自研全部算法。</p><p>选择照片时文件只在浏览器中。按“开始试穿”后，本机服务会在此项目的本机任务目录保留输入、参数与结果，不会自动删除；没有外部试穿 API 上传。请按研究用途使用本页。</p><p>原图、参考实拍、模型生成图有不同标签。公开研究照片和人物解析组件存在研究用途限制，商业上线需要替换或取得相应授权。</p></dialog>
+<dialog id="zoom-dialog" aria-labelledby="zoom-title"><div class="dialog-title"><h2 id="zoom-title">生成图片 · 放大细看</h2><button data-close aria-label="关闭真人图片放大">×</button></div><p>拖动图片平移；滚轮放大或缩小。检查细节后填写评审。</p><div id="zoom-view" class="zoom-view"><img id="zoom-image" alt="可放大和平移的实际生成试穿图片"></div><button id="zoom-reset" class="quiet">恢复完整图片</button></dialog>
+<dialog id="export-dialog" aria-labelledby="export-title"><div class="dialog-title"><h2 id="export-title">本次评审 · 导出前核对</h2><button data-close aria-label="关闭导出核对">×</button></div><p id="export-help">核对当前输入、实际结果与评审。保存后可作为本次记录复查。</p><a id="review-file" class="quiet" download="atelier-real-person-review.json">保存评审 JSON</a> <button id="copy-review" class="quiet">复制评审 JSON</button><img id="export-image" alt="带模型生成标记的实际导出图片" hidden><pre id="review-json"></pre></dialog>
+<div id="toast" role="status" hidden></div><script type="module" src="./tryon/app.js"></script>
+</body></html>

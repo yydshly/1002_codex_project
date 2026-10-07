@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "assetLibrary": "Poly Haven",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://polyhaven.com/license",
+  "downloadedAt": "2026-10-05",
+  "runtimeRequiresNetwork": false,
+  "resolution": "1k",
+  "models": [
+    {
+      "id": "avocado",
+      "sourceId": "food_avocado_01",
+      "name": "鳄梨",
+      "presentation": "Whole ripe Hass avocado, uncut and unpeeled",
+      "file": "models/food_avocado_01/food_avocado_01.gltf",
+      "gltf": "models/food_avocado_01/food_avocado_01.gltf",
+      "source": "https://polyhaven.com/a/food_avocado_01",
+      "sourceFiles": "https://api.polyhaven.com/files/food_avocado_01",
+      "authors": [
+        "Oliver Harries"
+      ],
+      "bytes": 585169,
+      "license": "CC0-1.0",
+      "resolution": "1k",
+      "unit": "metres per glTF 2.0; individual source asset scale, not food portion weight",
+      "axis": "+Y up after original node transforms",
+      "nodes": 1,
+      "meshes": 1,
+      "materials": 1,
+      "textures": 3,
+      "triangles": 7743,
+      "bounds": {
+        "min": [
+          -0.04921463876962662,
+          0.0002716426970437169,
+          -0.04919798672199249
+        ],
+        "max": [
+          0.04597127065062523,
+          0.14350612461566925,
+          0.04536880925297737
+        ],
+        "size": [
+          0.09518590942025185,
+          0.14323448191862553,
+          0.09456679597496986
+        ]
+      },
+      "meshDetails": [
+        {
+          "node": "food_avocado_01",
+          "mesh": 0,
+          "triangles": 7743,
+          "min": [
+            -0.04921463876962662,
+            0.0002716426970437169,
+            -0.04919798672199249
+          ],
+          "max": [
+            0.04597127065062523,
+            0.14350612461566925,
+            0.04536880925297737
+          ]
+        }
+      ],
+      "centerAndGroundTranslation": [
+        0.0016216840595006943,
+        -0.0002716426970437169,
+        0.0019145887345075607
+      ],
+      "changes": "None; original glTF, binary geometry and JPEG textures retained. No fake ingredient substitutes, slices, peels or generated food texture."
+    },
+    {
+      "id": "onion",
+      "sourceId": "yellow_onion",
+      "name": "黄洋葱",
+      "presentation": "Whole yellow onion with papery skin, unpeeled",
+      "file": "models/yellow_onion/yellow_onion.gltf",
+      "gltf": "models/yellow_onion/yellow_onion.gltf",
+      "source": "https://polyhaven.com/a/yellow_onion",
+      "sourceFiles": "https://api.polyhaven.com/files/yellow_onion",
+      "authors": [
+        "Kuutti Siitonen"
+      ],
+      "bytes": 1805401,
+      "license": "CC0-1.0",
+      "resolution": "1k",
+      "unit": "metres per glTF 2.0; individual source asset scale, not food portion weight",
+      "axis": "+Y up after original node transforms",
+      "nodes": 1,
+      "meshes": 1,
+      "materials": 1,
+      "textures": 3,
+      "triangles": 5444,
+      "bounds": {
+        "min": [
+          -0.036803681403398514,
+          -0.00027344742557033896,
+          -0.03741702809929848
+        ],
+        "max": [
+          0.03567872196435928,
+          0.08610223233699799,
+          0.03121955133974552
+        ],
+        "size": [
+          0.0724824033677578,
+          0.08637567976256832,
+          0.068636579439044
+        ]
+      },
+      "meshDetails": [
+        {
+          "node": "yellow_onion",
+          "mesh": 0,
+          "triangles": 5444,
+          "min": [
+            -0.036803681403398514,
+            -0.00027344742557033896,
+            -0.03741702809929848
+          ],
+          "max": [
+            0.03567872196435928,
+            0.08610223233699799,
+            0.03121955133974552
+          ]
+        }
+      ],
+      "centerAndGroundTranslation": [
+        0.0005624797195196152,
+        0.00027344742557033896,
+        0.003098738379776478
+      ],
+      "changes": "None; original glTF, binary geometry and JPEG textures retained. No fake ingredient substitutes, slices, peels or generated food texture."
+    },
+    {
+      "id": "lemon",
+      "sourceId": "lemon",
+      "name": "柠檬",
+      "presentation": "Whole lemon with rind, unsliced",
+      "file": "models/lemon/lemon.gltf",
+      "gltf": "models/lemon/lemon.gltf",
+      "source": "https://polyhaven.com/a/lemon",
+      "sourceFiles": "https://api.polyhaven.com/files/lemon",
+      "authors": [
+        "Kuutti Siitonen"
+      ],
+      "bytes": 1851844,
+      "license": "CC0-1.0",
+      "resolution": "1k",
+      "unit": "metres per glTF 2.0; individual source asset scale, not food portion weight",
+      "axis": "+Y up after original node transforms",
+      "nodes": 1,
+      "meshes": 1,
+      "materials": 1,
+      "textures": 3,
+      "triangles": 4012,
+      "bounds": {
+        "min": [
+          -0.03599698469042778,
+          -0.05228840559720993,
+          -0.0347365103662014
+        ],
+        "max": [
+          0.03268494829535484,
+          0.04308090731501579,
+          0.033523574471473694
+        ],
+        "size": [
+          0.06868193298578262,
+          0.09536931291222572,
+          0.0682600848376751
+        ]
+      },
+      "meshDetails": [
+        {
+          "node": "lemon",
+          "mesh": 0,
+          "triangles": 4012,
+          "min": [
+            -0.03599698469042778,
+            -0.05228840559720993,
+            -0.0347365103662014
+          ],
+          "max": [
+            0.03268494829535484,
+            0.04308090731501579,
+            0.033523574471473694
+          ]
+        }
+      ],
+      "centerAndGroundTranslation": [
+        0.0016560181975364685,
+        0.05228840559720993,
+        0.0006064679473638535
+      ],
+      "changes": "None; original glTF, binary geometry and JPEG textures retained. No fake ingredient substitutes, slices, peels or generated food texture."
+    },
+    {
+      "id": "apple",
+      "sourceId": "food_apple_01",
+      "name": "红苹果",
+      "presentation": "Whole red apple with stem, unsliced",
+      "file": "models/food_apple_01/food_apple_01.gltf",
+      "gltf": "models/food_apple_01/food_apple_01.gltf",
+      "source": "https://polyhaven.com/a/food_apple_01",
+      "sourceFiles": "https://api.polyhaven.com/files/food_apple_01",
+      "authors": [
+        "Oliver Harries"
+      ],
+      "bytes": 473812,
+      "license": "CC0-1.0",
+      "resolution": "1k",
+      "unit": "metres per glTF 2.0; individual source asset scale, not food portion weight",
+      "axis": "+Y up after original node transforms",
+      "nodes": 1,
+      "meshes": 1,
+      "materials": 1,
+      "textures": 3,
+      "triangles": 7012,
+      "bounds": {
+        "min": [
+          -0.04838135838508606,
+          -0.000022622070900979452,
+          -0.04581700265407562
+        ],
+        "max": [
+          0.04917982220649719,
+          0.08536732196807861,
+          0.05008470639586449
+        ],
+        "size": [
+          0.09756118059158325,
+          0.08538994403897959,
+          0.09590170904994011
+        ]
+      },
+      "meshDetails": [
+        {
+          "node": "food_apple_01",
+          "mesh": 0,
+          "triangles": 7012,
+          "min": [
+            -0.04838135838508606,
+            -0.000022622070900979452,
+            -0.04581700265407562
+          ],
+          "max": [
+            0.04917982220649719,
+            0.08536732196807861,
+            0.05008470639586449
+          ]
+        }
+      ],
+      "centerAndGroundTranslation": [
+        -0.0003992319107055664,
+        0.000022622070900979452,
+        -0.002133851870894432
+      ],
+      "changes": "None; original glTF, binary geometry and JPEG textures retained. No fake ingredient substitutes, slices, peels or generated food texture."
+    }
+  ],
+  "files": [
+    {
+      "file": "models/food_apple_01/food_apple_01.bin",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/food_apple_01/food_apple_01.bin",
+      "license": "CC0-1.0",
+      "bytes": 170680,
+      "upstreamMd5": "26b23e40de43097b0185a0d93cd72d3b",
+      "sha256": "f14ff9647fdd9f5a59ef325f94154e91f1f14cc2563cd3fb572c4fe9ce5756ca"
+    },
+    {
+      "file": "models/food_apple_01/food_apple_01.gltf",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/food_apple_01/food_apple_01_1k.gltf",
+      "license": "CC0-1.0",
+      "bytes": 2705,
+      "upstreamMd5": "222a8e136b40f36c1acb87a6036c1106",
+      "sha256": "6a7dc1cda1271c8b08e36e2b9fd44371b7149cca6262c71bc36d971cdac4325f"
+    },
+    {
+      "file": "models/food_apple_01/textures/food_apple_01_diff_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/food_apple_01/food_apple_01_diff_1k.jpg",
+      "license": "CC0-1.0",
+      "bytes": 183791,
+      "upstreamMd5": "3ddf2b8313f20c95f3e04fb057b32d7b",
+      "sha256": "b7fc17cfb5013958167bbc089ea4d1c193fb1c61ea4f3c974a9894ed9ba82e8a"
+    },
+    {
+      "file": "models/food_apple_01/textures/food_apple_01_nor_gl_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/food_apple_01/food_apple_01_nor_gl_1k.jpg",
+      "license": "CC0-1.0",
+      "bytes": 63513,
+      "upstreamMd5": "e456cb63d6a4c298c826b63be0adfaf7",
+      "sha256": "c81b1e51ce7e789b65bfde2f046dcb5ba5773b5c6be3e572313be0600c51721b"
+    },
+    {
+      "file": "models/food_apple_01/textures/food_apple_01_rough_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/food_apple_01/food_apple_01_rough_1k.jpg",
+      "license": "CC0-1.0",
+      "bytes": 53123,
+      "upstreamMd5": "e46e242f52a3c2138a1e8c6ce0d82438",
+      "sha256": "2e5a503af38df7b570b0e81cc9563125f0913b466e01140d4e24ea5ebdbec587"
+    },
+    {
+      "file": "models/food_avocado_01/food_avocado_01.bin",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/food_avocado_01/food_avocado_01.bin",
+      "license": "CC0-1.0",
+      "bytes": 179900,
+      "upstreamMd5": "d0f8e04587f9befd36f7e74af8adc136",
+      "sha256": "72503b157d307643cc7dc05102d9a8921a091de512c8c42c5a7a1716f99e113f"
+    },
+    {
+      "file": "models/food_avocado_01/food_avocado_01.gltf",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/food_avocado_01/food_avocado_01_1k.gltf",
+      "license": "CC0-1.0",
+      "bytes": 2735,
+      "upstreamMd5": "e4054137d65bf850cf455b65a186a5d2",
+      "sha256": "cce51afb7dcdc6c19371806993e2c1096788a10accf453fda1198875e59f7846"
+    },
+    {
+      "file": "models/food_avocado_01/textures/food_avocado_01_diff_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/food_avocado_01/food_avocado_01_diff_1k.jpg",
+      "license": "CC0-1.0",
+      "bytes": 120451,
+      "upstreamMd5": "7a1efff7e58bdf40b784f0e1734ae950",
+      "sha256": "b6953e91378f491d7aadde14f6dd9e83b22d37b160dcdb944c3f7b35454bae44"
+    },
+    {
+      "file": "models/food_avocado_01/textures/food_avocado_01_nor_gl_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/food_avocado_01/food_avocado_01_nor_gl_1k.jpg",
+      "license": "CC0-1.0",
+      "bytes": 148148,
+      "upstreamMd5": "ea3b6376ea9e7573ad91b67b2c970491",
+      "sha256": "325b29fb90b621687507eb099993597dd160a43666c2556f0bd717d217902231"
+    },
+    {
+      "file": "models/food_avocado_01/textures/food_avocado_01_rough_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/food_avocado_01/food_avocado_01_rough_1k.jpg",
+      "license": "CC0-1.0",
+      "bytes": 133935,
+      "upstreamMd5": "c482520f5a75512d347ea20dbfe52beb",
+      "sha256": "c830a9276d3069fb0a587d8630b0d8771724279e0e105afb67bf63ab923ca5e0"
+    },
+    {
+      "file": "models/lemon/lemon.bin",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/lemon/lemon.bin",
+      "license": "CC0-1.0",
+      "bytes": 95464,
+      "upstreamMd5": "357973be23fd9b4bcf2a212ef30ecc31",
+      "sha256": "af5a040a7c14cf7d3537ed387ba2d2257feed2dbafb2f922ee566bf01abb859e"
+    },
+    {
+      "file": "models/lemon/lemon.gltf",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/lemon/lemon_1k.gltf",
+      "license": "CC0-1.0",
+      "bytes": 3036,
+      "upstreamMd5": "79ad40158b71f7d08d7dcc4efc060468",
+      "sha256": "b9cbb0cda757eee2e8f76b9fe9021b0ef208d10a61bae4ac73d5f2c1c20865e3"
+    },
+    {
+      "file": "models/lemon/textures/lemon_arm_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lemon/lemon_arm_1k.jpg",
+      "license": "CC0-1.0",
+      "bytes": 441578,
+      "upstreamMd5": "53c105e1a00b864cd0d41fa488f48a1a",
+      "sha256": "35e70eae295a4ce3a2572101740da2db00d28ecfc59d529588ea167b99e58491"
+    },
+    {
+      "file": "models/lemon/textures/lemon_diff_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lemon/lemon_diff_1k.jpg",
+      "license": "CC0-1.0",
+      "bytes": 410970,
+      "upstreamMd5": "86c47e7daf0f9ba4aa0563be6cb7297c",
+      "sha256": "8b77be29d3032852bc6c1e327aefcc83377c405dcd437f85d2aac8b33f921618"
+    },
+    {
+      "file": "models/lemon/textures/lemon_nor_gl_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lemon/lemon_nor_gl_1k.jpg",
+      "license": "CC0-1.0",
+      "bytes": 900796,
+      "upstreamMd5": "967ac253c8a1bc3623f1ebac3c7e543a",
+      "sha256": "6b82679555281f5addc4b8ba8c89aa0a44163354bb3db906aeec79ff6ce478a4"
+    },
+    {
+      "file": "models/yellow_onion/textures/yellow_onion_arm_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/yellow_onion/yellow_onion_arm_1k.jpg",
+      "license": "CC0-1.0",
+      "bytes": 492495,
+      "upstreamMd5": "b3cf49965fa2ee909b819a19ba321c6f",
+      "sha256": "77398ea7072602555a86510bfe37a7427a22932efc13de799c6fe2bbe62d2b8d"
+    },
+    {
+      "file": "models/yellow_onion/textures/yellow_onion_diff_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/yellow_onion/yellow_onion_diff_1k.jpg",
+      "license": "CC0-1.0",
+      "bytes": 455175,
+      "upstreamMd5": "65504103b6b8af63ba39e2b7d8f6805a",
+      "sha256": "ad28b9926c9190398f1006fcf0b89c44255eb41aee5d52391a41ad5fc0f13e80"
+    },
+    {
+      "file": "models/yellow_onion/textures/yellow_onion_nor_gl_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/yellow_onion/yellow_onion_nor_gl_1k.jpg",
+      "license": "CC0-1.0",
+      "bytes": 715114,
+      "upstreamMd5": "649caf0e1fa5a79a9aa1319012def387",
+      "sha256": "f471dbeb82baaf3d743f28a254ed94587f83bd6131f03e656655c6d48717f137"
+    },
+    {
+      "file": "models/yellow_onion/yellow_onion.bin",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/yellow_onion/yellow_onion.bin",
+      "license": "CC0-1.0",
+      "bytes": 139832,
+      "upstreamMd5": "d85feec8c46d2aa13479cabbaf6a27cc",
+      "sha256": "586c1e459e31e0647d090df4497e88c4e905e598607e9632590fb74cce7ef5f5"
+    },
+    {
+      "file": "models/yellow_onion/yellow_onion.gltf",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/yellow_onion/yellow_onion_1k.gltf",
+      "license": "CC0-1.0",
+      "bytes": 2785,
+      "upstreamMd5": "dae6fea89c74167e9140866b0b16201d",
+      "sha256": "0d4aaa4046c5b471ea7f9197c453f3d48699bc85e06fd13606c8ea09a1dce699"
+    }
+  ],
+  "totalBytes": 4716226
+}

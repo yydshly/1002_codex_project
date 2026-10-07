@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1800" viewBox="0 0 2560 1800" role="img" aria-labelledby="figure-title figure-description">
+<title id="figure-title">ATELIER × Solaris：鼠标交互项目全景</title>
+<desc id="figure-description">依据ATELIER 0.17.0既有资料生成的可编辑概念图，非实测截图。左栏为Solaris公开研究与边界；中栏为本地显式状态流程、十一场景及共用基础；右栏为四类工作和四步规划。当前35/36为限定能力映射，不是完成率。C19尚未接入，试衣与真人扩展暂缓；验收与待验范围分别列出。</desc>
+<defs><linearGradient id="paper-glow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8f8f1"/><stop offset="1" stop-color="#f0f2e8"/></linearGradient></defs>
+<rect x="0" y="0" width="2560" height="1800" rx="0" fill="url(#paper-glow)" stroke="none"/>
+<text x="80" y="86" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="35" font-weight="500" fill="#526b44" text-anchor="start" letter-spacing="1.3">ATELIER × Solaris</text>
+<text x="77" y="171" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="63" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="-1">鼠标交互项目全景</text>
+<text x="82" y="225" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="27" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">从公开研究启发，走向可操作、可保存、可恢复的成果。</text>
+<rect x="2034" y="52" width="446" height="57" rx="29" fill="#fcfcf7" stroke="#cbd7bf"/>
+<text x="2257" y="90" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="26" font-weight="400" fill="#526b44" text-anchor="middle" letter-spacing="0">0.17.0  ·  2026-10-07</text>
+<text x="2478" y="175" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="28" font-weight="500" fill="#526b44" text-anchor="end" letter-spacing="0">11 个场景 · 有限范围内接入</text>
+<text x="2478" y="220" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="end" letter-spacing="0">独立本地产品 / 公开来源研究 / 逐项验收</text>
+<path d="M80 270L2480 270" fill="none" stroke="#cdd8c1" stroke-width="2"/>
+<text x="80" y="323" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="24" font-weight="500" fill="#68775c" text-anchor="start" letter-spacing="0">01 / 原研究与生成机制</text>
+<text x="616" y="323" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="24" font-weight="500" fill="#68775c" text-anchor="start" letter-spacing="0">02 / 我们的本地实现</text>
+<text x="1780" y="323" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="24" font-weight="500" fill="#68775c" text-anchor="start" letter-spacing="0">03 / 工作类型与后续规划</text>
+<rect x="80" y="351" width="508" height="1112" rx="12" fill="#fcfcf7" stroke="#d9e1d0"/>
+<text x="107" y="398" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="29" font-weight="500" fill="#526b44" text-anchor="start" letter-spacing="0">Solaris：生成式界面</text>
+<text x="107" y="436" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="24" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">36 条公开能力映射线索</text>
+<rect x="107" y="462" width="454" height="50" rx="7" fill="#f5f7ef" stroke="#d6e0ca"/>
+<text x="334" y="495" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="24" font-weight="400" fill="#35432f" text-anchor="middle" letter-spacing="0">视觉上下文 + 历史鼠标输入</text>
+<path d="M334 514v12m-5-5 5 5 5-5" fill="none" stroke="#91a27e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="107" y="527" width="454" height="50" rx="7" fill="#f5f7ef" stroke="#d6e0ca"/>
+<text x="334" y="560" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="24" font-weight="400" fill="#35432f" text-anchor="middle" letter-spacing="0">LLM 意图理解 / 场景行为提示</text>
+<path d="M334 579v12m-5-5 5 5 5-5" fill="none" stroke="#91a27e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="107" y="592" width="454" height="50" rx="7" fill="#eaf0df" stroke="#d6e0ca"/>
+<text x="334" y="625" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="24" font-weight="400" fill="#526b44" text-anchor="middle" letter-spacing="0">世界模型生成后续交互帧</text>
+<path d="M334 644v12m-5-5 5 5 5-5" fill="none" stroke="#91a27e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="107" y="657" width="454" height="50" rx="7" fill="#f5f7ef" stroke="#d6e0ca"/>
+<text x="334" y="690" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="24" font-weight="400" fill="#35432f" text-anchor="middle" letter-spacing="0">画面反馈 → 继续交互</text>
+<text x="107" y="748" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="26" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">公开交互能力</text>
+<text x="107" y="787" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">对象尺寸 / 材质光照 / 视角</text>
+<text x="107" y="819" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">图像测量 / 取样成为工具</text>
+<text x="107" y="851" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">动作联动 / 内容策展与转场</text>
+<text x="107" y="904" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="26" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">公开方法</text>
+<rect x="107" y="923" width="113" height="43" rx="5" fill="#eef2e5" stroke="none"/>
+<text x="163.5" y="952" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#526b44" text-anchor="middle" letter-spacing="0">自回归</text>
+<rect x="228" y="923" width="134" height="43" rx="5" fill="#eef2e5" stroke="none"/>
+<text x="295" y="952" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#526b44" text-anchor="middle" letter-spacing="0">少步蒸馏</text>
+<rect x="370" y="923" width="185" height="43" rx="5" fill="#eef2e5" stroke="none"/>
+<text x="462.5" y="952" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#526b44" text-anchor="middle" letter-spacing="0">自身输出训练</text>
+<text x="107" y="1003" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">实际鼠标调用频率、事件协议</text>
+<text x="107" y="1034" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">与持久对象结构未确认。</text>
+<path d="M107 1058L561 1058" fill="none" stroke="#d9e1d0" stroke-width="1"/>
+<text x="107" y="1098" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="26" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">开放情况与证据</text>
+<text x="107" y="1138" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">官方提供 early-access 申请</text>
+<text x="107" y="1169" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">源码 / API / 权重开放未确认</text>
+<text x="107" y="1212" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="26" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">公开挑战与待测项</text>
+<text x="107" y="1252" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">长会话、文字与可信内容</text>
+<text x="107" y="1283" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">无障碍集成仍是公开挑战</text>
+<text x="107" y="1314" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">我们未测精度、延迟或成功率</text>
+<rect x="107" y="1350" width="454" height="99" rx="7" fill="#f3eedf" stroke="none"/>
+<text x="126" y="1383" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="500" fill="#7d704b" text-anchor="start" letter-spacing="0">本项目：公开证据研究</text>
+<text x="126" y="1413" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#7d765b" text-anchor="start" letter-spacing="0">未接入或运行 Solaris。</text>
+<text x="126" y="1441" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#7d765b" text-anchor="start" letter-spacing="0">画面不证明精确几何或真实物理。</text>
+<rect x="616" y="351" width="1136" height="128" rx="10" fill="#edf2e4" stroke="#d0ddc3"/>
+<rect x="654" y="372" width="188" height="49" rx="6" fill="#fcfcf7" stroke="#d0ddc2"/>
+<text x="748" y="405" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="500" fill="#526b44" text-anchor="middle" letter-spacing="0">输入与拾取</text>
+<path d="M849 397h16m-6-5 6 5-6 5" fill="none" stroke="#91a27e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="872" y="372" width="188" height="49" rx="6" fill="#fcfcf7" stroke="#d0ddc2"/>
+<text x="966" y="405" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="500" fill="#526b44" text-anchor="middle" letter-spacing="0">工具与约束</text>
+<path d="M1067 397h16m-6-5 6 5-6 5" fill="none" stroke="#91a27e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1090" y="372" width="188" height="49" rx="6" fill="#fcfcf7" stroke="#d0ddc2"/>
+<text x="1184" y="405" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="500" fill="#526b44" text-anchor="middle" letter-spacing="0">显式状态事务</text>
+<path d="M1285 397h16m-6-5 6 5-6 5" fill="none" stroke="#91a27e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1308" y="372" width="188" height="49" rx="6" fill="#fcfcf7" stroke="#d0ddc2"/>
+<text x="1402" y="405" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="500" fill="#526b44" text-anchor="middle" letter-spacing="0">本地渲染 / 仿真</text>
+<path d="M1503 397h16m-6-5 6 5-6 5" fill="none" stroke="#91a27e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1526" y="372" width="188" height="49" rx="6" fill="#fcfcf7" stroke="#d0ddc2"/>
+<text x="1620" y="405" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="500" fill="#526b44" text-anchor="middle" letter-spacing="0">稳定保存恢复</text>
+<text x="654" y="457" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">登记对象、明确语义与合法边界；原三维 / 像素工作流不调用 Solaris 后台。</text>
+<text x="616" y="517" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="27" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">11 个场景 · 每个入口都有操作目的与边界</text>
+<rect x="616" y="542" width="560" height="116" rx="9" fill="#fcfcf7" stroke="#d9e1d0"/>
+<text x="636" y="578" font-family="&apos;Segoe UI&apos;, sans-serif" font-size="23" font-weight="500" fill="#8b9a7b" text-anchor="start" letter-spacing="0">01</text>
+<text x="676" y="578" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="27" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">客厅设计</text>
+<g transform="translate(1120 555) scale(1.35)" fill="none" stroke="#789264" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v9h18v-9M6 12V6h12v6M3 15h18M6 20v3m12-3v3"/></g>
+<text x="636" y="615" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#35432f" text-anchor="start" letter-spacing="0">家具变换、材质灯光、A/B</text>
+<text x="636" y="647" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">有限资产；新桌关系待扩展验证</text>
+<rect x="1192" y="542" width="560" height="116" rx="9" fill="#fcfcf7" stroke="#d9e1d0"/>
+<text x="1212" y="578" font-family="&apos;Segoe UI&apos;, sans-serif" font-size="23" font-weight="500" fill="#8b9a7b" text-anchor="start" letter-spacing="0">02</text>
+<text x="1252" y="578" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="27" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">汽车展厅</text>
+<g transform="translate(1696 555) scale(1.35)" fill="none" stroke="#789264" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="m4 11 3-6h10l3 6M2 11h20v8H2zM4 19v3m16-3v3M5 14h3m8 0h3"/></g>
+<text x="1212" y="615" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#35432f" text-anchor="start" letter-spacing="0">车灯、车漆、原铰链盖板</text>
+<text x="1212" y="647" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">概念车外观；非工程或维修依据</text>
+<rect x="616" y="670" width="560" height="116" rx="9" fill="#f8faf3" stroke="#d9e1d0"/>
+<text x="636" y="706" font-family="&apos;Segoe UI&apos;, sans-serif" font-size="23" font-weight="500" fill="#8b9a7b" text-anchor="start" letter-spacing="0">03</text>
+<text x="676" y="706" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="27" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">影像工作台</text>
+<g transform="translate(1120 683) scale(1.35)" fill="none" stroke="#789264" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="21" rx="2"/><path d="m8 7 3 4-3 4m8-8-3 4 3 4M7 19h10"/></g>
+<text x="636" y="743" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#35432f" text-anchor="start" letter-spacing="0">原图测量、指针缩放与平移</text>
+<text x="636" y="775" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">默认 px；mm 须已知参考校准</text>
+<rect x="1192" y="670" width="560" height="116" rx="9" fill="#f8faf3" stroke="#d9e1d0"/>
+<text x="1212" y="706" font-family="&apos;Segoe UI&apos;, sans-serif" font-size="23" font-weight="500" fill="#8b9a7b" text-anchor="start" letter-spacing="0">04</text>
+<text x="1252" y="706" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="27" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">地标观察</text>
+<g transform="translate(1696 683) scale(1.35)" fill="none" stroke="#789264" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10 12 3l10 7M4 10h16M5 10v11m5-11v11m5-11v11m4-11v11M2 22h20"/></g>
+<text x="1212" y="743" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#35432f" text-anchor="start" letter-spacing="0">白模环绕、光影与知识热点</text>
+<text x="1212" y="775" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">简化外部；无完整室内 / 可靠尺度</text>
+<rect x="616" y="798" width="560" height="116" rx="9" fill="#fcfcf7" stroke="#d9e1d0"/>
+<text x="636" y="834" font-family="&apos;Segoe UI&apos;, sans-serif" font-size="23" font-weight="500" fill="#8b9a7b" text-anchor="start" letter-spacing="0">05</text>
+<text x="676" y="834" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="27" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">料理备料</text>
+<g transform="translate(1120 811) scale(1.35)" fill="none" stroke="#789264" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M2 11h20c-1 9-4 11-10 11S3 20 2 11Z"/><circle cx="8" cy="7" r="3"/><circle cx="17" cy="6" r="4"/></g>
+<text x="636" y="871" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#35432f" text-anchor="start" letter-spacing="0">拖入、沉降、浮起检查与归位</text>
+<text x="636" y="903" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">四原食材；近似刚体，不切丁</text>
+<rect x="1192" y="798" width="560" height="116" rx="9" fill="#fcfcf7" stroke="#d9e1d0"/>
+<text x="1212" y="834" font-family="&apos;Segoe UI&apos;, sans-serif" font-size="23" font-weight="500" fill="#8b9a7b" text-anchor="start" letter-spacing="0">06</text>
+<text x="1252" y="834" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="27" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">局部创作</text>
+<g transform="translate(1696 811) scale(1.35)" fill="none" stroke="#789264" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 5 5-11 11-5-5ZM6 13l5 5-6 5-3-3ZM14 5l5 5"/></g>
+<text x="1212" y="871" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#35432f" text-anchor="start" letter-spacing="0">图像框选、纹理印章、逐笔撤销</text>
+<text x="1212" y="903" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">有限像素笔刷；非任意风格生成</text>
+<rect x="616" y="926" width="560" height="116" rx="9" fill="#f8faf3" stroke="#d9e1d0"/>
+<text x="636" y="962" font-family="&apos;Segoe UI&apos;, sans-serif" font-size="23" font-weight="500" fill="#8b9a7b" text-anchor="start" letter-spacing="0">07</text>
+<text x="676" y="962" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="27" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">精选陈列</text>
+<g transform="translate(1120 939) scale(1.35)" fill="none" stroke="#789264" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="8" height="8" rx="1"/><rect x="14" y="3" width="8" height="8" rx="1"/><rect x="2" y="15" width="8" height="8" rx="1"/><rect x="14" y="15" width="8" height="8" rx="1"/></g>
+<text x="636" y="999" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#35432f" text-anchor="start" letter-spacing="0">交换锁槽、策展、九任务与备份</text>
+<text x="636" y="1031" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">有限去向；不续播未完成过程</text>
+<rect x="1192" y="926" width="560" height="116" rx="9" fill="#f8faf3" stroke="#d9e1d0"/>
+<text x="1212" y="962" font-family="&apos;Segoe UI&apos;, sans-serif" font-size="23" font-weight="500" fill="#8b9a7b" text-anchor="start" letter-spacing="0">08</text>
+<text x="1252" y="962" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="27" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">滑板练习</text>
+<g transform="translate(1696 939) scale(1.35)" fill="none" stroke="#789264" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15c4 3 16 3 20 0M8 4l5 4-3 5m3-5 5-3"/><circle cx="7" cy="21" r="2"/><circle cx="17" cy="21" r="2"/></g>
+<text x="1212" y="999" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#35432f" text-anchor="start" letter-spacing="0">板面上拖、骨架起落与记录</text>
+<text x="1212" y="1031" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">固定平地；非真实运动物理求解</text>
+<rect x="616" y="1054" width="560" height="116" rx="9" fill="#fcfcf7" stroke="#d9e1d0"/>
+<text x="636" y="1090" font-family="&apos;Segoe UI&apos;, sans-serif" font-size="23" font-weight="500" fill="#8b9a7b" text-anchor="start" letter-spacing="0">09</text>
+<text x="676" y="1090" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="27" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">材料教学</text>
+<g transform="translate(1120 1067) scale(1.35)" fill="none" stroke="#789264" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5V3h8v2M9 5v9l-5 7h16l-5-7V5M8 17h8"/><path d="M21 8c-2 3 2 3 0 6"/></g>
+<text x="636" y="1127" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#35432f" text-anchor="start" letter-spacing="0">热源拖放、同热量对照、冰熔化</text>
+<text x="636" y="1159" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">教学零散热模型；温度非实测</text>
+<rect x="1192" y="1054" width="560" height="116" rx="9" fill="#fcfcf7" stroke="#d9e1d0"/>
+<text x="1212" y="1090" font-family="&apos;Segoe UI&apos;, sans-serif" font-size="23" font-weight="500" fill="#8b9a7b" text-anchor="start" letter-spacing="0">10</text>
+<text x="1252" y="1090" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="27" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">水下联动</text>
+<g transform="translate(1696 1067) scale(1.35)" fill="none" stroke="#789264" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c5-8 11-8 16 0-5 8-11 8-16 0Zm16 0 4-4v8ZM8 5l4 3m0 8-4 3"/><circle cx="7" cy="11" r=".7"/></g>
+<text x="1212" y="1127" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#35432f" text-anchor="start" letter-spacing="0">拖鱼、安全跟随、双主体恢复</text>
+<text x="1212" y="1159" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">固定水层 / 三礁石；非海洋仿真</text>
+<rect x="616" y="1182" width="560" height="116" rx="9" fill="#f8faf3" stroke="#d9e1d0"/>
+<text x="636" y="1218" font-family="&apos;Segoe UI&apos;, sans-serif" font-size="23" font-weight="500" fill="#8b9a7b" text-anchor="start" letter-spacing="0">11</text>
+<text x="676" y="1218" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="27" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">试衣与真人参考</text>
+<g transform="translate(1120 1195) scale(1.35)" fill="none" stroke="#789264" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 3 4-3 6 5-4 4-2-2v12H8V10l-2 2-4-4Z"/></g>
+<text x="636" y="1255" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#35432f" text-anchor="start" letter-spacing="0">上衣 / 双鞋槽；真人外观研究</text>
+<text x="636" y="1287" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">固定人体与有限衣鞋；不判合身</text>
+<path d="M1199 1189L1745 1189" fill="none" stroke="#c5d2b9" stroke-width="2"/>
+<text x="1200" y="1218" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">三维搭配与真人参考归为一个场景。</text>
+<text x="1200" y="1247" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">潜在用途：空间方案、产品展示、</text>
+<text x="1200" y="1276" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">教学交互、素材创作与复用底座。</text>
+<text x="1200" y="1305" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">商业使用还需业务、许可与专项验收。</text>
+<rect x="616" y="1320" width="1136" height="143" rx="10" fill="#e9efdf" stroke="#cdd9c0"/>
+<text x="642" y="1357" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="26" font-weight="500" fill="#526b44" text-anchor="start" letter-spacing="0">共用底座：机制已积累，统一协议仍待整理</text>
+<text x="642" y="1392" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">拾取 / 投影 · 约束 · 手势事务 · 状态校验 · 校准 · 稳定保存恢复</text>
+<text x="642" y="1421" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">Three.js / Cannon-es + 授权素材；本项目编写控制与局部算法</text>
+<text x="642" y="1450" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">FASHN：本机预训练研究，不保证合身；不是全部算法自研</text>
+<rect x="1780" y="351" width="700" height="109" rx="9" fill="#fcfcf7" stroke="#d9e1d0"/>
+<rect x="1780" y="368" width="4" height="74" rx="2" fill="#92a77e"/>
+<text x="1804" y="385" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="26" font-weight="500" fill="#526b44" text-anchor="start" letter-spacing="0">A / 基础能力</text>
+<text x="1804" y="417" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#35432f" text-anchor="start" letter-spacing="0">拾取、约束、动作反馈、取消与恢复</text>
+<text x="1804" y="448" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">潜在价值：可控编辑与成果延续</text>
+<rect x="1780" y="472" width="700" height="109" rx="9" fill="#fcfcf7" stroke="#d9e1d0"/>
+<rect x="1780" y="489" width="4" height="74" rx="2" fill="#92a77e"/>
+<text x="1804" y="506" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="26" font-weight="500" fill="#526b44" text-anchor="start" letter-spacing="0">B / 锦上添花</text>
+<text x="1804" y="538" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#35432f" text-anchor="start" letter-spacing="0">真实素材、PBR / HDR、比较与提示</text>
+<text x="1804" y="569" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">更易观察；画质不充当能力证据</text>
+<rect x="1780" y="593" width="700" height="109" rx="9" fill="#fcfcf7" stroke="#d9e1d0"/>
+<rect x="1780" y="610" width="4" height="74" rx="2" fill="#92a77e"/>
+<text x="1804" y="627" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="26" font-weight="500" fill="#526b44" text-anchor="start" letter-spacing="0">C / 业务与工程</text>
+<text x="1804" y="659" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#35432f" text-anchor="start" letter-spacing="0">版本、备份、往返、多窗口与异常</text>
+<text x="1804" y="690" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">可靠工作流；真实商品与业务待接</text>
+<rect x="1780" y="714" width="700" height="109" rx="9" fill="#f4f0e3" stroke="#d9e1d0"/>
+<rect x="1780" y="731" width="4" height="74" rx="2" fill="#aa965f"/>
+<text x="1804" y="748" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="26" font-weight="500" fill="#7d714a" text-anchor="start" letter-spacing="0">D / 真实能力探索</text>
+<text x="1804" y="780" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#35432f" text-anchor="start" letter-spacing="0">跨新模型的关系、条件扩展与真实适配</text>
+<text x="1804" y="811" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">检验规则推广，同时验证拒绝样本</text>
+<text x="1780" y="866" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="28" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">下一步 · 四个明确动作</text>
+<circle cx="1798" cy="906" r="18" fill="#e5ecd9"/>
+<text x="1798" y="914" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#526b44" text-anchor="middle" letter-spacing="0">1</text>
+<text x="1833" y="916" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="26" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">可靠性收尾</text>
+<text x="1833" y="951" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">下载 / 剪贴板 / 九页重开 / 真实故障</text>
+<text x="1833" y="981" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">竞争写入、设备与长期性能分项验收</text>
+<circle cx="1798" cy="1013" r="18" fill="#e5ecd9"/>
+<text x="1798" y="1021" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#526b44" text-anchor="middle" letter-spacing="0">2</text>
+<text x="1833" y="1023" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="26" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">新桌：共用平面支撑规则</text>
+<text x="1833" y="1058" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">≥3 独立新桌，静态 GLB 声明单位</text>
+<text x="1833" y="1088" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">未逐件适配 / 未调参 / 不手写支撑</text>
+<text x="1833" y="1118" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">同规则验灯底 / 孔洞 / 联动恢复与拒绝</text>
+<circle cx="1798" cy="1152" r="18" fill="#e5ecd9"/>
+<text x="1798" y="1160" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#526b44" text-anchor="middle" letter-spacing="0">3</text>
+<text x="1833" y="1162" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="26" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">具备条件后扩展柜架</text>
+<text x="1833" y="1197" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">可靠尺度 / 多层支撑候选 / 上方净空</text>
+<text x="1833" y="1227" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">先通过桌面，再验跨层与关系恢复</text>
+<circle cx="1798" cy="1262" r="18" fill="#e5ecd9"/>
+<text x="1798" y="1270" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#526b44" text-anchor="middle" letter-spacing="0">4</text>
+<text x="1833" y="1272" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="26" font-weight="500" fill="#35432f" text-anchor="start" letter-spacing="0">阅读角完整成果任务</text>
+<text x="1833" y="1307" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">选品 → 布置 → A/B → 画面 → 备份恢复</text>
+<text x="1833" y="1337" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">验完整可继续编辑成果，而非单按钮</text>
+<rect x="1780" y="1370" width="700" height="93" rx="9" fill="#f0ebdb" stroke="none"/>
+<text x="1804" y="1407" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="24" font-weight="400" fill="#7e714c" text-anchor="start" letter-spacing="0">C19 购物联动未接入，目前暂停推进。</text>
+<text x="1804" y="1441" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="24" font-weight="400" fill="#7e714c" text-anchor="start" letter-spacing="0">试衣与真人扩展暂缓；商用尚未完成。</text>
+<rect x="80" y="1502" width="2400" height="206" rx="12" fill="#fcfcf7" stroke="#ccd8bf"/>
+<path d="M864 1526v154M1682 1526v154" stroke="#d8e0cf" fill="none"/>
+<text x="108" y="1546" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="25" font-weight="500" fill="#68775c" text-anchor="start" letter-spacing="0">既有验收 · 0.17.0</text>
+<text x="108" y="1600" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="32" font-weight="500" fill="#526b44" text-anchor="start" letter-spacing="0">243 产品 Node / 16 仓库检查</text>
+<text x="108" y="1640" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">真实界面操作与故障模拟分开留档。</text>
+<text x="108" y="1671" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">数字按有限输入与实际检查范围使用。</text>
+<text x="895" y="1546" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="25" font-weight="500" fill="#68775c" text-anchor="start" letter-spacing="0">任务与稳定成果</text>
+<text x="895" y="1600" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="31" font-weight="500" fill="#526b44" text-anchor="start" letter-spacing="0">9 个往返目标 · 10 份稳定存档</text>
+<text x="895" y="1640" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">不含会话撤销、未提交预览与运行中过程。</text>
+<text x="895" y="1671" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">试衣 / 真人任务不在整套备份内。</text>
+<text x="1714" y="1546" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="25" font-weight="500" fill="#8a7750" text-anchor="start" letter-spacing="0">继续专项验证</text>
+<text x="1714" y="1593" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="24" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">下载落盘 / 剪贴板 / 九页逐一重开</text>
+<text x="1714" y="1631" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="24" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">真实故障 / 全局多窗口 / 设备与长期性能</text>
+<text x="1714" y="1669" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="24" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">整套恢复不保证跨窗口多键原子性。</text>
+<text x="83" y="1749" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="24" font-weight="400" fill="#526b44" text-anchor="start" letter-spacing="0">35/36 = 公开清单的限定能力映射，不是产品完成率。项目资料生成的概念图，非实测截图。</text>
+<text x="83" y="1783" font-family="&apos;Microsoft YaHei&apos;, &apos;Noto Sans CJK SC&apos;, &apos;PingFang SC&apos;, sans-serif" font-size="23" font-weight="400" fill="#68775c" text-anchor="start" letter-spacing="0">来源：Runway “Introducing Solaris” · arxiv.org/html/2609.00776v1 ｜ 范围依据：ATELIER 0.17.0 项目记录</text>
+</svg>

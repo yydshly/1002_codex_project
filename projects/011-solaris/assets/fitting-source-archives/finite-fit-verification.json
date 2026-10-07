@@ -1,0 +1,289 @@
+{
+  "status": "passed-with-finite-domain",
+  "checks": 11,
+  "results": [
+    "archived complete CC0 source, authored independent continuous garment topology and local pipeline registered",
+    "all original/license/recipe/editable/runtime byte lengths and SHA-256 hashes match",
+    "three runtime GLBs have finite embedded buffers and no external texture/model requests",
+    "complete original body faces and vertices preserved without body deletion/masks/decimation",
+    "all three independent skins preserve the complete 53-bone hierarchy and compatible inverse binds within 2e-6",
+    "two registered poses use deterministic constant two-second full-rig clips and neutral defaults",
+    "complete reference avatar stands at y=0 and is 1.78 virtual reference units tall in both finite poses",
+    "front is positive Z: real toes and independently authored jacket zipper/pockets face the front camera",
+    "registered short/long sleeve meshes are independent sewn shells with separate tailoring and metal geometry",
+    "PBR materials separate recolorable fabric, fixed trim/hardware and full-body neutral/base surfaces",
+    "finite outward shell intersections cover tested torso/sleeve probes; non-intersecting underarm rays are explicitly unverified"
+  ],
+  "probeDomain": {
+    "poses": [
+      "Fitting_Neutral",
+      "Fitting_Reach"
+    ],
+    "torso": "original bind-rest |x|<.175, hem+.025<y<1.435",
+    "sleeves": "original bind-rest .255<|x|<cuff-.025,1.335<y<1.548",
+    "origin": "torso vertical axis or nearest actual upperarm/forearm axis",
+    "method": "outermost forward shell intersection within body radial distance+.18; internal fold layers are not an intersection proof",
+    "totalProbes": 3414,
+    "intersectedProbes": 3350,
+    "unverifiedRays": 64
+  },
+  "finiteFitProbes": [
+    {
+      "file": "core-tee.glb",
+      "pose": "Fitting_Neutral",
+      "probeCount": 667,
+      "unverifiedRays": 6,
+      "outsideMeasuredOuterShell": 0,
+      "minimumMeasuredOuterShellOverhang": 0.0184490579872693,
+      "unverifiedExamples": [
+        {
+          "rest": [
+            0.1623535240395061,
+            1.332668594891491,
+            -0.016128359210941186
+          ],
+          "point": [
+            0.15802840301583987,
+            1.2967170364463143,
+            -0.015698796410724483
+          ],
+          "direction": [
+            0.9951018463349853,
+            -2.245544916425077e-7,
+            -0.09885502223282687
+          ],
+          "miss": true
+        },
+        {
+          "rest": [
+            0.26207727629796945,
+            1.3891603215102362,
+            -0.07620218749338158
+          ],
+          "point": [
+            0.16563359635510455,
+            1.3196749036704896,
+            -0.0727879188223073
+          ],
+          "direction": [
+            -0.9153044804224084,
+            -0.36774804942177225,
+            -0.16425309819040462
+          ],
+          "miss": true
+        },
+        {
+          "rest": [
+            0.2563323489429201,
+            1.390350487002605,
+            -0.038436683808210914
+          ],
+          "point": [
+            0.16516307451004542,
+            1.3257705793494976,
+            -0.036093398943857685
+          ],
+          "direction": [
+            -0.7996990172631986,
+            -0.32875310899341537,
+            0.5023971288885296
+          ],
+          "miss": true
+        }
+      ]
+    },
+    {
+      "file": "core-tee.glb",
+      "pose": "Fitting_Reach",
+      "probeCount": 667,
+      "unverifiedRays": 22,
+      "outsideMeasuredOuterShell": 0,
+      "minimumMeasuredOuterShellOverhang": 0.0184490579872693,
+      "unverifiedExamples": [
+        {
+          "rest": [
+            0.16637712895576842,
+            1.3863557235517172,
+            -0.027724595639197065
+          ],
+          "point": [
+            0.1619448131290264,
+            1.348973951983558,
+            -0.02698612176150869
+          ],
+          "direction": [
+            0.9863985464044378,
+            -1.2897378746545802e-7,
+            -0.164371249466552
+          ],
+          "miss": true
+        },
+        {
+          "rest": [
+            0.1623535240395061,
+            1.332668594891491,
+            -0.016128359210941186
+          ],
+          "point": [
+            0.15802840301583987,
+            1.2967170364463143,
+            -0.015698796410724483
+          ],
+          "direction": [
+            0.9951018463349853,
+            -2.245544916425077e-7,
+            -0.09885502223282687
+          ],
+          "miss": true
+        },
+        {
+          "rest": [
+            0.17175292341787407,
+            1.345489656165274,
+            -0.07102589112587457
+          ],
+          "point": [
+            0.16717739580205726,
+            1.3091965239195538,
+            -0.06913385336246172
+          ],
+          "direction": [
+            0.9241007859047445,
+            -3.083966950645938e-7,
+            -0.38214884206306116
+          ],
+          "miss": true
+        }
+      ]
+    },
+    {
+      "file": "field-jacket.glb",
+      "pose": "Fitting_Neutral",
+      "probeCount": 1040,
+      "unverifiedRays": 10,
+      "outsideMeasuredOuterShell": 0,
+      "minimumMeasuredOuterShellOverhang": 0.024365618116538833,
+      "unverifiedExamples": [
+        {
+          "rest": [
+            0.16637712895576842,
+            1.3863557235517172,
+            -0.027724595639197065
+          ],
+          "point": [
+            0.1619448131290264,
+            1.348973951983558,
+            -0.02698612176150869
+          ],
+          "direction": [
+            0.9863985464044378,
+            -1.2897378746545802e-7,
+            -0.164371249466552
+          ],
+          "miss": true
+        },
+        {
+          "rest": [
+            0.1623535240395061,
+            1.332668594891491,
+            -0.016128359210941186
+          ],
+          "point": [
+            0.15802840301583987,
+            1.2967170364463143,
+            -0.015698796410724483
+          ],
+          "direction": [
+            0.9951018463349853,
+            -2.245544916425077e-7,
+            -0.09885502223282687
+          ],
+          "miss": true
+        },
+        {
+          "rest": [
+            0.15653609625455184,
+            1.4210301970870525,
+            -0.054202312354967225
+          ],
+          "point": [
+            0.1523659427720173,
+            1.382724693782805,
+            -0.05275847801234383
+          ],
+          "direction": [
+            0.944954588685933,
+            -1.4462854308197566e-7,
+            -0.32720150568323847
+          ],
+          "miss": true
+        }
+      ]
+    },
+    {
+      "file": "field-jacket.glb",
+      "pose": "Fitting_Reach",
+      "probeCount": 1040,
+      "unverifiedRays": 26,
+      "outsideMeasuredOuterShell": 0,
+      "minimumMeasuredOuterShellOverhang": 0.015824649299355523,
+      "unverifiedExamples": [
+        {
+          "rest": [
+            0.16637712895576842,
+            1.3863557235517172,
+            -0.027724595639197065
+          ],
+          "point": [
+            0.1619448131290264,
+            1.348973951983558,
+            -0.02698612176150869
+          ],
+          "direction": [
+            0.9863985464044378,
+            -1.2897378746545802e-7,
+            -0.164371249466552
+          ],
+          "miss": true
+        },
+        {
+          "rest": [
+            0.1623535240395061,
+            1.332668594891491,
+            -0.016128359210941186
+          ],
+          "point": [
+            0.15802840301583987,
+            1.2967170364463143,
+            -0.015698796410724483
+          ],
+          "direction": [
+            0.9951018463349853,
+            -2.245544916425077e-7,
+            -0.09885502223282687
+          ],
+          "miss": true
+        },
+        {
+          "rest": [
+            0.17175292341787407,
+            1.345489656165274,
+            -0.07102589112587457
+          ],
+          "point": [
+            0.16717739580205726,
+            1.3091965239195538,
+            -0.06913385336246172
+          ],
+          "direction": [
+            0.9241007859047445,
+            -3.083966950645938e-7,
+            -0.38214884206306116
+          ],
+          "miss": true
+        }
+      ]
+    }
+  ],
+  "limit": "Selected torso/sleeve outward shell intersections only; missing rays are unverified and require front/back/side visual review. Outer garment layers may fold internally; this is not an arbitrary body/pose intersection proof, cloth physics, or continuous-time solver."
+}

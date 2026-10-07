@@ -1,0 +1,1096 @@
+TAP version 13
+# Subtest: six registered design assets and round-tripped state keep independent lists
+ok 1 - six registered design assets and round-tripped state keep independent lists
+  ---
+  duration_ms: 4.3772
+  type: 'test'
+  ...
+# Subtest: swaps preserve the full permutation and selection; pinned endpoints are atomic failures
+ok 2 - swaps preserve the full permutation and selection; pinned endpoints are atomic failures
+  ---
+  duration_ms: 1.7128
+  type: 'test'
+  ...
+# Subtest: preference plans actually rank the unlocked collection and retain stable ties and pinned slots
+ok 3 - preference plans actually rank the unlocked collection and retain stable ties and pinned slots
+  ---
+  duration_ms: 0.8759
+  type: 'test'
+  ...
+# Subtest: applying preferences preserves wishlist, selection and scene checkpoint context
+ok 4 - applying preferences preserves wishlist, selection and scene checkpoint context
+  ---
+  duration_ms: 0.628
+  type: 'test'
+  ...
+# Subtest: damaged imports reject unknown data, duplicate and sparse lists, prototypes and accessors
+ok 5 - damaged imports reject unknown data, duplicate and sparse lists, prototypes and accessors
+  ---
+  duration_ms: 1.6197
+  type: 'test'
+  ...
+# Subtest: finite Chinese intentions only return registered local scenes and checkpoints are isolated
+ok 6 - finite Chinese intentions only return registered local scenes and checkpoints are isolated
+  ---
+  duration_ms: 2.7869
+  type: 'test'
+  ...
+# Subtest: continuous editing is one transaction and pending undo only cancels that edit
+ok 7 - continuous editing is one transaction and pending undo only cancels that edit
+  ---
+  duration_ms: 1.0071
+  type: 'test'
+  ...
+# Subtest: failed mutations and replacements preserve history; no-op keeps redo and capacity is forty
+ok 8 - failed mutations and replacements preserve history; no-op keeps redo and capacity is forty
+  ---
+  duration_ms: 2.5836
+  type: 'test'
+  ...
+# Subtest: each stroke retains its own immutable source, crop, brush and target for exact saved replay
+ok 9 - each stroke retains its own immutable source, crop, brush and target for exact saved replay
+  ---
+  duration_ms: 7.4976
+  type: 'test'
+  ...
+# Subtest: source drag geometry clamps reverse drags and near-edge clicks into a usable normalized crop
+ok 10 - source drag geometry clamps reverse drags and near-edge clicks into a usable normalized crop
+  ---
+  duration_ms: 1.4868
+  type: 'test'
+  ...
+# Subtest: paper coordinates remain invariant across CSS sizes and target geometry is explicit
+ok 11 - paper coordinates remain invariant across CSS sizes and target geometry is explicit
+  ---
+  duration_ms: 1.0511
+  type: 'test'
+  ...
+# Subtest: distance resampling is independent of event subdivision and carries interpolated pressure around corners
+ok 12 - distance resampling is independent of event subdivision and carries interpolated pressure around corners
+  ---
+  duration_ms: 1.8031
+  type: 'test'
+  ...
+# Subtest: clicks and repeated points create one stamp without NaN, and hostile spacing cannot allocate unbounded stamps
+ok 13 - clicks and repeated points create one stamp without NaN, and hostile spacing cannot allocate unbounded stamps
+  ---
+  duration_ms: 2.1728
+  type: 'test'
+  ...
+# Subtest: strict backups reject injected assets, malformed layers, ID conflicts, invalid crops and nonfinite samples
+ok 14 - strict backups reject injected assets, malformed layers, ID conflicts, invalid crops and nonfinite samples
+  ---
+  duration_ms: 10.1074
+  type: 'test'
+  ...
+# Subtest: stroke and coordinate capacities reject whole additions without mutating the existing drawing
+ok 15 - stroke and coordinate capacities reject whole additions without mutating the existing drawing
+  ---
+  duration_ms: 580.4574
+  type: 'test'
+  ...
+# Subtest: otherwise valid long zigzag JSON is rejected before replay, while repeated coordinates cost one stamp
+ok 16 - otherwise valid long zigzag JSON is rejected before replay, while repeated coordinates cost one stamp
+  ---
+  duration_ms: 19.2611
+  type: 'test'
+  ...
+# Subtest: one pen gesture is one transaction; undo while pending cancels only that unfinished pen gesture
+ok 17 - one pen gesture is one transaction; undo while pending cancels only that unfinished pen gesture
+  ---
+  duration_ms: 0.9074
+  type: 'test'
+  ...
+# Subtest: invalid edits and imports restore every field atomically and new edits branch after undo
+ok 18 - invalid edits and imports restore every field atomically and new edits branch after undo
+  ---
+  duration_ms: 1.5622
+  type: 'test'
+  ...
+# Subtest: registered fixed-body inspection choices are closed, immutable and serializable without a garment
+ok 19 - registered fixed-body inspection choices are closed, immutable and serializable without a garment
+  ---
+  duration_ms: 4.5865
+  type: 'test'
+  ...
+# Subtest: wear, replace, recolor and remove retain the fixed body, exact camera and frozen pose
+ok 20 - wear, replace, recolor and remove retain the fixed body, exact camera and frozen pose
+  ---
+  duration_ms: 2.278
+  type: 'test'
+  ...
+# Subtest: invalid imports cannot add bodies, garments, sizes, cloth phases or shopping fields
+ok 21 - invalid imports cannot add bodies, garments, sizes, cloth phases or shopping fields
+  ---
+  duration_ms: 1.9423
+  type: 'test'
+  ...
+# Subtest: strict objects reject inherited, hidden, symbol and accessor values without invoking getters
+ok 22 - strict objects reject inherited, hidden, symbol and accessor values without invoking getters
+  ---
+  duration_ms: 1.1027
+  type: 'test'
+  ...
+# Subtest: camera vectors reject sparse, decorated, inherited and accessor coordinates without coercion
+ok 23 - camera vectors reject sparse, decorated, inherited and accessor coordinates without coercion
+  ---
+  duration_ms: 1.6504
+  type: 'test'
+  ...
+# Subtest: all registered camera views remain within the same finite observation limits as custom cameras
+ok 24 - all registered camera views remain within the same finite observation limits as custom cameras
+  ---
+  duration_ms: 1.8048
+  type: 'test'
+  ...
+# Subtest: custom cameras enforce distance, vertical extent, target extent and viewing-angle bounds
+ok 25 - custom cameras enforce distance, vertical extent, target extent and viewing-angle bounds
+  ---
+  duration_ms: 1.4877
+  type: 'test'
+  ...
+# Subtest: raw JSON has an independent UTF-8 32 KiB boundary and rejects malformed content
+ok 26 - raw JSON has an independent UTF-8 32 KiB boundary and rejects malformed content
+  ---
+  duration_ms: 1.6649
+  type: 'test'
+  ...
+# Subtest: multi-round fitting, static pose and camera inspection undo and redo as exact complete workspaces
+ok 27 - multi-round fitting, static pose and camera inspection undo and redo as exact complete workspaces
+  ---
+  duration_ms: 4.3565
+  type: 'test'
+  ...
+# Subtest: same item and color, same pose, empty removal and unchanged camera create no history and retain redo
+ok 28 - same item and color, same pose, empty removal and unchanged camera create no history and retain redo
+  ---
+  duration_ms: 1.9754
+  type: 'test'
+  ...
+# Subtest: gesture cancellation and pending undo/redo restore the whole baseline without consuming previous history
+ok 29 - gesture cancellation and pending undo/redo restore the whole baseline without consuming previous history
+  ---
+  duration_ms: 1.3135
+  type: 'test'
+  ...
+# Subtest: a complete legal preview is one undo item while invalid edits and failed commits atomically roll back
+ok 30 - a complete legal preview is one undo item while invalid edits and failed commits atomically roll back
+  ---
+  duration_ms: 1.1226
+  type: 'test'
+  ...
+# Subtest: new accepted edits branch history while import replacement clears history only after complete validation
+ok 31 - new accepted edits branch history while import replacement clears history only after complete validation
+  ---
+  duration_ms: 1.1669
+  type: 'test'
+  ...
+# Subtest: history keeps the most recent 40 whole workspaces and all retained states can be restored
+ok 32 - history keeps the most recent 40 whole workspaces and all retained states can be restored
+  ---
+  duration_ms: 7.6453
+  type: 'test'
+  ...
+# Subtest: reset restores the empty original body, neutral pose and overview as one undoable change
+ok 33 - reset restores the empty original body, neutral pose and overview as one undoable change
+  ---
+  duration_ms: 0.8574
+  type: 'test'
+  ...
+# Subtest: strict v1 migration adds only an empty shoe slot and version 2 while preserving all original choices and precision
+ok 34 - strict v1 migration adds only an empty shoe slot and version 2 while preserving all original choices and precision
+  ---
+  duration_ms: 1.5598
+  type: 'test'
+  ...
+# Subtest: legacy migration keeps the original closed schema, preset agreement and raw 32 KiB file limit
+ok 35 - legacy migration keeps the original closed schema, preset agreement and raw 32 KiB file limit
+  ---
+  duration_ms: 1.8387
+  type: 'test'
+  ...
+# Subtest: shoe commands replace a complete registered pair independently of the garment, frozen body and exact camera
+ok 36 - shoe commands replace a complete registered pair independently of the garment, frozen body and exact camera
+  ---
+  duration_ms: 1.5683
+  type: 'test'
+  ...
+# Subtest: v2 shoes reject unknown IDs, partial pairs, size, gait, shopping and extra data before accepting a workspace
+ok 37 - v2 shoes reject unknown IDs, partial pairs, size, gait, shopping and extra data before accepting a workspace
+  ---
+  duration_ms: 1.6426
+  type: 'test'
+  ...
+# Subtest: shoe slots reject accessors, hidden fields, custom prototypes and symbols without invoking code
+ok 38 - shoe slots reject accessors, hidden fields, custom prototypes and symbols without invoking code
+  ---
+  duration_ms: 1.0462
+  type: 'test'
+  ...
+# Subtest: multi-round outfit inspection restores both independent slots, static pose and camera in exact undo/redo order
+ok 39 - multi-round outfit inspection restores both independent slots, static pose and camera in exact undo/redo order
+  ---
+  duration_ms: 3.6359
+  type: 'test'
+  ...
+# Subtest: a cancelled or invalid shoe preview restores the whole dressed baseline and preserves preceding history
+ok 40 - a cancelled or invalid shoe preview restores the whole dressed baseline and preserves preceding history
+  ---
+  duration_ms: 1.6753
+  type: 'test'
+  ...
+# Subtest: same shoe pair and color are no-ops that preserve redo while another color is a separate reversible change
+ok 41 - same shoe pair and color are no-ops that preserve redo while another color is a separate reversible change
+  ---
+  duration_ms: 0.6875
+  type: 'test'
+  ...
+# Subtest: foot-detail is an exact new registered view while old custom cameras retain the existing finite inspection domain
+ok 42 - foot-detail is an exact new registered view while old custom cameras retain the existing finite inspection domain
+  ---
+  duration_ms: 0.6447
+  type: 'test'
+  ...
+# Subtest: opening a v1 upper-only setup is one reversible full-workspace import without inventing prior footwear
+ok 43 - opening a v1 upper-only setup is one reversible full-workspace import without inventing prior footwear
+  ---
+  duration_ms: 0.7436
+  type: 'test'
+  ...
+# Subtest: fitting an image keeps its aspect ratio and centres the padded viewport
+ok 44 - fitting an image keeps its aspect ratio and centres the padded viewport
+  ---
+  duration_ms: 3.7118
+  type: 'test'
+  ...
+# Subtest: cursor-anchored zoom preserves the same image point at normal and clamped scales
+ok 45 - cursor-anchored zoom preserves the same image point at normal and clamped scales
+  ---
+  duration_ms: 0.9702
+  type: 'test'
+  ...
+# Subtest: zoom attempts at either scale limit preserve the exact view and create no undo entry
+ok 46 - zoom attempts at either scale limit preserve the exact view and create no undo entry
+  ---
+  duration_ms: 1.8985
+  type: 'test'
+  ...
+# Subtest: a diagonal image-space length stays invariant after viewport zoom and pan
+ok 47 - a diagonal image-space length stays invariant after viewport zoom and pan
+  ---
+  duration_ms: 1.0238
+  type: 'test'
+  ...
+# Subtest: manual calibration uses Euclidean reference length for a diagonal ruler
+ok 48 - manual calibration uses Euclidean reference length for a diagonal ruler
+  ---
+  duration_ms: 0.8159
+  type: 'test'
+  ...
+# Subtest: an uncalibrated uploaded image reports pixels and never infers physical scale
+ok 49 - an uncalibrated uploaded image reports pixels and never infers physical scale
+  ---
+  duration_ms: 0.3535
+  type: 'test'
+  ...
+# Subtest: image coordinates clamp to the actual image bounds and endpoint edits preserve the other anchor
+ok 50 - image coordinates clamp to the actual image bounds and endpoint edits preserve the other anchor
+  ---
+  duration_ms: 0.8215
+  type: 'test'
+  ...
+# Subtest: a continuous endpoint drag commits one history entry and a cancelled drag restores it
+ok 51 - a continuous endpoint drag commits one history entry and a cancelled drag restores it
+  ---
+  duration_ms: 1.7715
+  type: 'test'
+  ...
+# Subtest: two original images keep calibration, measurement history and pending drags independent
+ok 52 - two original images keep calibration, measurement history and pending drags independent
+  ---
+  duration_ms: 0.9757
+  type: 'test'
+  ...
+# Subtest: failed edits and invalid drag commits roll back every partial change
+ok 53 - failed edits and invalid drag commits roll back every partial change
+  ---
+  duration_ms: 0.76
+  type: 'test'
+  ...
+# Subtest: state-returning edits, history limits and replacement preserve undo semantics
+ok 54 - state-returning edits, history limits and replacement preserve undo semantics
+  ---
+  duration_ms: 1.3325
+  type: 'test'
+  ...
+# Subtest: backup validation round trips known fields and rejects unknown, duplicate and malformed fields
+ok 55 - backup validation round trips known fields and rejects unknown, duplicate and malformed fields
+  ---
+  duration_ms: 2.3967
+  type: 'test'
+  ...
+# Subtest: invalid geometry arguments fail explicitly instead of creating non-finite viewport state
+ok 56 - invalid geometry arguments fail explicitly instead of creating non-finite viewport state
+  ---
+  duration_ms: 0.6385
+  type: 'test'
+  ...
+# Subtest: fixed substeps produce the same drop outcome across 30, 60 and 120 Hz frames
+ok 57 - fixed substeps produce the same drop outcome across 30, 60 and 120 Hz frames
+  ---
+  duration_ms: 272.4192
+  type: 'test'
+  ...
+# Subtest: the actual seventh-lemon browser drop converges with a fruit resting on three neighbours
+ok 58 - the actual seventh-lemon browser drop converges with a fruit resting on three neighbours
+  ---
+  duration_ms: 379.2081
+  type: 'test'
+  ...
+# Subtest: all four whole-food envelopes drop onto the bowl base without tunnelling
+ok 59 - all four whole-food envelopes drop onto the bowl base without tunnelling
+  ---
+  duration_ms: 11.9194
+  type: 'test'
+  ...
+# Subtest: real sphere contact prevents overlap and preserves every existing ingredient ID
+ok 60 - real sphere contact prevents overlap and preserves every existing ingredient ID
+  ---
+  duration_ms: 4.927
+  type: 'test'
+  ...
+# Subtest: segmented inner walls contain drops near the rim around the whole bowl
+ok 61 - segmented inner walls contain drops near the rim around the whole bowl
+  ---
+  duration_ms: 30.102
+  type: 'test'
+  ...
+# Subtest: reset restores exact saved poses and idle frames never drift or leak mutable references
+ok 62 - reset restores exact saved poses and idle frames never drift or leak mutable references
+  ---
+  duration_ms: 8.2802
+  type: 'test'
+  ...
+# Subtest: a long stalled browser frame advances at most six fixed substeps
+ok 63 - a long stalled browser frame advances at most six fixed substeps
+  ---
+  duration_ms: 6.2035
+  type: 'test'
+  ...
+# Subtest: a drop outside the container fails honestly instead of being clamped or deleted
+ok 64 - a drop outside the container fails honestly instead of being clamped or deleted
+  ---
+  duration_ms: 3.4487
+  type: 'test'
+  ...
+# Subtest: invalid registrations, counts and numeric poses cannot corrupt a loaded workspace
+ok 65 - invalid registrations, counts and numeric poses cannot corrupt a loaded workspace
+  ---
+  duration_ms: 2.3912
+  type: 'test'
+  ...
+# Subtest: the four registered ingredients and every camera preset round trip without shared mutable poses
+ok 66 - the four registered ingredients and every camera preset round trip without shared mutable poses
+  ---
+  duration_ms: 8.2663
+  type: 'test'
+  ...
+# Subtest: drop targets use the registered sphere envelope, independently of finite drop height and settled tolerance
+ok 67 - drop targets use the registered sphere envelope, independently of finite drop height and settled tolerance
+  ---
+  duration_ms: 0.9021
+  type: 'test'
+  ...
+# Subtest: backups reject registry injection, duplicate or reused IDs, nonfinite values and out-of-bowl poses
+ok 68 - backups reject registry injection, duplicate or reused IDs, nonfinite values and out-of-bowl poses
+  ---
+  duration_ms: 2.9538
+  type: 'test'
+  ...
+# Subtest: adding and removing keeps stable instance IDs and refuses the seventeenth ingredient atomically
+ok 69 - adding and removing keeps stable instance IDs and refuses the seventeenth ingredient atomically
+  ---
+  duration_ms: 9.884
+  type: 'test'
+  ...
+# Subtest: inspection is an independent reversible vertical curve that preserves orientation and all saved poses
+ok 70 - inspection is an independent reversible vertical curve that preserves orientation and all saved poses
+  ---
+  duration_ms: 2.3009
+  type: 'test'
+  ...
+# Subtest: vertical sphere sweep rejects a trapped ingredient but permits tangent neighbours and topmost items
+ok 71 - vertical sphere sweep rejects a trapped ingredient but permits tangent neighbours and topmost items
+  ---
+  duration_ms: 2.2403
+  type: 'test'
+  ...
+# Subtest: one drag and settling transaction produces one undo, while invalid final physics state rolls everything back
+ok 72 - one drag and settling transaction produces one undo, while invalid final physics state rolls everything back
+  ---
+  duration_ms: 2.5714
+  type: 'test'
+  ...
+# Subtest: camera and ingredient edits undo independently, failed restore is atomic, and history is bounded
+ok 73 - camera and ingredient edits undo independently, failed restore is atomic, and history is bounded
+  ---
+  duration_ms: 8.3732
+  type: 'test'
+  ...
+# Subtest: registered landmark camera and context cards round trip without sharing mutable state
+ok 74 - registered landmark camera and context cards round trip without sharing mutable state
+  ---
+  duration_ms: 7.7172
+  type: 'test'
+  ...
+# Subtest: backups reject unknown fields, non-finite values and camera positions outside navigation limits
+ok 75 - backups reject unknown fields, non-finite values and camera positions outside navigation limits
+  ---
+  duration_ms: 2.001
+  type: 'test'
+  ...
+# Subtest: camera distance and angular boundaries match controls while all other bounds remain strict
+ok 76 - camera distance and angular boundaries match controls while all other bounds remain strict
+  ---
+  duration_ms: 1.029
+  type: 'test'
+  ...
+# Subtest: continuous time and camera gestures each create one history entry and cancel restores the starting workspace
+ok 77 - continuous time and camera gestures each create one history entry and cancel restores the starting workspace
+  ---
+  duration_ms: 1.1509
+  type: 'test'
+  ...
+# Subtest: time, saved camera, illumination and selected card remain independent through undo and backup restoration
+ok 78 - time, saved camera, illumination and selected card remain independent through undo and backup restoration
+  ---
+  duration_ms: 1.1174
+  type: 'test'
+  ...
+# Subtest: invalid edits, failed imports and exceptions never destroy the previous workspace or an active gesture
+ok 79 - invalid edits, failed imports and exceptions never destroy the previous workspace or an active gesture
+  ---
+  duration_ms: 1.4839
+  type: 'test'
+  ...
+# Subtest: new changes branch after undo and forty-entry history is bounded
+ok 80 - new changes branch after undo and forty-entry history is bounded
+  ---
+  duration_ms: 2.6456
+  type: 'test'
+  ...
+# Subtest: lighting moods interpolate continuously, remain finite, and cannot accept invented times
+ok 81 - lighting moods interpolate continuously, remain finite, and cannot accept invented times
+  ---
+  duration_ms: 2.9584
+  type: 'test'
+  ...
+# Subtest: every registered equal-heat dose yields distinct copper/aluminum temperature rises below the physical limit
+ok 82 - every registered equal-heat dose yields distinct copper/aluminum temperature rises below the physical limit
+  ---
+  duration_ms: 15.243
+  type: 'test'
+  ...
+# Subtest: preparing comparison resets only the metals, preserving the ice ledger, camera and monotonically increasing IDs
+ok 83 - preparing comparison resets only the metals, preserving the ice ledger, camera and monotonically increasing IDs
+  ---
+  duration_ms: 1.6774
+  type: 'test'
+  ...
+# Subtest: partial input and resuming truncate exactly at the chosen dose while retaining ordinary physical remaining heat
+ok 84 - partial input and resuming truncate exactly at the chosen dose while retaining ordinary physical remaining heat
+  ---
+  duration_ms: 1.5265
+  type: 'test'
+  ...
+# Subtest: fractional partitions end at the exact dose without a floating-point overshoot or reused input ID
+ok 85 - fractional partitions end at the exact dose without a floating-point overshoot or reused input ID
+  ---
+  duration_ms: 12.774
+  type: 'test'
+  ...
+# Subtest: comparison preflight counts retained ice rows and reserves both sequential record IDs atomically
+ok 86 - comparison preflight counts retained ice rows and reserves both sequential record IDs atomically
+  ---
+  duration_ms: 28.4255
+  type: 'test'
+  ...
+# Subtest: zero heat consumes neither a full ledger slot nor an exhausted ID, while positive input preserves ordinary limits
+ok 87 - zero heat consumes neither a full ledger slot nor an exhausted ID, while positive input preserves ordinary limits
+  ---
+  duration_ms: 7.3453
+  type: 'test'
+  ...
+# Subtest: invalid comparison requests reject unknown materials, doses, non-finite times and heat already above the dose without mutation
+ok 88 - invalid comparison requests reject unknown materials, doses, non-finite times and heat already above the dose without mutation
+  ---
+  duration_ms: 1.695
+  type: 'test'
+  ...
+# Subtest: cancelling in the second sample rolls back both reset metals, the completed copper input and the complete observation context
+ok 89 - cancelling in the second sample rolls back both reset metals, the completed copper input and the complete observation context
+  ---
+  duration_ms: 0.8401
+  type: 'test'
+  ...
+# Subtest: pausing or completing the second sample commits one transaction and undo/redo restores exact full experiments
+ok 90 - pausing or completing the second sample commits one transaction and undo/redo restores exact full experiments
+  ---
+  duration_ms: 4.3956
+  type: 'test'
+  ...
+# Subtest: bounded teaching samples round trip without sharing mutable state or inventing melting metals
+ok 91 - bounded teaching samples round trip without sharing mutable state or inventing melting metals
+  ---
+  duration_ms: 5.3098
+  type: 'test'
+  ...
+# Subtest: equal absorbed heat yields greater copper temperature rise than aluminum at the given masses
+ok 92 - equal absorbed heat yields greater copper temperature rise than aluminum at the given masses
+  ---
+  duration_ms: 1.1146
+  type: 'test'
+  ...
+# Subtest: ice absorbs latent heat at zero Celsius, is half melted at half its energy and stops at full melt
+ok 93 - ice absorbs latent heat at zero Celsius, is half melted at half its energy and stops at full melt
+  ---
+  duration_ms: 2.3099
+  type: 'test'
+  ...
+# Subtest: automatic limits truncate actual energy and seconds before overflow or heating past the bounded target
+ok 94 - automatic limits truncate actual energy and seconds before overflow or heating past the bounded target
+  ---
+  duration_ms: 3.1747
+  type: 'test'
+  ...
+# Subtest: partitioning time preserves physical heat and sample state even though the completed input ledger has more rows
+ok 95 - partitioning time preserves physical heat and sample state even though the completed input ledger has more rows
+  ---
+  duration_ms: 2.5476
+  type: 'test'
+  ...
+# Subtest: the complete heat ledger matches each sample energy, preserves views and source, and refuses capacity overflow without discarding records
+ok 96 - the complete heat ledger matches each sample energy, preserves views and source, and refuses capacity overflow without discarding records
+  ---
+  duration_ms: 16.2647
+  type: 'test'
+  ...
+# Subtest: source ports are bounded and only genuine port contact resolves a registered sample
+ok 97 - source ports are bounded and only genuine port contact resolves a registered sample
+  ---
+  duration_ms: 0.9121
+  type: 'test'
+  ...
+# Subtest: registered camera views stay within the common envelope; malformed or impossible cameras reject
+ok 98 - registered camera views stay within the common envelope; malformed or impossible cameras reject
+  ---
+  duration_ms: 0.6699
+  type: 'test'
+  ...
+# Subtest: bad files reject inconsistent or forged ledgers, extra keys, invalid numbers, sparse arrays, prototypes and accessors
+ok 99 - bad files reject inconsistent or forged ledgers, extra keys, invalid numbers, sparse arrays, prototypes and accessors
+  ---
+  duration_ms: 1.7118
+  type: 'test'
+  ...
+# Subtest: reset clears all thermal energy and records together while preserving source, camera, selection and monotonic IDs
+ok 100 - reset clears all thermal energy and records together while preserving source, camera, selection and monotonic IDs
+  ---
+  duration_ms: 0.8488
+  type: 'test'
+  ...
+# Subtest: restarting one sample removes only its heat and ledger rows while preserving the complete observation context
+ok 101 - restarting one sample removes only its heat and ledger rows while preserving the complete observation context
+  ---
+  duration_ms: 1.4935
+  type: 'test'
+  ...
+# Subtest: restarting an already cold sample is idempotent and does not discard another sample ledger
+ok 102 - restarting an already cold sample is idempotent and does not discard another sample ledger
+  ---
+  duration_ms: 0.7185
+  type: 'test'
+  ...
+# Subtest: restarting a sample preserves monotonic input IDs even when its latest ledger row is removed
+ok 103 - restarting a sample preserves monotonic input IDs even when its latest ledger row is removed
+  ---
+  duration_ms: 0.4339
+  type: 'test'
+  ...
+# Subtest: single-sample restart rejects unknown IDs and malformed states without mutating input
+ok 104 - single-sample restart rejects unknown IDs and malformed states without mutating input
+  ---
+  duration_ms: 0.7984
+  type: 'test'
+  ...
+# Subtest: restarting and heating one sample is one transaction whose cancel, undo and redo restore the full experiment
+ok 105 - restarting and heating one sample is one transaction whose cancel, undo and redo restore the full experiment
+  ---
+  duration_ms: 0.959
+  type: 'test'
+  ...
+# Subtest: live calculations never enter the ledger; cancel rolls back the complete input and finishing creates one undoable transaction
+ok 106 - live calculations never enter the ledger; cancel rolls back the complete input and finishing creates one undoable transaction
+  ---
+  duration_ms: 0.7441
+  type: 'test'
+  ...
+# Subtest: invalid transactions and imports roll back without losing redo; bounded history remains separate from the complete heat ledger
+ok 107 - invalid transactions and imports roll back without losing redo; bounded history remains separate from the complete heat ledger
+  ---
+  duration_ms: 3.5236
+  type: 'test'
+  ...
+# Subtest: every registered finish and preset survives a saved-state round trip
+ok 108 - every registered finish and preset survives a saved-state round trip
+  ---
+  duration_ms: 7.6782
+  type: 'test'
+  ...
+# Subtest: invalid backups cannot introduce arbitrary fields, finishes or non-finite camera data
+ok 109 - invalid backups cannot introduce arbitrary fields, finishes or non-finite camera data
+  ---
+  duration_ms: 1.8204
+  type: 'test'
+  ...
+# Subtest: a continuous camera or hood gesture records one undo and can be cancelled
+ok 110 - a continuous camera or hood gesture records one undo and can be cancelled
+  ---
+  duration_ms: 1.1436
+  type: 'test'
+  ...
+# Subtest: exceptions and invalid edits restore all partially changed fields
+ok 111 - exceptions and invalid edits restore all partially changed fields
+  ---
+  duration_ms: 0.7667
+  type: 'test'
+  ...
+# Subtest: new edits branch after undo and the bounded history retains the latest gestures
+ok 112 - new edits branch after undo and the bounded history retains the latest gestures
+  ---
+  duration_ms: 0.8328
+  type: 'test'
+  ...
+# Subtest: replacing a workspace is atomic and cancels stale gestures and history
+ok 113 - replacing a workspace is atomic and cancels stale gestures and history
+  ---
+  duration_ms: 0.6362
+  type: 'test'
+  ...
+# Subtest: workspace round trips with independent cameras, immutable presets and reproducible trial parameters
+ok 114 - workspace round trips with independent cameras, immutable presets and reproducible trial parameters
+  ---
+  duration_ms: 4.0063
+  type: 'test'
+  ...
+# Subtest: only a valid final upward gesture launches; distance controls height independently of speed
+ok 115 - only a valid final upward gesture launches; distance controls height independently of speed
+  ---
+  duration_ms: 0.3947
+  type: 'test'
+  ...
+# Subtest: completion adds exactly one trial without changing the camera, view or height preset
+ok 116 - completion adds exactly one trial without changing the camera, view or height preset
+  ---
+  duration_ms: 0.8919
+  type: 'test'
+  ...
+# Subtest: the forty-trial window retains chronological IDs and selects the latest valid entry
+ok 117 - the forty-trial window retains chronological IDs and selects the latest valid entry
+  ---
+  duration_ms: 17.2403
+  type: 'test'
+  ...
+# Subtest: a recorded jump can be sampled repeatedly without adding records or altering stable state
+ok 118 - a recorded jump can be sampled repeatedly without adding records or altering stable state
+  ---
+  duration_ms: 1.381
+  type: 'test'
+  ...
+# Subtest: height-derived projectile trajectories peak at the requested height and land at zero
+ok 119 - height-derived projectile trajectories peak at the requested height and land at zero
+  ---
+  duration_ms: 0.5639
+  type: 'test'
+  ...
+# Subtest: pose and carrier samples are continuous across phase boundaries and never penetrate the ground
+ok 120 - pose and carrier samples are continuous across phase boundaries and never penetrate the ground
+  ---
+  duration_ms: 7.7253
+  type: 'test'
+  ...
+# Subtest: damaged state rejects malformed IDs, inconsistent gesture records and invalid camera envelopes atomically
+ok 121 - damaged state rejects malformed IDs, inconsistent gesture records and invalid camera envelopes atomically
+  ---
+  duration_ms: 1.356
+  type: 'test'
+  ...
+# Subtest: state validation never executes accessors on objects, nested trials or vector arrays
+ok 122 - state validation never executes accessors on objects, nested trials or vector arrays
+  ---
+  duration_ms: 0.7215
+  type: 'test'
+  ...
+# Subtest: pending gesture cancellation leaves older completed trials intact and commits once after completion
+ok 123 - pending gesture cancellation leaves older completed trials intact and commits once after completion
+  ---
+  duration_ms: 1.6069
+  type: 'test'
+  ...
+# Subtest: invalid edits or imports roll back atomically; no-op preserves redo and history retains forty operations
+ok 124 - invalid edits or imports roll back atomically; no-op preserves redo and history retains forty operations
+  ---
+  duration_ms: 5.7772
+  type: 'test'
+  ...
+# Subtest: a continuous drag commits one command and cancels without an entry
+ok 125 - a continuous drag commits one command and cancels without an entry
+  ---
+  duration_ms: 5.2451
+  type: 'test'
+  ...
+# Subtest: moving and rotating the table preserves its lamp relationship
+ok 126 - moving and rotating the table preserves its lamp relationship
+  ---
+  duration_ms: 0.8718
+  type: 'test'
+  ...
+# Subtest: room and wall constraints keep edit anchors valid
+ok 127 - room and wall constraints keep edit anchors valid
+  ---
+  duration_ms: 1.2986
+  type: 'test'
+  ...
+# Subtest: occupied positions are rejected without changing the object
+ok 128 - occupied positions are rejected without changing the object
+  ---
+  duration_ms: 0.3359
+  type: 'test'
+  ...
+# Subtest: saved states round trip and reject remote or non-finite input
+ok 129 - saved states round trip and reject remote or non-finite input
+  ---
+  duration_ms: 2.5935
+  type: 'test'
+  ...
+# Subtest: limited commands are explicit, local and reject unsupported requests
+ok 130 - limited commands are explicit, local and reject unsupported requests
+  ---
+  duration_ms: 1.9787
+  type: 'test'
+  ...
+# Subtest: failed transactions revert partial state changes
+ok 131 - failed transactions revert partial state changes
+  ---
+  duration_ms: 1.0147
+  type: 'test'
+  ...
+# Subtest: boundary placements survive validation before any model has loaded
+ok 132 - boundary placements survive validation before any model has loaded
+  ---
+  duration_ms: 1.0265
+  type: 'test'
+  ...
+# Subtest: turning the lamp near a table edge keeps every footprint corner on the surface
+ok 133 - turning the lamp near a table edge keeps every footprint corner on the surface
+  ---
+  duration_ms: 0.5557
+  type: 'test'
+  ...
+# Subtest: seating can grow and shrink while keeping floor anchors and saved dimensions
+ok 134 - seating can grow and shrink while keeping floor anchors and saved dimensions
+  ---
+  duration_ms: 1.6031
+  type: 'test'
+  ...
+# Subtest: growing furniture into an occupied footprint is rejected
+ok 135 - growing furniture into an occupied footprint is rejected
+  ---
+  duration_ms: 1.6449
+  type: 'test'
+  ...
+# Subtest: resizing a table preserves lamp attachment, surface height and footprint
+ok 136 - resizing a table preserves lamp attachment, surface height and footprint
+  ---
+  duration_ms: 1.4565
+  type: 'test'
+  ...
+# Subtest: large rotated floor objects stay completely inside room boundaries
+ok 137 - large rotated floor objects stay completely inside room boundaries
+  ---
+  duration_ms: 0.365
+  type: 'test'
+  ...
+# Subtest: version one projects migrate without losing saved edits or attachments
+ok 138 - version one projects migrate without losing saved edits or attachments
+  ---
+  duration_ms: 0.5976
+  type: 'test'
+  ...
+# Subtest: independent axes change actual dimensions, retain bounds and reject occupied space
+ok 139 - independent axes change actual dimensions, retain bounds and reject occupied space
+  ---
+  duration_ms: 1.3152
+  type: 'test'
+  ...
+# Subtest: nonuniform table dimensions keep lamp world position and rotated footprint valid
+ok 140 - nonuniform table dimensions keep lamp world position and rotated footprint valid
+  ---
+  duration_ms: 1.2061
+  type: 'test'
+  ...
+# Subtest: duplicates have independent state, free placement, saved identity and one undo entry
+ok 141 - duplicates have independent state, free placement, saved identity and one undo entry
+  ---
+  duration_ms: 5.4869
+  type: 'test'
+  ...
+# Subtest: copying and removing a table includes its lamp; restoring honors parent availability
+ok 142 - copying and removing a table includes its lamp; restoring honors parent availability
+  ---
+  duration_ms: 3.8845
+  type: 'test'
+  ...
+# Subtest: hidden objects free space and restoration cannot silently overlap another object
+ok 143 - hidden objects free space and restoration cannot silently overlap another object
+  ---
+  duration_ms: 1.2651
+  type: 'test'
+  ...
+# Subtest: local table replacement preserves light attachment and is reversible
+ok 144 - local table replacement preserves light attachment and is reversible
+  ---
+  duration_ms: 1.665
+  type: 'test'
+  ...
+# Subtest: project imports reject arbitrary templates, missing parents and nonfinite axis sizes
+ok 145 - project imports reject arbitrary templates, missing parents and nonfinite axis sizes
+  ---
+  duration_ms: 1.5889
+  type: 'test'
+  ...
+# Subtest: guided workflow persists validated progress and does not count unrelated edits
+ok 146 - guided workflow persists validated progress and does not count unrelated edits
+  ---
+  duration_ms: 1.1013
+  type: 'test'
+  ...
+# Subtest: the full diver envelope protects the water boundary and reef interiors for every swept segment
+ok 147 - the full diver envelope protects the water boundary and reef interiors for every swept segment
+  ---
+  duration_ms: 1.6175
+  type: 'test'
+  ...
+# Subtest: a clear follower advances at finite speed, continuously turns, then faces the stationary fish at target distance
+ok 148 - a clear follower advances at finite speed, continuously turns, then faces the stationary fish at target distance
+  ---
+  duration_ms: 12.3528
+  type: 'test'
+  ...
+# Subtest: reef occlusion produces a real detour whose every corner, chord and timed subsegment is safe
+ok 149 - reef occlusion produces a real detour whose every corner, chord and timed subsegment is safe
+  ---
+  duration_ms: 41.6482
+  type: 'test'
+  ...
+# Subtest: a genuine corridor blocked by the larger diver envelope stops in place and replans after the fish returns
+ok 150 - a genuine corridor blocked by the larger diver envelope stops in place and replans after the fish returns
+  ---
+  duration_ms: 16.8923
+  type: 'test'
+  ...
+# Subtest: the fish body is a dynamic swept obstacle and fish drags cannot tunnel through the current diver
+ok 151 - the fish body is a dynamic swept obstacle and fish drags cannot tunnel through the current diver
+  ---
+  duration_ms: 0.4748
+  type: 'test'
+  ...
+# Subtest: replanning mid-swim starts exactly at the visible pose and preserves lawful motion instead of teleporting to the new fish goal
+ok 152 - replanning mid-swim starts exactly at the visible pose and preserves lawful motion instead of teleporting to the new fish goal
+  ---
+  duration_ms: 5.5171
+  type: 'test'
+  ...
+# Subtest: near-distance arrival remains still while facing changes take bounded steps through the shortest angular direction
+ok 153 - near-distance arrival remains still while facing changes take bounded steps through the shortest angular direction
+  ---
+  duration_ms: 2.3308
+  type: 'test'
+  ...
+# Subtest: a lawful imported pose at target distance facing away is not described as arrived or silently reoriented
+ok 154 - a lawful imported pose at target distance facing away is not described as arrived or silently reoriented
+  ---
+  duration_ms: 2.2087
+  type: 'test'
+  ...
+# Subtest: old workspace station choice is safe even when the old fish occupies the new diver start, and does not invent a travelled route
+ok 155 - old workspace station choice is safe even when the old fish occupies the new diver start, and does not invent a travelled route
+  ---
+  duration_ms: 1.8304
+  type: 'test'
+  ...
+# Subtest: strict pose, plan and time validation rejects getters, malformed input, illegal jumps and tampering without changing callers
+ok 156 - strict pose, plan and time validation rejects getters, malformed input, illegal jumps and tampering without changing callers
+  ---
+  duration_ms: 10.4398
+  type: 'test'
+  ...
+# Subtest: a deterministic grid of legal fish goals only yields entirely safe sampled routes or an explicit stationary blockage
+ok 157 - a deterministic grid of legal fish goals only yields entirely safe sampled routes or an explicit stationary blockage
+  ---
+  duration_ms: 183.5473
+  type: 'test'
+  ...
+# Subtest: schema 2 registers a lawful initial pair and retains independent finite-precision diver headings
+ok 158 - schema 2 registers a lawful initial pair and retains independent finite-precision diver headings
+  ---
+  duration_ms: 9.7813
+  type: 'test'
+  ...
+# Subtest: v1 migration retains every fish row, ID, camera and angle, adding only honest stationary legacy diver evidence
+ok 159 - v1 migration retains every fish row, ID, camera and angle, adding only honest stationary legacy diver evidence
+  ---
+  duration_ms: 6.2635
+  type: 'test'
+  ...
+# Subtest: migration relocates only initialization when the retained final fish overlaps the default diver
+ok 160 - migration relocates only initialization when the retained final fish overlaps the default diver
+  ---
+  duration_ms: 4.6317
+  type: 'test'
+  ...
+# Subtest: a committed input contains the exact fish endpoint and full finite-speed diver trace, facing and pose chain
+ok 161 - a committed input contains the exact fish endpoint and full finite-speed diver trace, facing and pose chain
+  ---
+  duration_ms: 30.2599
+  type: 'test'
+  ...
+# Subtest: new diver ledger rejects hidden reef crossings, mismatched path endpoints, invalid pose chains and final pair overlap
+ok 162 - new diver ledger rejects hidden reef crossings, mismatched path endpoints, invalid pose chains and final pair overlap
+  ---
+  duration_ms: 10.2738
+  type: 'test'
+  ...
+# Subtest: old diver trace may cross the final fish station because the two characters move concurrently
+ok 163 - old diver trace may cross the final fish station because the two characters move concurrently
+  ---
+  duration_ms: 0.8449
+  type: 'test'
+  ...
+# Subtest: manual fish sweep rejects the whole diver body even when both fish endpoints remain lawful
+ok 164 - manual fish sweep rejects the whole diver body even when both fish endpoints remain lawful
+  ---
+  duration_ms: 0.2869
+  type: 'test'
+  ...
+# Subtest: zero fish input cancels follower preview without consuming any record or ID, including exhausted workspaces
+ok 165 - zero fish input cancels follower preview without consuming any record or ID, including exhausted workspaces
+  ---
+  duration_ms: 0.703
+  type: 'test'
+  ...
+# Subtest: double actor cancellation and whole transaction undo/redo restore exact JSON, camera, traces and headings
+ok 166 - double actor cancellation and whole transaction undo/redo restore exact JSON, camera, traces and headings
+  ---
+  duration_ms: 20.4157
+  type: 'test'
+  ...
+# Subtest: invalid pair edits roll back atomically and retain redo; camera and view edits keep both actor ledgers unchanged
+ok 167 - invalid pair edits roll back atomically and retain redo; camera and view edits keep both actor ledgers unchanged
+  ---
+  duration_ms: 13.185
+  type: 'test'
+  ...
+# Subtest: schema 2 rejects extra fields, getter execution, sparse paths and array/prototype tricks before persistence
+ok 168 - schema 2 rejects extra fields, getter execution, sparse paths and array/prototype tricks before persistence
+  ---
+  duration_ms: 11.1413
+  type: 'test'
+  ...
+# Subtest: overall 512 KiB raw cap and old 64 KiB source cap are separate from the retained fish canonical ledger bound
+ok 169 - overall 512 KiB raw cap and old 64 KiB source cap are separate from the retained fish canonical ledger bound
+  ---
+  duration_ms: 94.1875
+  type: 'test'
+  ...
+# Subtest: registered geometry has a fixed swim layer and protects the full fish envelope at the water boundary
+ok 170 - registered geometry has a fixed swim layer and protects the full fish envelope at the water boundary
+  ---
+  duration_ms: 4.3742
+  type: 'test'
+  ...
+# Subtest: swept collision rejects a jump across a reef even with valid endpoints; tangency is allowed
+ok 171 - swept collision rejects a jump across a reef even with valid endpoints; tangency is allowed
+  ---
+  duration_ms: 0.6096
+  type: 'test'
+  ...
+# Subtest: a valid curved drag preserves the exact requested endpoint, every turning point and derived heading
+ok 172 - a valid curved drag preserves the exact requested endpoint, every turning point and derived heading
+  ---
+  duration_ms: 4.2005
+  type: 'test'
+  ...
+# Subtest: invalid preview segments are pure and releasing an illegal complete path leaves the full prior state unchanged
+ok 173 - invalid preview segments are pure and releasing an illegal complete path leaves the full prior state unchanged
+  ---
+  duration_ms: 1.2285
+  type: 'test'
+  ...
+# Subtest: zero final displacement consumes neither a record nor an ID, including a valid out-and-back gesture
+ok 174 - zero final displacement consumes neither a record nor an ID, including a valid out-and-back gesture
+  ---
+  duration_ms: 0.6538
+  type: 'test'
+  ...
+# Subtest: bounded records never discard old paths; reset preserves monotonically increasing IDs and is fully undoable
+ok 175 - bounded records never discard old paths; reset preserves monotonically increasing IDs and is fully undoable
+  ---
+  duration_ms: 39.5714
+  type: 'test'
+  ...
+# Subtest: complete path imports reject mismatched chains, endpoints, headings, IDs, boundary violations and hidden crossings
+ok 176 - complete path imports reject mismatched chains, endpoints, headings, IDs, boundary violations and hidden crossings
+  ---
+  duration_ms: 1.0197
+  type: 'test'
+  ...
+# Subtest: cross-engine atan2 rounding preserves the imported heading exactly while rejecting a meaningful mismatch
+ok 177 - cross-engine atan2 rounding preserves the imported heading exactly while rejecting a meaningful mismatch
+  ---
+  duration_ms: 1.0959
+  type: 'test'
+  ...
+# Subtest: strict imports and path limits reject sparse arrays, executable getters, extra fields and overlarge input atomically
+ok 178 - strict imports and path limits reject sparse arrays, executable getters, extra fields and overlarge input atomically
+  ---
+  duration_ms: 1.0564
+  type: 'test'
+  ...
+# Subtest: each committed drag is one whole transaction; Escape, undo and redo restore exact JSON including the camera and records
+ok 179 - each committed drag is one whole transaction; Escape, undo and redo restore exact JSON including the camera and records
+  ---
+  duration_ms: 1.3584
+  type: 'test'
+  ...
+# Subtest: bad imports and invalid commits preserve the pending baseline and redo; a valid replacement clears all history
+ok 180 - bad imports and invalid commits preserve the pending baseline and redo; a valid replacement clears all history
+  ---
+  duration_ms: 1.3473
+  type: 'test'
+  ...
+# Subtest: view/camera edits keep fish input untouched and camera limits reject malformed imported perspectives
+ok 181 - view/camera edits keep fish input untouched and camera limits reject malformed imported perspectives
+  ---
+  duration_ms: 0.594
+  type: 'test'
+  ...
+1..181
+# tests 181
+# suites 0
+# pass 181
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 962.9984

@@ -1,0 +1,1441 @@
+{
+  "schema": "atelier-real-person-tryon-validation/v1",
+  "recordedAt": "2026-10-05T19:20:15.089780+00:00",
+  "status": "limited-runtime-and-ui-evidence-recorded; not-commercial-quality-approval",
+  "scope": "Local pretrained FASHN VTON 1.5 upper-body research sample; generated appearance, not real wear or size proof.",
+  "summary": {
+    "actualAttempts": 5,
+    "actualSucceeded": 4,
+    "actualFailed": 1,
+    "outputPngs": 4,
+    "outputResolution": [
+      576,
+      768
+    ],
+    "samplerSteps": 20,
+    "seed": 42,
+    "elapsedSecondsObserved": {
+      "initial-failed-0702f8eb": 61.49,
+      "cross-00055-14627": 63.34,
+      "cross-14627-00055": 49.58,
+      "reconstruction-00055": 41.84,
+      "model-reference-00055-14627": 52.58
+    },
+    "timingsScope": "These exact local jobs only; not a benchmark, SLA or device-independent performance claim.",
+    "outputPngBytes": 1621166,
+    "inputModesActuallyGenerated": [
+      "flat-lay",
+      "model"
+    ]
+  },
+  "actualRuns": [
+    {
+      "jobId": "0702f8ebda354a11b07958e6db4ef579",
+      "caseId": "initial-failed-0702f8eb",
+      "status": "failed",
+      "personId": "person-00055",
+      "garmentId": "garment-14627",
+      "photoType": "flat-lay",
+      "inputKey": "[\"person-00055\",\"garment-14627\",\"flat-lay\"]",
+      "inputsVerified": {
+        "person": {
+          "sampleId": "person-00055",
+          "image": "person-00055.jpg",
+          "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78",
+          "matchesJobAndSampleManifest": true
+        },
+        "garment": {
+          "sampleId": "garment-14627",
+          "image": "garment-14627.jpg",
+          "sha256": "3fd079502958281685d739cd88e3b2a2c0300f67c7370bfc0146d7c549cf4346",
+          "matchesJobAndSampleManifest": true
+        }
+      },
+      "originalMetadataPath": ".runtime/tryon/jobs/0702f8ebda354a11b07958e6db4ef579/metadata.json",
+      "originalMetadataSha256": "578c5fca6b63f7ddb18cf8ae2ec9bdcc93a349402a10905384ee406b76c51e39",
+      "metadata": {
+        "id": "0702f8ebda354a11b07958e6db4ef579",
+        "status": "failed",
+        "created_at": "2026-10-05T18:34:38.611+00:00",
+        "updated_at": "2026-10-05T18:35:40.085+00:00",
+        "progress": {
+          "stage": "failed",
+          "completed_steps": 0,
+          "total_steps": 20
+        },
+        "settings": {
+          "model": "FASHN VTON 1.5",
+          "category": "tops",
+          "garment_photo_type": "flat-lay",
+          "num_samples": 1,
+          "num_timesteps": 20,
+          "seed": 42,
+          "guidance_scale": 1.5,
+          "skip_cfg_last_n_steps": 1,
+          "segmentation_free": true
+        },
+        "inputs": {
+          "person": {
+            "format": "JPEG",
+            "uploaded_bytes": 152937,
+            "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          },
+          "garment": {
+            "format": "JPEG",
+            "uploaded_bytes": 62788,
+            "sha256": "3fd079502958281685d739cd88e3b2a2c0300f67c7370bfc0146d7c549cf4346",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          }
+        },
+        "licenses": {
+          "tryon": "Apache-2.0",
+          "human_parser": "nvidia-segformer; research/evaluation only",
+          "human_parser_url": "https://github.com/NVlabs/SegFormer/blob/master/LICENSE"
+        },
+        "started_at": "2026-10-05T18:34:38.702+00:00",
+        "execution": {
+          "generation": "cuda",
+          "pose_detection": "cpu",
+          "human_parser": "cpu",
+          "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+          "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+          "dtype": "torch.bfloat16",
+          "model_resolution": [
+            576,
+            864
+          ],
+          "algorithm": "official Euler sampler/CFG; unchanged"
+        },
+        "error": {
+          "type": "OutOfMemoryError",
+          "message": "OutOfMemoryError: CUDA out of memory. Tried to allocate 120.00 MiB. GPU 0 has a total capacity of 8.00 GiB of which 4.79 GiB is free. Of the allocated memory 1.93 GiB is allocated by PyTorch, and 136.94 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        },
+        "elapsed_seconds": 61.49,
+        "execution_seconds": 61.39,
+        "queue_seconds": 0.09
+      },
+      "resultImageExists": false,
+      "archivedMetadataPath": "notes/tryon-runs/initial-failed-0702f8eb.json",
+      "archivedMetadataSha256": "578c5fca6b63f7ddb18cf8ae2ec9bdcc93a349402a10905384ee406b76c51e39",
+      "archivedMetadataMatchesRuntimeObject": true,
+      "failureCounted": true
+    },
+    {
+      "jobId": "101182fc0b9f4663b81bfda3fd666620",
+      "caseId": "cross-00055-14627",
+      "status": "succeeded",
+      "personId": "person-00055",
+      "garmentId": "garment-14627",
+      "photoType": "flat-lay",
+      "inputKey": "[\"person-00055\",\"garment-14627\",\"flat-lay\"]",
+      "inputsVerified": {
+        "person": {
+          "sampleId": "person-00055",
+          "image": "person-00055.jpg",
+          "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78",
+          "matchesJobAndSampleManifest": true
+        },
+        "garment": {
+          "sampleId": "garment-14627",
+          "image": "garment-14627.jpg",
+          "sha256": "3fd079502958281685d739cd88e3b2a2c0300f67c7370bfc0146d7c549cf4346",
+          "matchesJobAndSampleManifest": true
+        }
+      },
+      "originalMetadataPath": ".runtime/tryon/jobs/101182fc0b9f4663b81bfda3fd666620/metadata.json",
+      "originalMetadataSha256": "c6e94d2f5ea57cc4ca2a72d6c2fa8495e44252a695b67ca465a620b6a978de1a",
+      "metadata": {
+        "id": "101182fc0b9f4663b81bfda3fd666620",
+        "status": "succeeded",
+        "created_at": "2026-10-05T18:51:58.149+00:00",
+        "updated_at": "2026-10-05T18:53:01.493+00:00",
+        "progress": {
+          "stage": "succeeded",
+          "completed_steps": 20,
+          "total_steps": 20
+        },
+        "settings": {
+          "model": "FASHN VTON 1.5",
+          "category": "tops",
+          "garment_photo_type": "flat-lay",
+          "num_samples": 1,
+          "num_timesteps": 20,
+          "seed": 42,
+          "guidance_scale": 1.5,
+          "skip_cfg_last_n_steps": 1,
+          "segmentation_free": true
+        },
+        "inputs": {
+          "person": {
+            "format": "JPEG",
+            "uploaded_bytes": 152937,
+            "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          },
+          "garment": {
+            "format": "JPEG",
+            "uploaded_bytes": 62788,
+            "sha256": "3fd079502958281685d739cd88e3b2a2c0300f67c7370bfc0146d7c549cf4346",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          }
+        },
+        "licenses": {
+          "tryon": "Apache-2.0",
+          "human_parser": "nvidia-segformer; research/evaluation only",
+          "human_parser_url": "https://github.com/NVlabs/SegFormer/blob/master/LICENSE"
+        },
+        "started_at": "2026-10-05T18:51:58.223+00:00",
+        "execution": {
+          "generation": "cuda",
+          "pose_detection": "cpu",
+          "human_parser": "cpu",
+          "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+          "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+          "preprocessor_lifetime": "CPU networks released before sampling; recreated for next input",
+          "pose_session_memory": "CPU arena/pattern disabled; intra/inter threads 2/1; original Wholebody and detector operations",
+          "dtype": "torch.bfloat16",
+          "model_resolution": [
+            576,
+            864
+          ],
+          "algorithm": "official Euler sampler/CFG; unchanged"
+        },
+        "gpu_memory": {
+          "peak_allocated_mib": 2782.73,
+          "peak_reserved_mib": 3584.0,
+          "scope": "sampling in this process; excludes other applications"
+        },
+        "output": {
+          "width": 576,
+          "height": 768,
+          "bytes": 422481,
+          "sha256": "f918848abb8db18eec06866685527668804dc51e4527007de696ffb41a8a1302",
+          "mime": "image/png"
+        },
+        "elapsed_seconds": 63.34,
+        "execution_seconds": 63.27,
+        "queue_seconds": 0.08,
+        "result_url": "/jobs/101182fc0b9f4663b81bfda3fd666620/result.png",
+        "metadata_url": "/jobs/101182fc0b9f4663b81bfda3fd666620/metadata.json"
+      },
+      "publishedImage": "web/tryon/results/cross-00055-14627.png",
+      "publishedMetadata": "web/tryon/results/cross-00055-14627.metadata.json",
+      "outputSha256": "f918848abb8db18eec06866685527668804dc51e4527007de696ffb41a8a1302",
+      "outputBytes": 422481,
+      "publishedMetadataSha256": "c6e94d2f5ea57cc4ca2a72d6c2fa8495e44252a695b67ca465a620b6a978de1a",
+      "pngDecoded": true,
+      "outputAndMetadataByteIdenticalToRuntime": true,
+      "review": {
+        "identity": "pass",
+        "body": "uncertain",
+        "shape": "pass",
+        "detail": "uncertain",
+        "occlusion": "uncertain",
+        "wear": "no-reference"
+      },
+      "note": "人工目视初审：脸、发型与头部姿态大致保持；黑色V领交叉结构、肩带与侧挂带已迁移。裤腰、纽扣位置与原人物图发生变化，人物下装未完全保持；小搭扣细节发软。挂带接近前臂，需要同人同衣实拍进一步核对，不能据此判断实际合身程度。",
+      "reviewedBy": "agent-visual-first-review",
+      "reference": {
+        "available": false,
+        "kind": "no-cross-person-ground-truth"
+      }
+    },
+    {
+      "jobId": "0ad56a0218ee4639ad6f2ac38af3cd0b",
+      "caseId": "cross-14627-00055",
+      "status": "succeeded",
+      "personId": "person-14627",
+      "garmentId": "garment-00055",
+      "photoType": "flat-lay",
+      "inputKey": "[\"person-14627\",\"garment-00055\",\"flat-lay\"]",
+      "inputsVerified": {
+        "person": {
+          "sampleId": "person-14627",
+          "image": "person-14627.jpg",
+          "sha256": "f02b595b9068354a731c2d43658d92a4d47f23a7d9c73f2c1db651139e2cb2d4",
+          "matchesJobAndSampleManifest": true
+        },
+        "garment": {
+          "sampleId": "garment-00055",
+          "image": "garment-00055.jpg",
+          "sha256": "c9c13719456663be040a63711d0ee92c6bac2e259017b072d396d874bdc367ad",
+          "matchesJobAndSampleManifest": true
+        }
+      },
+      "originalMetadataPath": ".runtime/tryon/jobs/0ad56a0218ee4639ad6f2ac38af3cd0b/metadata.json",
+      "originalMetadataSha256": "32282ffbc33b1b0ea4d5842a94e0f70dc356bf6934e340bf161c4cb024c318bb",
+      "metadata": {
+        "id": "0ad56a0218ee4639ad6f2ac38af3cd0b",
+        "status": "succeeded",
+        "created_at": "2026-10-05T18:54:49.337+00:00",
+        "updated_at": "2026-10-05T18:55:38.923+00:00",
+        "progress": {
+          "stage": "succeeded",
+          "completed_steps": 20,
+          "total_steps": 20
+        },
+        "settings": {
+          "model": "FASHN VTON 1.5",
+          "category": "tops",
+          "garment_photo_type": "flat-lay",
+          "num_samples": 1,
+          "num_timesteps": 20,
+          "seed": 42,
+          "guidance_scale": 1.5,
+          "skip_cfg_last_n_steps": 1,
+          "segmentation_free": true
+        },
+        "inputs": {
+          "person": {
+            "format": "JPEG",
+            "uploaded_bytes": 100057,
+            "sha256": "f02b595b9068354a731c2d43658d92a4d47f23a7d9c73f2c1db651139e2cb2d4",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          },
+          "garment": {
+            "format": "JPEG",
+            "uploaded_bytes": 94754,
+            "sha256": "c9c13719456663be040a63711d0ee92c6bac2e259017b072d396d874bdc367ad",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          }
+        },
+        "licenses": {
+          "tryon": "Apache-2.0",
+          "human_parser": "nvidia-segformer; research/evaluation only",
+          "human_parser_url": "https://github.com/NVlabs/SegFormer/blob/master/LICENSE"
+        },
+        "started_at": "2026-10-05T18:54:49.425+00:00",
+        "execution": {
+          "generation": "cuda",
+          "pose_detection": "cpu",
+          "human_parser": "cpu",
+          "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+          "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+          "preprocessor_lifetime": "CPU networks released before sampling; recreated for next input",
+          "pose_session_memory": "CPU arena/pattern disabled; intra/inter threads 2/1; original Wholebody and detector operations",
+          "dtype": "torch.bfloat16",
+          "model_resolution": [
+            576,
+            864
+          ],
+          "algorithm": "official Euler sampler/CFG; unchanged"
+        },
+        "gpu_memory": {
+          "peak_allocated_mib": 2784.11,
+          "peak_reserved_mib": 3584.0,
+          "scope": "sampling in this process; excludes other applications"
+        },
+        "output": {
+          "width": 576,
+          "height": 768,
+          "bytes": 347920,
+          "sha256": "22e21ad66df195f580f7497754c55b35a2d88efa7073c088b6cb9d3b5a3a8f4f",
+          "mime": "image/png"
+        },
+        "elapsed_seconds": 49.58,
+        "execution_seconds": 49.48,
+        "queue_seconds": 0.09,
+        "result_url": "/jobs/0ad56a0218ee4639ad6f2ac38af3cd0b/result.png",
+        "metadata_url": "/jobs/0ad56a0218ee4639ad6f2ac38af3cd0b/metadata.json"
+      },
+      "publishedImage": "web/tryon/results/cross-14627-00055.png",
+      "publishedMetadata": "web/tryon/results/cross-14627-00055.metadata.json",
+      "outputSha256": "22e21ad66df195f580f7497754c55b35a2d88efa7073c088b6cb9d3b5a3a8f4f",
+      "outputBytes": 347920,
+      "publishedMetadataSha256": "32282ffbc33b1b0ea4d5842a94e0f70dc356bf6934e340bf161c4cb024c318bb",
+      "pngDecoded": true,
+      "outputAndMetadataByteIdenticalToRuntime": true,
+      "review": {
+        "identity": "pass",
+        "body": "uncertain",
+        "shape": "pass",
+        "detail": "uncertain",
+        "occlusion": "pass",
+        "wear": "no-reference"
+      },
+      "note": "代理目视初审：人物脸、耳饰和手臂姿态大致保持；圆领、撞色袖与VANS字样迁移且可辨。裤腰和原有腰部细节被重新生成，袖口缝线、布料纹理及字样比例需商品近照核对；没有同人同目标衣实拍，不能评价真实合身。",
+      "reviewedBy": "agent-visual-first-review",
+      "reference": {
+        "available": false,
+        "kind": "no-cross-person-ground-truth"
+      }
+    },
+    {
+      "jobId": "aa5cad627f3b4c1cae95de9f159241bd",
+      "caseId": "reconstruction-00055",
+      "status": "succeeded",
+      "personId": "person-00055",
+      "garmentId": "garment-00055",
+      "photoType": "flat-lay",
+      "inputKey": "[\"person-00055\",\"garment-00055\",\"flat-lay\"]",
+      "inputsVerified": {
+        "person": {
+          "sampleId": "person-00055",
+          "image": "person-00055.jpg",
+          "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78",
+          "matchesJobAndSampleManifest": true
+        },
+        "garment": {
+          "sampleId": "garment-00055",
+          "image": "garment-00055.jpg",
+          "sha256": "c9c13719456663be040a63711d0ee92c6bac2e259017b072d396d874bdc367ad",
+          "matchesJobAndSampleManifest": true
+        }
+      },
+      "originalMetadataPath": ".runtime/tryon/jobs/aa5cad627f3b4c1cae95de9f159241bd/metadata.json",
+      "originalMetadataSha256": "b6c9b392ba33e1ebd0eff510ff9f86ed2c4825207acf5a2b42a7d1e6d71001be",
+      "metadata": {
+        "id": "aa5cad627f3b4c1cae95de9f159241bd",
+        "status": "succeeded",
+        "created_at": "2026-10-05T18:56:47.475+00:00",
+        "updated_at": "2026-10-05T18:57:29.327+00:00",
+        "progress": {
+          "stage": "succeeded",
+          "completed_steps": 20,
+          "total_steps": 20
+        },
+        "settings": {
+          "model": "FASHN VTON 1.5",
+          "category": "tops",
+          "garment_photo_type": "flat-lay",
+          "num_samples": 1,
+          "num_timesteps": 20,
+          "seed": 42,
+          "guidance_scale": 1.5,
+          "skip_cfg_last_n_steps": 1,
+          "segmentation_free": true
+        },
+        "inputs": {
+          "person": {
+            "format": "JPEG",
+            "uploaded_bytes": 152937,
+            "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          },
+          "garment": {
+            "format": "JPEG",
+            "uploaded_bytes": 94754,
+            "sha256": "c9c13719456663be040a63711d0ee92c6bac2e259017b072d396d874bdc367ad",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          }
+        },
+        "licenses": {
+          "tryon": "Apache-2.0",
+          "human_parser": "nvidia-segformer; research/evaluation only",
+          "human_parser_url": "https://github.com/NVlabs/SegFormer/blob/master/LICENSE"
+        },
+        "started_at": "2026-10-05T18:56:47.555+00:00",
+        "execution": {
+          "generation": "cuda",
+          "pose_detection": "cpu",
+          "human_parser": "cpu",
+          "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+          "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+          "preprocessor_lifetime": "CPU networks released before sampling; recreated for next input",
+          "pose_session_memory": "CPU arena/pattern disabled; intra/inter threads 2/1; original Wholebody and detector operations",
+          "dtype": "torch.bfloat16",
+          "model_resolution": [
+            576,
+            864
+          ],
+          "algorithm": "official Euler sampler/CFG; unchanged"
+        },
+        "gpu_memory": {
+          "peak_allocated_mib": 2784.11,
+          "peak_reserved_mib": 3584.0,
+          "scope": "sampling in this process; excludes other applications"
+        },
+        "output": {
+          "width": 576,
+          "height": 768,
+          "bytes": 420440,
+          "sha256": "e35847d2f722b75106f5215f5951a33e3427f424b111c3a875e3ce1829b8428d",
+          "mime": "image/png"
+        },
+        "elapsed_seconds": 41.84,
+        "execution_seconds": 41.76,
+        "queue_seconds": 0.08,
+        "result_url": "/jobs/aa5cad627f3b4c1cae95de9f159241bd/result.png",
+        "metadata_url": "/jobs/aa5cad627f3b4c1cae95de9f159241bd/metadata.json"
+      },
+      "publishedImage": "web/tryon/results/reconstruction-00055.png",
+      "publishedMetadata": "web/tryon/results/reconstruction-00055.metadata.json",
+      "outputSha256": "e35847d2f722b75106f5215f5951a33e3427f424b111c3a875e3ce1829b8428d",
+      "outputBytes": 420440,
+      "publishedMetadataSha256": "b6c9b392ba33e1ebd0eff510ff9f86ed2c4825207acf5a2b42a7d1e6d71001be",
+      "pngDecoded": true,
+      "outputAndMetadataByteIdenticalToRuntime": true,
+      "review": {
+        "identity": "pass",
+        "body": "fail",
+        "shape": "pass",
+        "detail": "uncertain",
+        "occlusion": "pass",
+        "wear": "fail"
+      },
+      "note": "代理目视初审：脸与头部姿态大致保持；同款字样和撞色结构能辨认。原实拍衣服较宽松并有明显褶皱，生成变得更贴身平整，衣服字样比例、裤腰倾角和纽扣位置也改变。同人同原衣实拍已存在，本次重建不能视为与实穿一致。",
+      "reviewedBy": "agent-visual-first-review",
+      "reference": {
+        "available": true,
+        "kind": "original-worn-reconstruction",
+        "referenceImage": "./samples/person-00055.jpg",
+        "independentDifferentOutfitTriplet": false
+      }
+    },
+    {
+      "jobId": "55598b6b6418464a833443cc78a24e04",
+      "caseId": "model-reference-00055-14627",
+      "status": "succeeded",
+      "personId": "person-00055",
+      "garmentId": "garment-model-14627",
+      "photoType": "model",
+      "inputKey": "[\"person-00055\",\"garment-model-14627\",\"model\"]",
+      "inputsVerified": {
+        "person": {
+          "sampleId": "person-00055",
+          "image": "person-00055.jpg",
+          "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78",
+          "matchesJobAndSampleManifest": true
+        },
+        "garment": {
+          "sampleId": "garment-model-14627",
+          "image": "person-14627.jpg",
+          "sha256": "f02b595b9068354a731c2d43658d92a4d47f23a7d9c73f2c1db651139e2cb2d4",
+          "matchesJobAndSampleManifest": true
+        }
+      },
+      "originalMetadataPath": ".runtime/tryon/jobs/55598b6b6418464a833443cc78a24e04/metadata.json",
+      "originalMetadataSha256": "f3d88cb062fa62a92a1ddafa8b3c4fbf0c9ebc16a0faed9145de67202be4f2f7",
+      "metadata": {
+        "id": "55598b6b6418464a833443cc78a24e04",
+        "status": "succeeded",
+        "created_at": "2026-10-05T19:05:28.506+00:00",
+        "updated_at": "2026-10-05T19:06:21.091+00:00",
+        "progress": {
+          "stage": "succeeded",
+          "completed_steps": 20,
+          "total_steps": 20
+        },
+        "settings": {
+          "model": "FASHN VTON 1.5",
+          "category": "tops",
+          "garment_photo_type": "model",
+          "num_samples": 1,
+          "num_timesteps": 20,
+          "seed": 42,
+          "guidance_scale": 1.5,
+          "skip_cfg_last_n_steps": 1,
+          "segmentation_free": true
+        },
+        "inputs": {
+          "person": {
+            "format": "JPEG",
+            "uploaded_bytes": 152937,
+            "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          },
+          "garment": {
+            "format": "JPEG",
+            "uploaded_bytes": 100057,
+            "sha256": "f02b595b9068354a731c2d43658d92a4d47f23a7d9c73f2c1db651139e2cb2d4",
+            "decoded_size": [
+              768,
+              1024
+            ],
+            "normalized_size": [
+              768,
+              1024
+            ],
+            "metadata_stripped": true
+          }
+        },
+        "licenses": {
+          "tryon": "Apache-2.0",
+          "human_parser": "nvidia-segformer; research/evaluation only",
+          "human_parser_url": "https://github.com/NVlabs/SegFormer/blob/master/LICENSE"
+        },
+        "started_at": "2026-10-05T19:05:28.574+00:00",
+        "execution": {
+          "generation": "cuda",
+          "pose_detection": "cpu",
+          "human_parser": "cpu",
+          "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+          "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+          "preprocessor_lifetime": "CPU networks released before sampling; recreated for next input",
+          "pose_session_memory": "CPU arena/pattern disabled; intra/inter threads 2/1; original Wholebody and detector operations",
+          "dtype": "torch.bfloat16",
+          "model_resolution": [
+            576,
+            864
+          ],
+          "algorithm": "official Euler sampler/CFG; unchanged"
+        },
+        "gpu_memory": {
+          "peak_allocated_mib": 2782.73,
+          "peak_reserved_mib": 3584.0,
+          "scope": "sampling in this process; excludes other applications"
+        },
+        "output": {
+          "width": 576,
+          "height": 768,
+          "bytes": 430325,
+          "sha256": "147fcf318395f59a0f0eec76d0de8ad928c25b98b714e9a140648f3df29546c7",
+          "mime": "image/png"
+        },
+        "elapsed_seconds": 52.58,
+        "execution_seconds": 52.52,
+        "queue_seconds": 0.06,
+        "result_url": "/jobs/55598b6b6418464a833443cc78a24e04/result.png",
+        "metadata_url": "/jobs/55598b6b6418464a833443cc78a24e04/metadata.json"
+      },
+      "publishedImage": "web/tryon/results/model-reference-00055-14627.png",
+      "publishedMetadata": "web/tryon/results/model-reference-00055-14627.metadata.json",
+      "outputSha256": "147fcf318395f59a0f0eec76d0de8ad928c25b98b714e9a140648f3df29546c7",
+      "outputBytes": 430325,
+      "publishedMetadataSha256": "f3d88cb062fa62a92a1ddafa8b3c4fbf0c9ebc16a0faed9145de67202be4f2f7",
+      "pngDecoded": true,
+      "outputAndMetadataByteIdenticalToRuntime": true,
+      "review": {
+        "identity": "pass",
+        "body": "uncertain",
+        "shape": "pass",
+        "detail": "uncertain",
+        "occlusion": "pass",
+        "wear": "no-reference"
+      },
+      "note": "代理目视初审：通过另一位模特的穿着照片迁移黑色V领、肩带和褶皱；人物脸与手臂姿态大致保持。原人物裤腰、纽扣位置被改动，肩带搭扣与侧带细节需商品近照复查。参考模特的实拍不是此人物的同人同衣实拍，不能证明实穿或尺码。",
+      "reviewedBy": "agent-visual-first-review",
+      "reference": {
+        "available": false,
+        "kind": "no-cross-person-ground-truth",
+        "otherModelReferenceImage": "./samples/person-14627.jpg"
+      }
+    }
+  ],
+  "fullWeights": {
+    "completeOfficialFilesVerified": true,
+    "wholeFileHashesRechecked": true,
+    "files": [
+      {
+        "component": "main-vton",
+        "path": ".runtime/tryon/weights/model.safetensors",
+        "source": "https://huggingface.co/fashn-ai/fashn-vton-1.5/resolve/main/model.safetensors?download=true",
+        "bytes": 1943668048,
+        "sha256": "d6cd38286885bc29fa487ea9383f80ffeb95862e7747c630d42c5d3c05bdd35a",
+        "matchesOfficialIntegrityReceipt": true,
+        "receipt": ".runtime/tryon/downloads/weights-verified.json",
+        "receiptSha256": "00c950b0d60411b533d52d76a2eac993bfc4be628282a02d22d3e22e5b546016",
+        "wholeFileRehashedForThisRecord": true,
+        "header": {
+          "tensorCount": 366,
+          "tensorElements": 971814240,
+          "dtypeTensorCounts": {
+            "BF16": 366
+          },
+          "tensorDataBytes": 1943628480,
+          "headerBytes": 39560,
+          "allDataOffsetsContiguous": true,
+          "fileEndMatchesHeader": true
+        }
+      },
+      {
+        "component": "pose-detector",
+        "path": ".runtime/tryon/weights/dwpose/yolox_l.onnx",
+        "source": "https://huggingface.co/fashn-ai/DWPose/resolve/main/yolox_l.onnx?download=true",
+        "bytes": 216746733,
+        "sha256": "7860ae79de6c89a3c1eb72ae9a2756c0ccfbe04b7791bb5880afabd97855a411",
+        "matchesOfficialIntegrityReceipt": true,
+        "receipt": ".runtime/tryon/downloads/pose-detector-verified.json",
+        "receiptSha256": "38c80e799efe45ee801c0c3a14713b27e4c7edc2eea3b5c6e151ed236f9ed91b",
+        "wholeFileRehashedForThisRecord": true
+      },
+      {
+        "component": "pose-estimator",
+        "path": ".runtime/tryon/weights/dwpose/dw-ll_ucoco_384.onnx",
+        "source": "https://huggingface.co/fashn-ai/DWPose/resolve/main/dw-ll_ucoco_384.onnx?download=true",
+        "bytes": 134399116,
+        "sha256": "724f4ff2439ed61afb86fb8a1951ec39c6220682803b4a8bd4f598cd913b1843",
+        "matchesOfficialIntegrityReceipt": true,
+        "receipt": ".runtime/tryon/downloads/pose-estimator-verified.json",
+        "receiptSha256": "20e7ad3a4a48c12398db31a063099fc58a7a8c23d5e42f4cb13ae8f7f3b32271",
+        "wholeFileRehashedForThisRecord": true
+      },
+      {
+        "component": "human-parser-config.json",
+        "path": ".runtime/tryon/hf-cache/hub/models--fashn-ai--fashn-human-parser/snapshots/1f80c34dbab321c5730dda5c3fea279fd3e97498/config.json",
+        "source": "https://huggingface.co/fashn-ai/fashn-human-parser/resolve/1f80c34dbab321c5730dda5c3fea279fd3e97498/config.json?download=true",
+        "revision": "1f80c34dbab321c5730dda5c3fea279fd3e97498",
+        "bytes": 1654,
+        "sha256": "87bd5b66419dbfa7c02cfbeb94e292454863b1606c5df29526b19a6c1de70d9f",
+        "matchesOfficialIntegrityReceipt": true,
+        "receipt": ".runtime/tryon/downloads/parser-verified.json",
+        "receiptSha256": "f364e6e16f379b6acc9e5f36ab7250b5afa31e95c043d30e9a33be3d3ecfb755",
+        "wholeFileRehashedForThisRecord": true
+      },
+      {
+        "component": "human-parser-model.safetensors",
+        "path": ".runtime/tryon/hf-cache/hub/models--fashn-ai--fashn-human-parser/snapshots/1f80c34dbab321c5730dda5c3fea279fd3e97498/model.safetensors",
+        "source": "https://huggingface.co/fashn-ai/fashn-human-parser/resolve/1f80c34dbab321c5730dda5c3fea279fd3e97498/model.safetensors?download=true",
+        "revision": "1f80c34dbab321c5730dda5c3fea279fd3e97498",
+        "bytes": 256146352,
+        "sha256": "e43c8c8a9b04f28798f0a4630cf18caa2cdb27a0d454fae43a5716e6f7078244",
+        "matchesOfficialIntegrityReceipt": true,
+        "receipt": ".runtime/tryon/downloads/parser-verified.json",
+        "receiptSha256": "f364e6e16f379b6acc9e5f36ab7250b5afa31e95c043d30e9a33be3d3ecfb755",
+        "wholeFileRehashedForThisRecord": true,
+        "header": {
+          "tensorCount": 930,
+          "tensorElements": 64008403,
+          "dtypeTensorCounts": {
+            "I64": 1,
+            "F32": 929
+          },
+          "tensorDataBytes": 256033616,
+          "headerBytes": 112728,
+          "allDataOffsetsContiguous": true,
+          "fileEndMatchesHeader": true
+        }
+      }
+    ],
+    "mainCheckpointHeader": {
+      "tensorCount": 366,
+      "tensorElements": 971814240,
+      "dtypeTensorCounts": {
+        "BF16": 366
+      },
+      "tensorDataBytes": 1943628480,
+      "headerBytes": 39560,
+      "allDataOffsetsContiguous": true,
+      "fileEndMatchesHeader": true
+    },
+    "loadingEvidence": {
+      "codePath": "scripts/tryon-service.py",
+      "mode": "meta construction; full strict=True, assign=True state load on CPU, then cuda",
+      "noRemainingMetaTensorGuardPresent": true,
+      "successfulJobsRecordThisExecutionProfile": true,
+      "scope": "Complete official checkpoint file and strict full loading path; no model truncation, small replacement or stand-in output. Model quality is assessed separately."
+    }
+  },
+  "runtime": {
+    "python": "3.10.11",
+    "pythonExecutable": ".runtime/tryon/.venv/Scripts/python.exe",
+    "distributions": {
+      "certifi": "2026.7.22",
+      "charset-normalizer": "3.5.2",
+      "colorama": "0.4.6",
+      "coloredlogs": "15.0.1",
+      "contourpy": "1.3.2",
+      "cycler": "0.12.1",
+      "einops": "0.8.2",
+      "fashn-human-parser": "0.1.1",
+      "fashn-vton": "1.5.0",
+      "filelock": "4.0.12",
+      "flatbuffers": "25.12.19",
+      "fonttools": "4.65.0",
+      "fsspec": "2026.9.0",
+      "huggingface_hub": "0.36.2",
+      "humanfriendly": "10.0",
+      "idna": "3.20",
+      "Jinja2": "3.1.6",
+      "kiwisolver": "1.5.1",
+      "MarkupSafe": "3.0.4",
+      "matplotlib": "3.10.9",
+      "mpmath": "1.3.0",
+      "networkx": "3.4.2",
+      "numpy": "1.26.4",
+      "onnxruntime-gpu": "1.23.2",
+      "opencv-python": "4.11.0.86",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "protobuf": "7.36.2",
+      "pyparsing": "3.3.3",
+      "pyreadline3": "3.5.6",
+      "python-dateutil": "2.9.0.post0",
+      "PyYAML": "6.0.3",
+      "regex": "2026.9.29",
+      "requests": "2.34.2",
+      "safetensors": "0.8.0",
+      "six": "1.17.0",
+      "sympy": "1.14.0",
+      "tokenizers": "0.22.2",
+      "torch": "2.8.0+cu128",
+      "torchvision": "0.23.0+cu128",
+      "tqdm": "4.70.1",
+      "transformers": "4.57.6",
+      "typing_extensions": "4.16.0",
+      "urllib3": "2.8.0"
+    },
+    "distributionCount": 45,
+    "fashnSource": {
+      "repository": "https://github.com/fashn-AI/fashn-vton-1.5",
+      "commit": "7c0f10af3f91ad4048fe9729c470a13ef905d25a",
+      "workingTreeClean": true,
+      "localCompatibilityImplementation": "scripts/tryon-service.py local Pipeline subclass; original pretrained architecture, Euler sampler and CFG retained according to source and job execution metadata."
+    },
+    "hardwareKernelProbeRecord": {
+      "purpose": "small GPU attention kernel availability; no quality claim",
+      "torch": "2.8.0+cu128",
+      "cuda": "12.8",
+      "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+      "capability": [
+        8,
+        9
+      ],
+      "cudnn": 91002,
+      "flash_compiled": false,
+      "tests": [
+        {
+          "layout": "contiguous",
+          "backend": "efficient",
+          "q_stride": [
+            81920,
+            8192,
+            128,
+            1
+          ],
+          "supported": true,
+          "executed": true,
+          "finite": true,
+          "peak_allocated_mib": 2.03
+        },
+        {
+          "layout": "contiguous",
+          "backend": "cudnn",
+          "q_stride": [
+            81920,
+            8192,
+            128,
+            1
+          ],
+          "supported": true,
+          "executed": true,
+          "finite": true,
+          "peak_allocated_mib": 2.03
+        },
+        {
+          "layout": "strided_linear1",
+          "backend": "efficient",
+          "q_stride": [
+            573440,
+            128,
+            8960,
+            1
+          ],
+          "supported": true,
+          "executed": true,
+          "finite": true,
+          "peak_allocated_mib": 3.28
+        },
+        {
+          "layout": "strided_linear1",
+          "backend": "cudnn",
+          "q_stride": [
+            573440,
+            128,
+            8960,
+            1
+          ],
+          "supported": true,
+          "executed": true,
+          "finite": true,
+          "peak_allocated_mib": 3.28
+        }
+      ]
+    },
+    "actualExecutionProfiles": {
+      "initial-failed-0702f8eb": {
+        "generation": "cuda",
+        "pose_detection": "cpu",
+        "human_parser": "cpu",
+        "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+        "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+        "dtype": "torch.bfloat16",
+        "model_resolution": [
+          576,
+          864
+        ],
+        "algorithm": "official Euler sampler/CFG; unchanged"
+      },
+      "cross-00055-14627": {
+        "generation": "cuda",
+        "pose_detection": "cpu",
+        "human_parser": "cpu",
+        "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+        "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+        "preprocessor_lifetime": "CPU networks released before sampling; recreated for next input",
+        "pose_session_memory": "CPU arena/pattern disabled; intra/inter threads 2/1; original Wholebody and detector operations",
+        "dtype": "torch.bfloat16",
+        "model_resolution": [
+          576,
+          864
+        ],
+        "algorithm": "official Euler sampler/CFG; unchanged"
+      },
+      "cross-14627-00055": {
+        "generation": "cuda",
+        "pose_detection": "cpu",
+        "human_parser": "cpu",
+        "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+        "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+        "preprocessor_lifetime": "CPU networks released before sampling; recreated for next input",
+        "pose_session_memory": "CPU arena/pattern disabled; intra/inter threads 2/1; original Wholebody and detector operations",
+        "dtype": "torch.bfloat16",
+        "model_resolution": [
+          576,
+          864
+        ],
+        "algorithm": "official Euler sampler/CFG; unchanged"
+      },
+      "reconstruction-00055": {
+        "generation": "cuda",
+        "pose_detection": "cpu",
+        "human_parser": "cpu",
+        "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+        "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+        "preprocessor_lifetime": "CPU networks released before sampling; recreated for next input",
+        "pose_session_memory": "CPU arena/pattern disabled; intra/inter threads 2/1; original Wholebody and detector operations",
+        "dtype": "torch.bfloat16",
+        "model_resolution": [
+          576,
+          864
+        ],
+        "algorithm": "official Euler sampler/CFG; unchanged"
+      },
+      "model-reference-00055-14627": {
+        "generation": "cuda",
+        "pose_detection": "cpu",
+        "human_parser": "cpu",
+        "checkpoint_loading": "meta construction; strict CPU checkpoint assignment then cuda",
+        "attention": "PyTorch CUDA EFFICIENT_ATTENTION only; no MATH fallback",
+        "preprocessor_lifetime": "CPU networks released before sampling; recreated for next input",
+        "pose_session_memory": "CPU arena/pattern disabled; intra/inter threads 2/1; original Wholebody and detector operations",
+        "dtype": "torch.bfloat16",
+        "model_resolution": [
+          576,
+          864
+        ],
+        "algorithm": "official Euler sampler/CFG; unchanged"
+      }
+    },
+    "backendSourceObservedAfterFinalModelRun": {
+      "path": "scripts/tryon-service.py",
+      "bytes": 34447,
+      "sha256": "c7a2bc8beb3525017e073afa8a10c418a8330c38a8bb3e28797c151f5a4d4414",
+      "jobId": "55598b6b6418464a833443cc78a24e04",
+      "scope": "Hash observed after the final model-mode job; previous run metadata is retained, without inventing historical source snapshots or test verdicts."
+    }
+  },
+  "licenses": {
+    "mainCodeAndCheckpoint": {
+      "id": "Apache-2.0",
+      "repository": "https://github.com/fashn-AI/fashn-vton-1.5",
+      "basis": "Pinned official repository LICENSE and README License section, plus actual job license metadata.",
+      "localLicenseFile": ".runtime/tryon/vendor/fashn-vton-1.5/LICENSE",
+      "localLicenseSha256": "d3d48102851b3bf5533a42571977cf7f635a6599b64b61d31ebd594fbf5f6f18"
+    },
+    "humanParser": {
+      "id": "nvidia-segformer",
+      "scope": "non-commercial research/evaluation only",
+      "url": "https://github.com/NVlabs/SegFormer/blob/master/LICENSE",
+      "revision": "1f80c34dbab321c5730dda5c3fea279fd3e97498"
+    },
+    "samplePhotos": {
+      "id": "CC-BY-NC-4.0",
+      "label": "VITON-HD 研究样本 · 署名 / 非商业 4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "sourceUrl": "https://github.com/shadow2496/VITON-HD#license",
+      "copy": "viton-hd-CC-BY-NC-4.0.txt",
+      "commercialUse": false,
+      "attribution": "Seunghwan Choi, Sunghyun Park, Minsoo Lee, Jaegul Choo. VITON-HD: High-Resolution Virtual Try-On via Misalignment-Aware Normalization. CVPR 2021. Official repository LICENSE: Copyright (c) 2021, NeStyle Inc.",
+      "changes": "Original JPEG pixels / bytes unchanged. Renamed files only; source README, license, stable retrieval URLs and hashes archived."
+    },
+    "commercialReady": false,
+    "dwposeAndYOLOX": {
+      "id": "Apache-2.0",
+      "basis": "Pinned official FASHN repository README License section explicitly lists DWPose and YOLOX as Apache-2.0.",
+      "source": "https://github.com/fashn-AI/fashn-vton-1.5/blob/7c0f10af3f91ad4048fe9729c470a13ef905d25a/README.md#license",
+      "weightFilesSource": "https://huggingface.co/fashn-ai/DWPose",
+      "separateWeightLicenseAuditPerformed": false
+    }
+  },
+  "sampleScope": {
+    "originalPhotographs": 4,
+    "inputRoles": 5,
+    "roleReuse": [
+      {
+        "roleId": "garment-model-14627",
+        "reusedFromRoleId": "person-14627",
+        "image": "person-14627.jpg",
+        "sha256": "f02b595b9068354a731c2d43658d92a4d47f23a7d9c73f2c1db651139e2cb2d4",
+        "newPhotograph": false,
+        "pixelsOrBytesEdited": false,
+        "description": "One original photograph is registered in two input roles; this does not add cross-person ground truth."
+      }
+    ],
+    "generatedOutputsAreRealPhotos": false,
+    "crossPersonGroundTruth": false,
+    "samePersonOriginalOutfitReconstructionReferenceExists": true,
+    "independentDifferentOutfitPhotoTripletExists": false,
+    "realProductSKUs": []
+  },
+  "limits": [
+    "Only two female front-facing catalogue inputs and two upper garments; insufficient for general body type, occlusion, pose, background or clothing coverage.",
+    "The flat-lay value is the inference treatment setting; source catalogue garment photography was not independently confirmed to be physically flat laid.",
+    "Cross-person garment transfer has no same-person same-target-outfit photograph ground truth.",
+    "Original-worn reconstruction has a paired original photo but does not provide an independent before/after cross-outfit triplet.",
+    "Agent visual review is not user scoring; pass is limited to the named visible criterion.",
+    "Baseline body and real-wear similarity fail: generated garment fit/folds and original trouser waist/button position differ.",
+    "Pretrained deployment and integration are self-hosted; the core pretrained model is not independently trained by this project.",
+    "GPU peak memory values are the recorded sampling process scope, exclude other applications, and are not whole-system memory requirements.",
+    "Image generation completion and small-kernel probes do not establish real garment sizing, comfort, textile physics or all-machine compatibility.",
+    "Runtime saves normalized inputs and outputs; no automatic deletion or independent full network capture was performed for this record.",
+    "Photos and human parser have non-commercial research restrictions; main model Apache terms do not remove those restrictions."
+  ],
+  "ui": {
+    "status": "observed-limited",
+    "url": "http://localhost:4189/projects/011-solaris/tryon.html",
+    "method": "CUA native input and visible DOM; screenshots of actual rendered application",
+    "observed": [
+      "Four archive cases and one failed-run disclosure visible",
+      "Both registered garment photo forms actually submitted from UI and generated",
+      "No automatic quality pass on completed live generation",
+      "Actual comparison drag 50 to 30 percent; final single-listener version rechecked",
+      "Keyboard range End 100 and Home 0; comparison restored to 50",
+      "Zoom wheel to scale 2.94468 and pan (-76,82), then reset",
+      "Choice undo restored prior pair, actual image, review and note",
+      "Cross-person real-wear field disabled with no-reference; original-worn reconstruction exposes body/wear fail",
+      "Source planning 0.15 with same fitting scene and actual secondary link opens photo entry",
+      "PNG export preview 576x812, original output plus 44px AI/non-photo/no-size footer",
+      "Review dialog JSON captured verbatim from visible DOM and checked against actual job/pair and reference facts"
+    ],
+    "exports": {
+      "previewImageVerified": true,
+      "reviewJsonContentVerified": true,
+      "browserDownloadToDiskVerified": false,
+      "clipboardBytesMatchedProvider": false,
+      "note": "Download adapter timed out. Synchronous copy reported acceptance, but provider clipboard comparison did not match. Captured review JSON is from the visible dialog, not a claimed browser download."
+    },
+    "pending": [
+      "Live service interruption, queued cancellation and bad-upload UI matrix",
+      "Native held Escape/pointercancel on final divider and garment drag",
+      "Full offline browser-to-model network capture",
+      "Brand SKU and independent same-person target-outfit photos",
+      "Commercial garment fidelity, fit, size and comfort validation"
+    ],
+    "artifacts": [
+      {
+        "file": "assets/atelier-real-person-workspace.png",
+        "sha256": "e9940c4d3a323f0afd1f64e2d4fe1435d7d733ea338a10f2a4a509079e7e41ad",
+        "bytes": 166777,
+        "dimensions": [
+          1264,
+          1666
+        ]
+      },
+      {
+        "file": "assets/atelier-real-person-cover.png",
+        "sha256": "8d5c1fd79e87c3b3e1b304081d5b2a1fb43feefa62145713d16a7147add5238b",
+        "bytes": 32965,
+        "dimensions": [
+          648,
+          642
+        ]
+      },
+      {
+        "file": "assets/atelier-real-person-baseline.png",
+        "sha256": "ef54c69991ce54355ded856099fb5bb34ae444c5bf58d354268b6940847a2d43",
+        "bytes": 164238,
+        "dimensions": [
+          1264,
+          1666
+        ]
+      },
+      {
+        "file": "assets/atelier-real-person-export-preview.png",
+        "sha256": "ee03a4fc20e798b5d145f7151e24c7a86fe36d90874bcf85b5ee5c23b902b80d",
+        "bytes": 44865,
+        "dimensions": [
+          1265,
+          712
+        ]
+      },
+      {
+        "file": "assets/atelier-real-person-review-dialog.png",
+        "sha256": "7ec7a6731b3d57f6319cc2404e383006fdd696deaa8e41ec7149f3801b0167a1",
+        "bytes": 50254,
+        "dimensions": [
+          1265,
+          712
+        ]
+      },
+      {
+        "file": "assets/atelier-real-person-review.json",
+        "sha256": "b5409302523aef5cf2a77044f91d3c23f9fb490b95c8b52270bfa486bc0ffb82",
+        "bytes": 3978
+      }
+    ]
+  },
+  "protected": {
+    "status": "verified-against-014-source-hashes",
+    "files": [
+      {
+        "file": "web/fitting/app.js",
+        "sha256": "43e2add48870ebb36871c656e11e95ae876a5bcd30fbde01ce22fc4f26c74e4f",
+        "matches014Record": true
+      },
+      {
+        "file": "web/fitting/core.js",
+        "sha256": "29525cde9213a9d0033544549a1fdbbfa9e418d81666183fe4f0404a3004e097",
+        "matches014Record": true
+      },
+      {
+        "file": "web/fitting/scene.js",
+        "sha256": "16fb9d1ee2132f2456a69dd1b07aa0c3b2fc102811324d15b89977359f0277be",
+        "matches014Record": true
+      },
+      {
+        "file": "web/fitting/assets/avatar.glb",
+        "sha256": "9b236207c5256cb79e699d451c8345b7790717c2a06f151fe9e2814aa57be631",
+        "matches014Record": true
+      },
+      {
+        "file": "web/fitting/assets/core-tee.glb",
+        "sha256": "79b645eb26a89f3c755d7dc25ed26c15129e905381d8e47b3f89b144638d1d15",
+        "matches014Record": true
+      },
+      {
+        "file": "web/fitting/assets/field-jacket.glb",
+        "sha256": "72b28ac1219ba2f848fb3000374680d12b02738d8672e7152e7ca557dcf7fade",
+        "matches014Record": true
+      },
+      {
+        "file": "web/fitting/assets/fit-registration.json",
+        "sha256": "ec5bd56929fa52daf92691eafa0e09d1b21ca33c2fe913f2fe9fa74798ca4402",
+        "matches014Record": true
+      },
+      {
+        "file": "web/fitting/assets/manifest.json",
+        "sha256": "593acdd821a603830c723479a139b2d75e82dff37bcaa0a7b324ac1c18bd060c",
+        "matches014Record": true
+      },
+      {
+        "file": "web/fitting/assets/quaternius-cc0-license.txt",
+        "sha256": "11eac7504a28077e9d8dbac8ddfca2566510efba7eef46e11f21cdd2bc96d4d5",
+        "matches014Record": true
+      },
+      {
+        "file": "web/fitting/footwear/court.glb",
+        "sha256": "9f6e8db208e6d1e622bf0327934829e1842838e8fb2b52207f9402307cd68838",
+        "matches014Record": true
+      },
+      {
+        "file": "web/fitting/footwear/ridge.glb",
+        "sha256": "3454599203fc1f103a2f9583c5b9d59db8c37b993168567447e9cef78c2e5dc9",
+        "matches014Record": true
+      },
+      {
+        "file": "web/fitting/footwear/fit-registration.json",
+        "sha256": "decfd54bc02894f66ddd2d808294d1d487263bb0837c9f7a17038d8767440f18",
+        "matches014Record": true
+      },
+      {
+        "file": "web/fitting/footwear/manifest.json",
+        "sha256": "e96ab69c9d0fb515dad12102d09a512aadba1194d69909ae000aa4d183a0df35",
+        "matches014Record": true
+      },
+      {
+        "file": "web/fitting/footwear/quaternius-cc0-license.txt",
+        "sha256": "11eac7504a28077e9d8dbac8ddfca2566510efba7eef46e11f21cdd2bc96d4d5",
+        "matches014Record": true
+      },
+      {
+        "file": "web/studio/vendor/addons/utils/SkeletonUtils.js",
+        "sha256": "0761b1e003917b215d25dd81439d854b36034b5a57ce84c2cfe3b02428d7b253",
+        "matches014Record": true
+      },
+      {
+        "file": "assets/atelier-footwear-workspace.jpg",
+        "sha256": "6bb338f24ce729d0fcd20610252cd66cf607e0094d814d1594363ded97487678",
+        "matches014Record": true
+      }
+    ],
+    "scope": "Unchanged original fitting code, complete body/clothing/shoe assets, registration and original cover; new navigation/CSS and planning intentionally updated."
+  },
+  "checks": {
+    "status": "passed-with-ui-and-quality-limits-explicit",
+    "testResults": {
+      "productNode": {
+        "passed": 189,
+        "failed": 0
+      },
+      "tryonPython": {
+        "passed": 18,
+        "failed": 0,
+        "scope": "Includes fake-runner and lifecycle tests; independent actual runs recorded separately"
+      },
+      "repositoryNode": {
+        "passed": 16,
+        "failed": 0
+      }
+    },
+    "integrationGeneratorCheck": true,
+    "catalogSyncAndCheck": true,
+    "siteBuild": {
+      "projects": 14,
+      "passed": true
+    },
+    "publishedFiles": [
+      {
+        "file": "tryon.html",
+        "sha256": "02472464abf8dbb2f9ce865592e33fcab33c574221bd8096d8a6a5fa1d22b333",
+        "bytes": 9137
+      },
+      {
+        "file": "tryon/app.js",
+        "sha256": "8fc72b99e2a2c403f39946071d054677a55c74d69043ca4760c99e43778b455d",
+        "bytes": 24580
+      },
+      {
+        "file": "tryon/core.js",
+        "sha256": "2bae736bfe5259c1c22655797bc02d6043c4be656f251e0f572187596fa9fb47",
+        "bytes": 2764
+      },
+      {
+        "file": "tryon/experiments.json",
+        "sha256": "d34886c46dc3d02e1e21a93fa2ba254e56df4c5b739b03e592c6b436489087fd",
+        "bytes": 22670
+      },
+      {
+        "file": "tryon/results/cross-00055-14627.metadata.json",
+        "sha256": "c6e94d2f5ea57cc4ca2a72d6c2fa8495e44252a695b67ca465a620b6a978de1a",
+        "bytes": 2719
+      },
+      {
+        "file": "tryon/results/cross-00055-14627.png",
+        "sha256": "f918848abb8db18eec06866685527668804dc51e4527007de696ffb41a8a1302",
+        "bytes": 422481
+      },
+      {
+        "file": "tryon/results/cross-14627-00055.metadata.json",
+        "sha256": "32282ffbc33b1b0ea4d5842a94e0f70dc356bf6934e340bf161c4cb024c318bb",
+        "bytes": 2719
+      },
+      {
+        "file": "tryon/results/cross-14627-00055.png",
+        "sha256": "22e21ad66df195f580f7497754c55b35a2d88efa7073c088b6cb9d3b5a3a8f4f",
+        "bytes": 347920
+      },
+      {
+        "file": "tryon/results/model-reference-00055-14627.metadata.json",
+        "sha256": "f3d88cb062fa62a92a1ddafa8b3c4fbf0c9ebc16a0faed9145de67202be4f2f7",
+        "bytes": 2717
+      },
+      {
+        "file": "tryon/results/model-reference-00055-14627.png",
+        "sha256": "147fcf318395f59a0f0eec76d0de8ad928c25b98b714e9a140648f3df29546c7",
+        "bytes": 430325
+      },
+      {
+        "file": "tryon/results/reconstruction-00055.metadata.json",
+        "sha256": "b6c9b392ba33e1ebd0eff510ff9f86ed2c4825207acf5a2b42a7d1e6d71001be",
+        "bytes": 2719
+      },
+      {
+        "file": "tryon/results/reconstruction-00055.png",
+        "sha256": "e35847d2f722b75106f5215f5951a33e3427f424b111c3a875e3ce1829b8428d",
+        "bytes": 420440
+      },
+      {
+        "file": "tryon/samples/garment-00055.jpg",
+        "sha256": "c9c13719456663be040a63711d0ee92c6bac2e259017b072d396d874bdc367ad",
+        "bytes": 94754
+      },
+      {
+        "file": "tryon/samples/garment-14627.jpg",
+        "sha256": "3fd079502958281685d739cd88e3b2a2c0300f67c7370bfc0146d7c549cf4346",
+        "bytes": 62788
+      },
+      {
+        "file": "tryon/samples/manifest.json",
+        "sha256": "df46865e724fd4c864d0d243eec906b537b3b048abd484b534a418e37ef06706",
+        "bytes": 11769
+      },
+      {
+        "file": "tryon/samples/person-00055.jpg",
+        "sha256": "a11f34cef29d0ccda4b79b92426659d30c26ad1334237604d686e1a7ec341a78",
+        "bytes": 152937
+      },
+      {
+        "file": "tryon/samples/person-14627.jpg",
+        "sha256": "f02b595b9068354a731c2d43658d92a4d47f23a7d9c73f2c1db651139e2cb2d4",
+        "bytes": 100057
+      },
+      {
+        "file": "tryon/samples/viton-hd-CC-BY-NC-4.0.txt",
+        "sha256": "7c828abdb303d97cc4a0a9638445567eb9ccadf10e554e49db431f0f177f9836",
+        "bytes": 19398
+      },
+      {
+        "file": "tryon/tryon.css",
+        "sha256": "518d2ee3a0d5c170ea9c261616abc8cd2c67d33087633430a576b2ca2405c7f0",
+        "bytes": 11038
+      }
+    ],
+    "runtimeExcludedFromSite": true
+  },
+  "sourceHashes": [
+    {
+      "file": "projects/011-solaris/web/tryon.html",
+      "sha256": "02472464abf8dbb2f9ce865592e33fcab33c574221bd8096d8a6a5fa1d22b333",
+      "bytes": 9137
+    },
+    {
+      "file": "projects/011-solaris/web/tryon/app.js",
+      "sha256": "8fc72b99e2a2c403f39946071d054677a55c74d69043ca4760c99e43778b455d",
+      "bytes": 24580
+    },
+    {
+      "file": "projects/011-solaris/web/tryon/core.js",
+      "sha256": "2bae736bfe5259c1c22655797bc02d6043c4be656f251e0f572187596fa9fb47",
+      "bytes": 2764
+    },
+    {
+      "file": "projects/011-solaris/web/tryon/tryon.css",
+      "sha256": "518d2ee3a0d5c170ea9c261616abc8cd2c67d33087633430a576b2ca2405c7f0",
+      "bytes": 11038
+    },
+    {
+      "file": "projects/011-solaris/web/tryon/experiments.json",
+      "sha256": "d34886c46dc3d02e1e21a93fa2ba254e56df4c5b739b03e592c6b436489087fd",
+      "bytes": 22670
+    },
+    {
+      "file": "projects/011-solaris/web/tryon/samples/manifest.json",
+      "sha256": "df46865e724fd4c864d0d243eec906b537b3b048abd484b534a418e37ef06706",
+      "bytes": 11769
+    },
+    {
+      "file": "projects/011-solaris/scripts/tryon-service.py",
+      "sha256": "c7a2bc8beb3525017e073afa8a10c418a8330c38a8bb3e28797c151f5a4d4414",
+      "bytes": 34447
+    },
+    {
+      "file": "projects/011-solaris/scripts/tryon-probe.py",
+      "sha256": "fbc911a09e7f289ef36f835e818f1070540bb332231933de97c68fea634b4caa",
+      "bytes": 7057
+    },
+    {
+      "file": "projects/011-solaris/scripts/start-tryon-service.ps1",
+      "sha256": "10665060601004d10bbe5db673125f5890c4111f7e36f2b413ccb8a146411138",
+      "bytes": 1454
+    },
+    {
+      "file": "projects/011-solaris/tests/tryon-core.test.mjs",
+      "sha256": "21d281255c31e46fa84cbd582f9630d3c59a4f1de7390a5df7992277e7bf2ed2",
+      "bytes": 3191
+    },
+    {
+      "file": "projects/011-solaris/tests/tryon-service.test.py",
+      "sha256": "a6d8f18ab41104ed220a25e7395327c43039849a47a3bd9e3000d5c7915f3319",
+      "bytes": 27627
+    },
+    {
+      "file": "projects/011-solaris/README.md",
+      "sha256": "4734298cac2cc21a6c7054d0c9abe240d3c37dfb8e1668bef8d97e4a355fbfce",
+      "bytes": 44701
+    },
+    {
+      "file": "projects/011-solaris/notes/product-release.md",
+      "sha256": "816d76d0bc4a44e97fbc3cc13ebdfa9e76c86895f920f20c0a8e48f5d6d56979",
+      "bytes": 68112
+    },
+    {
+      "file": "projects/011-solaris/web/studio/integration-data.json",
+      "sha256": "41db666966fcbcdb7c5c93b7e672fa76c7b43247dfe89062f7aeb2a85b5359f0",
+      "bytes": 180369
+    },
+    {
+      "file": "projects/011-solaris/web/capabilities/scene-catalog.json",
+      "sha256": "412f4e1e190f6575108655987b6b7e418a5b6382e840a1058a4950d95af45097",
+      "bytes": 99703
+    },
+    {
+      "file": "projects/catalog.json",
+      "sha256": "90a0cc263e279dc9357a4064ac5d1657334bb8eceeeb931199c445d8ae6c8981",
+      "bytes": 36964
+    }
+  ]
+}

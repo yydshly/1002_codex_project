@@ -1,0 +1,167 @@
+{
+  "product": "ATELIER",
+  "release": "0.10.1",
+  "date": "2026-10-05",
+  "entry": "http://localhost:4189/projects/011-solaris/materials.html",
+  "status": "passed-bounded-desktop-feedback-workflow",
+  "userFeedback": "只有冰能融化，其他看不到效果；火源没有可见效果。",
+  "diagnosis": [
+    "恢复的铜和铝已经达到60°C教学上限，旧界面缺少清楚的终点与单样品重试入口。",
+    "铜铝在限定温区保持固态，旧界面的微小温度读数不足以说明升温效果。",
+    "高观察角度下托皿遮住蓝焰；微弱热流与停止后归零的过程读数进一步降低可观察性。"
+  ],
+  "model": {
+    "absorbedPowerW": 10,
+    "defaultTeachingClockRate": 1,
+    "optionalTeachingClockRates": [
+      1,
+      4
+    ],
+    "clockChangeAllowedOnlyWhilePaused": true,
+    "clockRateIsObserverSettingNotPersistedState": true,
+    "thermalSchemaVersion": 1,
+    "temperatureIsCalculatedNotMeasured": true,
+    "metalRangeC": [
+      25,
+      60
+    ],
+    "metalMassG": 10,
+    "iceMassG": 1,
+    "iceCoexistenceTemperatureC": 0,
+    "iceLatentHeatJPerG": 333.4,
+    "inputOriginPersistedInLedger": false,
+    "boundary": "均匀温度、零散热的10W吸热教学。彩环、温度条、蓝焰与热流箭头为标注的教学示意；金属PBR保持固态，不假造红热或熔化。"
+  },
+  "geometry": {
+    "standBase": "空心环形底座容纳完整热源底部",
+    "trayBottomY": 0.531,
+    "animatedFlameMaximumY": 0.51,
+    "flameVisibleBelowTray": true,
+    "heatFlowAffectsPhysicsOrSourcePicking": false,
+    "sampleGeometryIsAuthoredNotMeasured": true
+  },
+  "automated": {
+    "productTests": 112,
+    "materialsCoreTests": 17,
+    "independentReferenceChecks": 15,
+    "referenceFiles": 4,
+    "referenceBytes": 3120669,
+    "status": "passed",
+    "commands": [
+      "node --test projects/011-solaris/tests/*.test.mjs",
+      "node projects/011-solaris/scripts/verify-materials-reference.mjs",
+      "node --check projects/011-solaris/web/materials/app.js",
+      "node --check projects/011-solaris/web/materials/scene.js"
+    ],
+    "repositoryTests": 16
+  },
+  "browser": {
+    "type": "Codex in-app browser",
+    "naturalViewport": [
+      1280,
+      720
+    ],
+    "viewportOverrideUsed": false,
+    "scrollWidth": 1280,
+    "warningAndErrorLogs": [],
+    "checks": [
+      {
+        "name": "大号温度、温升、温度条与独立示意环",
+        "status": "passed",
+        "evidence": "实际画面显示铜60°C、ΔT+35°C和暖色环，铝25°C起温、温升条随供能增长；金属形状保持固态。"
+      },
+      {
+        "name": "供能本体与路径真实可见",
+        "status": "passed",
+        "evidence": "最终抬高托皿的真实截图中可见烧头上方饱和蓝焰、橙色路径和上行箭头；常驻标签显示蓝焰已点燃/火源已熄灭，画面说明两类示意。"
+      },
+      {
+        "name": "三个接口原生鼠标命中后吸附供能",
+        "status": "passed",
+        "evidence": "实际拾取拖动并释放分别命中铜、铝、冰；通过页面备份读取source严格为[-0.78,0]、[0,0]、[0.78,0]，对应样品产生Q并显示供能状态。"
+      },
+      {
+        "name": "铜慢速观察与教学终点",
+        "status": "passed",
+        "evidence": "默认×1真实鼠标拖到铜接口；升温至60°C后自动熄火，记录134.77921769796612J和13.477921769796612教学秒。"
+      },
+      {
+        "name": "铝快放观察与同一功率账本",
+        "status": "passed",
+        "evidence": "暂停切×4后铝供能到60°C自动停止，累计313.9994991463235J；累计教学时间31.39994991463235秒，各过程Q/t严格为10W。"
+      },
+      {
+        "name": "观察倍率暂停约束与重开默认",
+        "status": "passed",
+        "evidence": "当前观察默认×1；供能中select禁用，暂停恢复可切×4；重载页面又为×1。倍率不增加严格实验schema字段。"
+      },
+      {
+        "name": "暂停保留累计热量和时间",
+        "status": "passed",
+        "evidence": "铜暂停显示3.0J、0.30教学秒；铝暂停后5.0J、0.50秒保持；对应备份账本不归零，火源明确显示熄灭。"
+      },
+      {
+        "name": "三材料单独重新观察与整次撤销重做",
+        "status": "passed",
+        "evidence": "铜、铝、冰分别重新观察并暂停：仅移除自身旧能量与记录，其他两样品保持。每次一次撤销的全JSON严格等于重试前基线，重做严格等于新过程状态。"
+      },
+      {
+        "name": "重新观察取消恢复",
+        "status": "passed",
+        "evidence": "铜重试活动中Escape完整恢复原60°C和旧账本、source、camera、nextId；铝和冰取消重试也恢复原状态。达到终点后的重试记录可一次撤销。"
+      },
+      {
+        "name": "本机保存重开与非法JSON原子拒绝",
+        "status": "passed",
+        "evidence": "新稳定实验保存并重载后从页面备份读出的全JSON严格相同。额外unregistered字段被拒绝，原实验严格不变；合法原实验成功导入。"
+      },
+      {
+        "name": "稳定PNG真实输出",
+        "status": "passed",
+        "evidence": "本轮稳定状态实际打开图片预览，原生PNG尺寸1443×969。"
+      },
+      {
+        "name": "测试前已有实验保持",
+        "status": "passed",
+        "evidence": "最终通过网页严格备份导入恢复测试前全部实验，页面读取全JSON严格等于原基线，并点击保存实验。"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "file": "../assets/atelier-materials-heating.jpg",
+      "type": "actual-active-browser-screenshot",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "../assets/atelier-materials-feedback-workspace.jpg",
+      "type": "actual-paused-browser-screenshot",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "../assets/atelier-materials-feedback-example.json",
+      "type": "strict-page-backup-from-stable-tested-state"
+    }
+  ],
+  "historicalValidation": "materials-validation.json",
+  "historicalBoundary": "0.10.0的默认×4、107产品/14独立检查与原图仍保留当时身份；本记录描述0.10.1实际观察与重试修复。",
+  "notValidatedInThisFeedbackPass": [
+    "触屏与移动断点",
+    "外部精密时钟校准",
+    "真实热场、燃烧化学、冷却与流体",
+    "存储故障、完全断网、性能与下载写盘专项"
+  ],
+  "descriptionValidation": {
+    "status": "passed",
+    "release": "0.10.1",
+    "scopeDialog": true,
+    "scenePlanningCard": true,
+    "temperatureFireRestartAndClockDescriptionsVisible": true
+  }
+}

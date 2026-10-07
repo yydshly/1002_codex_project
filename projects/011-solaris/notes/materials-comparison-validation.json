@@ -1,0 +1,223 @@
+{
+  "product": "ATELIER",
+  "release": "0.10.2",
+  "date": "2026-10-05",
+  "entry": "http://localhost:4189/projects/011-solaris/materials.html",
+  "status": "passed-bounded-desktop-comparison-workflow",
+  "purpose": "在同一真实运行的材料教学台，用明确的等热量条件比较铜、铝温升，并保留冰与可恢复实验。",
+  "model": {
+    "absorbedPowerW": 10,
+    "comparisonDosesJ": [
+      40,
+      80,
+      120
+    ],
+    "metalMassG": 10,
+    "initialMetalTemperatureC": 25,
+    "metalRangeC": [
+      25,
+      60
+    ],
+    "defaultTeachingClockRate": 1,
+    "optionalTeachingClockRates": [
+      1,
+      4
+    ],
+    "sequence": [
+      "copper",
+      "aluminum"
+    ],
+    "burners": 1,
+    "thermalSchemaVersion": 1,
+    "clockRateAndComparisonOutcomeAreTemporaryObserverSettings": true,
+    "inputOriginPersistedInLedger": false,
+    "comparisonResetsOnlyCopperAndAluminum": true,
+    "iceEnergyAndRecordsPreserved": true,
+    "completedComparisonRecords": 2,
+    "completedComparisonUndoOperations": 1,
+    "doseCompletionIsSeparateFromPhysical60CCompletion": true,
+    "chart": {
+      "xAxis": "每份样品累计吸收热量 Q（J）",
+      "xRangeJ": [
+        0,
+        340
+      ],
+      "yAxis": "温度（°C）",
+      "yRangeC": [
+        25,
+        60
+      ],
+      "copperMark": "实线与圆点",
+      "aluminumMark": "虚线与方点",
+      "currentPointsFollowActualEnergy": true,
+      "curveExtrapolationAbove60C": false,
+      "iceIncluded": false,
+      "temperatureIsCalculatedNotMeasured": true
+    },
+    "boundary": "常温比热、均匀温度、零散热和固定名义已吸收功率的教学计算；蓝焰与箭头是标注的供能示意，没有通用燃烧、传热、流体或化学预测。"
+  },
+  "automated": {
+    "status": "passed",
+    "productTests": 121,
+    "materialsCoreTests": 17,
+    "newComparisonTests": 9,
+    "independentReferenceChecks": 15,
+    "referenceFiles": 4,
+    "referenceBytes": 3120669,
+    "commands": [
+      "node --test projects/011-solaris/tests/*.test.mjs",
+      "node projects/011-solaris/scripts/verify-materials-reference.mjs",
+      "node --check projects/011-solaris/web/materials/app.js",
+      "node --check projects/011-solaris/web/materials/comparison.js",
+      "node --check projects/011-solaris/web/materials/comparison-view.js"
+    ],
+    "coverage": [
+      "三档相同热量、不同温升与目标精确截止",
+      "冰记录、相机、原始编号与完整输入校验",
+      "分段舍入、零输入和物理截止不与剂量截止混淆",
+      "38条冰记录可容纳两步、39条拒绝且原状态不改",
+      "两步编号余量检查与编号耗尽",
+      "第二步取消及部分暂停、一次撤销与重做"
+    ],
+    "repositoryTests": 16,
+    "integrationGenerationCheck": "passed: 0.10.2; 9 scenes,31/36,5 pending,7 phases",
+    "repositoryCatalogCheck": "passed:14 projects",
+    "staticBuild": "passed"
+  },
+  "browser": {
+    "type": "Codex in-app browser",
+    "naturalViewport": [
+      1280,
+      720
+    ],
+    "viewportOverrideUsed": false,
+    "scrollWidth": 1280,
+    "warningAndErrorLogs": [],
+    "checks": [
+      {
+        "name": "第一步启动与整个对照取消",
+        "status": "passed",
+        "evidence": "铜开始真实供能，剂量和速度选择锁定；取消后公开实验备份的完整JSON与启动前精确一致。"
+      },
+      {
+        "name": "40J完成与只读实时曲线",
+        "status": "passed",
+        "evidence": "铜铝各40J、各4教学秒，温度35.4/29.5°C。真实SVG点中心横坐标均为59.17647058823529，纵坐标94.35401736890776与112.9872387950861。两条记录合为一次撤销，完整JSON撤销/重做一致。"
+      },
+      {
+        "name": "80J第二步蓝焰及完成实景",
+        "status": "passed",
+        "evidence": "4×观察时同一个火源从铜转到铝，蓝焰与橙色路径可见；完成后各80J、各8教学秒，铜45.8°C、铝33.9°C，冰仍为原有40.8%融化。"
+      },
+      {
+        "name": "120J完成",
+        "status": "passed",
+        "evidence": "各120J，铜56.2°C、铝38.4°C，未达到60°C物理上限；剂量截止后自动熄火，冰账不变。"
+      },
+      {
+        "name": "第二步中途暂停及整次撤销重做",
+        "status": "passed",
+        "evidence": "40J对照第二步暂停，实际记录铜40J/4s、铝5.384000000003725J/0.5384000000003726s；一次撤销精确恢复原120J基线，重做精确恢复部分对照。"
+      },
+      {
+        "name": "第二步原生Escape取消",
+        "status": "passed",
+        "evidence": "80J对照铜已完成、铝开始供能后按原生Escape；两份金属、冰、账本、编号、热源与相机全部恢复启动前JSON。"
+      },
+      {
+        "name": "容量拒绝保持完整实验",
+        "status": "passed",
+        "evidence": "通过合法JSON导入39条冰记录，启动明确提示需两条可用热输入记录；拒绝前后完整JSON一致，没有先重置金属或丢账。"
+      },
+      {
+        "name": "普通供能编号耗尽保护",
+        "status": "passed",
+        "evidence": "合法nextId=1000000配置禁用普通开始与重新观察并说明原因；原生拖动火源从冰向铝命中后启动前拒绝，完整JSON精确保持，未展示无法记账的加热。"
+      },
+      {
+        "name": "80J实验保存重开",
+        "status": "passed",
+        "evidence": "点击保存并重载后，公开备份的完整实验JSON精确一致、曲线按实际热量恢复；速度恢复默认1×，对照选择与完成标签属于临时观察设置。"
+      },
+      {
+        "name": "普通供能回归",
+        "status": "passed",
+        "evidence": "冰普通供能蓝焰正常，热量136.0359999990463→138.1289999990463J，铜铝各80J保持；原生Escape恢复普通供能前完整JSON。"
+      },
+      {
+        "name": "用户原实验恢复",
+        "status": "passed",
+        "evidence": "所有临时验收结束后通过界面导入、保存并重载，完整原JSON精确恢复：铜134.77921769796612J、铝313.9994991463235J、冰136.0359999990463J、四条原记录、nextId5及原相机/热源/选择。"
+      }
+    ],
+    "independentWallClockCalibration": "not-tested",
+    "activeBackupAndSave": "controller-read-only-reviewed; completed-save-reopen-and-active-pause-browser-tested"
+  },
+  "evidence": [
+    {
+      "file": "../assets/atelier-materials-comparison-heating.jpg",
+      "type": "actual-active-browser-screenshot",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "description": "80J对照第2步：铜已到45.8°C/80J，铝正在蓝焰供能、约4.5J；实时点与对照控制同屏可见。"
+    },
+    {
+      "file": "../assets/atelier-materials-comparison.jpg",
+      "type": "actual-completed-browser-screenshot",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "description": "80J完成：铜45.8°C、铝33.9°C，两个等热量状态点、完成说明和原冰状态。"
+    },
+    {
+      "file": "../assets/atelier-materials-comparison-example.json",
+      "type": "actual-public-experiment-backup",
+      "schemaVersion": 1,
+      "description": "界面备份的真实80J完成实验，可恢复热量、账本、相机与热源；不包含临时对照模式和速度。"
+    }
+  ],
+  "historicalValidations": [
+    {
+      "release": "0.10.0",
+      "file": "materials-validation.json"
+    },
+    {
+      "release": "0.10.1",
+      "file": "materials-feedback-validation.json"
+    }
+  ],
+  "limits": [
+    "31/36限定实现、九场景、五项待接入及C35六登记目标不因本次C21完善而增加。",
+    "实验JSON保持严格schema1，没有输入来源、模式、剂量选项和速度的持久字段。",
+    "图像导出仍为实际三维渲染，不含HTML侧栏曲线；本轮两张完整界面证据为真实浏览器截图。",
+    "下载完成回调、触屏硬件、设备失联、操作系统断网、目标硬件性能与独立外部计时专项未测。",
+    "比较没有引入两个同时燃烧的火源、实测温度或开放式材料预测。"
+  ],
+  "descriptionValidation": {
+    "release": "0.10.2",
+    "status": "passed",
+    "sceneCapabilityDialog": true,
+    "planningPage": true,
+    "sceneOverviewChecks": 6,
+    "capabilityChecks": 2,
+    "conciseUserSteps": true,
+    "fullList": {
+      "total": 36,
+      "connected": 31,
+      "pending": 5,
+      "scenes": 9
+    },
+    "pendingIds": [
+      "C17",
+      "C18",
+      "C19",
+      "C30",
+      "C31"
+    ],
+    "intentRegisteredTargets": 6,
+    "inputOriginStoredInThermalLedger": false
+  }
+}

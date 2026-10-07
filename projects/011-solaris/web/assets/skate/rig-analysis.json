@@ -1,0 +1,3046 @@
+{
+  "schema": 1,
+  "assetLicense": "CC0-1.0",
+  "author": "Kenney",
+  "method": "Read the original GLB channels; sample LINEAR translations/scales and quaternion slerp; evaluate jointWorld × inverseBind matrices on original y<=0.001 sole vertices with >=0.9 dominant leg influence. These are geometric sample points, not foot bones or physical contact constraints.",
+  "coordinateSystem": "Right handed glTF, Y up; board length along Z. Model units describe these stylized source meshes, not verified human body measurements.",
+  "boundary": "skate-air loops with zero root translation; no native ollie/takeoff/landing clip and no foot/knee/ankle joints. Original clips and preserved geometry cannot by themselves certify a complete ollie, foot IK or obstacle-safe physics.",
+  "characters": [
+    {
+      "path": "models/character-skate-boy.glb",
+      "sha256": "f2540556bb1bae1aabe08de36b7e6b2c19d366a6fa0f6fd31970ad7272a413d8",
+      "clips": [
+        {
+          "name": "skate",
+          "duration": 0.5166666507720947,
+          "frames": [
+            {
+              "seconds": 0,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0,
+                    1.862645149230957e-9
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.07766124399171935,
+                    0,
+                    1.4487240049574108e-9
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.12916666269302368,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0,
+                    1.862645149230957e-9
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.07766124399171935,
+                    0.12977678986797198,
+                    0.18722478100625564
+                  ],
+                  "yRange": [
+                    0.05063299506339654,
+                    0.20892059106460414
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.25833332538604736,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0,
+                    1.862645149230957e-9
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.07766124399171935,
+                    -0.02254891494800561,
+                    0.09647250145327743
+                  ],
+                  "yRange": [
+                    -0.0744507749269363,
+                    0.029352949222784114
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.38749998807907104,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0,
+                    1.862645149230957e-9
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.07766124399171935,
+                    0.06452651583076036,
+                    -0.2748778504476199
+                  ],
+                  "yRange": [
+                    -0.02826616185821726,
+                    0.15731918602532846
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.5166666507720947,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0,
+                    1.862645149230957e-9
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.07766124399171935,
+                    0,
+                    1.4487240049574108e-9
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "skate-stand",
+          "duration": 0.5,
+          "frames": [
+            {
+              "seconds": 0,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801284415285,
+                    4.1723251242853365e-9,
+                    -0.022656853748718155
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.08934540912014652,
+                    4.1723251242853365e-9,
+                    0.015478032062192342
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.125,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801295726445,
+                    4.1723251242853365e-9,
+                    -0.022656853808168568
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.08934540912014652,
+                    4.1723251242853365e-9,
+                    0.015478032062192342
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.25,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801299496829,
+                    4.1723251242853365e-9,
+                    -0.022656853827985372
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.08934540912014652,
+                    4.1723251242853365e-9,
+                    0.015478032062192342
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.375,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801295726445,
+                    4.1723251242853365e-9,
+                    -0.022656853808168568
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.08934540912014652,
+                    4.1723251242853365e-9,
+                    0.015478032062192342
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.5,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801284415285,
+                    4.1723251242853365e-9,
+                    -0.022656853748718155
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.08934540912014652,
+                    4.1723251242853365e-9,
+                    0.015478032062192342
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "skate-air",
+          "duration": 0.6666666865348816,
+          "frames": [
+            {
+              "seconds": 0,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.0747711471611067,
+                    0.048055528403697985,
+                    -0.04560460136008976
+                  ],
+                  "yRange": [
+                    0.009083485297058776,
+                    0.08702756867751454
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.10850445901081936,
+                    0.058828653246795905,
+                    -0.06042343999353473
+                  ],
+                  "yRange": [
+                    -0.013861485656985702,
+                    0.13480972575751468
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.1666666716337204,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.06595101118045367,
+                    0.05140412076259058,
+                    -0.05428665875328981
+                  ],
+                  "yRange": [
+                    0.005730491678191452,
+                    0.09707774730448926
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.10610828279479904,
+                    0.0651137062841145,
+                    -0.07155312405959675
+                  ],
+                  "yRange": [
+                    -0.013149659639811413,
+                    0.14668107255623808
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.3333333432674408,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.057324827131755025,
+                    0.055632083296985414,
+                    -0.06277780577048342
+                  ],
+                  "yRange": [
+                    0.003492292988311052,
+                    0.10777186981569212
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.1041765179490409,
+                    0.0697162941580424,
+                    -0.07872770588705069
+                  ],
+                  "yRange": [
+                    -0.012060548268853936,
+                    0.154785337726985
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.5000000149011612,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.06595100983314509,
+                    0.051404121756645924,
+                    -0.054286662499799035
+                  ],
+                  "yRange": [
+                    0.005730490241914389,
+                    0.09707774995142576
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.10678406077293084,
+                    0.06342381662527259,
+                    -0.06872674283519604
+                  ],
+                  "yRange": [
+                    -0.013437725571627743,
+                    0.14358942886852166
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.6666666865348816,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.0747711471611067,
+                    0.048055528403697985,
+                    -0.04560460136008976
+                  ],
+                  "yRange": [
+                    0.009083485297058776,
+                    0.08702756867751454
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.10850445901081936,
+                    0.058828653246795905,
+                    -0.06042343999353473
+                  ],
+                  "yRange": [
+                    -0.013861485656985702,
+                    0.13480972575751468
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "skate-grab",
+          "duration": 0.5,
+          "frames": [
+            {
+              "seconds": 0,
+              "rootPosition": [
+                0,
+                0,
+                -0.05000000074505806
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801284415285,
+                    4.1723251242853365e-9,
+                    -0.07265685449377621
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.08934540912014652,
+                    4.1723251242853365e-9,
+                    -0.03452196868286572
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.125,
+              "rootPosition": [
+                0,
+                0,
+                -0.05000000074505806
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801295726445,
+                    4.1723251242853365e-9,
+                    -0.07265685455322662
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.08934540912014652,
+                    4.1723251242853365e-9,
+                    -0.03452196868286572
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.25,
+              "rootPosition": [
+                0,
+                0,
+                -0.05000000074505806
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801299496829,
+                    4.1723251242853365e-9,
+                    -0.07265685457304344
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.08934540912014652,
+                    4.1723251242853365e-9,
+                    -0.03452196868286572
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.375,
+              "rootPosition": [
+                0,
+                0,
+                -0.05000000074505806
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801295726445,
+                    4.1723251242853365e-9,
+                    -0.07265685455322662
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.08934540912014652,
+                    4.1723251242853365e-9,
+                    -0.03452196868286572
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.5,
+              "rootPosition": [
+                0,
+                0,
+                -0.05000000074505806
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801284415285,
+                    4.1723251242853365e-9,
+                    -0.07265685449377621
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.08934540912014652,
+                    4.1723251242853365e-9,
+                    -0.03452196868286572
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "jump",
+          "duration": 0.5,
+          "frames": [
+            {
+              "seconds": 0,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.0790999997407198,
+                    0.14761279721955925,
+                    -0.24950340392973672
+                  ],
+                  "yRange": [
+                    0.048605379069011995,
+                    0.2466202081733972
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.07019027860628234,
+                    0.11570177085264588,
+                    0.13595690823075707
+                  ],
+                  "yRange": [
+                    0.0432233141404824,
+                    0.18818023341853943
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.125,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.0790999997407198,
+                    0.11873704498751689,
+                    -0.23309983299820308
+                  ],
+                  "yRange": [
+                    0.026353753426721194,
+                    0.2111203298331017
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.07019027860628234,
+                    0.13236905206358943,
+                    0.14660025982451086
+                  ],
+                  "yRange": [
+                    0.05232112316442972,
+                    0.2124169874278283
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.25,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.0790999997407198,
+                    0.094033228353706,
+                    -0.2122789143432088
+                  ],
+                  "yRange": [
+                    0.01116194435255638,
+                    0.17690450633105914
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.07019027860628234,
+                    0.1496154325744762,
+                    0.15512385417633223
+                  ],
+                  "yRange": [
+                    0.06314533437878686,
+                    0.23608553775393187
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.375,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.0790999997407198,
+                    0.1187370514298532,
+                    -0.2330998418419234
+                  ],
+                  "yRange": [
+                    0.026353755454512975,
+                    0.21112034068998226
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.07019027860628234,
+                    0.13236905596160523,
+                    0.14660026665779297
+                  ],
+                  "yRange": [
+                    0.05232112283128104,
+                    0.2124169955570089
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.5,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.0790999997407198,
+                    0.14761279721955925,
+                    -0.24950340392973672
+                  ],
+                  "yRange": [
+                    0.048605379069011995,
+                    0.2466202081733972
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.07019027860628234,
+                    0.11570177085264588,
+                    0.13595690823075707
+                  ],
+                  "yRange": [
+                    0.0432233141404824,
+                    0.18818023341853943
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "fall",
+          "duration": 0.3333333432674408,
+          "frames": [
+            {
+              "seconds": 0,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.2016662707676316,
+                    0.11302323085760287,
+                    0.08934528890783
+                  ],
+                  "yRange": [
+                    0.024255629971392065,
+                    0.20179083813698404
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.1818921704128708,
+                    0.07195176331379317,
+                    0.07792879956809709
+                  ],
+                  "yRange": [
+                    -0.0005266851138879536,
+                    0.14443021661139965
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.0833333358168602,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.2205096603016019,
+                    0.1130232391205756,
+                    0.0668575037602706
+                  ],
+                  "yRange": [
+                    0.024255633116933906,
+                    0.20179085157660953
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.19904288921192975,
+                    0.07195176421305353,
+                    0.059077454988541715
+                  ],
+                  "yRange": [
+                    -0.0005266866832793621,
+                    0.1444302210806756
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.1666666716337204,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.22656109624711,
+                    0.11302324401892351,
+                    0.057544992690940655
+                  ],
+                  "yRange": [
+                    0.02425563363198778,
+                    0.20179085960200852
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.2046247181988515,
+                    0.07195177233177298,
+                    0.05120885378259558
+                  ],
+                  "yRange": [
+                    -0.000526684671432201,
+                    0.1444302318331313
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.2500000074505806,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.212801293247768,
+                    0.11302323814749074,
+                    0.0770447181297585
+                  ],
+                  "yRange": [
+                    0.024255633507061364,
+                    0.20179084924031226
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.19199198787505453,
+                    0.07195175983626985,
+                    0.06764661600240665
+                  ],
+                  "yRange": [
+                    -0.0005266881842013182,
+                    0.14443021382682325
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.3333333432674408,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.2016662707676316,
+                    0.11302323085760287,
+                    0.08934528890783
+                  ],
+                  "yRange": [
+                    0.024255629971392065,
+                    0.20179083813698404
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.1818921704128708,
+                    0.07195176331379317,
+                    0.07792879956809709
+                  ],
+                  "yRange": [
+                    -0.0005266851138879536,
+                    0.14443021661139965
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "crouch",
+          "duration": 0.1666666716337204,
+          "frames": [
+            {
+              "seconds": 0,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0.1128440937039526,
+                    -0.21055033470073392
+                  ],
+                  "yRange": [
+                    0.01531116125468443,
+                    0.21037701906368977
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.07766124399171935,
+                    0,
+                    0.09475000161263678
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.0416666679084301,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0.1128440937039526,
+                    -0.21055033470073392
+                  ],
+                  "yRange": [
+                    0.01531116125468443,
+                    0.21037701906368977
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.07766124399171935,
+                    0,
+                    0.09475000161263678
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.0833333358168602,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0.1128440937039526,
+                    -0.21055033470073392
+                  ],
+                  "yRange": [
+                    0.01531116125468443,
+                    0.21037701906368977
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.07766124399171935,
+                    0,
+                    0.09475000161263678
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.1250000037252903,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0.1128440937039526,
+                    -0.21055033470073392
+                  ],
+                  "yRange": [
+                    0.01531116125468443,
+                    0.21037701906368977
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.07766124399171935,
+                    0,
+                    0.09475000161263678
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.1666666716337204,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0.1128440937039526,
+                    -0.21055033470073392
+                  ],
+                  "yRange": [
+                    0.01531116125468443,
+                    0.21037701906368977
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 18,
+                  "center": [
+                    -0.07766124399171935,
+                    0,
+                    0.09475000161263678
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "models/character-skate-girl.glb",
+      "sha256": "e611f7d99adb6aa7340c5dfadd82696bb590918b4451698184b9bfeccec71d76",
+      "clips": [
+        {
+          "name": "skate",
+          "duration": 0.5166666507720947,
+          "frames": [
+            {
+              "seconds": 0,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0,
+                    1.862645149230957e-9
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.08357096649706364,
+                    0,
+                    1.862645149230957e-9
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.12916666269302368,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0,
+                    1.862645149230957e-9
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.08357096649706364,
+                    0.12977679018757482,
+                    0.1872247812692856
+                  ],
+                  "yRange": [
+                    0.05063299506339654,
+                    0.20892059106460414
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.25833332538604736,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0,
+                    1.862645149230957e-9
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.08357096649706364,
+                    -0.022548914738412657,
+                    0.0964725018102109
+                  ],
+                  "yRange": [
+                    -0.0744507749269363,
+                    0.029352949222784114
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.38749998807907104,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0,
+                    1.862645149230957e-9
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.08357096649706364,
+                    0.06452651545603988,
+                    -0.2748778502717924
+                  ],
+                  "yRange": [
+                    -0.02826616185821726,
+                    0.15731918602532846
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.5166666507720947,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0,
+                    1.862645149230957e-9
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.08357096649706364,
+                    0,
+                    1.862645149230957e-9
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "skate-stand",
+          "duration": 0.5,
+          "frames": [
+            {
+              "seconds": 0,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801284415282,
+                    4.1723251242853365e-9,
+                    -0.02265685374871816
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.09503676646989903,
+                    4.1723251242853365e-9,
+                    0.013886406444802268
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.125,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801295726444,
+                    4.1723251242853365e-9,
+                    -0.022656853808168564
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.09503676646989903,
+                    4.1723251242853365e-9,
+                    0.013886406444802268
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.25,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801299496832,
+                    4.1723251242853365e-9,
+                    -0.022656853827985372
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.09503676646989903,
+                    4.1723251242853365e-9,
+                    0.013886406444802268
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.375,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801295726444,
+                    4.1723251242853365e-9,
+                    -0.022656853808168564
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.09503676646989903,
+                    4.1723251242853365e-9,
+                    0.013886406444802268
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.5,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801284415282,
+                    4.1723251242853365e-9,
+                    -0.02265685374871816
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.09503676646989903,
+                    4.1723251242853365e-9,
+                    0.013886406444802268
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "skate-air",
+          "duration": 0.6666666865348816,
+          "frames": [
+            {
+              "seconds": 0,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.0747711471611067,
+                    0.048055528403698006,
+                    -0.045604601360089765
+                  ],
+                  "yRange": [
+                    0.009083485297058776,
+                    0.08702756867751454
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.11416872486655352,
+                    0.060474117886818515,
+                    -0.060788623245606355
+                  ],
+                  "yRange": [
+                    -0.013861485656985702,
+                    0.13480972575751468
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.1666666716337204,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.06595101118045368,
+                    0.05140412076259058,
+                    -0.05428665875328981
+                  ],
+                  "yRange": [
+                    0.005730491678191452,
+                    0.09707774730448926
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.11177052173117394,
+                    0.0667657040941119,
+                    -0.0719202396732598
+                  ],
+                  "yRange": [
+                    -0.013149659639811413,
+                    0.14668107255623808
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.3333333432674408,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.057324827131755025,
+                    0.055632083296985414,
+                    -0.06277780577048342
+                  ],
+                  "yRange": [
+                    0.003492292988311052,
+                    0.10777186981569212
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.10984059325916185,
+                    0.07136239223555388,
+                    -0.079092990172803
+                  ],
+                  "yRange": [
+                    -0.012060548268853936,
+                    0.154785337726985
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.5000000149011612,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.06595100983314507,
+                    0.051404121756645924,
+                    -0.05428666249979903
+                  ],
+                  "yRange": [
+                    0.005730490241914389,
+                    0.09707774995142576
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.11244628362715778,
+                    0.06507584933530397,
+                    -0.06909394934371224
+                  ],
+                  "yRange": [
+                    -0.013437725571627743,
+                    0.14358942886852166
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.6666666865348816,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.0747711471611067,
+                    0.048055528403698006,
+                    -0.045604601360089765
+                  ],
+                  "yRange": [
+                    0.009083485297058776,
+                    0.08702756867751454
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.11416872486655352,
+                    0.060474117886818515,
+                    -0.060788623245606355
+                  ],
+                  "yRange": [
+                    -0.013861485656985702,
+                    0.13480972575751468
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "skate-grab",
+          "duration": 0.5,
+          "frames": [
+            {
+              "seconds": 0,
+              "rootPosition": [
+                0,
+                0,
+                -0.05000000074505806
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801284415282,
+                    4.1723251242853365e-9,
+                    -0.07265685449377621
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.09503676646989903,
+                    4.1723251242853365e-9,
+                    -0.03611359430025579
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.125,
+              "rootPosition": [
+                0,
+                0,
+                -0.05000000074505806
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801295726444,
+                    4.1723251242853365e-9,
+                    -0.07265685455322662
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.09503676646989903,
+                    4.1723251242853365e-9,
+                    -0.03611359430025579
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.25,
+              "rootPosition": [
+                0,
+                0,
+                -0.05000000074505806
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801299496832,
+                    4.1723251242853365e-9,
+                    -0.07265685457304344
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.09503676646989903,
+                    4.1723251242853365e-9,
+                    -0.03611359430025579
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.375,
+              "rootPosition": [
+                0,
+                0,
+                -0.05000000074505806
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801295726444,
+                    4.1723251242853365e-9,
+                    -0.07265685455322662
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.09503676646989903,
+                    4.1723251242853365e-9,
+                    -0.03611359430025579
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.5,
+              "rootPosition": [
+                0,
+                0,
+                -0.05000000074505806
+              ],
+              "rootQuaternion": [
+                0,
+                -0.08715573698282242,
+                0,
+                -0.9961947202682495
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.09779801284415282,
+                    4.1723251242853365e-9,
+                    -0.07265685449377621
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.09503676646989903,
+                    4.1723251242853365e-9,
+                    -0.03611359430025579
+                  ],
+                  "yRange": [
+                    4.1723251242853365e-9,
+                    4.1723251242853365e-9
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "jump",
+          "duration": 0.5,
+          "frames": [
+            {
+              "seconds": 0,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.0790999997407198,
+                    0.14761279721955925,
+                    -0.24950340392973674
+                  ],
+                  "yRange": [
+                    0.048605379069011995,
+                    0.2466202081733972
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.07610000111162663,
+                    0.1157017711453324,
+                    0.1359569085234435
+                  ],
+                  "yRange": [
+                    0.0432233141404824,
+                    0.18818023341853943
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.125,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.0790999997407198,
+                    0.11873704498751687,
+                    -0.23309983299820314
+                  ],
+                  "yRange": [
+                    0.026353753426721194,
+                    0.2111203298331017
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.07610000111162663,
+                    0.13236905238684338,
+                    0.1466002600830405
+                  ],
+                  "yRange": [
+                    0.05232112316442972,
+                    0.2124169874278283
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.25,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.0790999997407198,
+                    0.09403322835370599,
+                    -0.2122789143432088
+                  ],
+                  "yRange": [
+                    0.01116194435255638,
+                    0.17690450633105914
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.07610000111162663,
+                    0.14961543292366453,
+                    0.1551238543985894
+                  ],
+                  "yRange": [
+                    0.06314533437878686,
+                    0.23608553775393187
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.375,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.0790999997407198,
+                    0.1187370514298532,
+                    -0.2330998418419234
+                  ],
+                  "yRange": [
+                    0.026353755454512975,
+                    0.21112034068998226
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.07610000111162663,
+                    0.13236905628485918,
+                    0.1466002669163226
+                  ],
+                  "yRange": [
+                    0.05232112283128104,
+                    0.2124169955570089
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.5,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.0790999997407198,
+                    0.14761279721955925,
+                    -0.24950340392973674
+                  ],
+                  "yRange": [
+                    0.048605379069011995,
+                    0.2466202081733972
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.07610000111162663,
+                    0.1157017711453324,
+                    0.1359569085234435
+                  ],
+                  "yRange": [
+                    0.0432233141404824,
+                    0.18818023341853943
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "fall",
+          "duration": 0.3333333432674408,
+          "frames": [
+            {
+              "seconds": 0,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.20166627076763166,
+                    0.11302323085760287,
+                    0.08934528890783
+                  ],
+                  "yRange": [
+                    0.024255629971392065,
+                    0.20179083813698404
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.18607097520725296,
+                    0.07195176355728942,
+                    0.07374999469813728
+                  ],
+                  "yRange": [
+                    -0.0005266851138879536,
+                    0.14443021661139965
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.0833333358168602,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.22050966030160193,
+                    0.11302323912057557,
+                    0.0668575037602706
+                  ],
+                  "yRange": [
+                    0.024255633116933906,
+                    0.20179085157660953
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.2024259631279049,
+                    0.07195176456451985,
+                    0.05423187639015387
+                  ],
+                  "yRange": [
+                    -0.0005266866832793621,
+                    0.1444302210806756
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.1666666716337204,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.22656109624710996,
+                    0.11302324401892351,
+                    0.057544992690940655
+                  ],
+                  "yRange": [
+                    0.02425563363198778,
+                    0.20179085960200852
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.20767826829653283,
+                    0.07195177245668063,
+                    0.04614914490905753
+                  ],
+                  "yRange": [
+                    -0.000526684671432201,
+                    0.1444302318331313
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.2500000074505806,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.21280129324776798,
+                    0.11302323814749074,
+                    0.0770447181297585
+                  ],
+                  "yRange": [
+                    0.024255633507061364,
+                    0.20179084924031226
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.19573553669413385,
+                    0.07195176018713281,
+                    0.06307379819559399
+                  ],
+                  "yRange": [
+                    -0.0005266881842013182,
+                    0.14443021382682325
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.3333333432674408,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.20166627076763166,
+                    0.11302323085760287,
+                    0.08934528890783
+                  ],
+                  "yRange": [
+                    0.024255629971392065,
+                    0.20179083813698404
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.18607097520725296,
+                    0.07195176355728942,
+                    0.07374999469813728
+                  ],
+                  "yRange": [
+                    -0.0005266851138879536,
+                    0.14443021661139965
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "crouch",
+          "duration": 0.1666666716337204,
+          "frames": [
+            {
+              "seconds": 0,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0.1128440937039526,
+                    -0.21055033470073392
+                  ],
+                  "yRange": [
+                    0.01531116125468443,
+                    0.21037701906368977
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.08357096649706364,
+                    0,
+                    0.09475000202655792
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.0416666679084301,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0.1128440937039526,
+                    -0.21055033470073392
+                  ],
+                  "yRange": [
+                    0.01531116125468443,
+                    0.21037701906368977
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.08357096649706364,
+                    0,
+                    0.09475000202655792
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.0833333358168602,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0.1128440937039526,
+                    -0.21055033470073392
+                  ],
+                  "yRange": [
+                    0.01531116125468443,
+                    0.21037701906368977
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.08357096649706364,
+                    0,
+                    0.09475000202655792
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.1250000037252903,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0.1128440937039526,
+                    -0.21055033470073392
+                  ],
+                  "yRange": [
+                    0.01531116125468443,
+                    0.21037701906368977
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.08357096649706364,
+                    0,
+                    0.09475000202655792
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "seconds": 0.1666666716337204,
+              "rootPosition": [
+                0,
+                0,
+                0
+              ],
+              "rootQuaternion": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "soles": [
+                {
+                  "joint": "leg-left",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    0.08357096649706364,
+                    0.1128440937039526,
+                    -0.21055033470073392
+                  ],
+                  "yRange": [
+                    0.01531116125468443,
+                    0.21037701906368977
+                  ]
+                },
+                {
+                  "joint": "leg-right",
+                  "originalSoleVertexCount": 12,
+                  "center": [
+                    -0.08357096649706364,
+                    0,
+                    0.09475000202655792
+                  ],
+                  "yRange": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

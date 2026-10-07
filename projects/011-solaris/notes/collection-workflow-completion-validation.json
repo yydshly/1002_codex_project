@@ -1,0 +1,301 @@
+{
+  "date": "2026-10-06",
+  "release": "0.16.1",
+  "status": "bounded-ui-and-storage-regression-evidence-recorded",
+  "scope": "C35补全既有九目标工作流：多窗口已检测旧写保护、明确读取最新、坏记录保留/恢复流程；本轮新核查原六目标完整公开稳定JSON。试衣/真人暂缓，不新增场景或研究能力。",
+  "counts": {
+    "connected": 35,
+    "total": 36,
+    "scenes": 11,
+    "registeredDestinations": 9,
+    "phase5Connected": 2,
+    "phase5Total": 3,
+    "remainingIds": [
+      "C19"
+    ]
+  },
+  "actualBrowser": {
+    "source": "Codex in-app browser中的真实公开备份弹窗、页面按钮和两个窗口操作；没有读取或篡改浏览器内部应用状态来代替公开流程。",
+    "stateHashEncoding": "UTF-8 JSON，键排序，无额外空白；完整原始公开数据另见state-checks artifact。",
+    "targetRoundTrips": [
+      {
+        "sceneId": "living",
+        "publicJsonBeforeEqualsEnteredEqualsReopened": true,
+        "publicJsonTopLevelFields": [
+          "format",
+          "version",
+          "project",
+          "slots"
+        ],
+        "stateSha256": "2ddd32b9734c104e70440d8efee7cffb7f2f17bc4fa4da4abf880141d159c14d",
+        "collectionOnlyLastSceneChanged": true,
+        "returnStatus": "已从客厅工作台返回；陈列、锁定与选品完整保留。"
+      },
+      {
+        "sceneId": "showroom",
+        "publicJsonBeforeEqualsEnteredEqualsReopened": true,
+        "publicJsonTopLevelFields": [
+          "version",
+          "paint",
+          "lights",
+          "hood",
+          "camera",
+          "view"
+        ],
+        "stateSha256": "8553380fbff3b9c472234cb6f4bbbdc561d6374ff1c95388a6b65b98d6969e60",
+        "collectionOnlyLastSceneChanged": true,
+        "returnStatus": "已从汽车展厅返回；陈列、锁定与选品完整保留。"
+      },
+      {
+        "sceneId": "imaging",
+        "publicJsonBeforeEqualsEnteredEqualsReopened": true,
+        "publicJsonTopLevelFields": [
+          "format",
+          "version",
+          "activeId",
+          "viewport",
+          "states"
+        ],
+        "stateSha256": "3f55f922afc6db3ffc7d1fbd8b7ac5a092d059a1e3fe22bd2f3e816a2e0c6ea4",
+        "collectionOnlyLastSceneChanged": true,
+        "returnStatus": "已从影像工作台返回；陈列、锁定与选品完整保留。"
+      },
+      {
+        "sceneId": "landmark",
+        "publicJsonBeforeEqualsEnteredEqualsReopened": true,
+        "publicJsonTopLevelFields": [
+          "version",
+          "time",
+          "lights",
+          "camera",
+          "view",
+          "hotspot"
+        ],
+        "stateSha256": "8ef682dd5586bd6c9c35240a53bc0d1f9b419937d0ae228ab8bf154eeaee5e91",
+        "collectionOnlyLastSceneChanged": true,
+        "returnStatus": "已从地标视口返回；陈列、锁定与选品完整保留。"
+      },
+      {
+        "sceneId": "kitchen",
+        "publicJsonBeforeEqualsEnteredEqualsReopened": true,
+        "publicJsonTopLevelFields": [
+          "version",
+          "nextId",
+          "items",
+          "camera",
+          "view"
+        ],
+        "stateSha256": "e6458a771fd601444f84d34821db8be87588509f604a827b67929a80b3b76c9f",
+        "collectionOnlyLastSceneChanged": true,
+        "returnStatus": "已从料理备料台返回；陈列、锁定与选品完整保留。"
+      },
+      {
+        "sceneId": "creative",
+        "publicJsonBeforeEqualsEnteredEqualsReopened": true,
+        "publicJsonTopLevelFields": [
+          "version",
+          "base",
+          "source",
+          "brush",
+          "target",
+          "activeLayer",
+          "layers",
+          "nextId"
+        ],
+        "stateSha256": "ef1d73e192ca99e9d2052c6243bbf2918a495b97401f7d610cd47c2295064c7f",
+        "collectionOnlyLastSceneChanged": true,
+        "returnStatus": "已从创作台返回；陈列、锁定与选品完整保留。",
+        "finalPublishedLoadedBackupEqualsBaseline": true
+      }
+    ],
+    "stableScopeNotes": {
+      "living": "完整公开封装，包括当前project、A/B各自project、缩略图内容和日期；不是只比较当前家具。",
+      "showroom": "车款配色、灯光/车盖与相机稳定配置。",
+      "imaging": "完整两幅影像工作区，包括手部测量路径、显示参数、视图尺寸和活动影像；同一浏览器尺寸核查，不代表设备无关。",
+      "landmark": "时间、灯光、相机和活动热点。",
+      "kitchen": "原九食材、每个ID/位置/旋转、nextId及相机。",
+      "creative": "完整源图信息、工具参数与笔触层；加载完成后新版公开备份也逐值保持。"
+    },
+    "multiWindow": {
+      "externalUpdateShowsPersistentWarning": true,
+      "oldWindowSaveDisabled": true,
+      "oldWindowEnterDisabled": true,
+      "oldWindowPublicBackupEqualsItsOwnBaseline": true,
+      "oldWindowPagehideDidNotOverwriteNewRecord": true,
+      "loadLatestClearsWarning": true,
+      "loadLatestEnablesSave": true,
+      "loadLatestClearsUndo": true,
+      "loadedLatestIncludesTemporaryReadingLamp": true,
+      "temporaryReadingLampRemovedAfterCheck": true
+    },
+    "collectionBaseline": {
+      "version": 1,
+      "order": [
+        "chair",
+        "lamp",
+        "table-glass",
+        "table-solid",
+        "plant",
+        "sofa"
+      ],
+      "pinned": [
+        "sofa"
+      ],
+      "selected": "table-solid",
+      "wishlist": [
+        "sofa",
+        "chair"
+      ],
+      "preference": "reading",
+      "lastScene": "underwater"
+    },
+    "finalCollection": {
+      "version": 1,
+      "order": [
+        "chair",
+        "lamp",
+        "table-glass",
+        "table-solid",
+        "plant",
+        "sofa"
+      ],
+      "pinned": [
+        "sofa"
+      ],
+      "selected": "table-solid",
+      "wishlist": [
+        "sofa",
+        "chair"
+      ],
+      "preference": "reading",
+      "lastScene": "underwater"
+    },
+    "finalCollectionEqualsBaseline": true,
+    "finalUndoAndRedoDisabledAfterReload": true,
+    "finalReturnStatus": "已从水下工作台返回；陈列、锁定与选品完整保留。",
+    "consoleCurrentMainPageWarnError": [],
+    "integrationCurrent": {
+      "version": true,
+      "localInferenceBoundary": true,
+      "sixTargetsPublicBackup": true,
+      "simulatedFailureBoundary": true,
+      "readLatestClearsUndo": true,
+      "c19Pending": true
+    },
+    "creativeLoadedButtonsAndPublicBackupVerified": true,
+    "corruptStorageRecoveryAndQuotaInjectionUiTested": false,
+    "newModelRuns": 0,
+    "browserLimitations": [
+      "一个旧in-app浏览器标签在重载时发生页面崩溃，通过新标签恢复后完成核查；本轮不是长期稳定性或全浏览器兼容验收。"
+    ]
+  },
+  "storageImplementation": {
+    "coordinator": "../web/collection/storage.js",
+    "baselineRule": "比较STORE/TRIP当前完整原文与本窗口所见基线；出现已检测的新写时停写，不自动采用新基线。明确读取最新才刷新本窗口。",
+    "concurrencyBoundary": "同步localStorage原文比较不是原子跨窗口锁，未证明两个窗口几乎同时通过比较后的写入竞争可以被全部阻止。",
+    "badStoreRecovery": "初始化读取失败或原存档损坏时保留记录；明确保存/应用有效备份才允许恢复，仍需基线比较。",
+    "badTripRecovery": "检查点需同时通过JSON语法及完整协议内容校验；支持原文备份与明确重建并进入。",
+    "pairFailureRecovery": "部分写失败只在仍持有本次写入原文时尝试回滚，不覆盖已出现的更新原文。",
+    "faultEvidence": "故障读取、写入/容量异常、半写回滚、较新记录保护和损坏恢复由23项Node模拟测试覆盖；未注入真实浏览器quota故障。"
+  },
+  "tests": {
+    "productNode": {
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "passed": 218,
+      "failed": 0
+    },
+    "repositoryNode": {
+      "command": "node --test scripts/tests/*.test.mjs",
+      "passed": 16,
+      "failed": 0
+    },
+    "newStorageNode": {
+      "file": "../tests/collection-storage.test.mjs",
+      "passed": 23,
+      "includedInProductTotal": true
+    },
+    "scopeNote": "本轮实际执行已通过；之后仅调整陈列提示布局、证据和说明/封面，未改变已测的JavaScript存储逻辑。真实六目标往返与两个窗口操作另行记录。"
+  },
+  "build": {
+    "projectCount": 14,
+    "integrationCheckPassed": true,
+    "catalogCheckPassed": true,
+    "publishedSourcesByteIdentical": [
+      "web/collection.html",
+      "web/collection/app.js",
+      "web/collection/storage.js",
+      "web/collection/core.js",
+      "web/collection/collection.css",
+      "web/collection/scene-return.js",
+      "web/creative.html",
+      "web/creative/app.js",
+      "web/integration.html",
+      "web/studio/integration-data.json",
+      "web/capabilities/scene-catalog.json"
+    ],
+    "catalogCoverByteIdentical": true,
+    "runtimeExcluded": true,
+    "runtimeExcludedScope": "发布目录没有本机Python服务、.runtime目录或预训练权重文件；原真人研究入口及许可说明继续保留。"
+  },
+  "sourceSha256": {
+    "web/collection.html": "dfe13c363af82021d96411e77d42cad0844c83b5a5eac314a827ede608520bd5",
+    "web/collection/app.js": "45ecaccf74e0d8a67495b9be6012c51303f41de0b5bd760d42c449031744ccb0",
+    "web/collection/storage.js": "89ce649b9195927fb90365f02b9d03e187670547feeb6307c359df81e4d07be7",
+    "web/collection/core.js": "8e3d2eadcac6d4528c634bafcc32d69eef5496f26d49bf2842a6c87c56ec768f",
+    "web/collection/collection.css": "f1774163151b8bcfeaddb8f0e2ce470e701264d622ab7c15be1b4ba8d5f79936",
+    "web/collection/scene-return.js": "bf87e8df8de90c0d6918be96707b85ff0b85fd99111a2fc4f937f7395b737b08",
+    "web/creative.html": "dce8cbc0bda4119ca6381496fb3a77ae4674a777bdc863891e36c3328b4c5eb4",
+    "web/creative/app.js": "4a5e16d2998413104e5336b592072256f58878e58b844a972efe63de8a708e0c",
+    "web/integration.html": "ab795593b0cd8d7dd7ba6d810145c8e1ee182c9caa72f166a605c3d2f2373a79",
+    "web/studio/integration-data.json": "94814b24690f0c7ec81eca89c5cb5f940b89627a58a58f3cbf09da47b4a6b71b",
+    "web/capabilities/scene-catalog.json": "e86d53cd8d3cf3c1753a46dff15896d210936b5f6f51e34fd44cf7d22130c7c4",
+    "tests/collection-storage.test.mjs": "cb062ba85d68eef3aa361f786d997822f0d9c416a2e07ec329691f9b62d0f9d5",
+    "tests/collection.test.mjs": "c3997ba6964847101de79d15de0b03df7406d259fabd83351a35bc151db99c5f",
+    "tests/scene-return.test.mjs": "9ec50e829a2db0ac3d6419e0df076190f52b35bc83feffd65db210be2ff66d30",
+    "notes/integration.md": "bf950a598590d054219ea11d68a804a4aa509d17b969278a14c4377782f66c99",
+    "notes/product-release.md": "5fc0097aee6765806c0d1946544146e86ce229cb771fa210122852b703c9637c",
+    "notes/product-feasibility.json": "0bcacb36c9f50de0cd855ec0c9bbd1cbe62c08ee220411c620d764c6ff7f77a5",
+    "notes/roadmap.json": "91a561b16b2cadb0c2de9472dd53f6d02cadcddf3d2afb856cc8a16ae0bc5d51",
+    "README.md": "107d50683078d1e2146427266b219677390f7d0b9b1205d59cf439b08c25cc6b"
+  },
+  "repositoryMetadataSha256": {
+    "projects/catalog.json": "d37e51fce69b3db80da7db0e1eccac68d62b9b5a762405d5b3533e23cefe5510",
+    "README.md": "463f0e20c990c23d0fc80393d4672ce935d767a7ffea1f1efe38c61ec59c36d0"
+  },
+  "artifacts": [
+    {
+      "path": "../assets/atelier-collection-conflict.png",
+      "sha256": "e6a626939525a2e812f14b5824d3e07c19d6473c2bea4c8f6cb66294f4b788ec",
+      "bytes": 71163
+    },
+    {
+      "path": "../assets/atelier-workflow-completion.png",
+      "sha256": "7a9cf5eeeef985baeef59af698166f8dcd8eec266bdae8373f62e014ded7d193",
+      "bytes": 73203
+    },
+    {
+      "path": "../assets/atelier-workflow-completion-state-checks.json",
+      "sha256": "e5dd3b3945f3283b11601e72c906b301593f41c8c23d702128eab425f2e63a19",
+      "bytes": 732182
+    }
+  ],
+  "historicalEvidence": {
+    "release": "0.16.0",
+    "record": "collection-workflow-validation.json",
+    "newlyVerifiedThen": [
+      "skate",
+      "materials",
+      "underwater"
+    ],
+    "productNodePassedThen": 195,
+    "repositoryNodePassedThen": 16,
+    "boundary": "旧三目标完整JSON往返证据保留，没有把当时的195项测试替换成当前218；本轮新核查六原目标，最终水下回程只用于还原陈列原最近去向。"
+  },
+  "pending": [
+    "原子跨窗口竞争、真实浏览器读写/容量/半写故障和原文损坏恢复专项。",
+    "拖动、起跳、供能或追随过程中立即转场的专项；会话预览和撤销不属于稳定存档。",
+    "触屏、其他浏览器、完整离线、下载落盘和长期性能/稳定性验证。",
+    "同源token关联本地检查点，不是任意合法JSON不可被篡改的签名。",
+    "C19商品身份/购物事务仍待接入；不新增订单、尺码合身判断、真人类别、模型训练或商用素材验证。"
+  ]
+}

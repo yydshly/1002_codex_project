@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "date": "2026-10-05",
+  "purpose": "Complete fixed virtual reference avatar and two independent tailored garments; finite neutral/reach fit only, no real-size prediction or cloth solver",
+  "sourceBody": {
+    "vertices": 8546,
+    "uniqueTriangles": 13743,
+    "bones": 53
+  },
+  "virtualReferenceHeight": 1.78,
+  "scale": 0.973359953406121,
+  "groundOffset": -0.0004491693224088423,
+  "up": "+Y",
+  "front": "+Z",
+  "runtimeOuterScale": 1,
+  "bodyMasks": false,
+  "poses": [
+    "neutral",
+    "reach"
+  ],
+  "clips": [
+    "Fitting_Neutral",
+    "Fitting_Reach"
+  ],
+  "garments": [
+    {
+      "id": "tee-01",
+      "meshCount": 9,
+      "triangleCount": 119996,
+      "independentShell": "tee-01_garment_main",
+      "thickness": 0.0022,
+      "construction": "continuous original torso/shoulder/sleeve loft, full union, conservative registered ease"
+    },
+    {
+      "id": "jacket-01",
+      "meshCount": 20,
+      "triangleCount": 178366,
+      "independentShell": "jacket-01_garment_main",
+      "thickness": 0.0022,
+      "construction": "continuous original torso/shoulder/sleeve loft, full union, conservative registered ease"
+    }
+  ]
+}

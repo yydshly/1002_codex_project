@@ -1,0 +1,72 @@
+{
+  "checks": 8,
+  "passed": 8,
+  "results": [
+    "frozen C17 avatar and both garments remain byte-for-byte unchanged",
+    "original complete 53-bone avatar and all 13,743 body triangles retained; shoes have no body copy or mask",
+    "independent packed skin evaluation confirms original feet stationary in both constant registered poses",
+    "both local rigid pairs have complete independently shaped left/right upper, sole, tongue, collar, lace and hardware",
+    "registered roots remain zero with unit scale, soles touch y=0 and shape extents fit fixed foot interaction registration",
+    "finite ground projection and non-portal upper-ray coverage of every registered original foot sample",
+    "short boot quarter encloses all sampled original lower-shin vertices in its declared shaft-height domain",
+    "independent closed paired sole topology and contact plane retained without body masking"
+  ],
+  "status": "passed-with-finite-foot-domain",
+  "scope": "Fixed 1.78 virtual reference avatar only; both poses have stationary feet. All foot ground projections and outside-ankle-portal upward rays sampled. Open ankle portal deliberately remains open. This is not a volumetric collision certificate or real-world sizing/sole-padding simulation.",
+  "reports": [
+    {
+      "file": "court.glb",
+      "originalFootSamples": 264,
+      "groundProjectionHits": 264,
+      "nonPortalUpwardHits": 120,
+      "declaredOpenAnklePortalSamples": 144,
+      "failures": [],
+      "bounds": {
+        "min": [
+          -0.1807592362165451,
+          0,
+          -0.12189999967813492
+        ],
+        "max": [
+          0.18350617587566376,
+          0.18920312821865082,
+          0.24788787961006165
+        ]
+      },
+      "meshCount": 64,
+      "triangles": 157584
+    },
+    {
+      "file": "ridge.glb",
+      "originalFootSamples": 264,
+      "groundProjectionHits": 264,
+      "nonPortalUpwardHits": 120,
+      "declaredOpenAnklePortalSamples": 144,
+      "failures": [],
+      "bounds": {
+        "min": [
+          -0.1807556450366974,
+          0,
+          -0.1428000032901764
+        ],
+        "max": [
+          0.18350471556186676,
+          0.31501755118370056,
+          0.24788787961006165
+        ]
+      },
+      "meshCount": 88,
+      "triangles": 176984,
+      "shaftSampling": {
+        "heightDomain": [
+          0.155,
+          0.284
+        ],
+        "source": "all original lower-shin vertices plus 8th-order barycentric original-body-triangle surface samples crossing the height domain",
+        "sampled": 2830,
+        "covered": 2830,
+        "misses": []
+      }
+    }
+  ]
+}

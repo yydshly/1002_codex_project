@@ -1,0 +1,105 @@
+{
+  "product": "ATELIER",
+  "release": "0.8.0",
+  "date": "2026-10-05",
+  "scene": "精选设计陈列",
+  "entry": "http://localhost:4189/projects/011-solaris/collection.html",
+  "status": "bounded-main-workflows-verified; device-fault-performance-checks-pending",
+  "capabilityIds": ["C05", "C33", "C35"],
+  "researchEvidenceBoundary": "C05/C33来自原研究官方设想，C35来自官方方法文字。此次验收证明我们的有限陈列、显式规则与登记场景往返，不改变原研究证据等级，也不证明调用或复现Solaris后台。",
+  "browser": {
+    "surface": "Codex in-app browser; actual mouse, keyboard and public application controls",
+    "naturalViewport": [1280, 720],
+    "viewportOverride": false,
+    "documentClientWidth": 1280,
+    "documentScrollWidth": 1280,
+    "documentScrollHeight": 720,
+    "productImageDimensions": [900, 650],
+    "consoleWarningsAndErrors": []
+  },
+  "assets": {
+    "sourceManifest": "../web/studio/assets/manifest.json",
+    "sourceDocument": "collection-sources.md",
+    "license": "Poly Haven CC0; complete existing registered geometry and original PBR textures",
+    "modelCount": 6,
+    "fileCountIncludingEnvironment": 37,
+    "textureCount": 24,
+    "triangles": 62824,
+    "bytesIncludingEnvironment": 13845953,
+    "productIds": ["sofa", "chair", "table-glass", "table-solid", "lamp", "plant"],
+    "models": ["sofa_02", "modern_arm_chair_01", "modern_coffee_table_01", "modern_coffee_table_02", "desk_lamp_arm_01", "potted_plant_04"],
+    "verified": "Bundled manifest file hashes and lengths, complete glTF resource references, geometry indices/vertices/node transforms and local HDR verified. No new external runtime asset or AI-generated model/image.",
+    "visualInspection": "Six actual browser-generated PBR images were displayed. Chair front/side images independently viewed; original shape, texture detail and complete framing are visible. View changes produce three distinct actual PNGs without changing persisted state."
+  },
+  "automatedChecks": [
+    {"command": "node --test projects/011-solaris/tests/*.test.mjs", "passed": 84, "failed": 0, "collectionCorePassed": 8},
+    {"command": "npm test", "passed": 16, "failed": 0},
+    {"command": "node projects/011-solaris/scripts/verify-collection-assets.mjs", "result": "passed"},
+    {"command": "node --check projects/011-solaris/web/collection/app.js", "result": "passed"},
+    {"command": "node --check projects/011-solaris/web/collection/render-products.js", "result": "passed"},
+    {"check": "read-only scene return bridge protocol", "passed": 22, "note": "Separately recorded protocol checks; not added to the 84 product test total."}
+  ],
+  "browserChecks": [
+    {"id": "CO01", "action": "六件真实产品渲染与布局", "result": "All six visible product images decode to900x650. Complete real models, original textures and real rendered contact shadows are used; no shape placeholders."},
+    {"id": "CO02", "action": "原生鼠标拖沙发第1位到盆栽第6位", "result": "Order becomes [plant,chair,table-glass,table-solid,lamp,sofa]; selection focuses dragged sofa. Six IDs remain complete and unique."},
+    {"id": "CO03", "action": "一次撤销/重做交换", "result": "Undo restores the complete initial JSON exactly; redo restores the complete swapped JSON exactly."},
+    {"id": "CO04", "action": "原生拖动后在卡片范围外释放", "result": "Full JSON remains identical to the prior collection; no layout, selection or wishlist change."},
+    {"id": "CO05", "action": "锁定沙发第6位，原生拖向锁槽及从锁槽拖出", "result": "Both locked-target and locked-source exchanges are rejected. Complete JSON remains identical for both operations."},
+    {"id": "CO06", "action": "加入沙发与阅读椅选品", "result": "Wishlist [sofa,chair] is independent of the permutation and pinned sofa. No order, price, stock or C19 purchase/try-on event is created."},
+    {"id": "CO07", "action": "阅读角整理预览并取消", "result": "Visible preview lists proposed positions and each fixed tag weight; pinned sofa remains sixth. Cancel preserves the full original JSON exactly."},
+    {"id": "CO08", "action": "应用阅读角，并一次撤销/重做", "result": "Order becomes [chair,lamp,table-glass,table-solid,plant,sofa], preference reading. Selection sofa, pinned [sofa] and wishlist [sofa,chair] remain. Undo/redo restore complete JSON exactly."},
+    {"id": "CO09", "action": "应用紧凑陈列并撤销", "result": "Actual order [chair,table-glass,lamp,plant,table-solid,sofa]; selection, pinned slot and wishlist remain. One undo restores the complete reading arrangement."},
+    {"id": "CO10", "action": "应用自然质感并撤销", "result": "Actual order [chair,plant,table-glass,table-solid,lamp,sofa]; selection, pinned slot and wishlist remain. One undo restores the complete reading arrangement."},
+    {"id": "CO11", "action": "保存并刷新重开", "result": "All fields in validated JSON are identical after reload: order, pinned, selected, wishlist, preference and lastScene."},
+    {"id": "CO12", "action": "非法素材ID JSON导入", "result": "Unknown product ID rejected with a visible message; complete prior JSON remains unchanged."},
+    {"id": "CO13", "action": "合法JSON替换及原生键盘撤销/重做", "result": "Imported permutation and selected plant are shown. Ctrl+Z restores the entire prior JSON; Ctrl+Shift+Z restores the imported JSON exactly. Import is one transaction."},
+    {"id": "CO14", "action": "阅读椅斜侧、正面、侧面实际渲染", "result": "Three distinct PNGs. Actual front and side900x650 outputs were visually viewed and saved; switching observation direction leaves complete collection JSON unchanged."},
+    {"id": "CO15", "action": "未知与复合意图", "result": "去月球 and 去客厅和料理 both reject without a destination dialog or any state change."},
+    {"id": "CO16", "action": "去料理去向预览取消", "result": "Registered destination and checkpoint boundaries are visible. Cancel preserves full collection JSON exactly."},
+    {"id": "CO17", "action": "实际进入料理并比对原方案", "result": "Valid from=collection and16-hex trip open the registered kitchen page and safe return link. The existing nine ingredients, stable IDs, nextId, poses, view and camera equal the public JSON captured before entry exactly. No ingredient added or scene reset."},
+    {"id": "CO18", "action": "实际点击料理返回链接", "result": "Collection order, pinned, selected, wishlist and preference exactly match departure. Only lastScene becomes kitchen, and the visible return message confirms the checkpoint."},
+    {"id": "CO19", "action": "另外五个登记场景实际进入和返回", "result": "去客厅/去展厅/去影像/去地标/去创作 each opens the corresponding registered page with its matching safe return link. Clicking back restores all collection design fields exactly; lastScene respectively living/showroom/imaging/landmark/creative. Target scene full JSON before/after comparisons were performed for kitchen only; these five checks prove actual routing, bridge and collection restoration."},
+    {"id": "CO20", "action": "自然桌面布局与日志", "result": "1280x720 with no viewport override; document clientWidth=scrollWidth=1280 and scrollHeight=720. Six full product images decode. Final captured browser warnings/errors list is empty."},
+    {"id": "CO21", "action": "实际证明留档", "result": "Real clean workspace, preference-preview and kitchen-return browser JPEGs, two actual model PNGs and a recoverable curated JSON were saved directly from public UI output. No evidence image was repainted or synthesized."}
+  ],
+  "integrationChecks": {
+    "generatedData": "integration.mjs generation and --check passed:0.8.0,29/36,seven phases and seven scene descriptions.",
+    "repository": "npm run sync, npm run check and node scripts/catalog.mjs build passed; local preview generated successfully.",
+    "actualBrowser": "Reloaded collection page after local build. Its capability dialog visibly shows all six actual roundtrips completed and the five remaining target-state comparisons separately. Integration page visibly shows0.8.0,36/29/7,seven named scenes,phase4=2/5 and phase7=3/3. Final collection images remain900x650 and viewport1280x720; no captured warnings/errors.",
+    "proofFiles": "All seven proof references exist and contain data; JPEG signatures and both900x650 PNG headers verified. Recoverable example passes the application core state validator.",
+    "deployment": "Local workspace and localhost preview only; no external deployment."
+  },
+  "example": {
+    "order": ["chair", "lamp", "table-glass", "table-solid", "plant", "sofa"],
+    "pinned": ["sofa"],
+    "selected": "chair",
+    "wishlist": ["sofa", "chair"],
+    "preference": "reading",
+    "lastScene": "creative",
+    "note": "Author-created example retained in the initially empty collection workspace. The example is separately recoverable; no original target scene arrangement was replaced."
+  },
+  "proofs": {
+    "workspaceScreenshot": "../assets/atelier-collection-workspace.jpg",
+    "preferenceScreenshot": "../assets/atelier-collection-preference.jpg",
+    "kitchenReturnScreenshot": "../assets/atelier-collection-kitchen-return.jpg",
+    "recoverableExample": "../assets/atelier-collection-example.json",
+    "chairFrontPng": "../assets/collection-chair-front.png",
+    "chairSidePng": "../assets/collection-chair-side.png",
+    "otherFiveRouteRecords": "../assets/collection-trip-records.json"
+  },
+  "pending": [
+    "Held-pointer Escape, focus loss and lost capture on real hardware; touch, additional browser engines and accessibility device workflows.",
+    "Actual storage-quota fault injection and malformed stored-record recovery protection. Independent source review verified rollback/guards, which is not hardware fault acceptance.",
+    "Cross-tab concurrent editing and interrupted navigation around checkpoint writes; only one latest local trip checkpoint is supported.",
+    "Complete workflow under network isolation, browser download actual disk writes, specified-device performance and long-term memory/renderer stability.",
+    "Full target-scene JSON before/after comparison for the five other targets; kitchen exact comparison and all six collection return workflows are verified separately."
+  ],
+  "boundaries": [
+    "Six registered CC0 design assets, not actual commercial SKUs, certified materials, inventory, prices, orders or physical fit data. Historical table-glass ID does not certify glass; display normalization does not represent retail dimensions.",
+    "C05 swaps two existing slots and preserves a complete six-ID permutation. Pinned endpoints reject movement. Drag selection follows the dragged item; wishlist is independent.",
+    "C33 uses visible editorial tags and fixed weights, stable ties and pinned indices. Preview is non-mutating; application is one transaction. No inferred personal profile, recommendation model or material certification.",
+    "C35 parses a finite explicit Chinese command into one of six local registered scenes. It requires a validated checkpoint and matching token/path for the safe return link; unknown, negative, composite or URL input cannot create arbitrary destinations.",
+    "Scene transitions preserve collection context and use each target's own existing workspace. Selected assets are not automatically inserted, and unseen scenes are not generated.",
+    "Complete local JSON supports six registered IDs and40 history entries; raw imports are limited to64KiB. Observation view is transient and does not edit the collection. No cloud sync or external model backend."
+  ]
+}

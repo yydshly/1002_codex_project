@@ -1,0 +1,153 @@
+{
+  "sourceUrl": "https://raw.githubusercontent.com/yisol/IDM-VTON/0d5f3ec2d737487a9bb24e4100936ad254780383/vitonhd_test_tagged.json",
+  "targets": {
+    "0": {
+      "file_name": "14627_00.jpg",
+      "category_name": "TOPS",
+      "tag_info": [
+        {
+          "tag_name": "item",
+          "tag_category": "Bra Top"
+        },
+        {
+          "tag_name": "details",
+          "tag_category": "Buckle"
+        },
+        {
+          "tag_name": "looks",
+          "tag_category": "Casual"
+        },
+        {
+          "tag_name": "colors",
+          "tag_category": "Black"
+        },
+        {
+          "tag_name": "prints",
+          "tag_category": "Solid"
+        },
+        {
+          "tag_name": "textures",
+          "tag_category": "Synthetic"
+        },
+        {
+          "tag_name": "sleeveLength",
+          "tag_category": "Sleeveless"
+        },
+        {
+          "tag_name": "length",
+          "tag_category": "cropped"
+        },
+        {
+          "tag_name": "neckLine",
+          "tag_category": "V Neck"
+        },
+        {
+          "tag_name": "fit",
+          "tag_category": "tight-fit"
+        },
+        {
+          "tag_name": "shape",
+          "tag_category": null
+        }
+      ],
+      "image": [
+        {
+          "image_path": "image",
+          "image_width": 768,
+          "image_height": 1024,
+          "bbox": {
+            "left": 0.30807292,
+            "top": 0.31621096,
+            "width": 0.41380212,
+            "height": 0.31035158
+          }
+        },
+        {
+          "image_path": "cloth",
+          "image_width": 768,
+          "image_height": 1024,
+          "bbox": {
+            "left": 0.06692709,
+            "top": 0.08671875,
+            "width": 0.8653646,
+            "height": 0.82109374
+          }
+        }
+      ]
+    },
+    "1": {
+      "file_name": "00055_00.jpg",
+      "category_name": "TOPS",
+      "tag_info": [
+        {
+          "tag_name": "item",
+          "tag_category": "T-shirts"
+        },
+        {
+          "tag_name": "details",
+          "tag_category": "Patchwork"
+        },
+        {
+          "tag_name": "looks",
+          "tag_category": "Casual"
+        },
+        {
+          "tag_name": "colors",
+          "tag_category": "Purple"
+        },
+        {
+          "tag_name": "prints",
+          "tag_category": "lettering"
+        },
+        {
+          "tag_name": "textures",
+          "tag_category": "Cotton"
+        },
+        {
+          "tag_name": "sleeveLength",
+          "tag_category": "Short Sleeve"
+        },
+        {
+          "tag_name": "length",
+          "tag_category": "normal"
+        },
+        {
+          "tag_name": "neckLine",
+          "tag_category": "Round Neck"
+        },
+        {
+          "tag_name": "fit",
+          "tag_category": "normal-fit"
+        },
+        {
+          "tag_name": "shape",
+          "tag_category": null
+        }
+      ],
+      "image": [
+        {
+          "image_path": "image",
+          "image_width": 768,
+          "image_height": 1024,
+          "bbox": {
+            "left": 0.13385418,
+            "top": 0.22890626,
+            "width": 0.6291667,
+            "height": 0.40390626
+          }
+        },
+        {
+          "image_path": "cloth",
+          "image_width": 768,
+          "image_height": 1024,
+          "bbox": {
+            "left": 0.060156252,
+            "top": 0.1263672,
+            "width": 0.8783855,
+            "height": 0.7462891
+          }
+        }
+      ]
+    }
+  }
+}

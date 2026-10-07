@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "asset": "Carnegie Mansion · Exterior printing model",
+  "downloadedAt": "2026-10-05",
+  "sourcePage": "https://www.cooperhewitt.org/open-source-at-cooper-hewitt/mansionmodel/",
+  "sourceRecord": "https://3d.si.edu/object/3d/carnegie-mansion-exterior%3A5010a19c-2f7f-4325-b43c-bebe6711b473",
+  "originalFile": "https://3d-api.si.edu/content/document/3d_package:5010a19c-2f7f-4325-b43c-bebe6711b473/resources/CooperHewitt_print.stl",
+  "downloadPage": "https://www.3d-printed.org/models/smithsonian-carnegie-mansion-exterior-55cce488",
+  "downloadFile": "https://www.3d-printed.org/models/downloads/file_smithsonian-carnegie-mansion-exterior-55cce488_cooperhewitt-print-stl",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "artist": "3D Systems",
+  "institution": "Cooper Hewitt, Smithsonian Design Museum",
+  "attribution": "Carnegie Mansion model · 3D Systems / Cooper Hewitt, Smithsonian Design Museum · CC0 1.0",
+  "captureDate": "2014-06",
+  "scope": "Simplified hollow exterior printing model. The textured FBX and full interior assets described on the official page are separate datasets and are not included here.",
+  "changes": "None to the source STL. Display translation, lighting, monochrome presentation material and display scale are supplied at runtime.",
+  "runtimeRequiresNetwork": false,
+  "runtime": {
+    "file": "CooperHewitt_print.stl",
+    "format": "binary STL",
+    "bytes": 17164134,
+    "sha256": "2158098219d3f2e8030d26edc3d7cdf119d1fb01f3d9a9bef62c4a45d8a2c49d",
+    "triangles": 343281,
+    "triangleVertexRecords": 1029843,
+    "geometryBuffers": 1,
+    "materials": 0,
+    "textures": 0,
+    "animations": 0,
+    "externalResources": 0,
+    "compressionDecoders": []
+  },
+  "inspection": {
+    "header": "CooperHewitt_vertColor_06.stl",
+    "bounds": {
+      "min": [-0.000007999999979801942, 0.000007999999979801942, -0.000012000000424450263],
+      "max": [5.52020788192749, 3.500006914138794, 8.46765422821045],
+      "size": [5.52021588192747, 3.499998914138814, 8.467666228210874]
+    },
+    "finiteCoordinates": true,
+    "finiteNormals": true,
+    "zeroNormals": 1163,
+    "nearDegenerateFaces": 1163,
+    "faceAttributes": 0,
+    "unit": "Not encoded in STL; numeric display coordinates only",
+    "axis": "STL contains no axis metadata. Actual browser renders of the front, opposite side and roof confirmed that building height aligns with Y and that a display scale of 2 with X/Z centering and Y grounding is upright. This is a display-orientation observation, not a geographic-direction or physical-unit claim.",
+    "physicalMeasurementsSupported": false,
+    "geometryRepairPerformed": false
+  },
+  "acceptanceBoundary": "Asset integrity and license provenance verified. Browser loading, actual visual orientation, hotspots, interaction and performance require separate product acceptance; no engineering accuracy, current conditions or complete interior claim.",
+  "displaySuggestion": {
+    "scale": 2,
+    "position": [-5.52019988192751, -0.000015999999959603884, -8.467642228210025],
+    "target": [0, 2.7, 0],
+    "heroCamera": [14, 10, 16]
+  }
+}

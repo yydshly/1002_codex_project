@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "date": "2026-10-06",
+  "up": "+Y",
+  "front": "+Z",
+  "outerScale": 1,
+  "type": "fixed rigid paired footwear; original avatar feet unchanged",
+  "sourceAvatar": "../assets/avatar.glb",
+  "footJointAnchors": {
+    "L": [
+      0.086629,
+      0.100488,
+      -0.034846
+    ],
+    "R": [
+      -0.086629,
+      0.100488,
+      -0.034846
+    ]
+  },
+  "anklePortal": {
+    "centerZ": -0.034,
+    "radiusX": 0.05,
+    "radiusZ": 0.059,
+    "purpose": "real ankle/shin exit, not a body hiding mask"
+  },
+  "soleBottomY": 0,
+  "poses": [
+    "neutral",
+    "reach"
+  ],
+  "gaitSupported": false,
+  "realSizePrediction": false,
+  "garments": [
+    {
+      "id": "court-01",
+      "file": "court.glb",
+      "meshes": 64,
+      "triangles": 157584,
+      "boundsBlender": {
+        "min": [
+          -0.1807592362165451,
+          -0.24788787961006165,
+          0.0
+        ],
+        "max": [
+          0.18350617587566376,
+          0.12189999967813492,
+          0.18920312821865082
+        ]
+      }
+    },
+    {
+      "id": "boot-01",
+      "file": "ridge.glb",
+      "meshes": 88,
+      "triangles": 176984,
+      "boundsBlender": {
+        "min": [
+          -0.1807556450366974,
+          -0.24788787961006165,
+          0.0
+        ],
+        "max": [
+          0.18350471556186676,
+          0.1428000032901764,
+          0.31501755118370056
+        ]
+      }
+    }
+  ]
+}

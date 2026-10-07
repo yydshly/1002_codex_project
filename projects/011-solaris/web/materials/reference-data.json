@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-10-05",
+  "title": "材料热响应：限定教学数据",
+  "model": {
+    "absorbedPowerW": 10,
+    "teachingClockRate": 1,
+    "teachingClockRates": [1, 4],
+    "heatEquation": "Q = P_absorbed × teaching_seconds",
+    "metalEquation": "delta_temperature_K = Q_J / (mass_kg × Cp_J_per_kg_K)",
+    "iceEquation": "melt_fraction = Q_J / (mass_g × fusion_J_per_g)",
+    "assumptions": [
+      "整个样品具有均匀温度；金属比热取298.15K常数近似。",
+      "10W是样品名义已吸收功率，热源图形不预测火焰、燃料或传热效率。",
+      "无环境换热；移开热源停止供能，温度和熔化比例保持。",
+      "教学时钟默认×1，每真实1秒累计1教学秒；可在暂停时选择×4快放，每真实1秒累计4教学秒，功率始终10W。倍率是观察设置，不改变材料参数或记录中的教学秒和能量。",
+      "铜铝达到60°C停止本轮；该上限是教学范围，不是熔点。",
+      "冰位于标准大气压下熔点0°C，融尽停止，不模拟液态水升温。",
+      "样品几何、器材和尺寸比例为自建展示；质量由明示参数指定。"
+    ],
+    "comparisonBoundary": "铜铝各10g、相同25°C起温，可比较同质量温升；冰为1g、0°C起温，只比较能量用于相变，不能称三样品同质量或同初温实验。"
+  },
+  "samples": {
+    "copper": {
+      "name": "铜",
+      "massG": 10,
+      "initialTemperatureC": 25,
+      "limitTemperatureC": 60,
+      "heatCapacityJPerKgK": 385.083479137046,
+      "referenceTemperatureK": 298.15,
+      "molarMassGPerMol": 63.546,
+      "cpDerivation": {
+        "formula": "Cp_molar = A + B*t + C*t^2 + D*t^3 + E/t^2; t=T_K/1000; Cp_mass=Cp_molar/molarMass_g_per_mol*1000",
+        "coefficients": { "A": 17.72891, "B": 28.09870, "C": -31.25289, "D": 13.97243, "E": 0.068611 },
+        "publishedSolidRangeK": [298, 1358]
+      },
+      "source": {
+        "title": "NIST Chemistry WebBook — Copper, solid phase heat capacity",
+        "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7440508&Mask=2",
+        "compilation": "Chase, 1998, NIST-JANAF Thermochemical Tables",
+        "basis": "Published solid Shomate coefficients and molar mass; mass heat capacity computed at298.15K."
+      }
+    },
+    "aluminum": {
+      "name": "铝",
+      "massG": 10,
+      "initialTemperatureC": 25,
+      "limitTemperatureC": 60,
+      "heatCapacityJPerKgK": 897.1414261323531,
+      "referenceTemperatureK": 298.15,
+      "molarMassGPerMol": 26.9815386,
+      "cpDerivation": {
+        "formula": "Cp_molar = A + B*t + C*t^2 + D*t^3 + E/t^2; t=T_K/1000; Cp_mass=Cp_molar/molarMass_g_per_mol*1000",
+        "coefficients": { "A": 28.08920, "B": -5.414849, "C": 8.560423, "D": 3.427370, "E": -0.277375 },
+        "publishedSolidRangeK": [298, 933]
+      },
+      "source": {
+        "title": "NIST Chemistry WebBook — Aluminum, solid phase heat capacity",
+        "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7429905&Mask=2",
+        "compilation": "Chase, 1998, NIST-JANAF Thermochemical Tables",
+        "basis": "Published solid Shomate coefficients and molar mass; mass heat capacity computed at298.15K."
+      }
+    },
+    "ice": {
+      "name": "纯冰 Ih",
+      "massG": 1,
+      "initialTemperatureC": 0,
+      "limitTemperatureC": 0,
+      "fusionJPerG": 333.4,
+      "pressureKPa": 101.325,
+      "source": {
+        "title": "Allan H. Harvey — Properties of Ice and Supercooled Water (NIST,2019)",
+        "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=926353",
+        "publicationPage": "https://www.nist.gov/publications/properties-ice-and-supercooled-water",
+        "basis": "Ice Ih at standard atmospheric pressure; the phase-transition entry gives fusion enthalpy at0°C of333.4J/g."
+      }
+    }
+  },
+  "appearance": {
+    "geometry": "本产品完整自建的演示台、样品支架、燃烧头和材料样品；不是扫描实物、制造规格或装置性能模型。",
+    "metalAndIce": "自建PBR外观，不用锈铁或油漆铁纹理冒充纯铜/铝，不把金属温升画成发红或熔化。",
+    "reusedAssets": [
+      { "file": "assets/textures/wood_floor-diff.jpg", "manifest": "../studio/assets/manifest.json", "purpose": "陈设木纹底色", "source": "https://polyhaven.com/a/wood_floor", "license": "CC0-1.0" },
+      { "file": "assets/textures/wood_floor-nor_gl.jpg", "manifest": "../studio/assets/manifest.json", "purpose": "陈设木纹法线", "source": "https://polyhaven.com/a/wood_floor", "license": "CC0-1.0" },
+      { "file": "assets/textures/wood_floor-rough.jpg", "manifest": "../studio/assets/manifest.json", "purpose": "陈设木纹粗糙度", "source": "https://polyhaven.com/a/wood_floor", "license": "CC0-1.0" },
+      { "file": "assets/environment/coastal-day.hdr", "manifest": "../studio/assets/manifest.json", "purpose": "场景摄影照明", "source": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky", "license": "CC0-1.0" }
+    ]
+  },
+  "validationBoundary": "本文件提供科学参数、假设与来源；不能代替实际鼠标操作、能量记录、取消撤销、保存恢复或设备专项验收。"
+}
