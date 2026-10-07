@@ -1,0 +1,1314 @@
+{
+  "date": "2026-10-07",
+  "policy": "atelier-support-v1",
+  "policySha256": "7659e054bd72dd87f4f1d12dfb03499cff358167874a0c628833e973e9980633",
+  "scope": "First held-out protocol after frozen policy. All three selected source assets included; no per-model surface, anchor or threshold. Initial execution completed analysis but report output failed due to an evidence-path error; rerun fixes only that path with identical frozen policy and source files.",
+  "elapsedMs": 10671.753499999999,
+  "lamp": {
+    "assetId": "desk_lamp_arm_01",
+    "sourceFingerprint": "f32dcdc922f47e0b766f52bc76630d0bde983f33f6d6c605be25dcf6b6798fc4",
+    "normalization": {
+      "strategy": "uniform-height-xz-center-minY-floor",
+      "targetDesignHeightMeters": 0.52,
+      "factor": 0.5825607967935676,
+      "translation": [
+        0.010258026723274596,
+        0.05126172125212994,
+        -0.005999670462249314
+      ],
+      "sourceBounds": {
+        "min": [
+          -0.11847317218780518,
+          -0.08799377083778381,
+          -0.29663750529289246
+        ],
+        "max": [
+          0.08325615525245667,
+          0.8046169281005859,
+          0.3172350823879242
+        ]
+      }
+    },
+    "triangleCount": 24102,
+    "base": {
+      "policy": "atelier-support-v1",
+      "contactY": 0,
+      "contactHeightRange": [
+        0,
+        0
+      ],
+      "polygon": [
+        [
+          0.008494531910322328,
+          -0.004994295728037202
+        ],
+        [
+          0.009011047538157683,
+          -0.00624127503183737
+        ],
+        [
+          0.010258026880563842,
+          -0.006757790744446479
+        ],
+        [
+          0.011505006044029514,
+          -0.006241275167475375
+        ],
+        [
+          0.012021522078778886,
+          -0.00499429593149421
+        ],
+        [
+          0.01150500617966752,
+          -0.0037473166107392913
+        ],
+        [
+          0.010258026809076911,
+          -0.003230800711627925
+        ],
+        [
+          0.009011047809433693,
+          -0.003747316475101286
+        ]
+      ],
+      "bounds": {
+        "min": [
+          -0.05875979886511472,
+          0,
+          -0.1788090519045329
+        ],
+        "max": [
+          0.058759798865114725,
+          0.52,
+          0.1788090519045329
+        ]
+      },
+      "contactBounds": {
+        "min": [
+          0.008494531910322328,
+          -0.006757790744446479
+        ],
+        "max": [
+          0.012021522078778886,
+          -0.003230800711627925
+        ]
+      },
+      "contactOffset": [
+        0.010258026994550607,
+        -0.004994295728037202
+      ],
+      "triangleCount": 6
+    },
+    "evidence": {
+      "policy": "atelier-support-v1",
+      "coverage": "exact-rational-triangle-union",
+      "covered": true,
+      "clipSteps": 21,
+      "remainingFragments": 0,
+      "remainder": [],
+      "candidateTriangles": 6
+    }
+  },
+  "tables": [
+    {
+      "id": "round_wooden_table_02",
+      "label": "圆形木桌",
+      "sourcePage": "https://polyhaven.com/a/round_wooden_table_02",
+      "fingerprint": "08123cf8e768b40e25adb35a07baf30d79390e3dec400aa748940cf51ac1948f",
+      "valid": true,
+      "reason": "supported",
+      "normalization": {
+        "strategy": "uniform-height-xz-center-minY-floor",
+        "targetDesignHeightMeters": 0.75,
+        "factor": 1.0053260302456695,
+        "translation": [
+          0,
+          4.407026805409979e-9,
+          0
+        ],
+        "sourceBounds": {
+          "min": [
+            -0.3980890214443207,
+            -4.383679197417223e-9,
+            -0.3980890214443207
+          ],
+          "max": [
+            0.3980890214443207,
+            0.7460266351699829,
+            0.3980890214443207
+          ]
+        }
+      },
+      "triangleCount": 4254,
+      "status": "ambiguous",
+      "usableSurfaces": 1,
+      "surfaces": [
+        {
+          "id": "surface-a00979096466a780",
+          "height": 0.7499999400778992,
+          "heightRange": [
+            0.7499999400778992,
+            0.7500000000000001
+          ],
+          "triangleCount": 144,
+          "bounds": {
+            "min": [
+              -0.3947286903800508,
+              -0.3947286903800508
+            ],
+            "max": [
+              0.3947286903800508,
+              0.3947286903800508
+            ]
+          },
+          "obstacleCount": 0,
+          "recommendation": {
+            "valid": true,
+            "reason": "supported",
+            "worldPose": {
+              "x": -0.010258026994550607,
+              "y": 0.7499999400778992,
+              "z": 0.004994295728037202,
+              "yaw": 0,
+              "scale": 1
+            },
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-a00979096466a780",
+              "coverage": "exact-rational-triangle-union",
+              "margin": 0.002,
+              "basePolygon": [
+                [
+                  -0.0017634950842282792,
+                  0
+                ],
+                [
+                  -0.001246979456392924,
+                  -0.0012469793038001678
+                ],
+                [
+                  -1.1398676447171852e-10,
+                  -0.001763495016409277
+                ],
+                [
+                  0.0012469790494789076,
+                  -0.001246979439438173
+                ],
+                [
+                  0.0017634950842282792,
+                  -2.034570081854703e-10
+                ],
+                [
+                  0.0012469791851169136,
+                  0.0012469791172979106
+                ],
+                [
+                  -1.854736954298719e-10,
+                  0.001763495016409277
+                ],
+                [
+                  -0.0012469791851169136,
+                  0.0012469792529359158
+                ]
+              ],
+              "paddedPolygon": [
+                [
+                  -0.0037634950842282792,
+                  -0.002
+                ],
+                [
+                  -0.003246979456392924,
+                  -0.003246979303800168
+                ],
+                [
+                  -0.0020000001139867645,
+                  -0.003763495016409277
+                ],
+                [
+                  0.0019999998860132356,
+                  -0.003763495016409277
+                ],
+                [
+                  0.0032469790494789076,
+                  -0.003246979439438173
+                ],
+                [
+                  0.0037634950842282792,
+                  -0.0020000002034570082
+                ],
+                [
+                  0.0037634950842282792,
+                  0.001999999796542992
+                ],
+                [
+                  0.0032469791851169136,
+                  0.0032469791172979106
+                ],
+                [
+                  0.0019999998145263046,
+                  0.003763495016409277
+                ],
+                [
+                  -0.0020000001854736955,
+                  0.003763495016409277
+                ],
+                [
+                  -0.0032469791851169136,
+                  0.003246979252935916
+                ],
+                [
+                  -0.0037634950842282792,
+                  0.002
+                ]
+              ],
+              "covered": true,
+              "clipSteps": 1264,
+              "remainingFragments": 0,
+              "remainder": [],
+              "candidateTriangles": 48,
+              "worldBounds": {
+                "min": [
+                  -0.06901782585966533,
+                  0.7499999400778992,
+                  -0.1738147561764957
+                ],
+                "max": [
+                  0.04850177187056412,
+                  1.2699999400778992,
+                  0.18380334763257009
+                ]
+              },
+              "collisionMethod": "closed-world-aabb",
+              "obstacleCount": 0,
+              "recommendation": "bounded-common-center-and-triangle-centroids"
+            },
+            "anchor": [
+              -0.010258026994550607,
+              0.004994295728037202
+            ]
+          }
+        },
+        {
+          "id": "surface-68f07f306a7515cf",
+          "height": 0.7295624289625967,
+          "heightRange": [
+            0.7295624289625967,
+            0.7295624289625967
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              0.1662018566085313,
+              -0.17600846795608055
+            ],
+            "max": [
+              0.17549442621337052,
+              0.1764610146427253
+            ]
+          },
+          "obstacleCount": 752,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-68f07f306a7515cf",
+              "trials": 3,
+              "lastReason": "footprint-uncovered"
+            }
+          }
+        },
+        {
+          "id": "surface-7b2a0164d9b1cf05",
+          "height": 0.7295624289625967,
+          "heightRange": [
+            0.7295624289625967,
+            0.7295624289625967
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              -0.17549441123284532,
+              -0.17600846795608055
+            ],
+            "max": [
+              -0.1662018566085313,
+              0.1764610146427253
+            ]
+          },
+          "obstacleCount": 752,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-7b2a0164d9b1cf05",
+              "trials": 3,
+              "lastReason": "footprint-uncovered"
+            }
+          }
+        },
+        {
+          "id": "surface-5c55ec235bd05334",
+          "height": 0.7295624289625967,
+          "heightRange": [
+            0.7295624289625967,
+            0.7295624289625967
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              -0.1545505284037501,
+              0.1891850233565334
+            ],
+            "max": [
+              0.1545505134232249,
+              0.1984775630003222
+            ]
+          },
+          "obstacleCount": 752,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-5c55ec235bd05334",
+              "trials": 3,
+              "lastReason": "footprint-uncovered"
+            }
+          }
+        },
+        {
+          "id": "surface-9174a9a27af091ec",
+          "height": 0.7295624289625967,
+          "heightRange": [
+            0.7295624289625967,
+            0.7295624289625967
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              -0.1545505284037501,
+              -0.1984775630003222
+            ],
+            "max": [
+              0.1545505134232249,
+              -0.1891850233565334
+            ]
+          },
+          "obstacleCount": 752,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-9174a9a27af091ec",
+              "trials": 3,
+              "lastReason": "footprint-uncovered"
+            }
+          }
+        },
+        {
+          "id": "surface-6d4b051fc9d0ae69",
+          "height": 0.6781665239415209,
+          "heightRange": [
+            0.6781665239415209,
+            0.6781848601044013
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              0.17155529710438877,
+              -0.13994372233757785
+            ],
+            "max": [
+              0.17725095271857894,
+              0.140396298985273
+            ]
+          },
+          "obstacleCount": 2052,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-6d4b051fc9d0ae69",
+              "trials": 3,
+              "lastReason": "footprint-uncovered"
+            }
+          }
+        },
+        {
+          "id": "surface-788da16583d6f90b",
+          "height": 0.6781665239415209,
+          "heightRange": [
+            0.6781665239415209,
+            0.6781848601044013
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              -0.17725095271857894,
+              -0.13994372233757785
+            ],
+            "max": [
+              -0.17155531208491398,
+              0.140396298985273
+            ]
+          },
+          "obstacleCount": 2052,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-788da16583d6f90b",
+              "trials": 3,
+              "lastReason": "footprint-uncovered"
+            }
+          }
+        },
+        {
+          "id": "surface-f8c539cef9e888c3",
+          "height": 0.6781665239415209,
+          "heightRange": [
+            0.6781665239415209,
+            0.6781848601044013
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              -0.11848578278524739,
+              -0.20023410448605583
+            ],
+            "max": [
+              0.11848579776577263,
+              -0.1945384788329161
+            ]
+          },
+          "obstacleCount": 2052,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-f8c539cef9e888c3",
+              "trials": 3,
+              "lastReason": "footprint-uncovered"
+            }
+          }
+        },
+        {
+          "id": "surface-fc5ec911c0f53995",
+          "height": 0.6781665239415209,
+          "heightRange": [
+            0.6781665239415209,
+            0.6781848601044013
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              -0.11848578278524739,
+              0.19453849381344135
+            ],
+            "max": [
+              0.11848579776577263,
+              0.20023411946658107
+            ]
+          },
+          "obstacleCount": 2052,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-fc5ec911c0f53995",
+              "trials": 3,
+              "lastReason": "footprint-uncovered"
+            }
+          }
+        },
+        {
+          "id": "surface-ebd14c445965ca99",
+          "height": 0.2640988743222652,
+          "heightRange": [
+            0.2640988743222652,
+            0.2641341684397049
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              -0.17858353035980487,
+              -0.1341136614510325
+            ],
+            "max": [
+              -0.16620184162800605,
+              0.1345662380987277
+            ]
+          },
+          "obstacleCount": 2324,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-ebd14c445965ca99",
+              "trials": 3,
+              "lastReason": "conservative-aabb-collision"
+            }
+          }
+        },
+        {
+          "id": "surface-1b77ead6c1f2caf4",
+          "height": 0.2640988743222652,
+          "heightRange": [
+            0.2640988743222652,
+            0.2641341684397049
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              0.1662018566085313,
+              -0.1341136614510325
+            ],
+            "max": [
+              0.17858353035980487,
+              0.1345662380987277
+            ]
+          },
+          "obstacleCount": 2324,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-1b77ead6c1f2caf4",
+              "trials": 3,
+              "lastReason": "conservative-aabb-collision"
+            }
+          }
+        },
+        {
+          "id": "surface-a9f494e18708608b",
+          "height": 0.2640988743222652,
+          "heightRange": [
+            0.2640988743222652,
+            0.2641341684397049
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              -0.11265572189870209,
+              0.18918500837600818
+            ],
+            "max": [
+              0.11265573687922731,
+              0.20156668212728177
+            ]
+          },
+          "obstacleCount": 2324,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-a9f494e18708608b",
+              "trials": 3,
+              "lastReason": "conservative-aabb-collision"
+            }
+          }
+        },
+        {
+          "id": "surface-1c04d373b6675ce5",
+          "height": 0.2640988743222652,
+          "heightRange": [
+            0.2640988743222652,
+            0.2641341384786544
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              -0.11265572189870209,
+              -0.20156666714675656
+            ],
+            "max": [
+              0.11265573687922731,
+              -0.1891850233565334
+            ]
+          },
+          "obstacleCount": 2324,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-1c04d373b6675ce5",
+              "trials": 3,
+              "lastReason": "conservative-aabb-collision"
+            }
+          }
+        },
+        {
+          "id": "surface-a4f20570ff4031ef",
+          "height": 0.24582497050474567,
+          "heightRange": [
+            0.24582497050474567,
+            0.24583051329908043
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              -0.17549441123284532,
+              -0.15082836224166085
+            ],
+            "max": [
+              -0.17294674820976494,
+              0.15128090892830556
+            ]
+          },
+          "obstacleCount": 2356,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-a4f20570ff4031ef",
+              "trials": 3,
+              "lastReason": "footprint-uncovered"
+            }
+          }
+        },
+        {
+          "id": "surface-892ec998fcefa1c2",
+          "height": 0.24582497050474567,
+          "heightRange": [
+            0.24582497050474567,
+            0.24583051329908043
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              0.17294674820976494,
+              -0.15082836224166085
+            ],
+            "max": [
+              0.17549442621337052,
+              0.15128090892830556
+            ]
+          },
+          "obstacleCount": 2356,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-892ec998fcefa1c2",
+              "trials": 3,
+              "lastReason": "footprint-uncovered"
+            }
+          }
+        },
+        {
+          "id": "surface-42f2ae5025324259",
+          "height": 0.24582497050474567,
+          "heightRange": [
+            0.24582497050474567,
+            0.24583051329908043
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              -0.1293704226893304,
+              0.19592991495776704
+            ],
+            "max": [
+              0.12937040770880517,
+              0.1984775630003222
+            ]
+          },
+          "obstacleCount": 2356,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-42f2ae5025324259",
+              "trials": 3,
+              "lastReason": "footprint-uncovered"
+            }
+          }
+        },
+        {
+          "id": "surface-c38ba158e0c11abd",
+          "height": 0.24582495552422043,
+          "heightRange": [
+            0.24582495552422043,
+            0.2458304983185552
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              -0.1293704226893304,
+              -0.19847757798084742
+            ],
+            "max": [
+              0.12937040770880517,
+              -0.19592992993829228
+            ]
+          },
+          "obstacleCount": 2356,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-c38ba158e0c11abd",
+              "trials": 3,
+              "lastReason": "footprint-uncovered"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "wooden_table_02",
+      "label": "乡村木桌",
+      "sourcePage": "https://polyhaven.com/a/wooden_table_02",
+      "fingerprint": "0ceaca88200d995ae75caf513b2dbc01937cc9d52bcdb2fd7ac33e083de6e1a3",
+      "valid": true,
+      "reason": "supported",
+      "normalization": {
+        "strategy": "uniform-height-xz-center-minY-floor",
+        "targetDesignHeightMeters": 0.75,
+        "factor": 0.9380359854968097,
+        "translation": [
+          -8.386695255310622e-8,
+          0.00011739792661942415,
+          0
+        ],
+        "sourceBounds": {
+          "min": [
+            -0.5672082304954529,
+            -0.00012515290291048586,
+            -0.35301241278648376
+          ],
+          "max": [
+            0.5672084093093872,
+            0.7994177341461182,
+            0.35301241278648376
+          ]
+        }
+      },
+      "triangleCount": 196,
+      "status": "single",
+      "usableSurfaces": 1,
+      "surfaces": [
+        {
+          "id": "surface-336b1556d97b1937",
+          "height": 0.7499998322660949,
+          "heightRange": [
+            0.7499998322660949,
+            0.75
+          ],
+          "triangleCount": 10,
+          "bounds": {
+            "min": [
+              -0.5265211730768862,
+              -0.3255976763003549
+            ],
+            "max": [
+              0.5265211171655844,
+              0.3255976763003549
+            ]
+          },
+          "obstacleCount": 0,
+          "recommendation": {
+            "valid": true,
+            "reason": "supported",
+            "worldPose": {
+              "x": -0.010258054950201512,
+              "y": 0.7499998322660949,
+              "z": 0.004994295728037202,
+              "yaw": 0,
+              "scale": 1
+            },
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-336b1556d97b1937",
+              "coverage": "exact-rational-triangle-union",
+              "margin": 0.002,
+              "basePolygon": [
+                [
+                  -0.0017635230398791845,
+                  0
+                ],
+                [
+                  -0.0012470074120438292,
+                  -0.0012469793038001678
+                ],
+                [
+                  -2.8069637669769776e-8,
+                  -0.001763495016409277
+                ],
+                [
+                  0.0012469510938280023,
+                  -0.001246979439438173
+                ],
+                [
+                  0.001763467128577374,
+                  -2.034570081854703e-10
+                ],
+                [
+                  0.0012469512294660083,
+                  0.0012469791172979106
+                ],
+                [
+                  -2.814112460072793e-8,
+                  0.001763495016409277
+                ],
+                [
+                  -0.001247007140767819,
+                  0.0012469792529359158
+                ]
+              ],
+              "paddedPolygon": [
+                [
+                  -0.0037635230398791845,
+                  -0.002
+                ],
+                [
+                  -0.0032470074120438293,
+                  -0.003246979303800168
+                ],
+                [
+                  -0.00200002806963767,
+                  -0.003763495016409277
+                ],
+                [
+                  0.0019999719303623303,
+                  -0.003763495016409277
+                ],
+                [
+                  0.0032469510938280023,
+                  -0.003246979439438173
+                ],
+                [
+                  0.003763467128577374,
+                  -0.0020000002034570082
+                ],
+                [
+                  0.003763467128577374,
+                  0.001999999796542992
+                ],
+                [
+                  0.0032469512294660084,
+                  0.0032469791172979106
+                ],
+                [
+                  0.0019999718588753993,
+                  0.003763495016409277
+                ],
+                [
+                  -0.0020000281411246008,
+                  0.003763495016409277
+                ],
+                [
+                  -0.003247007140767819,
+                  0.003246979252935916
+                ],
+                [
+                  -0.0037635230398791845,
+                  0.002
+                ]
+              ],
+              "covered": true,
+              "clipSteps": 6,
+              "remainingFragments": 0,
+              "remainder": [],
+              "candidateTriangles": 2,
+              "worldBounds": {
+                "min": [
+                  -0.06901785381531624,
+                  0.7499998322660949,
+                  -0.1738147561764957
+                ],
+                "max": [
+                  0.048501743914913215,
+                  1.269999832266095,
+                  0.18380334763257009
+                ]
+              },
+              "collisionMethod": "closed-world-aabb",
+              "obstacleCount": 0,
+              "recommendation": "bounded-common-center-and-triangle-centroids"
+            },
+            "anchor": [
+              -0.010258054950201512,
+              0.004994295728037202
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "CoffeeTable_01",
+      "label": "复古茶几",
+      "sourcePage": "https://polyhaven.com/a/CoffeeTable_01",
+      "fingerprint": "a99f30644b6a7d4890006bc482dc33364c4700b44a87a028039e3170b3cb5fc2",
+      "valid": true,
+      "reason": "supported",
+      "normalization": {
+        "strategy": "uniform-height-xz-center-minY-floor",
+        "targetDesignHeightMeters": 0.75,
+        "factor": 1.4333839670777,
+        "translation": [
+          -0.000002947553805362025,
+          -0.0027600460644456267,
+          4.271817109220326e-8
+        ],
+        "sourceBounds": {
+          "min": [
+            -0.7700034976005554,
+            0.0019255455117672682,
+            -0.4864235520362854
+          ],
+          "max": [
+            0.7700076103210449,
+            0.5251628756523132,
+            0.4864234924316406
+          ]
+        }
+      },
+      "triangleCount": 10404,
+      "status": "ambiguous",
+      "usableSurfaces": 1,
+      "surfaces": [
+        {
+          "id": "surface-615c4920d1e39a2d",
+          "height": 0.7499998291273157,
+          "heightRange": [
+            0.7499998291273157,
+            0.75
+          ],
+          "triangleCount": 30,
+          "bounds": {
+            "min": [
+              -1.0431207093131953,
+              -0.6139016833754335
+            ],
+            "max": [
+              1.0431148142055848,
+              0.6139020251208023
+            ]
+          },
+          "obstacleCount": 0,
+          "recommendation": {
+            "valid": true,
+            "reason": "supported",
+            "worldPose": {
+              "x": -0.010260974548355862,
+              "y": 0.7499998291273157,
+              "z": 0.004994466600721593,
+              "yaw": 0,
+              "scale": 1
+            },
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-615c4920d1e39a2d",
+              "coverage": "exact-rational-triangle-union",
+              "margin": 0.002,
+              "basePolygon": [
+                [
+                  -0.001766442638033534,
+                  1.7087268439075487e-7
+                ],
+                [
+                  -0.0012499270101981787,
+                  -0.001246808431115777
+                ],
+                [
+                  -0.0000029476677920192706,
+                  -0.0017633241437248863
+                ],
+                [
+                  0.0012440314956736528,
+                  -0.0012468085667537822
+                ],
+                [
+                  0.0017605475304230244,
+                  1.706692273825694e-7
+                ],
+                [
+                  0.0012440316313116588,
+                  0.0012471499899823013
+                ],
+                [
+                  -0.000002947739278950229,
+                  0.0017636658890936678
+                ],
+                [
+                  -0.0012499267389221684,
+                  0.0012471501256203065
+                ]
+              ],
+              "paddedPolygon": [
+                [
+                  -0.003766442638033534,
+                  -0.0019998291273156093
+                ],
+                [
+                  -0.003249927010198179,
+                  -0.003246808431115777
+                ],
+                [
+                  -0.0020029476677920193,
+                  -0.0037633241437248863
+                ],
+                [
+                  0.0019970523322079808,
+                  -0.0037633241437248863
+                ],
+                [
+                  0.003244031495673653,
+                  -0.0032468085667537823
+                ],
+                [
+                  0.0037605475304230244,
+                  -0.0019998293307726175
+                ],
+                [
+                  0.0037605475304230244,
+                  0.0020001706692273826
+                ],
+                [
+                  0.003244031631311659,
+                  0.0032471499899823014
+                ],
+                [
+                  0.00199705226072105,
+                  0.003763665889093668
+                ],
+                [
+                  -0.0020029477392789503,
+                  0.003763665889093668
+                ],
+                [
+                  -0.0032499267389221684,
+                  0.0032471501256203066
+                ],
+                [
+                  -0.003766442638033534,
+                  0.002000170872684391
+                ]
+              ],
+              "covered": true,
+              "clipSteps": 6,
+              "remainingFragments": 0,
+              "remainder": [],
+              "candidateTriangles": 2,
+              "worldBounds": {
+                "min": [
+                  -0.06902077341347058,
+                  0.7499998291273157,
+                  -0.1738145853038113
+                ],
+                "max": [
+                  0.048498824316758865,
+                  1.2699998291273156,
+                  0.18380351850525448
+                ]
+              },
+              "collisionMethod": "closed-world-aabb",
+              "obstacleCount": 0,
+              "recommendation": "bounded-common-center-and-triangle-centroids"
+            },
+            "anchor": [
+              -0.010260974548355862,
+              0.004994466600721593
+            ]
+          }
+        },
+        {
+          "id": "surface-fe50c01770ef35d2",
+          "height": 0.6625519737025195,
+          "heightRange": [
+            0.6625519737025195,
+            0.6625519737025195
+          ],
+          "triangleCount": 2,
+          "bounds": {
+            "min": [
+              -0.4803027391931225,
+              0.5902857114141886
+            ],
+            "max": [
+              0.48029684408551176,
+              0.6042634387409263
+            ]
+          },
+          "obstacleCount": 376,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-fe50c01770ef35d2",
+              "trials": 3,
+              "lastReason": "conservative-aabb-collision"
+            }
+          }
+        },
+        {
+          "id": "surface-ee0be38ae9dbc5d4",
+          "height": 0.46409830216802533,
+          "heightRange": [
+            0.46409830216802533,
+            0.4640984730407097
+          ],
+          "triangleCount": 16,
+          "bounds": {
+            "min": [
+              -1.0212154292315088,
+              -0.6090653883534008
+            ],
+            "max": [
+              1.0212095341238983,
+              0.6090656446624274
+            ]
+          },
+          "obstacleCount": 1904,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-ee0be38ae9dbc5d4",
+              "trials": 17,
+              "lastReason": "conservative-aabb-collision"
+            }
+          }
+        },
+        {
+          "id": "surface-95ca110c3be219b1",
+          "height": 0.4235128784857714,
+          "heightRange": [
+            0.4235128784857714,
+            0.4235128784857714
+          ],
+          "triangleCount": 5,
+          "bounds": {
+            "min": [
+              0.9409639623452475,
+              -0.6179513659949744
+            ],
+            "max": [
+              1.024263968793333,
+              -0.5344878771061191
+            ]
+          },
+          "obstacleCount": 1970,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-95ca110c3be219b1",
+              "trials": 6,
+              "lastReason": "conservative-aabb-collision"
+            }
+          }
+        },
+        {
+          "id": "surface-1e5f9888aa566c93",
+          "height": 0.4235128784857714,
+          "heightRange": [
+            0.4235128784857714,
+            0.4235128784857714
+          ],
+          "triangleCount": 5,
+          "bounds": {
+            "min": [
+              -1.0244333890598845,
+              -0.6177877981178623
+            ],
+            "max": [
+              -0.9409698574528582,
+              -0.5344878771061191
+            ]
+          },
+          "obstacleCount": 1970,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-1e5f9888aa566c93",
+              "trials": 6,
+              "lastReason": "conservative-aabb-collision"
+            }
+          }
+        },
+        {
+          "id": "surface-185e93674fab0823",
+          "height": 0.42351270761308707,
+          "heightRange": [
+            0.42351270761308707,
+            0.42351270761308707
+          ],
+          "triangleCount": 5,
+          "bounds": {
+            "min": [
+              -1.0242698639009435,
+              0.5344881334151457
+            ],
+            "max": [
+              -0.9409698574528582,
+              0.617951622304001
+            ]
+          },
+          "obstacleCount": 1970,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-185e93674fab0823",
+              "trials": 6,
+              "lastReason": "conservative-aabb-collision"
+            }
+          }
+        },
+        {
+          "id": "surface-ab926158b15d5e04",
+          "height": 0.42351270761308707,
+          "heightRange": [
+            0.42351270761308707,
+            0.42351270761308707
+          ],
+          "triangleCount": 5,
+          "bounds": {
+            "min": [
+              0.9409700283255427,
+              0.5344827509255881
+            ],
+            "max": [
+              1.024433474496227,
+              0.6177826719373313
+            ]
+          },
+          "obstacleCount": 1970,
+          "recommendation": {
+            "valid": false,
+            "reason": "no-verified-position-in-finite-search",
+            "evidence": {
+              "policy": "atelier-support-v1",
+              "surfaceId": "surface-ab926158b15d5e04",
+              "trials": 6,
+              "lastReason": "conservative-aabb-collision"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

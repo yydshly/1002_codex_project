@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 1,
+  "product": "ATELIER · 新桌支撑研究",
+  "preparedAt": "2026-10-07",
+  "status": "source-assets-prepared-geometric-validation-separate",
+  "runtimeNetwork": "local-only",
+  "provenance": "Independent original Poly Haven designs, unmodified source glTF/bin/1k textures. Asset preparation runs no support detection.",
+  "normalization": {
+    "policyVersion": "table-height-075-v1",
+    "upAxis": "+Y",
+    "sourceUnit": "meter",
+    "unitAuthority": "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#coordinate-system-and-units",
+    "targetDesignHeightMeters": 0.75,
+    "rule": "After all source-node transforms: s = 0.75 / (maxY - minY); x,z translate by negative bounding-box center times s; y translate by -minY times s; apply one positive uniform scale.",
+    "heightMeaning": "A shared product design height; neither a measured table height nor an inferred source unit.",
+    "matrixRecord": "Computed by the shared extraction adapter and recorded in geometric validation evidence, never assigned per asset here."
+  },
+  "license": {
+    "id": "CC0-1.0",
+    "authority": "https://polyhaven.com/license",
+    "apiAuthority": "https://polyhaven.com/our-api",
+    "credit": "Table assets by Poly Haven and their listed artists."
+  },
+  "selectionProtocol": {
+    "independentDesignsRequired": 3,
+    "previouslyAdaptedExcluded": [
+      "modern_coffee_table_01",
+      "modern_coffee_table_02"
+    ],
+    "selectedBeforeSupportAnalysis": true,
+    "assetSpecificGeometryOverrides": false,
+    "geometricValidationStatus": "Run separately after the shared rule is frozen; preparing an asset is not a successful placement test.",
+    "negativeCases": "A true tabletop hole or concave boundary is not claimed from these source descriptions; separate geometry fixtures must be labelled as such."
+  },
+  "assets": [
+    {
+      "id": "round_wooden_table_02",
+      "label": "圆形木桌",
+      "design": "Independent round tabletop and pedestal design.",
+      "name": "Round Wooden Table 02",
+      "modelPath": "assets/models/round_wooden_table_02/round_wooden_table_02.gltf",
+      "format": "gltf-2.0-static-external-local",
+      "sourcePage": "https://polyhaven.com/a/round_wooden_table_02",
+      "license": "CC0-1.0",
+      "authors": {
+        "Ulan Cabanilla": "All"
+      },
+      "sourceUnit": "meter (glTF 2.0 coordinate convention; no measured-height claim)",
+      "sourceFingerprint": "08123cf8e768b40e25adb35a07baf30d79390e3dec400aa748940cf51ac1948f",
+      "sourceFingerprintAlgorithm": "SHA-256 of UTF-8 path:sha256 LF lines sorted by en locale path, includes all unmodified runtime source files.",
+      "runtimeBytes": 1921292,
+      "metadataFiles": [
+        {
+          "path": "assets/source-metadata/round_wooden_table_02-info.json",
+          "source": "https://api.polyhaven.com/info/round_wooden_table_02",
+          "bytes": 958,
+          "sha256": "4b83cdc8e55ccd2cdb934957c811f0ad265adb8392089353a34b0627e790178d"
+        },
+        {
+          "path": "assets/source-metadata/round_wooden_table_02-files.json",
+          "source": "https://api.polyhaven.com/files/round_wooden_table_02",
+          "bytes": 24694,
+          "sha256": "23444ec5c895e3271f1bc5ad7607ff30e61a5edb9e38da277c12f07d0eee926b"
+        }
+      ],
+      "files": [
+        {
+          "path": "assets/models/round_wooden_table_02/round_wooden_table_02.gltf",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/round_wooden_table_02/round_wooden_table_02_1k.gltf",
+          "bytes": 2851,
+          "sha256": "df65c35148280a06efcc06bfa75432bb13f29318e869597fc94f364ce2b55974",
+          "sourceMd5": "d0d30c21d878a5f1f36a96b33458aba0"
+        },
+        {
+          "path": "assets/models/round_wooden_table_02/round_wooden_table_02.bin",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/round_wooden_table_02/round_wooden_table_02.bin",
+          "bytes": 135412,
+          "sha256": "fa9a0ed80be31d9160207913762cedc5de21d1cb37b01a5ae6caa23ce7a741b6",
+          "sourceMd5": "026ad1fd824b6eb38a4a260565471243"
+        },
+        {
+          "path": "assets/models/round_wooden_table_02/textures/round_wooden_table_02_arm_1k.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/round_wooden_table_02/round_wooden_table_02_arm_1k.jpg",
+          "bytes": 677385,
+          "sha256": "613d051b4c4e093c5e65eec37d39f6f48ac5476e2cb1b59c4b034f308ef1a7ee",
+          "sourceMd5": "bd5ba146734d7aa0acdfcae0c66b727f"
+        },
+        {
+          "path": "assets/models/round_wooden_table_02/textures/round_wooden_table_02_diff_1k.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/round_wooden_table_02/round_wooden_table_02_diff_1k.jpg",
+          "bytes": 470007,
+          "sha256": "9872acedc6be92ef232c581c8e9ce435e4aa0d8f5c4b75e4ce445995a3ef8c28",
+          "sourceMd5": "2f16277bfd0ff661de3245c11d0b556e"
+        },
+        {
+          "path": "assets/models/round_wooden_table_02/textures/round_wooden_table_02_nor_gl_1k.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/round_wooden_table_02/round_wooden_table_02_nor_gl_1k.jpg",
+          "bytes": 635637,
+          "sha256": "34989b9a15753b964a4d9d6b2673c048ff2c14feedbe4e6adbeb4bf32be8bc8c",
+          "sourceMd5": "0f04a60c2f59f09808b26eb594732eed"
+        }
+      ],
+      "structure": {
+        "animationCount": 0,
+        "skinCount": 0,
+        "nodeCount": 1,
+        "meshCount": 1,
+        "primitiveCount": 1,
+        "extensionsUsed": [],
+        "extensionsRequired": [],
+        "geometricAnalysis": "Not run by asset preparation; no support faces, contact anchors or thresholds are assigned."
+      }
+    },
+    {
+      "id": "wooden_table_02",
+      "label": "乡村木桌",
+      "design": "Independent rustic rectangular wooden table design.",
+      "name": "Wooden Table 02",
+      "modelPath": "assets/models/wooden_table_02/wooden_table_02.gltf",
+      "format": "gltf-2.0-static-external-local",
+      "sourcePage": "https://polyhaven.com/a/wooden_table_02",
+      "license": "CC0-1.0",
+      "authors": {
+        "Serhii Khromov": "All"
+      },
+      "sourceUnit": "meter (glTF 2.0 coordinate convention; no measured-height claim)",
+      "sourceFingerprint": "0ceaca88200d995ae75caf513b2dbc01937cc9d52bcdb2fd7ac33e083de6e1a3",
+      "sourceFingerprintAlgorithm": "SHA-256 of UTF-8 path:sha256 LF lines sorted by en locale path, includes all unmodified runtime source files.",
+      "runtimeBytes": 485316,
+      "metadataFiles": [
+        {
+          "path": "assets/source-metadata/wooden_table_02-info.json",
+          "source": "https://api.polyhaven.com/info/wooden_table_02",
+          "bytes": 937,
+          "sha256": "1f746271cc258e7758842195babf374750d5187889702ff261bcc81a1d52f6a4"
+        },
+        {
+          "path": "assets/source-metadata/wooden_table_02-files.json",
+          "source": "https://api.polyhaven.com/files/wooden_table_02",
+          "bytes": 22887,
+          "sha256": "224a7296ed197cd0665ee24cd5f2756fd46195d978efea08fea486806ef80b37"
+        }
+      ],
+      "files": [
+        {
+          "path": "assets/models/wooden_table_02/wooden_table_02.gltf",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/wooden_table_02/wooden_table_02_1k.gltf",
+          "bytes": 2687,
+          "sha256": "bb38e301840cb629d72c43c83fdb7fb308518efe2d0bc01e1ed0e9a9e43ed9d3",
+          "sourceMd5": "957c5d94784eed976cb4c6f0256a85e7"
+        },
+        {
+          "path": "assets/models/wooden_table_02/textures/wooden_table_02_arm_1k.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_table_02/wooden_table_02_arm_1k.jpg",
+          "bytes": 174545,
+          "sha256": "b970a81e4b03f3b8a341c9eb639f112fff1782d681c846255ebc9073cd803ced",
+          "sourceMd5": "8ee06c71a226e7f53b2ba53da79a55be"
+        },
+        {
+          "path": "assets/models/wooden_table_02/textures/wooden_table_02_diff_1k.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_table_02/wooden_table_02_diff_1k.jpg",
+          "bytes": 178379,
+          "sha256": "2334ac3e23d69222322515d9bad066b4e90d7d81989fe231b8fb12f39179ad9e",
+          "sourceMd5": "07075a87918208594260c86c727e4396"
+        },
+        {
+          "path": "assets/models/wooden_table_02/textures/wooden_table_02_nor_gl_1k.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_table_02/wooden_table_02_nor_gl_1k.jpg",
+          "bytes": 122129,
+          "sha256": "9470e08e5dab4ab6a7cafab2a488a50fb54fa8f38890e9032c39dcbf7f5846d2",
+          "sourceMd5": "63ac7819b624149e77ae9459472ded6d"
+        },
+        {
+          "path": "assets/models/wooden_table_02/wooden_table_02.bin",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wooden_table_02/wooden_table_02.bin",
+          "bytes": 7576,
+          "sha256": "52ed7cc67b3aa403375cf9bd18050e8cc21bcced6532a0183c1a733f0965df6d",
+          "sourceMd5": "a17c24e5366a0f7ad5522b88a4a9ea85"
+        }
+      ],
+      "structure": {
+        "animationCount": 0,
+        "skinCount": 0,
+        "nodeCount": 1,
+        "meshCount": 1,
+        "primitiveCount": 1,
+        "extensionsUsed": [],
+        "extensionsRequired": [],
+        "geometricAnalysis": "Not run by asset preparation; no support faces, contact anchors or thresholds are assigned."
+      }
+    },
+    {
+      "id": "CoffeeTable_01",
+      "label": "复古茶几",
+      "design": "Independent painted vintage coffee table design.",
+      "name": "Coffee Table 01",
+      "modelPath": "assets/models/CoffeeTable_01/CoffeeTable_01.gltf",
+      "format": "gltf-2.0-static-external-local",
+      "sourcePage": "https://polyhaven.com/a/CoffeeTable_01",
+      "license": "CC0-1.0",
+      "authors": {
+        "Fernando Quinn": "All"
+      },
+      "sourceUnit": "meter (glTF 2.0 coordinate convention; no measured-height claim)",
+      "sourceFingerprint": "a99f30644b6a7d4890006bc482dc33364c4700b44a87a028039e3170b3cb5fc2",
+      "sourceFingerprintAlgorithm": "SHA-256 of UTF-8 path:sha256 LF lines sorted by en locale path, includes all unmodified runtime source files.",
+      "runtimeBytes": 957812,
+      "metadataFiles": [
+        {
+          "path": "assets/source-metadata/CoffeeTable_01-info.json",
+          "source": "https://api.polyhaven.com/info/CoffeeTable_01",
+          "bytes": 912,
+          "sha256": "b12dfe3b30d6112d7d2aa4056498b4a84457151103e08521e0121702fc20baee"
+        },
+        {
+          "path": "assets/source-metadata/CoffeeTable_01-files.json",
+          "source": "https://api.polyhaven.com/files/CoffeeTable_01",
+          "bytes": 21274,
+          "sha256": "d4950efbc0021af039eb58f75c9a985ce10429b0ae1b691b7f989ad67d5a2a66"
+        }
+      ],
+      "files": [
+        {
+          "path": "assets/models/CoffeeTable_01/CoffeeTable_01.gltf",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/CoffeeTable_01/CoffeeTable_01_1k.gltf",
+          "bytes": 3182,
+          "sha256": "c0b7ce378fc13886c220236941b4d258389d252e337297dc89505b80e43617fb",
+          "sourceMd5": "5a981114987ebd1d7033dee542803988"
+        },
+        {
+          "path": "assets/models/CoffeeTable_01/CoffeeTable_01.bin",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/CoffeeTable_01/CoffeeTable_01.bin",
+          "bytes": 394920,
+          "sha256": "1b047e37723ad62b6a204465b22b9fd40936957cee255f20ee65312db227fb11",
+          "sourceMd5": "a8815aecc367e1efd401cd644d679899"
+        },
+        {
+          "path": "assets/models/CoffeeTable_01/textures/CoffeeTable_01_arm_1k.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/CoffeeTable_01/CoffeeTable_01_arm_1k.jpg",
+          "bytes": 194521,
+          "sha256": "b8d7dfe15a11ba361919840f00f360d1133f985ff4321b2e891cf941eb5b51c0",
+          "sourceMd5": "78551ee723828bb20937897745c58ff5"
+        },
+        {
+          "path": "assets/models/CoffeeTable_01/textures/CoffeeTable_01_diff_1k.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/CoffeeTable_01/CoffeeTable_01_diff_1k.jpg",
+          "bytes": 196775,
+          "sha256": "170967df5c50342bb5f0273d1fb99f22cef80a0e7f50264e16dec75d1b2830ba",
+          "sourceMd5": "9c52acf206cb7912f9c7fd74edcd5b48"
+        },
+        {
+          "path": "assets/models/CoffeeTable_01/textures/CoffeeTable_01_nor_gl_1k.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/CoffeeTable_01/CoffeeTable_01_nor_gl_1k.jpg",
+          "bytes": 168414,
+          "sha256": "0aa55f510be698c7c0e2c0c2deff2a4e892a9343da98bb901daa84e104883de7",
+          "sourceMd5": "40c14c4e129b068fa1b4987a7dbbbf9d"
+        }
+      ],
+      "structure": {
+        "animationCount": 0,
+        "skinCount": 0,
+        "nodeCount": 1,
+        "meshCount": 1,
+        "primitiveCount": 1,
+        "extensionsUsed": [],
+        "extensionsRequired": [],
+        "geometricAnalysis": "Not run by asset preparation; no support faces, contact anchors or thresholds are assigned."
+      }
+    }
+  ],
+  "rejected": []
+}

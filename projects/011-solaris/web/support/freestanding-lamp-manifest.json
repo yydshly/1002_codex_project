@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "preparedAt": "2026-10-07",
+  "runtimeNetwork": "local-only",
+  "status": "source-prepared-contact-validation-separate",
+  "normalization": {
+    "policyVersion": "lamp-height-052-v1",
+    "upAxis": "+Y",
+    "sourceUnit": "meter",
+    "targetDesignHeightMeters": 0.52,
+    "unitAuthority": "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#coordinate-system-and-units",
+    "rule": "After all source-node transforms: positive uniform s = 0.52 / (maxY - minY), X/Z bounding center at zero, minY at floor.",
+    "heightMeaning": "Shared lamp product design height; not measured source dimensions."
+  },
+  "sourceSemanticReview": {
+    "officialCategory": "Lighting / Floor & Desk / Desk Lamps",
+    "officialSource": "https://polyhaven.com/a/industrial_pipe_lamp",
+    "preview": "https://cdn.polyhaven.com/asset_img/renders/industrial_pipe_lamp/clay.png?height=900&quality=95&v=f1e4be54",
+    "status": "Visual standalone single circular base confirmed from the official clay preview; unchanged-policy contact validation remains separate.",
+    "visualEvidence": "Official clay preview viewed in the real browser on 2026-10-07: one complete round base, no clamp or projecting bottom bolt; hex/bolt connectors are above the base at the pipe joint.",
+    "physicalMeaning": "Source and preview provide no physical stability guarantee or guarantee that fastening is unnecessary. Visual category review is not geometric contact or real-world stability validation.",
+    "noAssetSpecificContactOverrides": true,
+    "excludedOriginal": {
+      "id": "desk_lamp_arm_01",
+      "source": "https://polyhaven.com/a/desk_lamp_arm_01",
+      "reason": "Official clamp-mounted lamp; the first analysis found only a 3.527 mm bottom contact patch, which does not establish a freestanding lamp base."
+    },
+    "heldOutMeaning": "The same three registered tables are rerun with this independently registered lamp. This is not a new unseen table test set and does not erase the first semantic failure."
+  },
+  "rejected": [],
+  "id": "industrial_pipe_lamp",
+  "label": "工业管灯",
+  "design": "Independent industrial desk lamp with a heavy base; selected from official Desk Lamps category, not modified from the clamp-mounted source.",
+  "name": "Industrial Pipe Lamp",
+  "modelPath": "assets/models/industrial_pipe_lamp/industrial_pipe_lamp.gltf",
+  "format": "gltf-2.0-static-external-local",
+  "sourcePage": "https://polyhaven.com/a/industrial_pipe_lamp",
+  "license": "CC0-1.0",
+  "authors": {
+    "Mateusz Sadek": "All"
+  },
+  "sourceUnit": "meter (glTF 2.0 coordinate convention; no measured-height claim)",
+  "sourceFingerprint": "01e4d4b647a45ba18551c091100306333b52c9f396726e82cd5f7668d81eda62",
+  "sourceFingerprintAlgorithm": "SHA-256 of UTF-8 path:sha256 LF lines sorted by en locale path, includes all unmodified runtime source files.",
+  "runtimeBytes": 2408199,
+  "metadataFiles": [
+    {
+      "path": "assets/source-metadata/industrial_pipe_lamp-info.json",
+      "source": "https://api.polyhaven.com/info/industrial_pipe_lamp",
+      "bytes": 1025,
+      "sha256": "7e9b928dbba07d1e0593f3ec6c1355144124760cee028522887c7609333be921"
+    },
+    {
+      "path": "assets/source-metadata/industrial_pipe_lamp-files.json",
+      "source": "https://api.polyhaven.com/files/industrial_pipe_lamp",
+      "bytes": 30441,
+      "sha256": "dfc44081de53ddaa4d95b09b5096fa312cc7d6a06e67df0864e293b9f5fb513a"
+    }
+  ],
+  "files": [
+    {
+      "path": "assets/models/industrial_pipe_lamp/industrial_pipe_lamp.gltf",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/industrial_pipe_lamp/industrial_pipe_lamp_1k.gltf",
+      "bytes": 7419,
+      "sha256": "c5a84037c9183d2966c5659213a0d5190f8fce305153829d81028f6589330af7",
+      "sourceMd5": "d8bbade589e987381efdab60b09edfa8"
+    },
+    {
+      "path": "assets/models/industrial_pipe_lamp/industrial_pipe_lamp.bin",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/industrial_pipe_lamp/industrial_pipe_lamp.bin",
+      "bytes": 282476,
+      "sha256": "75690aa977d3bb011633ed649e058eb43ffef283f3a374f4842e411b25f82775",
+      "sourceMd5": "57b3afbb3332f86cfb3a693f3759c4f4"
+    },
+    {
+      "path": "assets/models/industrial_pipe_lamp/textures/industrial_pipe_lamp_arm_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/industrial_pipe_lamp/industrial_pipe_lamp_arm_1k.jpg",
+      "bytes": 771842,
+      "sha256": "ed862bc1d71322cd38efde6e4b1aa6b24b9e85eb950b7e0fc82a98b1c619f7fa",
+      "sourceMd5": "f8b38078596d89f70e3dc6e4320f03c0"
+    },
+    {
+      "path": "assets/models/industrial_pipe_lamp/textures/industrial_pipe_lamp_diff_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/industrial_pipe_lamp/industrial_pipe_lamp_diff_1k.jpg",
+      "bytes": 716999,
+      "sha256": "630c5732f1027a6acd369bac3b44c040ecbaff8f21e491a480c36715f15205ce",
+      "sourceMd5": "59d8793b0be49c50a7dcf239b5978386"
+    },
+    {
+      "path": "assets/models/industrial_pipe_lamp/textures/industrial_pipe_lamp_emission_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/industrial_pipe_lamp/industrial_pipe_lamp_emission_1k.jpg",
+      "bytes": 26599,
+      "sha256": "fca3fb29d89214d49842cde79125727ff308b4ba1b3912c5ebcc65846cd0cc10",
+      "sourceMd5": "2e2f1069b18bee34dba2bf9999f3d46d"
+    },
+    {
+      "path": "assets/models/industrial_pipe_lamp/textures/industrial_pipe_lamp_nor_gl_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/industrial_pipe_lamp/industrial_pipe_lamp_nor_gl_1k.jpg",
+      "bytes": 602864,
+      "sha256": "deb1517375d6a054671990ae63735b8b2808038c7406136f0a61ee848acd3377",
+      "sourceMd5": "0c32b4fc551b8fc15f2439905707398a"
+    }
+  ],
+  "structure": {
+    "animationCount": 0,
+    "skinCount": 0,
+    "nodeCount": 3,
+    "meshCount": 3,
+    "primitiveCount": 3,
+    "extensionsUsed": [
+      "KHR_materials_emissive_strength"
+    ],
+    "extensionsRequired": [],
+    "geometricAnalysis": "Not run by asset preparation; no support faces, contact anchors or thresholds are assigned."
+  }
+}
