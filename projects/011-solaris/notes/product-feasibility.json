@@ -1768,6 +1768,23 @@
           "complete-source-original-directory"
         ],
         "validationDocument": "effect-display-validation.json"
+      },
+      "publicationSummary": {
+        "date": "2026-10-07",
+        "focus": "以操作与成果为主线整理完整理解，七个维度同步项目摘要与README，当前效果图作为引导",
+        "dimensions": [
+          "源研究展示什么",
+          "鼠标与生成原理",
+          "我们怎样自主实现",
+          "已有场景与可用成果",
+          "基础与真实能力探索",
+          "用途与对你的价值",
+          "引导图与阶段结论"
+        ],
+        "cover": "projects/011-solaris/assets/atelier-understanding-map.png",
+        "baselineVersion": "0.18.2",
+        "newCapabilities": 0,
+        "validationDocument": "understanding-summary-validation.json"
       }
     }
   }

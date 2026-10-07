@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-07",
+  "scope": "理解摘要整理与远端发布；维持0.18.2基础收束，不新增功能、场景、研究排期或验证承诺",
+  "previousCommit": "6ace0657b9e55cccd96fa6b53affb08fbea221d2",
+  "entry": "../web/overview.html",
+  "summary": {
+    "main": "从Solaris鼠标交互研究出发，探索让用户直接操作画面中的对象，并观察有意义的关联响应。我们用自主维护的本地控制、规则、状态与渲染实现11个受控场景，支持编辑、取消撤销、保存恢复及有限任务往返；未接入Solaris原模型。清晰总览图对照源效果和我们的实景，说明功能、两条原理路线、使用场景与价值。0.18.2基础探索已收束，后续从具体产品任务选择能力、按缺口深化。",
+    "dimensions": [
+      "源研究展示什么",
+      "鼠标与生成原理",
+      "我们怎样自主实现",
+      "已有场景与可用成果",
+      "基础与真实能力探索",
+      "用途与对你的价值",
+      "引导图与阶段结论"
+    ],
+    "catalogReadmeAndPublishedHubConsistent": true,
+    "overviewHeroAndHomeEntryUpdated": true
+  },
+  "guide": {
+    "catalogCover": "projects/011-solaris/assets/atelier-understanding-map.png",
+    "currentEffectMapRetained": true,
+    "unchangedFromPreviousCommit": true,
+    "readmeGuideBeforeHistoricalDetails": true,
+    "publishedCoverMatches": true,
+    "artifacts": [
+      {
+        "file": "assets/atelier-understanding-map.png",
+        "bytes": 18961363,
+        "sha256": "65a37d31c130995c0d0071ffc249d5c56a4f81154ed0c1c180ea8dd8a1fd1318"
+      },
+      {
+        "file": "assets/atelier-understanding-map.svg",
+        "bytes": 10935870,
+        "sha256": "5ac5c49d108a5b8dbad6c2843a8e4ddea3845285a903918402206a172393d311"
+      }
+    ]
+  },
+  "retained": {
+    "baseline": "0.18.2",
+    "sourceFamilies": 12,
+    "sourceItems": 36,
+    "productScenes": 11,
+    "boundedMapping": "35/36",
+    "taskTargets": 9,
+    "workspaceRecords": 10,
+    "sourceModelExecuted": false,
+    "fittingAndRealPersonExpansion": "paused",
+    "remaining": "C19",
+    "originalReleaseRecordUnchanged": true,
+    "independentSupportNotInLivingRoomOrWorkspaceBundle": true
+  },
+  "automatic": {
+    "repositoryTests": {
+      "passed": 16,
+      "failed": 0
+    },
+    "catalogCheck": true,
+    "build": true,
+    "integrationCheck": true,
+    "localWebUrlsAndFragments": 193,
+    "originalHomeIdsPreserved": 113,
+    "readmeLocalReferences": 182,
+    "gitDiffCheck": true
+  },
+  "browser": {
+    "newSummaryObserved": true,
+    "guideLoaded": true,
+    "guideDimensions": [
+      2340,
+      7320
+    ],
+    "allThreeReadingViewButtonsPresent": true,
+    "actualPageWidth": 768,
+    "pageScrollWidth": 768,
+    "proof": "../assets/atelier-understanding-summary-page.jpg"
+  },
+  "boundary": "本轮整理说明与引导，不重跑产品386项或所有场景交互；历史结果按各自版本阅读。"
+}
