@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-07",
+  "scope": "完整理解、网页目录、首页入口与新引导图发布；维持0.18.2基础收束，不新增场景或能力",
+  "entry": "../web/overview.html",
+  "sourceReview": {
+    "primarySources": [
+      "https://runway.com/news/research/introducing-solaris",
+      "https://arxiv.org/html/2609.00776v1"
+    ],
+    "discoveryEntry": "https://x.com/GKev1n/status/2106629610590888065",
+    "sourceModelExecuted": false,
+    "sourceVideoReplayedThisRound": false,
+    "note": "本次重读官方介绍与论文；C36沿用既有视频观察。未确认Solaris专用源码、API或权重可用；公开图、文字和设想分开记录。"
+  },
+  "inventory": {
+    "sourceFamilies": 12,
+    "sourceCapabilities": 36,
+    "evidenceCounts": {
+      "figure": 25,
+      "existingVideoObservation": 1,
+      "comparison": 2,
+      "description": 5,
+      "prospect": 3
+    },
+    "boundedMappedCapabilities": 35,
+    "unimplemented": [
+      "C19"
+    ],
+    "scenes": 11,
+    "workflowTargets": 9,
+    "backupRecords": 10,
+    "independentSupportWorkbenchIsExtraScene": false,
+    "fittingAndRealPersonExpansionPaused": true
+  },
+  "diagram": {
+    "svg": "../assets/atelier-understanding-map.svg",
+    "png": "../assets/atelier-understanding-map.png",
+    "width": 3840,
+    "height": 3440,
+    "minimumAuthoredTextSize": 30,
+    "method": "原生SVG排版，现有JPEG原字节嵌入；PNG由本机bundled Sharp/librsvg渲染",
+    "backgrounds": [
+      "solaris-gallery.jpg",
+      "atelier-studio.jpg",
+      "atelier-car-showroom.jpg",
+      "atelier-underwater-follow-during.jpg",
+      "atelier-support-workbench.jpg"
+    ],
+    "note": "背景分别标官方示例与我们既有实景；图是理解导览，非源模型复现或本轮交互验收截图。旧0.17.0图与历史证据保留。汽车素材作者和CC BY 4.0署名写入图尾。",
+    "authoredTextElements": 215,
+    "files": [
+      {
+        "format": "svg",
+        "bytes": 627920,
+        "sha256": "a55161ff7c45280b2e8403f216f1b4680276cb6221dfc84f20409d3de8d17860"
+      },
+      {
+        "format": "png",
+        "bytes": 2682250,
+        "sha256": "f7bdd27c2f4f4cbcbbb9ba3fb47783387b3f969f5ebf18990f888fb52f7a063a"
+      }
+    ]
+  },
+  "publicationChecks": {
+    "rootNodeTests": {
+      "passed": 16,
+      "total": 16
+    },
+    "localUrlsAndFragmentTargetsChecked": 143,
+    "originalHomepageIdsPreserved": 109,
+    "svgAndPngSourceWebPublishedCopiesIdentical": true,
+    "historicalSceneScreenshotsPublished": 12,
+    "catalogReadmeBuildAndIntegrationSync": "passed",
+    "diffWhitespace": "passed",
+    "newProductTestsRunThisRound": false,
+    "note": "图中的386/386产品及16/16仓库是0.18.2当轮历史结果；本次另运行16项仓库检查、图源与发布链接检查，未重新实测全部场景。"
+  },
+  "browserChecks": {
+    "homepage": {
+      "actualInnerWidth": 1280,
+      "actualScrollWidth": 1280,
+      "sceneLoaded": true,
+      "registeredObjects": 7,
+      "mainOverviewLinkNavigationAndReturn": "passed",
+      "directoryAndElevenScenesExpansion": "passed",
+      "objectsMaterialsScenesPanels": "passed",
+      "consoleWarnOrError": 0
+    },
+    "overview": {
+      "actualInnerWidth": 783,
+      "actualDocumentClientWidth": 768,
+      "actualScrollWidth": 768,
+      "sourceItemCount": 36,
+      "familyCardCount": 12,
+      "sceneCardCount": 11,
+      "questionCardCount": 6,
+      "useCardCount": 5,
+      "duplicateIds": 0,
+      "mapNaturalWidth": 3840,
+      "visibleSceneImages": "客厅、汽车、影像与建筑原图加载成功，naturalWidth各1280；其余静态文件与链接检查通过",
+      "consoleWarnOrError": 0
+    },
+    "noSceneEditsOrSavedPlanWritesPerformed": true,
+    "note": "本次仅页面、目录、图片及原编辑面板的浏览验证；不是触屏、多浏览器、性能、故障或全部交互复测。"
+  },
+  "actualScreenshots": [
+    "../assets/atelier-understanding-home-entry.jpg",
+    "../assets/atelier-understanding-overview-page.jpg",
+    "../assets/atelier-understanding-map-on-page.jpg",
+    "../assets/atelier-understanding-scene-gallery.jpg"
+  ]
+}

@@ -4,7 +4,11 @@
 
 现有实现、历史记录和已知待验证边界全部保留。下文未验项说明现有基础可以使用到什么范围，不是当前必须逐项补齐的任务清单；阶段收束不代表商用成熟、任意输入支持或全量验收通过。C19与试衣/真人扩展保持暂停。
 
-[实际总览页面](assets/atelier-foundation-baseline.jpg)留存本阶段收束后的网页说明；原引导图与各轮操作证据继续保留。
+[完整理解网页](http://localhost:4189/projects/011-solaris/overview.html)现在汇总六个核心问题、12族36项公开能力、两条实现路线、11个场景的实景/功能/验证/边界、独立桌灯研究、用途、个人价值与全部入口。客厅首页增加首屏总览入口和分类页面目录，可直接进入全部11场景。当前仍以0.18.2为基础收束基线，本次整理没有新增功能编号、场景或研究排期。
+
+源网页是 Runway Solaris 的公开界面世界模型研究，X链接是发现入口；本项目尚未确认其专用开源库、API或权重可用，也未接入原模型。原研究由视觉上下文、历史输入和语言行为提示生成后续画面；我们用登记资产、明确工具、约束、状态事务与本地渲染实现限定场景。真人照片入口使用本机FASHN预训练，是单独记录的例外。
+
+对我们的意义是留下可自主维护的交互基础和产品样本：下一次有具体用户任务时，可以选择已有代码、资产和流程复用，再验证实际缺口。35/36是受控映射，不是完成率；C19与试衣/真人扩展暂缓。[阶段收束时的实际总览页面](assets/atelier-foundation-baseline.jpg)与原引导图、各轮操作证据继续保留。
 
 **0.18.2发布记录（2026-10-07）：** 让[新桌与阅读灯研究工作台](http://localhost:4189/projects/011-solaris/support.html)清楚区分已保存方案与未保存编辑，离开前给出明确处理。状态按经过worker校验的完整方案内容比较：撤销回已保存内容会恢复“已保存”，重做再次改动会恢复“未保存”；打开备份、导出或检查原文都不会把草稿误当成已保存。当前标签内的普通页面跳转提供“保存后离开”“备份并留在本页”“继续编辑”和“直接离开”，只有显式保存并读回一致后才能完成保存离开。
 
@@ -30,9 +34,11 @@
 
 [先看项目总览](http://localhost:4189/projects/011-solaris/overview.html) · [进入新桌支撑研究](http://localhost:4189/projects/011-solaris/support.html) · [体验客厅](http://localhost:4189/projects/011-solaris/) · [进入跨场景任务](http://localhost:4189/projects/011-solaris/collection.html) · [查能力清单与规划](http://localhost:4189/projects/011-solaris/integration.html) · [查原始研究](http://localhost:4189/projects/011-solaris/research.html#demo) · [接入说明](notes/integration.md) · [交付与验收](notes/product-release.md)
 
-![ATELIER项目总览：研究来源、自主实现、十一场景、证据边界与下一步](assets/atelier-project-overview.png)
+![Solaris与ATELIER完整理解图：源能力、功能、原理、自主实现、十一场景、支撑研究、用途、个人价值与边界](assets/atelier-understanding-map.png)
 
-总览图继续作为入口，保留0.17.0首次汇总的11场景与研究边界；0.18.0独立支撑研究见下文，不改旧图冒充本轮验收。它不是运行截图。提供[可编辑矢量原图](assets/atelier-project-overview.svg)和[3840像素PNG](assets/atelier-project-overview.png)；图源可在本目录运行 `node scripts/project-overview-figure.mjs` 重建。[网页接入截图](assets/atelier-project-overview-page.png)与[原总览发布检查](notes/project-overview-validation.json)另行留档；[0.17.0整套备份实际页面](assets/atelier-workspace-backup.png)与[完整原文对照](assets/atelier-workspace-backup-state-checks.json)继续保留。
+新理解图为 **3840×3440**，提供[可放大矢量原图](assets/atelier-understanding-map.svg)和[完整PNG](assets/atelier-understanding-map.png)。图源可在本目录运行 `node scripts/understanding-map.mjs` 重建SVG。背景直接嵌入既有研究画廊与我们客厅、展厅、水下、桌灯的原截图，分别标“官方示例”和“我们的实景”；整图是理解导览，不能替代交互实测，正文保留可查找的完整说明。386/386与16/16在图中明确标为0.18.2当轮历史结果，不因本次汇总外推为所有场景复测。本次整理另通过16项仓库检查、143条发布链接/锚点、图源与图片发布检查，以及首页入口/面板和场景卡浏览；见[本次整理记录](notes/understanding-overview-validation.json)。
+
+[0.17.0原汇总图](assets/atelier-project-overview.svg)、[原网页接入截图](assets/atelier-project-overview-page.png)与[原总览发布检查](notes/project-overview-validation.json)原样留档；[0.17.0整套备份实际页面](assets/atelier-workspace-backup.png)与[完整原文对照](assets/atelier-workspace-backup-state-checks.json)继续保留。
 
 ## 从Solaris研究到我们的产品
 

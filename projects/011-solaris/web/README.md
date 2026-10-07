@@ -1,6 +1,10 @@
 # ATELIER 产品与 Solaris 研究画廊
 
-ATELIER 0.15.0保留十一个场景、35/36项受控接入，仅C19购物联动待接；同一试衣场景提供三维衣鞋搭配和真人正面上装研究参考两个入口。真人用本机部署的FASHN预训练服务，四组实际输出与首次内存不足失败留档：跨衣缺实穿对照，原衣重建与实拍不一致，不判尺码或商业可用。189项产品与18项Python后端测试通过，网页分界比较、放大/平移和复位已实际验证；PNG预览/评审JSON内容与选款撤销已核查；自动下载写盘/剪贴板一致性及异常另验；原C17/C18、水下和材料历史保留。
+**当前基线为ATELIER 0.18.2，基础方向探索已收束，后续按具体产品想法扩展。** 保留11个场景、35/36项受控映射、C35九个登记任务和陈列加九工作台的十份稳定存档。35/36不是产品完成率；C19购物联动未接入，试衣/真人扩展继续暂停。独立新桌与灯具工作台是对象关系研究的深化，不增加业务场景，也尚未接入客厅、跨场景任务或十份整套备份。
+
+从[项目理解与完整总览](http://localhost:4189/projects/011-solaris/overview.html)及[新版汇总图](../assets/atelier-understanding-map.svg)阅读来源能力、原理、自主实现、场景用途和对后续产品的意义；[首页](http://localhost:4189/projects/011-solaris/)关联全部入口，[能力与接入说明](http://localhost:4189/projects/011-solaris/integration.html#scenes)记录操作和验证范围，[研究画廊](http://localhost:4189/projects/011-solaris/research.html#demo)保留官方媒体。0.18.2当轮386/386项产品Node测试、16/16项仓库检查已通过；本次网页整理的检查单独记录，不代表所有场景重新实测。全部历史数字、真实操作、失败与未验证事项按各自版本阅读，阶段收束不代表商用成熟或任意输入、设备和故障均已验证。
+
+**0.15.0历史：** 同一试衣场景提供三维衣鞋搭配和真人正面上装研究参考两个入口。真人用本机部署的FASHN预训练服务，四组实际输出与首次内存不足失败留档：跨衣缺实穿对照，原衣重建与实拍不一致，不判尺码或商业可用。当轮189项产品与18项Python后端测试通过，网页分界比较、放大/平移和复位已实际验证；PNG预览/评审JSON内容与选款撤销已核查；自动下载写盘/剪贴板一致性及异常另验；原C17/C18、水下和材料历史保留。
 
 0.12.0历史：C31有限跟随在固定水层/单鱼/单潜水员/三登记礁石接入；稳定v2及旧v1最新工作区保值迁移后保存重开完整JSON一致，PNG1443×969已解码；追随中重新抓鱼及设备/性能专项仍另验。详见[水下操作与边界](../notes/integration.md#underwater)。
 
@@ -14,7 +18,7 @@ ATELIER 0.15.0保留十一个场景、35/36项受控接入，仅C19购物联动�
 | 地标 | [landmark.html](http://localhost:4189/projects/011-solaris/landmark.html) | C12–C14建筑白模光影、导航和来源热点 |
 | 料理 | [kitchen.html](http://localhost:4189/projects/011-solaris/kitchen.html) | C20/C29完整食材组合与受控检视 |
 | 创作 | [creative.html](http://localhost:4189/projects/011-solaris/creative.html) | C27/C28真实图像框选、纹理印章与有限笔刷 |
-| 陈列 | [collection.html](http://localhost:4189/projects/011-solaris/collection.html) | C05/C33/C35交换、显式策展和六目标往返 |
+| 陈列 | [collection.html](http://localhost:4189/projects/011-solaris/collection.html) | C05/C33/C35交换、显式策展和九目标任务往返；十份已保存记录的整套备份与选择恢复 |
 | 滑板 | [skate.html](http://localhost:4189/projects/011-solaris/skate.html) | C32板面上拖、有限骨架起落与可恢复记录 |
 | 材料 | [materials.html](http://localhost:4189/projects/011-solaris/materials.html) | C21温升/冰熔化与恢复；同热量顺序对照和只读温升图已验收；保存重开及普通供能回归已验收 |
 | 水下 | [underwater.html](http://localhost:4189/projects/011-solaris/underwater.html) | C30直接鱼体拖动与C31潜水员有限跟随；可见安全路径、到位/无路停留和整段双主体恢复 |
@@ -36,13 +40,13 @@ PNG导出预览已实际核查为576×812（原图576×768加44px生成注记）
 
 [真人工作区](../assets/atelier-real-person-workspace.png)、[原衣重建问题](../assets/atelier-real-person-baseline.png)、[带生成注记的导出预览](../assets/atelier-real-person-export-preview.png)、[评审JSON](../assets/atelier-real-person-review.json)和[评审核对窗口](../assets/atelier-real-person-review-dialog.png)保留实际界面与内容。
 
-[操作目的与四次运行](../notes/integration.md#real-person-tryon)、[样本来源](../notes/tryon-sources.md)、[运行说明](../notes/tryon-runtime.md)、[真实生成与质量记录](../notes/real-person-tryon-validation.json)及[样板计划](../notes/real-person-tryon-plan.md)可查。C17/C18原三维证据与所有历史保留；总数仍35/36、十一场景、阶段5为2/3，C19待接、C35六目标。
+[操作目的与四次运行](../notes/integration.md#real-person-tryon)、[样本来源](../notes/tryon-sources.md)、[运行说明](../notes/tryon-runtime.md)、[真实生成与质量记录](../notes/real-person-tryon-validation.json)及[样板计划](../notes/real-person-tryon-plan.md)可查。C17/C18原三维证据与所有历史保留；0.15.0当轮为35/36、十一场景、阶段5的2/3，C19待接、C35六目标。当前C35九目标与暂停扩展定位见本文首段。
 
 ## 0.13.0上衣操作与有限适配历史
 
 按住场景里的圆领短袖或轻夹克，拖到人体胸腹；合适位置可预览，松手后替换一个上装槽。错位/Escape取消恢复原搭配，换装一次撤销重做；颜色、自然站姿/抬臂及四预设/空白环绕可观察前背侧与细节。同衣款且同颜色不增加历史，单同款而不同颜色仍是合法改色。三合法/七坏JSON及本机保存重开逐值一致，1431×969实际PNG已解码。
 
-完整Quaternius CC0 53骨人体保留13,743唯一面，两款服装、连续权重与两个冻结姿态由本项目设计；轻夹克为宽圆口包边与独立拉链、口袋/背育克，不是立领或外部衣物模型。11素材检查仅在有限域通过，选定径向采样有64个肩/腋下无壳命中未验证，前背侧/抬臂视觉复核作补充，不证明全身零穿插。一个固定体型/两款上衣不代表照片试穿、真实尺码或布料物理，C17当轮不覆盖鞋履；当前C18见下节，C19仍待研发，C35六登记去向保持。
+完整Quaternius CC0 53骨人体保留13,743唯一面，两款服装、连续权重与两个冻结姿态由本项目设计；轻夹克为宽圆口包边与独立拉链、口袋/背育克，不是立领或外部衣物模型。11素材检查仅在有限域通过，选定径向采样有64个肩/腋下无壳命中未验证，前背侧/抬臂视觉复核作补充，不证明全身零穿插。一个固定体型/两款上衣不代表照片试穿、真实尺码或布料物理，C17当轮不覆盖鞋履；C18鞋履历史见下节，C19未接入，当轮C35六登记去向保持。
 
 [操作与边界](../notes/integration.md#fitting)、[人体与服装来源](../notes/fitting-sources.md)、[本轮验收](../notes/fitting-validation.json)、[真实工作区](../assets/atelier-fitting-workspace.jpg)、[拖入预览](../assets/atelier-fitting-drag.jpg)、[背面检查](../assets/atelier-fitting-back.jpg)、[实际配置](../assets/atelier-fitting-example.json)与[PNG](../assets/atelier-fitting-render.png)可查。
 
@@ -52,7 +56,7 @@ PNG导出预览已实际核查为576×812（原图576×768加44px生成注记）
 
 原完整53骨人体/双足与C17三GLB哈希保持，鞋由本项目原创完整左右组刚性注册。9素材有限域检查、35来源文件/5运行文件、18原人体复审图；264足点投影、120非踝口上射线和144真开放踝口域，Ridge2,830低腿三角面八阶样点仅覆盖登记域，不证明体积零交叉、缓冲/尺码或步态。
 
-三合法/八坏UI搭配、最终v2保存重开完整JSON、PNG1431×969已实际验证；[操作与范围](../notes/integration.md#footwear)、[鞋履来源](../notes/footwear-sources.md)、[本轮验收](../notes/footwear-validation.json)、[工作区](../assets/atelier-footwear-workspace.jpg)、[细节](../assets/atelier-footwear-detail.jpg)、[侧后](../assets/atelier-footwear-side.jpg)、[真实预览](../assets/atelier-footwear-drag.jpg)、[搭配JSON](../assets/atelier-footwear-example.json)与[PNG](../assets/atelier-footwear-render.png)。C19待研发，C35仍六目标。
+三合法/八坏UI搭配、最终v2保存重开完整JSON、PNG1431×969已实际验证；[操作与范围](../notes/integration.md#footwear)、[鞋履来源](../notes/footwear-sources.md)、[本轮验收](../notes/footwear-validation.json)、[工作区](../assets/atelier-footwear-workspace.jpg)、[细节](../assets/atelier-footwear-detail.jpg)、[侧后](../assets/atelier-footwear-side.jpg)、[真实预览](../assets/atelier-footwear-drag.jpg)、[搭配JSON](../assets/atelier-footwear-example.json)与[PNG](../assets/atelier-footwear-render.png)。当轮C19待研发、C35六目标，原证据不改为当前九目标验收。
 
 ## 产品结构与运行
 
@@ -73,7 +77,7 @@ PNG导出预览已实际核查为576×812（原图576×768加44px生成注记）
 - `kitchen/physics.js`、`kitchen/scene.js`与`kitchen/app.js`：本地Cannon-es固定时间步、近似碰撞、真实食材渲染、托盘直接拖入与稳定组合恢复；真实拖入/浮起与保存恢复已验收，设备等专项继续。
 - `assets/kitchen/`与`kitchen/vendor/`：四个Poly Haven CC0完整食材、原几何/纹理/许可/哈希，及Cannon-es 0.20.0本地MIT包。
 - `creative/`与`assets/creative/`：真实CC0猫照片和Met公版画作，1200×900固定画纸、可见选区、两图层与逐笔记录；像素印章/参数笔刷不等于任意风格生成。
-- `collection/`：六件真实Poly Haven CC0模型/PBR渲染、双端锁槽、策展理由与有限中文去向；`scene-return.js`只读桥严格匹配原六目标，不把新增滑板导航当作第七个去向。
+- `collection/`：六件真实Poly Haven CC0模型/PBR渲染、双端锁槽、策展理由、有限中文去向、十份已保存记录的整套备份与选择恢复；`scene-return.js`只读桥严格匹配九个登记目标。原六目标历史与0.16.0滑板/材料/水下新增往返分别留证，不把普通导航自动计为任务接入。
 - `skate/`与`assets/skate/`：Kenney CC0完整七骨节角色、板与场地，板面手势、有限姿态/受控轨迹、逐帧预览/重播、完整落地记录与本机/JSON恢复；不提供膝脚IK或现实物理求解。
 - `materials/`：真实热源三接口拖放、有限能量账/温升/熔化、整体过程取消与事务恢复、严格本机/JSON；`reference-data.json`保留NIST参数/单位和假设。装置样品/PBR为自有设计，沿用四原CC0台面纹理/HDR。
 - `underwater/core.js`、`follower.js`、`workspace.js`：原鱼账/固定水层约束、有限安全路径/间距/转向、双主体配置v2与旧v1迁移；40条，鱼2–64点/潜水员1–128点，整体512KiB且原鱼账64KiB限制保留。
@@ -102,7 +106,7 @@ PNG导出预览已实际核查为576×812（原图576×768加44px生成注记）
 
 创作：在真实来源图中框选，在画纸/试片点击或拖绘，逐笔撤销并保存恢复；来源与旧笔迹各自保持。[创作验收](../notes/creative-validation.json)写明局部像素及JSON/PNG结果。
 
-陈列：拖六件模型卡片交换，锁住位置，预览偏好理由再应用；输入“去料理”等有限去向可到六个登记工作台并返回。收藏不是购物订单，不虚构品牌/库存/价格；[陈列例子](../assets/atelier-collection-example.json)与[陈列验收](../notes/collection-validation.json)可追溯。
+陈列：拖六件模型卡片交换，锁住位置，预览偏好理由再应用；输入“去料理”等有限去向可到九个登记工作台并返回，十份已保存记录可整套导出和选择恢复。收藏不是购物订单，不虚构品牌/库存/价格；[陈列例子](../assets/atelier-collection-example.json)与[六目标历史验收](../notes/collection-validation.json)可追溯，当前九目标和备份的各轮证据见[接入说明](../notes/integration.md)。
 
 滑板：从板面净向上拖至少24px后松手，24–160px对应0.3–1.1展示高度；完整落地才记一次，Escape取消、辅助预览和重播不增条目。逐帧只用于预览/重播，真实手势不可seek。固定平地有限骨架动作不等于完整ollie、脚部IK、越障或现实训练；[实际工作区](../assets/atelier-skate-workspace.jpg)、[1467×969真实PNG](../assets/atelier-skate-render.png)、[两条真实手势配置](../assets/atelier-skate-example.json)及[素材依据](../notes/skate-sources.md)已保存。
 
