@@ -1,0 +1,430 @@
+{
+  "format": "atelier-support-reliability-validation",
+  "version": 1,
+  "release": "0.18.1",
+  "date": "2026-10-07",
+  "status": "sequential-two-tab-save-workflow-verified-real-faults-and-atomic-concurrency-pending",
+  "purpose": "补全独立桌灯工作台的真实保存流程：其他页面已保存时，旧页面不能直接覆盖，先保留并备份本页方案，再检查最新完整存档，明确打开并可撤销找回原方案；同时修复准备阶段过早编辑和线程故障后的迟到保存。",
+  "releaseCounts": {
+    "existingScenes": 11,
+    "implementedBounded": 35,
+    "totalResearch": 36,
+    "c35Destinations": 9,
+    "wholeWorkspaceBackupRecords": 10,
+    "changed": false
+  },
+  "scope": {
+    "entry": "web/support.html",
+    "ownStorageKey": "atelier-support-workspace-v1",
+    "storageWrites": "explicit-save-only",
+    "wholeWorkspaceBackupIntegrated": false,
+    "otherStorageKeys": "Source and isolated Node tests address only the support key. This browser run did not secretly read or compare the other ten workspace records.",
+    "newScenesOrResearchCapabilities": 0,
+    "newUnseenAssetSet": false,
+    "geometryThresholdsChanged": false,
+    "arbitraryAssetUpload": false,
+    "physicalBearingValidated": false
+  },
+  "historicalEvidence": {
+    "release": "0.18.0",
+    "report": "notes/support-validation.json",
+    "reportSha256": "66eb8438c148fef9b368f97a9698f945fdf3e0e843f5b36462e9b7a497195928",
+    "retainedUnmodified": true,
+    "meaning": "The prior three-table geometry, drag, native-file and actual disk-download evidence remains historical. This reliability run did not repeat that full asset protocol or make a new disk download.",
+    "historicalProductTests": 327,
+    "historicalGeometryStateMeshControllerTestsAdded": 79,
+    "historicalTables": 3,
+    "historicalRepresentativeStaticCases": 21,
+    "staticReport": "notes/support-asset-analysis.json",
+    "staticReportSha256": "958f968f8b21b5317a2e45c6474044363e74548c0aec2aa3cd0d1e5e436d988d",
+    "firstRawAssetReport": "notes/support-first-asset-analysis.json",
+    "firstRawAssetReportSha256": "ec1dfd31ea272d626d02cb64dd6177591ec37eca1036fc3ce98dd345d013dc40"
+  },
+  "frozenPolicy": {
+    "version": "atelier-support-v1",
+    "sha256": "7659e054bd72dd87f4f1d12dfb03499cff358167874a0c628833e973e9980633",
+    "marginMeters": 0.002,
+    "contactHeightToleranceMeters": 0.0005,
+    "originalCoreModulesByteHashesMatchHistoricalReport": [
+      "mesh.js",
+      "load.js",
+      "geometry.js",
+      "state.js",
+      "controller.js",
+      "worker.js"
+    ],
+    "meaning": "Existing frozen source-triangle coverage and conservative collision checks are unchanged. Reusing these assets is not another unseen-asset evaluation."
+  },
+  "implementation": {
+    "storage": {
+      "module": "web/support/storage.js",
+      "initialBaseline": "Exact raw string or known null established only after a successful initial read.",
+      "save": "Validate v1 envelope and UTF-8 64 KiB limit; caller first validates source fingerprints and full geometry. Re-read and compare exact baseline, write own key, then require exact readback before advancing baseline.",
+      "adoption": "Worker checks full saved backup without mutating the scene. Explicit open rechecks current raw, restores through worker, then rechecks current raw before adopting the save baseline.",
+      "changesDuringPreview": "Own-key storage events invalidate checked text and disable open, while keeping the local displayed scheme.",
+      "failure": "Unknown baseline, read/write exceptions, malformed/oversize stored record and differing readback block success; no force-overwrite or blind automatic rollback.",
+      "atomicCrossTabLock": false,
+      "limitation": "localStorage read/compare/write/read has no atomic compare-and-swap. A writer between comparison and write may be overwritten, and a later writer may replace a successfully verified record. The explicitly tested sequential stale-page guard does not establish simultaneous-write safety.",
+      "lateRestoreWindow": "If the record changes after worker restoration but before baseline adoption, the app may display the just-checked version with undo available, rejects baseline adoption and performs no save. This narrow UI race was not injected in the actual browser."
+    },
+    "lifecycle": {
+      "preparationGate": "Asset, face, mode, edits, orbit and save wait for model preparation plus the first coherent render.",
+      "fatalGate": "Late startup or operation completion cannot unlock controls or return an export to the saving handler after fatal worker failure.",
+      "pointerBegin": "A rejected transaction begin releases capture.",
+      "cameraOrResize": "Mode, viewpoint and resize handlers cancel an active transaction before changing the view; real held-input cancellation at these boundaries remains pending."
+    }
+  },
+  "automatic": {
+    "observation": "Full suites were executed by the parent task after the final core fixes. Evidence assembly independently counted new test definitions and validated public artifacts, without rerunning or rewriting historical reports.",
+    "product": {
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "pass": 358,
+      "fail": 0,
+      "exitCode": 0
+    },
+    "repository": {
+      "command": "node --test scripts/tests/*.test.mjs",
+      "pass": 16,
+      "fail": 0,
+      "exitCode": 0
+    },
+    "added": {
+      "storage": 27,
+      "actualAppLifecycleVm": 4,
+      "total": 31
+    },
+    "storageCoverage": [
+      "Initial raw/null baseline, independent sessions and formatting-only conflicts",
+      "Stale save, external deletion or damaged/oversize record and UTF-8 limit",
+      "Exact adoption recheck and preservation of original formatting",
+      "Blocked provider, invalid read type, unknown baseline, read/write/quota exceptions and missing interface",
+      "Readback mismatch, silent failed write and competing deletion/write with no blind rollback",
+      "Only the support key is addressed; no force-overwrite API",
+      "Explicit counterexample showing comparison plus write is not an atomic lock"
+    ],
+    "appLifecycleVmCases": [
+      "Deferred renderer preparation prevents asset/mode/save operations until the first coherent render",
+      "Failure during preparation is not undone by a late startup snapshot",
+      "Failure while a save awaits rendering prevents storage write and control reactivation",
+      "Rejected transaction begin releases pointer capture without sending an update"
+    ],
+    "limits": "Storage faults use controlled Node adapters. Four lifecycle tests execute the actual app.js coordinator in a VM with stub DOM, Worker and scene renderer. These are useful code-level regressions, not real browser/device failure injection or real pointer-hold evidence."
+  },
+  "actualBrowser": {
+    "browser": "Codex in-app browser on Windows",
+    "topology": {
+      "sameOriginTabs": 2,
+      "simultaneousWrites": false,
+      "osWindowOrCrossBrowserTest": false
+    },
+    "method": "Same-origin two actual IAB tabs; visible controls and complete public JSON fields only. Sequential writes, not simultaneous race or OS-window testing.",
+    "storageInspection": "Visible controls and full public JSON fields only; no hidden browser-storage reads or mutations.",
+    "initial": {
+      "sameWholePublicRaw": true,
+      "bytes": 797,
+      "tableAssetId": "wooden_table_02",
+      "lampAssetId": "industrial_pipe_lamp"
+    },
+    "steps": [
+      {
+        "action": "A nudged lamp right 5 cm and explicitly saved.",
+        "result": "A first saved raw was collected through the public backup field.",
+        "evidence": "firstSavedA"
+      },
+      {
+        "action": "B nudged lamp left 5 cm and tried to save from its old baseline.",
+        "result": "Save conflict dialog opened. B retained its complete local draft.",
+        "evidence": [
+          "unsavedB",
+          "BBackupAfterRejectedSave"
+        ]
+      },
+      {
+        "action": "B chose backup of its own draft.",
+        "result": "Complete public text was exactly the pre-save B draft, and a download href was available. No new actual disk download was performed in this run."
+      },
+      {
+        "action": "B reopened the conflict dialog and checked the latest record.",
+        "result": "Read-only full public saved text exactly equalled A first saved raw; B had not overwritten A.",
+        "evidence": [
+          "firstSavedA",
+          "checkedFirstSavedA"
+        ]
+      },
+      {
+        "action": "A nudged lamp back 5 cm and explicitly saved again.",
+        "result": "B received a storage event: its checked preview was cleared and open disabled. Its local displayed arrangement was retained."
+      },
+      {
+        "action": "B checked again and explicitly opened the second A record.",
+        "result": "Checked and adopted complete public JSON exactly equalled A second saved raw.",
+        "evidence": [
+          "secondSavedA",
+          "checkedSecondSavedA",
+          "adoptedSecondA"
+        ]
+      },
+      {
+        "action": "B clicked Undo, then Redo.",
+        "result": "Undo restored the whole original unsaved B draft; Redo restored the whole adopted A second record.",
+        "evidence": [
+          "unsavedB",
+          "undoToOriginalB",
+          "secondSavedA",
+          "redoToAdoptedA"
+        ]
+      },
+      {
+        "action": "B explicitly saved after adopting and redoing.",
+        "result": "Save succeeded with the adopted current baseline."
+      },
+      {
+        "action": "A checked and explicitly restored the original 797-byte scheme, then saved; B actually reloaded.",
+        "result": "The final restored and actual reloaded whole public text exactly equalled the original baseline.",
+        "evidence": [
+          "initialA",
+          "finalRestoredOriginal",
+          "actualReloadFinal"
+        ]
+      }
+    ],
+    "finalConsole": {
+      "tabsInspected": 2,
+      "error": 0,
+      "warn": 0
+    },
+    "cleanup": {
+      "originalSavedBaselineRestoredAndActuallyReloaded": true,
+      "originalExistingPageDraftKept": true,
+      "originalExistingPageDraftBytes": 833,
+      "originalExistingPageWasNotReloaded": true,
+      "privateDraftRawPublished": false,
+      "originalDraftComparison": "Parent task compared the complete public draft before and after. Only the true outcome is published; the original private draft text is excluded.",
+      "temporarySecondTestTabClosed": true
+    },
+    "limits": "Two actual tabs executed controlled sequential UI actions. This is not simultaneous-write, separate OS-window, cross-browser, mobile touch, offline, latency or fault-injection evidence. The narrow record change during asynchronous restoration was not forced."
+  },
+  "publicArtifactVerification": {
+    "artifact": "assets/atelier-support-save-state-checks.json",
+    "sha256": "d1e275974ca9b209ddbe1e52d4ff48ae9559d50f132e5cb656d4fccb1d76f970",
+    "allTenRecordedUiChecksTrue": true,
+    "independentlyRecomputedWholeRawEquality": [
+      {
+        "left": "initialA",
+        "right": "initialB",
+        "exact": true
+      },
+      {
+        "left": "unsavedB",
+        "right": "BBackupAfterRejectedSave",
+        "exact": true
+      },
+      {
+        "left": "firstSavedA",
+        "right": "checkedFirstSavedA",
+        "exact": true
+      },
+      {
+        "left": "secondSavedA",
+        "right": "checkedSecondSavedA",
+        "exact": true
+      },
+      {
+        "left": "secondSavedA",
+        "right": "adoptedSecondA",
+        "exact": true
+      },
+      {
+        "left": "unsavedB",
+        "right": "undoToOriginalB",
+        "exact": true
+      },
+      {
+        "left": "secondSavedA",
+        "right": "redoToAdoptedA",
+        "exact": true
+      },
+      {
+        "left": "initialA",
+        "right": "finalRestoredOriginal",
+        "exact": true
+      },
+      {
+        "left": "initialA",
+        "right": "actualReloadFinal",
+        "exact": true
+      }
+    ],
+    "rawSummaries": {
+      "initialA": {
+        "utf8Bytes": 797,
+        "sha256": "6cc8598d7e56c761ce1254e64367a00e9ac75ff8afd113c247e0b77f6dd840b9",
+        "assetId": "wooden_table_02",
+        "localAnchor": {
+          "x": -5.455395311881883e-8,
+          "z": 0.0065133390485582685
+        }
+      },
+      "initialB": {
+        "utf8Bytes": 797,
+        "sha256": "6cc8598d7e56c761ce1254e64367a00e9ac75ff8afd113c247e0b77f6dd840b9",
+        "assetId": "wooden_table_02",
+        "localAnchor": {
+          "x": -5.455395311881883e-8,
+          "z": 0.0065133390485582685
+        }
+      },
+      "firstSavedA": {
+        "utf8Bytes": 796,
+        "sha256": "23a6c57471750881efa2d2f8a388add341511c7957e1475abce2e95f83548b5a",
+        "assetId": "wooden_table_02",
+        "localAnchor": {
+          "x": 0.049999945446046884,
+          "z": 0.0065133390485582685
+        }
+      },
+      "unsavedB": {
+        "utf8Bytes": 796,
+        "sha256": "63540c2ab9dab44a32e118bf57346eb686c5adb61623a2b645c08bef1db627ef",
+        "assetId": "wooden_table_02",
+        "localAnchor": {
+          "x": -0.05000005455395312,
+          "z": 0.0065133390485582685
+        }
+      },
+      "BBackupAfterRejectedSave": {
+        "utf8Bytes": 796,
+        "sha256": "63540c2ab9dab44a32e118bf57346eb686c5adb61623a2b645c08bef1db627ef",
+        "assetId": "wooden_table_02",
+        "localAnchor": {
+          "x": -0.05000005455395312,
+          "z": 0.0065133390485582685
+        }
+      },
+      "checkedFirstSavedA": {
+        "utf8Bytes": 796,
+        "sha256": "23a6c57471750881efa2d2f8a388add341511c7957e1475abce2e95f83548b5a",
+        "assetId": "wooden_table_02",
+        "localAnchor": {
+          "x": 0.049999945446046884,
+          "z": 0.0065133390485582685
+        }
+      },
+      "secondSavedA": {
+        "utf8Bytes": 796,
+        "sha256": "6fe19ee3babbbaccb91478b8d328755c2837a6e2b4a628212f89096566601141",
+        "assetId": "wooden_table_02",
+        "localAnchor": {
+          "x": 0.049999945446046884,
+          "z": -0.043486660951441734
+        }
+      },
+      "checkedSecondSavedA": {
+        "utf8Bytes": 796,
+        "sha256": "6fe19ee3babbbaccb91478b8d328755c2837a6e2b4a628212f89096566601141",
+        "assetId": "wooden_table_02",
+        "localAnchor": {
+          "x": 0.049999945446046884,
+          "z": -0.043486660951441734
+        }
+      },
+      "adoptedSecondA": {
+        "utf8Bytes": 796,
+        "sha256": "6fe19ee3babbbaccb91478b8d328755c2837a6e2b4a628212f89096566601141",
+        "assetId": "wooden_table_02",
+        "localAnchor": {
+          "x": 0.049999945446046884,
+          "z": -0.043486660951441734
+        }
+      },
+      "undoToOriginalB": {
+        "utf8Bytes": 796,
+        "sha256": "63540c2ab9dab44a32e118bf57346eb686c5adb61623a2b645c08bef1db627ef",
+        "assetId": "wooden_table_02",
+        "localAnchor": {
+          "x": -0.05000005455395312,
+          "z": 0.0065133390485582685
+        }
+      },
+      "redoToAdoptedA": {
+        "utf8Bytes": 796,
+        "sha256": "6fe19ee3babbbaccb91478b8d328755c2837a6e2b4a628212f89096566601141",
+        "assetId": "wooden_table_02",
+        "localAnchor": {
+          "x": 0.049999945446046884,
+          "z": -0.043486660951441734
+        }
+      },
+      "finalRestoredOriginal": {
+        "utf8Bytes": 797,
+        "sha256": "6cc8598d7e56c761ce1254e64367a00e9ac75ff8afd113c247e0b77f6dd840b9",
+        "assetId": "wooden_table_02",
+        "localAnchor": {
+          "x": -5.455395311881883e-8,
+          "z": 0.0065133390485582685
+        }
+      },
+      "actualReloadFinal": {
+        "utf8Bytes": 797,
+        "sha256": "6cc8598d7e56c761ce1254e64367a00e9ac75ff8afd113c247e0b77f6dd840b9",
+        "assetId": "wooden_table_02",
+        "localAnchor": {
+          "x": -5.455395311881883e-8,
+          "z": 0.0065133390485582685
+        }
+      }
+    },
+    "assertedControlledNudgesMeters": {
+      "AFirstXDelta": 0.05,
+      "BDraftXDelta": -0.05,
+      "ASecondZDelta": -0.05
+    },
+    "distinction": "Raw equality, UTF-8 byte length, JSON envelope and controlled coordinate changes are reproducible from the published artifact. Disabled-control state, available download href, actual reload, console and preservation of the excluded private draft are recorded UI observations, not inferred from raw equality alone."
+  },
+  "artifacts": [
+    {
+      "file": "assets/atelier-support-save-conflict.jpg",
+      "format": "JPEG",
+      "capturedPixels": {
+        "width": 1280,
+        "height": 720
+      },
+      "bytes": 62911,
+      "sha256": "8a5c559b8c3d93f4299b2dd335f043fdd14efbed0dca13fdddc72b56dbd37077",
+      "meaning": "Actual browser screenshot of the save-conflict interface. JPEG signature and dimensions were checked from returned capture bytes. Not an AI-generated image or proof of simultaneous-write safety."
+    },
+    {
+      "file": "assets/atelier-support-save-state-checks.json",
+      "format": "JSON",
+      "bytes": 12660,
+      "sha256": "d1e275974ca9b209ddbe1e52d4ff48ae9559d50f132e5cb656d4fccb1d76f970",
+      "meaning": "Complete public baseline/draft/checked/adopted/undo/redo/reloaded texts plus recorded UI outcomes. The original existing-page private draft is excluded."
+    }
+  ],
+  "sourceCodeSnapshot": {
+    "capturedAtUtc": "2026-10-07T11:07:26.112Z",
+    "hashing": "SHA-256 over exact working-tree file bytes at report assembly time, without line-ending normalization. This identifies the source snapshot and does not claim the Git-normalized blob has identical bytes.",
+    "sha256": {
+      "web/support/storage.js": "654e0b495024ef2c60e4b074262a9a5918289ae787f5b75f7840d6ebed259b36",
+      "web/support/app.js": "9be6956587af3c987f59aca073be1be199e43e927177208a0bb46b9aadfa3e9e",
+      "web/support/scene.js": "376a3c24e9d72b54ed17087a3e930fc32e739f132f29ac50bf2dbcce012a0dbb",
+      "web/support/support.css": "10bd7b4f1b097ebf91b2395da245a707056e71404461b50df4aa4dbe5f03acf7",
+      "web/support.html": "d7cbee8ce75f67e8b7f8c078146d43abfe31a10d2a9dabc4810a0613602ea7fb",
+      "tests/support-storage.test.mjs": "54e93b5a93031397b6b858d5531cefa4a345b6e3fb4d6863f491323e1b8f30d7",
+      "tests/support-app-lifecycle.test.mjs": "f32c02ebdc5d6696c868f6da2ffe188b698e4e96bdeb3a6d2092eb475cb15de7"
+    }
+  },
+  "stillPending": [
+    "Real Escape while pointer held, lost capture, blur/hidden, camera/resize interruption during an active gesture",
+    "Real worker failure and blocked storage/quota/write/readback faults in the browser; the current evidence is Node or VM fixtures",
+    "Truly simultaneous save races and an atomic persistence design; the current localStorage guard is not an atomic lock",
+    "Record changes within the asynchronous restoration/adoption window in the actual browser",
+    "Repair or recovery flow for malformed/oversize existing records; ordinary save deliberately cannot overwrite them",
+    "Touch devices, other browsers, separate OS windows, offline sessions, long-running latency and memory budgets",
+    "Additional genuinely unseen source assets, semantic categories and real hole/concave/separated/upper-obstacle tabletops",
+    "Cabinet or shelf levels and clearance rules; arbitrary upload, slopes, curved support and multiple feet",
+    "Physical bearing, center of mass, contact force and engineering safety",
+    "Migration into the old living room and ten-record whole-workspace backup after separate acceptance",
+    "Full protocol A–E completion and the remaining bounded research capability"
+  ]
+}

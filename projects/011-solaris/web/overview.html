@@ -31,7 +31,7 @@
         <div class="hero-actions"><a class="primary-link" href="#project-map">先看汇总图 ↓</a><a href="#scene-inventory">查看全部场景 ↓</a></div>
       </div>
       <aside class="project-card" aria-label="当前项目范围">
-        <p class="eyebrow">CURRENT SCOPE · 0.18.0</p>
+        <p class="eyebrow">CURRENT SCOPE · 0.18.1</p>
         <dl class="project-counts">
           <div><dt>已有场景</dt><dd>11<span>个</span></dd></div>
           <div><dt>研究清单受控接入</dt><dd>35<span>/ 36</span></dd></div>
@@ -52,7 +52,7 @@
         <a href="./assets/atelier-project-overview.svg" target="_blank" rel="noopener" aria-label="打开 ATELIER 项目矢量汇总原图，可放大阅读">
           <img src="./assets/atelier-project-overview.svg" alt="ATELIER 项目概念汇总图：Solaris 研究启发、本地实现流程、十一场景、受控接入与后续研发方向。依据项目资料生成的矢量图，非实测截图；各项完整文字说明在图后正文。">
         </a>
-        <figcaption><span>点击图片打开矢量原图，放大仍清晰；另可下载上方 PNG。</span><span>图保留0.17.0首次汇总依据，非实测截图；0.17.1备份与0.18.0新桌研究另列证据，11场景与35/36映射不变。</span></figcaption>
+        <figcaption><span>点击图片打开矢量原图，放大仍清晰；另可下载上方 PNG。</span><span>图保留0.17.0首次汇总依据，非实测截图；后续备份、新桌与0.18.1保存专项另列证据，11场景与35/36映射不变。</span></figcaption>
       </figure>
       <p class="reading-note">下方保留完整可访问文字；可用浏览器“查找”（Ctrl / ⌘ + F）搜索场景、功能或边界。</p>
     </section>
@@ -120,7 +120,7 @@
         <div><dt>鼠标与事务</dt><dd>三维射线/平面投影、二维坐标变换、指针捕获和整段事务已在场景中实现。下一步整理公共指针与取消生命周期，保留各场景的专用命中/约束。</dd></div>
         <div><dt>状态与资源</dt><dd>对象编号、版本、容量、合法参数、素材来源及校准分别登记。下一步统一场景适配器与资产注册、单位/包络及版本迁移协议。</dd></div>
         <div><dt>保存与往返</dt><dd>九个登记任务与只读返回桥、十份稳定存档聚合已接入。未提交预览、会话撤销、运行中动作和试衣/真人任务不在整套备份中。</dd></div>
-        <div><dt>多窗口与异常</dt><dd>陈列和备份预览会比较原文并受控拒绝旧写入；这是冲突保护，不是跨窗口原子锁。全编辑页同步、原子存储及真实故障专项继续。</dd></div>
+        <div><dt>多窗口与异常</dt><dd>陈列、备份预览和独立新桌工作台会比较完整原文并拒绝已检测的旧写入；新桌可以备份本页、检查并明确打开最新，再撤销找回原方案。全编辑页同步、原子存储及真实故障专项继续。</dd></div>
       </dl>
     </section>
 
@@ -133,20 +133,21 @@
     </section>
 
     <section id="verification" aria-labelledby="verification-title">
-      <div class="section-heading"><div><p class="eyebrow">06 / EVIDENCE & LIMITS</p><h2 id="verification-title">验证按层记录，结果按范围使用。</h2></div><p>0.18.0新桌研究新增79项几何、状态与接线检查，总计327项产品与16项仓库检查通过；历史备份操作按0.17.1留证。真实桌模型、纯夹具和浏览器操作分别记录。</p></div>
+      <div class="section-heading"><div><p class="eyebrow">06 / EVIDENCE & LIMITS</p><h2 id="verification-title">验证按层记录，结果按范围使用。</h2></div><p>0.18.1新增27项存储与4项实际app.js的VM生命周期检查，当前358项产品与16项仓库检查通过。两标签真实保存任务、模拟故障与0.18.0三桌研究分别留证。</p></div>
       <div class="verification-grid">
-        <article><span class="evidence-label">已有自动检查</span><h3>327 / 16</h3><p>327项产品Node测试与16项仓库检查已通过；新研究覆盖完整灯底、孔洞/凹边、连续扫掠、输入拒绝、事务、指纹与附件恢复。</p><p class="boundary">孔洞等坏几何是专门夹具，三桌本身未覆盖这些形状。故障模拟不等于真实浏览器故障注入。</p></article>
-        <article><span class="evidence-label">0.18.0 真实操作证据</span><h3>三桌共用规则，失败能恢复</h3><p>三桌实际拖灯、越边释放回滚、整桌变换后的关系保持、保存重开完整JSON一致。797字节下载全文一致，跨桌打开文件恢复完整方案；超限文件保留原文本。</p><p><a href="./support.html">打开支撑工作台 ↗</a> · <a href="https://github.com/yydshly/1002_codex_project/blob/main/projects/011-solaris/assets/atelier-support-workbench.jpg">实际画面 ↗</a> · <a href="https://github.com/yydshly/1002_codex_project/blob/main/projects/011-solaris/notes/support-validation.json">本轮完整记录 ↗</a></p><p class="boundary">390×844布局与完整模型镜头适配已核查；触摸、真实中断和长期性能另验。几何支撑不判断承重或重心稳定性。</p></article>
+        <article><span class="evidence-label">当前自动检查</span><h3>358 / 16</h3><p>358项产品Node测试与16项仓库检查通过。新增31项覆盖存储基线/读回、旧页拒绝、初始化门禁、故障后迟到结果和拒绝拖动后的捕获释放；原几何与状态回归保留。</p><p class="boundary">存储异常由Node模拟，界面时序用VM执行实际app.js；都不等于真实浏览器故障注入。孔洞等坏几何也是专门夹具。</p></article>
+        <article><span class="evidence-label">0.18.1 真实两标签任务</span><h3>旧页保留草稿，最新明确打开</h3><p>A保存后B旧页拒绝覆盖，备份全文精确保留B草稿；检查后A再次保存，使B旧检查失效。重新检查并打开最新，撤销回B草稿、重做回A新存档，完整公开JSON逐字一致。结束后原存档还原并实际重开核对。</p><p><a href="./support.html">体验保存保护 ↗</a> · <a href="https://github.com/yydshly/1002_codex_project/blob/main/projects/011-solaris/assets/atelier-support-save-conflict.jpg">实际提示画面 ↗</a> · <a href="https://github.com/yydshly/1002_codex_project/blob/main/projects/011-solaris/notes/support-reliability-validation.json">专项记录 ↗</a> · <a href="https://github.com/yydshly/1002_codex_project/blob/main/projects/011-solaris/assets/atelier-support-save-state-checks.json">公开全文对照 ↗</a></p><p class="boundary">本轮是同一浏览器两个标签顺序保存；比较原文并写后读回不是原子锁。备份文本与下载链接已核对，未新增实际下载落盘验收。</p></article>
+        <article><span class="evidence-label">0.18.0 历史三桌证据</span><h3>三桌共用规则，失败能恢复</h3><p>三桌实际拖灯、越边释放回滚、整桌变换后的关系保持、保存重开完整JSON一致。797字节下载全文一致，跨桌打开文件恢复完整方案；超限文件保留原文本。</p><p><a href="./support.html">打开支撑工作台 ↗</a> · <a href="https://github.com/yydshly/1002_codex_project/blob/main/projects/011-solaris/assets/atelier-support-workbench.jpg">实际画面 ↗</a> · <a href="https://github.com/yydshly/1002_codex_project/blob/main/projects/011-solaris/notes/support-validation.json">0.18.0完整记录 ↗</a></p><p class="boundary">390×844布局与完整模型镜头适配已核查；触摸、真实中断和长期性能另验。几何支撑不判断承重或重心稳定性。</p></article>
         <article><span class="evidence-label">0.17.1 历史备份证据</span><h3>文件与成果可以核对</h3><p>实际下载195,925字节与全文一致，编辑后195,926字节下载/复制也一致。文件重开、超限保留文本、单展厅恢复/还原，以及九页稳定存档重开已核查。</p><p><a href="https://github.com/yydshly/1002_codex_project/blob/main/projects/011-solaris/assets/atelier-workspace-export.png">备份真实界面 ↗</a> · <a href="https://github.com/yydshly/1002_codex_project/blob/main/projects/011-solaris/assets/atelier-showroom-navigation.png">展厅导航 ↗</a> · <a href="https://github.com/yydshly/1002_codex_project/blob/main/projects/011-solaris/notes/workspace-export-validation.json">0.17.1完整记录 ↗</a></p><p class="boundary">影像换画布时只平移显示中心，同尺寸重开完整JSON保持。核查结束后十份保存原文完全还原；不称0.17.1整套恢复全部九页后的验收。</p></article>
-        <article class="pending-card"><span class="evidence-label">继续专项验证</span><h3>可靠性收尾</h3><p>整套恢复全部九页后的重建、进行中过程转场、真实多窗口竞争、存储故障/容量/回滚。</p><p class="boundary">完整断网、触屏/其他浏览器、指定设备延迟/帧时间/显存及长期性能仍需专项。一次界面成功不能覆盖这些边界。</p></article>
+        <article class="pending-card"><span class="evidence-label">继续专项验证</span><h3>可靠性收尾</h3><p>整套恢复全部九页后的重建、进行中过程转场、真正同时写入、真实存储故障/容量，以及按住时Escape、失焦和捕获中断。</p><p class="boundary">完整断网、触屏/其他浏览器、指定设备延迟/帧时间/显存及长期性能仍需专项。一次界面成功不能覆盖这些边界。</p></article>
       </div>
       <a class="section-end-link" href="./integration.html#scenes">按场景查看验证清单与限制 ↗</a>
     </section>
 
     <section id="next-steps" aria-labelledby="next-title">
-      <div class="section-heading"><div><p class="eyebrow">07 / NEXT FOUR ACTIONS</p><h2 id="next-title">下一步围绕成果与新对象推进。</h2></div><p>备份已有0.17.1进展；第二步在0.18.0接入独立工作台。柜架和完整阅读角仍待专项推进，不能把有限样本读成全部通过。</p></div>
+      <div class="section-heading"><div><p class="eyebrow">07 / NEXT FOUR ACTIONS</p><h2 id="next-title">下一步围绕成果与新对象推进。</h2></div><p>备份已有0.17.1进展；新桌研究在0.18.0可操作，0.18.1补齐旧页保存保护。真实中断、柜架和完整阅读角继续分别推进。</p></div>
       <ol class="next-actions">
-        <li><span class="action-number">01</span><div><h3>继续完成可靠性收尾</h3><p>下载/复制全文、文件重开、单项恢复/还原和九页稳定存档重开已核查。继续整套恢复全部九页后的重建与真实存储/并发/设备专项，保存公开状态对照。</p><p class="expected"><span>产出</span>一份可重复执行的完整成果恢复流程，以及按设备与故障注明范围的验证记录。</p></div></li>
+        <li><span class="action-number">01</span><div><h3>继续完成可靠性收尾</h3><p>备份下载/复制、九页稳定存档重开，以及独立新桌的两标签冲突、检查失效和可撤销打开最新已核查。继续整套恢复全部九页后的重建、真实按住中断、存储故障和同时写入专项，保留公开状态对照。</p><p class="expected"><span>产出</span>一份可重复执行的完整成果恢复流程，以及按设备与故障注明范围的验证记录。</p></div></li>
         <li><span class="action-number">02</span><div><h3><a href="./support.html">新桌支撑研究已可操作 ↗</a></h3><p>三个此前未接入的真实静态桌，登记米/Y向上，统一设计高75cm，共用冻结规则检测原三角面。25个候选保留22个推荐失败；多个面需明确选择。使用真实独立圆底管灯，完整底座加2mm，支持连续灯具平移/保守转灯、整桌平移、离散转桌与宽深提交、整次回滚/撤销和严格保存恢复。</p><p class="expected"><span>发现与边界</span>首轮夹装灯3.527mm小接触面被语义核查排除，记录保留；换灯复核同三桌不算新的未知测试集。本页未替换客厅旧规则，也未加入十份整套备份。仅静态登记资产；真实物理、柜架、任意导入及设备专项待验。</p><p><a href="./support.html">打开真实工作台 ↗</a> · <a href="https://github.com/yydshly/1002_codex_project/blob/main/projects/011-solaris/notes/support-validation.json">查看分层验收记录 ↗</a></p></div></li>
         <li><span class="action-number">03</span><div><h3>桌面通过后，再复用到柜架</h3><p>前一步验收后，扩展多层候选支撑面与上方净空，检验跨层、边界、遮挡和关系恢复。整理单位、变换、支撑域、失败说明与保存恢复的共同契约，保留柜架专用约束。</p><p class="expected"><span>前提</span>具备可靠尺度与可判定几何；不以一张桌通过宣称任意柜架自动识别和放置。</p></div></li>
         <li><span class="action-number">04</span><div><h3>交付一个完整阅读角成果任务</h3><p>从选品出发，完成椅/桌/灯布置、配色与照明，比较方案并保存结果，再通过备份恢复、返回陈列继续工作。</p><p class="expected"><span>验收对象</span>完整方案、A/B、实际画面与恢复后可继续编辑的成果；验证整个任务，而非只增加按钮。</p></div></li>
@@ -160,6 +161,6 @@
     </section>
   </main>
 
-  <footer><div><span class="footer-brand">ATELIER / 011</span><p>项目总览 · 0.18.0新桌研究 / 引导图保留0.17.0依据 · 2026-10-07</p></div><nav aria-label="页脚导航"><a href="./support.html">新桌研究</a><a href="./research.html">公开来源</a><a href="./integration.html#roadmap">详细规划</a><a href="../../">返回项目库 ↗</a><a href="#page-title">回到顶部 ↑</a></nav></footer>
+  <footer><div><span class="footer-brand">ATELIER / 011</span><p>项目总览 · 0.18.1保存保护 / 引导图保留0.17.0依据 · 2026-10-07</p></div><nav aria-label="页脚导航"><a href="./support.html">新桌研究</a><a href="./research.html">公开来源</a><a href="./integration.html#roadmap">详细规划</a><a href="../../">返回项目库 ↗</a><a href="#page-title">回到顶部 ↑</a></nav></footer>
 </body>
 </html>
