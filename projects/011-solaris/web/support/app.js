@@ -1,8 +1,10 @@
 import {SupportScene} from './scene.js';
 import {SUPPORT_WORKSPACE_KEY,MAX_SUPPORT_BACKUP_BYTES} from './state.js';
 import {createSupportStorage} from './storage.js';
+import {createSupportDraft} from './draft.js';
 const $=id=>document.getElementById(id), clone=value=>structuredClone(value);
-let worker,view,analysis,reply,storage,mode='lamp',gesture=null,busy=true,initialized=false,failed=false,checkedText=null,downloadUrl=null,toastTimer,fileReadId=0,readingFile=false,conflictEpoch=0,savedPreview=null;
+const draft=createSupportDraft();
+let worker,view,analysis,reply,storage,mode='lamp',gesture=null,busy=true,initialized=false,failed=false,checkedText=null,downloadUrl=null,toastTimer,fileReadId=0,readingFile=false,conflictEpoch=0,savedPreview=null,saveProblem=false,navigating=false,pendingNavigation=null,navigationEpoch=0,beforeUnloadAttached=false;
 const pending=new Map();let requestId=0;
 function ask(type,payload={}){return new Promise((resolve,reject)=>{if(failed){reject(new Error('几何工作线程不可用，请重新打开工作台。'));return;}const id=++requestId;pending.set(id,{resolve,reject});worker.postMessage({id,type,payload});});}
 function fatal(message){failed=true;if(gesture){gesture.cancelled=true;const id=gesture.pointerId;gesture=null;if($('canvas-host').hasPointerCapture(id))$('canvas-host').releasePointerCapture(id);}
@@ -29,6 +31,22 @@ const reasons={
 };
 const explain=reason=>reasons[reason]??reason??'完整灯底与 2 mm 边距通过；当前验证不判断物理稳定性。';
 function setBusy(value){busy=value;if(value){$('placement-title').textContent='正在核对完整灯底与关系…';$('placement-detail').textContent='计算在独立线程进行，结果返回后才能继续提交。';}refreshControls();}
+function needsLeaveProtection(){const s=draft.getSnapshot();return !navigating&&(s.dirty||s.transactionActive||Boolean(gesture)||(s.hasState&&(s.pendingSelection||busy||saveProblem)));}
+function beforeUnload(event){if(!needsLeaveProtection())return;event.preventDefault();event.returnValue='';}
+function refreshDraftUI(){const s=draft.getSnapshot(),protect=needsLeaveProtection();
+  if(protect&&!beforeUnloadAttached){window.addEventListener('beforeunload',beforeUnload);beforeUnloadAttached=true;}
+  else if(!protect&&beforeUnloadAttached){window.removeEventListener('beforeunload',beforeUnload);beforeUnloadAttached=false;}
+  const text=failed?(s.dirty?'工作台中断 · 草稿未保存':'工作台暂时不可用'):!initialized?'正在准备工作台':s.transactionActive||gesture?'正在拖动 · 尚未提交':s.pendingSelection?'请选择完整支撑台面':saveProblem?'本次保存未确认':s.externalChanged?'本机存档有变化':s.dirty?'本页有未保存修改':s.hasState?'方案与存档一致':'请选择支撑台面';
+  if($('save-status').textContent!==text)$('save-status').textContent=text;
+  $('save-status').dataset.state=protect?'unsaved':s.hasState?'saved':'pending';
+  if($('leave-dialog').open){
+    $('leave-summary').textContent=reply?.state?describeScheme(JSON.stringify({state:reply.state})):'台面选择尚未完成，原方案仍可用撤销找回。';
+    $('leave-message').textContent=failed?'工作线程已中断，本页无法核查保存。可继续留在本页，或明确离开后用已保存版本重开。':busy?'正在核对操作，请等待结果；关闭提示会继续留在本页。':s.pendingSelection?'先继续编辑并选择台面，或撤销回完整方案，再保存或备份。':'保存后离开需写后核对成功；备份只打开方案文本，关闭备份后仍留在本页。';
+    $('leave-save').disabled=!initialized||failed||busy||!reply?.state;
+    $('leave-backup').disabled=!initialized||failed||busy||!reply?.state;
+    $('leave-discard').disabled=busy&&!failed;
+  }
+}
 function refreshControls(){const ready=initialized&&Boolean(reply?.state)&&!busy&&!gesture&&!failed;
   for(const id of ['save','backup','show-surface','lamp-turn-left','lamp-turn-right','table-turn-left','table-turn-right','table-width','table-depth','apply-size'])$(id).disabled=!ready;
   for(const button of document.querySelectorAll('[data-nudge]'))button.disabled=!ready;
@@ -37,8 +55,10 @@ function refreshControls(){const ready=initialized&&Boolean(reply?.state)&&!busy
   for(const b of document.querySelectorAll('[data-mode]'))b.disabled=!initialized||failed||busy;
   for(const id of ['top-view','home-view'])$(id).disabled=!initialized||failed||busy||Boolean(gesture);
   view&&(view.controls.enabled=initialized&&!failed&&mode==='orbit'&&!gesture&&!busy);
+  refreshDraftUI();
 }
 async function render(result){if(failed)return;reply=result;const assetId=result.activeAssetId??result.state?.table.assetId;
+  draft.observe(result.state,{pendingSelection:Boolean(result.status?.pendingSurfaceChoice),transactionActive:Boolean(result.status?.transactionActive)});
   const table=analysis?.tables.find(t=>t.asset.id===assetId);if(!table)return;
   $('asset-title').textContent=table.asset.label;$('asset-number').textContent=String(analysis.tables.indexOf(table)+1).padStart(2,'0');
   $('asset-source').href=table.asset.sourcePage;
@@ -120,6 +140,7 @@ function describeScheme(rawText){try{const s=JSON.parse(rawText).state,t=s.table
   return `${label} · 桌宽 ${t.scale.x.toFixed(2)} / 深 ${t.scale.z.toFixed(2)} · 灯位置 X ${a.x.toFixed(3)} / Z ${a.z.toFixed(3)} m`;
 }catch{return '存档格式尚未核查';}}
 function showSaveIssue(result){clearSavedPreview();$('save-status').textContent='本页尚未保存';
+  saveProblem=true;if($('leave-dialog').open)$('leave-dialog').close();refreshDraftUI();
   $('conflict-title').textContent=result.code==='storage-conflict'?'本机已有变化的方案':'这次保存未能确认';
   $('conflict-local-summary').textContent=reply?.state?describeScheme(JSON.stringify({state:reply.state})):'当前方案仍保留';
   $('conflict-saved-summary').textContent=result.found===false?'本机已没有存档':result.restricted?'存档超出本页可检查范围':'请检查当前本机存档';
@@ -143,9 +164,37 @@ async function openSaved(){if(busy||failed||!savedPreview)return;const rawText=s
   $('open-saved').disabled=true;const result=await operation('restore',{rawText});if(!result?.ok){clearSavedPreview();$('conflict-message').textContent='当前版本未能打开，保存基线保持，请重新检查。';return;}
   const accepted=storage.acceptCurrent(rawText);
   if(!accepted.ok){showSaveIssue(accepted);$('conflict-message').textContent=`${accepted.reason}。当前显示刚检查的版本，可撤销找回原方案；本页未写入，请重新检查。`;return;}
-  $('save-conflict-dialog').close();$('save-status').textContent='已打开当前存档';toast('已打开检查通过的存档；可撤销找回本页先前方案。');
+  draft.markSaved(result.state);saveProblem=false;refreshDraftUI();$('save-conflict-dialog').close();toast('已打开检查通过的存档；可撤销找回本页先前方案。');
+}
+async function saveCurrent(){const result=await operation('export');if(!result?.ok)return false;const saved=storage.save(result.rawText);
+  if(saved.ok){draft.markSaved(result.state);saveProblem=false;refreshDraftUI();toast('已保存桌子、灯具与所选台面的关系。');return true;}
+  showSaveIssue(saved);return false;
+}
+function clearNavigation(){pendingNavigation=null;navigationEpoch++;}
+function navigateTo(destination){navigating=true;refreshDraftUI();try{location.assign(destination);}catch(error){navigating=false;refreshDraftUI();toast(`暂时无法离开：${error.message}`);}}
+async function requestNavigation(destination){const epoch=++navigationEpoch;pendingNavigation=destination;await cancelDrag('离开前取消进行中的拖动');
+  if(epoch!==navigationEpoch)return;
+  if(!needsLeaveProtection()){clearNavigation();navigateTo(destination);return;}
+  if(!$('leave-dialog').open)$('leave-dialog').showModal();refreshDraftUI();
+}
+function wireNavigation(){
+  window.addEventListener('pageshow',()=>{navigating=false;refreshDraftUI();});
+  document.addEventListener('click',event=>{if(event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+    const link=event.target?.closest?.('a[href]');if(!link||link.hasAttribute('download')||(link.target&&link.target!=='_self'))return;
+    let destination,current;try{destination=new URL(link.href,location.href);current=new URL(location.href);}catch{return;}
+    if(!['http:','https:'].includes(destination.protocol)||destination.href===current.href||(destination.origin===current.origin&&destination.pathname===current.pathname&&destination.search===current.search))return;
+    if(!needsLeaveProtection())return;event.preventDefault();requestNavigation(destination.href);
+  });
+  $('leave-dialog').addEventListener('close',clearNavigation);
+  $('leave-continue').onclick=()=>$('leave-dialog').close();
+  $('leave-save').onclick=async()=>{if(!pendingNavigation||$('leave-save').disabled)return;const destination=pendingNavigation,epoch=navigationEpoch;
+    const saved=await saveCurrent();if(saved&&epoch===navigationEpoch&&pendingNavigation===destination&&$('leave-dialog').open&&!needsLeaveProtection()){$('leave-dialog').close();navigateTo(destination);}
+  };
+  $('leave-backup').onclick=async()=>{if($('leave-backup').disabled)return;$('leave-dialog').close();await openBackup();};
+  $('leave-discard').onclick=()=>{if(!pendingNavigation||$('leave-discard').disabled)return;const destination=pendingNavigation;$('leave-dialog').close();navigateTo(destination);};
 }
 function wireControls(){
+  wireNavigation();
   $('retry').onclick=()=>location.reload();$('about').onclick=()=>$('about-dialog').showModal();$('technical').onclick=()=>$('technical-dialog').showModal();
   for(const b of document.querySelectorAll('[data-close]'))b.onclick=()=>$(b.dataset.close).close();
   for(const b of document.querySelectorAll('[data-mode]'))b.onclick=async()=>{if(!initialized||failed||busy)return;await cancelDrag('切换模式，回到起点');if(failed)return;mode=b.dataset.mode;for(const x of document.querySelectorAll('[data-mode]'))x.setAttribute('aria-pressed',String(x===b));refreshControls();$('gesture-hint').textContent=mode==='orbit'?'拖动环绕 · 滚轮缩放 · 右键平移':mode==='table'?'拖动原桌模型 · 灯随桌移动 · Escape 取消':'拖动灯具 · 越边释放整次回到起点 · 方向键每步 5 cm';};
@@ -162,14 +211,12 @@ function wireControls(){
     edit(s=>{s.table.transform.scale.x=x;s.table.transform.scale.z=z;},'提交桌宽深比例');};
   $('show-surface').onclick=()=>{const show=$('show-surface').getAttribute('aria-pressed')!=='true';$('show-surface').setAttribute('aria-pressed',String(show));view.showSurface(show);};
   $('undo').onclick=()=>operation('undo');$('redo').onclick=()=>operation('redo');$('backup').onclick=openBackup;
-  $('save').onclick=async()=>{const result=await operation('export');if(!result?.ok)return;const saved=storage.save(result.rawText);
-    if(saved.ok){$('save-status').textContent='研究方案已保存';toast('已保存桌子、灯具与所选台面的关系。');}else showSaveIssue(saved);
-  };
+  $('save').onclick=saveCurrent;
   $('check-saved').onclick=checkSaved;$('open-saved').onclick=openSaved;
   $('backup-local').onclick=async()=>{$('save-conflict-dialog').close();await openBackup();};
   $('save-conflict-dialog').addEventListener('close',clearSavedPreview);
   window.addEventListener('storage',event=>{if(event.key!==SUPPORT_WORKSPACE_KEY&&event.key!==null)return;if(!initialized||failed)return;
-    clearSavedPreview();$('save-status').textContent='本机存档有变化';if($('save-conflict-dialog').open){$('check-saved').disabled=false;$('conflict-message').textContent='另一页面改变了本机存档，请重新检查；本页摆放保持。';}
+    clearSavedPreview();draft.markExternalChanged();refreshDraftUI();if($('save-conflict-dialog').open){$('check-saved').disabled=false;$('conflict-message').textContent='另一页面改变了本机存档，请重新检查；本页摆放保持。';}
   });
   $('backup-dialog').addEventListener('close',cancelFileRead);
   $('configuration').oninput=()=>{cancelFileRead();invalidateBackup();};
@@ -196,6 +243,7 @@ async function start(){wireControls();refreshControls();try{
   worker.onerror=event=>{const message=event.message||'几何工作线程无法运行';fatal(message);for(const request of pending.values())request.reject(new Error(message));pending.clear();};
   storage=createSupportStorage(()=>localStorage);const loaded=storage.loadSnapshot(),savedRaw=loaded.currentRaw??null;
   const first=await ask('init',{savedRaw});analysis=first.analysis;if(!analysis)throw new Error(first.reason??'分析资料不可用');
+  if(savedRaw!==null&&!first.savedRejected&&first.state)draft.markSaved(first.state);saveProblem=!loaded.ok;
   $('analysis-readout').textContent=JSON.stringify({policy:analysis.policy,lamp:{id:analysis.lamp.asset.id,source:analysis.lamp.asset.sourcePage,fingerprint:analysis.lamp.asset.sourceFingerprint,contactBounds:analysis.lamp.base.contactBounds},tables:analysis.tables.map(t=>({id:t.asset.id,fingerprint:t.asset.sourceFingerprint,candidateCount:t.surfaces?.length??0,verifiedPositions:t.surfaces?.filter(s=>s.recommendation.valid).length??0,reason:t.reason??null}))},null,2);
   $('analysis-summary').textContent='原夹装灯被语义核查排除；现在使用独立圆底管灯复核同三桌，不称新的未知模型测试集。每个未通过候选仍保留在菜单中。';
   for(const table of analysis.tables){const b=document.createElement('button');b.disabled=true;b.dataset.asset=table.asset.id;b.textContent=table.asset.label;const small=document.createElement('small');small.textContent=`${table.surfaces?.length??0} 个检测面`;b.append(small);b.onclick=()=>operation('selectAsset',{assetId:table.asset.id});$('asset-options').append(b);}
