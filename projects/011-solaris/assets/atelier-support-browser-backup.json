@@ -1,0 +1,35 @@
+{
+  "format": "atelier-support-workspace",
+  "version": 1,
+  "state": {
+    "table": {
+      "assetId": "wooden_table_02",
+      "sha256": "0ceaca88200d995ae75caf513b2dbc01937cc9d52bcdb2fd7ac33e083de6e1a3",
+      "analysisVersion": "atelier-support-v1",
+      "surfaceId": "surface-336b1556d97b1937",
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "yaw": 0,
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    "lamp": {
+      "assetId": "industrial_pipe_lamp",
+      "sha256": "01e4d4b647a45ba18551c091100306333b52c9f396726e82cd5f7668d81eda62",
+      "scale": 1,
+      "yaw": 0
+    },
+    "attachment": {
+      "localAnchor": {
+        "x": -5.455395311881883e-8,
+        "z": 0.0065133390485582685
+      }
+    }
+  }
+}

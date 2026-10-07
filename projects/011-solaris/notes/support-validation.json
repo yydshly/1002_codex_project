@@ -1,0 +1,387 @@
+{
+  "format": "atelier-support-validation",
+  "version": 1,
+  "release": "0.18.0",
+  "date": "2026-10-07",
+  "status": "bounded-main-workflow-verified-specialties-pending",
+  "purpose": "同一套冻结几何规则用于此前未接入的三种登记静态桌，明确选择候选面后验证完整独立灯底、鼠标路径与桌灯关系；不是Solaris后台、任意模型语义理解或真实承重。",
+  "releaseCounts": {
+    "existingScenes": 11,
+    "implementedBounded": 35,
+    "totalResearch": 36,
+    "c35Destinations": 9,
+    "wholeWorkspaceBackupRecords": 10,
+    "changed": false
+  },
+  "scope": {
+    "entry": "web/support.html",
+    "ownStorageKey": "atelier-support-workspace-v1",
+    "storageWrites": "explicit-save-only",
+    "wholeWorkspaceBackupIntegrated": false,
+    "oldLivingRoomRulesReplaced": false,
+    "arbitraryAssetUpload": false,
+    "tableDesignHeightMeters": 0.75,
+    "lampDesignHeightMeters": 0.52,
+    "physicalMeasuredHeights": false
+  },
+  "frozenPolicy": {
+    "version": "atelier-support-v1",
+    "sha256": "7659e054bd72dd87f4f1d12dfb03499cff358167874a0c628833e973e9980633",
+    "marginMeters": 0.002,
+    "contactHeightToleranceMeters": 0.0005,
+    "coverage": "exact rational subtraction of original triangle union; no tiny leftover area accepted",
+    "conservativeRotation": "full 32-sided outer circular envelope",
+    "collision": "closed world AABB of full lamp versus original source structures above face; possible false rejection"
+  },
+  "sourceChecks": {
+    "tableAssets": 3,
+    "lampAssets": 1,
+    "localRuntimeBytes": 5772619,
+    "checks": [
+      "support-assets.mjs --check",
+      "support-assets.mjs --check --lamp"
+    ],
+    "sourceAndGeometryMetadata": "notes/support-assets.md",
+    "staticReport": "notes/support-asset-analysis.json",
+    "staticReportSha256": "958f968f8b21b5317a2e45c6474044363e74548c0aec2aa3cd0d1e5e436d988d",
+    "staticReportStatus": "static-representative-cases-passed",
+    "representativeStaticCases": 21,
+    "candidateSurfaces": 25,
+    "failedRecommendationsRetained": 22
+  },
+  "semanticDiscovery": {
+    "originalLamp": "desk_lamp_arm_01",
+    "originalContactWidthMillimeters": 3.52699,
+    "officialMounting": "clamp-mounted",
+    "productUseAccepted": false,
+    "historicalRawReport": "notes/support-first-asset-analysis.json",
+    "historicalRawReportSha256": "ec1dfd31ea272d626d02cb64dd6177591ec37eca1036fc3ce98dd345d013dc40",
+    "rawReportMeaning": "First pure geometric fit only; independent-bottom product semantics subsequently rejected; historical positive geometry values must not be read as a valid freestanding lamp.",
+    "replacement": "industrial_pipe_lamp",
+    "replacementContactWidthMillimeters": 150.071,
+    "officialClayPreviewVisuallyInspected": true,
+    "sourceFilesUnmodified": true,
+    "thresholdsUnchanged": true,
+    "sameTableRevalidationIsNewUnseenSet": false
+  },
+  "automatic": {
+    "product": {
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "pass": 327,
+      "fail": 0,
+      "exitCode": 0
+    },
+    "repository": {
+      "command": "node --test scripts/tests/*.test.mjs",
+      "pass": 16,
+      "fail": 0,
+      "exitCode": 0
+    },
+    "added": {
+      "geometry": 24,
+      "state": 22,
+      "meshAndLoad": 19,
+      "controller": 14,
+      "total": 79
+    },
+    "limits": "Tiny holes, concave faces, disconnected surfaces and fault scenarios are constructed Node fixtures, not shapes covered by the three real tables."
+  },
+  "actualBrowser": {
+    "browser": "Codex in-app browser on Windows",
+    "method": "Actual native pointer drags and visible controls; only complete public JSON textarea read for comparisons. Download file inspected after UI download; no hidden browser storage read or mutation.",
+    "finalConsole": {
+      "error": 0,
+      "warn": 0,
+      "observation": "Actual final built-page console inspected after HDRLoader replacement and full reload; no captured errors or warnings."
+    },
+    "responsive": {
+      "requestedViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "stage": {
+        "width": 374.6667,
+        "height": 548.59375,
+        "top": 96.3333,
+        "bottom": 644.9271
+      },
+      "horizontalOverflow": false,
+      "completeCoffeeModelVisible": true,
+      "viewportReset": true,
+      "meaning": "Layout and camera fitting only; not touch-input verification."
+    },
+    "tableTasks": [
+      {
+        "assetId": "round_wooden_table_02",
+        "face": "75.0 cm / 144 triangles",
+        "lampDrag": {
+          "from": [
+            475,
+            360
+          ],
+          "to": [
+            495,
+            360
+          ],
+          "publicAnchorChanged": true,
+          "after": {
+            "x": 0.06410873222280912,
+            "z": -0.043932897400879085
+          }
+        },
+        "wholeUndoToBaselineExact": true,
+        "illegalRelease": {
+          "from": [
+            475,
+            360
+          ],
+          "to": [
+            760,
+            355
+          ],
+          "wholeJSONEqualsDragBaseline": true
+        },
+        "tableDrag": {
+          "from": [
+            472,
+            465
+          ],
+          "to": [
+            496,
+            455
+          ],
+          "transform": {
+            "x": 0.013276460630741838,
+            "z": -0.17947436973484843
+          },
+          "lampAndAttachmentExact": true
+        },
+        "tableTurnRadians": 0.2617993877991494,
+        "tableScale": {
+          "x": 1.15,
+          "y": 1,
+          "z": 0.9
+        },
+        "transformKeepsLampAndAnchor": true,
+        "saveReloadWholePublicJSONExact": true
+      },
+      {
+        "assetId": "wooden_table_02",
+        "face": "75.0 cm / 10 triangles",
+        "nudgeUndoRedoWholeJSONExact": true,
+        "lampDrag": {
+          "from": [
+            485,
+            365
+          ],
+          "to": [
+            505,
+            365
+          ],
+          "publicAnchorChanged": true
+        },
+        "illegalRelease": {
+          "from": [
+            505,
+            365
+          ],
+          "to": [
+            770,
+            350
+          ],
+          "wholeJSONEqualsDragBaseline": true
+        },
+        "tableDrag": {
+          "from": [
+            536,
+            500
+          ],
+          "to": [
+            558,
+            490
+          ],
+          "lampAndAttachmentExact": true
+        },
+        "tableTurnRadians": 0.2617993877991494,
+        "tableScale": {
+          "x": 1.15,
+          "y": 1,
+          "z": 0.9
+        },
+        "transformKeepsLampAndAnchor": true,
+        "saveReloadWholePublicJSONExact": true
+      },
+      {
+        "assetId": "CoffeeTable_01",
+        "face": "75.0 cm / 30 triangles",
+        "failedCandidate": {
+          "heightCentimeters": 66.3,
+          "triangleCount": 2,
+          "oldRusticSchemeUndoExact": true,
+          "noAutomaticAlternative": true
+        },
+        "lampDrag": {
+          "from": [
+            475,
+            360
+          ],
+          "to": [
+            495,
+            360
+          ],
+          "publicAnchorChanged": true
+        },
+        "illegalRelease": {
+          "from": [
+            495,
+            360
+          ],
+          "to": [
+            925,
+            280
+          ],
+          "wholeJSONEqualsDragBaseline": true
+        },
+        "tableDrag": {
+          "from": [
+            472,
+            470
+          ],
+          "to": [
+            494,
+            460
+          ],
+          "lampAndAttachmentExact": true
+        },
+        "tableTurnRadians": 0.2617993877991494,
+        "tableScale": {
+          "x": 1.15,
+          "y": 1,
+          "z": 0.9
+        },
+        "transformKeepsLampAndAnchor": true,
+        "saveReloadWholePublicJSONExact": true
+      }
+    ],
+    "backup": {
+      "badTableFingerprint": {
+        "rawTextRetained": true,
+        "restoreDisabled": true,
+        "downloadHrefRemoved": true,
+        "wholeCurrentSchemeExact": true
+      },
+      "checkedTextRestoration": true,
+      "actualDownload": {
+        "filename": "atelier-support.json",
+        "artifact": "assets/atelier-support-browser-backup.json",
+        "bytes": 797,
+        "sha256": "6cc8598d7e56c761ce1254e64367a00e9ac75ff8afd113c247e0b77f6dd840b9",
+        "publicTextBytesExactlyEqual": true,
+        "eventObservation": "Download-event observation timed out although the actual file was saved. The actual Downloads file was independently compared byte-for-byte to the complete public textarea."
+      },
+      "nativeFileChooser": {
+        "actualDownloadedFileRead": true,
+        "publicTextExactlyEqual": true,
+        "checkThenExplicitOpen": true,
+        "crossTableCoffeeToRusticWholeStateExact": true
+      },
+      "oversizeRealFile": {
+        "bytes": 65537,
+        "limitBytes": 65536,
+        "rejected": true,
+        "previous797ByteTextExactlyRetained": true
+      },
+      "finalSavedScheme": "Original rustic-table reading-lamp baseline, also retained in the downloaded artifact"
+    },
+    "finalFileReadRegression": {
+      "afterReadEpochFix": true,
+      "reloadWholePublicJSONExact": true,
+      "realNativeFileReadWholeTextExact": true,
+      "uncheckedRestoreDisabled": true,
+      "explicitCheckThenRestoreWholeJSONExact": true,
+      "oversizeOriginalTextExact": true,
+      "closeReopenPublicTextExact": true,
+      "implementationGuard": "New file reads invalidate old approvals; read/check callbacks require current epoch and open dialog. Close/reopen/edit/restore cancel previous reads.",
+      "notTested": "Deliberately delayed File.text or out-of-order worker response was not fault-injected in the actual browser."
+    },
+    "pendingRealChecks": [
+      "Escape during pointer hold",
+      "Pointer capture interruption",
+      "Window blur / hidden during active gesture",
+      "Worker failure during gesture",
+      "Touch devices and other browsers",
+      "Offline long-running sessions and device latency/memory budget",
+      "Concurrent save conflict detection in this new independent workspace"
+    ]
+  },
+  "stillPending": [
+    "Additional genuinely unseen model sets with frozen rules and pre-registered semantic categories",
+    "Real tables containing holes, concave edges, separated tabletops or upper obstacles",
+    "Additional freestanding lamps and semantic ambiguity",
+    "Any upload, slope, curved support or multifoot stability",
+    "Cabinet/shelf levels and clearance rules",
+    "Physical bearing, center of mass, contact force and engineering safety",
+    "Integrating into old living room and ten-record whole backup after separate migration/acceptance",
+    "Protocol A–E full completion"
+  ],
+  "artifacts": [
+    {
+      "file": "assets/atelier-support-workbench.jpg",
+      "format": "JPEG",
+      "capturedPixels": {
+        "width": 1280,
+        "height": 720
+      },
+      "bytes": 60665,
+      "sha256": "91b3cafff0d15335a9f6d1bd586366aafc97331997aaac5261bf53a54907d1d9",
+      "meaning": "Actual browser screenshot after final presentation build; requested viewport and returned capture dimensions are recorded separately. Not a generated image or a proof of physical simulation."
+    },
+    {
+      "file": "assets/atelier-support-round.jpg",
+      "format": "JPEG",
+      "capturedPixels": {
+        "width": 1280,
+        "height": 720
+      },
+      "bytes": 53973,
+      "sha256": "f078bd1478066db5d0f998f0de1c2d11225069451227c3e87cd846f2af3e85a3",
+      "meaning": "Actual browser screenshot after final presentation build; requested viewport and returned capture dimensions are recorded separately. Not a generated image or a proof of physical simulation."
+    },
+    {
+      "file": "assets/atelier-support-coffee.jpg",
+      "format": "JPEG",
+      "capturedPixels": {
+        "width": 1280,
+        "height": 720
+      },
+      "bytes": 72950,
+      "sha256": "921e6b0b9ce4a00042306053b4064fa863324034b8637454c85efcf53d5747f0",
+      "meaning": "Actual browser screenshot after final presentation build; requested viewport and returned capture dimensions are recorded separately. Not a generated image or a proof of physical simulation."
+    },
+    {
+      "file": "assets/atelier-support-mobile.jpg",
+      "format": "JPEG",
+      "capturedPixels": {
+        "width": 375,
+        "height": 812
+      },
+      "bytes": 31815,
+      "sha256": "cf85df650763be1f1f23c56f8301d8a924260830e0e415ac372e6a23eb75018b",
+      "meaning": "Actual browser screenshot after final presentation build; requested viewport and returned capture dimensions are recorded separately. Not a generated image or a proof of physical simulation."
+    }
+  ],
+  "sourceCodeSha256": {
+    "mesh.js": "80344b9ec6bf8ad2414419da3c350e10949bb87c9fed7f22205cf6618a30aec0",
+    "load.js": "41a6c5d77af6cef94b55c9ff4f900f5d9d0aea85b8b9f77c332db58514385f3d",
+    "geometry.js": "59f307e255af1f6e6caa7d8ec3e6045cb98b7285cbdccd3c760b03ce0d20f789",
+    "state.js": "3c772cc3afd2287f110274915d4da28892a600e0c7636188dd18e46da54d1425",
+    "controller.js": "5b8939a299d618fcbf76d1b9eea44f7cdd3454f49a204114492a9dba3d99c446",
+    "worker.js": "c28500ea58c0d93ebccec2b2dd210fe24adf35e3218624983fb08b72a6d30597",
+    "app.js": "d8cc559659a282b6f08a7080580e09ddfae826f3d88324a2ee1ff7035b690968",
+    "scene.js": "f39751d97e3193c4d409f7b28d81ff1e9996de9689ad056fb7a1379616f79afd"
+  }
+}
