@@ -31,7 +31,7 @@
         <div class="hero-actions"><a class="primary-link" href="#project-map">先看汇总图 ↓</a><a href="#scene-inventory">查看全部场景 ↓</a></div>
       </div>
       <aside class="project-card" aria-label="当前项目范围">
-        <p class="eyebrow">CURRENT SCOPE · 0.17.0</p>
+        <p class="eyebrow">CURRENT SCOPE · 0.17.1</p>
         <dl class="project-counts">
           <div><dt>已有场景</dt><dd>11<span>个</span></dd></div>
           <div><dt>研究清单受控接入</dt><dd>35<span>/ 36</span></dd></div>
@@ -52,7 +52,7 @@
         <a href="./assets/atelier-project-overview.svg" target="_blank" rel="noopener" aria-label="打开 ATELIER 项目矢量汇总原图，可放大阅读">
           <img src="./assets/atelier-project-overview.svg" alt="ATELIER 项目概念汇总图：Solaris 研究启发、本地实现流程、十一场景、受控接入与后续研发方向。依据项目资料生成的矢量图，非实测截图；各项完整文字说明在图后正文。">
         </a>
-        <figcaption><span>点击图片打开矢量原图，放大仍清晰；另可下载上方 PNG。</span><span>依据项目资料生成的概念汇总图，非实测截图；实际能力与验证范围以正文及对应场景说明为准。</span></figcaption>
+        <figcaption><span>点击图片打开矢量原图，放大仍清晰；另可下载上方 PNG。</span><span>图保留0.17.0首次汇总依据，非实测截图；0.17.1备份和界面改进见下方当前证据，11场景与35/36映射不变。</span></figcaption>
       </figure>
       <p class="reading-note">下方保留完整可访问文字；可用浏览器“查找”（Ctrl / ⌘ + F）搜索场景、功能或边界。</p>
     </section>
@@ -133,19 +133,19 @@
     </section>
 
     <section id="verification" aria-labelledby="verification-title">
-      <div class="section-heading"><div><p class="eyebrow">06 / EVIDENCE & LIMITS</p><h2 id="verification-title">验证按层记录，结果按范围使用。</h2></div><p>本次整理重新运行同一套 243 项产品与 16 项仓库检查，全部通过。场景操作仍引用 0.17.0 各轮既有验收，不把新增总览或一张图计为新能力。</p></div>
+      <div class="section-heading"><div><p class="eyebrow">06 / EVIDENCE & LIMITS</p><h2 id="verification-title">验证按层记录，结果按范围使用。</h2></div><p>0.17.1补齐实际下载/复制全文核对与文件重开，改进失败保留文本和顶栏。新增5项导出边界测试，总计248项产品与16项仓库检查；历史操作按原版本留证，不增加研究编号。</p></div>
       <div class="verification-grid">
-        <article><span class="evidence-label">已有自动检查</span><h3>243 / 16</h3><p>243 项产品 Node 测试与 16 项仓库检查已通过，包括状态、约束、事务及备份等有限输入。</p><p class="boundary">存储容量、半写、读失败和回滚的 Node 模拟，分别记载；不等于真实浏览器故障注入通过。</p></article>
-        <article><span class="evidence-label">已有真实界面证据</span><h3>操作、原文与恢复</h3><p>各场景的已验操作有实际界面/公开 JSON 记录。整套备份已核对十份原文、实际文件打开、差异预览、仅恢复勾选项及另一窗口更新后的拒绝。</p><p class="boundary">原六任务完整稳定配置重开与三新增目标往返分轮留档；不改写为本轮所有目标全部重验。</p></article>
-        <article class="pending-card"><span class="evidence-label">继续专项验证</span><h3>可靠性收尾</h3><p>下载真正落盘、剪贴板完整性、整套恢复后的九个目标逐一重开、进行中过程转场、真实多窗口竞争、存储故障/容量/回滚。</p><p class="boundary">完整断网、触屏/其他浏览器、指定设备延迟/帧时间/显存及长期性能仍需专项。一次界面成功不能覆盖这些边界。</p></article>
+        <article><span class="evidence-label">已有自动检查</span><h3>248 / 16</h3><p>248项产品Node测试与16项仓库检查已通过，新增UTF-8字节计量、格式化超限回退与超限拒绝。</p><p class="boundary">存储容量、半写、读失败和回滚仍为Node模拟；不等于真实浏览器存储故障注入通过。</p></article>
+        <article><span class="evidence-label">本轮真实界面证据</span><h3>文件与成果可以核对</h3><p>实际下载195,925字节与全文一致，编辑后195,926字节下载/复制也一致。文件重开、超限保留文本、单展厅恢复/还原，以及九页稳定存档重开已核查。</p><p><a href="https://github.com/yydshly/1002_codex_project/blob/main/projects/011-solaris/assets/atelier-workspace-export.png">备份真实界面 ↗</a> · <a href="https://github.com/yydshly/1002_codex_project/blob/main/projects/011-solaris/assets/atelier-showroom-navigation.png">展厅导航 ↗</a> · <a href="https://github.com/yydshly/1002_codex_project/blob/main/projects/011-solaris/notes/workspace-export-validation.json">本轮完整记录 ↗</a></p><p class="boundary">影像换画布时只平移显示中心，同尺寸重开完整JSON保持。核查结束后十份保存原文完全还原；不称本轮整套恢复全部九页后的验收。</p></article>
+        <article class="pending-card"><span class="evidence-label">继续专项验证</span><h3>可靠性收尾</h3><p>整套恢复全部九页后的重建、进行中过程转场、真实多窗口竞争、存储故障/容量/回滚。</p><p class="boundary">完整断网、触屏/其他浏览器、指定设备延迟/帧时间/显存及长期性能仍需专项。一次界面成功不能覆盖这些边界。</p></article>
       </div>
       <a class="section-end-link" href="./integration.html#scenes">按场景查看验证清单与限制 ↗</a>
     </section>
 
     <section id="next-steps" aria-labelledby="next-title">
-      <div class="section-heading"><div><p class="eyebrow">07 / NEXT FOUR ACTIONS</p><h2 id="next-title">下一步围绕成果与新对象推进。</h2></div><p>以下为后续规划，尚未计入已交付功能。每步都应有操作、预期结果和拒绝样本。</p></div>
+      <div class="section-heading"><div><p class="eyebrow">07 / NEXT FOUR ACTIONS</p><h2 id="next-title">下一步围绕成果与新对象推进。</h2></div><p>第一步已有0.17.1进展，继续完成剩余路径；后三步仍是规划。每步都应有操作、预期结果和拒绝样本。</p></div>
       <ol class="next-actions">
-        <li><span class="action-number">01</span><div><h3>先完成可靠性收尾</h3><p>逐一验整套恢复后的工作台重开、真实下载/剪贴板、异常与多窗口冲突；保存公开状态对照，真实操作与故障模拟分开。</p><p class="expected"><span>产出</span>一份可重复执行的完整成果恢复流程，以及按设备与故障注明范围的验证记录。</p></div></li>
+        <li><span class="action-number">01</span><div><h3>继续完成可靠性收尾</h3><p>下载/复制全文、文件重开、单项恢复/还原和九页稳定存档重开已核查。继续整套恢复全部九页后的重建与真实存储/并发/设备专项，保存公开状态对照。</p><p class="expected"><span>产出</span>一份可重复执行的完整成果恢复流程，以及按设备与故障注明范围的验证记录。</p></div></li>
         <li><span class="action-number">02</span><div><h3>研究新桌平面的支撑与灯具关系</h3><p>输入单位与尺寸明确的静态 GLB，用<strong>至少三个未逐件适配、未参与调参的独立桌模型</strong>检验同一套平面支撑规则；不为每件模型手写桌面边界或摆放点。验证完整灯底贴面、不越边缘或孔洞，以及桌移动、旋转、声明范围内缩放后关系保持。</p><p class="expected"><span>验收与拒绝</span>非平面、孔洞、过窄、单位缺失和歧义候选必须受控处理；无法判断时拒绝且状态不变。整段取消、撤销、保存与重开仍保持关系；不据此推断任意语义理解或真实承重。</p></div></li>
         <li><span class="action-number">03</span><div><h3>桌面通过后，再复用到柜架</h3><p>前一步验收后，扩展多层候选支撑面与上方净空，检验跨层、边界、遮挡和关系恢复。整理单位、变换、支撑域、失败说明与保存恢复的共同契约，保留柜架专用约束。</p><p class="expected"><span>前提</span>具备可靠尺度与可判定几何；不以一张桌通过宣称任意柜架自动识别和放置。</p></div></li>
         <li><span class="action-number">04</span><div><h3>交付一个完整阅读角成果任务</h3><p>从选品出发，完成椅/桌/灯布置、配色与照明，比较方案并保存结果，再通过备份恢复、返回陈列继续工作。</p><p class="expected"><span>验收对象</span>完整方案、A/B、实际画面与恢复后可继续编辑的成果；验证整个任务，而非只增加按钮。</p></div></li>
@@ -159,6 +159,6 @@
     </section>
   </main>
 
-  <footer><div><span class="footer-brand">ATELIER / 011</span><p>项目总览 · 依据既有 0.17.0 交付范围整理 · 2026-10-07</p></div><nav aria-label="页脚导航"><a href="./research.html">公开来源</a><a href="./integration.html#roadmap">详细规划</a><a href="../../">返回项目库 ↗</a><a href="#page-title">回到顶部 ↑</a></nav></footer>
+  <footer><div><span class="footer-brand">ATELIER / 011</span><p>项目总览 · 0.17.1当前更新 / 引导图保留0.17.0依据 · 2026-10-07</p></div><nav aria-label="页脚导航"><a href="./research.html">公开来源</a><a href="./integration.html#roadmap">详细规划</a><a href="../../">返回项目库 ↗</a><a href="#page-title">回到顶部 ↑</a></nav></footer>
 </body>
 </html>

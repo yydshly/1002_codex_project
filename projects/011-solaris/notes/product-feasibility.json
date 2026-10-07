@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-06",
-  "purpose": "36项研发映射与0.17.0在精选陈列增加整套工作台备份：一份文件保留当前陈列与九个登记工作台的最近已保存原文，客厅包含完整A/B方案。真实界面已核对十份完整原文、打开实际JSON文件、逐项差异/选择恢复、坏项/空项禁恢复、只恢复勾选项及另一窗口更新后的拒绝；恢复后十份原文逐字回到基线。完整243/243项产品Node测试（含25项新增备份测试）和16/16项仓库检查通过。下载落盘与剪贴板完整性尚未验收；九个渲染页本轮未逐一重开。整套备份支撑既有工作流，35/36、十一场景、C35九目标、阶段5的2/3及C19待接保持；试衣/真人继续暂缓扩展。",
+  "updatedAt": "2026-10-07",
+  "purpose": "36项研发映射；0.17.1完善整套备份的公开导出：实际195925字节下载文件与完整可见JSON逐字一致，SHA256为100d627d8356821997c256a45321a4d69aa1a957f1e1f72a5ce9e6de3ed118d5；实际文件选择器重新打开十项全相同且恢复禁用。新版检查后下载与复制对195926字节含尾部LF文本均逐字一致；12MiB以上真实文件拒绝且上一份完整文本保留，坏JSON检查拒绝且输入保留。九个已保存目标的首次打开与同画布尺寸重开完整公开JSON全部9/9一致，八页与已保存基线逐值一致，影像仅按画布变化平移两原片视图中心，比例、标注、校准和其余内容保持；九页截图均显示实际加载，访问前后十份已保存原文逐字保持。九页核查不属于本轮从整套文件恢复全部九目标后的复开验收。完整248/248项产品Node测试（含新增5项UTF8/容量纯测试）与16/16项仓库检查实际通过，exit0。35/36、十一场景、C35九目标、阶段5的2/3及C19待接保持；试衣/真人继续暂缓扩展。",
   "proposedApproach": "independent-scene-runtime",
   "implementationStatus": "partial-implemented",
   "scopeBoundary": "既有三维/像素场景使用自有状态与登记资产；C17新增限定正面上装的真人研究参考，由本机FASHN预训练后端生成。照片效果可能改动人物、服装或下装细节；未知体型/衣物、多视角一致性、尺码/舒适度、真实商品业务与商业授权不由样板证明。",
@@ -57,7 +57,7 @@
       ],
       "implementationStatus": "partial-implemented",
       "externalGenerationApiRequired": false,
-      "currentScope": "客厅有限中文编辑、地标有出处知识卡、创作台可见取样工具；0.8.0有限中文前缀/场景别名解析、六场景注册表及只读安全返回桥，六目标实际往返与陈列恢复已验收；目标自身完整JSON前后对照仅料理已验收，其余五另验。不提供任意语义路由、艺术家风格复现或新场景生成。 0.16.0将既有C35登记去向深化至九目标，增加滑板/材料/水下任务、全部任务预览、最近去向及只读返回桥；三新增目标真实往返及进入前/目标页/返回后重开公共JSON稳定配置一致已验收，不把六目标旧验收改为九。 0.16.1陈列原文比较与受保护写入、常驻冲突提示和最新只读恢复；旧窗口pagehide不覆盖已检测的新记录。原六目标6/6完整公开JSON进入/重开逐值一致，客厅含完整A/B；每次返回陈列仅更新lastScene；CAS不是原子跨窗口锁，故障与容量只有Node模拟。 0.17.0整套工作台备份是工作流支撑：固定陈列加九目标十记录的已保存raw、一份12MiB以内文件、逐项状态/差异与选择恢复、恢复前本机备份；未选及空项不删除，坏原文原样抢救但禁恢复。导入前关闭其他编辑页、恢复后重开；不保存进行中动作、撤销或TRIP，不作为十记录原子事务或全局同步。本轮公开文件/选择恢复/冲突提示已实际验收，故障与设备等专项边界保留。 0.17.0实际公开导出十项有效原文并通过文件选择器打开：同内容十项相同/应用禁用；两差异选择恢复仅陈列/展厅变化，其余八原文保持，坏地标与空料理禁恢复，粘贴原文件后十原文逐字回基线。取消展厅选择仅恢复陈列；另一窗口更新使旧预览禁恢复、旧备份链接撤销，读取最新后十原文保持。243/243完整产品（新增25备份）与16/16仓库通过；故障/容量/十二基线键变化/回滚仅Node模拟。下载落盘/剪贴板完整性与九渲染页逐一重开未验，保持关闭其他编辑页和恢复后重开要求。"
+      "currentScope": "客厅有限中文编辑、地标有出处知识卡、创作台可见取样工具；0.8.0有限中文前缀/场景别名解析、六场景注册表及只读安全返回桥，六目标实际往返与陈列恢复已验收；目标自身完整JSON前后对照仅料理已验收，其余五另验。不提供任意语义路由、艺术家风格复现或新场景生成。 0.16.0将既有C35登记去向深化至九目标，增加滑板/材料/水下任务、全部任务预览、最近去向及只读返回桥；三新增目标真实往返及进入前/目标页/返回后重开公共JSON稳定配置一致已验收，不把六目标旧验收改为九。 0.16.1陈列原文比较与受保护写入、常驻冲突提示和最新只读恢复；旧窗口pagehide不覆盖已检测的新记录。原六目标6/6完整公开JSON进入/重开逐值一致，客厅含完整A/B；每次返回陈列仅更新lastScene；CAS不是原子跨窗口锁，故障与容量只有Node模拟。 0.17.0整套工作台备份是工作流支撑：固定陈列加九目标十记录的已保存raw、一份12MiB以内文件、逐项状态/差异与选择恢复、恢复前本机备份；未选及空项不删除，坏原文原样抢救但禁恢复。导入前关闭其他编辑页、恢复后重开；不保存进行中动作、撤销或TRIP，不作为十记录原子事务或全局同步。本轮公开文件/选择恢复/冲突提示已实际验收，故障与设备等专项边界保留。 0.17.0实际公开导出十项有效原文并通过文件选择器打开：同内容十项相同/应用禁用；两差异选择恢复仅陈列/展厅变化，其余八原文保持，坏地标与空料理禁恢复，粘贴原文件后十原文逐字回基线。取消展厅选择仅恢复陈列；另一窗口更新使旧预览禁恢复、旧备份链接撤销，读取最新后十原文保持。243/243完整产品（新增25备份）与16/16仓库通过；故障/容量/十二基线键变化/回滚仅Node模拟。0.17.0当轮未覆盖下载/剪贴板与九页逐一重开，历史证据见workspace-backup-validation.json；0.17.1已补齐当前桌面完整下载/复制与九个已保存目标的同画布重开，明确不外推整套恢复后全部九页复开、跨设备或真实存储故障。"
     },
     {
       "id": "avatar-commerce",
@@ -107,7 +107,7 @@
       ],
       "implementationStatus": "partial-implemented",
       "externalGenerationApiRequired": false,
-      "currentScope": "客厅五步引导；0.8.0精选陈列六真实设计素材/六槽位交换、锁定与选择/收藏、四显式策展偏好和可解释排序；真实拖放/偏好/撤销保存主流程已验收。有限场景往返由登记指令/检查点与只读桥支撑，不是自由生成。 0.16.0为当前主线：九目标登记任务、三快捷入口、全部任务/预览/最近去向和原陈列检查点；新增滑板/材料/水下稳定配置进入及返回后重开核对与实际往返已验收。试衣/真人暂缓扩展，C19、商业条件与任意人体/尺寸另行研发。 0.16.1陈列原文比较与受保护写入、常驻冲突提示和最新只读恢复；旧窗口pagehide不覆盖已检测的新记录。原六目标6/6完整公开JSON进入/重开逐值一致，客厅含完整A/B；每次返回陈列仅更新lastScene；CAS不是原子跨窗口锁，故障与容量只有Node模拟。 0.17.0整套工作台备份是工作流支撑：固定陈列加九目标十记录的已保存raw、一份12MiB以内文件、逐项状态/差异与选择恢复、恢复前本机备份；未选及空项不删除，坏原文原样抢救但禁恢复。导入前关闭其他编辑页、恢复后重开；不保存进行中动作、撤销或TRIP，不作为十记录原子事务或全局同步。本轮公开文件/选择恢复/冲突提示已实际验收，故障与设备等专项边界保留。 0.17.0实际公开导出十项有效原文并通过文件选择器打开：同内容十项相同/应用禁用；两差异选择恢复仅陈列/展厅变化，其余八原文保持，坏地标与空料理禁恢复，粘贴原文件后十原文逐字回基线。取消展厅选择仅恢复陈列；另一窗口更新使旧预览禁恢复、旧备份链接撤销，读取最新后十原文保持。243/243完整产品（新增25备份）与16/16仓库通过；故障/容量/十二基线键变化/回滚仅Node模拟。下载落盘/剪贴板完整性与九渲染页逐一重开未验，保持关闭其他编辑页和恢复后重开要求。"
+      "currentScope": "客厅五步引导；0.8.0精选陈列六真实设计素材/六槽位交换、锁定与选择/收藏、四显式策展偏好和可解释排序；真实拖放/偏好/撤销保存主流程已验收。有限场景往返由登记指令/检查点与只读桥支撑，不是自由生成。 0.16.0为当前主线：九目标登记任务、三快捷入口、全部任务/预览/最近去向和原陈列检查点；新增滑板/材料/水下稳定配置进入及返回后重开核对与实际往返已验收。试衣/真人暂缓扩展，C19、商业条件与任意人体/尺寸另行研发。 0.16.1陈列原文比较与受保护写入、常驻冲突提示和最新只读恢复；旧窗口pagehide不覆盖已检测的新记录。原六目标6/6完整公开JSON进入/重开逐值一致，客厅含完整A/B；每次返回陈列仅更新lastScene；CAS不是原子跨窗口锁，故障与容量只有Node模拟。 0.17.0整套工作台备份是工作流支撑：固定陈列加九目标十记录的已保存raw、一份12MiB以内文件、逐项状态/差异与选择恢复、恢复前本机备份；未选及空项不删除，坏原文原样抢救但禁恢复。导入前关闭其他编辑页、恢复后重开；不保存进行中动作、撤销或TRIP，不作为十记录原子事务或全局同步。本轮公开文件/选择恢复/冲突提示已实际验收，故障与设备等专项边界保留。 0.17.0实际公开导出十项有效原文并通过文件选择器打开：同内容十项相同/应用禁用；两差异选择恢复仅陈列/展厅变化，其余八原文保持，坏地标与空料理禁恢复，粘贴原文件后十原文逐字回基线。取消展厅选择仅恢复陈列；另一窗口更新使旧预览禁恢复、旧备份链接撤销，读取最新后十原文保持。243/243完整产品（新增25备份）与16/16仓库通过；故障/容量/十二基线键变化/回滚仅Node模拟。0.17.0当轮未覆盖下载/剪贴板与九页逐一重开，历史证据见workspace-backup-validation.json；0.17.1已补齐当前桌面完整下载/复制与九个已保存目标的同画布重开，明确不外推整套恢复后全部九页复开、跨设备或真实存储故障。"
     }
   ],
   "bindings": {
@@ -885,13 +885,13 @@
       "primaryModule": "intent-tools",
       "implementationStatus": "implemented-bounded",
       "workClass": "bounded-engineering",
-      "algorithm": "有限中文前缀+九登记场景别名、固定任务说明与SCENES路径；严格version/token/sceneId/shop检查点，16位小写hex行程绑同源页面，只读桥构建固定选品返回入口；目标工作台独立保存稳定配置。 0.16.1先比较STORE/TRIP原文快照再写入，已检测冲突暂停并只读恢复最新；坏TRIP校验JSON语法和严格v1业务，原raw可备份且明确重建，不作为原子跨窗口锁。 0.17.0整套工作台备份是工作流支撑：固定陈列加九目标十记录的已保存raw、一份12MiB以内文件、逐项状态/差异与选择恢复、恢复前本机备份；未选及空项不删除，坏原文原样抢救但禁恢复。导入前关闭其他编辑页、恢复后重开；不保存进行中动作、撤销或TRIP，不作为十记录原子事务或全局同步。本轮公开文件与选择恢复已实际验收，故障与设备边界另列。",
+      "algorithm": "有限中文前缀+九登记场景别名、固定任务说明与SCENES路径；严格version/token/sceneId/shop检查点，16位小写hex行程绑同源页面，只读桥构建固定选品返回入口；目标工作台独立保存稳定配置。 0.16.1先比较STORE/TRIP原文快照再写入，已检测冲突暂停并只读恢复最新；坏TRIP校验JSON语法和严格v1业务，原raw可备份且明确重建，不作为原子跨窗口锁。 0.17.0整套工作台备份是工作流支撑：固定陈列加九目标十记录的已保存raw、一份12MiB以内文件、逐项状态/差异与选择恢复、恢复前本机备份；未选及空项不删除，坏原文原样抢救但禁恢复。导入前关闭其他编辑页、恢复后重开；不保存进行中动作、撤销或TRIP，不作为十记录原子事务或全局同步。本轮公开文件与选择恢复已实际验收，故障与设备边界另列。 0.17.1导出使用UTF8容量检查和当前可见完整原文；编辑撤销旧下载/恢复资格，重新检查后可下载与复制已检查文本。实际12MiB超限文件保留前一完整文本，不作为存储故障模拟。",
       "inputRequirement": "九个已交付本地目标、明确任务/有限去向、操作结果边界说明与严格检查点，各场景独立存档。 整套文件使用固定十个已保存原文，不从目标页活动状态采集。",
       "scopeLimit": "只到九登记同源目标并返回原陈列，新增滑板/材料/水下；不会生成新场景、自动植入物品或续播动作/供能/追随。转场支撑不增加能力或场景计数，C19购物、真人商业及任意人体/尺寸另行研发。 整套备份作为支撑不增加计数，试衣/真人与行程令牌不收集。",
-      "acceptance": "未知“去月球”和复合“去客厅和料理”拒绝、去向取消精确保持；六目标真实命令进入与匹配入口返回，陈列主字段精确恢复并记录最近场景。料理原9食材、相机与ID完整JSON前后完全一致；22项返回桥协议检查通过。其余五目标自身完整JSON前后对照、设备、存储故障/坏store、离线性能下载另验。 0.16.0另核对九任务预览、快捷任务、最近去向和取消；新增滑板/材料/水下真实往返与原陈列字段恢复、进入前、目标页与返回后重开公共JSON稳定配置一致已验收；预览取消和复合/否定/外部URL拒绝、最近去向已实测；195产品/16仓库通过。本轮只验三个新增目标，不重写旧六证据；动作中往返、设备/实际存储故障/多窗口等继续专项。 0.16.1实际旧窗口冲突常驻提示、保存/进入禁用、原配置备份和pagehide后新记录保持已验；living含完整A/B、showroom、imaging、landmark、kitchen、creative六目标公开完整JSON before=entered=reopened全部一致，返回陈列仅lastScene变化。218项完整产品通过，含23项新存储测试；16项仓库检查通过；故障/容量/回滚仅Node模拟，并发非原子。 最终读取最新的常驻提示隐藏、保存启用、undo禁用及另一窗口lamp选品正确加载已实测；还原两项原选品保存，创作最终初始化后备份正常且完整JSON保持。 0.17.0新增整套文件导出、只检查不写入、逐项差异与选择恢复、恢复前备份、坏项/空项和陈旧变化拒绝；本轮实际验收见新增整套备份记录。 0.17.0实际公开导出十项有效原文并通过文件选择器打开：同内容十项相同/应用禁用；两差异选择恢复仅陈列/展厅变化，其余八原文保持，坏地标与空料理禁恢复，粘贴原文件后十原文逐字回基线。取消展厅选择仅恢复陈列；另一窗口更新使旧预览禁恢复、旧备份链接撤销，读取最新后十原文保持。243/243完整产品（新增25备份）与16/16仓库通过；故障/容量/十二基线键变化/回滚仅Node模拟。下载落盘/剪贴板完整性与九渲染页逐一重开未验，保持关闭其他编辑页和恢复后重开要求。 0.17.0最终发布版重新构建/加载后十份raw仍逐字等于原基线；粘贴{bad JSON}明确显示中文“未预览：文件不是完整JSON，请选择整套工作台导出的有效备份”，错误输入保留可修正。界面显示“10 / 10份存档已保存”，1280×720完整十行截图与公开完整状态对照已留档；当前陈列页console warn/error为空。 0.17.0真实浏览器还核对了预览后修改粘贴文本：输入{edited after preview}立即禁用恢复按钮、撤销旧的恢复前备份链接并提示重新检查；随后读取备份，十份原始raw完整一致。",
-      "releaseScope": "0.8.0有限场景指令与返回检查点：客厅、展厅、影像、地标、料理、创作均真实进入/返回，陈列/锁定/选择/选品/偏好精确恢复并记录最近场景；原9件料理及相机/ID完整JSON前后精确保持，其余五目标自身完整JSON对照另验。未知/复合指令拒绝，去向取消不改状态。不生成新场景或自动植入商品。 0.16.0深化：九目标有限任务、三快捷入口、全部任务/预览/最近去向和返回检查点；新增三目标实际往返、进入前、目标页与返回后重开独立稳定配置一致和原陈列恢复已验收，历史六目标事实保持。 0.16.1既有工作流补全：检测陈列/检查点变化暂停旧写，保留备份、明确读取最新/恢复坏STORE/重建坏TRIP；原六目标完整JSON当前6/6核查已通过，创作载入期按钮保护最终新版已真实复验，加载完成后保存/备份启用且备份JSON保持。 0.17.0整套工作台备份是工作流支撑：固定陈列加九目标十记录的已保存raw、一份12MiB以内文件、逐项状态/差异与选择恢复、恢复前本机备份；未选及空项不删除，坏原文原样抢救但禁恢复。导入前关闭其他编辑页、恢复后重开；不保存进行中动作、撤销或TRIP，不作为十记录原子事务或全局同步。本轮公开文件与选择恢复已实际验收，故障与设备边界另列。 0.17.0实际公开导出十项有效原文并通过文件选择器打开：同内容十项相同/应用禁用；两差异选择恢复仅陈列/展厅变化，其余八原文保持，坏地标与空料理禁恢复，粘贴原文件后十原文逐字回基线。取消展厅选择仅恢复陈列；另一窗口更新使旧预览禁恢复、旧备份链接撤销，读取最新后十原文保持。243/243完整产品（新增25备份）与16/16仓库通过；故障/容量/十二基线键变化/回滚仅Node模拟。下载落盘/剪贴板完整性与九渲染页逐一重开未验，保持关闭其他编辑页和恢复后重开要求。",
-      "browserValidation": "0.16.1-stale-window-warning/save-and-enter-disabled/original-window-public-backup/pagehide-latest-record-preserved browser verified; all-six-original-targets living-with-full-A-B/showroom/imaging/landmark/kitchen/creative before-entered-reopened-full-JSON exact; returned collection except lastScene exact; creative-loading-disabled-final-browser-repeat passed: enabled after init, backup dialog and full JSON equal baseline; 218 product tests passed including 23 new storage tests; 16 repository tests passed; raw-compare-CAS non-atomic; capacity/fault/rollback Node simulations only; active-action/device/offline/performance separately pending; latest-reload-banner-cleared/save-enabled/undo-disabled/other-window-lamp-loaded and original-wishlist-restored browser verified; 0.17.0 ten-raw-public-export/actual-file-open/unchanged-preview/two-selected-restore/invalid-null-row-disabled/unselected-preserved/paste-ten-raw-baseline/stale-preview-disabled/raw-original-restored browser verified; 243 product/16 repository/25 backup tests passed; fault-quota-rollback-twelve-guard-keys Node simulations only; download-clipboard-all-nine-rendered-reopen unverified; final-published-build-reload-ten-raw-exact/Chinese-malformed-paste-rejection/input-preserved/ten-row-1280x720-screenshot/current-collection-console-empty verified; edited-paste-after-preview-immediately-disables-apply/revokes-old-before-backup/recheck-prompt/ten-original-raw-unchanged browser verified; module-load-failure-text-preservation source-reviewed only",
-      "validation": "workspace-backup-validation.json",
+      "acceptance": "未知“去月球”和复合“去客厅和料理”拒绝、去向取消精确保持；六目标真实命令进入与匹配入口返回，陈列主字段精确恢复并记录最近场景。料理原9食材、相机与ID完整JSON前后完全一致；22项返回桥协议检查通过。其余五目标自身完整JSON前后对照、设备、存储故障/坏store、离线性能下载另验。 0.16.0另核对九任务预览、快捷任务、最近去向和取消；新增滑板/材料/水下真实往返与原陈列字段恢复、进入前、目标页与返回后重开公共JSON稳定配置一致已验收；预览取消和复合/否定/外部URL拒绝、最近去向已实测；195产品/16仓库通过。本轮只验三个新增目标，不重写旧六证据；动作中往返、设备/实际存储故障/多窗口等继续专项。 0.16.1实际旧窗口冲突常驻提示、保存/进入禁用、原配置备份和pagehide后新记录保持已验；living含完整A/B、showroom、imaging、landmark、kitchen、creative六目标公开完整JSON before=entered=reopened全部一致，返回陈列仅lastScene变化。218项完整产品通过，含23项新存储测试；16项仓库检查通过；故障/容量/回滚仅Node模拟，并发非原子。 最终读取最新的常驻提示隐藏、保存启用、undo禁用及另一窗口lamp选品正确加载已实测；还原两项原选品保存，创作最终初始化后备份正常且完整JSON保持。 0.17.0新增整套文件导出、只检查不写入、逐项差异与选择恢复、恢复前备份、坏项/空项和陈旧变化拒绝；本轮实际验收见新增整套备份记录。 0.17.0实际公开导出十项有效原文并通过文件选择器打开：同内容十项相同/应用禁用；两差异选择恢复仅陈列/展厅变化，其余八原文保持，坏地标与空料理禁恢复，粘贴原文件后十原文逐字回基线。取消展厅选择仅恢复陈列；另一窗口更新使旧预览禁恢复、旧备份链接撤销，读取最新后十原文保持。243/243完整产品（新增25备份）与16/16仓库通过；故障/容量/十二基线键变化/回滚仅Node模拟。0.17.0当轮未覆盖下载/剪贴板与九页逐一重开，历史证据见workspace-backup-validation.json；0.17.1已补齐当前桌面完整下载/复制与九个已保存目标的同画布重开，明确不外推整套恢复后全部九页复开、跨设备或真实存储故障。 0.17.0最终发布版重新构建/加载后十份raw仍逐字等于原基线；粘贴{bad JSON}明确显示中文“未预览：文件不是完整JSON，请选择整套工作台导出的有效备份”，错误输入保留可修正。界面显示“10 / 10份存档已保存”，1280×720完整十行截图与公开完整状态对照已留档；当前陈列页console warn/error为空。 0.17.0真实浏览器还核对了预览后修改粘贴文本：输入{edited after preview}立即禁用恢复按钮、撤销旧的恢复前备份链接并提示重新检查；随后读取备份，十份原始raw完整一致。 0.17.1完善整套备份的公开导出：实际195925字节下载文件与完整可见JSON逐字一致，SHA256为100d627d8356821997c256a45321a4d69aa1a957f1e1f72a5ce9e6de3ed118d5；实际文件选择器重新打开十项全相同且恢复禁用。新版检查后下载与复制对195926字节含尾部LF文本均逐字一致；12MiB以上真实文件拒绝且上一份完整文本保留，坏JSON检查拒绝且输入保留。九个已保存目标的首次打开与同画布尺寸重开完整公开JSON全部9/9一致，八页与已保存基线逐值一致，影像仅按画布变化平移两原片视图中心，比例、标注、校准和其余内容保持；九页截图均显示实际加载，访问前后十份已保存原文逐字保持。九页核查不属于本轮从整套文件恢复全部九目标后的复开验收。完整248/248项产品Node测试（含新增5项UTF8/容量纯测试）与16/16项仓库检查实际通过，exit0。35/36、十一场景、C35九目标、阶段5的2/3及C19待接保持；试衣/真人继续暂缓扩展。",
+      "releaseScope": "0.8.0有限场景指令与返回检查点：客厅、展厅、影像、地标、料理、创作均真实进入/返回，陈列/锁定/选择/选品/偏好精确恢复并记录最近场景；原9件料理及相机/ID完整JSON前后精确保持，其余五目标自身完整JSON对照另验。未知/复合指令拒绝，去向取消不改状态。不生成新场景或自动植入商品。 0.16.0深化：九目标有限任务、三快捷入口、全部任务/预览/最近去向和返回检查点；新增三目标实际往返、进入前、目标页与返回后重开独立稳定配置一致和原陈列恢复已验收，历史六目标事实保持。 0.16.1既有工作流补全：检测陈列/检查点变化暂停旧写，保留备份、明确读取最新/恢复坏STORE/重建坏TRIP；原六目标完整JSON当前6/6核查已通过，创作载入期按钮保护最终新版已真实复验，加载完成后保存/备份启用且备份JSON保持。 0.17.0整套工作台备份是工作流支撑：固定陈列加九目标十记录的已保存raw、一份12MiB以内文件、逐项状态/差异与选择恢复、恢复前本机备份；未选及空项不删除，坏原文原样抢救但禁恢复。导入前关闭其他编辑页、恢复后重开；不保存进行中动作、撤销或TRIP，不作为十记录原子事务或全局同步。本轮公开文件与选择恢复已实际验收，故障与设备边界另列。 0.17.0实际公开导出十项有效原文并通过文件选择器打开：同内容十项相同/应用禁用；两差异选择恢复仅陈列/展厅变化，其余八原文保持，坏地标与空料理禁恢复，粘贴原文件后十原文逐字回基线。取消展厅选择仅恢复陈列；另一窗口更新使旧预览禁恢复、旧备份链接撤销，读取最新后十原文保持。243/243完整产品（新增25备份）与16/16仓库通过；故障/容量/十二基线键变化/回滚仅Node模拟。0.17.0当轮未覆盖下载/剪贴板与九页逐一重开，历史证据见workspace-backup-validation.json；0.17.1已补齐当前桌面完整下载/复制与九个已保存目标的同画布重开，明确不外推整套恢复后全部九页复开、跨设备或真实存储故障。 0.17.1完善整套备份的公开导出：实际195925字节下载文件与完整可见JSON逐字一致，SHA256为100d627d8356821997c256a45321a4d69aa1a957f1e1f72a5ce9e6de3ed118d5；实际文件选择器重新打开十项全相同且恢复禁用。新版检查后下载与复制对195926字节含尾部LF文本均逐字一致；12MiB以上真实文件拒绝且上一份完整文本保留，坏JSON检查拒绝且输入保留。九个已保存目标的首次打开与同画布尺寸重开完整公开JSON全部9/9一致，八页与已保存基线逐值一致，影像仅按画布变化平移两原片视图中心，比例、标注、校准和其余内容保持；九页截图均显示实际加载，访问前后十份已保存原文逐字保持。九页核查不属于本轮从整套文件恢复全部九目标后的复开验收。完整248/248项产品Node测试（含新增5项UTF8/容量纯测试）与16/16项仓库检查实际通过，exit0。35/36、十一场景、C35九目标、阶段5的2/3及C19待接保持；试衣/真人继续暂缓扩展。",
+      "browserValidation": "0.17.1 actual UTF8 download195925/SHA256 exact visible textarea; actual chooser-ten-same/restore-disabled; checked-text-download-and-clipboard195926-including-LF exact; real12582913-byte-file rejected/previous-full-text-retained/download-and-restore-disabled; malformed-draft-rejected/input-retained; nine-saved-targets public-first/reload full-JSON9/9 exact; saved-baseline8/9 exact with imaging lawful viewport-center adaptation only; ten-saved-raw-exactly-unchanged; nine-actual-loaded-screenshots verified. All-nine-after-bundle-restore not performed this round; cross-device/actual-storage-fault/concurrency/active-edit/offline/performance pending. New-export-pure-tests5 passed; full product248/248 and repository16/16 regression passed exit0. Historical0.17.0 selective restores and0.16.1 workflow recorded separately. Final new UI single-showroom pearl selective-restore: actual pre-restore-download195925/ten-baseline-records-exact, only-showroom-change/other-nine-unchanged, actual-reopened-public-full-JSON-pearl-exact and screenshot verified; baseline-selective-restore final-ten-raw-exact, pre-restore-link-and-independent-downloaded-backup retained. All-nine-after-bundle-restore remains unperformed.",
+      "validation": "workspace-export-validation.json",
       "implementationFiles": [
         "../web/collection/core.js",
         "../web/collection/app.js",
@@ -904,7 +904,8 @@
       "historicalValidations": [
         "collection-validation.json",
         "collection-workflow-validation.json",
-        "collection-workflow-completion-validation.json"
+        "collection-workflow-completion-validation.json",
+        "workspace-backup-validation.json"
       ],
       "historicalBrowserValidation": "0.8.0-six-destination-roundtrips historically validated; 0.16.0-new-three-destination-real-roundtrips/public-before-entered-reopened-stable-JSON/collection-return-except-lastScene/preview-cancel/compound-negative-externalURL-rejection/recent-task passed; all-nine-task-UI observed; 195 product/16 repository tests passed; other-old-five-full-state/active-action-transitions/held-Escape/blur/lostcapture/touch/multi-browser/multi-window/quota/corrupt-store/offline/performance/download separately pending"
     },
@@ -1024,7 +1025,7 @@
   ],
   "currentRelease": {
     "name": "ATELIER",
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "entry": "../web/index.html",
     "implementedBoundedIds": [
       "C01",
@@ -1066,9 +1067,9 @@
     "implementedBoundedCount": 35,
     "remainingCount": 1,
     "releaseDocument": "product-release.md",
-    "validationDocument": "product-validation.json",
+    "validationDocument": "workspace-export-validation.json",
     "runtimeExternalGenerationApi": false,
-    "version": "0.17.0",
+    "version": "0.17.1",
     "integrationDocument": "integration.md",
     "sceneEntries": [
       "../web/index.html",
@@ -1434,14 +1435,14 @@
       "finalUserCollectionRestored": true
     },
     "workspaceBackupChanges": {
-      "release": "0.17.0",
+      "release": "0.17.1",
       "role": "workflow-supporting-deepening",
       "capabilityId": "C35",
       "sceneCount": 11,
       "registeredDestinationCount": 9,
       "savedRecordCount": 10,
       "activePhaseId": "adaptive-workflow",
-      "status": "bounded-public-raw-export-actual-file-open-selective-restore-paste-recovery-and-stale-preview-browser-validated; download-clipboard-reopen-concurrency-device-pending",
+      "status": "bounded-actual-download-checked-text-clipboard-real-file-rejection-nine-saved-target-reopening-and-single-showroom-selective-restore-reopening-final-browser-validated; product248/repository16-passed; cross-device-storage-concurrency-offline-pending",
       "scope": [
         "陈列入口单弹窗汇总九工作台与陈列的最近已保存原文，12MiB整套文件上限",
         "逐项状态、文件与本机差异、勾选有效工作台，恢复前备份与明确覆盖",
@@ -1465,19 +1466,28 @@
         "0.17.0取消展厅勾选只恢复陈列，展厅保持；另一窗口移除临时灯后旧预览应用禁用且恢复前旧链接撤销，读取最新后十份raw仍完全原文。{}坏外层拒绝且无rows，核查后用户原陈列保持。",
         "0.17.0完整243/243产品Node与16/16仓库检查通过；新增25/25备份测试包括故障、容量、半写、回滚与十二基线键变化，故障均为Node模拟。",
         "0.17.0最终发布版重新构建/加载后十份raw仍逐字等于原基线；粘贴{bad JSON}明确显示中文“未预览：文件不是完整JSON，请选择整套工作台导出的有效备份”，错误输入保留可修正。界面显示“10 / 10份存档已保存”，1280×720完整十行截图与公开完整状态对照已留档；当前陈列页console warn/error为空。",
-        "0.17.0真实浏览器还核对了预览后修改粘贴文本：输入{edited after preview}立即禁用恢复按钮、撤销旧的恢复前备份链接并提示重新检查；随后读取备份，十份原始raw完整一致。"
+        "0.17.0真实浏览器还核对了预览后修改粘贴文本：输入{edited after preview}立即禁用恢复按钮、撤销旧的恢复前备份链接并提示重新检查；随后读取备份，十份原始raw完整一致。",
+        "0.17.1真实下载已落盘：195925字节文件与公开完整textarea逐字一致，SHA256=100d627d8356821997c256a45321a4d69aa1a957f1e1f72a5ce9e6de3ed118d5；旧版复制完整195925字节读回一致。实际文件选择器重新打开该文件，十项均与本机相同，恢复按钮禁用。",
+        "0.17.1新版公开文本增加尾部LF后，编辑立即撤销两条下载链接并禁用恢复；检查成功生成“下载已检查备份”，实际第二文件195926字节与当前textarea包含尾LF逐字一致，新版复制读回195926字节也完全一致。",
+        "0.17.1真实文件选择器打开12582913字节文件被12MiB上限拒绝，上一份完整文本保留，下载与恢复禁用；坏文本{\"draft\":检查拒绝且输入保留。重新读取本机后十份原文仍逐字等于基线。",
+        "0.17.1九个已保存目标living/showroom/imaging/landmark/kitchen/creative/skate/materials/underwater逐页首次打开与重开完整公开JSON全部9/9一致；客厅包括完整A/B项目、缩略图和日期。九页均有实际加载截图，八页全部字段与已保存基线逐值一致。该项不是本轮整套文件恢复全部九目标后的复开测试。",
+        "0.17.1影像画布从已保存521×568变为实际782×413，两原片offsetX各增加130.5、offsetY各减少77.5；scale、全部测量线、校准及其他参数保持。同一782×413画布重开完整JSON一致；不把显示适配称为存档改变或跨设备一致性验收。",
+        "0.17.1九页只读核查前后，公开整套备份十条已保存raw逐字全部保持，没有恢复或改动用户成果；比较records而不比较每次重新生成的外层createdAt。",
+        "0.17.1新增5项导出UTF8完整性与容量边界纯测试已通过；真实浏览器文件/剪贴板/九页重开事实与模拟测试分开记录；最终完整248/248产品与16/16仓库回归实际通过，exit0。",
+        "0.17.1最终新版选择恢复：公开整套文本只将showroom.paint改为pearl，预览显示十项可恢复、一项差异；实际下载恢复前独立文件195925字节，其十份records与原基线全部相同。明确恢复一项后，仅showroom raw改变，其他九份完整原文保持；实际重新打开展厅，公开完整配置逐值等于pearl试验配置且实景截图可见。关闭展厅后粘贴原baseline再明确恢复一项，重新公开汇总最终十份raw逐字全部还原。恢复后恢复前备份下载仍可见，已落盘独立文件完整保留。此项只验证单展厅选择恢复后重开，不扩为全部九目标整套恢复后复开。",
+        "0.17.1最终完整248/248项产品Node测试与16/16项仓库检查均实际通过，exit0；含新增5项UTF8完整性与容量边界纯测试。真实下载/剪贴板/公开文件拒绝/九页重开和单展厅恢复后重开另按浏览器证据记录，不以测试数量替代效果。"
       ],
       "pending": [
-        "自动下载等待和媒体下载均超时，未验文件落盘；复制有UI成功反馈但工具剪贴板读取为空，完整性未验证。可见完整JSON、实际文件打开和粘贴恢复已验。",
-        "本轮未逐一复开九个渲染工作台，不外推跨设备影像视口与相机精确原文；恢复前关闭其他编辑页、恢复后重开仍为必要操作说明。",
         "九工作台尚无统一同步；原文比较与条件回滚不是原子事务。真实并发竞争、存储故障/容量/回滚、进行中编辑、触屏/多浏览器、完全断网和长期性能继续专项。",
-        "人为注入异步界面错误和真实存储故障/容量尚未验证；console为空仅记录最终陈列页面本次观察。",
-        "模块加载失败时保留文本属于代码修复与审阅，尚未在浏览器注入该故障验证。"
+        "跨设备影像视口适配、不同设备相机精度和实际下载路径/剪贴板实现仍需专项；本轮只核查当前桌面浏览器、已保存目标与同画布尺寸重开。",
+        "本轮未从整套备份恢复全部九目标后逐页复开；0.17.0选择恢复的历史证据另见workspace-backup-validation.json，恢复前关闭其他编辑页、恢复后重开仍为必要操作说明。",
+        "人为注入异步界面错误、真实存储故障/容量及模块加载失败保留文本尚未专项验收；公开坏JSON与真实超限文件拒绝不替代这些故障验收。"
       ],
       "historicalValidations": [
         "collection-validation.json",
         "collection-workflow-validation.json",
-        "collection-workflow-completion-validation.json"
+        "collection-workflow-completion-validation.json",
+        "workspace-backup-validation.json"
       ],
       "protocol": {
         "format": "atelier-workspace",
@@ -1486,13 +1496,11 @@
         "underwaterLegacy": "v1-only is reported as upgrade-needed; retain legacy key, do not export/write it",
         "concurrencyBaseline": "ten workspace keys plus legacy underwater v1 and collection TRIP; neither extra key is restored"
       },
-      "validation": "workspace-backup-validation.json",
+      "validation": "workspace-export-validation.json",
       "artifacts": [
         "../assets/atelier-workspace-backup-state-checks.json",
         "../assets/atelier-workspace-backup.png"
       ],
-      "productTestsPassed": 243,
-      "repositoryTestsPassed": 16,
       "newBackupTestsPassed": 25,
       "testBoundary": "Quota/fault/partial-write/twelve-baseline-key-conflict/rollback cases are Node simulations; no real browser storage faults injected.",
       "browserVerified": [
@@ -1504,15 +1512,99 @@
         "paste original restores ten raw strings exactly",
         "stale preview apply disabled and pre-restore link revoked",
         "bad outer JSON rejected with no rows",
-        "editing pasted text after preview disables apply and revokes old pre-restore backup link; recheck prompt visible, ten original raw records unchanged"
+        "editing pasted text after preview disables apply and revokes old pre-restore backup link; recheck prompt visible, ten original raw records unchanged",
+        "actual195925-byte-download matches complete public textarea SHA256",
+        "checked-text actual195926-byte-download and clipboard preserve trailing LF exactly",
+        "actual12582913-byte-file rejection preserves previous full text and disables download/restore",
+        "nine saved-target first/reload public complete JSON exact with same viewport",
+        "eight exact saved baselines and imaging viewport-center adaptation preserve all other fields",
+        "all ten saved raw strings unchanged before/after nine rendered pages",
+        "new UI single-showroom pearl selective restore changes only showroom with other nine raw records unchanged",
+        "actual downloaded pre-restore195925-byte independent backup contains original ten baseline raw records",
+        "actual reopened showroom full public JSON equals pearl trial and loaded screenshot observed",
+        "original baseline selective restore returns all ten saved raw strings exactly; pre-restore backup link and independent downloaded file preserved"
       ],
-      "automaticDownloadVerified": false,
-      "clipboardIntegrityVerified": false,
-      "allNineRenderedWorkbenchesReopenedThisRound": false,
+      "automaticDownloadVerified": true,
+      "clipboardIntegrityVerified": true,
+      "allNineRenderedWorkbenchesReopenedThisRound": true,
       "finalPublishedUIRegression": "build/reload public ten raw exactly baseline; malformed pasted JSON Chinese rejection with input retained; 10/10 saved summary and full ten-row 1280x720 screenshot; current collection console warn/error empty",
       "finalUserRawRecordsRestored": true,
-      "moduleLoadFailureBrowserVerified": false
+      "moduleLoadFailureBrowserVerified": false,
+      "historicalProductTestsPassed": 243,
+      "historicalRepositoryTestsPassed": 16,
+      "historicalTestRelease": "0.17.0",
+      "newExportTestsPassed": 5,
+      "currentRegressionStatus": "passed-product248-of248-repository16-of16-exit0",
+      "allNineReopenedAfterBundleRestoreThisRound": false,
+      "productTestsPassed": 248,
+      "repositoryTestsPassed": 16,
+      "currentRoundRestoredWorkspaces": [
+        "showroom"
+      ],
+      "ninePageReadOnlyUserRawUnchanged": true,
+      "finalTenRawExactlyBaseline": true
+    },
+    "releaseChanges": {
+      "release": "0.17.1",
+      "role": "workspace-export-verification-and-usability",
+      "summary": "0.17.1完善整套备份的公开导出：实际195925字节下载文件与完整可见JSON逐字一致，SHA256为100d627d8356821997c256a45321a4d69aa1a957f1e1f72a5ce9e6de3ed118d5；实际文件选择器重新打开十项全相同且恢复禁用。新版检查后下载与复制对195926字节含尾部LF文本均逐字一致；12MiB以上真实文件拒绝且上一份完整文本保留，坏JSON检查拒绝且输入保留。九个已保存目标的首次打开与同画布尺寸重开完整公开JSON全部9/9一致，八页与已保存基线逐值一致，影像仅按画布变化平移两原片视图中心，比例、标注、校准和其余内容保持；九页截图均显示实际加载，访问前后十份已保存原文逐字保持。九页核查不属于本轮从整套文件恢复全部九目标后的复开验收。完整248/248项产品Node测试（含新增5项UTF8/容量纯测试）与16/16项仓库检查实际通过，exit0。35/36、十一场景、C35九目标、阶段5的2/3及C19待接保持；试衣/真人继续暂缓扩展。 最终新版单展厅pearl选择恢复后，仅展厅原文变化、其他九份保持；实际展厅重开完整配置一致，再恢复原baseline后十份raw逐字还原。",
+      "validationDocument": "workspace-export-validation.json",
+      "downloadBytes": 195925,
+      "downloadSha256": "100d627d8356821997c256a45321a4d69aa1a957f1e1f72a5ce9e6de3ed118d5",
+      "checkedTextDownloadBytes": 195926,
+      "checkedTextClipboardBytes": 195926,
+      "ninePublicJSONReopening": {
+        "firstVersusReloadExactCount": 9,
+        "savedBaselineExactCount": 8,
+        "imagingAdaptation": {
+          "savedViewport": [
+            521,
+            568
+          ],
+          "actualViewport": [
+            782,
+            413
+          ],
+          "offsetXDelta": 130.5,
+          "offsetYDelta": -77.5,
+          "otherStatePreserved": true,
+          "sameViewportReloadExact": true
+        },
+        "allTenSavedRawUnchanged": true,
+        "allNineActualLoadedScreenshots": true,
+        "allNineReopenedAfterBundleRestoreThisRound": false
+      },
+      "newExportTestsPassed": 5,
+      "fullRegressionStatus": "passed-product248-of248-repository16-of16-exit0",
+      "tableSupportPlan": {
+        "document": "table-support-plan.md",
+        "status": "plan-only-not-implemented"
+      },
+      "capabilityCountsUnchanged": true,
+      "remainingCapability": "C19",
+      "fittingAndRealPersonExpansion": "paused",
+      "historicalValidations": [
+        "workspace-backup-validation.json",
+        "collection-workflow-completion-validation.json"
+      ],
+      "productTestsPassed": 248,
+      "repositoryTestsPassed": 16,
+      "singleShowroomSelectiveRestore": {
+        "paint": "pearl",
+        "restorableRecordCount": 10,
+        "changedRecordCount": 1,
+        "preRestoreDownloadedBytes": 195925,
+        "preRestoreDownloadedRecordsExactBaseline": true,
+        "onlyShowroomRawChanged": true,
+        "otherNineRawUnchanged": true,
+        "actualReopenedPublicFullJSONExact": true,
+        "actualLoadedScreenshot": true,
+        "originalBaselineRestoreSelectedCount": 1,
+        "finalTenRawExactlyRestored": true,
+        "preRestoreBackupLinkRemainedVisibleAfterRestore": true,
+        "independentDownloadedBackupRetained": true
+      },
+      "validationStatus": "final-browser-and-regression-verified-with-bounded-pending-specialties"
     }
   }
 }
-

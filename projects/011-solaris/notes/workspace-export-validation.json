@@ -1,0 +1,450 @@
+{
+  "version": "0.17.1",
+  "date": "2026-10-07",
+  "status": "bounded-desktop-paths-verified",
+  "scope": {
+    "scenes": 11,
+    "mappings": 35,
+    "totalEntries": 36,
+    "taskDestinations": 9,
+    "backupRecords": 10,
+    "pendingCapability": "C19",
+    "pausedExpansion": [
+      "fitting",
+      "tryon"
+    ],
+    "newGenericTableImplementation": false
+  },
+  "changes": [
+    "Timestamped filenames and exact UTF-8 download size; pretty export falls back to compact within 12 MiB, otherwise rejects.",
+    "Download the currently checked text; any edit invalidates links and restore preview. Read failures preserve existing text.",
+    "Explicit save/open/check/restore instructions and independently retained restore-before file.",
+    "Showroom, imaging and landmark navigation scrolls without wrapping scene names or save buttons; keyboard focus scrolls the selected link into view."
+  ],
+  "checks": [
+    {
+      "command": "node --test projects/011-solaris/tests/*.test.mjs",
+      "tests": 248,
+      "passed": 248,
+      "failed": 0,
+      "exitCode": 0
+    },
+    {
+      "command": "node --test scripts/tests/*.test.mjs",
+      "tests": 16,
+      "passed": 16,
+      "failed": 0,
+      "exitCode": 0
+    },
+    {
+      "command": "node projects/011-solaris/scripts/integration.mjs --check",
+      "exitCode": 0,
+      "summary": "0.17.1, 35/36, 7 phases, 11 scenes, 5 editor types."
+    },
+    {
+      "command": "node scripts/catalog.mjs sync && node scripts/catalog.mjs check",
+      "exitCode": 0,
+      "scope": "Working catalog retains unrelated local 014; committed catalog is scoped to HEAD projects plus 011."
+    },
+    {
+      "command": "node scripts/catalog.mjs build",
+      "exitCode": 0,
+      "scope": "Local static preview rebuilt from current sources."
+    },
+    {
+      "command": "node --check projects/011-solaris/web/capabilities/navigation.js",
+      "exitCode": 0
+    }
+  ],
+  "serializerCoverage": {
+    "newTests": 5,
+    "scope": [
+      "All ten original raw records preserved; UTF-8 exact bytes.",
+      "Pretty format exact size boundary.",
+      "Compact format fallback at its exact limit.",
+      "Compact format still too large rejects.",
+      "Multibyte text uses UTF-8 bytes rather than character count."
+    ]
+  },
+  "actualBrowser": {
+    "browser": "Codex in-app browser on Windows",
+    "method": "Visible controls, complete public JSON textareas, native file chooser, clipboard text and actual files in Downloads. No hidden browser storage read or mutation.",
+    "downloads": {
+      "release": {
+        "name": "atelier-workspaces-2026-10-07T05-51-11Z.json",
+        "bytes": 195925,
+        "sha256": "100d627d8356821997c256a45321a4d69aa1a957f1e1f72a5ce9e6de3ed118d5"
+      },
+      "edited": {
+        "bytes": 195926,
+        "sha256": "4650c96f9af137af3d4cb0021c7a4036b47543c04a2de9dbfb73f1df9c80a09a"
+      },
+      "before": {
+        "name": "atelier-before-restore-2026-10-07T05-53-53Z.json",
+        "bytes": 195925,
+        "sha256": "fb395181a50cfb8850584ebcea52f44087db03a6514ffbc56c4bd7471b92bdc9"
+      },
+      "exactTextMatch": true,
+      "editedTrailingNewlinePreserved": true,
+      "nativeDownloadObservation": "Download-event waiting timed out although the file was saved. The actual Downloads file was independently read and compared, so successful clicking alone is not treated as disk proof."
+    },
+    "clipboard": {
+      "bytes": 195926,
+      "exactCurrentTextMatch": true,
+      "trailingNewlinePreserved": true,
+      "restoredToOriginalEmptyText": true
+    },
+    "actualFileReopen": {
+      "records": 10,
+      "allSame": true,
+      "restoreDisabled": true,
+      "checkedTextDownloadAvailable": true
+    },
+    "editInvalidation": {
+      "bothDownloadLinksHidden": true,
+      "restoreDisabled": true,
+      "recheckRequired": true
+    },
+    "oversizedFile": {
+      "bytes": 12582913,
+      "limitBytes": 12582912,
+      "rejected": true,
+      "previousCompleteTextPreserved": true,
+      "restoreDisabled": true
+    },
+    "malformedText": {
+      "input": "{\"draft\":",
+      "rejected": true,
+      "erroneousTextRetainedForCorrection": true,
+      "restoreDisabled": true
+    },
+    "selectedRestore": {
+      "selected": "showroom",
+      "changedProperty": "paint: graphite → pearl",
+      "otherNineRawRecordsUnchanged": true,
+      "fullShowroomCanonicalEqual": true,
+      "beforeAllTenRawEqual": true,
+      "restoreBeforeDownloadRetainedAfterApply": true,
+      "allTenOriginalRawRecordsRestoredAtEnd": true
+    },
+    "savedStateReopen": {
+      "count": 9,
+      "scope": "Reopen the existing saved baseline on each page and compare complete public JSON. This is separate from the single-showroom restore; it is not an all-nine restore/rebuild test.",
+      "fullStateFile": "assets/atelier-workspace-reopen-state-checks.json",
+      "rawRecordsUnchangedAfterNineReopens": true,
+      "scenes": [
+        {
+          "id": "showroom",
+          "baselineExactMatch": true,
+          "firstCanonicalSha256": "8553380fbff3b9c472234cb6f4bbbdc561d6374ff1c95388a6b65b98d6969e60",
+          "reopenedCanonicalSha256": "8553380fbff3b9c472234cb6f4bbbdc561d6374ff1c95388a6b65b98d6969e60",
+          "completePublicJsonReopenEqual": true,
+          "baselineRawSha256": "988f22726fdbca86ef16c2f0d97e735dc3878668db172078718a65610aaf831e"
+        },
+        {
+          "id": "imaging",
+          "baselineExactMatch": false,
+          "firstCanonicalSha256": "3f55f922afc6db3ffc7d1fbd8b7ac5a092d059a1e3fe22bd2f3e816a2e0c6ea4",
+          "reopenedCanonicalSha256": "3f55f922afc6db3ffc7d1fbd8b7ac5a092d059a1e3fe22bd2f3e816a2e0c6ea4",
+          "completePublicJsonReopenEqual": true,
+          "baselineRawSha256": "44b6d8b09c18f86718c92ae1318104c78d827130c5fbc8406beac8e79de61eda"
+        },
+        {
+          "id": "landmark",
+          "baselineExactMatch": true,
+          "firstCanonicalSha256": "8ef682dd5586bd6c9c35240a53bc0d1f9b419937d0ae228ab8bf154eeaee5e91",
+          "reopenedCanonicalSha256": "8ef682dd5586bd6c9c35240a53bc0d1f9b419937d0ae228ab8bf154eeaee5e91",
+          "completePublicJsonReopenEqual": true,
+          "baselineRawSha256": "9d7cfb52bec0b474c2892a554932e896e53947a5b7cfb917a4787ef663a593ae"
+        },
+        {
+          "id": "kitchen",
+          "baselineExactMatch": true,
+          "firstCanonicalSha256": "e6458a771fd601444f84d34821db8be87588509f604a827b67929a80b3b76c9f",
+          "reopenedCanonicalSha256": "e6458a771fd601444f84d34821db8be87588509f604a827b67929a80b3b76c9f",
+          "completePublicJsonReopenEqual": true,
+          "baselineRawSha256": "f6bbf1d2241228f309bd2b0e94358d2b630c43225f845479152990f9961ed628"
+        },
+        {
+          "id": "creative",
+          "baselineExactMatch": true,
+          "firstCanonicalSha256": "ef1d73e192ca99e9d2052c6243bbf2918a495b97401f7d610cd47c2295064c7f",
+          "reopenedCanonicalSha256": "ef1d73e192ca99e9d2052c6243bbf2918a495b97401f7d610cd47c2295064c7f",
+          "completePublicJsonReopenEqual": true,
+          "baselineRawSha256": "87a53dcdaa66afb7706bcc86372f6193321806f9a3657215a948619fcf794258"
+        },
+        {
+          "id": "skate",
+          "baselineExactMatch": true,
+          "firstCanonicalSha256": "6fe9a7cd67626283b1abafd7e8f06ef044ebc3c6d2fc14b9861780e08e1539fd",
+          "reopenedCanonicalSha256": "6fe9a7cd67626283b1abafd7e8f06ef044ebc3c6d2fc14b9861780e08e1539fd",
+          "completePublicJsonReopenEqual": true,
+          "baselineRawSha256": "fff11ce92acafe7b8bad31e58b7977c3cfb684c359aec16ffdfe2b750b569e68"
+        },
+        {
+          "id": "materials",
+          "baselineExactMatch": true,
+          "firstCanonicalSha256": "ad117947b50d4eee3ab7bcee58cae0081dd2cbfa6d7a43a6e765b79d457e7e03",
+          "reopenedCanonicalSha256": "ad117947b50d4eee3ab7bcee58cae0081dd2cbfa6d7a43a6e765b79d457e7e03",
+          "completePublicJsonReopenEqual": true,
+          "baselineRawSha256": "fdaa4f7814db0257d4031d7ce5c2c479d49fbe8aa07de76220605e753d19fe43"
+        },
+        {
+          "id": "underwater",
+          "baselineExactMatch": true,
+          "firstCanonicalSha256": "489c92ee6e3e46fd1caf6bebffe5fe22e9040f00c5a3485f28f4e026a862abac",
+          "reopenedCanonicalSha256": "489c92ee6e3e46fd1caf6bebffe5fe22e9040f00c5a3485f28f4e026a862abac",
+          "completePublicJsonReopenEqual": true,
+          "baselineRawSha256": "eea1191212fe4b42e95e3be7ac4c496770107ba94405fb4390ae88daae33f691"
+        },
+        {
+          "id": "living",
+          "baselineExactMatch": true,
+          "firstCanonicalSha256": "5a349fea3e22c57b7e461c995809641f7198e470c5a681794e425613b7bb229d",
+          "reopenedCanonicalSha256": "5a349fea3e22c57b7e461c995809641f7198e470c5a681794e425613b7bb229d",
+          "completePublicJsonReopenEqual": true,
+          "baselineRawSha256": "af9b019a724afcaaa7b7ce4c4fc61c023b70f7b3c6eee1ab592373102dd1938f"
+        }
+      ],
+      "imagingAdaptation": {
+        "savedViewport": {
+          "width": 521,
+          "height": 568
+        },
+        "observedViewport": {
+          "width": 782,
+          "height": 413
+        },
+        "expectedOffsetDelta": {
+          "x": 130.5,
+          "y": -77.5
+        },
+        "fullJsonEqualsBaselineWithOnlyExpectedViewportCenterAdaptation": true,
+        "sameSizeReopenExact": true
+      }
+    },
+    "navigation": {
+      "checks": [
+        {
+          "scene": "showroom",
+          "viewport": 1280,
+          "activeBottom": "0px",
+          "focused": "接入规划 ↗",
+          "focusedVisible": true,
+          "navScrollLeft": 53.33333206176758,
+          "navScrollWidth": 849,
+          "navWidth": 796,
+          "pageScroll": 1280,
+          "pageWidth": 1280,
+          "saveHeight": 36.66666793823242,
+          "saveWhiteSpace": "nowrap"
+        },
+        {
+          "scene": "showroom",
+          "viewport": 800,
+          "activeBottom": "0px",
+          "focused": "接入规划 ↗",
+          "focusedVisible": true,
+          "navScrollLeft": 178,
+          "navScrollWidth": 632,
+          "navWidth": 454,
+          "pageScroll": 800,
+          "pageWidth": 800,
+          "saveHeight": 36.66666793823242,
+          "saveWhiteSpace": "nowrap"
+        },
+        {
+          "scene": "showroom",
+          "viewport": 540,
+          "activeBottom": "0px",
+          "focused": "接入规划 ↗",
+          "focusedVisible": true,
+          "navScrollLeft": 281.3333435058594,
+          "navScrollWidth": 610,
+          "navWidth": 329,
+          "pageScroll": 525,
+          "pageWidth": 525,
+          "saveHeight": 28.666667938232425,
+          "saveWhiteSpace": "nowrap"
+        },
+        {
+          "scene": "imaging",
+          "viewport": 1280,
+          "activeBottom": "0px",
+          "focused": "接入规划 ↗",
+          "focusedVisible": true,
+          "navScrollLeft": 96.66666412353516,
+          "navScrollWidth": 849,
+          "navWidth": 753,
+          "pageScroll": 1280,
+          "pageWidth": 1280,
+          "saveHeight": 36.66666793823242,
+          "saveWhiteSpace": "nowrap"
+        },
+        {
+          "scene": "imaging",
+          "viewport": 540,
+          "activeBottom": "0px",
+          "focused": "接入规划 ↗",
+          "focusedVisible": true,
+          "navScrollLeft": 96.66666412353516,
+          "navScrollWidth": 588,
+          "navWidth": 491,
+          "pageScroll": 525,
+          "pageWidth": 525,
+          "saveHeight": 28.666667938232425,
+          "saveWhiteSpace": "nowrap"
+        },
+        {
+          "scene": "landmark",
+          "viewport": 1280,
+          "activeBottom": "0px",
+          "focused": "接入规划 ↗",
+          "focusedVisible": true,
+          "navScrollLeft": 31.33333396911621,
+          "navScrollWidth": 827,
+          "navWidth": 796,
+          "pageScroll": 1280,
+          "pageWidth": 1280,
+          "saveHeight": 36.66666793823242,
+          "saveWhiteSpace": "nowrap"
+        },
+        {
+          "scene": "landmark",
+          "viewport": 760,
+          "activeBottom": "0px",
+          "focused": "接入规划 ↗",
+          "focusedVisible": true,
+          "navScrollLeft": 0,
+          "navScrollWidth": 707,
+          "navWidth": 707,
+          "pageScroll": 745,
+          "pageWidth": 745,
+          "saveHeight": 36.66666793823242,
+          "saveWhiteSpace": "nowrap"
+        }
+      ],
+      "noPageHorizontalOverflow": true,
+      "focusedPlanningLinkVisible": true,
+      "saveButtonsUnwrapped": true,
+      "activeUnderlineOnHeaderBottom": true,
+      "temporaryViewportOverrideReset": true
+    }
+  },
+  "screenshots": [
+    {
+      "path": "assets/workspace-reopen/showroom.png",
+      "bytes": 66179,
+      "sha256": "f39fb7f1932a0b6217cf4296e95f458bda5fcc6886c375bccd60b006c6bdb904",
+      "width": 65536,
+      "height": 4292542531,
+      "scope": "Actual saved-baseline scene reopen capture; taken before the final navigation-only adjustment."
+    },
+    {
+      "path": "assets/workspace-reopen/imaging.png",
+      "bytes": 79018,
+      "sha256": "239f7fe5d24ac31668c5ebb9b7f9f8c19e6c4291dabbfadd45d0b05bf6a149bd",
+      "width": 65536,
+      "height": 4292542531,
+      "scope": "Actual saved-baseline scene reopen capture; taken before the final navigation-only adjustment."
+    },
+    {
+      "path": "assets/workspace-reopen/landmark.png",
+      "bytes": 77871,
+      "sha256": "183c164451c0300da3ce2b4215428b59f0b9e6c6399e37f6dc5081bf55480c5d",
+      "width": 65536,
+      "height": 4292542531,
+      "scope": "Actual saved-baseline scene reopen capture; taken before the final navigation-only adjustment."
+    },
+    {
+      "path": "assets/workspace-reopen/kitchen.png",
+      "bytes": 102815,
+      "sha256": "86d0f2e851aca255ae8088b8f4db65a5dc998d32a32fb9878b74bb6081a7c6f8",
+      "width": 65536,
+      "height": 4292542531,
+      "scope": "Actual saved-baseline scene reopen capture; taken before the final navigation-only adjustment."
+    },
+    {
+      "path": "assets/workspace-reopen/creative.png",
+      "bytes": 95314,
+      "sha256": "dc06f2bafa6fd7b253f3779a0c0b610b1bdbe8e06ea1add5d0444f3f99b1d71b",
+      "width": 65536,
+      "height": 4292542531,
+      "scope": "Actual saved-baseline scene reopen capture; taken before the final navigation-only adjustment."
+    },
+    {
+      "path": "assets/workspace-reopen/skate.png",
+      "bytes": 59075,
+      "sha256": "fd5395cc6a7ac53273359ec1cde7fea6049cce4e36c9ef0d7aa5858986974b03",
+      "width": 65536,
+      "height": 4292542531,
+      "scope": "Actual saved-baseline scene reopen capture; taken before the final navigation-only adjustment."
+    },
+    {
+      "path": "assets/workspace-reopen/materials.png",
+      "bytes": 86795,
+      "sha256": "1999c465091724a3b1161914576e73c55eef969db5ae186a655e6b9a4a5d7081",
+      "width": 65536,
+      "height": 4292542531,
+      "scope": "Actual saved-baseline scene reopen capture; taken before the final navigation-only adjustment."
+    },
+    {
+      "path": "assets/workspace-reopen/underwater.png",
+      "bytes": 67691,
+      "sha256": "a6f8c7bb8a4156113230e3fd6e3cab24398b57ac7f24e03f3dc2d83732026fb4",
+      "width": 65536,
+      "height": 4292542531,
+      "scope": "Actual saved-baseline scene reopen capture; taken before the final navigation-only adjustment."
+    },
+    {
+      "path": "assets/workspace-reopen/living.png",
+      "bytes": 83028,
+      "sha256": "579af87528daa6cc58a8e595b7a7ef56e7fc3cabf503ba752c52ab07350bcda2",
+      "width": 65536,
+      "height": 4292542531,
+      "scope": "Actual saved-baseline scene reopen capture; taken before the final navigation-only adjustment."
+    },
+    {
+      "path": "assets/workspace-reopen/showroom-restored.png",
+      "bytes": 70306,
+      "sha256": "b3dac992284ec27432292f0ceb4f0ba9a4c265d787471a26edc566e06b383727",
+      "scope": "Actual pearl configuration after a single selected showroom restore; original graphite state restored afterward."
+    },
+    {
+      "path": "assets/atelier-workspace-export.png",
+      "bytes": 86803,
+      "sha256": "f289beb9aeaf822ac91ce59544c1f7d93da0517c55a027a414f08333574e9aa2",
+      "width": 65536,
+      "height": 4292542531,
+      "scope": "Actual final 0.17.1 interface; not a generated mockup."
+    },
+    {
+      "path": "assets/atelier-showroom-navigation.png",
+      "bytes": 66846,
+      "sha256": "d92f0a8b1ad137b7af5e36e58da94633751ab2e40cfaa781e4402d51dab730ee",
+      "width": 65536,
+      "height": 4292542531,
+      "scope": "Actual final 0.17.1 interface; not a generated mockup."
+    }
+  ],
+  "nextResearch": {
+    "plan": "notes/table-support-plan.md",
+    "status": "Plan only; no new module or asset introduced and no capability-count increase.",
+    "acceptance": "At least three held-out static GLB tables with declared units reuse a single support rule; complete lamp base coverage on source triangles, holes/concavities, transforms, persistence, full transactions and explainable rejection. No manually authored per-model support boundaries or placement points."
+  },
+  "stillUnverified": [
+    "One whole-bundle restore followed by rebuild/reopen of all nine target pages.",
+    "Real storage capacity/write/read/rollback fault injection; Node simulations are separate.",
+    "Simultaneous cross-window competition and atomic multi-key transactions.",
+    "Browser injection of asynchronous module-load failures.",
+    "Other browsers, touch devices, offline completeness, long-term use and performance.",
+    "Generic new-table support, shelving and the final reading-corner outcome workflow."
+  ],
+  "historicalEvidence": "0.17.0 and earlier validation records and the original overview diagram remain historical. Current checks do not upgrade unrelated old claims.",
+  "documentationReview": {
+    "independentReadOnlyReview": true,
+    "localReferencesChecked": 475,
+    "blockingFindings": 0,
+    "scope": "Current docs, version/counts, metadata, source HTML anchors and navigation. Browser operations and full tests performed by root separately."
+  }
+}

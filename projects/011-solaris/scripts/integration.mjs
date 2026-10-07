@@ -97,7 +97,7 @@ const data = {
     { name: '移除与恢复', entrance: '属性 → 移除对象 / Delete；左侧 → 已移除的对象', scope: '移除茶几同时移除台灯；恢复时检查占位，先恢复茶几再恢复台灯；可撤销和重做。' },
     { name: '独立宽、深、高', entrance: '属性 → 位置与尺寸', scope: '输入米制尺寸后离开输入框提交；各轴50–150%，整体比例另行控制。网格拉伸会改变外观。' },
     { name: '茶几型号替换', entrance: '茶几 → 属性 → 茶几型号', scope: '两个本地 CC0 模型，保留位置、旋转和比例，重新检查尺寸与台灯桌面约束。' },
-    { name: '保存、备份与比较', entrance: '保存方案；方案 A/B；项目菜单；相机按钮', scope: '本机保存、JSON导入导出、同视角真实渲染比较、图片预览；无跨设备云同步。' },
+    { name: '保存、备份与比较', entrance: '保存方案；方案 A/B；项目菜单；相机按钮；精选陈列 → 整套工作台备份', scope: '本机保存、JSON与同视角真实渲染比较；整套十份已保存原文显示准确文件名/UTF-8容量，已检查文本可下载，失败保留文本，选择恢复后重开核对；无跨设备云同步。' },
   ],
   capabilities: research.capabilityRoutes.map(r => ({
     id: r.capabilityId, name: r.name, family: r.family, module: r.primaryModule,
