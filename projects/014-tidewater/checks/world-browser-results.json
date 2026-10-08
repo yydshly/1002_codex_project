@@ -1,0 +1,91 @@
+{
+  "format": "tidewater-world-browser-evidence.v1",
+  "verifiedAt": "2026-10-05T04:33:07.649Z",
+  "sourceFingerprint": "plan-v1-162afc9e3f46f3aa-22227",
+  "sourceEntry": "image",
+  "checks": [
+    {
+      "name": "Complete original draft, entry and all 25 entities remain unchanged",
+      "passed": true
+    },
+    {
+      "name": "Every task keeps its original ID and complete source object",
+      "passed": true
+    },
+    {
+      "name": "All 25 tasks loaded real geometry or established layout geometry",
+      "passed": true
+    },
+    {
+      "name": "17 actual neural instances are loaded with honest default palm display",
+      "passed": true
+    },
+    {
+      "name": "Confirmed boat uses the actual new local GPU task for only that object",
+      "passed": true
+    },
+    {
+      "name": "Six other boats retain the explicitly shared default asset",
+      "passed": true
+    },
+    {
+      "name": "Confirmed cabin retains the real TRELLIS task",
+      "passed": true
+    },
+    {
+      "name": "Actual persisted CUDA task succeeded with verified binary output",
+      "passed": true
+    },
+    {
+      "name": "Model conditioning truthfully records image only",
+      "passed": true
+    },
+    {
+      "name": "Repeat assembly and revert preserve both confirmed local replacements",
+      "passed": true
+    },
+    {
+      "name": "Saved whole-scene version really restored after refresh",
+      "passed": true
+    },
+    {
+      "name": "Coarse comparison and raw tree comparison report actual visible counts",
+      "passed": true
+    },
+    {
+      "name": "Day/sunset, backside inspection and restore input lock were observed",
+      "passed": true
+    },
+    {
+      "name": "All HTTP/integrity/preservation smoke checks pass",
+      "passed": true
+    },
+    {
+      "name": "All 166 meaningful Node regressions pass",
+      "passed": true
+    }
+  ],
+  "performanceAtCapturedView": {
+    "triangles": 1250649,
+    "drawCalls": 74,
+    "fps": 70
+  },
+  "quality": {
+    "state": "candidate-needs-visual-correction",
+    "neuralPalm": "thin-frond reconstruction failed visual inspection; original procedural fronds are the default",
+    "limits": [
+      "single-image unseen geometry remains inferred",
+      "TripoSR RGB is not independent generated PBR",
+      "terrain and water are controlled procedural geometry",
+      "JSON is not a complete portable binary scene package",
+      "FPS is one local view measurement, not a device guarantee"
+    ]
+  },
+  "screenshots": [
+    "assets/world-current-page-v1.png",
+    "assets/world-lighthouse-back-v1.png",
+    "assets/world-boat-back-v1.png",
+    "assets/world-palm-neural-original-v1.png",
+    "assets/world-sunset-candidate-v1.png"
+  ]
+}

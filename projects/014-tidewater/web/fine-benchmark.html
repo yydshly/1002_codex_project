@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>跨布局验证 · Tidewater</title>
+  <style>
+    :root{font:15px/1.6 system-ui,sans-serif;color:#dce8ed;background:#101b22;color-scheme:dark}body{margin:0}main{max-width:1240px;padding:24px;margin:auto}h1{font-size:26px;margin:0 0 8px}p{margin:8px 0;color:#b7cbd5}.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0}button,select{font:inherit;padding:9px 13px;border:1px solid #47616e;border-radius:7px;background:#233945;color:inherit}button{cursor:pointer}button:disabled,select:disabled{opacity:.45;cursor:wait}#generate{background:#346c5f}#scene{display:block;width:100%;height:min(62vh,620px);min-height:360px;background:#b7d2dc;border-radius:12px}#status{padding:12px 16px;background:#1b303c;border-radius:8px;white-space:pre-wrap}#status[data-error=true]{background:#4c2b31;color:#ffdce0}#inputs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}figure{margin:0}figure img{width:100%;height:200px;object-fit:contain;background:#233945}figcaption{color:#b7cbd5;font-size:13px}pre{font:12px/1.55 ui-monospace,monospace;overflow:auto;max-height:520px;padding:15px;border-radius:8px;background:#0a1319;white-space:pre-wrap;overflow-wrap:anywhere}a{color:#94dbc9}#links{display:flex;gap:18px;flex-wrap:wrap}details{margin-top:16px}summary{cursor:pointer}#facts{font-size:13px}.note{border-left:3px solid #628575;padding-left:12px}@media(max-width:640px){main{padding:16px}#inputs{grid-template-columns:1fr}#scene{min-height:300px}}
+  </style>
+  <script type="importmap">{"imports":{"three":"./realistic/vendor/three.module.js","three/addons/":"./realistic/vendor/addons/"}}</script>
+</head>
+<body><main>
+  <h1>跨布局验证 · 开发工具</h1>
+  <p>用三份独立布局检查：粗模输入 → 真实模型方案 → 模型细几何 → GLB 与独立网页工程。</p>
+  <p class="note">这页只用于实验，不读取或保存用户草案。结构检查通过后，外观、连接与碰撞仍需从多个角度人工审阅；这里不提供自动视觉验收或成功率。</p>
+  <div class="controls">
+    <label>布局 <select id="case" disabled></select></label>
+    <button id="generate" disabled>生成这份布局的候选</button>
+    <button id="save" disabled>保存验证工程</button>
+  </div>
+  <p id="facts"></p>
+  <div id="status" role="status" aria-live="polite">正在读取基准布局…</div>
+  <div class="controls" id="views">
+    <button data-action="coarse" disabled>粗模对照</button>
+    <button data-action="realistic" disabled>模型候选</button>
+    <button data-view="overview" disabled>全景</button>
+    <button data-view="hero" disabled>海岸近景</button>
+    <button data-action="reverse" disabled>另一侧</button>
+    <label>对象焦点 <select id="focus" disabled></select></label>
+  </div>
+  <canvas id="scene" aria-label="只读三维布局，可旋转和缩放镜头"></canvas>
+  <p>拖动旋转、滚轮缩放。锁定物体保留原粗模形态；模型只细化未锁定对象。</p>
+  <div id="links" hidden></div>
+  <details open><summary>本次实际模型输入（语义布局与粗模真实截图）</summary><div id="inputs"></div></details>
+  <details open><summary>任务回执、几何检查与交付记录</summary><pre id="report">尚未提交模型任务。</pre></details>
+  <details><summary>基准说明与静态检查</summary><p><a href="./assets/fine-benchmarks/README.md">验收说明</a> · <a href="./assets/fine-benchmarks/manifest.json">完整基准清单</a></p><pre id="expectations"></pre></details>
+</main><script type="module" src="./fine-benchmark.js"></script></body>
+</html>

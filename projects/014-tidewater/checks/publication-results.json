@@ -1,0 +1,599 @@
+{
+  "format": "tidewater-publication-check.v1",
+  "passed": true,
+  "sourceFingerprint": "plan-v1-162afc9e3f46f3aa-22227",
+  "sourceObjects": 25,
+  "fineObjects": 17,
+  "geometryJob": "40f03009-853b-40f3-b8dc-ca55f400e198",
+  "projectTests": 237,
+  "hubTests": 16,
+  "links": [
+    {
+      "page": "release.html",
+      "target": "camp.css",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "release.html",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "camp.html",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "research-map.html",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "capabilities.html",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "camp-viewer.html?proposal=560be513-9fa1-4ee5-b4dc-22c01e3aae8b",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "camp.html",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "camp-viewer.html?proposal=560be513-9fa1-4ee5-b4dc-22c01e3aae8b",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "assets/fine-scene-portable-v5.png",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "index.html",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "camp-viewer.html?proposal=6bd01104-dfb6-4f9a-9b61-1f1172586ec0",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "research-map.html",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "research.html",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "capabilities.html",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "create.html?entry=image",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "create.html?entry=layout",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "assets/camp-proposals/560be513-9fa1-4ee5-b4dc-22c01e3aae8b/glb/a.glb",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "assets/camp-proposals/560be513-9fa1-4ee5-b4dc-22c01e3aae8b/project.zip",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "assets/camp/original.json",
+      "passed": true
+    },
+    {
+      "page": "release.html",
+      "target": "THIRD_PARTY_NOTICES.md",
+      "passed": true
+    },
+    {
+      "page": "camp.html",
+      "target": "camp.css",
+      "passed": true
+    },
+    {
+      "page": "camp.html",
+      "target": "camp.html",
+      "passed": true
+    },
+    {
+      "page": "camp.html",
+      "target": "create.html?entry=layout#scene-completion-panel",
+      "passed": true
+    },
+    {
+      "page": "camp.html",
+      "target": "capabilities.html",
+      "passed": true
+    },
+    {
+      "page": "camp.html",
+      "target": "release.html",
+      "passed": true
+    },
+    {
+      "page": "camp.html",
+      "target": "camp-viewer.html?proposal=560be513-9fa1-4ee5-b4dc-22c01e3aae8b",
+      "passed": true
+    },
+    {
+      "page": "camp.html",
+      "target": "research-map.html",
+      "passed": true
+    },
+    {
+      "page": "camp.html",
+      "target": "assets/camp-proposals/560be513-9fa1-4ee5-b4dc-22c01e3aae8b/project.zip",
+      "passed": true
+    },
+    {
+      "page": "camp.html",
+      "target": "capabilities.html",
+      "passed": true
+    },
+    {
+      "page": "camp.html",
+      "target": "camp.js",
+      "passed": true
+    },
+    {
+      "page": "camp-viewer.html",
+      "target": "camp.css",
+      "passed": true
+    },
+    {
+      "page": "camp-viewer.html",
+      "target": "camp-viewer.js",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "research.css",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "index.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "index.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "release.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "camp-viewer.html?proposal=560be513-9fa1-4ee5-b4dc-22c01e3aae8b",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html?entry=image",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html?entry=layout",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "previous/index.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "capabilities.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "camp.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "research-map.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "index.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/workbench-desktop.png",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html?entry=image#scene-completion-panel",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html?entry=image#scene-completion-panel",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "versions/2026-10-05-scene-assembly-v1/snapshot.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html?entry=image#scene-completion-panel",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "versions/2026-10-07-fine-components-v3/index.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "fine-benchmark.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html?entry=image#scene-completion-panel",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/scene-completion-workbench-v1.png",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/scene-completion-coarse-v1.png",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/scene-completion-reverse-v1.png",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/scene-completion-lighthouse-v1.png",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html?entry=image",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html?entry=layout",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "previous/index.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/creation-workbench-demo.png",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html?entry=layout#refinement-panel",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/refinement-workbench-demo.jpg",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "model-scene.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "model-scene.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/model-scene-candidate-overview.jpg",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html?entry=layout#realistic-panel",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "versions/2026-10-05-realistic-material-v1/snapshot.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "versions/2026-10-05-realistic-material-v1/snapshot-manifest.json",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "versions/2026-10-05-realistic-material-v1/snapshot.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/realistic-workbench.png",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/neural/cabin-generated-v1.glb",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/neural/cabin-generated-v1.manifest.json",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html?entry=layout#neural-panel",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html#world-panel",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/neural/palm-generated-v1.glb",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/neural/lighthouse-generated-v1.glb",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/neural/boat-generated-v1.glb",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/neural/palm-generated-v1.manifest.json",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/neural/lighthouse-generated-v1.manifest.json",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/neural/boat-generated-v1.manifest.json",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/neural/palm-reference-v1.png",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/neural/lighthouse-reference-v1.png",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/neural/boat-reference-v1.png",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html?entry=image#world-panel",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/world-scene-candidate-v1.png",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html?entry=layout#neural-panel",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/neural/cabin-reference-v1.png",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html?entry=layout#neural-panel",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/neural-cabin-front.png",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "versions/2026-10-05-neural-cabin-v1/snapshot.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "versions/2026-10-05-neural-cabin-v1/snapshot-manifest.json",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "create.html?entry=layout#neural-panel",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "assets/workbench-sunset.png",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "index.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "capabilities.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "camp.html",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "runtime/LICENSE",
+      "passed": true
+    },
+    {
+      "page": "research.html",
+      "target": "index.html",
+      "passed": true
+    },
+    {
+      "page": "research-map.html",
+      "target": "assets/tidewater-product-research-map.svg",
+      "passed": true
+    },
+    {
+      "page": "research-map.html",
+      "target": "assets/tidewater-product-research-map.png",
+      "passed": true
+    },
+    {
+      "page": "research-map.html",
+      "target": "assets/tidewater-product-research-map.svg",
+      "passed": true
+    },
+    {
+      "page": "research-map.html",
+      "target": "release.html",
+      "passed": true
+    },
+    {
+      "page": "research-map.html",
+      "target": "capabilities.html",
+      "passed": true
+    },
+    {
+      "page": "research-map.html",
+      "target": "camp.html",
+      "passed": true
+    },
+    {
+      "page": "research-map.html",
+      "target": "research.html#scene-completion-experiment",
+      "passed": true
+    },
+    {
+      "page": "research-map.html",
+      "target": "create.html?entry=image#scene-completion-panel",
+      "passed": true
+    },
+    {
+      "page": "capabilities.html",
+      "target": "camp.css",
+      "passed": true
+    },
+    {
+      "page": "capabilities.html",
+      "target": "create.html",
+      "passed": true
+    },
+    {
+      "page": "capabilities.html",
+      "target": "research-map.html",
+      "passed": true
+    },
+    {
+      "page": "capabilities.html",
+      "target": "create.html",
+      "passed": true
+    },
+    {
+      "page": "capabilities.html",
+      "target": "camp.html",
+      "passed": true
+    },
+    {
+      "page": "capabilities.html",
+      "target": "release.html",
+      "passed": true
+    },
+    {
+      "page": "capabilities.html",
+      "target": "camp-viewer.html?proposal=560be513-9fa1-4ee5-b4dc-22c01e3aae8b",
+      "passed": true
+    },
+    {
+      "page": "capabilities.html",
+      "target": "versions/2026-10-07-fine-components-v5/index.html",
+      "passed": true
+    },
+    {
+      "page": "capabilities.html",
+      "target": "assets/capabilities/baseline-v5.json",
+      "passed": true
+    },
+    {
+      "page": "capabilities.html",
+      "target": "assets/fine-scene-portable-v5.png",
+      "passed": true
+    },
+    {
+      "page": "capabilities.html",
+      "target": "camp.html",
+      "passed": true
+    }
+  ],
+  "publicationFiles": 842,
+  "publicationMiB": 560.9
+}

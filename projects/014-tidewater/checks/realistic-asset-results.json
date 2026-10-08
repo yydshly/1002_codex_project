@@ -1,0 +1,40 @@
+{
+  "format": "tidewater-realistic-asset-checks.v1",
+  "checkedAt": "2026-10-05T02:41:08.910Z",
+  "passed": 5,
+  "total": 5,
+  "files": 28,
+  "bytes": 16982144,
+  "modelStats": {
+    "rock_moss_set_01": {
+      "meshCount": 6,
+      "triangles": 63127
+    },
+    "grass_bermuda_01": {
+      "meshCount": 21,
+      "triangles": 941
+    }
+  },
+  "checks": [
+    {
+      "name": "Expected CC0 bundle: five materials, two models and two environments",
+      "passed": true
+    },
+    {
+      "name": "Every local asset matches its recorded source hash and bundle stays below 30 MiB",
+      "passed": true
+    },
+    {
+      "name": "rock_moss_set_01: all glTF buffers and textures resolve locally",
+      "passed": true
+    },
+    {
+      "name": "grass_bermuda_01: all glTF buffers and textures resolve locally",
+      "passed": true
+    },
+    {
+      "name": "Grass has a verified PNG cutout mask for the upstream opaque glTF material",
+      "passed": true
+    }
+  ]
+}

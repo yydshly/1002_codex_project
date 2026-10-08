@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-05T02:22:00Z",
+  "selectedService": {
+    "space": "microsoft/TRELLIS.2",
+    "model": "microsoft/TRELLIS.2-4B",
+    "runtimeStage": "RUNNING",
+    "apiBase": "https://microsoft-trellis-2.hf.space/gradio_api",
+    "auth": "No credentials provided; public anonymous ZeroGPU demo",
+    "generation": "Actual pretrained image-to-3D inference, not a deterministic procedural mesh generator",
+    "softwareAndModelLicense": "MIT",
+    "licenseFile": "TRELLIS-LICENSE.txt"
+  },
+  "sources": [
+    {
+      "title": "Microsoft official TRELLIS.2 Space",
+      "url": "https://huggingface.co/spaces/microsoft/TRELLIS.2"
+    },
+    {
+      "title": "TRELLIS.2-4B official model card and license declaration",
+      "url": "https://huggingface.co/microsoft/TRELLIS.2-4B"
+    },
+    {
+      "title": "Microsoft MIT License",
+      "url": "https://github.com/microsoft/TRELLIS.2/blob/main/LICENSE"
+    },
+    {
+      "title": "Official hosted inference and GLB export source (read only; not executed locally)",
+      "url": "https://huggingface.co/spaces/microsoft/TRELLIS.2/blob/main/app.py"
+    },
+    {
+      "title": "Hugging Face ZeroGPU quotas: anonymous users get 2 minutes per day",
+      "url": "https://huggingface.co/docs/hub/spaces-zerogpu"
+    },
+    {
+      "title": "Gradio public HTTP API guide",
+      "url": "https://www.gradio.app/guides/querying-gradio-apps-with-curl"
+    }
+  ],
+  "otherCheckedServices": [
+    { "space": "tencent/Hunyuan3D-2", "runtimeStage": "RUNNING", "limitation": "Hosted UI labels texture generation unavailable" },
+    { "space": "tencent/Hunyuan3D-2.1", "runtimeStage": "RUNNING" },
+    { "space": "microsoft/TRELLIS", "runtimeStage": "CONFIG_ERROR", "limitation": "Hosted torch version incompatible with current ZeroGPU" }
+  ],
+  "pipelineBoundary": "Single generated asset is integrated into the existing user-authored layout. This is not whole-scene reconstruction or a guarantee of photorealism."
+}

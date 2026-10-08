@@ -1,0 +1,9 @@
+{
+  "package": "three",
+  "version": "0.180.0",
+  "tag": "r180",
+  "license": "MIT",
+  "file": "addons/exporters/GLTFExporter.js",
+  "source": "https://raw.githubusercontent.com/mrdoob/three.js/r180/examples/jsm/exporters/GLTFExporter.js",
+  "sha256": "e7c29444454eb321b39e4c8b3062944f4fd5299a0e7483e9cb8c0594cdec829f"
+}

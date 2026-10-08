@@ -1,0 +1,250 @@
+{
+  "version": 1,
+  "name": "基准 02 · 双岛航道与锁定灯塔",
+  "entry": "layout",
+  "intent": "保留两座岛与中间航道。北岛灯塔已锁定，维持原对象、原形状、原位置和高度；不生成或替换它。仅完善两间小屋、两株树和两条船。各岛道路保持在陆地，不把航道改成桥，不增删任何对象。",
+  "world": {
+    "width": 120,
+    "depth": 180
+  },
+  "style": {
+    "lighting": "day",
+    "waterColor": "#3d939d",
+    "landColor": "#779451"
+  },
+  "reference": null,
+  "entities": [
+    {
+      "id": "dual-north-island",
+      "kind": "land",
+      "points": [
+        {
+          "x": 0.1,
+          "y": 0.13
+        },
+        {
+          "x": 0.3,
+          "y": 0.1
+        },
+        {
+          "x": 0.39,
+          "y": 0.21
+        },
+        {
+          "x": 0.4,
+          "y": 0.41
+        },
+        {
+          "x": 0.31,
+          "y": 0.53
+        },
+        {
+          "x": 0.15,
+          "y": 0.54
+        },
+        {
+          "x": 0.07,
+          "y": 0.37
+        },
+        {
+          "x": 0.08,
+          "y": 0.21
+        }
+      ],
+      "height": 3,
+      "locked": false
+    },
+    {
+      "id": "dual-south-island",
+      "kind": "land",
+      "points": [
+        {
+          "x": 0.65,
+          "y": 0.43
+        },
+        {
+          "x": 0.81,
+          "y": 0.4
+        },
+        {
+          "x": 0.92,
+          "y": 0.5
+        },
+        {
+          "x": 0.91,
+          "y": 0.75
+        },
+        {
+          "x": 0.82,
+          "y": 0.89
+        },
+        {
+          "x": 0.67,
+          "y": 0.87
+        },
+        {
+          "x": 0.61,
+          "y": 0.72
+        },
+        {
+          "x": 0.62,
+          "y": 0.55
+        }
+      ],
+      "height": 2.5,
+      "locked": false
+    },
+    {
+      "id": "dual-navigation-channel",
+      "kind": "water",
+      "points": [
+        {
+          "x": 0.45,
+          "y": 0.09
+        },
+        {
+          "x": 0.56,
+          "y": 0.09
+        },
+        {
+          "x": 0.56,
+          "y": 0.93
+        },
+        {
+          "x": 0.45,
+          "y": 0.93
+        }
+      ],
+      "height": 0,
+      "locked": false
+    },
+    {
+      "id": "dual-north-path",
+      "kind": "road",
+      "points": [
+        {
+          "x": 0.25,
+          "y": 0.41
+        },
+        {
+          "x": 0.31,
+          "y": 0.36
+        },
+        {
+          "x": 0.33,
+          "y": 0.29
+        },
+        {
+          "x": 0.29,
+          "y": 0.255
+        }
+      ],
+      "height": 0.15,
+      "locked": false
+    },
+    {
+      "id": "dual-south-path",
+      "kind": "road",
+      "points": [
+        {
+          "x": 0.78,
+          "y": 0.688
+        },
+        {
+          "x": 0.74,
+          "y": 0.64
+        },
+        {
+          "x": 0.72,
+          "y": 0.55
+        }
+      ],
+      "height": 0.15,
+      "locked": false
+    },
+    {
+      "id": "dual-north-cabin",
+      "kind": "cabin",
+      "points": [
+        {
+          "x": 0.25,
+          "y": 0.38
+        }
+      ],
+      "height": 6.6,
+      "locked": false
+    },
+    {
+      "id": "dual-south-cabin",
+      "kind": "cabin",
+      "points": [
+        {
+          "x": 0.78,
+          "y": 0.72
+        }
+      ],
+      "height": 6.1,
+      "locked": false
+    },
+    {
+      "id": "dual-fixed-lighthouse",
+      "kind": "lighthouse",
+      "points": [
+        {
+          "x": 0.29,
+          "y": 0.22
+        }
+      ],
+      "height": 16,
+      "locked": true
+    },
+    {
+      "id": "dual-north-palm",
+      "kind": "palm",
+      "points": [
+        {
+          "x": 0.18,
+          "y": 0.45
+        }
+      ],
+      "height": 10,
+      "locked": false
+    },
+    {
+      "id": "dual-south-palm",
+      "kind": "palm",
+      "points": [
+        {
+          "x": 0.83,
+          "y": 0.55
+        }
+      ],
+      "height": 9.5,
+      "locked": false
+    },
+    {
+      "id": "dual-channel-boat-north",
+      "kind": "boat",
+      "points": [
+        {
+          "x": 0.49,
+          "y": 0.34
+        }
+      ],
+      "height": 1.6,
+      "locked": false
+    },
+    {
+      "id": "dual-channel-boat-south",
+      "kind": "boat",
+      "points": [
+        {
+          "x": 0.52,
+          "y": 0.65
+        }
+      ],
+      "height": 1.9,
+      "locked": false
+    }
+  ]
+}

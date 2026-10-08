@@ -1,0 +1,123 @@
+{
+  "format": "tidewater-local-service-smoke.v1",
+  "startsInference": false,
+  "results": [
+    {
+      "name": "local CUDA backend is actually ready",
+      "passed": true,
+      "evidence": {
+        "provider": "Local GPU",
+        "model": "stabilityai/TripoSR",
+        "status": "ready",
+        "cold": true,
+        "limits": {
+          "imageBytes": 8388608,
+          "maxDimension": 8192
+        },
+        "input": "Transparent PNG or WebP; no automatic background removal",
+        "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+        "modelRevision": "5b521936b01fbe1890f6f9baed0254ab6351c04a",
+        "verifiedCheckpointSha256": "429e2c6b22a0923967459de24d67f05962b235f79cde6b032aa7ed2ffcd970ee",
+        "queueSize": 0
+      }
+    },
+    {
+      "name": "reject foreign origin before queuing",
+      "passed": true,
+      "evidence": {
+        "http": 403,
+        "body": {
+          "error": "Origin is not allowed"
+        }
+      }
+    },
+    {
+      "name": "reject missing origin before queuing",
+      "passed": true,
+      "evidence": {
+        "http": 403,
+        "body": {
+          "error": "Origin is not allowed"
+        }
+      }
+    },
+    {
+      "name": "reject an unexpected Host header",
+      "passed": true,
+      "evidence": {
+        "http": 403,
+        "body": {
+          "error": "Origin is not allowed"
+        }
+      }
+    },
+    {
+      "name": "reject unsupported kind",
+      "passed": true,
+      "evidence": {
+        "http": 400,
+        "body": {
+          "error": "Unsupported asset kind"
+        }
+      }
+    },
+    {
+      "name": "report missing background segmentation honestly",
+      "passed": true,
+      "evidence": {
+        "http": 400,
+        "body": {
+          "error": "当前本地入口需要透明背景 PNG/WebP；尚未接入自动背景分割。"
+        }
+      }
+    },
+    {
+      "name": "HTTP published cabin matches genuine GLB",
+      "passed": true,
+      "evidence": {
+        "bytes": 4859472,
+        "sha256": "c27086b4b585e3a9a90f969cb51d6df570526f8e720c4d696fa937c650bcc435"
+      }
+    },
+    {
+      "name": "HTTP published palm matches genuine GLB",
+      "passed": true,
+      "evidence": {
+        "bytes": 3069412,
+        "sha256": "9b6017099725d7b0261d08af14719fe4569655d7185d488b46707c209e774642"
+      }
+    },
+    {
+      "name": "HTTP published lighthouse matches genuine GLB",
+      "passed": true,
+      "evidence": {
+        "bytes": 2276496,
+        "sha256": "34eefdd837df447d645ed8ca98110ee1b78d6459602026ec432a39b62567a047"
+      }
+    },
+    {
+      "name": "HTTP published boat matches genuine GLB",
+      "passed": true,
+      "evidence": {
+        "bytes": 3067032,
+        "sha256": "39198dded1a7d90d8daa870104f79c2a037d0a55870c7a42f968a7efbc9cfef6"
+      }
+    },
+    {
+      "name": "frozen playable 2026-10-05-realistic-material-v1 retains exact files",
+      "passed": true,
+      "evidence": {
+        "checkedFiles": 455,
+        "mismatches": []
+      }
+    },
+    {
+      "name": "frozen playable 2026-10-05-neural-cabin-v1 retains exact files",
+      "passed": true,
+      "evidence": {
+        "checkedFiles": 465,
+        "mismatches": []
+      }
+    }
+  ]
+}

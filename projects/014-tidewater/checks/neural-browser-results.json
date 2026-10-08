@@ -1,0 +1,91 @@
+{
+  "format": "tidewater-neural-browser-checks.v1",
+  "checkedAt": "2026-10-05T02:49:12Z",
+  "sourceFingerprint": "plan-v1-205c416bbb9a2967-22228",
+  "entities": 25,
+  "provenance": {
+    "method": "neural-image-to-3d",
+    "model": "microsoft/TRELLIS.2-4B",
+    "generationTaskId": "7731f838b77c48b69c074368a1cc8bdd",
+    "exportTaskId": "ecf4025051ef4bf0b6382b2c1e3551e4",
+    "assetSha256": "c27086b4b585e3a9a90f969cb51d6df570526f8e720c4d696fa937c650bcc435"
+  },
+  "checks": [
+    {
+      "name": "Saved previous effect restores as a read-only 25-entity replay",
+      "passed": true,
+      "evidence": "snapshot.html displays saved layout and successfully restores previous material scene. Frozen source/asset copies verified separately."
+    },
+    {
+      "name": "Genuine generated GLB loads in the current scene",
+      "passed": true,
+      "evidence": "98,320 triangles; 80,777 vertices; one MeshStandardMaterial with two textures; SHA-256 matches manifest."
+    },
+    {
+      "name": "Asset keeps authored X/Z and rests on original terrain support",
+      "passed": true,
+      "evidence": "x=19.8411017885769, z=6.01674291479476, bottom y=3.12."
+    },
+    {
+      "name": "Uniform fit stays within the coarse envelope",
+      "passed": true,
+      "evidence": "0 degrees: 5.68624488798 × 5.76190039289 × 7 m, within 8 × 7 × 7 m."
+    },
+    {
+      "name": "Back view is a coherent mesh view",
+      "passed": true,
+      "evidence": "180 degree model rotation shows textured back walls and windows; saved neural-cabin-back.png. Minor generated geometry defects remain."
+    },
+    {
+      "name": "Rotation is bounded by the source envelope",
+      "passed": true,
+      "evidence": "90 degrees: 8 × 6.58502902045 × 6.49856558626 m; same support and centre."
+    },
+    {
+      "name": "Same camera coarse comparison remains available",
+      "passed": true,
+      "evidence": "asset-return-coarse displays Rough model stats; neural-coarse-comparison.png records the original geometry."
+    },
+    {
+      "name": "Confirmation saves the separate generated replacement",
+      "passed": true,
+      "evidence": "Successful current-page confirmation, followed by actual page reload."
+    },
+    {
+      "name": "Reload and explicit scene build restore the saved asset",
+      "passed": true,
+      "evidence": "Current page displays 已恢复这份布局上独立保存的模型资产 and original generated model."
+    },
+    {
+      "name": "Revert restores the previous procedural object",
+      "passed": true,
+      "evidence": "asset-revert clears the saved replacement, original object becomes visible; neural-cabin-reverted.png."
+    },
+    {
+      "name": "Draft source remains unchanged after model operations",
+      "passed": true,
+      "evidence": "Exported neural-scene.effect.json has identical source fingerprint and 25 entities; generated replacement stored separately."
+    },
+    {
+      "name": "Second actual provider request rejects truthfully on free quota",
+      "passed": true,
+      "evidence": "Browser called official service and received quota-exceeded. No substitute result returned; initial generated GLB remains available. See neural-provider-live-failure.json."
+    }
+  ],
+  "observations": {
+    "currentSceneConsoleErrors": [],
+    "savedReplayConsoleErrors": [],
+    "binaryDownload": "Generated GLB saved on disk and exposed by download link. Browser automation download completion was not verified.",
+    "wholeWorldGenerated": false
+  },
+  "evidence": [
+    "../assets/neural-cabin-front.png",
+    "../assets/neural-cabin-back.png",
+    "../assets/neural-coarse-comparison.png",
+    "../assets/neural-cabin-reverted.png",
+    "../assets/neural-scene.effect.json",
+    "neural-provider-live-failure.json"
+  ],
+  "total": 12,
+  "passed": 12
+}

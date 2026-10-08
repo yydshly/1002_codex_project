@@ -1,0 +1,45 @@
+{
+  "format": "tidewater-completion-evidence-check.v1",
+  "checkedAt": "2026-10-05T06:03:06.644Z",
+  "sourceFingerprint": "plan-v1-162afc9e3f46f3aa-22227",
+  "entityCount": 25,
+  "checks": [
+    {
+      "check": "full: exact original plan, actual image hashes and model receipt",
+      "passed": true,
+      "id": "96f55ca7-f641-404f-9c1e-15828eb92cc5",
+      "images": 3,
+      "status": "succeeded"
+    },
+    {
+      "check": "rejected: exact original plan, actual image hashes and model receipt",
+      "passed": true,
+      "id": "6bd2da35-6d9e-4897-8b00-92414f5ad714",
+      "images": 3,
+      "status": "failed"
+    },
+    {
+      "check": "local: exact original plan, actual image hashes and model receipt",
+      "passed": true,
+      "id": "ea5f69c9-dc90-4e93-9b4b-7df76581e0b4",
+      "images": 4,
+      "status": "succeeded"
+    },
+    {
+      "check": "Only lighthouse appearance record changed; other 24 and global environment identical",
+      "passed": true,
+      "changedIds": [
+        "lighthouse-6a3ef8b5"
+      ]
+    },
+    {
+      "check": "Public page export contains actual saved candidate, source, views and execution provenance",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "File checks verify provenance and data consistency, not image quality.",
+    "Browser observations are recorded separately.",
+    "This run had no original uploaded reference image."
+  ]
+}

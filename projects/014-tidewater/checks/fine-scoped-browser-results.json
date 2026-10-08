@@ -1,0 +1,44 @@
+{
+  "format": "tidewater-scoped-fine-browser-check.v1",
+  "verifiedAt": "2026-10-07T15:05:46.008Z",
+  "currentPage": {
+    "url": "http://127.0.0.1:4196/create.html?entry=image#scene-completion-panel",
+    "restored": true,
+    "status": "模型候选已生成，等待你检查。",
+    "consistency": "25 个区域 / 对象均保留原空间与 ID。材质、造型、多视角与接触关系仍需检查。 17 个物体、2368 个新部件已按原包络归位。 多视角与写实品质仍需验收。 本轮精修 8 个对象；其余 9 个物体的部件、材质和朝向已检查保持一致。",
+    "confirmedVersion": "v3 remains saved; v5 is pending review",
+    "proof": "assets/fine-scene-scoped-hero-v5.png",
+    "errors": []
+  },
+  "scopedPortable": {
+    "url": "http://127.0.0.1:4201/",
+    "status": "项目就绪 · 17 个精细对象 · 资源来自当前项目目录 · 本轮 8 个对象已精修，范围外 9 个物体保持",
+    "version": "第 5 版 · 原布局 25 个区域与对象 · 写实品质待验收",
+    "coarseToggleBothWays": true,
+    "heroViewObserved": true,
+    "errors": [],
+    "proof": "assets/fine-scene-portable-v5.png"
+  },
+  "dualIsland": {
+    "url": "http://127.0.0.1:4202/",
+    "status": "项目就绪 · 6 个精细对象 · 资源来自当前项目目录",
+    "version": "第 1 版 · 原布局 12 个区域与对象 · 写实品质待验收",
+    "proof": "assets/fine-benchmark-dual-island-portable.png",
+    "errors": []
+  },
+  "checks": {
+    "testsPassed": 226,
+    "generation": "checks/fine-scoped-generation-results.json",
+    "scopedDelivery": "checks/fine-scoped-delivery-disk-results.json",
+    "dualDelivery": "checks/fine-benchmark-dual-island-delivery-results.json"
+  },
+  "visualQuality": {
+    "approved": false,
+    "limits": [
+      "Palms still regular and mechanical despite thinner denser leaves",
+      "Buildings and boat geometry remain simplified",
+      "Different layout run demonstrates pipeline, not photorealism or general success rate",
+      "No automatic visual/collision acceptance; no source reference image in these runs"
+    ]
+  }
+}

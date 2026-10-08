@@ -1,0 +1,139 @@
+{
+  "format": "tidewater-research-map.v2",
+  "date": "2026-10-05",
+  "width": 2520,
+  "height": 6474,
+  "textLines": 322,
+  "sourceBaseline": "4811ba48d795197de5621985f404e765c0b7c0ef",
+  "sources": [
+    "notes/research.md",
+    "notes/product-design.md",
+    "README.md",
+    "checks/scene-completion-evidence-results.json",
+    "checks/scene-completion-browser-results.json"
+  ],
+  "visuals": [
+    {
+      "source": ".runtime/source/tidewater-4811ba48d795197de5621985f404e765c0b7c0ef/docs/screenshot-beach.jpg",
+      "label": "源库作者实景截图：午后海滩",
+      "crop": null,
+      "placement": [
+        0,
+        0,
+        1248,
+        760
+      ],
+      "fit": "cover"
+    },
+    {
+      "source": "assets/scene-completion-workbench-v1.png",
+      "label": "本地第08步实际候选：三个岛屿与红白灯塔",
+      "crop": [
+        349,
+        228,
+        1199,
+        694
+      ],
+      "placement": [
+        1272,
+        0,
+        1248,
+        760
+      ],
+      "fit": "cover"
+    },
+    {
+      "source": "assets/control-model/jobs/96f55ca7-f641-404f-9c1e-15828eb92cc5/view-1.png",
+      "label": "我的绘笔布局",
+      "crop": null,
+      "placement": [
+        90.0,
+        1010,
+        740.0,
+        390
+      ],
+      "fit": "contain"
+    },
+    {
+      "source": "assets/control-model/jobs/96f55ca7-f641-404f-9c1e-15828eb92cc5/view-2.png",
+      "label": "对应的 3D 粗模",
+      "crop": null,
+      "placement": [
+        890.0,
+        1010,
+        740.0,
+        390
+      ],
+      "fit": "contain"
+    },
+    {
+      "source": "assets/scene-completion-workbench-v1.png",
+      "label": "模型控制后的候选",
+      "crop": [
+        349,
+        228,
+        1199,
+        694
+      ],
+      "placement": [
+        1690.0,
+        1010,
+        740.0,
+        390
+      ],
+      "fit": "contain"
+    }
+  ],
+  "sections": [
+    {
+      "number": "00",
+      "title": "先回忆我们的场景：同一布局，从绘笔到可观察的 3D",
+      "y": 856
+    },
+    {
+      "number": "01",
+      "title": "我们如何走到这个产品思路",
+      "y": 1604
+    },
+    {
+      "number": "02",
+      "title": "库的能力、呈现与原理",
+      "y": 2010
+    },
+    {
+      "number": "03",
+      "title": "产品主轴：同一份空间意图，持续生成同一个作品",
+      "y": 2616
+    },
+    {
+      "number": "04",
+      "title": "“如何控制”落实为三道关口与一个确认闭环",
+      "y": 3667
+    },
+    {
+      "number": "05",
+      "title": "出口：交付什么，才算同一份可用作品",
+      "y": 4314
+    },
+    {
+      "number": "06",
+      "title": "研究原型：已经证明什么，还没有证明什么",
+      "y": 4790
+    },
+    {
+      "number": "07",
+      "title": "产品可扩展方向：共享控制核心，领域约束与出口各不相同",
+      "y": 5546
+    }
+  ],
+  "files": [
+    "tidewater-product-research-map.svg",
+    "tidewater-product-research-map.png",
+    "tidewater-product-research-map.txt"
+  ],
+  "limits": [
+    "Diagram is a source-grounded synthesis, not evidence of every proposed feature being implemented.",
+    "Upstream author screenshot and local prototype frames are separately labeled; no final photoreal quality is claimed.",
+    "Current model and renderer boundaries are labeled in the diagram."
+  ]
+}

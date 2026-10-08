@@ -1,0 +1,21 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { validateFineControlInput } from '../tools/fine-geometry-runner.mjs';
+import { fingerprintPlan } from '../web/model-scene-core.js';
+import { TREATMENTS } from '../web/scene-completion-core.js';
+import { FINE_GEOMETRY_FORMAT, FINE_ASSET_KINDS } from '../web/fine-geometry-core.js';
+const plan = JSON.parse(await readFile(new URL('../assets/world-generation-source-plan.json', import.meta.url), 'utf8'));
+const image = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jN5kAAAAASUVORK5CYII=';
+const fixture = () => ({ plan: structuredClone(plan), intent: '把原粗模完善成细节充分的海岸场景。', views: [{ label: '真实布局视图', dataUrl: image }], baseRecipe: { format: 'tidewater-scene-completion.v1', sourceFingerprint: fingerprintPlan(plan), title: '已确认候选', summary: '保留空间。', environment: { lighting: 'day', waterColor: '#95d2c4', groundTint: '#ccccb5', sandTint: '#fff4dd', rockTint: '#ccc5b9', exposure: 1, fog: .001, sunAzimuth: 20, sunElevation: 45, seed: 1 }, objects: plan.entities.map(entity => ({ id: entity.id, kind: entity.kind, treatment: entity.locked ? 'preserve' : TREATMENTS[entity.kind][0], materialColor: '#ccccb5', accentColor: '#8b6349', roughness: .8, rotationDeg: 0, density: .5, relief: .4, note: '原对象保持。' })) } });
+test('fine request decodes actual binary images and checks the existing full recipe', () => { const checked = validateFineControlInput(fixture()); assert.equal(checked.views[0].bytes.readUInt32BE(16), 1); assert.equal(checked.views[0].sha256.length, 64); assert.equal(checked.baseRecipe.objects.length, plan.entities.length); });
+test('request rejects stale appearance recipe, extra transport flags and missing images', () => { const stale = fixture(); stale.plan.entities[0].height += 1; assert.throws(() => validateFineControlInput(stale), /布局已经变化/); const extra = fixture(); extra.model = 'override'; assert.throws(() => validateFineControlInput(extra), /未知/); const noImages = fixture(); noImages.views = []; assert.throws(() => validateFineControlInput(noImages)); });
+test('old four-field requests still generate; refinement requires verified previous geometry and exact scope', () => {
+  const initial = fixture(); assert.equal(validateFineControlInput(initial).mode, 'generate');
+  const targets = plan.entities.filter(entity => !entity.locked && FINE_ASSET_KINDS.includes(entity.kind));
+  const geometry = { format: FINE_GEOMETRY_FORMAT, sourceFingerprint: fingerprintPlan(plan), title: '原几何', summary: '保留布局。', materials: [{ id: 'wood', label: '木', color: '#ddddbb', roughness: .8, metalness: 0, texture: 'wood', opacity: 1, emissive: '#000000' }], templates: [{ id: 'shared', label: '原模板', parts: [{ id: 'body', primitive: 'box', material: 'wood', center: [0, .5, 0], size: [.8, .8, .8], rotationDeg: [0, 0, 0], points: [], indices: [], repeat: { count: 1, step: [0, 0, 0], turnDeg: [0, 0, 0] }, segments: 8 }] }], instances: targets.map(entity => ({ entityId: entity.id, templateId: 'shared', rotationDeg: 0 })) };
+  const local = { ...fixture(), previousGeometry: geometry, scopeIds: [targets[0].id] }; const checked = validateFineControlInput(local); assert.equal(checked.mode, 'refine'); assert.deepEqual(checked.scopeIds, [targets[0].id]); assert.equal(checked.previousGeometry.instances.length, targets.length);
+  delete local.scopeIds; assert.throws(() => validateFineControlInput(local), /同时提供/);
+  local.scopeIds = []; assert.throws(() => validateFineControlInput(local));
+  local.scopeIds = [targets[0].id]; local.previousGeometry.sourceFingerprint += 'old'; assert.throws(() => validateFineControlInput(local), /布局已经变化/);
+});

@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "name": "基准 01 · 窄岸小屋与灯塔",
+  "entry": "layout",
+  "intent": "保留狭长海岸的全部轮廓与对象位置。沿岸小屋和灯塔应有连贯的墙体、屋顶与灯室；两株树自然展开，两条船保留水上位置。细节尺度适合 150×90 米布局，不新增岛屿、树或船。",
+  "world": {
+    "width": 150,
+    "depth": 90
+  },
+  "style": {
+    "lighting": "day",
+    "waterColor": "#3d939d",
+    "landColor": "#779451"
+  },
+  "reference": null,
+  "entities": [
+    {
+      "id": "narrow-land",
+      "kind": "land",
+      "points": [
+        {
+          "x": 0.06,
+          "y": 0.28
+        },
+        {
+          "x": 0.2,
+          "y": 0.25
+        },
+        {
+          "x": 0.38,
+          "y": 0.26
+        },
+        {
+          "x": 0.62,
+          "y": 0.31
+        },
+        {
+          "x": 0.65,
+          "y": 0.43
+        },
+        {
+          "x": 0.55,
+          "y": 0.57
+        },
+        {
+          "x": 0.34,
+          "y": 0.58
+        },
+        {
+          "x": 0.14,
+          "y": 0.55
+        },
+        {
+          "x": 0.06,
+          "y": 0.44
+        }
+      ],
+      "height": 2,
+      "locked": false
+    },
+    {
+      "id": "narrow-bay",
+      "kind": "water",
+      "points": [
+        {
+          "x": 0.1,
+          "y": 0.66
+        },
+        {
+          "x": 0.92,
+          "y": 0.66
+        },
+        {
+          "x": 0.92,
+          "y": 0.95
+        },
+        {
+          "x": 0.1,
+          "y": 0.95
+        }
+      ],
+      "height": 0,
+      "locked": false
+    },
+    {
+      "id": "narrow-path",
+      "kind": "road",
+      "points": [
+        {
+          "x": 0.26,
+          "y": 0.446
+        },
+        {
+          "x": 0.36,
+          "y": 0.46
+        },
+        {
+          "x": 0.49,
+          "y": 0.46
+        },
+        {
+          "x": 0.57,
+          "y": 0.445
+        }
+      ],
+      "height": 0.12,
+      "locked": false
+    },
+    {
+      "id": "narrow-cabin",
+      "kind": "cabin",
+      "points": [
+        {
+          "x": 0.26,
+          "y": 0.39
+        }
+      ],
+      "height": 6.2,
+      "locked": false
+    },
+    {
+      "id": "narrow-lighthouse",
+      "kind": "lighthouse",
+      "points": [
+        {
+          "x": 0.57,
+          "y": 0.39
+        }
+      ],
+      "height": 15,
+      "locked": false
+    },
+    {
+      "id": "narrow-palm-west",
+      "kind": "palm",
+      "points": [
+        {
+          "x": 0.14,
+          "y": 0.4
+        }
+      ],
+      "height": 10.5,
+      "locked": false
+    },
+    {
+      "id": "narrow-palm-east",
+      "kind": "palm",
+      "points": [
+        {
+          "x": 0.42,
+          "y": 0.43
+        }
+      ],
+      "height": 11.2,
+      "locked": false
+    },
+    {
+      "id": "narrow-boat-west",
+      "kind": "boat",
+      "points": [
+        {
+          "x": 0.44,
+          "y": 0.8
+        }
+      ],
+      "height": 1.8,
+      "locked": false
+    },
+    {
+      "id": "narrow-boat-east",
+      "kind": "boat",
+      "points": [
+        {
+          "x": 0.73,
+          "y": 0.82
+        }
+      ],
+      "height": 2.2,
+      "locked": false
+    }
+  ]
+}

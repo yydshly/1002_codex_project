@@ -1,0 +1,51 @@
+{
+  "format": "tidewater-fine-browser-check.v1",
+  "verifiedAt": "2026-10-07T04:56:00.809Z",
+  "provider": "Codex CLI / ChatGPT",
+  "modelId": null,
+  "sourceFingerprint": "plan-v1-162afc9e3f46f3aa-22227",
+  "originalPlanEntityCount": 25,
+  "fineEntityCount": 17,
+  "partCount": 704,
+  "geometryVersionCount": 3,
+  "currentPage": {
+    "url": "http://127.0.0.1:4196/create.html?entry=image#scene-completion-panel",
+    "primaryGenerationObserved": true,
+    "manualNearViewRefinementObserved": true,
+    "latestCandidateImported": true,
+    "deliveryFilesPersisted": true,
+    "refreshRestoredFineCandidate": true,
+    "previousConfirmedVersionStillAvailable": true,
+    "errorText": "",
+    "proof": "assets/fine-scene-current-page-v3.png"
+  },
+  "independentProject": {
+    "url": "http://127.0.0.1:4200/",
+    "source": "ZIP independently verified and extracted to .runtime/fine-project-verify-97fa3c1f",
+    "status": "项目就绪 · 17 个精细对象 · 资源来自当前项目目录",
+    "version": "第 3 版 · 原布局 25 个区域与对象 · 写实品质待验收",
+    "coarseToggleObservedBothWays": true,
+    "heroViewObserved": true,
+    "dayAndSunsetControlsInvoked": true,
+    "browserErrors": [],
+    "requiresModelService": false,
+    "proof": "assets/fine-scene-portable-v3.png"
+  },
+  "validation": {
+    "nodeTestsPassed": 106,
+    "deliveryCoreChecksPassed": true,
+    "deliveryStorageChecksPassed": true,
+    "diskChecks": "checks/fine-scene-delivery-disk-results.json"
+  },
+  "quality": {
+    "approved": false,
+    "knownLimits": [
+      "Palm leaf axes remain too thick and mechanically shaped",
+      "Building and boat details remain simplified",
+      "No automatic visual quality scoring",
+      "Fine geometry refinement currently regenerates the whole scene",
+      "This run had no source reference image and does not demonstrate image-to-scene reconstruction",
+      "No universal one-shot photorealistic quality guarantee"
+    ]
+  }
+}

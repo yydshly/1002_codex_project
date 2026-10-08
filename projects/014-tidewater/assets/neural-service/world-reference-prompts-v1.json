@@ -1,0 +1,24 @@
+{
+  "format": "tidewater-image-reference-prompt-set.v1",
+  "tool": "builtin imagegen",
+  "prompts": [
+    {
+      "kind": "lighthouse",
+      "prompt": "Use case: product-mockup. Asset type: single-image input for neural 3D reconstruction. Primary request: a photorealistic isolated complete coastal lighthouse, the same warm Mediterranean realism as a weathered white plaster seaside cottage. One tall cylindrical gently tapering whitewashed masonry tower, subtly weathered plaster and stone base, a dark iron lantern room with clear glass panels, a muted terracotta conical cap, slender balcony railing, a wooden front door and three narrow arched windows. Believable functional architecture, continuous tower volume. Approximate envelope 5.2 m wide by 5.2 m deep by 18 m tall. Composition: entire tower including the base, centered upright, three-quarter front-right view, modest eye elevation that keeps the whole lantern visible. Warm neutral daylight with clean readable details and no harsh self-shadow. Actual transparent background, isolated subject with transparent space around silhouette. No landscape, island, sea, sky, ground plane, pedestal, figures, vegetation, props, text, labels, logos, collage or UI. This is one object reference photo, not a scene.",
+      "tool": "builtin imagegen",
+      "transparent_background": true
+    },
+    {
+      "kind": "palm",
+      "prompt": "Use case: product-mockup. Asset type: single-image input for neural textured 3D reconstruction. Primary request: a photorealistic isolated single complete mature coconut palm, natural gently curved continuous textured trunk and a coherent crown of about 12 large arching green fronds with individual long leaflets. Naturally asymmetrical crown, fronds have readable physical thickness, some older yellow-brown lower leaflets, a few coconuts nestled under the crown. Real tropical coastal tree, not a stylized geometric cone, no glowing or saturated green. Approximate envelope 10 m crown diameter and 12 m full height. Composition: full trunk bottom and all leaves visible, center subject vertically with generous clear margin, slightly elevated three-quarter view. Soft warm neutral daylight makes bark and every frond readable. Transparent background, no soil, roots outside footprint, land, ocean, sky, pot, base plane, shadows on a floor, pedestal, people, text, logo, graphics, collage or UI. Exactly one standalone tree suitable for image-to-3D reconstruction.",
+      "tool": "builtin imagegen",
+      "transparent_background": true
+    },
+    {
+      "kind": "boat",
+      "prompt": "Use case: product-mockup. Asset type: single-image input for neural textured 3D reconstruction. Primary request: a photorealistic isolated small Mediterranean coastal wooden fishing skiff, complete coherent hull, naturally weathered pale blue paint, warm old timber rim and three wooden transverse bench seats, small simple stern motor, realistic pointed bow and broad stern. No cabin, no mast, no canopy, no separate loose objects. Approximate envelope 4 m wide by 8 m long by 2 m tall, bow and stern along the long dimension. Composition: entire boat visible including hull bottom, gently elevated three-quarter front-right view to clearly show interior benches and overall silhouette, no cropped parts. Soft warm neutral daylight, realistic plank grain and worn paint, functional construction and believable watertight volume. Actual transparent background, no water, waves, land, ground plane, pedestal, mooring line, oars outside footprint, people, text, logos, labels, collage or UI. Exactly one object photo for image-to-3D reconstruction.",
+      "tool": "builtin imagegen",
+      "transparent_background": true
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "source": "https://github.com/VAST-AI-Research/TripoSR",
+  "preparedAt": "2026-10-05T03:06:06.495Z",
+  "changes": [
+    {
+      "filename": "tsr/models/isosurface.py",
+      "originalSha256": "94c9a2ec27f8fe3c2fb57558ef28be253eb77074d2c171d49a41cf73d95d6f5e",
+      "modifiedSha256": "12e84ee5ec60900661e1e477c9da49b76871ebecb071cc24a1ae9e271c620e84",
+      "note": "Replace only the isosurface extraction backend with standard CPU scikit-image marching cubes; keep neural weights and density queries unchanged."
+    },
+    {
+      "filename": "tsr/utils.py",
+      "originalSha256": "d9d1a645fef7ea489615bff3471fd01a4941a2c0e138c5dff5daae619563279b",
+      "modifiedSha256": "7fd31dc224fc7c24e9c78e2cd76d523397269912feb3ee378204698a010e78ef",
+      "note": "Transparent input is required by the local adapter; no background-removal model or global installation is needed."
+    },
+    {
+      "filename": "tsr/bake_texture.py",
+      "originalSha256": "931d066c25d5943dc7b71469b63c308df3f37b8e7f6df558ee5e348d7936d5b7",
+      "modifiedSha256": "d1da71bce00852491dfa0919e403f8b122f21215e7a16ca1018f998d7dfd2af7",
+      "note": "Place texture density-query positions on the same device as the real neural scene code."
+    },
+    {
+      "filename": "tsr/bake_texture.py",
+      "originalSha256": "d1da71bce00852491dfa0919e403f8b122f21215e7a16ca1018f998d7dfd2af7",
+      "modifiedSha256": "b6463e1e940e469088e900c5095d7bb3b31c5ebf37b3a7fecdbf21ee362f14ad",
+      "note": "Read neural texture colors back from CUDA for texture encoding."
+    }
+  ]
+}

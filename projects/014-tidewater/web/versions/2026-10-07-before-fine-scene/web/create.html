@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f1">
+  <meta name="description" content="参考图片与语义绘笔的本地创作实验：标注、布局、真实 3D 粗模、锁定、撤销与独立保存。">
+  <title>Tidewater · 场景创作实验</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230d766c'/%3E%3Cpath d='M10 34 Q21 22 32 34 T54 34 M10 44 Q21 32 32 44 T54 44' fill='none' stroke='%23f7f7f1' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="creation.css">
+  <script type="importmap">{"imports":{"three":"./realistic/vendor/three.module.js","three/addons/":"./realistic/vendor/addons/"}}</script>
+  <script type="module" src="creation.js"></script>
+  <script type="module" src="./realistic/app.js"></script>
+  <script type="module" src="asset-generation.js"></script>
+  <script type="module" src="world-generation.js"></script>
+  <script type="module" src="scene-completion.js"></script>
+  <link rel="stylesheet" href="scene-completion.css">
+</head>
+<body>
+  <header class="creation-header">
+    <a class="creation-brand" href="index.html"><span aria-hidden="true">≈</span><span><strong>TIDEWATER</strong><small>场景创作实验</small></span></a>
+    <nav aria-label="项目导航"><a href="index.html">海岛工作台</a><a href="previous/index.html">保留版本</a><a href="research.html#creation-pipeline">产品说明 ↗</a></nav>
+    <div class="project-actions"><button id="import-plan" class="button quiet" type="button">导入方案</button><button id="export-plan" class="button outline" type="button">导出方案</button><button id="save-plan" class="button" type="button">保存</button></div>
+    <input id="plan-file" type="file" accept="application/json,.json" hidden>
+  </header>
+  <main class="creation-shell">
+    <section class="creation-intro">
+      <div><p class="eyebrow">你的图与粗模，始终是场景依据</p><h1>画出你的下一座世界。</h1><p>产品目标：以你画的图或对应粗模为依据，由模型完善完整 3D 场景，再对照输入检查一致性。</p></div>
+      <div class="experiment-status"><span class="local-dot" aria-hidden="true"></span><div><strong>可操作的场景创作实验</strong><span>绘笔布局 · 模型读取粗模 · 完整候选 · 局部修改</span></div></div>
+    </section>
+    <section class="entry-bar" aria-label="创作入口">
+      <div class="entry-switch" role="group" aria-label="选择创作入口"><button type="button" data-entry="image" aria-pressed="false"><span aria-hidden="true">▧</span><span><strong>参考图片</strong><small>上传 · 标记 · 对照</small></span></button><button type="button" data-entry="layout" aria-pressed="true"><span aria-hidden="true">✎</span><span><strong>绘笔布局</strong><small>画区域 · 路线 · 对象</small></span></button></div>
+      <div class="project-title"><label for="plan-name">作品名称</label><input id="plan-name" type="text" value="我的场景方案" maxlength="80"></div>
+      <div class="entry-actions"><button id="load-demo" class="text-button" type="button">载入两岛示例</button><button id="new-plan" class="text-button" type="button">新建空白</button></div>
+    </section>
+    <section id="reference-panel" class="reference-panel" aria-labelledby="reference-heading" hidden>
+      <div class="reference-upload"><h2 id="reference-heading">给场景一张视觉参考</h2><p id="reference-info">上传 PNG、JPEG 或 WebP，在图上标记对象，再到布局中校正空间。</p><div class="reference-actions"><button id="upload-reference" class="button outline" type="button">选择图片</button><button id="example-reference" class="text-button" type="button">使用海岛截图</button><button id="remove-reference" class="text-button" type="button" disabled>移除图片</button></div><input id="reference-file" type="file" accept="image/png,image/jpeg,image/webp" hidden></div>
+      <label class="reference-intent" for="plan-intent"><span>希望保留哪些外观？</span><textarea id="plan-intent" rows="3" maxlength="2000" placeholder="例如：保留白色灯塔、暖色屋顶和日落氛围，沿用已有空间。"></textarea><small>说明随方案保存；第 08 步提交场景时，会与布局一起交给控制模型。</small></label>
+    </section>
+    <div class="studio-grid">
+      <section class="board-panel" aria-labelledby="board-heading">
+        <div class="panel-heading"><div><span class="panel-kicker">01 / 定义布局</span><h2 id="board-heading">语义画布</h2></div><div class="history-tools"><button id="undo-plan" type="button" aria-label="撤销布局修改" title="撤销" disabled>↶</button><button id="redo-plan" type="button" aria-label="重做布局修改" title="重做" disabled>↷</button></div></div>
+        <div class="board-tabs" role="group" aria-label="画布视图"><button id="view-layout" type="button" aria-pressed="true">俯视布局</button><button id="view-reference" type="button" aria-pressed="false">参考标注</button><span id="world-size">200 × 150 米</span></div>
+        <div class="brush-toolbar" role="group" aria-label="语义绘笔"><button type="button" data-tool="select" aria-pressed="true">↖ 选择</button><button type="button" data-tool="land" aria-pressed="false">▰ 陆地</button><button type="button" data-tool="water" aria-pressed="false">≈ 水面</button><button type="button" data-tool="road" aria-pressed="false">╱ 道路</button><button type="button" data-tool="cabin" aria-pressed="false">⌂ 小屋</button><button type="button" data-tool="lighthouse" aria-pressed="false">▥ 灯塔</button><button type="button" data-tool="palm" aria-pressed="false">♧ 棕榈</button><button type="button" data-tool="boat" aria-pressed="false">◈ 船只</button></div>
+        <div class="canvas-wrap"><canvas id="layout-canvas" width="1200" height="900" aria-label="场景平面布局画布：选择绘笔后拖动画区域或点击放置对象">请使用支持 Canvas 的浏览器。</canvas><div id="empty-board" class="empty-board"><span aria-hidden="true">✎</span><strong>先画一块陆地，或放一个对象。</strong><p>按住拖动画轮廓，松开后闭合。<br>也可以载入两岛示例，试试移动和锁定。</p></div></div>
+        <div class="board-foot"><p id="tool-help">选择对象后拖动可移动；锁定对象会保留位置。</p><button id="clear-layout" class="text-button" type="button">清除未锁定</button></div>
+        <p id="reference-warning" class="projection-note" hidden>图片上的投影位置只是布局草案。请切换俯视布局校正距离与位置；本原型不识别图片深度，也不自动还原场景。</p>
+      </section>
+      <section class="preview-panel" aria-labelledby="preview-heading">
+        <div class="panel-heading"><div><span class="panel-kicker">02 / 确认空间</span><h2 id="preview-heading">真实 3D 粗模</h2></div><span id="preview-state" class="state-tag">尚未生成</span></div>
+        <div class="preview-wrap"><iframe id="creation-frame" title="根据当前布局生成的真实 3D 粗模" src="about:blank" hidden></iframe><div id="preview-empty" class="preview-empty"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="m50 12 33 19v38L50 88 17 69V31Zm0 0v38m33-19L50 50 17 31m33 19v38" /></svg><strong>让布局成为一个空间。</strong><p>确认区域与对象后生成粗模。<br>拖动旋转，滚轮缩放，换个角度检查。</p></div></div>
+        <div class="preview-tools"><button id="generate-preview" class="button" type="button">生成 3D 粗模 <span aria-hidden="true">↗</span></button><div class="camera-tools" role="group" aria-label="粗模镜头"><button type="button" data-preview-camera="overview">斜视</button><button type="button" data-preview-camera="top">俯视</button></div></div>
+        <label class="auto-preview"><input id="auto-preview" type="checkbox" checked>粗模生成后，随布局修改更新</label>
+        <p class="preview-note">粗模按区域和对象创建真实几何。使用 Tidewater 原生引擎的轻量预览，不含原海岛的完整海水、游戏与碰撞系统。</p>
+        <div id="preview-refinement-compare" class="preview-refinement-compare" hidden><span>候选未应用</span><button id="preview-refine-before" type="button" aria-pressed="false">修改前</button><button id="preview-refine-after" type="button" aria-pressed="true">候选效果</button></div>
+        <a class="next-step-link" href="#refinement-panel">下一步：细化选中区域 ↓</a>
+      </section>
+      <aside class="plan-panel" aria-labelledby="plan-heading">
+        <div class="panel-heading"><div><span class="panel-kicker">03 / 持续编辑</span><h2 id="plan-heading">场景方案</h2></div><span id="entity-count" class="count-tag">0</span></div>
+        <div id="plan-summary" class="plan-summary">尚未放置区域或对象。</div>
+        <div id="entity-list" class="entity-list" aria-label="区域与对象列表"></div>
+        <section class="selection-panel" aria-labelledby="selection-heading"><h3 id="selection-heading">选择一个对象</h3><p id="selection-empty">画布、列表和 3D 粗模可以选择同一个对象。</p><div id="selection-fields" hidden><div class="coordinate-fields"><label for="entity-x">中心 X <small>米</small><input id="entity-x" type="number" step="1"></label><label for="entity-z">中心 Z <small>米</small><input id="entity-z" type="number" step="1"></label></div><label class="height-field" for="entity-height"><span id="height-label">高度</span> <small>米</small><input id="entity-height" type="number" min="0" max="100" step="0.5" aria-describedby="water-height-help"></label><p id="water-height-help" class="water-height-help" hidden></p><div class="selection-actions"><label><input id="entity-locked" type="checkbox">锁定</label><button id="delete-entity" class="text-button danger" type="button">删除</button></div></div></section>
+        <section class="style-panel" aria-label="粗模外观"><label for="lighting">预览光照<select id="lighting"><option value="day">白天</option><option value="sunset">日落</option></select></label><div class="color-fields"><label for="water-color">水面<input id="water-color" type="color" value="#3b8d9c"></label><label for="land-color">陆地<input id="land-color" type="color" value="#6c956b"></label></div></section>
+        <button id="show-brief" class="button outline brief-button" type="button">查看生成说明</button><p class="brief-note">把布局、参考与锁定要求整理成文字，供后续模型接入使用。</p>
+      </aside>
+    </div>
+    <section id="refinement-panel" class="refinement-panel" aria-labelledby="refinement-heading">
+      <div class="panel-heading"><div><span class="panel-kicker">04 / 从空间走向外观</span><h2 id="refinement-heading">细化选中区域</h2></div><span class="state-tag">本地规则细化</span></div>
+      <div class="refinement-grid">
+        <div class="refinement-target"><label for="refine-target">选择一块陆地</label><select id="refine-target"><option value="">先选择陆地</option></select><p id="refine-target-note">画布、3D 和这里的目标会同步选择。</p><p class="refinement-scope">保留你画出的轮廓，避开水面、道路和已有对象，为这块陆地增加沙滩、岩石与植被。</p><button id="remove-refinement" class="text-button danger" type="button" disabled>移除这块陆地的细化</button></div>
+        <div class="refinement-settings"><div class="refinement-fields"><label for="refine-preset">外观方向<select id="refine-preset"><option value="tropical">热带海岸</option><option value="rocky">岩岸草甸</option><option value="garden">花园岛</option></select></label><label for="refine-density">细节密度<select id="refine-density"><option value="1">稀疏</option><option value="2" selected>适中</option><option value="3">丰富</option></select></label></div><div class="refinement-toggles"><label><input id="refine-beach" type="checkbox" checked>沙滩</label><label><input id="refine-rocks" type="checkbox" checked>岩石</label><label><input id="refine-vegetation" type="checkbox" checked>植被</label></div><div class="refinement-actions"><button id="preview-refinement" class="button" type="button" disabled>预览细化 ↗</button><button id="reroll-refinement" class="button quiet" type="button" disabled>换一版</button></div><p class="refinement-local-note">此步骤由本地程序规则生成几何。模型生成精细资产可以在下方第 06 步继续尝试。</p></div>
+        <div class="refinement-review"><strong id="refine-status" role="status">先确认布局，再试一种外观。</strong><p id="refine-summary">候选效果可以比较；应用后才保存到草案。</p><div class="refinement-compare" role="group" aria-label="细化前后比较"><button id="refine-before" type="button" aria-pressed="false" disabled>修改前</button><button id="refine-after" type="button" aria-pressed="true" disabled>候选效果</button></div><div class="refinement-actions"><button id="apply-refinement" class="button" type="button" disabled>应用细化</button><button id="cancel-refinement" class="text-button" type="button" disabled>取消</button></div><a href="#preview-heading" class="refinement-preview-link">查看上方 3D 预览 ↑</a></div>
+      </div>
+      <div class="board-foot" style="border-top:1px solid var(--line);margin-top:18px;padding-top:18px"><p><strong>下一步：用当前布局试一版写实场景。</strong><br>在下方比较粗模与材质、光照和环境细节。<a href="model-scene.html">上一轮 3D 方案 ↗</a></p><a class="button" href="#realistic-panel">打开写实实验 ↓</a></div>
+    </section>
+    <section id="realistic-panel" class="realistic-panel" aria-labelledby="realistic-heading">
+      <div class="panel-heading"><div><span class="panel-kicker">05 / 从粗模走向真实外观</span><h2 id="realistic-heading">写实场景实验</h2></div><span class="state-tag">材质 · 光照 · 真实 3D</span></div>
+      <div class="realistic-intro"><p>这一步用本地代码为原布局加入材质和光照，下面的预览用于比较。新增第 08 步会把你的绘笔图、空间数据与粗模视角实际交给控制模型，再执行它制定的完整场景方案。</p><button id="realistic-build" class="button" type="button">构建材质与光照预览 <span aria-hidden="true">↗</span></button></div>
+      <div class="realistic-toolbar">
+        <div class="realistic-tools" role="group" aria-label="写实场景镜头"><button type="button" data-realistic-view="hero" aria-pressed="true" disabled>海岸视角</button><button type="button" data-realistic-view="cabin" aria-pressed="false" disabled>小屋</button><button type="button" data-realistic-view="lighthouse" aria-pressed="false" disabled>灯塔</button><button type="button" data-realistic-view="palms" aria-pressed="false" disabled>棕榈</button><button type="button" data-realistic-view="boats" aria-pressed="false" disabled>船只</button><button type="button" data-realistic-view="overview" aria-pressed="false" disabled>全景</button><button id="realistic-reverse-view" type="button" disabled>查看另一侧 ↶</button></div>
+        <div class="realistic-tools" role="group" aria-label="写实场景光照"><button type="button" data-realistic-light="day" aria-pressed="true" disabled>白天</button><button type="button" data-realistic-light="sunset" aria-pressed="false" disabled>日落</button></div>
+        <div class="realistic-actions"><button id="realistic-mode" class="button outline" type="button" aria-pressed="false" disabled>查看粗模</button><button id="realistic-export-snapshot" class="text-button" type="button" disabled>保存效果方案</button><button id="realistic-capture" class="text-button" type="button" disabled>保存截图</button></div>
+      </div>
+      <div class="realistic-stage"><canvas id="realistic-canvas" aria-label="当前布局的写实 3D 场景：拖动旋转，滚轮缩放">请使用支持 WebGL 的浏览器。</canvas><div id="realistic-empty" class="realistic-empty"><span aria-hidden="true">≈</span><strong>从当前粗模开始。</strong><p>点击上方按钮，生成同一布局的写实实验。<br>生成后可以自由旋转，并在相同镜头下对照粗模。</p></div><span class="realistic-navigation-hint">拖动旋转 · 滚轮缩放 · 右键平移</span></div>
+      <div class="realistic-feedback"><p id="realistic-status" role="status" aria-live="polite">尚未生成写实场景。</p><p id="realistic-stats" aria-live="polite"></p></div>
+      <div class="realistic-source-row"><p id="realistic-source">输入：当前页面的场景布局。</p><a id="realistic-download" hidden>下载当前视角截图 ↓</a><a id="realistic-snapshot-download" hidden>下载效果方案 ↓</a><a href="#board-heading">返回绘笔修改布局 ↑</a></div>
+      <details class="realistic-explanation"><summary>这一步如何保留控制？</summary><div><p>粗模提供空间骨架：陆地轮廓、道路走向和对象位置来自你的布局。修改绘笔后，再生成一版进行比较。</p><p>本轮由编码模型实现本地场景组装，使用物理材质、扫描岩石与 HDRI 环境光照。它是可以换角度观察的真实 3D，效果由资源与渲染共同决定。</p><p>真实素材来自 <a href="https://polyhaven.com/" target="_blank" rel="noopener">Poly Haven</a>，按 <a href="https://polyhaven.com/license" target="_blank" rel="noopener">CC0</a> 使用；<a href="realistic/assets/manifest.json" target="_blank">查看素材来源清单 ↗</a>。原粗模使用 Tidewater WebGPU，当前材质实验使用 Three.js WebGL2。</p><p>第 05 步是本地材质与场景组装实验。下方第 06 步尝试将神经 3D 模型生成的精细资产，按对象位置、尺度和锁定要求放回空间骨架。</p></div></details>
+      <div class="asset-next-step"><a href="versions/2026-10-05-scene-assembly-v1/snapshot.html" target="_blank" rel="noopener">已保存：当前场景呈现 ↗</a><a class="button outline" href="#scene-completion-panel">新增：依据我的图 / 粗模生成 ↓</a><a class="text-link" href="#neural-panel">单对象实验 ↓</a></div>
+    </section>
+    <section id="neural-panel" class="asset-panel" aria-labelledby="asset-heading">
+      <div class="panel-heading"><div><span class="panel-kicker">06 / 让模型生成精细形态</span><h2 id="asset-heading">模型生成精细资产</h2></div><span class="state-tag">图片条件 · 神经 3D · GLB</span></div>
+      <div class="asset-intro"><p>从一间小屋开始：用参考图生成精细 3D，再把候选放回你画出的空间。先从不同角度检查形态，再确认替换。</p><a href="versions/2026-10-05-realistic-material-v1/snapshot.html" target="_blank" rel="noopener">查看上一步保存效果 ↗</a></div>
+      <div class="asset-grid">
+        <figure class="asset-reference">
+          <div class="asset-reference-heading"><span>生成条件</span><span class="asset-reference-tag">参考图</span></div>
+          <img id="asset-reference-image" src="assets/neural/cabin-reference-v1.png" alt="供模型生成使用的海边小屋参考图；这是图片，不是最终 3D。" width="768" height="768">
+          <figcaption>这张图决定所选对象的外观。结果是可以旋转检查的 3D 资产。</figcaption>
+          <label class="asset-upload-label" for="asset-reference-file">更换参考图片<input id="asset-reference-file" type="file" accept="image/png,image/jpeg,image/webp"></label>
+        </figure>
+        <div class="asset-settings">
+          <label for="asset-target">放回哪个粗模对象？<select id="asset-target"><option value="">选择当前布局中的小屋</option></select></label>
+          <p class="asset-input-help">选择小屋、灯塔、棕榈或船。位置与尺度来自布局，锁定对象需先解锁。</p>
+          <label for="asset-provider">实际生成服务<select id="asset-provider"><option value="local">本机 GPU · TripoSR</option><option value="trellis">Microsoft 官方 · TRELLIS.2</option></select></label>
+          <p id="asset-local-health" class="asset-input-help">正在检查本机模型服务…</p>
+          <button id="asset-local-recheck" class="text-button" type="button">重新检查本机服务</button>
+          <p class="asset-input-help">本机版本使用透明背景的单个物体图片；内置参考图可直接使用。普通照片需要先去除背景。</p>
+          <label for="asset-appearance">希望生成的外观<textarea id="asset-appearance" rows="4" maxlength="2000">海边写实小屋，旧木门窗、白色灰泥墙和自然磨损的屋顶；整体结构可信，适合近距离、多角度观察。</textarea></label>
+          <p class="asset-input-help">这两个模型都以图片为条件；文字记录要求。TripoSR 生成网格与颜色，TRELLIS.2 可生成 PBR 贴图；都需要多角度检查。同一参考图可能得到相同形态；改变外观需更换参考图。</p>
+          <div class="asset-primary-actions"><button id="asset-load-candidate" class="button" type="button">载入已完成模型结果 <span aria-hidden="true">↗</span></button><button id="asset-generate" class="button outline" type="button">用参考图生成新 3D</button></div>
+        </div>
+        <div class="asset-review">
+          <span class="asset-review-label">检查与应用</span>
+          <p id="asset-status" role="status" aria-live="polite">选择小屋，查看模型生成的候选。</p>
+          <p id="asset-provider-details">生成来源、模型版本和实际任务会在候选准备好后显示。</p>
+          <label class="asset-rotation-label" for="asset-rotation">调整朝向<select id="asset-rotation"><option value="0">0°</option><option value="90">90°</option><option value="180">180°</option><option value="270">270°</option></select></label>
+          <div class="asset-camera-actions"><button id="asset-candidate-view" class="button outline" type="button" disabled>查看小屋</button><button id="asset-return-coarse" class="text-button" type="button">查看粗模</button></div>
+          <p id="asset-comparison">在上方 3D 场景中检查候选；确认替换后，可以还原上一步。</p>
+          <div class="asset-apply-actions"><button id="asset-apply" class="button" type="button" disabled>确认替换</button><button id="asset-revert" class="text-button" type="button" disabled>还原上一步</button></div>
+          <a id="asset-download" class="asset-download" download hidden>下载模型生成的 GLB ↓</a>
+          <p id="asset-error" class="asset-error" role="alert" hidden></p>
+        </div>
+      </div>
+      <div class="asset-boundary"><strong>模型负责精细对象，布局负责装配。</strong><p>每次实际生成一个对象，在第 07 步可将已验证资产装入整片场景。模型推测的背面、薄叶片与结构仍需检查；地形、水面和道路由绘制布局控制。</p></div>
+      <details class="asset-job-explanation"><summary>查看生成任务、来源与布局绑定</summary><p>这里记录实际生成服务、模型与任务信息，以及资产对应的粗模对象。生成失败会显示服务错误，不会用程序模型替代生成结果。</p><pre id="asset-job-details">尚未载入模型生成任务。</pre></details>
+    </section>
+    <section id="world-panel" class="world-panel" aria-labelledby="world-heading">
+      <div class="panel-heading"><div><span class="panel-kicker">07 / 从单个资产走向整片场景</span><h2 id="world-heading">完善整个场景</h2></div><span class="state-tag">原布局 · 精细资产 · 整体检查</span></div>
+      <div class="world-intro"><p>当前实验把已生成资产按粗模的位置与尺寸装配，使用上方同一个 3D 预览。新增第 08 步实际读取整场景输入，让控制模型制定和修改完整方案。<a href="#scene-completion-panel">继续模型控制实验 ↓</a></p><button id="world-build" class="button" type="button">装配当前整场景候选 <span aria-hidden="true">↗</span></button></div>
+      <div class="world-review">
+        <div class="world-feedback"><strong id="world-status" role="status" aria-live="polite">先组织当前布局，再检查整片效果。</strong><p id="world-summary" aria-live="polite">尚未创建整场景完善任务。</p></div>
+        <div class="world-actions"><button id="world-hero" class="button outline" type="button" disabled>查看整体效果 ↑</button><button id="world-coarse" class="text-button" type="button" aria-pressed="false" disabled>对照原粗模</button><label class="world-foliage-label" for="world-foliage">棕榈树冠<select id="world-foliage"><option value="original" selected>原版精细叶片</option><option value="generated">神经模型原始树冠</option></select></label><button id="world-apply" class="button" type="button" disabled>确认并保存这一版</button><button id="world-revert" class="text-button" type="button" disabled>还原上一步</button></div>
+        <p id="world-foliage-note" class="world-foliage-note" hidden>原版精细叶片由程序生成；模型重建的原始树冠可切换对照。载入成功后，仍要检查叶片形态与整片场景的写实质量。</p>
+        <p id="world-error" class="world-error" role="alert" hidden></p>
+      </div>
+      <div class="world-task-heading"><h3>对象完善清单</h3><span>每一项保留原 ID；共用资产会明确记录</span></div>
+      <div class="world-table-wrap"><table class="world-task-table"><thead><tr><th scope="col">对象</th><th scope="col">布局约束</th><th scope="col">实际来源</th><th scope="col">状态</th></tr></thead><tbody id="world-task-list"><tr class="world-empty-row"><td colspan="4">点击“装配当前整场景候选”，查看全部区域、对象和待补足的能力。</td></tr></tbody></table></div>
+      <div class="world-boundary"><strong>逐步达到完整写实场景</strong><p>模型资产、扫描素材和程序几何会分别显示来源。缺少的资产沿用上一版并标为待完善；模型推测出的不可见部分，还需要从不同角度检查。</p></div>
+      <details class="world-provenance"><summary>查看整场景任务、来源与能力缺口</summary><pre id="world-source-details">尚未创建整场景方案。</pre><div class="world-export-actions"><button id="world-export" class="button outline" type="button" disabled>导出这一版方案</button><a id="world-download" download hidden>下载整场景方案 ↓</a></div></details>
+    </section>
+    <section id="scene-completion-panel" class="completion-panel" aria-labelledby="completion-heading">
+      <div class="panel-heading"><div><span class="panel-kicker">08 / 模型读取我的图与粗模</span><h2 id="completion-heading">围绕我的场景，生成完整候选</h2></div><span class="state-tag">空间依据 · 真实模型调用 · 对照修改</span></div>
+      <div class="completion-intro"><p>模型同时读取你画的布局、完整空间数据和粗模视角，制定整场景方案。生成后对照原输入，再指定一处修改；你的原草案和上方已有效果继续保留。</p><a href="versions/2026-10-05-scene-assembly-v1/snapshot.html" target="_blank" rel="noopener">查看本次保存的效果 ↗</a></div>
+      <div class="completion-grid">
+        <div class="completion-settings">
+          <label for="completion-intent">希望这个场景最终是什么样？<textarea id="completion-intent" rows="5" maxlength="6000">保留我画出的陆地、水域、道路与物体位置，完善成自然、可信的热带海岸。统一材质、建筑细节、植被与光照，照顾不同视角的空间衔接。</textarea></label>
+          <p id="completion-source">正在读取当前草案…</p>
+          <button id="completion-generate" class="button" type="button" disabled>依据我的图 / 粗模生成场景 ↗</button>
+          <p id="completion-health" role="status">正在检查控制模型…</p><button id="completion-health-recheck" class="text-button" type="button">重新检查服务</button>
+          <div class="completion-refine"><h3>指出一处，继续修改</h3><label for="completion-target">修改哪个对象或区域？<select id="completion-target"><option value="">先生成整场景候选</option></select></label><label for="completion-edit">这一处怎么改？<textarea id="completion-edit" rows="3" maxlength="3000" placeholder="例如：把这片陆地改成岩岸，减少草地；保留其他区域。"></textarea></label><button id="completion-refine" class="button outline" type="button" disabled>让模型只修改这一处</button></div>
+        </div>
+        <div class="completion-preview">
+          <div class="completion-preview-heading"><strong id="completion-status" role="status" aria-live="polite">从你的图与粗模开始。</strong><span id="completion-saved"></span></div>
+          <p id="completion-summary">完整候选将显示在这里，可以旋转、多角度检查与对照。</p>
+          <div class="completion-canvas-wrap"><canvas id="completion-canvas" aria-label="依据当前用户布局生成的完整 3D 候选：拖动旋转，滚轮缩放"></canvas><div id="completion-empty"><strong>同一个空间，继续完善外观。</strong><p>先提交当前布局，模型会读取绘笔图与粗模视角。</p></div></div>
+          <div class="completion-toolbar"><button id="completion-coarse" class="button outline" type="button" disabled aria-pressed="false">同视角对照粗模</button><button id="completion-overview" class="text-button" type="button" disabled>完整布局</button><button id="completion-hero" class="text-button" type="button" disabled>海岸视角</button><button id="completion-focus" class="text-button" type="button" disabled>查看选中位置</button><button id="completion-reverse" class="text-button" type="button" disabled>另一侧</button><button id="completion-accept" class="button" type="button" disabled>确认并保存</button><button id="completion-revert" class="text-button" type="button" disabled>还原上一候选</button></div>
+          <p id="completion-error" role="alert" hidden></p>
+          <div class="completion-checks"><strong>一致性检查</strong><p id="completion-consistency">空间轮廓、位置、数量与锁定会按原布局执行；外观质量由你检查。</p></div>
+          <details class="completion-inputs"><summary>查看模型实际读到的图与粗模</summary><div id="completion-input-images"></div></details>
+        </div>
+      </div>
+      <div class="completion-boundary"><strong>本轮验证：模型理解整片场景，并控制生成与局部修改。</strong><p>当前执行器支持海岸场景中的七类区域与对象，使用模型选定的材质、形态方案、既有资产和程序几何。模型没有凭空输出任意精细网格；写实程度与多视角衔接仍需要检查。所有候选都有实际任务来源。</p></div>
+      <details class="completion-receipt"><summary>查看模型任务、生成决定与来源</summary><pre id="completion-receipt">尚未发起整场景控制模型任务。</pre><button id="completion-export" class="button outline" type="button" disabled>导出场景方案与输入依据</button><a id="completion-download" hidden download>下载场景方案 ↓</a></details>
+    </section>
+    <footer class="creation-footer"><span id="project-status" role="status">正在读取本地草案…</span><span>独立保存创作草案，原海岛存档保留。</span><a href="previous/index.html">打开保存的旧版 ↗</a></footer>
+  </main>
+  <div id="creation-toast" class="creation-toast" role="status" hidden></div>
+  <dialog id="brief-dialog" class="brief-dialog" aria-labelledby="brief-heading"><div class="dialog-heading"><div><span class="panel-kicker">场景方案 → 模型上下文</span><h2 id="brief-heading">生成说明</h2></div><button id="close-brief" type="button" aria-label="关闭生成说明">×</button></div><p>此说明由当前布局整理，复制或下载不会发起生成。精细 3D 资产可以在第 06 步按单个对象继续尝试。</p><textarea id="brief-text" readonly rows="14" aria-label="当前场景生成说明"></textarea><div class="dialog-actions"><button id="copy-brief" class="button" type="button">复制说明</button><button id="download-brief" class="button outline" type="button">下载文本</button></div></dialog>
+</body>
+</html>
+

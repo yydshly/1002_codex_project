@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f1">
+  <meta name="description" content="Tidewater 原生 WebGPU 海岛工作台与产品探索：现有编辑能力、语义绘笔布局、参考图与 3D 粗模、生成控制、资产规则玩法，以及页面扩展路线。">
+  <title>Tidewater · 能力研究与产品设计</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230d766c'/%3E%3Cpath d='M10 34 Q21 22 32 34 T54 34 M10 44 Q21 32 32 44 T54 44' fill='none' stroke='%23f7f7f1' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="research.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true">≈</span><span><strong>TIDEWATER</strong><small>海岛工作台 · 014</small></span></a>
+    <nav aria-label="研究导航"><a href="#capabilities">能力</a><a href="#product">当前产品</a><a href="#exploration">理解探索</a><a href="#extensions">页面扩展</a><a href="#evidence">验证</a><a class="button small" href="index.html">打开工作台 <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="eyebrow"><span></span> 原生 WebGPU · 真实 3D 场景 · 产品实验</div>
+      <h1>从一座海岛，<br>探索可定制的 3D 场景。</h1>
+      <p class="hero-copy">当前工作台已接入 Tidewater，支持对象、环境和镜头的持续编辑。下一步的产品方向是：用户用绘笔和标记确定布局，模型补充内容，再逐步确认外观、空间和交互。本页把已实现的能力与后续设计分别说明。</p>
+      <div class="hero-actions"><a class="button" href="index.html">体验海岛工作台 <span aria-hidden="true">↗</span></a><a class="text-link" href="#creation-pipeline">看绘笔到 3D 的设计 <span aria-hidden="true">↓</span></a></div>
+      <nav class="explore-jumps" aria-label="产品探索目录"><a href="#exploration">生成与控制的边界</a><a href="#creation-pipeline">绘笔 → 图像 / 粗模 → 3D</a><a href="#extensions">现有页面怎么扩展</a></nav>
+      <div class="version">研究基线 <a href="https://github.com/dgreenheck/tidewater/tree/4811ba48d795197de5621985f404e765c0b7c0ef">4811ba48</a><span>2026-10-04</span><span>文字输入：本地解析，未连接 Opus</span></div>
+      <figure class="hero-figure"><a href="index.html" aria-label="打开截图所示的海岛编辑工作台"><img src="assets/workbench-desktop.png" alt="原生 Tidewater 海岛、海面和村落，叠加对象列表、环境属性、镜头和文字编辑面板" width="1440" height="1000" fetchpriority="high"></a><figcaption><span class="dot"></span> 来自本机真实 Chrome WebGPU 运行的工作台截图；画面由原生 Tidewater 渲染。</figcaption></figure>
+    </section>
+
+    <section id="capabilities" class="section">
+      <div class="section-heading"><div><p class="eyebrow">01 / 库的能力</p><h2>它提供一个运行中的世界。</h2></div><p>Tidewater 是自研引擎上的浏览器海岛钓鱼应用。它尚未封装为通用编辑器 SDK；当前版本适合研究、fork 和接口改造。</p></div>
+      <div class="cap-grid">
+        <article class="card"><span class="card-number">01</span><h3>海水与岸线</h3><p>远海波面、冲岸浪、泡沫、喷溅、尾流、焦散和水下水线。</p><p class="mechanism">四级 256² FFT 波谱 + 岸浪与泡沫纹理模拟 + 水材质反射/折射。</p><a href="https://github.com/dgreenheck/tidewater/blob/4811ba48d795197de5621985f404e765c0b7c0ef/src/ocean/OceanFFT.js">OceanFFT <span aria-hidden="true">↗</span></a></article>
+        <article class="card"><span class="card-number">02</span><h3>天空与光照</h3><p>时段变化、太阳与月亮、体积云、云影、大气和空气透视。</p><p class="mechanism">Hillaire 大气 LUT + 体积云光线步进 + 时间复用；默认 SkyProClouds。</p><a href="https://github.com/dgreenheck/tidewater/blob/4811ba48d795197de5621985f404e765c0b7c0ef/src/sky/Atmosphere.js">Atmosphere <span aria-hidden="true">↗</span></a></article>
+        <article class="card"><span class="card-number">03</span><h3>可探索海岛</h3><p>地形、村落、码头、植被、海滩道具、角色、鸟、鱼、蟹和鲸。</p><p class="mechanism">程序几何与外部资产组成世界，自研 WebGPU/WGSL 引擎逐帧渲染。</p><a href="https://github.com/dgreenheck/tidewater/blob/4811ba48d795197de5621985f404e765c0b7c0ef/src/App.js">App 世界组装 <span aria-hidden="true">↗</span></a></article>
+        <article class="card"><span class="card-number">04</span><h3>玩家与钓鱼</h3><p>步行、游泳、驾驶船、18 种鱼、搏鱼张力、出售与装备升级。</p><p class="mechanism">输入与角色控制、船体水面采样、数值状态机、栖息地/时间概率。</p><a href="https://github.com/dgreenheck/tidewater/blob/4811ba48d795197de5621985f404e765c0b7c0ef/src/game/Game.js">Game <span aria-hidden="true">↗</span></a></article>
+      </div>
+      <div class="note"><strong>“代码实现效果”不等于所有素材都是代码生成。</strong><p>代码驱动 3D 场景与渲染；扫描道具、纹理、人物动画和录音有外部来源。海浪是实时图形近似，不能据此用于工程水动力预测。<a href="https://github.com/dgreenheck/tidewater/blob/4811ba48d795197de5621985f404e765c0b7c0ef/CREDITS.md">查看固定版本的资产与技术来源</a>。</p></div>
+    </section>
+
+    <section id="product" class="section product-section">
+      <div class="section-heading"><div><p class="eyebrow">02 / 当前产品 <span class="status-label implemented">已实现</span></p><h2>先验证同一场景的<br>编辑与恢复。</h2></div><p>本次实现了固定海岛的本地编辑闭环。正在探索的下一步面向滨水场景与关卡创作者，支持从布局创建不同场景；目标用户与付费需求仍需验证。</p></div>
+      <div class="product-strip"><div><small>输入</small><strong>模板 + 面板 + 文字指令</strong><span>选择具体对象与环境参数</span></div><span class="flow-arrow" aria-hidden="true">→</span><div><small>过程</small><strong>实时查看 + 局部修改 + 恢复</strong><span>持续编辑同一个场景</span></div><span class="flow-arrow" aria-hidden="true">→</span><div><small>当前输出</small><strong>JSON 配置 + PNG 画面</strong><span>本地保存，再次导入</span></div></div>
+      <div class="two-columns">
+        <article class="plain-card"><h3>第一版已经能做什么</h3><ul class="check-list"><li>选择原版渔船和新增的五个演示资产。</li><li>移动、旋转、缩放、隐藏或锁定对象。</li><li>调整时间、风速、涌浪、云量与镜头。</li><li>记录修改，撤销/重做，导入/导出 JSON。</li><li>进入漫游，捕获原生 GPU 画面 PNG。</li></ul></article>
+        <article class="plain-card muted-card"><h3>哪些系统仍然固定</h3><p>原地形、村落与岸线不能任意编辑。六个对象来自固定注册表，新增物体没有新增碰撞、导航或真实点光源。</p><p>三个场景预设只改环境；镜头独立选择。工作台没有账号、云发布、视频、任意资产生成或真实模型 API。</p><p>“生成一座全新城市”需要接入新的世界系统，超出当前动作范围。</p></article>
+      </div>
+    </section>
+
+    <section id="exploration" class="section exploration-section">
+      <div class="section-heading"><div><p class="eyebrow">03 / 理解探索 <span class="status-label planned">后续设计</span></p><h2>用户确定意图，<br>模型补全内容，产品保存决定。</h2></div><p>一句话可以开始创作。持续可控的创作，还需要把布局、对象、关系与已确认内容保存下来，让下一轮生成有明确依据。</p></div>
+      <div class="insight-grid">
+        <article class="plain-card"><span class="card-kicker">生成的边界</span><h3>方向说明能引导结果</h3><p>让模型自由改写整个场景代码，可以产生新的内容；仅靠提示，无法保证只修改某个区域、保留其余结果或稳定满足全部要求。</p><p>创作目标要逐步转成可执行的布局、对象修改范围与验收条件。</p></article>
+        <article class="plain-card"><span class="card-kicker">控制的来源</span><h3>确认过的内容成为依据</h3><p>产品保存对象身份、位置、关联、锁定状态和版本，模型按这些依据提出修改或生成新组件。</p><p>数量、距离与连通等要求由程序检查；风格、氛围与“像不像”仍由用户判断。</p></article>
+        <article class="plain-card"><span class="card-kicker">不同场景</span><h3>继续复用编辑机制</h3><p>新岛屿、新建筑和新布局，需要新的地形与对象创建接口。当前六个对象的控制不能自动覆盖任意生成世界。</p><p>新内容接入统一的场景结构后，才能继续选择、局部修改、恢复和交付。</p></article>
+      </div>
+      <div class="note"><strong>图片提供视觉目标，场景方案提供空间依据。</strong><p>图片适合确认构图、材质与氛围；单张图没有完整的尺寸、背面与遮挡关系。生成 3D 时应同时读取原始布局和对象标记，未展示的空间需要补全并通过不同视角检查。<a href="https://research.nvidia.com/labs/sil/projects/axolotl3d/">相关研究中的图像、相机与几何条件</a>。</p></div>
+      <div class="subheading"><h3>资源、规则和玩法，各有自己的职责。</h3><p>产品既帮助生成，也负责保存、编辑与运行生成后的世界。</p></div>
+      <div class="role-grid">
+        <article class="role-card"><span>资源</span><h4>决定使用什么</h4><p>指定模型、材质和角色，保留必须使用的资产。模型可以补充新的组件。</p></article>
+        <article class="role-card"><span>规则</span><h4>限定并检查结果</h4><p>保存对象数量、尺寸、间距、连接和修改范围。几何校验、碰撞与导航需要相应模块。</p></article>
+        <article class="role-card"><span>玩法</span><h4>让场景运行起来</h4><p>定义触发器、任务状态、角色行为和通关条件，并在试玩时执行。</p></article>
+        <article class="role-card"><span>编辑与版本</span><h4>延续已确认的内容</h4><p>支持点选、锁定、局部生成、方案比较、撤销和恢复，保存可继续编辑的工程。</p></article>
+      </div>
+    </section>
+
+    <section id="creation-pipeline" class="section">
+      <div class="section-heading"><div><p class="eyebrow">04 / 创作流程 <span class="status-label planned">尚未实现</span></p><h2>先画结构，<br>再确认外观与空间。</h2></div><p>绘笔标记 → 生成对应图 → 进一步生成 3D，是一个可探索的入口。结构化场景方案始终保留，概念图和粗模分别帮助用户确认不同内容。</p></div>
+      <figure class="creation-diagram" aria-labelledby="creation-caption">
+        <ol class="creation-stages">
+          <li><span class="stage-index">01</span><div><h3>画布局，做标记</h3><p>用区域画陆地和水面，用线画道路，用图标放建筑，用箭头标移动路线。指定比例和必须保留的内容。</p><span class="stage-result">用户确定：位置、范围与关系</span></div></li>
+          <li><span class="stage-index">02</span><div><h3>确认场景方案</h3><p>保存区域、对象、尺寸和连接关系。模型识别自由草图后先给出解释，用户可以修正；语义绘笔直接记录类型。</p><span class="stage-result">共同依据：可编辑的布局与对象</span></div></li>
+          <li class="preview-stage"><span class="stage-index">03</span><div><h3>分别确认外观和空间</h3><div class="preview-branches"><section><h4>概念图预览 <small>可选</small></h4><p>按布局生成参考画面，确认建筑造型、材质、光照和氛围。</p></section><section><h4>3D 粗模预览</h4><p>先放地形、建筑体块和道路，旋转观察或漫游，确认尺寸和空间关系。</p></section></div><span class="stage-result">支持先看图；空间仍需在 3D 中确认</span></div></li>
+          <li><span class="stage-index">04</span><div><h3>细化完整 3D 场景</h3><p>依据已确认布局、粗模和视觉参考，补充几何、材质、植被、水面与光照。新资产保持独立对象身份。</p><span class="stage-result">原始结构与参考图共同参与生成</span></div></li>
+          <li><span class="stage-index">05</span><div><h3>局部编辑、试玩与交付</h3><p>指定修改对象或区域，保留已确认部分。按用途添加任务或镜头，验证结果，再保存工程与分享浏览器场景。</p><span class="stage-result">下一轮创作继续使用同一份作品</span></div></li>
+        </ol>
+        <figcaption id="creation-caption">产品流程设计图。现有工作台没有绘笔、图片生成、任意地形/资产生成或任务编辑接口。</figcaption>
+      </figure>
+      <div class="example-scenario"><div><p class="eyebrow">一次具体创作</p><h3>两座岛、一座桥、一个港口。</h3></div><div><p>用户画出岛屿和道路，标记村庄、灯塔与码头，再指定 <q>灯塔在高处，村庄有路连接码头</q>。模型补充造型，概念图确认风格，粗模确认空间。</p><p>下一轮要求 <q>码头往东移动，灯塔保持原样</q>，产品限定修改对象与相关连接，并比较实际改动。玩法阶段再设置 <q>到达灯塔后解锁船只</q>。</p><span class="status-label planned">流程示例 · 当前工作台无法执行这些生成与任务指令</span></div></div>
+    </section>
+
+    <section id="extensions" class="section">
+      <div class="section-heading"><div><p class="eyebrow">05 / 现有页面扩展 <span class="status-label planned">产品路线</span></p><h2>保留工作台，<br>逐步增加创作入口。</h2></div><p>已有预览、对象面板、属性、指令、镜头和历史提供编辑基础。下面把扩展落实到具体页面区域；优先级是本次设计建议，尚未开始这些功能的实现。</p></div>
+      <div class="insight-grid near-term">
+        <article class="plain-card"><span class="card-kicker">先完善已有编辑体验</span><h3>作品与版本库</h3><p>从顶部新建、保存和导出扩展命名、封面、复制与版本快照。布局变体属于同一海岛作品；新世界类型另需构建系统。</p></article>
+        <article class="plain-card"><span class="card-kicker">先完善已有编辑体验</span><h3>对象操控与外观</h3><p>增加移动、旋转和缩放手柄，多选、对齐与材质属性。操作继续共用撤销历史；真实灯光需接照明系统。</p></article>
+        <article class="plain-card"><span class="card-kicker">先完善已有编辑体验</span><h3>自定义镜头收藏</h3><p>在预设镜头外保存相机姿态、画幅与截图设置。后续时间轴与视频导出还需要时间控制和编码。</p></article>
+      </div>
+      <div class="table-wrap extension-table"><table><caption class="sr-only">现有工作台区域、可扩展界面与需要新增的能力</caption><thead><tr><th>现有区域</th><th>建议扩展的界面</th><th>需要新增的能力</th></tr></thead><tbody>
+        <tr><th>中央 3D 预览 <span class="priority">P1</span></th><td>布局 / 3D 切换；陆地、道路、区域与对象绘笔；比例和标记</td><td>保存二维布局、对象身份与空间关系；再接地形和对象创建接口</td></tr>
+        <tr><th>下方指令区 <span class="priority">P1</span></th><td>生成前显示计划、目标区域和将保留的对象；确认后执行</td><td>模型返回结构化方案；修改范围、版本和事务校验</td></tr>
+        <tr><th>左侧对象列表 <span class="priority">P2</span></th><td>对象 / 图层 / 资源标签；新增、复制、删除、导入与替换；关联画布标记</td><td>扩展固定注册表，增加可创建对象、资产格式适配、资源销毁与依赖记录</td></tr>
+        <tr><th>右侧属性面板 <span class="priority">P2</span></th><td>尺寸、数量、间距和连接约束；校验结果与修复入口</td><td>可执行的约束与检查器；路线可达还需碰撞和导航</td></tr>
+        <tr><th>预览与镜头工具 <span class="priority">P3</span></th><td>布局、概念图、粗模对照；固定参考相机与多视角验收</td><td>图像与 3D 生成服务、相机对齐、预览产物和任务状态管理</td></tr>
+        <tr><th>历史 / 保存 / 导出 <span class="priority">贯穿各阶段</span></th><td>保存布局方案、生成版本和引用资源；局部差异与版本恢复</td><td>把配置存档扩展为完整场景工程；浏览器分享需发布服务</td></tr>
+        <tr><th>进入漫游 <span class="priority">P4</span></th><td>按用途增加任务 / 触发器面板，或镜头 / 时间轴面板</td><td>任务状态、事件执行、碰撞导航，或关键帧与镜头序列</td></tr>
+      </tbody></table></div>
+      <div class="subheading"><h3>不同入口，对应不同的产品方向。</h3><p>初期围绕滨水场景验证布局和规则，其他方向按目标用户逐步选择。</p></div>
+      <div class="direction-grid">
+        <article class="direction-card"><span>布局 → 场景</span><h3>场景搭建器</h3><p>用户画海岸、道路与建筑位置，模型补充地形、造型和细节。控制重点是位置、比例与连接。</p></article>
+        <article class="direction-card"><span>资产 → 布景</span><h3>资源组装工具</h3><p>围绕用户已有建筑、角色和道具生成环境。控制重点是指定资产的身份、尺度和替换范围。</p></article>
+        <article class="direction-card"><span>规则 → 多套方案</span><h3>世界与地图生成器</h3><p>按数量、面积、距离和连通要求生成不同布局。条件由程序检查，用户选择并继续编辑方案。</p></article>
+        <article class="direction-card"><span>任务 → 可试玩场景</span><h3>关卡创作工具</h3><p>设置出生点、路线、交互与通关目标。玩法在运行阶段执行，需验证任务状态与路线可达。</p></article>
+        <article class="direction-card"><span>分镜 → 场景演出</span><h3>3D 导演工具</h3><p>编辑镜头顺序、轨迹、时长和场景事件。控制重点是时间轴和每一段可重复播放的行为。</p></article>
+        <article class="direction-card"><span>地图数据 → 环境</span><h3>地点场景工具</h3><p>以地形、道路和建筑轮廓为依据补充视觉内容。数据精度决定空间依据，缺失部分仍需补全。<a href="https://doc.esri.com/en/arcgis-pro/latest/tool-reference/3d-analyst/features-from-cityengine-rules.html">规则生成几何的技术参考 ↗</a></p></article>
+      </div>
+      <div class="roadmap"><h3>建议的推进顺序</h3><ol><li><strong>P1 / 语义布局 + 计划确认</strong><span>先验证用户能否画出、修正并保存自己想要的结构。</span></li><li><strong>P2 / 约束校验 + 资源与对象接口</strong><span>让新内容可创建、可定位，并能检查明确要求。</span></li><li><strong>P3 / 概念图 + 粗模 + 精细生成</strong><span>分别验证外观与空间，把确定的结果保留到下一阶段。</span></li><li><strong>P4 / 玩法或镜头 + 分享交付</strong><span>面向游戏创作者选择玩法，面向视觉创作者选择分镜。</span></li></ol></div>
+      <div class="note"><strong>下一版最值得验证的核心体验</strong><p>用户画两个岛、一座桥和一个港口，确认场景方案，再生成可选择、可修改的粗模。优先验证布局确实参与生成、局部修改保留已确认对象、失败可以恢复。随后再增加视觉细节与玩法。</p></div>
+    </section>
+
+    <section id="workflow" class="section">
+      <div class="section-heading"><div><p class="eyebrow">06 / 一次实际操作 <span class="status-label implemented">已实现</span></p><h2>做一张日落海岛画面。</h2></div><p>每一步都有明确目标和可见反馈。文字与属性面板修改同一份场景；布局、环境和镜头可以分别调整。</p></div>
+      <ol class="steps">
+        <li><span class="step-number">1</span><div><h3>选中小屋 A</h3><p>点击对象列表或画面中的对象。属性对应稳定 ID <code>cabin-a</code>。</p></div></li>
+        <li><span class="step-number">2</span><div><h3>只移动这个对象</h3><p>输入 <q>把选中的物体向右移动10米</q>。X 从 −35 到 −25，真实几何和面板一起更新。右是世界 X 轴正方向。</p></div></li>
+        <li><span class="step-number">3</span><div><h3>修改环境，保留布局</h3><p>输入 <q>改成日落，海浪平静一点</q>。只修改时间和涌浪；多项修改可一次撤销。</p></div></li>
+        <li><span class="step-number">4</span><div><h3>对比、锁定、交付</h3><p>撤销/重做来比较，满意后锁定对象。选择镜头，保存配置，导出 PNG 与 JSON。</p></div></li>
+      </ol>
+      <figure class="secondary-figure"><img src="assets/workbench-sunset.png" alt="同一 Tidewater 海岛工作台在日落时段的实际渲染截图" width="1440" height="1000" loading="lazy"><figcaption>同一世界的环境变化；原村落、地形和对象布局没有重新生成。</figcaption></figure>
+    </section>
+
+    <section id="control" class="section">
+      <div class="section-heading"><div><p class="eyebrow">07 / 当前控制原理</p><h2>把意图变成有限的编辑动作。</h2></div><p>模型可以理解描述，产品负责准确执行。浏览器 GPU 持续绘制世界；模型不需要具备生图接口才能协助创作这种场景。</p></div>
+      <div class="control-flow" aria-label="编辑控制流程"><div><small>意图输入</small><strong>面板 / 本地解析</strong><span>未来可接 Opus</span></div><b aria-hidden="true">↓</b><div><small>动作校验</small><strong>ID · 字段 · 范围 · 锁定</strong><span>整组先验证，失败不改场景</span></div><b aria-hidden="true">↓</b><div><small>作品状态</small><strong>场景 JSON + 历史</strong><span>一次修改可一次撤销</span></div><b aria-hidden="true">↓</b><div><small>实时呈现</small><strong>Tidewater 适配器 → GPU</strong><span>更新对象与原生渲染参数</span></div></div>
+      <div class="code-card"><div class="code-heading"><span>当前执行器接受的动作</span><span>有限动作 · 无 eval</span></div><pre><code>[
+  { "type": "object", "id": "cabin-a",
+    "values": { "x": -25, "rotation": 20 } },
+  { "type": "environment",
+    "values": { "timeOfDay": 18.3, "swell": 0.264 } },
+  { "type": "camera", "preset": "overview" }
+]</code></pre><p>对象参数：X/Z、朝向、统一缩放、显示、锁定。环境参数：时间、风速、涌浪、云量。未知对象、字段、越界数值与已锁定对象变换会被拒绝。</p></div>
+      <div class="two-columns"><article class="plain-card"><h3>开发期：模型协助写代码</h3><p>Opus 可以协助实现着色器、程序几何和世界组装，再根据运行截图迭代。画面来自 WebGPU 引擎，资源也可能来自资产库。仓库描述不能证明全部代码或美术由模型独立生成。</p></article><article class="plain-card"><h3>运行时：模型提出动作</h3><p>未来后端把指令、对象摘要、选择 ID、范围与场景修订号发给模型；模型返回动作。现有执行器继续负责校验和历史，拒绝过期响应。</p><p class="tag-note">尚未接入。当前界面使用确定性的本地规则解析。</p></article></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading"><div><p class="eyebrow">08 / 产品价值</p><h2>为什么需要一个工作台？</h2></div><p>直接让模型写代码适合增加新能力。稳定接口让用户在产品运行时编辑已有作品，把每次创作变成可以控制和恢复的操作。</p></div>
+      <div class="table-wrap"><table><caption class="sr-only">直接生成代码与受约束场景编辑的区别</caption><thead><tr><th>用户需要</th><th>直接让模型生成代码</th><th>工作台的控制</th></tr></thead><tbody><tr><th>只移动小屋 A</th><td>模型定位源码并改写实现</td><td>具体 ID + 变换参数</td></tr><tr><th>改日落，保留布局</th><td>依赖提示与代码修改范围</td><td>环境与对象分开保存</td></tr><tr><th>回到上一版</th><td>管理并恢复代码版本</td><td>事务历史，一次撤销</td></tr><tr><th>继续编辑同一作品</th><td>运行、资源和版本需另行管理</td><td>保存配置，重新导入</td></tr><tr><th>遇到缺失的雨天模块</th><td>可能生成尚未验证的实现</td><td>明确拒绝，保留当前场景</td></tr></tbody></table></div>
+      <div class="note"><strong>从现有编辑闭环走向多场景创作</strong><p>接下来优先探索语义绘笔、场景方案与规则校验，再接图像和 3D 生成服务。玩法、镜头与分享按目标用户选择。<a href="#extensions">查看具体页面扩展与优先级</a>。以上属于产品设计，当前实现仍为固定海岛的本地编辑工作台。</p></div>
+    </section>
+
+    <section id="evidence" class="section evidence-section">
+      <div class="section-heading"><div><p class="eyebrow">09 / 原有工作台验证与边界</p><h2>原生渲染已经跑通，<br>测试范围明确记录。</h2></div><p>以下记录来自此前工作台测试，不覆盖上面尚未实现的生成流程。实测设备：默认 Chrome WebGPU 后端，Intel Gen12lp；页面 1440 × 1000。结果属于这个设备和配置。</p></div>
+      <div class="metrics"><div><strong>19 / 19</strong><span>真实浏览器检查通过</span></div><div><strong>12</strong><span>场景核心测试通过</span></div><div><strong>348</strong><span>上游文件哈希比对一致</span></div></div>
+      <div class="two-columns"><article class="plain-card"><h3>实测包括</h3><ul class="check-list"><li>原生世界就绪，真实环境与几何修改。</li><li>撤销/重做、锁定、未知复合指令原子拒绝。</li><li>实际 JSON 文件导出、导入和错误保护。</li><li>新建可恢复、属性改动可撤销、视图拾取。</li><li>GPU PNG 读回、移动页面无横向溢出。</li><li>此次运行无网页异常或缺失资源。</li></ul></article><article class="plain-card muted-card"><h3>复现与限制</h3><p>在仓库根目录运行 <code>node projects/014-tidewater/tools/serve.mjs</code>，访问 <code>http://127.0.0.1:4196/</code>。素材本地保存，运行时无 npm 依赖。</p><p>首次数百 shader 编译可能超过一分钟。工作台默认渲染比例 0.5，关闭海雾与运动模糊，并等待单帧 GPU 完成。显式后端尝试曾驱动挂起，软件适配器资源不足；没有 FPS 保证。</p><p>JSON 保存编辑配置，不保存逐帧波浪、玩家/动物状态、游戏经济或世界模型。<code>seed</code> 尚未控制原版随机系统。</p></article></div>
+    </section>
+
+    <section class="closing"><p class="eyebrow">先亲手改动一次</p><h2>选中小屋，移动它，<br>再把海岛调成日落。</h2><a class="button" href="index.html">打开已实现的工作台 <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer><p>Tidewater 海岛、原渲染器与内容来自 <a href="https://github.com/dgreenheck/tidewater">dgreenheck/tidewater</a>。编辑界面、状态和五个程序几何资产为本地扩展。本工作台是研究原型。</p><div><a href="../runtime/LICENSE">保留的 MIT 许可</a><a href="https://github.com/dgreenheck/tidewater/blob/4811ba48d795197de5621985f404e765c0b7c0ef/CREDITS.md">资产与技术来源</a><a href="index.html">返回工作台 ↗</a></div><small>014 · 2026-10-04 · 固定版本 4811ba48</small></footer>
+</body>
+</html>

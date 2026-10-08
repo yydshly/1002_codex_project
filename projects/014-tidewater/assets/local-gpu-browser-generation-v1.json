@@ -1,0 +1,188 @@
+{
+  "source": {
+    "sourceFingerprint": "plan-v1-162afc9e3f46f3aa-22227",
+    "entityId": "boat-0da1d0f1",
+    "kind": "boat"
+  },
+  "request": "海边写实小屋，旧木门窗、白色灰泥墙和自然磨损的屋顶；整体结构可信，适合近距离、多角度观察。",
+  "conditioning": "模型使用参考图片。文字要求用于记录；本接口不接收文字提示。",
+  "output": {
+    "method": "neural-3d",
+    "provider": "Local GPU",
+    "model": "stabilityai/TripoSR",
+    "taskId": "d1239d00e1a846ac9b0f5dd37ee38154",
+    "glbUrl": "/assets/neural/local-jobs/d1239d00e1a846ac9b0f5dd37ee38154/model.glb",
+    "license": "MIT; TripoSR 神经形状与 RGB 纹理，PBR 属性为默认值",
+    "prompt": "Generate exactly ONE isolated photorealistic, physically plausible 3D asset with textured PBR materials, suitable for close inspection from all sides.\nOne complete small coastal boat with a watertight hull, coherent gunwale, deck and suitable interior. Real painted timber or fibreglass and weathered fittings. Bow and stern lie on the local Z axis.\nTarget physical envelope: width at most 4 m, height at most 2 m, depth at most 8 m. Keep believable proportions.\nUse Y-up; place the bottom of the asset on Y=0; centre its footprint on X=0,Z=0. Keep its local orientation consistent across views.\nDo not generate an entire scene, island, terrain, landscape, ocean, background, sky, floor plane, pedestal, people, text, watermarks or unrelated extra objects.\nDeliver one coherent textured GLB mesh asset. Do not replace, move or regenerate the authored surrounding layout.\nAppearance requested by the user: 海边写实小屋，旧木门窗、白色灰泥墙和自然磨损的屋顶；整体结构可信，适合近距离、多角度观察。"
+  },
+  "providerReceipt": {
+    "version": 1,
+    "provider": "Local GPU · Stability AI / Tripo AI",
+    "model": "stabilityai/TripoSR",
+    "modelRevision": "5b521936b01fbe1890f6f9baed0254ab6351c04a",
+    "method": "neural-3d",
+    "taskId": "d1239d00e1a846ac9b0f5dd37ee38154",
+    "startedAt": "2026-10-05T04:02:02.988705+00:00",
+    "source": "https://github.com/VAST-AI-Research/TripoSR",
+    "license": "MIT",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "torchVersion": "2.5.1+cu124",
+    "input": {
+      "path": "F:\\codex_project\\1002_codex_project\\projects\\014-tidewater\\web\\assets\\neural\\local-jobs\\d1239d00e1a846ac9b0f5dd37ee38154\\input\\boat-reference-v1.png",
+      "sha256": "8d0cf3459f2b3b5170b4b8ccb00ab50db02ec6e6eed7df5bbd445bd346e1fc4d",
+      "kind": "image",
+      "sendsTextPrompt": false
+    },
+    "settings": {
+      "extractionResolution": 256,
+      "textureResolution": 1024,
+      "chunkSize": 4096,
+      "neuralDensityThreshold": 25
+    },
+    "modelLoadSeconds": 7.969,
+    "timings": {
+      "neuralInferenceSeconds": 3.25,
+      "surfaceExtractionSeconds": 7.25,
+      "textureBakeSeconds": 36.141
+    },
+    "adaptations": [
+      {
+        "filename": "tsr/models/isosurface.py",
+        "originalSha256": "94c9a2ec27f8fe3c2fb57558ef28be253eb77074d2c171d49a41cf73d95d6f5e",
+        "modifiedSha256": "12e84ee5ec60900661e1e477c9da49b76871ebecb071cc24a1ae9e271c620e84",
+        "note": "Replace only the isosurface extraction backend with standard CPU scikit-image marching cubes; keep neural weights and density queries unchanged."
+      },
+      {
+        "filename": "tsr/utils.py",
+        "originalSha256": "d9d1a645fef7ea489615bff3471fd01a4941a2c0e138c5dff5daae619563279b",
+        "modifiedSha256": "7fd31dc224fc7c24e9c78e2cd76d523397269912feb3ee378204698a010e78ef",
+        "note": "Transparent input is required by the local adapter; no background-removal model or global installation is needed."
+      },
+      {
+        "filename": "tsr/bake_texture.py",
+        "originalSha256": "931d066c25d5943dc7b71469b63c308df3f37b8e7f6df558ee5e348d7936d5b7",
+        "modifiedSha256": "d1da71bce00852491dfa0919e403f8b122f21215e7a16ca1018f998d7dfd2af7",
+        "note": "Place texture density-query positions on the same device as the real neural scene code."
+      },
+      {
+        "filename": "tsr/bake_texture.py",
+        "originalSha256": "d1da71bce00852491dfa0919e403f8b122f21215e7a16ca1018f998d7dfd2af7",
+        "modifiedSha256": "b6463e1e940e469088e900c5095d7bb3b31c5ebf37b3a7fecdbf21ee362f14ad",
+        "note": "Read neural texture colors back from CUDA for texture encoding."
+      }
+    ],
+    "orientationAdaptation": {
+      "sourceUp": "Z",
+      "outputUp": "Y",
+      "rotationXDegrees": -90,
+      "nonUniformScale": false
+    },
+    "output": {
+      "path": "F:\\codex_project\\1002_codex_project\\projects\\014-tidewater\\web\\assets\\neural\\local-jobs\\d1239d00e1a846ac9b0f5dd37ee38154\\work\\boat\\boat-generated-v1.glb",
+      "bytes": 3067032,
+      "sha256": "39198dded1a7d90d8daa870104f79c2a037d0a55870c7a42f968a7efbc9cfef6",
+      "vertices": 57230,
+      "triangles": 73264,
+      "bounds": {
+        "min": [
+          -0.33031970262527466,
+          -0.2349150776863098,
+          -0.3904780149459839
+        ],
+        "max": [
+          0.3283514976501465,
+          0.24845790863037107,
+          0.4731466472148895
+        ]
+      },
+      "textureResolution": [
+        1024,
+        1024
+      ],
+      "textureSource": "Neural RGB predictions baked into UV atlas",
+      "materialNote": "Base color generated by TripoSR; roughness=0.85/metalness=0 are explicit renderer defaults, not neural PBR material synthesis"
+    },
+    "gpuPeakAllocatedMiB": 2506.53,
+    "gpuPeakReservedMiB": 3244,
+    "completedAt": "2026-10-05T04:02:51.117305+00:00",
+    "manifestUrl": "/assets/neural/local-jobs/d1239d00e1a846ac9b0f5dd37ee38154/manifest.json",
+    "bytes": 3067032,
+    "sha256": "39198dded1a7d90d8daa870104f79c2a037d0a55870c7a42f968a7efbc9cfef6"
+  },
+  "fitting": {
+    "entityId": "boat-0da1d0f1",
+    "url": "blob:http://127.0.0.1:4196/462851d0-d5cc-4ce3-b14e-e46fbf5fe35f",
+    "status": "preview",
+    "display": "generated",
+    "rotationDegrees": 0,
+    "stats": {
+      "meshCount": 1,
+      "triangles": 73264,
+      "vertices": 57230,
+      "materials": 1,
+      "textures": 1,
+      "materialTypes": [
+        "MeshStandardMaterial"
+      ],
+      "bounds": {
+        "min": [
+          -4.303229453665971,
+          2.4804445568872344,
+          10.510185955812679
+        ],
+        "max": [
+          -1.5779170389424308,
+          4.480444556887234,
+          14.083512089495587
+        ]
+      },
+      "sourceBounds": {
+        "min": [
+          -0.33031970262527466,
+          -0.23491507768630981,
+          -0.3904780149459839
+        ],
+        "max": [
+          0.3283514976501465,
+          0.2484579086303711,
+          0.4731466472148895
+        ]
+      },
+      "fit": {
+        "scale": 4.13759158375827,
+        "offset": [
+          0.000984102487564087,
+          0.23491507768630981,
+          -0.04133431613445282
+        ],
+        "position": [
+          -2.940573246304201,
+          2.9804445568872344,
+          12.296849022654133
+        ],
+        "rotationY": 0,
+        "dimensions": {
+          "width": 2.72531241472354,
+          "height": 2,
+          "depth": 3.573326133682909
+        }
+      },
+      "dimensions": {
+        "width": 2.7253124147235406,
+        "height": 2,
+        "depth": 3.573326133682908
+      },
+      "anchor": [
+        -2.940573246304201,
+        2.9804445568872344,
+        12.296849022654133
+      ],
+      "waterlineImmersion": 0.5,
+      "envelope": {
+        "width": 4,
+        "height": 2,
+        "depth": 8
+      }
+    }
+  }
+}

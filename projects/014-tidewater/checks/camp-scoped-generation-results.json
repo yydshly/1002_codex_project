@@ -1,0 +1,360 @@
+{
+  "format": "tidewater-scoped-fine-generation-check.v1",
+  "checkedAt": "2026-10-07T16:07:43.925Z",
+  "method": "Read saved source and actual images; check CLI event/output evidence; validate and replay scoped merge; independently compare outside dependency records and all receipt hashes.",
+  "passed": true,
+  "jobs": [
+    {
+      "id": "f5aa1772-218a-430c-89b1-90b018a557e5",
+      "passed": true,
+      "sourceFingerprint": "plan-v1-97aa53ac1b2fe598-2255",
+      "scopeIds": [
+        "camp-stay-1"
+      ],
+      "sourceEntityCount": 18,
+      "outsideEntityCount": 10,
+      "modelProvider": "Codex CLI / ChatGPT",
+      "observedModel": null,
+      "startedAt": "2026-10-07T15:57:13.966Z",
+      "finishedAt": "2026-10-07T15:58:23.328Z",
+      "elapsedSeconds": 69.362,
+      "stats": {
+        "instances": 11,
+        "templates": 6,
+        "materials": 16,
+        "expandedParts": 254,
+        "ribbonDefinitions": 18
+      },
+      "hashes": {
+        "source-plan.json": "2a52cb229b72997b050a8f58c2c123c9f9d389bef9cff2dbe3ccd122ac739736",
+        "base-recipe.json": "f1caa12f9fcd25a22f1b3a4006cac9c8820ec3f70bdb3c809eb0d2c08e615260",
+        "previous-geometry.json": "b5cc9830e493fd6d8cc5201f5b44aa15f5e457fed2a098671ff6665b49b0a93c",
+        "raw-patch.json": "0854f592f1e659a08dc56f3b636ddbc7e96d3fd0e6a6e059a917e681db00c6a9",
+        "response.json": "0854f592f1e659a08dc56f3b636ddbc7e96d3fd0e6a6e059a917e681db00c6a9",
+        "patch.json": "e673eee62ce60dd7dc4a15fa634426753158c7f7ce6ea22383ac36e0d7843230",
+        "merged-geometry.json": "9875f8f530495f7bb6d5223d8e81f7fab89172c18b98915a401166f1f8a198cf",
+        "geometry.json": "9875f8f530495f7bb6d5223d8e81f7fab89172c18b98915a401166f1f8a198cf",
+        "schema.json": "767a4ceee60504e770d89d86265646dd4bbc2b4d9cf32b05019b008316140715",
+        "prompt.txt": "7bca76c809b2a727c53372b23175645a7bdae879e0b3ec9d634971cfbe8b0276"
+      },
+      "inputs": [
+        {
+          "file": "view-1.png",
+          "label": "营地语义布局：名称、位置与锁定来自原plan",
+          "bytes": 48487,
+          "sha256": "a837815bfeeec7aa25117f665334b6bbc63e2f7385040d44a2e07a1ccbd2add3",
+          "dimensions": {
+            "width": 1000,
+            "height": 667
+          },
+          "passed": true
+        },
+        {
+          "file": "view-2.png",
+          "label": "选中对象 camp-stay-1 当前近景",
+          "bytes": 560189,
+          "sha256": "88399a2479b90d08357862880c3aa4fe0782998840b3e5fe4891a742f49f2eb6",
+          "dimensions": {
+            "width": 903,
+            "height": 720
+          },
+          "passed": true
+        },
+        {
+          "file": "view-3.png",
+          "label": "该对象另一侧实际画面",
+          "bytes": 381601,
+          "sha256": "7b5997a63b8b00433c1ee14f42f03628c25b15791cd01cbecb813cdfc19caf94",
+          "dimensions": {
+            "width": 903,
+            "height": 720
+          },
+          "passed": true
+        },
+        {
+          "file": "view-4.webp",
+          "label": "用户外观参考 camp-stay-1",
+          "bytes": 348928,
+          "sha256": "c3752927d0faeca533128dc3d44394ae8ae5d9f59a33ddad2b352b87dacfb804",
+          "dimensions": null,
+          "passed": true
+        }
+      ],
+      "checks": [
+        {
+          "name": "real scoped receipt identity and status",
+          "passed": true
+        },
+        {
+          "name": "full source fingerprint and exact request scope",
+          "passed": true,
+          "details": {
+            "sourceFingerprint": "plan-v1-97aa53ac1b2fe598-2255",
+            "sourceEntities": 18,
+            "scopeIds": [
+              "camp-stay-1"
+            ],
+            "scopeKinds": [
+              "cabin"
+            ]
+          }
+        },
+        {
+          "name": "saved source-plan.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "2a52cb229b72997b050a8f58c2c123c9f9d389bef9cff2dbe3ccd122ac739736",
+            "receipt": "2a52cb229b72997b050a8f58c2c123c9f9d389bef9cff2dbe3ccd122ac739736"
+          }
+        },
+        {
+          "name": "saved base-recipe.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "f1caa12f9fcd25a22f1b3a4006cac9c8820ec3f70bdb3c809eb0d2c08e615260",
+            "receipt": "f1caa12f9fcd25a22f1b3a4006cac9c8820ec3f70bdb3c809eb0d2c08e615260"
+          }
+        },
+        {
+          "name": "saved previous-geometry.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "b5cc9830e493fd6d8cc5201f5b44aa15f5e457fed2a098671ff6665b49b0a93c",
+            "receipt": "b5cc9830e493fd6d8cc5201f5b44aa15f5e457fed2a098671ff6665b49b0a93c"
+          }
+        },
+        {
+          "name": "saved raw-patch.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "0854f592f1e659a08dc56f3b636ddbc7e96d3fd0e6a6e059a917e681db00c6a9",
+            "receipt": "0854f592f1e659a08dc56f3b636ddbc7e96d3fd0e6a6e059a917e681db00c6a9"
+          }
+        },
+        {
+          "name": "saved response.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "0854f592f1e659a08dc56f3b636ddbc7e96d3fd0e6a6e059a917e681db00c6a9",
+            "receipt": "0854f592f1e659a08dc56f3b636ddbc7e96d3fd0e6a6e059a917e681db00c6a9"
+          }
+        },
+        {
+          "name": "saved patch.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "e673eee62ce60dd7dc4a15fa634426753158c7f7ce6ea22383ac36e0d7843230",
+            "receipt": "e673eee62ce60dd7dc4a15fa634426753158c7f7ce6ea22383ac36e0d7843230"
+          }
+        },
+        {
+          "name": "saved merged-geometry.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "9875f8f530495f7bb6d5223d8e81f7fab89172c18b98915a401166f1f8a198cf",
+            "receipt": "9875f8f530495f7bb6d5223d8e81f7fab89172c18b98915a401166f1f8a198cf"
+          }
+        },
+        {
+          "name": "saved geometry.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "9875f8f530495f7bb6d5223d8e81f7fab89172c18b98915a401166f1f8a198cf",
+            "receipt": "9875f8f530495f7bb6d5223d8e81f7fab89172c18b98915a401166f1f8a198cf"
+          }
+        },
+        {
+          "name": "saved schema.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "767a4ceee60504e770d89d86265646dd4bbc2b4d9cf32b05019b008316140715",
+            "receipt": "767a4ceee60504e770d89d86265646dd4bbc2b4d9cf32b05019b008316140715"
+          }
+        },
+        {
+          "name": "saved prompt.txt SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "7bca76c809b2a727c53372b23175645a7bdae879e0b3ec9d634971cfbe8b0276",
+            "receipt": "7bca76c809b2a727c53372b23175645a7bdae879e0b3ec9d634971cfbe8b0276"
+          }
+        },
+        {
+          "name": "request hashes bind the same original plan and prior candidate",
+          "passed": true
+        },
+        {
+          "name": "raw patch is the untouched CLI response",
+          "passed": true
+        },
+        {
+          "name": "raw patch canonicalizes to persisted validated patch",
+          "passed": true
+        },
+        {
+          "name": "patch contains only scope IDs, never outside or locked entities",
+          "passed": true,
+          "details": {
+            "patchInstances": 1
+          }
+        },
+        {
+          "name": "independent merge replay reproduces stored complete geometry",
+          "passed": true
+        },
+        {
+          "name": "complete API geometry and merged geometry are byte-identical",
+          "passed": true
+        },
+        {
+          "name": "outside original instance records are strictly equal",
+          "passed": true,
+          "details": {
+            "count": 10,
+            "ids": [
+              "camp-stay-4",
+              "camp-stay-2",
+              "camp-stay-5",
+              "camp-stay-3",
+              "camp-stay-6",
+              "camp-reception",
+              "camp-palm-1",
+              "camp-palm-2",
+              "camp-palm-3",
+              "camp-boat-1"
+            ]
+          }
+        },
+        {
+          "name": "outside shared templates and every component record are strictly equal",
+          "passed": true,
+          "details": {
+            "count": 5,
+            "ids": [
+              "stay_cabin",
+              "reception_house",
+              "palm_lush",
+              "palm_slender",
+              "rowing_boat"
+            ],
+            "beforeSha256": "b37080226953e68e32dc5e00ee66efd8449d82ff41226ba0c5788e1c8ae6d67e",
+            "afterSha256": "b37080226953e68e32dc5e00ee66efd8449d82ff41226ba0c5788e1c8ae6d67e"
+          }
+        },
+        {
+          "name": "outside referenced material records are strictly equal",
+          "passed": true,
+          "details": {
+            "count": 12,
+            "ids": [
+              "wood_light",
+              "wood_warm",
+              "wood_dark",
+              "roof",
+              "glass",
+              "foundation",
+              "trunk",
+              "leaf_green",
+              "leaf_light",
+              "hull",
+              "boat_trim",
+              "boat_inner"
+            ],
+            "beforeSha256": "d7c7ca23c34fe9abde4d9523bd5d95520f396b688939ba8708b18f6e3a3a0809",
+            "afterSha256": "d7c7ca23c34fe9abde4d9523bd5d95520f396b688939ba8708b18f6e3a3a0809"
+          }
+        },
+        {
+          "name": "every previous stable ID and rotation is retained",
+          "passed": true
+        },
+        {
+          "name": "scoped objects contain actual changed component/material dependencies",
+          "passed": true,
+          "details": [
+            {
+              "entityId": "camp-stay-1",
+              "beforeSha256": "34aa15fd7d68d5f903ed2c92bfeefddc5b47ec87151d2fdf10a7f3809f4d46d9",
+              "afterSha256": "5489d50012da654a444176d29de2ff8c5bec0cb343165393a3217ba78eb3d699",
+              "changed": true
+            }
+          ]
+        },
+        {
+          "name": "whole scene remains within shared budgets",
+          "passed": true,
+          "details": {
+            "instances": 11,
+            "templates": 6,
+            "materials": 16,
+            "expandedParts": 254,
+            "ribbonDefinitions": 18
+          }
+        },
+        {
+          "name": "stored output schema matches independently reconstructed scoped schema",
+          "passed": true
+        },
+        {
+          "name": "real CLI event sequence identifies thread and completion usage",
+          "passed": true,
+          "details": {
+            "threadId": "01a11715-5b42-74e0-9e8d-e1de837b302d",
+            "eventTypes": [
+              "thread.started",
+              "turn.started",
+              "item.completed",
+              "item.completed",
+              "turn.completed"
+            ],
+            "usage": {
+              "input_tokens": 45529,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 5080,
+              "reasoning_output_tokens": 229
+            }
+          }
+        },
+        {
+          "name": "model message JSON equals the persisted original patch",
+          "passed": true
+        },
+        {
+          "name": "event stream contains no prohibited model tools",
+          "passed": true
+        },
+        {
+          "name": "request and receipt identify identical attached image records",
+          "passed": true
+        },
+        {
+          "name": "attached actual view-1.png byte length and SHA-256",
+          "passed": true
+        },
+        {
+          "name": "attached actual view-2.png byte length and SHA-256",
+          "passed": true
+        },
+        {
+          "name": "attached actual view-3.png byte length and SHA-256",
+          "passed": true
+        },
+        {
+          "name": "attached actual view-4.webp byte length and SHA-256",
+          "passed": true
+        },
+        {
+          "name": "actual saved prompt contains original intent, full layout, base recipe, prior geometry and scope",
+          "passed": true
+        }
+      ],
+      "limits": [
+        "文件、参数及共享依赖一致性通过不代表写实品质、碰撞或拓扑已通过验收。",
+        "范围外组件和材质记录保持，不保证其阴影、反射或最终像素完全不变。",
+        "精细几何来自真实控制模型的部件设计；不是整场景神经图转 3D，CLI 未报告确切模型 ID。"
+      ]
+    }
+  ],
+  "sequentialLineage": []
+}

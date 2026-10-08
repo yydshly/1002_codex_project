@@ -1,0 +1,53 @@
+{
+  "name": "Rocky Terrain",
+  "type": 1,
+  "tags": [
+    "rock face",
+    "rocky",
+    "solid rock",
+    "nature",
+    "grass",
+    "terrain",
+    "wilderness",
+    "uneven terrain",
+    "mountain",
+    "rugged",
+    "landscape"
+  ],
+  "authors": {
+    "Amal Kumar": "All"
+  },
+  "max_resolution": [
+    8192,
+    8192
+  ],
+  "dimensions": [
+    90000,
+    90000
+  ],
+  "staging": null,
+  "date_published": 1723507200,
+  "categories": [
+    "outdoor",
+    "terrain",
+    "natural",
+    "rock",
+    "aerial"
+  ],
+  "files_hash": "ed4f64ced98e133be04387b75d6e827a375e9b04",
+  "description": "Free 8K texture of rugged rocky terrain with layered stone slabs, compacted soil and grass patches; detailed uneven terrain",
+  "category_id": "ad8bbc58-82b8-5734-a99b-3fbdb7f0163c",
+  "category": "Ground & Terrain/Rocky Ground/Rocky Landscape",
+  "attributes": {
+    "surface_use": "ground",
+    "condition": [
+      "weathered"
+    ],
+    "origin": "natural",
+    "setting": "outdoor",
+    "aerial": true
+  },
+  "img_version": "ee1e6791",
+  "download_count": 82953,
+  "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/rocky_terrain.png?width=256&height=256&format=webp&v=ee1e6791"
+}

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>水域叠加 · WebGPU 回归</title>
+<style>
+body{margin:0;background:#f7f7f1;color:#244c43;font:14px system-ui,sans-serif}main{max-width:1120px;margin:24px auto;padding:0 20px}h1{font-size:23px}button{background:#0d766c;color:white;border:0;border-radius:6px;padding:10px 16px;cursor:pointer}iframe{width:100%;height:500px;border:1px solid #cedbd0;border-radius:12px;margin:18px 0;background:#d1e0d7}#results{columns:2;line-height:1.9;padding:0;list-style:none}p{line-height:1.8}.fail{color:#b54030}@media(max-width:600px){#results{columns:1}iframe{height:350px}}
+</style>
+<main>
+<h1>水域叠加 · 真实 WebGPU 回归</h1>
+<p>独立测试场景，不读取或保存创作草案。检查真实几何标高与更新；最终展示两片贴合陆地的水域，点击中央湖面可验证 3D 拾取。</p>
+<button id="run" disabled>运行回归</button> <strong id="status" role="status">正在准备 WebGPU…</strong>
+<iframe id="preview" src="../creation-preview.html" title="水面与陆地的真实 3D 粗模"></iframe>
+<p id="selection">尚未选择对象</p>
+<ul id="results"></ul>
+<script type="module" src="water-surface.js"></script>
+</main>
+</html>

@@ -1,0 +1,17 @@
+{
+  "restoredStatus": "已恢复独立保存的整片场景：17 个模型资产，全部已有资产已载入。请换角度检查效果。",
+  "summary": "25 个原布局对象 · 0 个保持锁定 · 17 个已载入模型资产 / 当前显示 9 个神经资产 · 5 份实际使用的精细资产 · 25 项已载入或建立。完成仅表示载入与适配；写实质量仍需验收。棕榈当前显示原版程序叶片；神经树冠保留作对照。这一版已独立保存。",
+  "coarseVisibleCountObserved": 0,
+  "realisticVisibleCountObserved": 9,
+  "rawPalmVisibleCountObserved": 17,
+  "treeChoiceSurvivedRefresh": true,
+  "repeatAssemblySucceeded": true,
+  "twoConfirmedAssetsRestored": true,
+  "lightingDayAndSunsetObserved": true,
+  "backsideViewsObserved": [
+    "lighthouse",
+    "boat"
+  ],
+  "restoreTemporarilyDisabledAssetTarget": true,
+  "taskId": "91d25044693545b79453415ad0d2bd90"
+}

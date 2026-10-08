@@ -1,0 +1,340 @@
+TAP version 13
+# Subtest: one request snapshots one authored object without mutating the plan or options
+ok 1 - one request snapshots one authored object without mutating the plan or options
+  ---
+  duration_ms: 21.7046
+  type: 'test'
+  ...
+# Subtest: each asset semantic has its own isolated-object prompt and physical envelope
+ok 2 - each asset semantic has its own isolated-object prompt and physical envelope
+  ---
+  duration_ms: 20.7989
+  type: 'test'
+  ...
+# Subtest: locked, deleted or nonasset objects cannot request neural replacement
+ok 3 - locked, deleted or nonasset objects cannot request neural replacement
+  ---
+  duration_ms: 8.2911
+  type: 'test'
+  ...
+# Subtest: state advances only through real pending-running-success events with provenance
+ok 4 - state advances only through real pending-running-success events with provenance
+  ---
+  duration_ms: 10.5236
+  type: 'test'
+  ...
+# Subtest: failed and cancelled jobs retain truthful terminal states and cannot apply
+ok 5 - failed and cancelled jobs retain truthful terminal states and cannot apply
+  ---
+  duration_ms: 10.2537
+  type: 'test'
+  ...
+# Subtest: full source drift, deleted target and lock are rejected before apply
+ok 6 - full source drift, deleted target and lock are rejected before apply
+  ---
+  duration_ms: 28.1682
+  type: 'test'
+  ...
+# Subtest: stored jobs reject edited IDs, bindings, coordinates, prompts and hidden executable fields
+ok 7 - stored jobs reject edited IDs, bindings, coordinates, prompts and hidden executable fields
+  ---
+  duration_ms: 13.5165
+  type: 'test'
+  ...
+# Subtest: coding model results and incomplete or redirected provenance cannot claim neural success
+ok 8 - coding model results and incomplete or redirected provenance cannot claim neural success
+  ---
+  duration_ms: 11.1817
+  type: 'test'
+  ...
+# Subtest: references are bounded raster data or HTTPS/local locations, never scripts
+ok 9 - references are bounded raster data or HTTPS/local locations, never scripts
+  ---
+  duration_ms: 6.9125
+  type: 'test'
+  ...
+# Subtest: uniform GLB fit centres arbitrary offsets, grounds the feet, preserves proportions and caps footprint
+ok 10 - uniform GLB fit centres arbitrary offsets, grounds the feet, preserves proportions and caps footprint
+  ---
+  duration_ms: 2.6
+  type: 'test'
+  ...
+# Subtest: zero authored height uses explicit fallback instead of producing a collapsed GLB
+ok 11 - zero authored height uses explicit fallback instead of producing a collapsed GLB
+  ---
+  duration_ms: 0.6294
+  type: 'test'
+  ...
+# Subtest: invalid, degenerate, nonfinite and pathological GLB bounds are rejected
+ok 12 - invalid, degenerate, nonfinite and pathological GLB bounds are rejected
+  ---
+  duration_ms: 5.3622
+  type: 'test'
+  ...
+# Subtest: complete recipe binds the exact full authored input and covers all stable IDs
+ok 13 - complete recipe binds the exact full authored input and covers all stable IDs
+  ---
+  duration_ms: 61.9085
+  type: 'test'
+  ...
+# Subtest: stale source is rejected rather than quietly repositioned
+ok 14 - stale source is rejected rather than quietly repositioned
+  ---
+  duration_ms: 22.2808
+  type: 'test'
+  ...
+# Subtest: model cannot introduce coordinates or executable code
+ok 15 - model cannot introduce coordinates or executable code
+  ---
+  duration_ms: 8.5035
+  type: 'test'
+  ...
+# Subtest: missing, repeated and invented objects are rejected
+ok 16 - missing, repeated and invented objects are rejected
+  ---
+  duration_ms: 30.2301
+  type: 'test'
+  ...
+# Subtest: unsupported object appearance is rejected
+ok 17 - unsupported object appearance is rejected
+  ---
+  duration_ms: 6.6313
+  type: 'test'
+  ...
+# Subtest: local edit accepts one scoped record and preserves all others exactly
+ok 18 - local edit accepts one scoped record and preserves all others exactly
+  ---
+  duration_ms: 28.1957
+  type: 'test'
+  ...
+# Subtest: local edit rejects changes to global environment
+ok 19 - local edit rejects changes to global environment
+  ---
+  duration_ms: 16.2521
+  type: 'test'
+  ...
+# Subtest: local edit rejects changes to another object
+ok 20 - local edit rejects changes to another object
+  ---
+  duration_ms: 10.9389
+  type: 'test'
+  ...
+# Subtest: locked source objects must preserve appearance and cannot be selected for local edit
+ok 21 - locked source objects must preserve appearance and cannot be selected for local edit
+  ---
+  duration_ms: 36.7577
+  type: 'test'
+  ...
+# Subtest: physical and rendering parameter bounds reject non-finite and extreme values
+ok 22 - physical and rendering parameter bounds reject non-finite and extreme values
+  ---
+  duration_ms: 23.5148
+  type: 'test'
+  ...
+# Subtest: scoped schema constraints do not leak across colors, entities or later jobs
+ok 23 - scoped schema constraints do not leak across colors, entities or later jobs
+  ---
+  duration_ms: 11.3844
+  type: 'test'
+  ...
+# Subtest: quality toggling and disposal restore the previous scene rather than clearing its resources
+ok 24 - quality toggling and disposal restore the previous scene rather than clearing its resources
+  ---
+  duration_ms: 4.4127
+  type: 'test'
+  ...
+# Subtest: shore colour lookup separates a near edge from deep water without altering source contours
+ok 25 - shore colour lookup separates a near edge from deep water without altering source contours
+  ---
+  duration_ms: 58.8908
+  type: 'test'
+  ...
+# Subtest: inland depth uses its own selected region even when multiple land and water outlines exist
+ok 26 - inland depth uses its own selected region even when multiple land and water outlines exist
+  ---
+  duration_ms: 75.1167
+  type: 'test'
+  ...
+# Subtest: patchy wash produces finite triangles on the original water level with bounded width
+ok 27 - patchy wash produces finite triangles on the original water level with bounded width
+  ---
+  duration_ms: 4.4606
+  type: 'test'
+  ...
+# Subtest: malformed water and wash inputs fail before creating unbounded appearance resources
+ok 28 - malformed water and wash inputs fail before creating unbounded appearance resources
+  ---
+  duration_ms: 1.0665
+  type: 'test'
+  ...
+# Subtest: the recipe preserves every authored entity, polygon, height, world coordinate and lock without modifying its inputs
+ok 29 - the recipe preserves every authored entity, polygon, height, world coordinate and lock without modifying its inputs
+  ---
+  duration_ms: 34.535
+  type: 'test'
+  ...
+# Subtest: one explicit generated kind asset can serve multiple objects without claiming multiple model executions
+ok 30 - one explicit generated kind asset can serve multiple objects without claiming multiple model executions
+  ---
+  duration_ms: 17.3282
+  type: 'test'
+  ...
+# Subtest: missing fine assets remain a truthful capability gap and keep the previous program geometry
+ok 31 - missing fine assets remain a truthful capability gap and keep the previous program geometry
+  ---
+  duration_ms: 44.1517
+  type: 'test'
+  ...
+# Subtest: all four asset kinds receive distinct references and source provenance
+ok 32 - all four asset kinds receive distinct references and source provenance
+  ---
+  duration_ms: 2.029
+  type: 'test'
+  ...
+# Subtest: locked objects stay preserved even when a generated asset is available for their kind
+ok 33 - locked objects stay preserved even when a generated asset is available for their kind
+  ---
+  duration_ms: 13.8641
+  type: 'test'
+  ...
+# Subtest: real scan sources remain distinct from neural assets in readiness counts
+ok 34 - real scan sources remain distinct from neural assets in readiness counts
+  ---
+  duration_ms: 49.4488
+  type: 'test'
+  ...
+# Subtest: successful neural imports require an actual nonempty mesh receipt tied to the correct entity and asset
+ok 35 - successful neural imports require an actual nonempty mesh receipt tied to the correct entity and asset
+  ---
+  duration_ms: 31.9251
+  type: 'test'
+  ...
+# Subtest: failure remains visible and retry requires a new real running event
+ok 36 - failure remains visible and retry requires a new real running event
+  ---
+  duration_ms: 20.4934
+  type: 'test'
+  ...
+# Subtest: confirmation requires matching source and actual completion while explicit gaps retain old geometry
+ok 37 - confirmation requires matching source and actual completion while explicit gaps retain old geometry
+  ---
+  duration_ms: 66.7539
+  type: 'test'
+  ...
+# Subtest: stored recipes reject tampered locks, coordinates, dimensions, provenance and omitted objects
+ok 38 - stored recipes reject tampered locks, coordinates, dimensions, provenance and omitted objects
+  ---
+  duration_ms: 15.4068
+  type: 'test'
+  ...
+# Subtest: asset metadata requires real provenance, safe locations and unambiguous per-kind bindings
+ok 39 - asset metadata requires real provenance, safe locations and unambiguous per-kind bindings
+  ---
+  duration_ms: 3.4266
+  type: 'test'
+  ...
+# Subtest: hidden accessors, cycles and executable fields are rejected without evaluating them
+ok 40 - hidden accessors, cycles and executable fields are rejected without evaluating them
+  ---
+  duration_ms: 1.92
+  type: 'test'
+  ...
+# Subtest: a confirmed object asset overrides only its exact entity while other kind instances keep the shared asset
+ok 41 - a confirmed object asset overrides only its exact entity while other kind instances keep the shared asset
+  ---
+  duration_ms: 5.2026
+  type: 'test'
+  ...
+# Subtest: an exact asset cannot leak into another object when no shared kind asset is available
+ok 42 - an exact asset cannot leak into another object when no shared kind asset is available
+  ---
+  duration_ms: 5.6342
+  type: 'test'
+  ...
+# Subtest: precise bindings reject deleted, wrong-kind, locked and duplicate entity targets
+ok 43 - precise bindings reject deleted, wrong-kind, locked and duplicate entity targets
+  ---
+  duration_ms: 1.4942
+  type: 'test'
+  ...
+# Subtest: used asset counts exclude a shared asset shadowed by confirmed per-object assets
+ok 44 - used asset counts exclude a shared asset shadowed by confirmed per-object assets
+  ---
+  duration_ms: 29.2508
+  type: 'test'
+  ...
+# Subtest: stored exact bindings cannot be moved to another existing same-kind entity
+ok 45 - stored exact bindings cannot be moved to another existing same-kind entity
+  ---
+  duration_ms: 6.1389
+  type: 'test'
+  ...
+# Subtest: previous saved recipes without optional entity scope keep their existing source binding and tasks
+ok 46 - previous saved recipes without optional entity scope keep their existing source binding and tasks
+  ---
+  duration_ms: 25.5329
+  type: 'test'
+  ...
+# Subtest: confirmed model receipts recover nested output checksum before top-level fields
+ok 47 - confirmed model receipts recover nested output checksum before top-level fields
+  ---
+  duration_ms: 2.3354
+  type: 'test'
+  ...
+# Subtest: legacy builtin confirmation uses a matching published URL, model and actual task checksum
+ok 48 - legacy builtin confirmation uses a matching published URL, model and actual task checksum
+  ---
+  duration_ms: 2.2024
+  type: 'test'
+  ...
+# Subtest: missing or invalid real output checksum cannot be replaced by recomputing an untrusted saved Blob hash
+ok 49 - missing or invalid real output checksum cannot be replaced by recomputing an untrusted saved Blob hash
+  ---
+  duration_ms: 1.1989
+  type: 'test'
+  ...
+# Subtest: receipt checksum helpers reject hidden accessors without running them
+ok 50 - receipt checksum helpers reject hidden accessors without running them
+  ---
+  duration_ms: 0.6641
+  type: 'test'
+  ...
+# Subtest: inland relief is finite, deterministic, bounded and leaves source input unchanged
+ok 51 - inland relief is finite, deterministic, bounded and leaves source input unchanged
+  ---
+  duration_ms: 82.6548
+  type: 'test'
+  ...
+# Subtest: all locked land and complete anchor support circles retain exact baseline height
+ok 52 - all locked land and complete anchor support circles retain exact baseline height
+  ---
+  duration_ms: 3.7389
+  type: 'test'
+  ...
+# Subtest: lake floor, complete shore clearance and road corridor never acquire microrelief
+ok 53 - lake floor, complete shore clearance and road corridor never acquire microrelief
+  ---
+  duration_ms: 14.9522
+  type: 'test'
+  ...
+# Subtest: original outer edges, exterior samples and water-only layouts remain exact
+ok 54 - original outer edges, exterior samples and water-only layouts remain exact
+  ---
+  duration_ms: 1.0888
+  type: 'test'
+  ...
+# Subtest: small low land attenuates relief and invalid coordinates fail without emitting invalid geometry
+ok 55 - small low land attenuates relief and invalid coordinates fail without emitting invalid geometry
+  ---
+  duration_ms: 3.379
+  type: 'test'
+  ...
+1..55
+# tests 55
+# suites 0
+# pass 55
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 618.626

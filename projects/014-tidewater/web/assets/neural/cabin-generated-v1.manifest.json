@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "id": "trellis-cabin-v1",
+  "title": "AI 生成的海岸小屋",
+  "provenance": {
+    "method": "neural-image-to-3d",
+    "provider": "Microsoft official Hugging Face Space",
+    "model": "microsoft/TRELLIS.2-4B",
+    "space": "microsoft/TRELLIS.2",
+    "source": "https://huggingface.co/spaces/microsoft/TRELLIS.2",
+    "softwareAndModelLicense": "MIT",
+    "generatedAt": "2026-10-05T02:25:54.027Z",
+    "inputImageSha256": "ca45dfe8d960f7c859aa42e25c24aeb36db692270889977ed8fa186a37475781",
+    "generationTaskId": "7731f838b77c48b69c074368a1cc8bdd",
+    "exportTaskId": "ecf4025051ef4bf0b6382b2c1e3551e4",
+    "settings": {
+      "seed": 20261005,
+      "resolution": "512",
+      "sparseStructure": {
+        "guidance": 7.5,
+        "rescale": 0.7,
+        "steps": 12,
+        "rescaleT": 5
+      },
+      "shape": {
+        "guidance": 7.5,
+        "rescale": 0.5,
+        "steps": 12,
+        "rescaleT": 3
+      },
+      "texture": {
+        "guidance": 1,
+        "rescale": 0,
+        "steps": 12,
+        "rescaleT": 3
+      },
+      "export": {
+        "decimationTarget": 100000,
+        "textureSize": 2048
+      }
+    }
+  },
+  "asset": {
+    "url": "./assets/neural/cabin-generated-v1.glb",
+    "referenceUrl": "./assets/neural/cabin-reference-v1.png",
+    "bytes": 4859472,
+    "sha256": "c27086b4b585e3a9a90f969cb51d6df570526f8e720c4d696fa937c650bcc435",
+    "triangles": 98320,
+    "vertices": 80777,
+    "bounds": {
+      "min": [
+        -0.4075210690498352,
+        -0.41624999046325684,
+        -0.501872181892395
+      ],
+      "max": [
+        0.40728163719177246,
+        0.40939366817474365,
+        0.501183271408081
+      ]
+    },
+    "embeddedTextures": 2,
+    "textureFormat": "WebP",
+    "materials": "baseColor + metallicRoughness",
+    "generatedWholeScene": false
+  },
+  "timings": [
+    {
+      "stage": "start_session",
+      "seconds": 0.0008668899536132812
+    },
+    {
+      "stage": "preprocess_image",
+      "seconds": 0.13653969764709473
+    },
+    {
+      "stage": "image_to_3d",
+      "seconds": 13.780808448791504
+    },
+    {
+      "stage": "extract_glb",
+      "seconds": 22.803303241729736
+    }
+  ],
+  "limitations": [
+    "单对象生成；当前只替换小屋，其他场景对象继续保留原版本。",
+    "采用 512³ 模型分辨率和 2048px PBR 贴图，仍需多视角检查与质量修正。",
+    "模型推测不可见部分；单张参考图不能保证建筑尺寸、门窗或内部结构完全准确。"
+  ]
+}

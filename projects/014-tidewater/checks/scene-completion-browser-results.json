@@ -1,0 +1,27 @@
+{
+  "format": "tidewater-completion-browser-observations.v1",
+  "date": "2026-10-05",
+  "method": "Manual browser UI actions through Codex Browser Use; model jobs and export are verified separately by the evidence script.",
+  "url": "http://127.0.0.1:4196/create.html?entry=image#scene-completion-panel",
+  "observations": [
+    {"check":"Full scene request submitted from the page and displayed a real model candidate", "passed":true, "jobId":"96f55ca7-f641-404f-9c1e-15828eb92cc5"},
+    {"check":"Invalid local result was refused and the previous candidate restored", "passed":true, "jobId":"6bd2da35-6d9e-4897-8b00-92414f5ad714"},
+    {"check":"Corrected local request displayed red and white lighthouse surface bands", "passed":true, "jobId":"ea5f69c9-dc90-4e93-9b4b-7df76581e0b4"},
+    {"check":"Confirm and save showed 已保存 and left the original 25-object layout present", "passed":true},
+    {"check":"Reload restored the saved candidate without another inference request", "passed":true, "status":"已恢复保存的模型场景。"},
+    {"check":"Clicking the 3D lighthouse selected its original ID in the local-edit control", "passed":true, "entityId":"lighthouse-6a3ef8b5"},
+    {"check":"Selected-position view displayed the lighthouse with surrounding scene", "passed":true, "screenshot":"assets/scene-completion-lighthouse-v1.png"},
+    {"check":"Coarse comparison toggled on and back at the same view", "passed":true, "ariaPressed":["true","false"], "screenshot":"assets/scene-completion-coarse-v1.png"},
+    {"check":"Reverse view displayed the same three islands from the opposite side", "passed":true, "screenshot":"assets/scene-completion-reverse-v1.png"},
+    {"check":"Expanded task details and exported the saved scene via the public download control", "passed":true, "artifact":"assets/scene-completion-final.export.json"},
+    {"check":"320px viewport had no horizontal overflow; temporary override reset", "passed":true, "viewport":320, "documentScrollWidth":305, "panelWidth":276.6667, "canvasWidth":244},
+    {"check":"Current restored page reported no captured console errors", "passed":true, "errorCount":0},
+    {"check":"Existing scene assembly restored its independent save", "passed":true, "originalEntities":25, "loadedNeuralAssets":17, "visibleNeuralAssets":9},
+    {"check":"Existing GPU generation service was rechecked through the page and ready", "passed":true, "model":"stabilityai/TripoSR"}
+  ],
+  "limits": [
+    "These are observed UI results, not an automated browser test suite.",
+    "Visual realism and contact quality have not passed an automatic score or final acceptance.",
+    "The current executor uses registered coastal tools and existing assets, not newly inferred arbitrary scene meshes."
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "verifiedAt": "2026-10-04T17:20:02.781Z",
+  "method": "Native in-app browser via CUA; page-run WebGPU checks and actual canvas click",
+  "checks": [
+    {
+      "name": "候选由真实 WebGPU 渲染且增加几何细节",
+      "pass": true
+    },
+    {
+      "name": "原始布局和锁定信息保持一致",
+      "pass": true
+    },
+    {
+      "name": "原对象 ID 与分组继续存在",
+      "pass": true
+    },
+    {
+      "name": "锁定灯塔的全部几何和颜色保持原样",
+      "pass": true
+    },
+    {
+      "name": "原水域位置与水位几何保持原样",
+      "pass": true
+    },
+    {
+      "name": "小屋、棕榈与船具有更细致的真实几何",
+      "pass": true
+    },
+    {
+      "name": "完整候选在 120000 三角形预算内，属性为有限数值",
+      "pass": true
+    },
+    {
+      "name": "可导出包含真实顶点与颜色的 GLB 二进制",
+      "pass": true
+    },
+    {
+      "name": "GLB 保留原对象 ID 分组和位置法线颜色属性",
+      "pass": true
+    },
+    {
+      "name": "切回粗模恢复完全相同的原几何",
+      "pass": true
+    },
+    {
+      "name": "同一模型代码候选重复运行得到相同几何",
+      "pass": true
+    },
+    {
+      "name": "真实点击候选几何可拾取原小屋 ID",
+      "pass": true
+    }
+  ],
+  "state": "12/12 项通过 · 已验证真实点击拾取"
+}

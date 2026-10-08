@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Tidewater 可控 3D 场景研究：沿用用户绘笔的原三岛布局，模型完善几何，程序保护对象身份与空间，支持局部精修、方案比较和独立工程交付。"><title>Tidewater · 当前成果与产品思路</title><link rel="stylesheet" href="camp.css"></head>
+<body><header><a class="brand" href="release.html"><span>≈</span><div>TIDEWATER<small>研究成果 / 2026.10.08</small></div></a><nav><a href="camp.html">原场景工作室</a><a href="research-map.html">研究总图</a><a href="capabilities.html">能力归档</a></nav></header>
+<main><div class="intro"><div><p class="eyebrow">当前效果保留 · 后续按业务扩展</p><h1>你的图，贯穿同一个 3D 场景。</h1><p>从绘笔布局到模型精修，再到可以浏览、比较和保存的项目。当前保留已确认的原三岛场景，后续按具体需求继续完善。</p></div><span class="tag">阶段成果 · 可运行概念方案</span></div>
+<div class="archive-banner"><h2>先看我们正在讨论的原场景</h2><p>200 × 150 米：3 座岛、3 处水域、2 条步道、1 间木屋、1 座红白灯塔、8 棵棕榈、7 艘船，共 25 个来源对象；其中 17 个物体已经接入模型定义的精细几何。</p><p><a href="camp-viewer.html?proposal=560be513-9fa1-4ee5-b4dc-22c01e3aae8b">浏览原海岛：旋转、近景、对象介绍、粗模对照 ↗</a> · <a href="camp.html">继续编辑这份提案 ↗</a></p><a href="camp-viewer.html?proposal=560be513-9fa1-4ee5-b4dc-22c01e3aae8b"><img class="archive-preview" src="assets/fine-scene-portable-v5.png" alt="原三岛布局的实际精修场景：海岸木屋、红白灯塔、棕榈与船只"></a><p class="hint">这是原绘笔布局的真实浏览器 3D 回放。六木屋营地另作独立业务示例，主入口持续沿用原场景。</p></div>
+<h2>库的价值，与我们扩展的价值</h2><div class="archive-grid">
+<article class="archive-card"><span class="section-label">源库</span><h2>实时世界的技术底座</h2><p>Tidewater 提供海岛、FFT 海浪、天空云层、植被、角色与钓鱼体验；自研 WebGPU / WGSL 引擎每帧更新和绘制。模型可以编写这些代码，画面由程序与素材共同产生。源库本身没有图片生成接口，也不是通用场景生成 SDK。</p><a href="index.html">原生 WebGPU 工作台 ↗</a></article>
+<article class="archive-card"><span class="section-label">控制产品</span><h2>让空间意图持续有效</h2><p>你的图或粗模确定轮廓、位置、尺寸、对象 ID 和锁定。模型读取布局、实际视角与参考，提出外观配方和几何；执行器校验后按原身份装回场景。指定局部修改时，还会核对范围外的几何、材质与朝向。</p></article>
+<article class="archive-card"><span class="section-label">实际成果</span><h2>让候选成为可交付项目</h2><p>原布局、候选、参考、模型回执和历史一起保存；同一镜头比较不同版本，多角度检查，再决定采用。网页保留实时效果，GLB 提供静态网格，独立工程包含重放需要的资源。</p></article></div>
+<div class="archive-banner"><h2>核心链路：输入 → 生成 → 验证 → 修改 → 交付</h2><p><strong>输入：</strong>绘笔布局，或人工标注的参考图；已有粗模提供空间依据。图片表达外观，结构化 plan 表达对象与关系。</p><p><strong>生成：</strong>控制模型组织方案与部件几何；专门的图像到 3D 模型提供神经网格；材质、扫描资源、光照和渲染器共同呈现效果。</p><p><strong>验证与修改：</strong>检查来源指纹、稳定 ID、锁定、空间包络、资源引用与预算；对照粗模、近景和另一侧，局部修改另存版本。</p><p><strong>交付：</strong>布局 / 提案 JSON、视角截图、可编辑 GLB、自包含网页工程与来源记录。动态水面和光照在网页运行；GLB 保存静态快照。</p><p><strong>区别于只发一句话：</strong>模型每次都有明确的作品、范围与验收依据；产品保留已经确认的空间和历史，支持只改指定对象。</p></div>
+<h2>探索过程与已经验证的能力</h2><ol>
+<li>先研究源库的实时渲染，接入对象、环境、镜头、锁定和撤销。</li>
+<li>增加图片标注与语义绘笔入口，把空间想法转换成 plan 和真实 3D 粗模。</li>
+<li>加入 PBR 材质、扫描素材与 HDRI；实际生成 TRELLIS.2 小屋和 TripoSR 棕榈、灯塔、船。厚重的神经棕榈树冠未采用为默认效果。</li>
+<li>明确“沿用我的图或粗模”这一目标，接入真实控制模型与部件几何，完成同场景生成、局部精修和范围外保护。</li>
+<li>保存原三岛 v5、几何历史、GLB 与独立工程；增加对象介绍、参考、固定视角和客户提案。六木屋 A/B 只作为独立业务验证。</li></ol>
+<p>原场景实际运行的控制适配器是 Codex CLI / ChatGPT，回执没有返回确切模型 ID，因此不标成 Opus。新精细几何来自模型定义的部件、曲线与薄带；没有为原三岛新增整场景神经纹理。GLB 重载、独立工程、来源一致性及局部保护均有检查记录，视觉品质仍需按用途验收。</p>
+<h2>如何按业务继续扩展</h2><div class="archive-grid">
+<article class="archive-card"><h2>文旅与营地方案</h2><p>在原空间上补对象用途、路线、说明、素材参考和局部 A/B，用固定镜头与客户沟通。预订与真实项目数据在有业务需求时接入。</p><a href="camp-viewer.html?proposal=6bd01104-dfb6-4f9a-9b61-1f1172586ec0">独立六木屋 A/B 示例 ↗</a></article>
+<article class="archive-card"><h2>品牌与产品展示</h2><p>保留空间结构，将指定对象替换为有来源的商品或品牌资产，再增加热点介绍、相机预设与展示导出。</p></article>
+<article class="archive-card"><h2>教学、游戏与虚拟拍摄</h2><p>把空间、对象与事件结合，按需求加入导览、任务、规则或镜头时间线。现有底座可复用，玩法和业务逻辑需要具体实现。</p></article></div>
+<div class="archive-banner"><h2>当前版本怎么用</h2><p><strong>网页可直接使用：</strong>原场景浏览、粗模对照、对象介绍、提案编辑、本浏览器保存、JSON 导入导出、参考上传，以及已有 GLB / 工程下载。原生工作台与粗模使用 WebGPU，精修场景使用 Three.js WebGL2。</p><p><strong>新生成需本机服务：</strong>控制模型通过本机 4198 服务运行，TripoSR 通过本机 GPU 服务运行。远端静态站点不运行这些服务，也不携带账号凭据；下载源码后可以按 README 启动。</p><p><strong>继续优化的方向：</strong>海岸水面过渡、植被自然度、建筑与船只近景、光照和目标设备性能。当前先保留效果，后续锁定原布局，指定局部优化、另存候选并在同一镜头验收。</p><p>当前主要覆盖海岸场景的七类区域 / 对象；图片入口仍由人标注，不能承诺任意输入一次生成就达到最终写实品质。未来可扩展已有资产、规则、事件、镜头和真实地图输入。</p></div>
+<h2>查看与下载</h2><p><a href="research-map.html">完整研究总图 ↗</a> · <a href="research.html">能力与原理详解 ↗</a> · <a href="capabilities.html">能力归档 ↗</a> · <a href="create.html?entry=image">参考图片入口 ↗</a> · <a href="create.html?entry=layout">绘笔布局入口 ↗</a></p>
+<p><a href="assets/camp-proposals/560be513-9fa1-4ee5-b4dc-22c01e3aae8b/glb/a.glb" download>原场景 GLB ↓</a> · <a href="assets/camp-proposals/560be513-9fa1-4ee5-b4dc-22c01e3aae8b/project.zip" download>原场景独立网页工程 ↓</a> · <a href="assets/camp/original.json" download>完整原提案 JSON ↓</a> · <a href="THIRD_PARTY_NOTICES.md">素材与许可说明</a> · <a href="https://github.com/yydshly/1002_codex_project/tree/main/projects/014-tidewater">项目源码与检查记录 ↗</a></p>
+<footer>014 · Tidewater 研究与可控 3D 产品探索 · 2026-10-08<br>当前成果是可运行概念方案。来源、模型生成、程序资源与验收状态分别记录；历史版本继续保留。</footer></main></body></html>

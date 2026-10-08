@@ -1,0 +1,863 @@
+{
+  "format": "tidewater-fine-benchmark-set.v1",
+  "authoredBy": "hand-authored-spatial-fixtures",
+  "input": "semantic-layout / coarse-scene",
+  "referenceImages": false,
+  "modelSuccessRate": null,
+  "evaluationStatus": "static-validated; real-model-and-browser-evaluation-pending",
+  "cases": [
+    {
+      "id": "narrow-coast",
+      "name": "基准 01 · 窄岸小屋与灯塔",
+      "file": "01-narrow-coast.plan.json",
+      "purpose": "横向窄岸、沿岸道路、不同建筑高度和少量树船，检查小空间包络适配。",
+      "world": {
+        "width": 150,
+        "depth": 90
+      },
+      "sha256": "0599a7294d67b3c747c3163c1bf0690e42c7ee3eb1e894cb274d8cdbea4e1c7a",
+      "sourceFingerprint": "plan-v1-606fcab4118a5958-1441",
+      "expected": {
+        "entityCount": 9,
+        "kindCounts": {
+          "land": 1,
+          "water": 1,
+          "road": 1,
+          "cabin": 1,
+          "lighthouse": 1,
+          "palm": 2,
+          "boat": 2
+        },
+        "fineTargetIds": [
+          "narrow-cabin",
+          "narrow-lighthouse",
+          "narrow-palm-west",
+          "narrow-palm-east",
+          "narrow-boat-west",
+          "narrow-boat-east"
+        ],
+        "lockedIds": [],
+        "preservedRegionIds": [
+          "narrow-land",
+          "narrow-bay",
+          "narrow-path"
+        ]
+      },
+      "staticValidation": {
+        "planSchema": "passed",
+        "assetRequests": "passed",
+        "lockedAssetRequests": "rejected-as-required",
+        "planSpaceFootprints": "passed",
+        "nonOverlappingObjectEnvelopes": "passed",
+        "roadSupportSamples": "passed",
+        "originalWaterLevels": "passed",
+        "protectedAnchorAndRoadMicrorelief": "passed",
+        "rendererVisualQuality": "not-run",
+        "modelGeneration": "not-run",
+        "glbExportAndPortableReplay": "not-run"
+      },
+      "regions": [
+        {
+          "id": "narrow-land",
+          "kind": "land",
+          "areaSquareMetres": 2171.475,
+          "authoredHeight": 2
+        },
+        {
+          "id": "narrow-bay",
+          "kind": "water",
+          "areaSquareMetres": 3210.3,
+          "authoredHeight": 0
+        }
+      ],
+      "envelopes": [
+        {
+          "entityId": "narrow-cabin",
+          "kind": "cabin",
+          "locked": false,
+          "width": 8,
+          "depth": 7,
+          "height": 6.2,
+          "planAnchor": {
+            "x": -36,
+            "y": 2,
+            "z": -9.899999999999999
+          },
+          "rendererSupport": 2.12,
+          "shoreClearanceMetres": 12.293,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.23333333333333334,
+              "y": 0.35111111111111115
+            },
+            {
+              "x": 0.23333333333333334,
+              "y": 0.4288888888888889
+            },
+            {
+              "x": 0.2866666666666667,
+              "y": 0.35111111111111115
+            },
+            {
+              "x": 0.2866666666666667,
+              "y": 0.4288888888888889
+            }
+          ]
+        },
+        {
+          "entityId": "narrow-lighthouse",
+          "kind": "lighthouse",
+          "locked": false,
+          "width": 5.2,
+          "depth": 5.2,
+          "height": 15,
+          "planAnchor": {
+            "x": 10.499999999999993,
+            "y": 2,
+            "z": -9.899999999999999
+          },
+          "rendererSupport": 2.12,
+          "shoreClearanceMetres": 8.075,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.5526666666666666,
+              "y": 0.3611111111111111
+            },
+            {
+              "x": 0.5526666666666666,
+              "y": 0.4188888888888889
+            },
+            {
+              "x": 0.5873333333333333,
+              "y": 0.3611111111111111
+            },
+            {
+              "x": 0.5873333333333333,
+              "y": 0.4188888888888889
+            }
+          ]
+        },
+        {
+          "entityId": "narrow-palm-west",
+          "kind": "palm",
+          "locked": false,
+          "width": 10,
+          "depth": 10,
+          "height": 10.5,
+          "planAnchor": {
+            "x": -54,
+            "y": 2,
+            "z": -8.999999999999998
+          },
+          "rendererSupport": 2.12,
+          "shoreClearanceMetres": 10.414,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.10666666666666669,
+              "y": 0.34444444444444444
+            },
+            {
+              "x": 0.10666666666666669,
+              "y": 0.4555555555555556
+            },
+            {
+              "x": 0.17333333333333334,
+              "y": 0.34444444444444444
+            },
+            {
+              "x": 0.17333333333333334,
+              "y": 0.4555555555555556
+            }
+          ]
+        },
+        {
+          "entityId": "narrow-palm-east",
+          "kind": "palm",
+          "locked": false,
+          "width": 10,
+          "depth": 10,
+          "height": 11.2,
+          "planAnchor": {
+            "x": -12.000000000000002,
+            "y": 2,
+            "z": -6.300000000000001
+          },
+          "rendererSupport": 2.12,
+          "shoreClearanceMetres": 13.152,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.38666666666666666,
+              "y": 0.37444444444444447
+            },
+            {
+              "x": 0.38666666666666666,
+              "y": 0.4855555555555555
+            },
+            {
+              "x": 0.4533333333333333,
+              "y": 0.37444444444444447
+            },
+            {
+              "x": 0.4533333333333333,
+              "y": 0.4855555555555555
+            }
+          ]
+        },
+        {
+          "entityId": "narrow-boat-west",
+          "kind": "boat",
+          "locked": false,
+          "width": 4,
+          "depth": 8,
+          "height": 1.8,
+          "planAnchor": {
+            "x": -9,
+            "y": 0.035,
+            "z": 27.000000000000004
+          },
+          "rendererSupport": 0.035,
+          "shoreClearanceMetres": 12.6,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.4266666666666667,
+              "y": 0.7555555555555556
+            },
+            {
+              "x": 0.4266666666666667,
+              "y": 0.8444444444444444
+            },
+            {
+              "x": 0.4533333333333333,
+              "y": 0.7555555555555556
+            },
+            {
+              "x": 0.4533333333333333,
+              "y": 0.8444444444444444
+            }
+          ]
+        },
+        {
+          "entityId": "narrow-boat-east",
+          "kind": "boat",
+          "locked": false,
+          "width": 4,
+          "depth": 8,
+          "height": 2.2,
+          "planAnchor": {
+            "x": 34.5,
+            "y": 0.035,
+            "z": 28.799999999999997
+          },
+          "rendererSupport": 0.035,
+          "shoreClearanceMetres": 11.7,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.7166666666666667,
+              "y": 0.7755555555555556
+            },
+            {
+              "x": 0.7166666666666667,
+              "y": 0.8644444444444443
+            },
+            {
+              "x": 0.7433333333333333,
+              "y": 0.7755555555555556
+            },
+            {
+              "x": 0.7433333333333333,
+              "y": 0.8644444444444443
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dual-island-lock",
+      "name": "基准 02 · 双岛航道与锁定灯塔",
+      "file": "02-dual-island-lock.plan.json",
+      "purpose": "竖向双岛、中央航道、各岛独立道路和锁定灯塔，检查锁定与跨岛语义隔离。",
+      "world": {
+        "width": 120,
+        "depth": 180
+      },
+      "sha256": "a56317ae75901ddd18e2f734449f454870a5b73193cc636e26e43492ee937286",
+      "sourceFingerprint": "plan-v1-1be8df920e46eab6-1943",
+      "expected": {
+        "entityCount": 12,
+        "kindCounts": {
+          "land": 2,
+          "water": 1,
+          "road": 2,
+          "cabin": 2,
+          "lighthouse": 1,
+          "palm": 2,
+          "boat": 2
+        },
+        "fineTargetIds": [
+          "dual-north-cabin",
+          "dual-south-cabin",
+          "dual-north-palm",
+          "dual-south-palm",
+          "dual-channel-boat-north",
+          "dual-channel-boat-south"
+        ],
+        "lockedIds": [
+          "dual-fixed-lighthouse"
+        ],
+        "preservedRegionIds": [
+          "dual-north-island",
+          "dual-south-island",
+          "dual-navigation-channel",
+          "dual-north-path",
+          "dual-south-path"
+        ]
+      },
+      "staticValidation": {
+        "planSchema": "passed",
+        "assetRequests": "passed",
+        "lockedAssetRequests": "rejected-as-required",
+        "planSpaceFootprints": "passed",
+        "nonOverlappingObjectEnvelopes": "passed",
+        "roadSupportSamples": "passed",
+        "originalWaterLevels": "passed",
+        "protectedAnchorAndRoadMicrorelief": "passed",
+        "rendererVisualQuality": "not-run",
+        "modelGeneration": "not-run",
+        "glbExportAndPortableReplay": "not-run"
+      },
+      "regions": [
+        {
+          "id": "dual-north-island",
+          "kind": "land",
+          "areaSquareMetres": 2547.72,
+          "authoredHeight": 3
+        },
+        {
+          "id": "dual-south-island",
+          "kind": "land",
+          "areaSquareMetres": 2652.48,
+          "authoredHeight": 2.5
+        },
+        {
+          "id": "dual-navigation-channel",
+          "kind": "water",
+          "areaSquareMetres": 1995.84,
+          "authoredHeight": 0
+        }
+      ],
+      "envelopes": [
+        {
+          "entityId": "dual-north-cabin",
+          "kind": "cabin",
+          "locked": false,
+          "width": 8,
+          "depth": 7,
+          "height": 6.6,
+          "planAnchor": {
+            "x": -30,
+            "y": 3,
+            "z": -21.599999999999998
+          },
+          "rendererSupport": 3.12,
+          "shoreClearanceMetres": 17.81,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.21666666666666667,
+              "y": 0.3605555555555556
+            },
+            {
+              "x": 0.21666666666666667,
+              "y": 0.39944444444444444
+            },
+            {
+              "x": 0.2833333333333333,
+              "y": 0.3605555555555556
+            },
+            {
+              "x": 0.2833333333333333,
+              "y": 0.39944444444444444
+            }
+          ]
+        },
+        {
+          "entityId": "dual-south-cabin",
+          "kind": "cabin",
+          "locked": false,
+          "width": 8,
+          "depth": 7,
+          "height": 6.1,
+          "planAnchor": {
+            "x": 33.6,
+            "y": 2.5,
+            "z": 39.599999999999994
+          },
+          "rendererSupport": 2.62,
+          "shoreClearanceMetres": 15.738,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.7466666666666667,
+              "y": 0.7005555555555555
+            },
+            {
+              "x": 0.7466666666666667,
+              "y": 0.7394444444444445
+            },
+            {
+              "x": 0.8133333333333334,
+              "y": 0.7005555555555555
+            },
+            {
+              "x": 0.8133333333333334,
+              "y": 0.7394444444444445
+            }
+          ]
+        },
+        {
+          "entityId": "dual-fixed-lighthouse",
+          "kind": "lighthouse",
+          "locked": true,
+          "width": 5.2,
+          "depth": 5.2,
+          "height": 16,
+          "planAnchor": null,
+          "rendererSupport": 3.12,
+          "shoreClearanceMetres": 11.397,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.2683333333333333,
+              "y": 0.20555555555555555
+            },
+            {
+              "x": 0.2683333333333333,
+              "y": 0.23444444444444446
+            },
+            {
+              "x": 0.31166666666666665,
+              "y": 0.20555555555555555
+            },
+            {
+              "x": 0.31166666666666665,
+              "y": 0.23444444444444446
+            }
+          ]
+        },
+        {
+          "entityId": "dual-north-palm",
+          "kind": "palm",
+          "locked": false,
+          "width": 10,
+          "depth": 10,
+          "height": 10,
+          "planAnchor": {
+            "x": -38.4,
+            "y": 3,
+            "z": -8.999999999999998
+          },
+          "rendererSupport": 3.12,
+          "shoreClearanceMetres": 8.284,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.13833333333333334,
+              "y": 0.4222222222222222
+            },
+            {
+              "x": 0.13833333333333334,
+              "y": 0.4777777777777778
+            },
+            {
+              "x": 0.22166666666666665,
+              "y": 0.4222222222222222
+            },
+            {
+              "x": 0.22166666666666665,
+              "y": 0.4777777777777778
+            }
+          ]
+        },
+        {
+          "entityId": "dual-south-palm",
+          "kind": "palm",
+          "locked": false,
+          "width": 10,
+          "depth": 10,
+          "height": 9.5,
+          "planAnchor": {
+            "x": 39.599999999999994,
+            "y": 2.5,
+            "z": 9.000000000000007
+          },
+          "rendererSupport": 2.62,
+          "shoreClearanceMetres": 10.556,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.7883333333333333,
+              "y": 0.5222222222222223
+            },
+            {
+              "x": 0.7883333333333333,
+              "y": 0.5777777777777778
+            },
+            {
+              "x": 0.8716666666666666,
+              "y": 0.5222222222222223
+            },
+            {
+              "x": 0.8716666666666666,
+              "y": 0.5777777777777778
+            }
+          ]
+        },
+        {
+          "entityId": "dual-channel-boat-north",
+          "kind": "boat",
+          "locked": false,
+          "width": 4,
+          "depth": 8,
+          "height": 1.6,
+          "planAnchor": {
+            "x": -1.200000000000001,
+            "y": 0.035,
+            "z": -28.799999999999997
+          },
+          "rendererSupport": 0.035,
+          "shoreClearanceMetres": 4.8,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.47333333333333333,
+              "y": 0.3177777777777778
+            },
+            {
+              "x": 0.47333333333333333,
+              "y": 0.3622222222222222
+            },
+            {
+              "x": 0.5066666666666667,
+              "y": 0.3177777777777778
+            },
+            {
+              "x": 0.5066666666666667,
+              "y": 0.3622222222222222
+            }
+          ]
+        },
+        {
+          "entityId": "dual-channel-boat-south",
+          "kind": "boat",
+          "locked": false,
+          "width": 4,
+          "depth": 8,
+          "height": 1.9,
+          "planAnchor": {
+            "x": 2.400000000000002,
+            "y": 0.035,
+            "z": 27.000000000000004
+          },
+          "rendererSupport": 0.035,
+          "shoreClearanceMetres": 4.8,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.5033333333333333,
+              "y": 0.6277777777777778
+            },
+            {
+              "x": 0.5033333333333333,
+              "y": 0.6722222222222223
+            },
+            {
+              "x": 0.5366666666666667,
+              "y": 0.6277777777777778
+            },
+            {
+              "x": 0.5366666666666667,
+              "y": 0.6722222222222223
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "small-harbor",
+      "name": "基准 03 · 少树小港与双屋",
+      "file": "03-small-harbor.plan.json",
+      "purpose": "正方形小港、凹岸轮廓、只有一株树且没有灯塔，检查不同对象组合与船体近景。",
+      "world": {
+        "width": 120,
+        "depth": 120
+      },
+      "sha256": "dd175b2ea8cf4e25e9c03554623850220c4630da1a2a2ac9229b72d6bdc3b7dd",
+      "sourceFingerprint": "plan-v1-a1bb5248afd42394-1536",
+      "expected": {
+        "entityCount": 9,
+        "kindCounts": {
+          "land": 1,
+          "water": 1,
+          "road": 1,
+          "cabin": 2,
+          "lighthouse": 0,
+          "palm": 1,
+          "boat": 3
+        },
+        "fineTargetIds": [
+          "harbor-upper-cabin",
+          "harbor-inner-cabin",
+          "harbor-single-palm",
+          "harbor-boat-inlet",
+          "harbor-boat-outer",
+          "harbor-boat-inner"
+        ],
+        "lockedIds": [],
+        "preservedRegionIds": [
+          "harbor-land",
+          "harbor-water",
+          "harbor-footpath"
+        ]
+      },
+      "staticValidation": {
+        "planSchema": "passed",
+        "assetRequests": "passed",
+        "lockedAssetRequests": "rejected-as-required",
+        "planSpaceFootprints": "passed",
+        "nonOverlappingObjectEnvelopes": "passed",
+        "roadSupportSamples": "passed",
+        "originalWaterLevels": "passed",
+        "protectedAnchorAndRoadMicrorelief": "passed",
+        "rendererVisualQuality": "not-run",
+        "modelGeneration": "not-run",
+        "glbExportAndPortableReplay": "not-run"
+      },
+      "regions": [
+        {
+          "id": "harbor-land",
+          "kind": "land",
+          "areaSquareMetres": 4348.8,
+          "authoredHeight": 1.8
+        },
+        {
+          "id": "harbor-water",
+          "kind": "water",
+          "areaSquareMetres": 2288.88,
+          "authoredHeight": 0
+        }
+      ],
+      "envelopes": [
+        {
+          "entityId": "harbor-upper-cabin",
+          "kind": "cabin",
+          "locked": false,
+          "width": 8,
+          "depth": 7,
+          "height": 6.2,
+          "planAnchor": {
+            "x": -26.4,
+            "y": 1.8,
+            "z": -28.799999999999997
+          },
+          "rendererSupport": 1.92,
+          "shoreClearanceMetres": 13.2,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.2466666666666667,
+              "y": 0.23083333333333333
+            },
+            {
+              "x": 0.2466666666666667,
+              "y": 0.2891666666666667
+            },
+            {
+              "x": 0.31333333333333335,
+              "y": 0.23083333333333333
+            },
+            {
+              "x": 0.31333333333333335,
+              "y": 0.2891666666666667
+            }
+          ]
+        },
+        {
+          "entityId": "harbor-inner-cabin",
+          "kind": "cabin",
+          "locked": false,
+          "width": 8,
+          "depth": 7,
+          "height": 6,
+          "planAnchor": {
+            "x": -26.4,
+            "y": 1.8,
+            "z": 11.999999999999996
+          },
+          "rendererSupport": 1.92,
+          "shoreClearanceMetres": 18.764,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.2466666666666667,
+              "y": 0.5708333333333333
+            },
+            {
+              "x": 0.2466666666666667,
+              "y": 0.6291666666666667
+            },
+            {
+              "x": 0.31333333333333335,
+              "y": 0.5708333333333333
+            },
+            {
+              "x": 0.31333333333333335,
+              "y": 0.6291666666666667
+            }
+          ]
+        },
+        {
+          "entityId": "harbor-single-palm",
+          "kind": "palm",
+          "locked": false,
+          "width": 10,
+          "depth": 10,
+          "height": 9,
+          "planAnchor": {
+            "x": 22.799999999999994,
+            "y": 1.8,
+            "z": -31.200000000000003
+          },
+          "rendererSupport": 1.92,
+          "shoreClearanceMetres": 10.051,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.6483333333333333,
+              "y": 0.19833333333333333
+            },
+            {
+              "x": 0.6483333333333333,
+              "y": 0.2816666666666667
+            },
+            {
+              "x": 0.7316666666666666,
+              "y": 0.19833333333333333
+            },
+            {
+              "x": 0.7316666666666666,
+              "y": 0.2816666666666667
+            }
+          ]
+        },
+        {
+          "entityId": "harbor-boat-inlet",
+          "kind": "boat",
+          "locked": false,
+          "width": 4,
+          "depth": 8,
+          "height": 1.7,
+          "planAnchor": {
+            "x": 19.200000000000003,
+            "y": 0.035,
+            "z": 0
+          },
+          "rendererSupport": 0.035,
+          "shoreClearanceMetres": 11.345,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.6433333333333333,
+              "y": 0.4666666666666667
+            },
+            {
+              "x": 0.6433333333333333,
+              "y": 0.5333333333333333
+            },
+            {
+              "x": 0.6766666666666667,
+              "y": 0.4666666666666667
+            },
+            {
+              "x": 0.6766666666666667,
+              "y": 0.5333333333333333
+            }
+          ]
+        },
+        {
+          "entityId": "harbor-boat-outer",
+          "kind": "boat",
+          "locked": false,
+          "width": 4,
+          "depth": 8,
+          "height": 1.9,
+          "planAnchor": {
+            "x": 34.800000000000004,
+            "y": 0.035,
+            "z": 14.399999999999999
+          },
+          "rendererSupport": 0.035,
+          "shoreClearanceMetres": 16.1,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.7733333333333333,
+              "y": 0.5866666666666667
+            },
+            {
+              "x": 0.7733333333333333,
+              "y": 0.6533333333333333
+            },
+            {
+              "x": 0.8066666666666668,
+              "y": 0.5866666666666667
+            },
+            {
+              "x": 0.8066666666666668,
+              "y": 0.6533333333333333
+            }
+          ]
+        },
+        {
+          "entityId": "harbor-boat-inner",
+          "kind": "boat",
+          "locked": false,
+          "width": 4,
+          "depth": 8,
+          "height": 1.6,
+          "planAnchor": {
+            "x": 18.000000000000004,
+            "y": 0.035,
+            "z": 33.6
+          },
+          "rendererSupport": 0.035,
+          "shoreClearanceMetres": 9.722,
+          "footprintWithinSupportRegion": true,
+          "corners": [
+            {
+              "x": 0.6333333333333333,
+              "y": 0.7466666666666667
+            },
+            {
+              "x": 0.6333333333333333,
+              "y": 0.8133333333333334
+            },
+            {
+              "x": 0.6666666666666667,
+              "y": 0.7466666666666667
+            },
+            {
+              "x": 0.6666666666666667,
+              "y": 0.8133333333333334
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

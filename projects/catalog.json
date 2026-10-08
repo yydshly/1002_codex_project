@@ -560,6 +560,48 @@
           "text": "646 种语言的覆盖不代表质量一致；声音设计主要在中英文训练。源码 Apache 2.0、官方权重 CC-BY-NC；网页为知识展示，未提供真实 TTS 服务，本次未实测音质或速度。"
         }
       ]
+    },
+    {
+      "id": "014",
+      "slug": "tidewater",
+      "name": "Tidewater · 可控 3D 场景研究与提案",
+      "summary": "沿用用户原三岛布局，将参考图、绘笔与粗模绑定到稳定对象，由模型完善方案与部件几何，程序校验、归位、保护局部范围，支持对照、保存、GLB与独立网页工程交付；当前效果阶段保留，按业务需求扩展。",
+      "source": "https://github.com/dgreenheck/tidewater",
+      "sourceName": "Tidewater",
+      "status": "已完成",
+      "tags": [
+        "WebGPU",
+        "实时 3D",
+        "场景编辑",
+        "结构化控制",
+        "产品原型"
+      ],
+      "cover": "projects/014-tidewater/assets/original-scene-proposal-restored.png",
+      "coverAlt": "原三岛、红白灯塔、海岸木屋、棕榈与船只的实际提案浏览器场景",
+      "publishDir": "projects/014-tidewater/publish",
+      "demo": "https://yydshly.github.io/1002_codex_project/projects/014-tidewater/release.html",
+      "summarySections": [
+        {
+          "title": "能力",
+          "text": "参考图片人工标注、语义绘笔、真实粗模、物理材质、模型方案与部件几何、单对象/同类/全场景修改、同镜头比较、历史、对象介绍与提案交付。原三岛25对象，17物体已细化。"
+        },
+        {
+          "title": "原理与控制",
+          "text": "用户图或粗模确定空间，plan保留ID、位置、尺寸和锁定；模型读取布局、多视角与参考，程序校验来源、预算、包络和依赖后按ID归位。局部任务核对范围外几何、材质与朝向。"
+        },
+        {
+          "title": "真实结果",
+          "text": "原场景保留4轮精修历史、可重载GLB与独立网页工程；TRELLIS.2小屋和TripoSR三类资产已实际生成。控制适配器实际使用Codex CLI/ChatGPT，确切模型ID未返回。六木屋A/B作为独立业务示例。"
+        },
+        {
+          "title": "价值与场景",
+          "text": "让同一份作品可检查、局部修改、保存和交付，支持文旅/营地方案、品牌与商品展示；导览、教学、游戏、虚拟拍摄及真实业务数据按需求扩展。研究总图归纳探索、入口出口和控制思路。"
+        },
+        {
+          "title": "当前状态与边界",
+          "text": "当前视觉效果阶段保留。远端可浏览和编辑已有提案、下载成果；新模型生成与新工程打包需本机服务。主要覆盖七类海岸对象/区域；自动图像空间恢复、完整碰撞/拓扑验收与任意场景一次达到最终品质尚未实现。"
+        }
+      ]
     }
   ]
 }

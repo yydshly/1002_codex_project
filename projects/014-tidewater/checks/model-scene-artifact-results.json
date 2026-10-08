@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-10-04T17:17:55.603Z",
+  "source": "assets/model-scene-source-context.json",
+  "output": "assets/model-scene-coastal.glb",
+  "candidateId": "coastal-coding-model-20261005",
+  "sourceFingerprint": "plan-v1-dbe57e8c058ee800-20887",
+  "authoredEntities": 24,
+  "sourceLockedEntities": 0,
+  "coarseTriangles": 4532,
+  "candidateTriangles": 19162,
+  "vertexCount": 57486,
+  "glbNodes": 25,
+  "glbMeshes": 25,
+  "glbBytes": 2088016,
+  "sha256": "5e4b422cae0b361d9e738efbc52fa78a4168a72f8dc6b6af330f62fb79031dfe",
+  "checks": [
+    {
+      "name": "authored world, points, IDs, elevations, refinements and locks remain unchanged",
+      "pass": true
+    },
+    {
+      "name": "every original entity has the same geometry record ID",
+      "pass": true
+    },
+    {
+      "name": "original land base vertices and bounds are exactly preserved",
+      "pass": true
+    },
+    {
+      "name": "water and road vertices retain their exact original positions and elevations",
+      "pass": true
+    },
+    {
+      "name": "crafted marker geometry remains around the authored marker centres",
+      "pass": true
+    },
+    {
+      "name": "locking actual source entities preserves their complete coarse mesh and colors",
+      "pass": true
+    },
+    {
+      "name": "removing the model look restores the same original coarse geometry",
+      "pass": true
+    },
+    {
+      "name": "GLB preserves each authored object as an individually named selectable node and mesh",
+      "pass": true
+    },
+    {
+      "name": "GLB object attributes cover every triangle, including the background sea",
+      "pass": true
+    },
+    {
+      "name": "written GLB is byte-identical to the validated candidate export",
+      "pass": true
+    }
+  ]
+}

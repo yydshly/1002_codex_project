@@ -1,0 +1,16 @@
+{
+  "format": "tidewater-original-source-restoration.v1",
+  "checkedAt": "2026-10-08T02:07:11.800Z",
+  "passed": true,
+  "sourcePlanExact": true,
+  "geometryExact": true,
+  "recipeExact": true,
+  "historyExact": true,
+  "sourceFingerprint": "plan-v1-162afc9e3f46f3aa-22227",
+  "geometryJob": "40f03009-853b-40f3-b8dc-ca55f400e198",
+  "proposalDeliveryId": "560be513-9fa1-4ee5-b4dc-22c01e3aae8b",
+  "originalObjects": 25,
+  "fineObjects": 17,
+  "newModelJobStarted": false,
+  "otherExampleRetained": true
+}

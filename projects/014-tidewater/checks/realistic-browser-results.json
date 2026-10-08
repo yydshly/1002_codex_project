@@ -1,0 +1,57 @@
+{
+  "format": "tidewater-realistic-browser-checks.v1",
+  "checkedAt": "2026-10-04T18:00:29.086Z",
+  "origin": "http://127.0.0.1:4197",
+  "passed": 12,
+  "total": 12,
+  "checks": [
+    {
+      "name": "Empty layout cannot build a realistic scene",
+      "passed": true
+    },
+    {
+      "name": "Another nine-entity layout builds successfully",
+      "passed": true
+    },
+    {
+      "name": "Coarse comparison switches the rendered mode",
+      "passed": true
+    },
+    {
+      "name": "Return to realistic materials keeps source fingerprint",
+      "passed": true
+    },
+    {
+      "name": "Lighthouse camera switches without changing layout",
+      "passed": true
+    },
+    {
+      "name": "Sunset lighting switches successfully",
+      "passed": true
+    },
+    {
+      "name": "Rendered PNG screenshot is available to download",
+      "passed": true
+    },
+    {
+      "name": "Build, mode, camera, light and capture leave the full input description unchanged",
+      "passed": true
+    },
+    {
+      "name": "Moving a drawn object marks the scene stale without silently rebuilding",
+      "passed": true
+    },
+    {
+      "name": "A read-only stale tab reload preserves newer saved layout changes",
+      "passed": true
+    },
+    {
+      "name": "Explicit rebuild adopts the new source layout",
+      "passed": true
+    },
+    {
+      "name": "Updated scene has no shader or runtime errors",
+      "passed": true
+    }
+  ]
+}

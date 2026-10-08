@@ -1,0 +1,46 @@
+{
+  "checks": [
+    {
+      "name": "Valid GLB v2 envelope",
+      "pass": true
+    },
+    {
+      "name": "Embedded buffer only",
+      "pass": true
+    },
+    {
+      "name": "All images embedded as WebP",
+      "pass": true
+    },
+    {
+      "name": "PBR base color and metallic roughness",
+      "pass": true
+    },
+    {
+      "name": "Normals and UVs retained",
+      "pass": true
+    },
+    {
+      "name": "Every buffer view stays inside declared buffer",
+      "pass": true
+    },
+    {
+      "name": "Generated vertex positions finite",
+      "pass": true
+    },
+    {
+      "name": "Generated mesh nondegenerate bounds",
+      "pass": true
+    },
+    {
+      "name": "Triangle index count divisible by three",
+      "pass": true
+    },
+    {
+      "name": "Hosted inference success provenance",
+      "pass": true
+    }
+  ],
+  "passed": 10,
+  "total": 10
+}

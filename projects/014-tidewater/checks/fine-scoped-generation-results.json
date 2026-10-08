@@ -1,0 +1,846 @@
+{
+  "format": "tidewater-scoped-fine-generation-check.v1",
+  "checkedAt": "2026-10-07T15:01:38.544Z",
+  "method": "Read saved source and actual images; check CLI event/output evidence; validate and replay scoped merge; independently compare outside dependency records and all receipt hashes.",
+  "passed": true,
+  "jobs": [
+    {
+      "id": "2740da41-5b9a-448d-9198-23c3d0e99e1e",
+      "passed": true,
+      "sourceFingerprint": "plan-v1-162afc9e3f46f3aa-22227",
+      "scopeIds": [
+        "palm-fcf5655d",
+        "palm-fdc477ab",
+        "palm-ed6868f5",
+        "palm-4c3e36ec",
+        "palm-e4e12d5a",
+        "palm-a5e5d894",
+        "palm-c056ab5b",
+        "palm-b118d524"
+      ],
+      "sourceEntityCount": 25,
+      "outsideEntityCount": 9,
+      "modelProvider": "Codex CLI / ChatGPT",
+      "observedModel": null,
+      "startedAt": "2026-10-07T14:48:05.140Z",
+      "finishedAt": "2026-10-07T14:49:55.468Z",
+      "elapsedSeconds": 110.328,
+      "stats": {
+        "instances": 17,
+        "templates": 4,
+        "materials": 15,
+        "expandedParts": 1600,
+        "ribbonDefinitions": 18
+      },
+      "hashes": {
+        "source-plan.json": "948597a859dd27908735c03eef47dbe711cf4db4603ce95b8e906c819a6363ca",
+        "base-recipe.json": "011afe16722264f7a388ee1c88a68b52df43eb38e53bdc7824706e1052a26146",
+        "previous-geometry.json": "0619025038bdbfe0ad7be76e20439ec298d82f4f50c0f7d80dcfb7683294e786",
+        "raw-patch.json": "6f4784de2f637cb2906a1de58e9c52962d5a93e184b6c8d0fa98f81780db4d95",
+        "response.json": "6f4784de2f637cb2906a1de58e9c52962d5a93e184b6c8d0fa98f81780db4d95",
+        "patch.json": "56d61e5c73a62105f4f4358b00de709c0b5844a11102dd0dcda2597666118ce1",
+        "merged-geometry.json": "8321558805df3acc33e64d91a42ca7b9866ee45ccfcc473a27bea8019f62b0d2",
+        "geometry.json": "8321558805df3acc33e64d91a42ca7b9866ee45ccfcc473a27bea8019f62b0d2",
+        "schema.json": "9609295a9b551c39554216d0c0e51679a9217e2754eb37c12519d8ade245d3ca",
+        "prompt.txt": "3a1c8c97f130957848aaae8e4c59d45f66fd5506752d727928e663c8e72c8ae9"
+      },
+      "inputs": [
+        {
+          "file": "view-1.png",
+          "label": "用户原布局（空间和对象 ID 不变）",
+          "bytes": 87228,
+          "sha256": "9ce81d878ead99402fb34b0c9db488e358b5ec37b28531937a959e75402ac1ae",
+          "dimensions": {
+            "width": 960,
+            "height": 720
+          },
+          "passed": true
+        },
+        {
+          "file": "view-2.png",
+          "label": "选中棕榈的当前近景",
+          "bytes": 832002,
+          "sha256": "0baec3587bbeeb584e89ad1c9828e2e10f2dbcb69fbd79e049f32b451443160b",
+          "dimensions": {
+            "width": 652,
+            "height": 630
+          },
+          "passed": true
+        },
+        {
+          "file": "view-3.png",
+          "label": "选中对象另一侧（实际渲染）",
+          "bytes": 808774,
+          "sha256": "99a670ffc0826419c15938dad09df9bae9dec53e5b9f61a53aad296c7d0a2371",
+          "dimensions": {
+            "width": 652,
+            "height": 630
+          },
+          "passed": true
+        },
+        {
+          "file": "view-4.png",
+          "label": "当前整场景（范围外已有外观保留）",
+          "bytes": 677014,
+          "sha256": "2bf84d39344172675183609634f3f3e0fae06130b505e47ec15bab69a0d61b73",
+          "dimensions": {
+            "width": 652,
+            "height": 630
+          },
+          "passed": true
+        }
+      ],
+      "checks": [
+        {
+          "name": "real scoped receipt identity and status",
+          "passed": true
+        },
+        {
+          "name": "full source fingerprint and exact request scope",
+          "passed": true,
+          "details": {
+            "sourceFingerprint": "plan-v1-162afc9e3f46f3aa-22227",
+            "sourceEntities": 25,
+            "scopeIds": [
+              "palm-fcf5655d",
+              "palm-fdc477ab",
+              "palm-ed6868f5",
+              "palm-4c3e36ec",
+              "palm-e4e12d5a",
+              "palm-a5e5d894",
+              "palm-c056ab5b",
+              "palm-b118d524"
+            ],
+            "scopeKinds": [
+              "palm",
+              "palm",
+              "palm",
+              "palm",
+              "palm",
+              "palm",
+              "palm",
+              "palm"
+            ]
+          }
+        },
+        {
+          "name": "saved source-plan.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "948597a859dd27908735c03eef47dbe711cf4db4603ce95b8e906c819a6363ca",
+            "receipt": "948597a859dd27908735c03eef47dbe711cf4db4603ce95b8e906c819a6363ca"
+          }
+        },
+        {
+          "name": "saved base-recipe.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "011afe16722264f7a388ee1c88a68b52df43eb38e53bdc7824706e1052a26146",
+            "receipt": "011afe16722264f7a388ee1c88a68b52df43eb38e53bdc7824706e1052a26146"
+          }
+        },
+        {
+          "name": "saved previous-geometry.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "0619025038bdbfe0ad7be76e20439ec298d82f4f50c0f7d80dcfb7683294e786",
+            "receipt": "0619025038bdbfe0ad7be76e20439ec298d82f4f50c0f7d80dcfb7683294e786"
+          }
+        },
+        {
+          "name": "saved raw-patch.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "6f4784de2f637cb2906a1de58e9c52962d5a93e184b6c8d0fa98f81780db4d95",
+            "receipt": "6f4784de2f637cb2906a1de58e9c52962d5a93e184b6c8d0fa98f81780db4d95"
+          }
+        },
+        {
+          "name": "saved response.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "6f4784de2f637cb2906a1de58e9c52962d5a93e184b6c8d0fa98f81780db4d95",
+            "receipt": "6f4784de2f637cb2906a1de58e9c52962d5a93e184b6c8d0fa98f81780db4d95"
+          }
+        },
+        {
+          "name": "saved patch.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "56d61e5c73a62105f4f4358b00de709c0b5844a11102dd0dcda2597666118ce1",
+            "receipt": "56d61e5c73a62105f4f4358b00de709c0b5844a11102dd0dcda2597666118ce1"
+          }
+        },
+        {
+          "name": "saved merged-geometry.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "8321558805df3acc33e64d91a42ca7b9866ee45ccfcc473a27bea8019f62b0d2",
+            "receipt": "8321558805df3acc33e64d91a42ca7b9866ee45ccfcc473a27bea8019f62b0d2"
+          }
+        },
+        {
+          "name": "saved geometry.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "8321558805df3acc33e64d91a42ca7b9866ee45ccfcc473a27bea8019f62b0d2",
+            "receipt": "8321558805df3acc33e64d91a42ca7b9866ee45ccfcc473a27bea8019f62b0d2"
+          }
+        },
+        {
+          "name": "saved schema.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "9609295a9b551c39554216d0c0e51679a9217e2754eb37c12519d8ade245d3ca",
+            "receipt": "9609295a9b551c39554216d0c0e51679a9217e2754eb37c12519d8ade245d3ca"
+          }
+        },
+        {
+          "name": "saved prompt.txt SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "3a1c8c97f130957848aaae8e4c59d45f66fd5506752d727928e663c8e72c8ae9",
+            "receipt": "3a1c8c97f130957848aaae8e4c59d45f66fd5506752d727928e663c8e72c8ae9"
+          }
+        },
+        {
+          "name": "request hashes bind the same original plan and prior candidate",
+          "passed": true
+        },
+        {
+          "name": "raw patch is the untouched CLI response",
+          "passed": true
+        },
+        {
+          "name": "raw patch canonicalizes to persisted validated patch",
+          "passed": true
+        },
+        {
+          "name": "patch contains only scope IDs, never outside or locked entities",
+          "passed": true,
+          "details": {
+            "patchInstances": 8
+          }
+        },
+        {
+          "name": "independent merge replay reproduces stored complete geometry",
+          "passed": true
+        },
+        {
+          "name": "complete API geometry and merged geometry are byte-identical",
+          "passed": true
+        },
+        {
+          "name": "outside original instance records are strictly equal",
+          "passed": true,
+          "details": {
+            "count": 9,
+            "ids": [
+              "cabin-eee16daa",
+              "lighthouse-6a3ef8b5",
+              "boat-0da1d0f1",
+              "boat-036222fc",
+              "boat-295848e5",
+              "boat-e5c7631b",
+              "boat-5ee8e525",
+              "boat-dd2a2b43",
+              "boat-8b32d476"
+            ]
+          }
+        },
+        {
+          "name": "outside shared templates and every component record are strictly equal",
+          "passed": true,
+          "details": {
+            "count": 3,
+            "ids": [
+              "cabin_coast",
+              "lighthouse_main",
+              "boat_open"
+            ],
+            "beforeSha256": "d52a272fc5554301c364fca04ba06c4526ed7df55ee5cc6cd8e2404b2d8c5307",
+            "afterSha256": "d52a272fc5554301c364fca04ba06c4526ed7df55ee5cc6cd8e2404b2d8c5307"
+          }
+        },
+        {
+          "name": "outside referenced material records are strictly equal",
+          "passed": true,
+          "details": {
+            "count": 11,
+            "ids": [
+              "wood",
+              "darkwood",
+              "trim",
+              "roof",
+              "glass",
+              "stone",
+              "metal",
+              "lamp",
+              "hull",
+              "boataccent",
+              "boatinside"
+            ],
+            "beforeSha256": "a3790260a6d47fce832486d00ddecac0a0502c17e881cf56c9448f739209b939",
+            "afterSha256": "a3790260a6d47fce832486d00ddecac0a0502c17e881cf56c9448f739209b939"
+          }
+        },
+        {
+          "name": "every previous stable ID and rotation is retained",
+          "passed": true
+        },
+        {
+          "name": "scoped objects contain actual changed component/material dependencies",
+          "passed": true,
+          "details": [
+            {
+              "entityId": "palm-fcf5655d",
+              "beforeSha256": "5f9a5879924758249de4b3087712aee2444c07657135a30faff8a5a2b1d87284",
+              "afterSha256": "1c393e3b731e9f6616cec00f299893247d6d993c4751074211370185570c2add",
+              "changed": true
+            },
+            {
+              "entityId": "palm-fdc477ab",
+              "beforeSha256": "f3029774873606ba21708eb3aae502497ef7c262d2ea78111c8285a3e16e7ccd",
+              "afterSha256": "39067be68a0e22a0b335853e2a52357feea08414dc2d051616c2e2c14416e3a7",
+              "changed": true
+            },
+            {
+              "entityId": "palm-ed6868f5",
+              "beforeSha256": "1bc95bbe01eb1dc3b934ed97ec137830bc219c067980829876c5b78ee86ab03e",
+              "afterSha256": "2767da2e15346c56965da9acd3542373fb355378a48ecba5011b283af2b90f19",
+              "changed": true
+            },
+            {
+              "entityId": "palm-4c3e36ec",
+              "beforeSha256": "4cd94cbb2d8a9b5f10f3dd777f23fd55f7ebe9a27a8d735767078f2a77eb5fdd",
+              "afterSha256": "b59918a99cf31f7f797b317a24e5e199f09491f933f6cee776a0b81fae5e43c6",
+              "changed": true
+            },
+            {
+              "entityId": "palm-e4e12d5a",
+              "beforeSha256": "27f3d9db93cf6bc70f6e7bf5eda10a589158bb389170639464d3e8b8ef8268a4",
+              "afterSha256": "dba29c058f16b1576c71869eb4d8ac9e7f7bc3f05f8beb784691fb66d31dee35",
+              "changed": true
+            },
+            {
+              "entityId": "palm-a5e5d894",
+              "beforeSha256": "1e39c9b1b8a18a056f525d8f0e8cddf97b24708b4ce20b6057fa7650f02c0ee7",
+              "afterSha256": "df2f5ce63c2f4c330046ab1d31bd546a199018599b069c62badb839c3eb841c6",
+              "changed": true
+            },
+            {
+              "entityId": "palm-c056ab5b",
+              "beforeSha256": "9c9989affecf048229e31d3241eb03d06065226e9618a390c4bcbeba317bf592",
+              "afterSha256": "5ea4ca32af513c473d3aa143f368bc535e6c2a4de363435cf7e1422b91c42012",
+              "changed": true
+            },
+            {
+              "entityId": "palm-b118d524",
+              "beforeSha256": "665c8030081672527954f432670d9eb17947d74041e2148af21e064e5367c161",
+              "afterSha256": "f0b5d9b3c6409e36582648aa7eef2d10393e28136e71c710df7c3e1e490f8914",
+              "changed": true
+            }
+          ]
+        },
+        {
+          "name": "whole scene remains within shared budgets",
+          "passed": true,
+          "details": {
+            "instances": 17,
+            "templates": 4,
+            "materials": 15,
+            "expandedParts": 1600,
+            "ribbonDefinitions": 18
+          }
+        },
+        {
+          "name": "stored output schema matches independently reconstructed scoped schema",
+          "passed": true
+        },
+        {
+          "name": "real CLI event sequence identifies thread and completion usage",
+          "passed": true,
+          "details": {
+            "threadId": "01a116d6-0955-7260-b9de-2ef4dc7e73aa",
+            "eventTypes": [
+              "thread.started",
+              "turn.started",
+              "item.completed",
+              "turn.completed"
+            ],
+            "usage": {
+              "input_tokens": 54051,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 5352,
+              "reasoning_output_tokens": 1195
+            }
+          }
+        },
+        {
+          "name": "model message JSON equals the persisted original patch",
+          "passed": true
+        },
+        {
+          "name": "event stream contains no prohibited model tools",
+          "passed": true
+        },
+        {
+          "name": "request and receipt identify identical attached image records",
+          "passed": true
+        },
+        {
+          "name": "attached actual view-1.png byte length and SHA-256",
+          "passed": true
+        },
+        {
+          "name": "attached actual view-2.png byte length and SHA-256",
+          "passed": true
+        },
+        {
+          "name": "attached actual view-3.png byte length and SHA-256",
+          "passed": true
+        },
+        {
+          "name": "attached actual view-4.png byte length and SHA-256",
+          "passed": true
+        },
+        {
+          "name": "actual saved prompt contains original intent, full layout, base recipe, prior geometry and scope",
+          "passed": true
+        }
+      ],
+      "limits": [
+        "文件、参数及共享依赖一致性通过不代表写实品质、碰撞或拓扑已通过验收。",
+        "范围外组件和材质记录保持，不保证其阴影、反射或最终像素完全不变。",
+        "精细几何来自真实控制模型的部件设计；不是整场景神经图转 3D，CLI 未报告确切模型 ID。"
+      ]
+    },
+    {
+      "id": "40f03009-853b-40f3-b8dc-ca55f400e198",
+      "passed": true,
+      "sourceFingerprint": "plan-v1-162afc9e3f46f3aa-22227",
+      "scopeIds": [
+        "palm-fcf5655d",
+        "palm-fdc477ab",
+        "palm-ed6868f5",
+        "palm-4c3e36ec",
+        "palm-e4e12d5a",
+        "palm-a5e5d894",
+        "palm-c056ab5b",
+        "palm-b118d524"
+      ],
+      "sourceEntityCount": 25,
+      "outsideEntityCount": 9,
+      "modelProvider": "Codex CLI / ChatGPT",
+      "observedModel": null,
+      "startedAt": "2026-10-07T14:52:29.733Z",
+      "finishedAt": "2026-10-07T14:53:43.919Z",
+      "elapsedSeconds": 74.186,
+      "stats": {
+        "instances": 17,
+        "templates": 4,
+        "materials": 15,
+        "expandedParts": 2368,
+        "ribbonDefinitions": 18
+      },
+      "hashes": {
+        "source-plan.json": "948597a859dd27908735c03eef47dbe711cf4db4603ce95b8e906c819a6363ca",
+        "base-recipe.json": "011afe16722264f7a388ee1c88a68b52df43eb38e53bdc7824706e1052a26146",
+        "previous-geometry.json": "8321558805df3acc33e64d91a42ca7b9866ee45ccfcc473a27bea8019f62b0d2",
+        "raw-patch.json": "80ecd529118f9fa9d000667dc3d3900008d4d9c011f27a04e726d082ed2c8750",
+        "response.json": "80ecd529118f9fa9d000667dc3d3900008d4d9c011f27a04e726d082ed2c8750",
+        "patch.json": "ba7550f82bd1cee629af468021c46bc351d3a5692a703d8fddfa148f170f2e69",
+        "merged-geometry.json": "3c24431f5119544d4ee5c00e683d7f0888010e017e95049e26ce8ea4ed4b64f3",
+        "geometry.json": "3c24431f5119544d4ee5c00e683d7f0888010e017e95049e26ce8ea4ed4b64f3",
+        "schema.json": "9609295a9b551c39554216d0c0e51679a9217e2754eb37c12519d8ade245d3ca",
+        "prompt.txt": "0804a36f148caad22a9bad740e4e7da0dac92fcebb93128cf840e0dc25a270ac"
+      },
+      "inputs": [
+        {
+          "file": "view-1.png",
+          "label": "用户原布局（空间和对象 ID 不变）",
+          "bytes": 87228,
+          "sha256": "9ce81d878ead99402fb34b0c9db488e358b5ec37b28531937a959e75402ac1ae",
+          "dimensions": {
+            "width": 960,
+            "height": 720
+          },
+          "passed": true
+        },
+        {
+          "file": "view-2.png",
+          "label": "选中棕榈的当前近景",
+          "bytes": 841451,
+          "sha256": "1188a6567296ca84644fee06a205458d0c414096e47cdb40f2f6d3d51cfa6f45",
+          "dimensions": {
+            "width": 652,
+            "height": 630
+          },
+          "passed": true
+        },
+        {
+          "file": "view-3.png",
+          "label": "选中对象另一侧（实际渲染）",
+          "bytes": 805285,
+          "sha256": "d86936806ab2727055140a09c14661a805ff7e3e8345e884a0f0582ca0237f66",
+          "dimensions": {
+            "width": 652,
+            "height": 630
+          },
+          "passed": true
+        },
+        {
+          "file": "view-4.png",
+          "label": "当前整场景（范围外已有外观保留）",
+          "bytes": 670704,
+          "sha256": "78ea7eed783d5148bfe8ce261b32f4ae5042d22a6127a4a09621dbbe745ba96f",
+          "dimensions": {
+            "width": 652,
+            "height": 630
+          },
+          "passed": true
+        }
+      ],
+      "checks": [
+        {
+          "name": "real scoped receipt identity and status",
+          "passed": true
+        },
+        {
+          "name": "full source fingerprint and exact request scope",
+          "passed": true,
+          "details": {
+            "sourceFingerprint": "plan-v1-162afc9e3f46f3aa-22227",
+            "sourceEntities": 25,
+            "scopeIds": [
+              "palm-fcf5655d",
+              "palm-fdc477ab",
+              "palm-ed6868f5",
+              "palm-4c3e36ec",
+              "palm-e4e12d5a",
+              "palm-a5e5d894",
+              "palm-c056ab5b",
+              "palm-b118d524"
+            ],
+            "scopeKinds": [
+              "palm",
+              "palm",
+              "palm",
+              "palm",
+              "palm",
+              "palm",
+              "palm",
+              "palm"
+            ]
+          }
+        },
+        {
+          "name": "saved source-plan.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "948597a859dd27908735c03eef47dbe711cf4db4603ce95b8e906c819a6363ca",
+            "receipt": "948597a859dd27908735c03eef47dbe711cf4db4603ce95b8e906c819a6363ca"
+          }
+        },
+        {
+          "name": "saved base-recipe.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "011afe16722264f7a388ee1c88a68b52df43eb38e53bdc7824706e1052a26146",
+            "receipt": "011afe16722264f7a388ee1c88a68b52df43eb38e53bdc7824706e1052a26146"
+          }
+        },
+        {
+          "name": "saved previous-geometry.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "8321558805df3acc33e64d91a42ca7b9866ee45ccfcc473a27bea8019f62b0d2",
+            "receipt": "8321558805df3acc33e64d91a42ca7b9866ee45ccfcc473a27bea8019f62b0d2"
+          }
+        },
+        {
+          "name": "saved raw-patch.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "80ecd529118f9fa9d000667dc3d3900008d4d9c011f27a04e726d082ed2c8750",
+            "receipt": "80ecd529118f9fa9d000667dc3d3900008d4d9c011f27a04e726d082ed2c8750"
+          }
+        },
+        {
+          "name": "saved response.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "80ecd529118f9fa9d000667dc3d3900008d4d9c011f27a04e726d082ed2c8750",
+            "receipt": "80ecd529118f9fa9d000667dc3d3900008d4d9c011f27a04e726d082ed2c8750"
+          }
+        },
+        {
+          "name": "saved patch.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "ba7550f82bd1cee629af468021c46bc351d3a5692a703d8fddfa148f170f2e69",
+            "receipt": "ba7550f82bd1cee629af468021c46bc351d3a5692a703d8fddfa148f170f2e69"
+          }
+        },
+        {
+          "name": "saved merged-geometry.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "3c24431f5119544d4ee5c00e683d7f0888010e017e95049e26ce8ea4ed4b64f3",
+            "receipt": "3c24431f5119544d4ee5c00e683d7f0888010e017e95049e26ce8ea4ed4b64f3"
+          }
+        },
+        {
+          "name": "saved geometry.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "3c24431f5119544d4ee5c00e683d7f0888010e017e95049e26ce8ea4ed4b64f3",
+            "receipt": "3c24431f5119544d4ee5c00e683d7f0888010e017e95049e26ce8ea4ed4b64f3"
+          }
+        },
+        {
+          "name": "saved schema.json SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "9609295a9b551c39554216d0c0e51679a9217e2754eb37c12519d8ade245d3ca",
+            "receipt": "9609295a9b551c39554216d0c0e51679a9217e2754eb37c12519d8ade245d3ca"
+          }
+        },
+        {
+          "name": "saved prompt.txt SHA-256",
+          "passed": true,
+          "details": {
+            "actual": "0804a36f148caad22a9bad740e4e7da0dac92fcebb93128cf840e0dc25a270ac",
+            "receipt": "0804a36f148caad22a9bad740e4e7da0dac92fcebb93128cf840e0dc25a270ac"
+          }
+        },
+        {
+          "name": "request hashes bind the same original plan and prior candidate",
+          "passed": true
+        },
+        {
+          "name": "raw patch is the untouched CLI response",
+          "passed": true
+        },
+        {
+          "name": "raw patch canonicalizes to persisted validated patch",
+          "passed": true
+        },
+        {
+          "name": "patch contains only scope IDs, never outside or locked entities",
+          "passed": true,
+          "details": {
+            "patchInstances": 8
+          }
+        },
+        {
+          "name": "independent merge replay reproduces stored complete geometry",
+          "passed": true
+        },
+        {
+          "name": "complete API geometry and merged geometry are byte-identical",
+          "passed": true
+        },
+        {
+          "name": "outside original instance records are strictly equal",
+          "passed": true,
+          "details": {
+            "count": 9,
+            "ids": [
+              "cabin-eee16daa",
+              "lighthouse-6a3ef8b5",
+              "boat-0da1d0f1",
+              "boat-036222fc",
+              "boat-295848e5",
+              "boat-e5c7631b",
+              "boat-5ee8e525",
+              "boat-dd2a2b43",
+              "boat-8b32d476"
+            ]
+          }
+        },
+        {
+          "name": "outside shared templates and every component record are strictly equal",
+          "passed": true,
+          "details": {
+            "count": 3,
+            "ids": [
+              "cabin_coast",
+              "lighthouse_main",
+              "boat_open"
+            ],
+            "beforeSha256": "d52a272fc5554301c364fca04ba06c4526ed7df55ee5cc6cd8e2404b2d8c5307",
+            "afterSha256": "d52a272fc5554301c364fca04ba06c4526ed7df55ee5cc6cd8e2404b2d8c5307"
+          }
+        },
+        {
+          "name": "outside referenced material records are strictly equal",
+          "passed": true,
+          "details": {
+            "count": 11,
+            "ids": [
+              "wood",
+              "darkwood",
+              "trim",
+              "roof",
+              "glass",
+              "stone",
+              "metal",
+              "lamp",
+              "hull",
+              "boataccent",
+              "boatinside"
+            ],
+            "beforeSha256": "a3790260a6d47fce832486d00ddecac0a0502c17e881cf56c9448f739209b939",
+            "afterSha256": "a3790260a6d47fce832486d00ddecac0a0502c17e881cf56c9448f739209b939"
+          }
+        },
+        {
+          "name": "every previous stable ID and rotation is retained",
+          "passed": true
+        },
+        {
+          "name": "scoped objects contain actual changed component/material dependencies",
+          "passed": true,
+          "details": [
+            {
+              "entityId": "palm-fcf5655d",
+              "beforeSha256": "1c393e3b731e9f6616cec00f299893247d6d993c4751074211370185570c2add",
+              "afterSha256": "c54619e8691357c22af2db2ad3f99c1df89d0982613e3781297e115d82d69e37",
+              "changed": true
+            },
+            {
+              "entityId": "palm-fdc477ab",
+              "beforeSha256": "39067be68a0e22a0b335853e2a52357feea08414dc2d051616c2e2c14416e3a7",
+              "afterSha256": "a20188cf8f4d4f138f81a5e147a458d0afa2ee71942eb21e7e8fc72ea7e5b067",
+              "changed": true
+            },
+            {
+              "entityId": "palm-ed6868f5",
+              "beforeSha256": "2767da2e15346c56965da9acd3542373fb355378a48ecba5011b283af2b90f19",
+              "afterSha256": "f2fe26ddc7d37d86622960156a00d787f411b064630c65237ef5fdbdbaabc6ea",
+              "changed": true
+            },
+            {
+              "entityId": "palm-4c3e36ec",
+              "beforeSha256": "b59918a99cf31f7f797b317a24e5e199f09491f933f6cee776a0b81fae5e43c6",
+              "afterSha256": "9f10be1d0616d79a3e55cb2e8bbca03e7ad16cfa0c428c3c4a8464990fa7288e",
+              "changed": true
+            },
+            {
+              "entityId": "palm-e4e12d5a",
+              "beforeSha256": "dba29c058f16b1576c71869eb4d8ac9e7f7bc3f05f8beb784691fb66d31dee35",
+              "afterSha256": "30cea888af3715171dacd8f03f2b08d49f1ee673b2470c5e38c6db28d0599c98",
+              "changed": true
+            },
+            {
+              "entityId": "palm-a5e5d894",
+              "beforeSha256": "df2f5ce63c2f4c330046ab1d31bd546a199018599b069c62badb839c3eb841c6",
+              "afterSha256": "dfe04b2416364a0a289a945282e53e33837edab531d1dd0d1fef094f3c9a4a46",
+              "changed": true
+            },
+            {
+              "entityId": "palm-c056ab5b",
+              "beforeSha256": "5ea4ca32af513c473d3aa143f368bc535e6c2a4de363435cf7e1422b91c42012",
+              "afterSha256": "3789125d76d671146c597a0101f0bda3110c04649eee9570c836bfdd6f86f8e7",
+              "changed": true
+            },
+            {
+              "entityId": "palm-b118d524",
+              "beforeSha256": "f0b5d9b3c6409e36582648aa7eef2d10393e28136e71c710df7c3e1e490f8914",
+              "afterSha256": "7e1845c31b740cce10e25fd2cbc05fb94fc5bbe14416ecdaca51d7d6fa2cbfc7",
+              "changed": true
+            }
+          ]
+        },
+        {
+          "name": "whole scene remains within shared budgets",
+          "passed": true,
+          "details": {
+            "instances": 17,
+            "templates": 4,
+            "materials": 15,
+            "expandedParts": 2368,
+            "ribbonDefinitions": 18
+          }
+        },
+        {
+          "name": "stored output schema matches independently reconstructed scoped schema",
+          "passed": true
+        },
+        {
+          "name": "real CLI event sequence identifies thread and completion usage",
+          "passed": true,
+          "details": {
+            "threadId": "01a116da-15e8-75b3-a11a-84534e038d2e",
+            "eventTypes": [
+              "thread.started",
+              "turn.started",
+              "item.completed",
+              "turn.completed"
+            ],
+            "usage": {
+              "input_tokens": 54267,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 4671,
+              "reasoning_output_tokens": 396
+            }
+          }
+        },
+        {
+          "name": "model message JSON equals the persisted original patch",
+          "passed": true
+        },
+        {
+          "name": "event stream contains no prohibited model tools",
+          "passed": true
+        },
+        {
+          "name": "request and receipt identify identical attached image records",
+          "passed": true
+        },
+        {
+          "name": "attached actual view-1.png byte length and SHA-256",
+          "passed": true
+        },
+        {
+          "name": "attached actual view-2.png byte length and SHA-256",
+          "passed": true
+        },
+        {
+          "name": "attached actual view-3.png byte length and SHA-256",
+          "passed": true
+        },
+        {
+          "name": "attached actual view-4.png byte length and SHA-256",
+          "passed": true
+        },
+        {
+          "name": "actual saved prompt contains original intent, full layout, base recipe, prior geometry and scope",
+          "passed": true
+        }
+      ],
+      "limits": [
+        "文件、参数及共享依赖一致性通过不代表写实品质、碰撞或拓扑已通过验收。",
+        "范围外组件和材质记录保持，不保证其阴影、反射或最终像素完全不变。",
+        "精细几何来自真实控制模型的部件设计；不是整场景神经图转 3D，CLI 未报告确切模型 ID。"
+      ]
+    }
+  ],
+  "sequentialLineage": [
+    {
+      "previousJobId": "2740da41-5b9a-448d-9198-23c3d0e99e1e",
+      "currentJobId": "40f03009-853b-40f3-b8dc-ca55f400e198",
+      "passed": true,
+      "previousMergedSha256": "8321558805df3acc33e64d91a42ca7b9866ee45ccfcc473a27bea8019f62b0d2",
+      "currentPreviousSha256": "8321558805df3acc33e64d91a42ca7b9866ee45ccfcc473a27bea8019f62b0d2",
+      "updatedInspectionImages": [
+        "view-2.png",
+        "view-3.png",
+        "view-4.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "date": "2026-10-04T15:54:03.402Z",
+  "scope": "参考图片与绘笔布局端到端、真实轻量WebGPU粗模；旧原生海岛仅检查页面/入口与配置，未重复完整海洋渲染测试",
+  "renderer": "Chrome WebGPU",
+  "checks": [
+    {
+      "name": "绘笔入口初始为空方案，没有注入模板",
+      "pass": true
+    },
+    {
+      "name": "原海岛配置已独立备份且保持原值",
+      "pass": true
+    },
+    {
+      "name": "真实绘笔事件建立闭合陆地区域",
+      "pass": true
+    },
+    {
+      "name": "道路与标记生成独立稳定对象",
+      "pass": true
+    },
+    {
+      "name": "布局生成真实 GPU 三角形粗模",
+      "pass": true
+    },
+    {
+      "name": "位置和高度改变真实灯塔几何",
+      "pass": true
+    },
+    {
+      "name": "锁定拒绝变换和删除",
+      "pass": true
+    },
+    {
+      "name": "清除未锁定保留已确认灯塔",
+      "pass": true
+    },
+    {
+      "name": "撤销恢复完整布局",
+      "pass": true
+    },
+    {
+      "name": "重做恢复清除结果",
+      "pass": true
+    },
+    {
+      "name": "画布拖动只移动选中对象",
+      "pass": true
+    },
+    {
+      "name": "3D 几何拾取联动对象属性",
+      "pass": true
+    },
+    {
+      "name": "参考图片入口切换保留布局",
+      "pass": true
+    },
+    {
+      "name": "真实图片上传解码并嵌入方案",
+      "pass": true
+    },
+    {
+      "name": "人工图片标注增加粗模对象并保留锁定内容",
+      "pass": true
+    },
+    {
+      "name": "图片对照与俯视布局可切换，画布实际变化",
+      "pass": true
+    },
+    {
+      "name": "生成说明包含布局、图片与外观意图",
+      "pass": true
+    },
+    {
+      "name": "IndexedDB 恢复图片、布局、意图与锁定",
+      "pass": true
+    },
+    {
+      "name": "创作保存没有覆盖原海岛存档",
+      "pass": true
+    },
+    {
+      "name": "实际导出完整 JSON 文件",
+      "pass": true
+    },
+    {
+      "name": "导入完整图片方案可继续编辑",
+      "pass": true
+    },
+    {
+      "name": "无效导入保留当前方案",
+      "pass": true
+    },
+    {
+      "name": "导入可撤销",
+      "pass": true
+    },
+    {
+      "name": "显式载入不同布局改变实际几何",
+      "pass": true
+    },
+    {
+      "name": "手动更新模式新增对象不破坏旧预览",
+      "pass": true
+    },
+    {
+      "name": "手动更新把新对象加入真实粗模",
+      "pass": true
+    },
+    {
+      "name": "创作页面 1440px 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "创作页面 1024px 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "创作页面 768px 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "创作页面 390px 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "创作页面 320px 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "导入非法区域操作不会部分修改布局",
+      "pass": true
+    },
+    {
+      "name": "保存的旧版源码与截图哈希完整",
+      "pass": true
+    },
+    {
+      "name": "原工作台新增入口 1440px 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "原工作台新增入口 1024px 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "原工作台新增入口 768px 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "原工作台新增入口 390px 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "原工作台新增入口 320px 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "原工作台有两个实验入口及保留版本",
+      "pass": true
+    },
+    {
+      "name": "旧版页面可打开且保持原六对象编辑",
+      "pass": true
+    },
+    {
+      "name": "页面无异常或缺失资源",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "missing": []
+}

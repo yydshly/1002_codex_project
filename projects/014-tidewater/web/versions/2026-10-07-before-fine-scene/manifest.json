@@ -1,0 +1,30 @@
+[
+  {
+    "path": "web/create.html",
+    "sha256": "05bf3c3c27f76f61be8cac624f6e5eb06e057388762d6aaee7a5b7e817b60250"
+  },
+  {
+    "path": "web/scene-completion.js",
+    "sha256": "78c0b141add5036eb00875b5c44bfaed50e142a3c18a1a200e0f8fd334fb159d"
+  },
+  {
+    "path": "web/scene-completion.css",
+    "sha256": "83489a26448a0bbf66b54ee7f8e6bec2c510fa59fb0d33553fdb46bd1aea1d41"
+  },
+  {
+    "path": "web/scene-completion-core.js",
+    "sha256": "68dc47927f229c59f96eb924c30a7b6c466f7be132c78805c292bbdeec23a209"
+  },
+  {
+    "path": "web/realistic/scene.js",
+    "sha256": "dbe1d5a99ce9bf6590d98a06563f65a90ac8c26c76cf982301fb77a5a3ad102f"
+  },
+  {
+    "path": "assets/scene-completion-final.export.json",
+    "sha256": "ef5fe051a0ce571a0e233118d097764f8f83dc178a1a05a1318f0434f163920f"
+  },
+  {
+    "path": "assets/scene-completion-workbench-v1.png",
+    "sha256": "9f7201d63d367bba673f20da1b2d995afeac06cb5dd2c41bbd464df92195fada"
+  }
+]

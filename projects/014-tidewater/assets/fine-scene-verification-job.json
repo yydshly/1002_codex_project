@@ -1,0 +1,108 @@
+{
+  "at": "2026-10-07T04:20:05.034Z",
+  "httpStatus": 202,
+  "jobId": "964354b1-7d8b-4df5-b69a-cbce19c01ee8",
+  "requestIntent": "保持这份已确认三岛海岸布局和红白灯塔目标，基于图和原粗模完成新的精细部件：小屋有可信屋顶、独立门窗框与门、前廊和廊柱；灯塔有连续塔身、红白环带、灯室玻璃、平台和细栏杆；棕榈有弯曲连续树干、至少 8 片自然下垂的薄叶片，避免厚重球状树冠；船只拥有平顺船壳、船沿和船舱或坐凳。所有对象原位置、高度、数量和朝向保持。统一自然海岸材料，细节有结构意义，避免悬空、穿插和过厚细杆。模板可复用。优先 4 种高质量模板，每模板约 8 到 35 个独立部件，总展开不超过 1000 部件；需自定义轮廓时使用真实 mesh 顶点，不能只用改色代替几何。这是精细可编辑项目候选，不声称已经写实验收。",
+  "result": {
+    "id": "964354b1-7d8b-4df5-b69a-cbce19c01ee8",
+    "status": "succeeded",
+    "receipt": {
+      "format": "tidewater-fine-geometry-receipt.v1",
+      "id": "964354b1-7d8b-4df5-b69a-cbce19c01ee8",
+      "provider": "Codex CLI / ChatGPT",
+      "cliVersion": "codex-cli 0.152.1",
+      "method": "model-authored-component-meshes",
+      "generatedWholeSceneNeurally": false,
+      "startedAt": "2026-10-07T04:20:05.030Z",
+      "finishedAt": "2026-10-07T04:21:35.381Z",
+      "sourceFingerprint": "plan-v1-162afc9e3f46f3aa-22227",
+      "planSha256": "948597a859dd27908735c03eef47dbe711cf4db4603ce95b8e906c819a6363ca",
+      "baseRecipeSha256": "63b51b1800bbcd447d0ad3a4177a2b7932cf732ccd57b1cb593d9a69026fc814",
+      "images": [
+        {
+          "file": "view-1.png",
+          "label": "用户绘笔布局（原轮廓与稳定对象 ID）",
+          "mime": "image/png",
+          "bytes": 87228,
+          "sha256": "9ce81d878ead99402fb34b0c9db488e358b5ec37b28531937a959e75402ac1ae"
+        },
+        {
+          "file": "view-2.png",
+          "label": "原粗模斜视（空间与高度）",
+          "mime": "image/png",
+          "bytes": 51151,
+          "sha256": "cbe9f23f822e3b32f16b681b658d2984cb0d90875c81a6e1307885b9f9bc6511"
+        },
+        {
+          "file": "view-3.png",
+          "label": "原粗模另一侧（相同空间）",
+          "mime": "image/png",
+          "bytes": 44946,
+          "sha256": "1d537dd1590ac2bda8b6f138bc830d4956072d2ffe46bdd210ef926ef0b65c66"
+        },
+        {
+          "file": "view-4.png",
+          "label": "当前已确认场景（局部修改前的完整外观）",
+          "mime": "image/png",
+          "bytes": 861622,
+          "sha256": "4e554618747b7e9500ecbd90ab768a65e50594ad92791694600cf1c47fa6c7b0"
+        }
+      ],
+      "threadId": "01a11497-13dd-7703-ba10-41a12ff128f9",
+      "model": null,
+      "usage": {
+        "input_tokens": 39996,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 7404,
+        "reasoning_output_tokens": 217
+      },
+      "eventCount": 5,
+      "exitCode": 0,
+      "sandbox": "read-only",
+      "tools": "disabled",
+      "status": "succeeded",
+      "promptSha256": "1a63440df7e19050021bb330faed1d27732cf5e8db94893a180e6cfe2ab631e1",
+      "schemaSha256": "a8622b1bb342fca7a0846022f600d4eb5fc468bee39ff7512ff91045a9a99376",
+      "rawOutputSha256": "2f52f37bc31fdceaad6dc1f2b1007ede5c2295545f81ecd5b77c93e8c7070773",
+      "geometrySha256": "a33a6d905640a7544fd5e9f4169d4a8c6523d3eb23e7564f5335d389f6af04b7",
+      "consistency": {
+        "preservedIds": true,
+        "preservedSourcePlan": true,
+        "preservedLocks": true,
+        "preservedInstanceRotations": true,
+        "instances": 17,
+        "templates": 4,
+        "renderedParts": 249,
+        "visualQuality": "needs-user-review"
+      }
+    },
+    "templates": [
+      {
+        "id": "cabin",
+        "label": "带前廊海岸小屋",
+        "parts": 15,
+        "expanded": 18
+      },
+      {
+        "id": "lighthouse",
+        "label": "红白条纹灯塔与灯室",
+        "parts": 16,
+        "expanded": 27
+      },
+      {
+        "id": "palm",
+        "label": "弯干薄叶棕榈",
+        "parts": 13,
+        "expanded": 15
+      },
+      {
+        "id": "boat",
+        "label": "细节木质海岸小艇",
+        "parts": 9,
+        "expanded": 12
+      }
+    ]
+  },
+  "checkedAt": "2026-10-07T04:21:41.487Z"
+}

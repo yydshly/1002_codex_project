@@ -1,0 +1,1477 @@
+{
+  "format": "tidewater-fine-geometry-model-results.v1",
+  "jobId": "964354b1-7d8b-4df5-b69a-cbce19c01ee8",
+  "sourceFiles": {
+    "bundle": "assets/control-model/jobs/964354b1-7d8b-4df5-b69a-cbce19c01ee8/geometry.json",
+    "sourcePlan": "assets/control-model/jobs/964354b1-7d8b-4df5-b69a-cbce19c01ee8/source-plan.json",
+    "baseRecipe": "assets/control-model/jobs/964354b1-7d8b-4df5-b69a-cbce19c01ee8/base-recipe.json"
+  },
+  "bundleSha256": "a33a6d905640a7544fd5e9f4169d4a8c6523d3eb23e7564f5335d389f6af04b7",
+  "inputUnchanged": true,
+  "passedChecks": [
+    "真实模型bundle及baseRecipe契约通过",
+    "17个未锁定目标ID均为独立新几何",
+    "全部顶点和变换有限",
+    "旋转后的整体包络与接地检查通过",
+    "源布局未修改",
+    "249展开部件未超2500预算",
+    "实际顶点/面数未超运行时预算"
+  ],
+  "checks": {
+    "format": "tidewater-fine-geometry-checks.v1",
+    "sourceFingerprint": "plan-v1-162afc9e3f46f3aa-22227",
+    "entityIds": [
+      "cabin-eee16daa",
+      "lighthouse-6a3ef8b5",
+      "palm-fcf5655d",
+      "palm-fdc477ab",
+      "palm-ed6868f5",
+      "palm-4c3e36ec",
+      "palm-e4e12d5a",
+      "palm-a5e5d894",
+      "palm-c056ab5b",
+      "palm-b118d524",
+      "boat-0da1d0f1",
+      "boat-036222fc",
+      "boat-295848e5",
+      "boat-e5c7631b",
+      "boat-5ee8e525",
+      "boat-dd2a2b43",
+      "boat-8b32d476"
+    ],
+    "templateCount": 4,
+    "partCount": 249,
+    "vertices": 7384,
+    "triangles": 7100,
+    "placements": [
+      {
+        "entityId": "cabin-eee16daa",
+        "templateId": "cabin",
+        "rotationDeg": -8,
+        "anchor": {
+          "x": 19.8411017885769,
+          "y": 3,
+          "z": 6.01674291479476
+        },
+        "bounds": {
+          "min": [
+            16.235155585241035,
+            3,
+            2.5167429147947598
+          ],
+          "max": [
+            23.447047991912765,
+            8.346202874155392,
+            9.51674291479476
+          ]
+        },
+        "dimensions": {
+          "width": 7.21189240667173,
+          "height": 5.3462028741553915,
+          "depth": 7
+        },
+        "envelope": {
+          "width": 8,
+          "height": 7,
+          "depth": 7
+        },
+        "fitScale": 0.8581385030747016,
+        "waterlineImmersion": 0,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "lighthouse-6a3ef8b5",
+        "templateId": "lighthouse",
+        "rotationDeg": 0,
+        "anchor": {
+          "x": -15.487000456667898,
+          "y": 3.035,
+          "z": 10.64419429866954
+        },
+        "bounds": {
+          "min": [
+            -16.710529868432605,
+            3.035,
+            9.420664886904834
+          ],
+          "max": [
+            -14.263471044903191,
+            21.034999999999997,
+            11.867723710434245
+          ]
+        },
+        "dimensions": {
+          "width": 2.4470588235294137,
+          "height": 17.999999999999996,
+          "depth": 2.44705882352941
+        },
+        "envelope": {
+          "width": 5.2,
+          "height": 18,
+          "depth": 5.2
+        },
+        "fitScale": 0.9049773755656109,
+        "waterlineImmersion": 0,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "palm-fcf5655d",
+        "templateId": "palm",
+        "rotationDeg": -11,
+        "anchor": {
+          "x": 6.634338690396158,
+          "y": 3,
+          "z": 29.815116193916168
+        },
+        "bounds": {
+          "min": [
+            1.6343386903961568,
+            2.9999999999999996,
+            24.874213288112713
+          ],
+          "max": [
+            11.634338690396156,
+            11.342822805239383,
+            34.75601909971962
+          ]
+        },
+        "dimensions": {
+          "width": 10,
+          "height": 8.342822805239383,
+          "depth": 9.88180581160691
+        },
+        "envelope": {
+          "width": 10,
+          "height": 12,
+          "depth": 10
+        },
+        "fitScale": 0.7131663532413575,
+        "waterlineImmersion": 0,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "palm-fdc477ab",
+        "templateId": "palm",
+        "rotationDeg": 9,
+        "anchor": {
+          "x": 19.180773457733213,
+          "y": 3,
+          "z": 29.815116193916168
+        },
+        "bounds": {
+          "min": [
+            14.180773457733217,
+            3,
+            24.833010283478135
+          ],
+          "max": [
+            24.180773457733217,
+            11.187393228345949,
+            34.797222104354205
+          ]
+        },
+        "dimensions": {
+          "width": 10,
+          "height": 8.187393228345949,
+          "depth": 9.96421182087607
+        },
+        "envelope": {
+          "width": 10,
+          "height": 12,
+          "depth": 10
+        },
+        "fitScale": 0.6998798257522054,
+        "waterlineImmersion": 0,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "palm-ed6868f5",
+        "templateId": "palm",
+        "rotationDeg": -5,
+        "anchor": {
+          "x": 13.89805612730357,
+          "y": 3,
+          "z": 24.526578711490366
+        },
+        "bounds": {
+          "min": [
+            8.89805612730357,
+            2.9999999999999996,
+            19.606934789150483
+          ],
+          "max": [
+            18.89805612730357,
+            11.279753770338045,
+            29.44622263383025
+          ]
+        },
+        "dimensions": {
+          "width": 9.999999999999998,
+          "height": 8.279753770338045,
+          "depth": 9.839287844679767
+        },
+        "envelope": {
+          "width": 10,
+          "height": 12,
+          "depth": 10
+        },
+        "fitScale": 0.707775046884618,
+        "waterlineImmersion": 0,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "palm-4c3e36ec",
+        "templateId": "palm",
+        "rotationDeg": 13,
+        "anchor": {
+          "x": -2.940573246304201,
+          "y": 3,
+          "z": 24.857121760765878
+        },
+        "bounds": {
+          "min": [
+            -7.869443652694601,
+            3,
+            19.857121760765878
+          ],
+          "max": [
+            1.9882971600861992,
+            11.029408977265762,
+            29.857121760765878
+          ]
+        },
+        "dimensions": {
+          "width": 9.8577408127808,
+          "height": 8.029408977265762,
+          "depth": 10
+        },
+        "envelope": {
+          "width": 10,
+          "height": 12,
+          "depth": 10
+        },
+        "fitScale": 0.6863749180198171,
+        "waterlineImmersion": 0,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "palm-e4e12d5a",
+        "templateId": "palm",
+        "rotationDeg": -14,
+        "anchor": {
+          "x": -18.128351564909373,
+          "y": 3,
+          "z": 30.80671508054622
+        },
+        "bounds": {
+          "min": [
+            -23.128351564909373,
+            3.0000000000000004,
+            25.855001317854185
+          ],
+          "max": [
+            -13.128351564909373,
+            11.4094859194899,
+            35.75842884323825
+          ]
+        },
+        "dimensions": {
+          "width": 10,
+          "height": 8.4094859194899,
+          "depth": 9.903427525384064
+        },
+        "envelope": {
+          "width": 10,
+          "height": 12,
+          "depth": 10
+        },
+        "fitScale": 0.7188648909180652,
+        "waterlineImmersion": 0,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "palm-a5e5d894",
+        "templateId": "palm",
+        "rotationDeg": 7,
+        "anchor": {
+          "x": -21.430046117941227,
+          "y": 3,
+          "z": 23.204436775584785
+        },
+        "bounds": {
+          "min": [
+            -26.430046117941224,
+            3,
+            18.267817105509152
+          ],
+          "max": [
+            -16.430046117941224,
+            11.223695949773745,
+            28.141056445660418
+          ]
+        },
+        "dimensions": {
+          "width": 10,
+          "height": 8.223695949773745,
+          "depth": 9.873239340151265
+        },
+        "envelope": {
+          "width": 10,
+          "height": 12,
+          "depth": 10
+        },
+        "fitScale": 0.7029830775001796,
+        "waterlineImmersion": 0,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "palm-c056ab5b",
+        "templateId": "palm",
+        "rotationDeg": -8,
+        "anchor": {
+          "x": -2.940573246304201,
+          "y": 3,
+          "z": 32.78991285380634
+        },
+        "bounds": {
+          "min": [
+            -7.940573246304201,
+            3.0000000000000004,
+            27.859679769931503
+          ],
+          "max": [
+            2.059426753695799,
+            11.299778472407128,
+            37.720145937681195
+          ]
+        },
+        "dimensions": {
+          "width": 10,
+          "height": 8.299778472407128,
+          "depth": 9.860466167749692
+        },
+        "envelope": {
+          "width": 10,
+          "height": 12,
+          "depth": 10
+        },
+        "fitScale": 0.7094868108861719,
+        "waterlineImmersion": 0,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "palm-b118d524",
+        "templateId": "palm",
+        "rotationDeg": 12,
+        "anchor": {
+          "x": 15.54890718230617,
+          "y": 3,
+          "z": 40.722703946846806
+        },
+        "bounds": {
+          "min": [
+            10.59814121263737,
+            2.9999999999999996,
+            35.7227039468468
+          ],
+          "max": [
+            20.499673151974967,
+            11.07177487765966,
+            45.7227039468468
+          ]
+        },
+        "dimensions": {
+          "width": 9.901531939337596,
+          "height": 8.07177487765966,
+          "depth": 10
+        },
+        "envelope": {
+          "width": 10,
+          "height": 12,
+          "depth": 10
+        },
+        "fitScale": 0.6899964661925446,
+        "waterlineImmersion": 0,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "boat-0da1d0f1",
+        "templateId": "boat",
+        "rotationDeg": -12,
+        "anchor": {
+          "x": -2.940573246304201,
+          "y": 3.035,
+          "z": 12.296849022654133
+        },
+        "bounds": {
+          "min": [
+            -4.940573246304201,
+            2.8183515028801125,
+            8.376524740279873
+          ],
+          "max": [
+            -0.9405732463042011,
+            3.4373472089369344,
+            16.217173305028393
+          ]
+        },
+        "dimensions": {
+          "width": 3.9999999999999996,
+          "height": 0.6189957060568219,
+          "depth": 7.84064856474852
+        },
+        "envelope": {
+          "width": 4,
+          "height": 2,
+          "depth": 8
+        },
+        "fitScale": 0.581280122116742,
+        "waterlineImmersion": 0.21664849711988765,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "boat-036222fc",
+        "templateId": "boat",
+        "rotationDeg": 18,
+        "anchor": {
+          "x": 49.22616592952169,
+          "y": 0,
+          "z": 25.848705516797686
+        },
+        "bounds": {
+          "min": [
+            47.22616592952169,
+            -0.2049014072811479,
+            22.197853165078026
+          ],
+          "max": [
+            51.22616592952169,
+            0.3805311849507031,
+            29.499557868517343
+          ]
+        },
+        "dimensions": {
+          "width": 4,
+          "height": 0.585432592231851,
+          "depth": 7.3017047034393165
+        },
+        "envelope": {
+          "width": 4,
+          "height": 2,
+          "depth": 8
+        },
+        "fitScale": 0.5497620183368649,
+        "waterlineImmersion": 0.20490140728114783,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "boat-295848e5",
+        "templateId": "boat",
+        "rotationDeg": -9,
+        "anchor": {
+          "x": 64.08378008270503,
+          "y": 0,
+          "z": 29.81510106331793
+        },
+        "bounds": {
+          "min": [
+            62.100652617034434,
+            -0.22026504815096434,
+            25.81510106331793
+          ],
+          "max": [
+            66.06690754837564,
+            0.4090636608517909,
+            33.815101063317925
+          ]
+        },
+        "dimensions": {
+          "width": 3.9662549313412043,
+          "height": 0.6293287090027553,
+          "depth": 7.9999999999999964
+        },
+        "envelope": {
+          "width": 4,
+          "height": 2,
+          "depth": 8
+        },
+        "fitScale": 0.5909835322623586,
+        "waterlineImmersion": 0.22026504815096434,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "boat-e5c7631b",
+        "templateId": "boat",
+        "rotationDeg": 22,
+        "anchor": {
+          "x": 83.89393228694945,
+          "y": 0,
+          "z": 20.560183164970127
+        },
+        "bounds": {
+          "min": [
+            81.89393228694945,
+            -0.19034409360950075,
+            17.224644226593988
+          ],
+          "max": [
+            85.89393228694944,
+            0.3534961738462156,
+            23.895722103346266
+          ]
+        },
+        "dimensions": {
+          "width": 3.999999999999986,
+          "height": 0.5438402674557163,
+          "depth": 6.671077876752278
+        },
+        "envelope": {
+          "width": 4,
+          "height": 2,
+          "depth": 8
+        },
+        "fitScale": 0.5107039257064593,
+        "waterlineImmersion": 0.19034409360950072,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "boat-5ee8e525",
+        "templateId": "boat",
+        "rotationDeg": -16,
+        "anchor": {
+          "x": 84.55427573173984,
+          "y": 0,
+          "z": -18.44271646287768
+        },
+        "bounds": {
+          "min": [
+            82.55427573173982,
+            -0.208420277007627,
+            -22.180121873342596
+          ],
+          "max": [
+            86.55427573173984,
+            0.3870662287284502,
+            -14.705311052412766
+          ]
+        },
+        "dimensions": {
+          "width": 4.000000000000014,
+          "height": 0.5954865057360772,
+          "depth": 7.4748108209298305
+        },
+        "envelope": {
+          "width": 4,
+          "height": 2,
+          "depth": 8
+        },
+        "fitScale": 0.5592033440396176,
+        "waterlineImmersion": 0.208420277007627,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "boat-dd2a2b43",
+        "templateId": "boat",
+        "rotationDeg": 11,
+        "anchor": {
+          "x": 78.94139423588835,
+          "y": 0,
+          "z": -32.3251008756985
+        },
+        "bounds": {
+          "min": [
+            76.94139423588835,
+            -0.21897821110470722,
+            -36.293508013335
+          ],
+          "max": [
+            80.94139423588837,
+            0.40667382062302787,
+            -28.356693738062006
+          ]
+        },
+        "dimensions": {
+          "width": 4.000000000000014,
+          "height": 0.625652031727735,
+          "depth": 7.936814275272994
+        },
+        "envelope": {
+          "width": 4,
+          "height": 2,
+          "depth": 8
+        },
+        "fitScale": 0.5875308759765467,
+        "waterlineImmersion": 0.21897821110470722,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      },
+      {
+        "entityId": "boat-8b32d476",
+        "templateId": "boat",
+        "rotationDeg": -21,
+        "anchor": {
+          "x": 63.75361591728319,
+          "y": 0,
+          "z": -39.92734891946345
+        },
+        "bounds": {
+          "min": [
+            61.75361591728319,
+            -0.1944727385082551,
+            -43.35109347791683
+          ],
+          "max": [
+            65.75361591728318,
+            0.3611636572296166,
+            -36.50360436101006
+          ]
+        },
+        "dimensions": {
+          "width": 3.999999999999993,
+          "height": 0.5556363957378717,
+          "depth": 6.847489116906765
+        },
+        "envelope": {
+          "width": 4,
+          "height": 2,
+          "depth": 8
+        },
+        "fitScale": 0.5217813125465653,
+        "waterlineImmersion": 0.19447273850825508,
+        "preservedAnchor": true,
+        "withinEnvelope": true,
+        "grounded": true
+      }
+    ],
+    "preservedIds": true,
+    "preservedLocks": true,
+    "geometrySource": "control-model-authored-template",
+    "generatedNewGeometry": true,
+    "neuralMeshGenerated": false,
+    "textures": "existing-PBR-resources",
+    "visualQuality": "needs-review",
+    "limitations": [
+      "细几何由控制模型组织部件、曲线和顶点；未调用专用神经网格模型。",
+      "保留原锚点与包络，当前不证明部件无穿插、碰撞可用或写实品质。",
+      "材质参数由模型决定，照片纹理沿用已登记资源。"
+    ]
+  },
+  "actual": [
+    {
+      "entityId": "cabin-eee16daa",
+      "templateId": "cabin",
+      "rotationDeg": -8,
+      "anchor": {
+        "x": 19.8411017885769,
+        "y": 3,
+        "z": 6.01674291479476
+      },
+      "bounds": {
+        "min": [
+          16.235155585241035,
+          3,
+          2.5167429147947598
+        ],
+        "max": [
+          23.447047991912765,
+          8.346202874155392,
+          9.51674291479476
+        ]
+      },
+      "dimensions": {
+        "width": 7.21189240667173,
+        "height": 5.3462028741553915,
+        "depth": 7
+      },
+      "envelope": {
+        "width": 8,
+        "height": 7,
+        "depth": 7
+      },
+      "fitScale": 0.8581385030747016,
+      "waterlineImmersion": 0,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 18,
+      "vertices": 454,
+      "triangles": 240
+    },
+    {
+      "entityId": "lighthouse-6a3ef8b5",
+      "templateId": "lighthouse",
+      "rotationDeg": 0,
+      "anchor": {
+        "x": -15.487000456667898,
+        "y": 3.035,
+        "z": 10.64419429866954
+      },
+      "bounds": {
+        "min": [
+          -16.710529868432605,
+          3.035,
+          9.420664886904834
+        ],
+        "max": [
+          -14.263471044903191,
+          21.034999999999997,
+          11.867723710434245
+        ]
+      },
+      "dimensions": {
+        "width": 2.4470588235294137,
+        "height": 17.999999999999996,
+        "depth": 2.44705882352941
+      },
+      "envelope": {
+        "width": 5.2,
+        "height": 18,
+        "depth": 5.2
+      },
+      "fitScale": 0.9049773755656109,
+      "waterlineImmersion": 0,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 27,
+      "vertices": 1766,
+      "triangles": 1240
+    },
+    {
+      "entityId": "palm-fcf5655d",
+      "templateId": "palm",
+      "rotationDeg": -11,
+      "anchor": {
+        "x": 6.634338690396158,
+        "y": 3,
+        "z": 29.815116193916168
+      },
+      "bounds": {
+        "min": [
+          1.6343386903961568,
+          2.9999999999999996,
+          24.874213288112713
+        ],
+        "max": [
+          11.634338690396156,
+          11.342822805239383,
+          34.75601909971962
+        ]
+      },
+      "dimensions": {
+        "width": 10,
+        "height": 8.342822805239383,
+        "depth": 9.88180581160691
+      },
+      "envelope": {
+        "width": 10,
+        "height": 12,
+        "depth": 10
+      },
+      "fitScale": 0.7131663532413575,
+      "waterlineImmersion": 0,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 15,
+      "vertices": 411,
+      "triangles": 482
+    },
+    {
+      "entityId": "palm-fdc477ab",
+      "templateId": "palm",
+      "rotationDeg": 9,
+      "anchor": {
+        "x": 19.180773457733213,
+        "y": 3,
+        "z": 29.815116193916168
+      },
+      "bounds": {
+        "min": [
+          14.180773457733217,
+          3,
+          24.833010283478135
+        ],
+        "max": [
+          24.180773457733217,
+          11.187393228345949,
+          34.797222104354205
+        ]
+      },
+      "dimensions": {
+        "width": 10,
+        "height": 8.187393228345949,
+        "depth": 9.96421182087607
+      },
+      "envelope": {
+        "width": 10,
+        "height": 12,
+        "depth": 10
+      },
+      "fitScale": 0.6998798257522054,
+      "waterlineImmersion": 0,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 15,
+      "vertices": 411,
+      "triangles": 482
+    },
+    {
+      "entityId": "palm-ed6868f5",
+      "templateId": "palm",
+      "rotationDeg": -5,
+      "anchor": {
+        "x": 13.89805612730357,
+        "y": 3,
+        "z": 24.526578711490366
+      },
+      "bounds": {
+        "min": [
+          8.89805612730357,
+          2.9999999999999996,
+          19.606934789150483
+        ],
+        "max": [
+          18.89805612730357,
+          11.279753770338045,
+          29.44622263383025
+        ]
+      },
+      "dimensions": {
+        "width": 9.999999999999998,
+        "height": 8.279753770338045,
+        "depth": 9.839287844679767
+      },
+      "envelope": {
+        "width": 10,
+        "height": 12,
+        "depth": 10
+      },
+      "fitScale": 0.707775046884618,
+      "waterlineImmersion": 0,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 15,
+      "vertices": 411,
+      "triangles": 482
+    },
+    {
+      "entityId": "palm-4c3e36ec",
+      "templateId": "palm",
+      "rotationDeg": 13,
+      "anchor": {
+        "x": -2.940573246304201,
+        "y": 3,
+        "z": 24.857121760765878
+      },
+      "bounds": {
+        "min": [
+          -7.869443652694601,
+          3,
+          19.857121760765878
+        ],
+        "max": [
+          1.9882971600861992,
+          11.029408977265762,
+          29.857121760765878
+        ]
+      },
+      "dimensions": {
+        "width": 9.8577408127808,
+        "height": 8.029408977265762,
+        "depth": 10
+      },
+      "envelope": {
+        "width": 10,
+        "height": 12,
+        "depth": 10
+      },
+      "fitScale": 0.6863749180198171,
+      "waterlineImmersion": 0,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 15,
+      "vertices": 411,
+      "triangles": 482
+    },
+    {
+      "entityId": "palm-e4e12d5a",
+      "templateId": "palm",
+      "rotationDeg": -14,
+      "anchor": {
+        "x": -18.128351564909373,
+        "y": 3,
+        "z": 30.80671508054622
+      },
+      "bounds": {
+        "min": [
+          -23.128351564909373,
+          3.0000000000000004,
+          25.855001317854185
+        ],
+        "max": [
+          -13.128351564909373,
+          11.4094859194899,
+          35.75842884323825
+        ]
+      },
+      "dimensions": {
+        "width": 10,
+        "height": 8.4094859194899,
+        "depth": 9.903427525384064
+      },
+      "envelope": {
+        "width": 10,
+        "height": 12,
+        "depth": 10
+      },
+      "fitScale": 0.7188648909180652,
+      "waterlineImmersion": 0,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 15,
+      "vertices": 411,
+      "triangles": 482
+    },
+    {
+      "entityId": "palm-a5e5d894",
+      "templateId": "palm",
+      "rotationDeg": 7,
+      "anchor": {
+        "x": -21.430046117941227,
+        "y": 3,
+        "z": 23.204436775584785
+      },
+      "bounds": {
+        "min": [
+          -26.430046117941224,
+          3,
+          18.267817105509152
+        ],
+        "max": [
+          -16.430046117941224,
+          11.223695949773745,
+          28.141056445660418
+        ]
+      },
+      "dimensions": {
+        "width": 10,
+        "height": 8.223695949773745,
+        "depth": 9.873239340151265
+      },
+      "envelope": {
+        "width": 10,
+        "height": 12,
+        "depth": 10
+      },
+      "fitScale": 0.7029830775001796,
+      "waterlineImmersion": 0,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 15,
+      "vertices": 411,
+      "triangles": 482
+    },
+    {
+      "entityId": "palm-c056ab5b",
+      "templateId": "palm",
+      "rotationDeg": -8,
+      "anchor": {
+        "x": -2.940573246304201,
+        "y": 3,
+        "z": 32.78991285380634
+      },
+      "bounds": {
+        "min": [
+          -7.940573246304201,
+          3.0000000000000004,
+          27.859679769931503
+        ],
+        "max": [
+          2.059426753695799,
+          11.299778472407128,
+          37.720145937681195
+        ]
+      },
+      "dimensions": {
+        "width": 10,
+        "height": 8.299778472407128,
+        "depth": 9.860466167749692
+      },
+      "envelope": {
+        "width": 10,
+        "height": 12,
+        "depth": 10
+      },
+      "fitScale": 0.7094868108861719,
+      "waterlineImmersion": 0,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 15,
+      "vertices": 411,
+      "triangles": 482
+    },
+    {
+      "entityId": "palm-b118d524",
+      "templateId": "palm",
+      "rotationDeg": 12,
+      "anchor": {
+        "x": 15.54890718230617,
+        "y": 3,
+        "z": 40.722703946846806
+      },
+      "bounds": {
+        "min": [
+          10.59814121263737,
+          2.9999999999999996,
+          35.7227039468468
+        ],
+        "max": [
+          20.499673151974967,
+          11.07177487765966,
+          45.7227039468468
+        ]
+      },
+      "dimensions": {
+        "width": 9.901531939337596,
+        "height": 8.07177487765966,
+        "depth": 10
+      },
+      "envelope": {
+        "width": 10,
+        "height": 12,
+        "depth": 10
+      },
+      "fitScale": 0.6899964661925446,
+      "waterlineImmersion": 0,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 15,
+      "vertices": 411,
+      "triangles": 482
+    },
+    {
+      "entityId": "boat-0da1d0f1",
+      "templateId": "boat",
+      "rotationDeg": -12,
+      "anchor": {
+        "x": -2.940573246304201,
+        "y": 3.035,
+        "z": 12.296849022654133
+      },
+      "bounds": {
+        "min": [
+          -4.940573246304201,
+          2.8183515028801125,
+          8.376524740279873
+        ],
+        "max": [
+          -0.9405732463042011,
+          3.4373472089369344,
+          16.217173305028393
+        ]
+      },
+      "dimensions": {
+        "width": 3.9999999999999996,
+        "height": 0.6189957060568219,
+        "depth": 7.84064856474852
+      },
+      "envelope": {
+        "width": 4,
+        "height": 2,
+        "depth": 8
+      },
+      "fitScale": 0.581280122116742,
+      "waterlineImmersion": 0.21664849711988765,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 12,
+      "vertices": 268,
+      "triangles": 252
+    },
+    {
+      "entityId": "boat-036222fc",
+      "templateId": "boat",
+      "rotationDeg": 18,
+      "anchor": {
+        "x": 49.22616592952169,
+        "y": 0,
+        "z": 25.848705516797686
+      },
+      "bounds": {
+        "min": [
+          47.22616592952169,
+          -0.2049014072811479,
+          22.197853165078026
+        ],
+        "max": [
+          51.22616592952169,
+          0.3805311849507031,
+          29.499557868517343
+        ]
+      },
+      "dimensions": {
+        "width": 4,
+        "height": 0.585432592231851,
+        "depth": 7.3017047034393165
+      },
+      "envelope": {
+        "width": 4,
+        "height": 2,
+        "depth": 8
+      },
+      "fitScale": 0.5497620183368649,
+      "waterlineImmersion": 0.20490140728114783,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 12,
+      "vertices": 268,
+      "triangles": 252
+    },
+    {
+      "entityId": "boat-295848e5",
+      "templateId": "boat",
+      "rotationDeg": -9,
+      "anchor": {
+        "x": 64.08378008270503,
+        "y": 0,
+        "z": 29.81510106331793
+      },
+      "bounds": {
+        "min": [
+          62.100652617034434,
+          -0.22026504815096434,
+          25.81510106331793
+        ],
+        "max": [
+          66.06690754837564,
+          0.4090636608517909,
+          33.815101063317925
+        ]
+      },
+      "dimensions": {
+        "width": 3.9662549313412043,
+        "height": 0.6293287090027553,
+        "depth": 7.9999999999999964
+      },
+      "envelope": {
+        "width": 4,
+        "height": 2,
+        "depth": 8
+      },
+      "fitScale": 0.5909835322623586,
+      "waterlineImmersion": 0.22026504815096434,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 12,
+      "vertices": 268,
+      "triangles": 252
+    },
+    {
+      "entityId": "boat-e5c7631b",
+      "templateId": "boat",
+      "rotationDeg": 22,
+      "anchor": {
+        "x": 83.89393228694945,
+        "y": 0,
+        "z": 20.560183164970127
+      },
+      "bounds": {
+        "min": [
+          81.89393228694945,
+          -0.19034409360950075,
+          17.224644226593988
+        ],
+        "max": [
+          85.89393228694944,
+          0.3534961738462156,
+          23.895722103346266
+        ]
+      },
+      "dimensions": {
+        "width": 3.999999999999986,
+        "height": 0.5438402674557163,
+        "depth": 6.671077876752278
+      },
+      "envelope": {
+        "width": 4,
+        "height": 2,
+        "depth": 8
+      },
+      "fitScale": 0.5107039257064593,
+      "waterlineImmersion": 0.19034409360950072,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 12,
+      "vertices": 268,
+      "triangles": 252
+    },
+    {
+      "entityId": "boat-5ee8e525",
+      "templateId": "boat",
+      "rotationDeg": -16,
+      "anchor": {
+        "x": 84.55427573173984,
+        "y": 0,
+        "z": -18.44271646287768
+      },
+      "bounds": {
+        "min": [
+          82.55427573173982,
+          -0.208420277007627,
+          -22.180121873342596
+        ],
+        "max": [
+          86.55427573173984,
+          0.3870662287284502,
+          -14.705311052412766
+        ]
+      },
+      "dimensions": {
+        "width": 4.000000000000014,
+        "height": 0.5954865057360772,
+        "depth": 7.4748108209298305
+      },
+      "envelope": {
+        "width": 4,
+        "height": 2,
+        "depth": 8
+      },
+      "fitScale": 0.5592033440396176,
+      "waterlineImmersion": 0.208420277007627,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 12,
+      "vertices": 268,
+      "triangles": 252
+    },
+    {
+      "entityId": "boat-dd2a2b43",
+      "templateId": "boat",
+      "rotationDeg": 11,
+      "anchor": {
+        "x": 78.94139423588835,
+        "y": 0,
+        "z": -32.3251008756985
+      },
+      "bounds": {
+        "min": [
+          76.94139423588835,
+          -0.21897821110470722,
+          -36.293508013335
+        ],
+        "max": [
+          80.94139423588837,
+          0.40667382062302787,
+          -28.356693738062006
+        ]
+      },
+      "dimensions": {
+        "width": 4.000000000000014,
+        "height": 0.625652031727735,
+        "depth": 7.936814275272994
+      },
+      "envelope": {
+        "width": 4,
+        "height": 2,
+        "depth": 8
+      },
+      "fitScale": 0.5875308759765467,
+      "waterlineImmersion": 0.21897821110470722,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 12,
+      "vertices": 268,
+      "triangles": 252
+    },
+    {
+      "entityId": "boat-8b32d476",
+      "templateId": "boat",
+      "rotationDeg": -21,
+      "anchor": {
+        "x": 63.75361591728319,
+        "y": 0,
+        "z": -39.92734891946345
+      },
+      "bounds": {
+        "min": [
+          61.75361591728319,
+          -0.1944727385082551,
+          -43.35109347791683
+        ],
+        "max": [
+          65.75361591728318,
+          0.3611636572296166,
+          -36.50360436101006
+        ]
+      },
+      "dimensions": {
+        "width": 3.999999999999993,
+        "height": 0.5556363957378717,
+        "depth": 6.847489116906765
+      },
+      "envelope": {
+        "width": 4,
+        "height": 2,
+        "depth": 8
+      },
+      "fitScale": 0.5217813125465653,
+      "waterlineImmersion": 0.19447273850825508,
+      "preservedAnchor": true,
+      "withinEnvelope": true,
+      "grounded": true,
+      "meshCount": 12,
+      "vertices": 268,
+      "triangles": 252
+    }
+  ],
+  "templates": [
+    {
+      "id": "cabin",
+      "label": "带前廊海岸小屋",
+      "definitionParts": 15,
+      "expandedParts": 18,
+      "primitiveKinds": [
+        "box",
+        "gable-roof",
+        "cylinder"
+      ]
+    },
+    {
+      "id": "lighthouse",
+      "label": "红白条纹灯塔与灯室",
+      "definitionParts": 16,
+      "expandedParts": 27,
+      "primitiveKinds": [
+        "cylinder",
+        "cone",
+        "box",
+        "torus"
+      ]
+    },
+    {
+      "id": "palm",
+      "label": "弯干薄叶棕榈",
+      "definitionParts": 13,
+      "expandedParts": 15,
+      "primitiveKinds": [
+        "curved-tube",
+        "ellipsoid",
+        "leaf"
+      ]
+    },
+    {
+      "id": "boat",
+      "label": "细节木质海岸小艇",
+      "definitionParts": 9,
+      "expandedParts": 12,
+      "primitiveKinds": [
+        "mesh",
+        "curved-tube",
+        "box",
+        "leaf"
+      ]
+    }
+  ],
+  "primitiveDefinitionCounts": {
+    "box": 20,
+    "gable-roof": 1,
+    "cylinder": 10,
+    "cone": 2,
+    "torus": 1,
+    "curved-tube": 4,
+    "ellipsoid": 2,
+    "leaf": 11,
+    "mesh": 2
+  },
+  "semanticReview": [
+    {
+      "templateId": "lighthouse",
+      "partId": "railposts",
+      "severity": "visual-defect",
+      "finding": "repeat.count=8、step=[0,0,0]、turnY=45 将柱体在同一中心逐次旋转，不会沿栏杆圆周移动；八根柱体重叠。",
+      "action": "需要模型按已声明语义重新给出圆周位置，不能修改执行器或偷偷变造候选。"
+    },
+    {
+      "templateId": "lighthouse",
+      "partId": "tower",
+      "severity": "visual-risk",
+      "finding": "tower 是完整 cone，顶端收为尖点；灯室和环带与尖塔衔接需在多视角审查。",
+      "action": "可让模型通过 lathe 轮廓显式建截锥塔身。"
+    },
+    {
+      "templateId": "palm",
+      "partId": "trunk",
+      "severity": "visual-risk",
+      "finding": "曲线半径固定局部 .025 且 size.x=.22/size.z=.2，按物理包络转换后树干偏细；采用逐轴模板尺寸再整体fit的原语义。",
+      "action": "需要模型调整尺寸/路径或使用 lathe；不可宣称真实植物比例已通过。"
+    },
+    {
+      "templateId": "palm",
+      "partId": "frond1..frond10",
+      "severity": "visual-risk",
+      "finding": "叶片点全部位于局部 XY 平面；沿Y旋转后为薄的竖向叶片轮廓，不是具有Z宽度和Y下垂的宽阔棕榈叶。size.z不会为全零Z顶点产生宽度。",
+      "action": "需要模型给出带Z宽度的叶片顶点/真实薄片形体，并视觉验收。"
+    },
+    {
+      "templateId": "boat",
+      "partId": "hull",
+      "severity": "visual-risk",
+      "finding": "船壳为模型提供的14个三角形开口表面，顶部开放；后部和底部有面但前缘部分底部/内舱连续性仍须视觉检查。",
+      "action": "当前证明有效三角形和归位，不证明 watertight 或物理可用。"
+    },
+    {
+      "templateId": "lighthouse",
+      "partId": "railring",
+      "severity": "visual-defect",
+      "finding": "torus位于局部XY平面；模型给size=[.46,.035,.46]再旋转X90，把厚度/环径轴颠倒。实际世界尺寸为2.165 × 1.826 × 0.165米，非水平圆环。",
+      "action": "请模型按size-before-rotation语义修正为局部环径X/Y相近、局部Z薄，再X90。不能更改执行器参数次序。"
+    }
+  ],
+  "visualQuality": "not-approved",
+  "disclaimer": "真实模型结果按原语义执行；未自动修正候选，也未用旧preset替换。"
+}

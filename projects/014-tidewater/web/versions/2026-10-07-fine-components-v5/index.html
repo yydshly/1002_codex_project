@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>我的精细 3D 场景 · 可独立打开的项目</title>
+  <script type="importmap">{"imports":{"three":"./realistic/vendor/three.module.js","three/addons/":"./realistic/vendor/addons/"}}</script>
+  <style>
+    :root{font:15px/1.65 system-ui,sans-serif;color:#173d3a;background:#f1f6f1}body{margin:0}header,main,footer{max-width:1320px;margin:auto;padding:20px 28px}header{display:flex;align-items:center;justify-content:space-between;gap:24px}h1{font-size:24px;margin:0}p{margin:8px 0}.eyebrow{font-size:12px;letter-spacing:.12em;color:#647d76}.stage{height:min(70vh,760px);min-height:320px;background:#d3e8e8;border-radius:18px;overflow:hidden}canvas{width:100%;height:100%;display:block}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}button,.download{font:inherit;border:1px solid #b8c9bb;background:white;border-radius:9px;padding:8px 15px;color:#24443c;text-decoration:none;cursor:pointer}button[aria-pressed=true]{background:#1b6457;color:#fff}button:disabled{opacity:.45;cursor:wait}details{background:#fff;padding:16px;border-radius:12px;margin-top:18px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}#error{color:#9e3224}.meta{color:#647d76}#source-views{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}figure{margin:0}figure img{width:100%;height:170px;object-fit:contain;background:#edf3ec;border-radius:10px}figcaption{font-size:13px;color:#647d76}footer{font-size:13px;color:#647d76}@media(max-width:700px){header{display:block}header,main,footer{padding:16px}.stage{height:62vh}}
+  </style>
+  <script type="module" src="./portable-scene.js"></script>
+</head>
+<body>
+  <header><div><div class="eyebrow">MY SCENE / LOCAL PROJECT</div><h1 id="title">正在读取场景…</h1><p id="summary">原布局、精细部件与本地资源一起交付。</p></div><a class="download" href="./scene.glb" download>下载可编辑 GLB ↓</a></header>
+  <main>
+    <div class="stage"><canvas id="scene" aria-label="独立项目的精细 3D 场景，拖动旋转，滚轮缩放"></canvas></div>
+    <div class="toolbar"><button id="overview" disabled>完整布局</button><button id="hero" disabled>海岸视角</button><button id="reverse" disabled>另一侧</button><button id="coarse" disabled aria-pressed="false">对照粗模</button><button id="day" disabled>白天</button><button id="sunset" disabled>日落</button></div>
+    <p id="status" role="status">正在加载项目内的资源…</p><p id="error" role="alert" hidden></p>
+    <p id="version-info" class="meta"></p>
+    <details><summary>生成版次与输入依据</summary><ol id="versions"></ol><p class="meta">最后一次精细生成读取的视图：</p><div id="source-views"></div></details>
+    <details><summary>交付检查与来源</summary><pre id="receipt">正在读取交付记录…</pre></details>
+  </main>
+  <footer>网页保留动态水面和本地环境。GLB 为静态、可编辑场景快照：地形混合、水面与天空按交付记录近似。浏览不需要模型服务。</footer>
+</body>
+</html>

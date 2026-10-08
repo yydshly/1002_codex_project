@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-04T15:52:13.894Z",
+  "scope": "产品说明、响应式布局与页面导航；工作台链接检查使用同源空白 iframe 跳过 GPU 初始化，不复测 WebGPU 渲染",
+  "checks": [
+    {
+      "name": "探索流程与扩展章节存在",
+      "pass": true
+    },
+    {
+      "name": "新流程区分本地实验与后续规划",
+      "pass": true
+    },
+    {
+      "name": "原有工作台验证与规划分开说明",
+      "pass": true
+    },
+    {
+      "name": "绘笔结构、概念图和粗模均有说明",
+      "pass": true
+    },
+    {
+      "name": "七个区域与六个产品方向完整",
+      "pass": true
+    },
+    {
+      "name": "图片不替代结构、玩法负责运行",
+      "pass": true
+    },
+    {
+      "name": "全部页内导航可定位",
+      "pass": true,
+      "detail": "10 个页内链接"
+    },
+    {
+      "name": "本地页面与引用资源可访问",
+      "pass": true,
+      "detail": "16 项本地引用"
+    },
+    {
+      "name": "没有重复元素ID",
+      "pass": true
+    },
+    {
+      "name": "研究页 1440px 无横向溢出",
+      "pass": true,
+      "detail": "{\"width\":1440,\"scrollWidth\":1440,\"headerHeight\":84}"
+    },
+    {
+      "name": "研究页 1024px 无横向溢出",
+      "pass": true,
+      "detail": "{\"width\":1024,\"scrollWidth\":1024,\"headerHeight\":84}"
+    },
+    {
+      "name": "研究页 768px 无横向溢出",
+      "pass": true,
+      "detail": "{\"width\":768,\"scrollWidth\":768,\"headerHeight\":84}"
+    },
+    {
+      "name": "研究页 390px 无横向溢出",
+      "pass": true,
+      "detail": "{\"width\":390,\"scrollWidth\":390,\"headerHeight\":72}"
+    },
+    {
+      "name": "手机流程导航定位到正文",
+      "pass": true,
+      "detail": "83.1875"
+    },
+    {
+      "name": "手机扩展表转换为卡片",
+      "pass": true
+    },
+    {
+      "name": "研究页 320px 无横向溢出",
+      "pass": true,
+      "detail": "{\"width\":320,\"scrollWidth\":320,\"headerHeight\":72}"
+    },
+    {
+      "name": "工作台产品探索入口存在",
+      "pass": true
+    },
+    {
+      "name": "工作台页面扩展入口存在",
+      "pass": true
+    },
+    {
+      "name": "原有对象面板仍可操作",
+      "pass": true
+    },
+    {
+      "name": "工作台 1440px 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "工作台 390px 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "工作台链接进入扩展说明",
+      "pass": true
+    },
+    {
+      "name": "网页无异常或缺失资源",
+      "pass": true,
+      "detail": "{\"errors\":[],\"missing\":[]}"
+    }
+  ],
+  "viewports": [
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "headerHeight": 84
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "headerHeight": 84
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "headerHeight": 84
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "headerHeight": 72
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "headerHeight": 72
+    }
+  ],
+  "errors": [],
+  "missing": []
+}

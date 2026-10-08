@@ -1,0 +1,7 @@
+.venv/
+model-cache/
+upstream/
+wheels/
+*.zip
+*.log
+

@@ -1,0 +1,100 @@
+{
+  "format": "tidewater-camp-browser-check.v1",
+  "checkedAt": "2026-10-07T16:23:36.400Z",
+  "passed": true,
+  "workbench": "http://127.0.0.1:4196/camp.html",
+  "standalone": "http://127.0.0.1:4203/",
+  "publicationId": "6bd01104-dfb6-4f9a-9b61-1f1172586ec0",
+  "method": "Actual browser UI, DOM-backed receipts and observed screenshots; no hidden app state access",
+  "checks": [
+    {
+      "name": "independent ZIP runtime loads two actual variants",
+      "passed": true,
+      "detail": {
+        "source": "plan-v1-97aa53ac1b2fe598-2255",
+        "geometryJob": "f5aa1772-218a-430c-89b1-90b018a557e5"
+      }
+    },
+    {
+      "name": "A/B retain exact same saved near camera",
+      "passed": true,
+      "detail": {
+        "a": {
+          "position": [
+            -22.2,
+            13.68,
+            -5.599999999999998
+          ],
+          "target": [
+            -30,
+            4.48,
+            -17.599999999999998
+          ]
+        },
+        "b": {
+          "position": [
+            -22.2,
+            13.68,
+            -5.599999999999998
+          ],
+          "target": [
+            -30,
+            4.48,
+            -17.599999999999998
+          ]
+        }
+      }
+    },
+    {
+      "name": "object selection shows customer identity and source-bound information",
+      "passed": true
+    },
+    {
+      "name": "coarse comparison can be enabled",
+      "passed": true
+    },
+    {
+      "name": "customer page fits 375px",
+      "passed": true
+    },
+    {
+      "name": "workbench fits 375px",
+      "passed": true
+    },
+    {
+      "name": "workbench fits 768px",
+      "passed": true
+    },
+    {
+      "name": "explicit layout transfer imports camp objects and offers persistent original draft restore",
+      "passed": true
+    },
+    {
+      "name": "original creation draft restored after business layout transfer",
+      "passed": true,
+      "detail": {
+        "count": "25",
+        "name": "我的布局",
+        "status": "第 2 次修改 · 已保存到本机",
+        "bannerVisible": false
+      }
+    },
+    {
+      "name": "history restores saved A/B proposal and fixed local publication link",
+      "passed": true
+    },
+    {
+      "name": "archive page shows nine capability groups with actual replay screenshot",
+      "passed": true
+    },
+    {
+      "name": "actual 3D mesh picking opens its source-bound object card",
+      "passed": true
+    },
+    {
+      "name": "customer standalone runtime has no captured error logs",
+      "passed": true
+    }
+  ],
+  "visualQuality": "needs-review"
+}

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>模型代码 3D 场景预览</title>
+  <link rel="icon" href="data:,">
+  <style>
+    *{box-sizing:border-box}html,body,#viewport{width:100%;height:100%;margin:0;overflow:hidden;background:#deebe8}body{font:12px/1.6 system-ui,sans-serif;color:#25433d}canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab}canvas:active{cursor:grabbing}.hud{position:absolute;left:16px;top:14px;pointer-events:none;background:#ffffffde;backdrop-filter:blur(8px);padding:10px 13px;border:1px solid #ffffffaa;border-radius:12px;box-shadow:0 2px 15px #22463810;max-width:calc(100% - 32px)}.hud strong{display:block;font-size:13px}.hud span{color:#6d8078}.controls{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:5px;background:#ffffffed;border-radius:10px;padding:5px;box-shadow:0 2px 12px #17372a18}button{font:inherit;border:0;background:transparent;color:#45655a;border-radius:6px;padding:6px 12px;cursor:pointer}button:hover,button[aria-pressed="true"]{background:#e0eee6;color:#204d39}#boot{position:absolute;inset:0;display:grid;place-items:center;text-align:center;background:#e4eee9f2;padding:24px;font-size:14px}#boot[hidden]{display:none}#boot small{display:block;color:#7b8f83;margin-top:4px}#preview-state{display:block;max-width:300px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  </style>
+</head>
+<body>
+  <div id="viewport"></div>
+  <div class="hud"><strong id="preview-title">3D 场景</strong><span>拖动旋转 · 滚轮缩放 · 点击选择</span><span id="preview-state">等待布局</span></div>
+  <div class="controls"><button type="button" data-camera="overview" aria-pressed="true">斜视</button><button type="button" data-camera="top" aria-pressed="false">俯视</button><button type="button" data-camera="detail" aria-pressed="false">看选中细节</button></div>
+  <div id="boot"><div><strong id="boot-message">准备 3D 预览…</strong><small>加载当前布局与本轮模型编写的真实几何、材质和水面着色。</small></div></div>
+  <script type="module" src="model-scene-preview.js"></script>
+</body>
+</html>

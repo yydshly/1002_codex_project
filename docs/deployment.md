@@ -11,6 +11,8 @@
 | 008 · 理解总览与引导图 | `https://yydshly.github.io/1002_codex_project/projects/008-pdoom-video/overview.html` |
 | 009 · shadcn-admin | `https://yydshly.github.io/1002_codex_project/projects/009-shadcn-admin/` |
 | 013 · OmniVoice 中文研究网页 | `https://yydshly.github.io/1002_codex_project/projects/013-omnivoice/` |
+| 014 · Tidewater 当前成果与产品思路 | `https://yydshly.github.io/1002_codex_project/projects/014-tidewater/release.html` |
+| 014 · 原场景提案工作室 | `https://yydshly.github.io/1002_codex_project/projects/014-tidewater/camp.html` |
 | 002 项目 | `https://yydshly.github.io/1002_codex_project/projects/002-slug/` |
 
 总入口、001、006、008 和 009 项目是站点的配置地址；002 行展示后续项目的路径格式。006 发布可独立阅读的静态理解总览、生成的引导图和实测报告；实时 CAD 查看与运动操作按页面说明在本机启动。008 发布完整能力实验室、理解总览与引导图、元素驱动控制台和六秒真实场景样例。009 发布 shadcn-admin 的八类模块、复用原理、业务适配、后续价值与边界说明，并沿用我们整理的理解引导图，提供 PNG / SVG 下载。仓库 Pages 已配置为 GitHub Actions 发布。GitHub Pages 每个仓库只有一个站点，因此这里使用多个子目录承载各项目的静态输出。参考 [GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)。
@@ -35,6 +37,8 @@
 - `demo` 优先用作索引入口；`publishDir` 若同时存在，仍会被构建和发布。
 
 ## 本地预览
+
+014沿用原三岛25对象/17细化物体的场景，发布研究总图、说明、编辑页面、已有GLB与独立工程。根构建先生成`projects/014-tidewater/publish/`，排除重复本机工程和完整早期备份，并提供早期阶段回顾；v3/v5和原场景/六木屋独立提案保留。在线版不运行4198控制模型或4197GPU服务，新生成需要本机启动；已有工程回放不依赖模型服务。
 
 ```bash
 npm run build

@@ -1,0 +1,383 @@
+{
+  "format": "tidewater-camp-proposal-disk-check.v1",
+  "passed": true,
+  "publicationId": "6bd01104-dfb6-4f9a-9b61-1f1172586ec0",
+  "source": "F:\\codex_project\\1002_codex_project\\projects\\014-tidewater\\web\\assets\\camp-proposals\\6bd01104-dfb6-4f9a-9b61-1f1172586ec0",
+  "extraction": "F:\\codex_project\\1002_codex_project\\projects\\014-tidewater\\.runtime\\camp-proposal-verify-6bd01104",
+  "method": "Python ZipFile CRC, exact inventory and independent SHA-256; two real fine scene GLBs verified separately",
+  "sourceFingerprint": "plan-v1-97aa53ac1b2fe598-2255",
+  "variantCount": 2,
+  "sourceEntityCount": 18,
+  "stayCount": 6,
+  "zipBytes": 60023594,
+  "zipSha256": "588c17065946c7d7302c31bd3f62afc9f828edadec74f6f163a2844f547f83f7",
+  "files": [
+    {
+      "path": "creation-core.js",
+      "bytes": 24399,
+      "sha256": "fb346a4f0e80c87d5e8c9b265019609ba56503d281eb5504290953e2f9680f2c",
+      "passed": true
+    },
+    {
+      "path": "creation-surfaces.js",
+      "bytes": 3549,
+      "sha256": "74a38cef48c76492a0085a46d514759c9805b3443e1c9e3e880e48d002c0941e",
+      "passed": true
+    },
+    {
+      "path": "model-scene-core.js",
+      "bytes": 13699,
+      "sha256": "4ce27bcdcf2c2c7a623e376e4f1957ab87a90a91e3596acba7f890c3d2264288",
+      "passed": true
+    },
+    {
+      "path": "asset-generation-core.js",
+      "bytes": 13423,
+      "sha256": "1b507c5f957628585643c4960f2e7ebff8d58a47052ac453e19fd256687b0d71",
+      "passed": true
+    },
+    {
+      "path": "scene-completion-core.js",
+      "bytes": 8120,
+      "sha256": "68dc47927f229c59f96eb924c30a7b6c466f7be132c78805c292bbdeec23a209",
+      "passed": true
+    },
+    {
+      "path": "fine-geometry-core.js",
+      "bytes": 24621,
+      "sha256": "4c984fc9f30d6794ed02ab3e4edc63c82375f022085bc2af482ee8db7262576f",
+      "passed": true
+    },
+    {
+      "path": "fine-refinement-core.js",
+      "bytes": 3514,
+      "sha256": "9a07cd2fcee0c97d7c85c2f8e546737810715d2d5ea52084729c7c8eb3fdce43",
+      "passed": true
+    },
+    {
+      "path": "realistic/scene.js",
+      "bytes": 67319,
+      "sha256": "bfb28857140a8c3e87ad4ef2eeb89fb28f11fc29e18203dacb6384b2ff94839f",
+      "passed": true
+    },
+    {
+      "path": "realistic/terrain.js",
+      "bytes": 6476,
+      "sha256": "1bd368328487d8fa9743d1e1c9d37efc77d6b69210d04ad16d648aa99fdc30fb",
+      "passed": true
+    },
+    {
+      "path": "realistic/world-terrain.js",
+      "bytes": 4995,
+      "sha256": "8e431f9810b61b93eb3bdbe12292e381a11ab6a869674e2c19b19464e98c344e",
+      "passed": true
+    },
+    {
+      "path": "realistic/world-environment.js",
+      "bytes": 11579,
+      "sha256": "a84c7457249fbafc3dbfde8ce894fc0c0fcaf045542b8683d2a5e521c1e855f6",
+      "passed": true
+    },
+    {
+      "path": "realistic/fine-geometry.js",
+      "bytes": 20790,
+      "sha256": "204c9bb575d10022a73e3346bf529d8f78f55e1bcaf1e083f3f86a07e229b5e4",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/three.module.js",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/manifest.json",
+      "bytes": 800,
+      "sha256": "cc8c38725f8b0f51065006b03fe6b4ab264a93afe4b11c5262f7267d81ef6c29",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/addons/controls/OrbitControls.js",
+      "bytes": 38703,
+      "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/addons/loaders/RGBELoader.js",
+      "bytes": 268,
+      "sha256": "6c08f9c441040a61a188ad7711078da4df48f8c5ac3b3725dd6f10ac9ff81162",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/addons/loaders/HDRLoader.js",
+      "bytes": 12456,
+      "sha256": "d7053cfc4019f520335ae07e0fe82b4ef5a66b6766e8b253d066616184995e89",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/addons/loaders/GLTFLoader.js",
+      "bytes": 114739,
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/addons/utils/BufferGeometryUtils.js",
+      "bytes": 35539,
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/manifest.json",
+      "bytes": 15565,
+      "sha256": "db8ed0a9d1c54efe2f7a79a64f22961b4417a54c7f38a58413102978d61af691",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/environment/coastal-day.hdr",
+      "bytes": 1435119,
+      "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/environment/coastal-sunset.hdr",
+      "bytes": 1061624,
+      "sha256": "e90f2130848de0364b76d2b3da7a72ce31bbb95d66bd86d5b4f85f0626421b8d",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/coast_sand_01-diff.jpg",
+      "bytes": 960614,
+      "sha256": "58af2e40100f7f405703a86d593af64379f822c4786850def23ecfc921450d54",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/coast_sand_01-nor_gl.jpg",
+      "bytes": 1146826,
+      "sha256": "fe4d045aec99e71e80f682fcf0ad958d2dff1fe614b73178b304d1bac047b54a",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/coast_sand_01-rough.jpg",
+      "bytes": 383892,
+      "sha256": "cbc3e0bf2214e04318a643c9dc81f50f33cc5f7b935a20016c5d9efd9a6d1696",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/grass_ground-diff.jpg",
+      "bytes": 876584,
+      "sha256": "a79cc5ed65af0f80261b39a383b64a8c5272c5144d724deb43dbc29f0e4cd19b",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/grass_ground-nor_gl.jpg",
+      "bytes": 1310516,
+      "sha256": "7000e2ccd479bb7b66dcdf4faef7b47554324566886314ca620cbf03e274e826",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/grass_ground-rough.jpg",
+      "bytes": 328190,
+      "sha256": "111341f948b7e073edf7ac6add8777e1bf10df8959400df3863243e89bbc8c08",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/rocky_terrain-diff.jpg",
+      "bytes": 905179,
+      "sha256": "429315865fd89c150272592f6d93def174c6f69804a565ff08e53627a885579b",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/rocky_terrain-nor_gl.jpg",
+      "bytes": 1059194,
+      "sha256": "a6556e1220c6e6c822e68ceeb9589719e4db8c87340199657cc705fea6ecf391",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/rocky_terrain-rough.jpg",
+      "bytes": 439748,
+      "sha256": "b37dfff29fff10a219bfe73886940625df63b345289ea6b71ec5f6ddadc8adcb",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/painted_plaster_wall-diff.jpg",
+      "bytes": 686726,
+      "sha256": "440310f05af089f2c93353167573403cbc3f805948203237b5d26431eeb9e19c",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/painted_plaster_wall-nor_gl.jpg",
+      "bytes": 900461,
+      "sha256": "8eb01647d126eb5341e2c325821ad48c8ca11349dbef53447c95422c5d91cc9d",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/painted_plaster_wall-rough.jpg",
+      "bytes": 354762,
+      "sha256": "e0564c297b22ab1cf4ef02a82157b84ce3b92eb4fd49d9c64b7256a8b300af82",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/wood_floor-diff.jpg",
+      "bytes": 734493,
+      "sha256": "2a1c07687b6dbb214c4b9213739c6d92d425f1f0fc8ab3ac157f105d78240789",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/wood_floor-nor_gl.jpg",
+      "bytes": 423303,
+      "sha256": "452247f0d0d1b7fc7f8324ff3b6ed60bcc6de1405f4284eeb8d9bce90d4939c2",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/wood_floor-rough.jpg",
+      "bytes": 527754,
+      "sha256": "061f1e1293251b2d28c76e3fac1ea9452b0e8648bb8f9b3728e09db386166e5c",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/rock_moss_set_01/rock_moss_set_01.gltf",
+      "bytes": 9987,
+      "sha256": "c36675aca9c6b2be7785c2534cf413b03ec82a5a2a5407a2b1c0cdb0346c9727",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/rock_moss_set_01/rock_moss_set_01.bin",
+      "bytes": 1466380,
+      "sha256": "de8360e6175879aaf02c171911069cf5f1852547f9ca7f10e440085dbcc3315e",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/rock_moss_set_01/textures/rock_moss_set_01_diff_1k.jpg",
+      "bytes": 168099,
+      "sha256": "40cea65d8aa4ee73a93b04af19963834d061eee9779c3fc2c1cba76eef812ccc",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/rock_moss_set_01/textures/rock_moss_set_01_nor_gl_1k.jpg",
+      "bytes": 209975,
+      "sha256": "eb4aad3f207f1dc5b624d74ae240372171626a66912bd71adf7bd3e518181d6e",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/rock_moss_set_01/textures/rock_moss_set_01_rough_1k.jpg",
+      "bytes": 82624,
+      "sha256": "4d6ec46623abd8e2cdb855f59c7ce31873ad61b36b60e4de579e9e776a497c6b",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/grass_bermuda_01.gltf",
+      "bytes": 32912,
+      "sha256": "a1e5bb7fcf33721dc4844d7acacab80759fccec659f1ea643f8701afc542e207",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/grass_bermuda_01.bin",
+      "bytes": 32260,
+      "sha256": "b98be48b43afb9d57f6c722d918a49996635064b829b16dc14ef4a48c0f04dae",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/textures/grass_bermuda_01_diff_1k.jpg",
+      "bytes": 175425,
+      "sha256": "ef202eeb8f8fb3312446009acecc87e5679a7d612e4dee859d8a849e00af5fcb",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/textures/grass_bermuda_01_nor_gl_1k.jpg",
+      "bytes": 709845,
+      "sha256": "4475b37d6e4d217ce03547216f62d1ef6e65cafda2355fd0cb2aeb6d919b9338",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/textures/grass_bermuda_01_arm_1k.jpg",
+      "bytes": 500088,
+      "sha256": "38190d342fe951c33ff8c37dd2e3de37aca4cc7633e91be8b0d1c1f71057a641",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/textures/grass_bermuda_01_alpha_1k.png",
+      "bytes": 59564,
+      "sha256": "e58b3052aad2f107cdd763e437f80ed8fb5a31bcc43b44023f7f767cb3d9888e",
+      "passed": true
+    },
+    {
+      "path": "camp-core.js",
+      "bytes": 8817,
+      "sha256": "079b72ff19bbfcfc7a1d85e566dc050fe96c950fec08b5348f58ca465077594a",
+      "passed": true
+    },
+    {
+      "path": "camp-scene.js",
+      "bytes": 2077,
+      "sha256": "2976f1c4c2e0fc17c67a557e125489b12f38766e98819244cc07b4e1be43ce73",
+      "passed": true
+    },
+    {
+      "path": "camp-viewer.js",
+      "bytes": 5370,
+      "sha256": "2e9d1c7a2aa3d791cce221dea18f5ed6eb33fcc0fa13360170849a4470c8472a",
+      "passed": true
+    },
+    {
+      "path": "camp.css",
+      "bytes": 7053,
+      "sha256": "3d47ca125872ec79a093e518515359ef17a6ad5f0f9dc298cdf1beed62d1d616",
+      "passed": true
+    },
+    {
+      "path": "index.html",
+      "bytes": 2133,
+      "sha256": "ea371b1cfe0ed4fe9171e9ca9c078a281ddc1c9b9097049dbbd3f5dd4ed302ca",
+      "passed": true
+    },
+    {
+      "path": "glb/a.glb",
+      "bytes": 18325864,
+      "sha256": "04c18d338d72463e642ce0b5b21a9456653d3dd18b9ba3d1fca89cf60e25d895",
+      "passed": true
+    },
+    {
+      "path": "glb/b.glb",
+      "bytes": 18345700,
+      "sha256": "2a5d8fc9f64a2d3bf62042b0777e6dcd6cd31bea1b8789e8e9fcb2913e1e83fe",
+      "passed": true
+    },
+    {
+      "path": "proposal.json",
+      "bytes": 3893734,
+      "sha256": "810bbb114afe82f759b8d7344a9947d816eece7d64612a08aadeed4b4c99dcf4",
+      "passed": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 561,
+      "sha256": "4fb8c1c72c16b6452ee36b3d36d1780812a00bfb37c98b0d1551f37a679ec127",
+      "passed": true
+    },
+    {
+      "path": "serve.mjs",
+      "bytes": 1249,
+      "sha256": "58e446e177f73f209bf286bfc3a7b2c70e8954bb40efdc52c29914528a929578",
+      "passed": true
+    },
+    {
+      "path": "delivery-manifest.json",
+      "bytes": 11215,
+      "sha256": "8e52561b225bd4f973929fb4dc00448fa34a6b385444d59f8babc922075eac29",
+      "passed": true
+    }
+  ],
+  "visualQuality": "needs-review"
+}

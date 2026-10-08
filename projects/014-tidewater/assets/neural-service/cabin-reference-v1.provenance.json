@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "id": "cabin-reference-v1",
+  "kind": "generated-reference-image",
+  "tool": {
+    "name": "builtin imagegen",
+    "api": "image_gen.imagegen",
+    "evidence": "The coordinating agent reported this image was generated with the built-in imagegen tool and supplied this exact file for image-to-3D inference."
+  },
+  "source": {
+    "path": "projects/014-tidewater/web/assets/neural/cabin-reference-v1.png",
+    "url": "./assets/neural/cabin-reference-v1.png",
+    "mimeType": "image/png",
+    "bytes": 2387509,
+    "sha256": "ca45dfe8d960f7c859aa42e25c24aeb36db692270889977ed8fa186a37475781",
+    "fileModifiedAt": "2026-10-05T02:21:45.771Z"
+  },
+  "prompt": {
+    "captured": false,
+    "complete": false,
+    "exactPrompt": null,
+    "reason": "The original image-generation invocation and full prompt are not present in this record. No replacement prompt has been fabricated.",
+    "reportedBrief": "transparent isolated photoreal plaster/terracotta cottage",
+    "reportedBriefSource": "Coordinating agent message supplying the image for this generation task"
+  },
+  "downstream": {
+    "model": "microsoft/TRELLIS.2-4B",
+    "space": "https://huggingface.co/spaces/microsoft/TRELLIS.2",
+    "inputSha256": "ca45dfe8d960f7c859aa42e25c24aeb36db692270889977ed8fa186a37475781",
+    "generatedGlb": "./assets/neural/cabin-generated-v1.glb",
+    "generationTaskId": "7731f838b77c48b69c074368a1cc8bdd"
+  },
+  "boundary": "The image is a design reference. A separate pretrained 3D model inferred the textured mesh; the image itself is not the 3D result."
+}

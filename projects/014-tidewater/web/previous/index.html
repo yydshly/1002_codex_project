@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f7f1" />
+    <title>Tidewater · 海岛工作台</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230d766c'/%3E%3Cpath d='M10 34 Q21 22 32 34 T54 34 M10 44 Q21 32 32 44 T54 44' fill='none' stroke='%23f7f7f1' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <div class="editor-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Tidewater 海岛工作台首页">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M3 12c4-5 7-5 11 0s7 5 11 0M3 20c4-5 7-5 11 0s7 5 11 0" /></svg></span>
+          <span class="brand-copy"><strong>TIDEWATER</strong><span>海岛工作台</span></span>
+        </a>
+        <span class="toolbar-divider" aria-hidden="true"></span>
+        <label class="scene-title" for="scene-name"><span class="sr-only">场景名称</span><input id="scene-name" type="text" value="我的海岛" maxlength="60" spellcheck="false" /><span class="edit-pencil" aria-hidden="true">↗</span></label>
+        <div class="history-actions" aria-label="编辑历史">
+          <button id="undo" class="icon-button" type="button" title="撤销" aria-label="撤销" disabled><svg viewBox="0 0 24 24"><path d="m9 5-5 5 5 5M4 10h9a6 6 0 0 1 6 6v3" /></svg></button>
+          <button id="redo" class="icon-button" type="button" title="重做" aria-label="重做" disabled><svg viewBox="0 0 24 24"><path d="m15 5 5 5-5 5m5-5h-9a6 6 0 0 0-6 6v3" /></svg></button>
+        </div>
+        <nav class="project-actions" aria-label="项目操作">
+          <a class="text-link research-link" href="research.html#exploration">能力 / 产品探索 <span aria-hidden="true">↗</span></a>
+          <button id="new-scene" class="button button-quiet" type="button">新建</button>
+          <button id="import-scene" class="button button-quiet" type="button">导入</button>
+          <button id="export-scene" class="button button-outline" type="button">导出场景</button>
+          <button id="save-scene" class="button button-primary" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 3h10l3 3v11H3V3h1Zm2 0v5h8V3M6 17v-5h8v5" /></svg>保存</button>
+        </nav>
+        <input id="import-file" type="file" accept="application/json,.json" hidden />
+      </header>
+
+      <main class="workspace" aria-label="海岛场景编辑器">
+        <section class="world-view" aria-label="实时 3D 场景预览">
+          <iframe id="world-frame" title="Tidewater 实时海岛场景" src="../runtime/index.html?fly&amp;noAudio&amp;noHaze&amp;scale=0.5" allow="fullscreen; autoplay" allowfullscreen></iframe>
+          <div id="loading-hint" class="loading-hint" role="status">
+            <span class="loading-spinner" aria-hidden="true"></span>
+            <strong>正在唤醒这座海岛</strong>
+            <p>首次编译海水与光照可能需要一分钟以上。<br />你可以先浏览控件，场景就绪后开始编辑。</p>
+          </div>
+        </section>
+
+        <aside class="panel object-panel" aria-labelledby="objects-heading">
+          <div class="panel-header"><h2 id="objects-heading">场景</h2><span class="section-tag">SCENE</span></div>
+          <div class="preset-field"><label for="preset-select">选择环境预设</label><div class="select-wrap"><select id="preset-select"><option value="harbor">港湾与码头</option><option value="sunset">日落港湾</option><option value="open-water">外海风浪</option></select><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg></div></div>
+          <div class="section-heading"><h3>场景对象</h3><span class="muted-label">点选编辑</span></div>
+          <div id="object-list" class="object-list" aria-label="场景对象列表"></div>
+          <div class="panel-footnote"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 2.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM9 8v4m0-7v.5" /></svg><span>先选对象，再用属性或指令调整。<span class="scope-note">地形与原有村落固定，可编辑左侧 6 个对象。</span><a class="product-plan-link" href="research.html#extensions">查看页面扩展规划 ↗</a></span></div>
+        </aside>
+
+        <aside class="panel inspector-panel" aria-label="属性与环境">
+          <div class="panel-header"><h2>调整场景</h2><span class="section-tag">EDIT</span></div>
+          <details class="property-section" open>
+            <summary><span>环境</span><span class="summary-chevron" aria-hidden="true"></span></summary>
+            <div class="slider-field"><div class="field-label"><label for="env-time">时间</label><output id="time-value" for="env-time">15:00</output></div><input id="env-time" type="range" min="0" max="24" step="0.1" value="15" /><div class="range-endpoints"><span>午夜</span><span>正午</span><span>午夜</span></div></div>
+            <div class="slider-field"><div class="field-label"><label for="env-wind">风速</label><output id="wind-value" for="env-wind">8 m/s</output></div><input id="env-wind" type="range" min="0.5" max="30" step="0.5" value="8" /></div>
+            <div class="slider-field"><div class="field-label"><label for="env-swell">涌浪强度</label><output id="swell-value" for="env-swell">0.6</output></div><input id="env-swell" type="range" min="0" max="2" step="0.05" value="0.6" /></div>
+            <div class="slider-field"><div class="field-label"><label for="env-cloud">云量</label><output id="cloud-value" for="env-cloud">35%</output></div><input id="env-cloud" type="range" min="0" max="1" step="0.05" value="0.35" /></div>
+          </details>
+          <details class="property-section object-section" open>
+            <summary><span>对象属性</span><span class="summary-chevron" aria-hidden="true"></span></summary>
+            <div class="selection-heading"><h3 id="selected-name">未选择对象</h3><span id="selected-type" class="muted-label"></span></div>
+            <div id="empty-selection" class="empty-selection"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m10 5 15 11-8 2-3 8-4-21Z" /></svg><p>选择左侧的场景对象<br />调整它的位置、方向与大小。</p></div>
+            <div id="object-properties" hidden>
+              <div class="coordinate-grid"><label class="number-field" for="obj-x"><span>横向 X <small>米</small></span><input id="obj-x" type="number" min="-500" max="500" step="1" value="0" /></label><label class="number-field" for="obj-z"><span>纵向 Z <small>米</small></span><input id="obj-z" type="number" min="-500" max="500" step="1" value="0" /></label></div>
+              <label class="rotation-field number-field" for="obj-rotation"><span>朝向 <small>°</small></span><input id="obj-rotation" type="number" min="-3600" max="3600" step="5" value="0" /></label>
+              <div class="slider-field scale-field"><div class="field-label"><label for="obj-scale">大小</label><span class="muted-label">0.2 — 4 倍</span></div><input id="obj-scale" type="range" min="0.2" max="4" step="0.05" value="1" /></div>
+              <div class="checkbox-row"><label><input id="obj-visible" type="checkbox" checked /><span>显示对象</span></label><label><input id="obj-locked" type="checkbox" /><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 7V5a3 3 0 0 1 6 0v2M4 7h8v7H4V7Z" /></svg><span>锁定</span></label></div>
+            </div>
+          </details>
+        </aside>
+
+        <section class="view-tools" aria-label="视角与漫游">
+          <div class="camera-switch" role="group" aria-label="预设镜头"><button type="button" data-camera="overview" class="is-active" aria-pressed="true">鸟瞰</button><button type="button" data-camera="pier" aria-pressed="false">码头</button><button type="button" data-camera="boat" aria-pressed="false">船边</button></div>
+          <button id="capture" class="stage-button" type="button" title="捕获当前画面"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 6h4l1-2h6l1 2h4v11H2V6Z" /><circle cx="10" cy="11" r="3" /></svg><span>截图</span></button>
+          <button id="enter-world" class="stage-button roam-button" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 16 3-5m2-4 3 2 3-1M8 18l2-5 3 3 1 3M9 7l-2 4 3 2" /><circle cx="11" cy="3.5" r="1.5" /></svg>进入漫游 <span aria-hidden="true">↗</span></button>
+        </section>
+
+        <section class="command-dock" aria-labelledby="command-heading">
+          <div class="command-heading"><h2 id="command-heading"><span class="command-spark" aria-hidden="true">✦</span>描述你的下一步</h2><span class="demo-badge" title="此版本使用本地规则识别下方示例及同类指令；无法识别的请求会明确提示。">本地指令演示 · 未连接 Opus</span></div>
+          <div class="prompt-row"><label class="sr-only" for="prompt-input">场景编辑指令</label><textarea id="prompt-input" rows="1" placeholder="例如：改成日落，海浪平静一点" aria-describedby="prompt-help"></textarea><button id="apply-prompt" class="button button-primary apply-button" type="button">应用修改 <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" /></svg></button></div>
+          <div class="prompt-examples" aria-label="试试这些指令"><button type="button" data-prompt="改成日落，海浪平静一点">日落 · 平静海面</button><button type="button" data-prompt="把选中的物体向右移动10米">向右移动 10 米</button><button type="button" data-prompt="切换鸟瞰镜头">鸟瞰镜头</button><button type="button" data-prompt="锁定选中的物体">锁定对象</button></div>
+          <div class="change-history"><div class="change-history-label"><span class="change-dot" aria-hidden="true"></span>修改记录</div><ul id="change-list" class="change-list" aria-live="polite"><li class="empty-change">你的修改会显示在这里，并可撤销。</li></ul></div>
+          <p id="prompt-help" class="sr-only">本地演示支持环境、选中对象的位置与锁定、预设镜头等示例指令。无法识别的请求会提示，不会擅自修改场景。</p>
+        </section>
+
+        <footer class="statusbar"><div class="runtime-indicator"><span class="status-dot" aria-hidden="true"></span><span id="runtime-status">场景正在加载</span></div><span id="scene-status">尚未修改</span><button id="toggle-inspector" type="button">场景数据 <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m5 4-3 4 3 4m6-8 3 4-3 4M9 3 7 13" /></svg></button></footer>
+        <div id="toast" class="toast" role="status" hidden></div>
+      </main>
+    </div>
+
+    <dialog id="state-dialog" class="state-dialog" aria-labelledby="state-heading"><div class="dialog-header"><div><span class="section-tag">SCENE STATE</span><h2 id="state-heading">场景数据</h2></div><button id="close-state" class="icon-button" type="button" aria-label="关闭场景数据"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" /></svg></button></div><p>当前场景的对象、环境和镜头配置。导出后可再次导入继续编辑。</p><pre id="state-json"></pre></dialog>
+  </body>
+</html>

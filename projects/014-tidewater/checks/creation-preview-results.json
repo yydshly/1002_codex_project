@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-04T15:40:09.927Z",
+  "renderer": "Chrome WebGPU",
+  "gpu": {
+    "vendor": "intel",
+    "architecture": "gen-12lp",
+    "description": ""
+  },
+  "checks": [
+    {
+      "name": "独立轻量 WebGPU 就绪",
+      "pass": true
+    },
+    {
+      "name": "示例实体生成真实三角形与 GPU 缓冲",
+      "pass": true
+    },
+    {
+      "name": "不同布局改变实际顶点数量和灯塔几何边界",
+      "pass": true
+    },
+    {
+      "name": "GPU 实际呈现画面随布局变化",
+      "pass": true
+    },
+    {
+      "name": "俯视镜头实际重绘",
+      "pass": true
+    },
+    {
+      "name": "真实三角形拾取选择对象",
+      "pass": true
+    },
+    {
+      "name": "拖动轨道视角生效",
+      "pass": true
+    },
+    {
+      "name": "滚轮缩放重绘",
+      "pass": true
+    },
+    {
+      "name": "无效计划不替换已渲染布局",
+      "pass": true
+    },
+    {
+      "name": "轻量渲染无异常或缺失资源",
+      "pass": true
+    }
+  ],
+  "baseline": {
+    "renderer": "WebGPU",
+    "entities": 9,
+    "vertices": 2526,
+    "triangles": 842,
+    "bufferBytes": 101040,
+    "generation": 1,
+    "rendered": 2,
+    "inFlight": false
+  },
+  "changed": {
+    "renderer": "WebGPU",
+    "entities": 4,
+    "vertices": 1512,
+    "triangles": 504,
+    "bufferBytes": 60480,
+    "generation": 2,
+    "rendered": 3,
+    "inFlight": false
+  },
+  "errors": [],
+  "failedResources": []
+}

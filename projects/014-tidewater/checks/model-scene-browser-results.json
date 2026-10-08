@@ -1,0 +1,63 @@
+{
+  "verifiedAt": "2026-10-04T17:26:55.413Z",
+  "method": "Native in-app browser via CUA on actual user layout; creator draft read only",
+  "sourceFingerprint": "plan-v1-dbe57e8c058ee800-20887",
+  "checks": [
+    {
+      "name": "读取原草案的24个对象和正确分布",
+      "pass": true,
+      "evidence": "本机已保存布局 · 3 陆地 · 3 水面 · 1 道路 · 1 小屋 · 1 灯塔 · 8 棕榈 · 7 船只"
+    },
+    {
+      "name": "模型代码候选在原布局上构建真实19162三角形",
+      "pass": true,
+      "evidence": "19,162 三角面 · 24 个对象增强"
+    },
+    {
+      "name": "切回原始粗模恢复4532三角形",
+      "pass": true,
+      "evidence": "4,532 三角面"
+    },
+    {
+      "name": "候选可以再次显示",
+      "pass": true
+    },
+    {
+      "name": "参数变化提示重新预览并禁止保存旧候选",
+      "pass": true,
+      "evidence": "参数已修改 · 等待重新预览"
+    },
+    {
+      "name": "标准细节真实减少几何而保留对象",
+      "pass": true,
+      "evidence": "14,540 三角面 · 24 个对象增强"
+    },
+    {
+      "name": "日落参数可构建同一布局候选",
+      "pass": true
+    },
+    {
+      "name": "模型候选独立保存",
+      "pass": true,
+      "evidence": "本轮方案已独立保存"
+    },
+    {
+      "name": "刷新恢复与原布局匹配的已保存候选",
+      "pass": true,
+      "evidence": "本机已保存布局 · 3 陆地 · 3 水面 · 1 道路 · 1 小屋 · 1 灯塔 · 8 棕榈 · 7 船只 · 已恢复对应候选"
+    },
+    {
+      "name": "真实GPU导出回复可生成GLB文件链接",
+      "pass": true,
+      "evidence": "文件已准备好：我的布局-candidate.glb ↓"
+    },
+    {
+      "name": "候选JSON导出包含独立方案文件链接",
+      "pass": true
+    },
+    {
+      "name": "模型预览保存导出后原草案指纹和所有布局不变",
+      "pass": true
+    }
+  ]
+}

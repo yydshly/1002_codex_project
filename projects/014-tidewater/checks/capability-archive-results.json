@@ -1,0 +1,2599 @@
+{
+  "format": "tidewater-capability-archive-check.v1",
+  "checkedAt": "2026-10-07T16:08:21.621Z",
+  "passed": true,
+  "publicManifestMatches": true,
+  "capabilityGroups": 9,
+  "sourceFiles": 352,
+  "runtimeFiles": 79,
+  "source": [
+    {
+      "path": "web/app.js",
+      "bytes": 11554,
+      "sha256": "2a5c6b342c0134311bfe216474d41276231102dd8c7d6dd1372a9991c71b7c4f",
+      "passed": true
+    },
+    {
+      "path": "web/asset-generation-core.js",
+      "bytes": 13423,
+      "sha256": "1b507c5f957628585643c4960f2e7ebff8d58a47052ac453e19fd256687b0d71",
+      "passed": true
+    },
+    {
+      "path": "web/asset-generation.js",
+      "bytes": 21175,
+      "sha256": "78315c2855203bd46ce0a685f2cd91a48dd3268f3cb102242a48163861a4ed4d",
+      "passed": true
+    },
+    {
+      "path": "web/checks/model-scene.html",
+      "bytes": 1103,
+      "sha256": "f50ba49f54cbe411935f8e338549a78aabd598b3bf66bff55efe97bb349234ed",
+      "passed": true
+    },
+    {
+      "path": "web/checks/model-scene.js",
+      "bytes": 7265,
+      "sha256": "4771de322d0a0d501c09baa6a32eb1cfc9a31fb6dc5cbc5fd03c3e0e431693fc",
+      "passed": true
+    },
+    {
+      "path": "web/checks/refinement.html",
+      "bytes": 1442,
+      "sha256": "9429b8ffe7baa52a8fb212e9ad8dcbd6f63946a85bfca4821159a13898e8e706",
+      "passed": true
+    },
+    {
+      "path": "web/checks/refinement.js",
+      "bytes": 7518,
+      "sha256": "079ebc08ddfe267bead36735e629517ed920732828e113a25a13bcaa48c7545c",
+      "passed": true
+    },
+    {
+      "path": "web/checks/water-surface.html",
+      "bytes": 1296,
+      "sha256": "1fb8564d16ad86732910c6d8cd64f3d3a7600815a1acda7ed799efa9deaf1cbe",
+      "passed": true
+    },
+    {
+      "path": "web/checks/water-surface.js",
+      "bytes": 6503,
+      "sha256": "af8c3695d5a01854787193773c099547693c107d8589d5237bca9c604a36b5c4",
+      "passed": true
+    },
+    {
+      "path": "web/create.html",
+      "bytes": 35389,
+      "sha256": "3207e8a64f57992b7211a8ea077dc5e28478d55c80970a8e0917955a7480ba8b",
+      "passed": true
+    },
+    {
+      "path": "web/creation-core.js",
+      "bytes": 24399,
+      "sha256": "fb346a4f0e80c87d5e8c9b265019609ba56503d281eb5504290953e2f9680f2c",
+      "passed": true
+    },
+    {
+      "path": "web/creation-preview.html",
+      "bytes": 2128,
+      "sha256": "fd3a7178bac488c9f28c17b3f90ba25621acf68c8e25cad474eb7d28ef7f2ebb",
+      "passed": true
+    },
+    {
+      "path": "web/creation-preview.js",
+      "bytes": 25905,
+      "sha256": "a5c758728ee0cc0162677c1c4333a738c5267c33885ac46278ce08f730e7f974",
+      "passed": true
+    },
+    {
+      "path": "web/creation-refinement-geometry.js",
+      "bytes": 4265,
+      "sha256": "e4dfe0f9cdad59b971c368ecebe072838c0c2db4715010e167438505def0b518",
+      "passed": true
+    },
+    {
+      "path": "web/creation-refinement.js",
+      "bytes": 9173,
+      "sha256": "7aaa221a8f1b6b84cac5d89189e8db263c94a2554174272bf5042e432ac87c73",
+      "passed": true
+    },
+    {
+      "path": "web/creation-surfaces.js",
+      "bytes": 3549,
+      "sha256": "74a38cef48c76492a0085a46d514759c9805b3443e1c9e3e880e48d002c0941e",
+      "passed": true
+    },
+    {
+      "path": "web/creation.css",
+      "bytes": 34062,
+      "sha256": "b7dac4f278ab97030242679b8d00d3f2666cc225d49b1eeff3d2486371ba6aac",
+      "passed": true
+    },
+    {
+      "path": "web/creation.js",
+      "bytes": 38421,
+      "sha256": "985fa60334dcbc24876026f8da66687f120a9595398a93b95cf221dea5f3860e",
+      "passed": true
+    },
+    {
+      "path": "web/fine-benchmark.html",
+      "bytes": 3756,
+      "sha256": "a995dfc994f6928c750e7dfe99a100418799a63da73882f034c0e239e4f0e0b1",
+      "passed": true
+    },
+    {
+      "path": "web/fine-benchmark.js",
+      "bytes": 12686,
+      "sha256": "2c015a01b4b936bcb8ddb39ab6b34c8f6f942f1eb5c2f07f53ba75f9a88e2c39",
+      "passed": true
+    },
+    {
+      "path": "web/fine-geometry-core.js",
+      "bytes": 24621,
+      "sha256": "4c984fc9f30d6794ed02ab3e4edc63c82375f022085bc2af482ee8db7262576f",
+      "passed": true
+    },
+    {
+      "path": "web/fine-refinement-core.js",
+      "bytes": 3514,
+      "sha256": "9a07cd2fcee0c97d7c85c2f8e546737810715d2d5ea52084729c7c8eb3fdce43",
+      "passed": true
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 11991,
+      "sha256": "b1ddaabc0ab7338160f31a1b90189dbffadd24341c1b46115437bcc3534b256d",
+      "passed": true
+    },
+    {
+      "path": "web/local-3d-provider.js",
+      "bytes": 4364,
+      "sha256": "899096a2a01d58e20f7c34b9b557ed9d958498be7f84d22d95d6ab94003086ce",
+      "passed": true
+    },
+    {
+      "path": "web/model-scene-assets.js",
+      "bytes": 15657,
+      "sha256": "10e809dcb0b5161697e424846d5c28fae05cf9a1675abeba2bf0eab7b83ec34c",
+      "passed": true
+    },
+    {
+      "path": "web/model-scene-candidate.json",
+      "bytes": 1497,
+      "sha256": "ab2edbc56a54376935d955c8cab80b1aa9386586129c6cf9ba9320e5d930ab48",
+      "passed": true
+    },
+    {
+      "path": "web/model-scene-core.js",
+      "bytes": 13699,
+      "sha256": "4ce27bcdcf2c2c7a623e376e4f1957ab87a90a91e3596acba7f890c3d2264288",
+      "passed": true
+    },
+    {
+      "path": "web/model-scene-crafted-assets.js",
+      "bytes": 10386,
+      "sha256": "26e5dc46267be76fa1eb3d300e0910d8309f32d452cb254f4e034b1df9e734af",
+      "passed": true
+    },
+    {
+      "path": "web/model-scene-preview.html",
+      "bytes": 2267,
+      "sha256": "28571e96d666ab4ec05e1a87cf9c567ee426234526a9d0302f8c9bcc7efa479d",
+      "passed": true
+    },
+    {
+      "path": "web/model-scene-preview.js",
+      "bytes": 19234,
+      "sha256": "3014561d8ce43b6339cbf56128a00b5cd6c9a9922a90de769de6b175e143b60c",
+      "passed": true
+    },
+    {
+      "path": "web/model-scene.css",
+      "bytes": 13190,
+      "sha256": "86cdc9c011879b3fbe210c1e2d7b1421dcdf6f420b1f385b6c5e1b633b27da0a",
+      "passed": true
+    },
+    {
+      "path": "web/model-scene.html",
+      "bytes": 8761,
+      "sha256": "9f8e8faf4f655af4f1c096c270717125714f714889fc7cf3057b6dee5db785fd",
+      "passed": true
+    },
+    {
+      "path": "web/model-scene.js",
+      "bytes": 21829,
+      "sha256": "3dcd8bfd41fc3dd7a21584de9be29f5d753a3b2ebf4f471177329e9e94047b50",
+      "passed": true
+    },
+    {
+      "path": "web/portable-scene.html",
+      "bytes": 3201,
+      "sha256": "ca7650686ec3c1fa4e382cafc4aa1da966cd45632e98506d5be6260e0be85d9d",
+      "passed": true
+    },
+    {
+      "path": "web/portable-scene.js",
+      "bytes": 5036,
+      "sha256": "82d6ff9acbc830752ed1ee0ce4fc1bfa4998a1f191a46f4d1a3e6669dd711c98",
+      "passed": true
+    },
+    {
+      "path": "web/README.md",
+      "bytes": 23974,
+      "sha256": "bfa56f184ea5fb6c897f59e20f68844c3920c77c47e2bd2189c97a17bdb67240",
+      "passed": true
+    },
+    {
+      "path": "web/realistic/app.js",
+      "bytes": 11100,
+      "sha256": "f02a3f2266ab9e34e0c299c1dee96bb5c1805066f5fb4ad640633198cc198895",
+      "passed": true
+    },
+    {
+      "path": "web/realistic/fine-geometry.js",
+      "bytes": 20790,
+      "sha256": "204c9bb575d10022a73e3346bf529d8f78f55e1bcaf1e083f3f86a07e229b5e4",
+      "passed": true
+    },
+    {
+      "path": "web/realistic/scene.js",
+      "bytes": 67319,
+      "sha256": "bfb28857140a8c3e87ad4ef2eeb89fb28f11fc29e18203dacb6384b2ff94839f",
+      "passed": true
+    },
+    {
+      "path": "web/realistic/terrain.js",
+      "bytes": 6476,
+      "sha256": "1bd368328487d8fa9743d1e1c9d37efc77d6b69210d04ad16d648aa99fdc30fb",
+      "passed": true
+    },
+    {
+      "path": "web/realistic/world-environment.js",
+      "bytes": 11579,
+      "sha256": "a84c7457249fbafc3dbfde8ce894fc0c0fcaf045542b8683d2a5e521c1e855f6",
+      "passed": true
+    },
+    {
+      "path": "web/realistic/world-terrain.js",
+      "bytes": 4995,
+      "sha256": "8e431f9810b61b93eb3bdbe12292e381a11ab6a869674e2c19b19464e98c344e",
+      "passed": true
+    },
+    {
+      "path": "web/research-map.html",
+      "bytes": 6563,
+      "sha256": "15746318f4853e0020c8e6213696df19896a30fabc958e0f84df579111fdb222",
+      "passed": true
+    },
+    {
+      "path": "web/research.css",
+      "bytes": 18368,
+      "sha256": "553bc5afb07e5ab3c9b65535dc79af799145b2f38d99873670d87ea1922d544b",
+      "passed": true
+    },
+    {
+      "path": "web/research.html",
+      "bytes": 49936,
+      "sha256": "a44f845b56d4bf0547ec2de3a1664e5e553ea6091c97e45d9730a946465736e6",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/audio/CREDITS.md",
+      "bytes": 10394,
+      "sha256": "1ce3b28a2a36237bb3ab101bd0e7e2accff37475e95d16f8e27d420b11605207",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/clouds/LICENSING.md",
+      "bytes": 1123,
+      "sha256": "49a92b94c0037891fd16910ee4110b2ca8f3d2cdee7216ef1e48e646f5e7b384",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/CREDITS.md",
+      "bytes": 5148,
+      "sha256": "49706aaa01bc73b678bed06aaa456e01924299e6ee109a5cdccd2e6a07fe5fcd",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/editor-bridge.js",
+      "bytes": 12438,
+      "sha256": "eaaac051ee123f02f99480260fed8a0efa33773f206422fcbdbadd536c47ea00",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/index.html",
+      "bytes": 987,
+      "sha256": "b944538001d0edadd27dde23accba9d43dbd22953a87f03db32cdd0e53a70f9e",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/models/characters/LICENSE-Rocketbox.md",
+      "bytes": 1066,
+      "sha256": "17474e386e0b9e1a700cc3d06b2b0882a2c376d9c6b49c7f8274409b8f8d2352",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/models/debris/CREDITS.md",
+      "bytes": 1390,
+      "sha256": "97798436efce4cb6302d6fd4c508b064c39a2095e4642b87fb0380b3360f168e",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/models/props/CREDITS.md",
+      "bytes": 3608,
+      "sha256": "7477484e351f5592808f86f0569d6d3db08d5c82b9bcfe5e1fe9fecbdc352f40",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/models/props/props.json",
+      "bytes": 3386,
+      "sha256": "858b5910c9df36e70d9667e005df080eb0e508484e45ba081fd8aba6fb37ccb5",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/models/whale/humpback.json",
+      "bytes": 4106,
+      "sha256": "c47390c365da1c8c6fa73bea4996bf51073a973770c1942e8993f545e283a354",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/App.js",
+      "bytes": 31852,
+      "sha256": "105a76e8dc7f026fa3826b9a7e9ed056ebae269a3a8850d8ffc96ff96930fe7f",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/audio/soundBank.js",
+      "bytes": 6304,
+      "sha256": "38c08764dd101ba1c9c413859e9505c95a6b91db281faa2593e10a2090538525",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/audio/SoundScape.js",
+      "bytes": 48699,
+      "sha256": "e532e8c134ca2ced065ced23616c252efb1e67ff5ac98487735223294f9a8301",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/core/Bench.js",
+      "bytes": 10322,
+      "sha256": "d3f38d6ff7912634ef01e3aa10946af5ee81628e27ba5689f62f8a09572384b0",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/core/BenchSeed.js",
+      "bytes": 534,
+      "sha256": "d58320f8d36c9da09610ac52b3f6b72efc696f6edc9eaf2274a5b0a771c2e82d",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/core/CDLOD.js",
+      "bytes": 10096,
+      "sha256": "822037eff293345745144ff1cfb2f605bb10b198f7233b849105dcbae0382f52",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/core/DebugViews.js",
+      "bytes": 3748,
+      "sha256": "e50d169c35533c7714cbd19e02e428ebce669b19ff516523162d028523cb7821",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/core/Engine.js",
+      "bytes": 46,
+      "sha256": "a432162924c604882147cee28bfbf67df191e36e7fc23cb6842f436c1f82185a",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/core/Globals.js",
+      "bytes": 154,
+      "sha256": "959979ae1d2ec1ebc661b25e2ce2fce14c052375122b7639204aab41e7e055f6",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/core/Input.js",
+      "bytes": 2184,
+      "sha256": "837aede0dd64ed6e8bea9aa885e6e034e7d810740561a02edfdee9b8b828f646",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/core/Profiler.js",
+      "bytes": 5014,
+      "sha256": "d8ef85ceb12730645e35e1702196acb8e4df9ee967f27c34d2a0662b0e760576",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/core/SceneRenderer.js",
+      "bytes": 75,
+      "sha256": "ea52401378ad334a79e23ed574153fb3910b74fed06e2fe6bb8d4abd848a3aad",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/constants.js",
+      "bytes": 516,
+      "sha256": "4610679066f55da362c10a896fea17058ee646affff3981d6e2aede118f2947f",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/core/EventDispatcher.js",
+      "bytes": 966,
+      "sha256": "3225f116d0407a8b603917ab8bbe8656f1cbfe97fc1165028bf7420093ae70f3",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/Engine.js",
+      "bytes": 2308,
+      "sha256": "e0ab1f2893204c5996b409931357de0b1429e502a73f2c61f9f058a69e4617bb",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/geometry/BufferAttribute.js",
+      "bytes": 8854,
+      "sha256": "48cc710ca8029bc15b3c03533b13c478ae55cf52a453543e10d7ffc933580a41",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/geometry/BufferGeometry.js",
+      "bytes": 11772,
+      "sha256": "ef3e8470f6cc0745bc50e354c3145da8e470ea1de0e056d33f3f0501901e7376",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/geometry/BufferGeometryUtils.js",
+      "bytes": 4796,
+      "sha256": "c7ab418b86ddd4b623eb7fa6b037c800c141f9f444772d604658961d2d623d4c",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/geometry/index.js",
+      "bytes": 965,
+      "sha256": "7aa336e8ff7d01675b375fbb499ae9820952595f9bac9b169df22d6b1de5538c",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/geometry/PolyhedronGeometry.js",
+      "bytes": 4274,
+      "sha256": "6b5e756688f3ea962c012d7e06c595d1fd5730fba9e44b1cccc5455013b45473",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/geometry/PrimitiveGeometries.js",
+      "bytes": 14019,
+      "sha256": "cbde738b33b5e0c67d729825c7d8620b2d819c7aa70bf680b15d94d265732ceb",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/geometry/RoundedBoxGeometry.js",
+      "bytes": 3919,
+      "sha256": "f4c05c55362ff68a2fe2eeae21e9d783344243265e1e18567154fe95b3971413",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/geometry/TubeGeometry.js",
+      "bytes": 2137,
+      "sha256": "f493cb4de35444a9adfedf2b7a57994f59cba823e9768b5102080b750b9ef5a2",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/gpu/Compute.js",
+      "bytes": 2820,
+      "sha256": "bd64385e6d5de7e9a1a7986eb71c7a032d5ed7763568f47285437c9f185a9aa8",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/gpu/GPU.js",
+      "bytes": 9244,
+      "sha256": "708e0fd59edea32349b5c372f14cc6e09b20dd1e24f536868106ad2a8330428d",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/gpu/Mipmaps.js",
+      "bytes": 3101,
+      "sha256": "c3262f6f22cb30275847666ab6f7ed543f0c77b5d06f1d9aa84611cadc7070c6",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/gpu/Readback.js",
+      "bytes": 3692,
+      "sha256": "d16b3a3ecc588e5743534cfb10129428666d4114fb7e3372af51cb068529148d",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/gpu/Shader.js",
+      "bytes": 21580,
+      "sha256": "b45b50583a6525aa4aa9a26ae5be699032e5c5ae57780daf99ed2a6402860bd6",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/gpu/Texture.js",
+      "bytes": 8628,
+      "sha256": "4e446d488ee36c88c7ae03552995544559ad4ada2f41320dd206fd4f99f95453",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/gpu/Uniforms.js",
+      "bytes": 8296,
+      "sha256": "51bf60e5da6bbab612cc1405cce5dcb7a759a3732bd0fd7cdfe5e1df73105940",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/index.js",
+      "bytes": 456,
+      "sha256": "239f0f1370717789618b0094b983717ca501ad957eaa02bdf3e2b872a66dc454",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/loaders/GLTF.js",
+      "bytes": 8746,
+      "sha256": "b8a2c3666fa27ea504e62d315ed9c125e178007a27d151eb59c9d1ea5ac210d1",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/Box3.js",
+      "bytes": 5392,
+      "sha256": "170c606467f859c5a3f6dae1b32256711f61b927aaec42fe3cbcfb4a51c16356",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/CatmullRomCurve3.js",
+      "bytes": 7532,
+      "sha256": "b21bae1708947c35819fce3dbe97f90f893c36d7db42392fbd5b63de05991f5f",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/Color.js",
+      "bytes": 7124,
+      "sha256": "ad9a0110fd607695522c17dce08aa5eacee017e1160fce3aa5ba37704b893d25",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/DataUtils.js",
+      "bytes": 1241,
+      "sha256": "f94e4a385baae53868d2e334b31d04c5ac42ca7d382b5f9effcc6ada9060db38",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/Euler.js",
+      "bytes": 4035,
+      "sha256": "5bf51c4b93fffc1cb9c24d4ba75af7b00bc1520880e18353d4f69cddea7e37c7",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/Frustum.js",
+      "bytes": 3381,
+      "sha256": "cd6eba21f91122150afc973be49a215a0620c4ae1aea7f3ef0ff65d34d1b3bd9",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/index.js",
+      "bytes": 983,
+      "sha256": "96a474ebaf2666dc51217e3d8224254794a5576db3d0acb2ce4a56e00911a2cf",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/MathUtils.js",
+      "bytes": 4078,
+      "sha256": "8adcc4743bf966b097bd25057abeb50b313ec9b9030e457825a5da209e1f9534",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/Matrix3.js",
+      "bytes": 4466,
+      "sha256": "32fa721dfd326e1c0a53695b68938d4f2a5e85903c9b56c7b5f69e80456382da",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/Matrix4.js",
+      "bytes": 14183,
+      "sha256": "c5c1dc971d61cbd21efcb083fdbdfb1e9fb0c6a56c9422266cfdc8b8353d57cc",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/Plane.js",
+      "bytes": 2231,
+      "sha256": "523139ba4761b0f89cb4154e55b90ef6cf79f8c684fa5c50a67dffc4ad8a3d0d",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/Quaternion.js",
+      "bytes": 8153,
+      "sha256": "040b4dd121db6effed1fbb8f2c5a6fb8d96d9523cf91ddde5105dc48c41fb3ce",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/Ray.js",
+      "bytes": 4086,
+      "sha256": "88e40df102d8ca15bf36395883937d1d903541a932d2293cca0690d72373cdcd",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/ShapeUtils.js",
+      "bytes": 5934,
+      "sha256": "f560e483842a6ba7e9c73dc6e66614099faf6f4a342c23a83ced82de7cc39976",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/Sphere.js",
+      "bytes": 2901,
+      "sha256": "9bf98f3c0ff69bd68a0fa1dedd8a19a6abdb37dc2c2979a27ab89def1f94f71c",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/Spherical.js",
+      "bytes": 938,
+      "sha256": "b0388ee43a1feea9c31d184af0f3b4746261667bfe3d5a3a548cb257862a7772",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/Timer.js",
+      "bytes": 1803,
+      "sha256": "065eccbebb840beed5481ccf60f09bd50969d5965aac394f8858d136a4d1ec31",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/Vector2.js",
+      "bytes": 4482,
+      "sha256": "195d0d4cc60dca87b7386464dca3fcfc6c76c852a3ef3dab95e3556ce7947b54",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/Vector3.js",
+      "bytes": 8772,
+      "sha256": "af1252233ab373aeb9bb8f3514c8fdc3f00e8d2d9d71cdf16536f475a54bcb54",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/math/Vector4.js",
+      "bytes": 5340,
+      "sha256": "84deef94dbf6a335ed53aeaa2d6e65cd1f2d90687fb0fd37d18c4fdbf5e25710",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/render/Frame.js",
+      "bytes": 6069,
+      "sha256": "664f0ecfc0fb4b52d19bca4b1278e8dd0bd979d57e27f3e749e87b7fbc76a398",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/render/FullscreenPass.js",
+      "bytes": 4041,
+      "sha256": "21c7d6014158f76ce8d0b7c4674a1a76c6750d6934db3e327adc5dca1c0bd552",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/render/Material.js",
+      "bytes": 10644,
+      "sha256": "a84b1a3363c954ca4e3c7a5e0bfa0995a3f1e385506f3b05de2dea6b50713d22",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/render/MeshRenderer.js",
+      "bytes": 24838,
+      "sha256": "7efb3ddb9ad751be89416e301ffdfe3e6613c5b011f9f134c42b35d62b3c6782",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/render/MeshShader.js",
+      "bytes": 13386,
+      "sha256": "610c72bfd72494d8302e776c46afdc2e4b982aaf9068106d5041571efc8b6cd6",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/render/SceneRenderer.js",
+      "bytes": 6602,
+      "sha256": "1ad99e121c8f09ccbd4d411f31f4fccc50e749c41429d6131e6be6c80370d5ca",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/render/Shadows.js",
+      "bytes": 6812,
+      "sha256": "3d70ceacbb25505533ce4f47779ba5d97bc5834e2b1e01d0eb659a26c7b8dc91",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/render/Skinning.js",
+      "bytes": 17648,
+      "sha256": "14fbc0224cfcad6ee18af4911c6e290a4d495c0dc094e89be1cf8e3de3bdc25d",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/render/wgsl/common.js",
+      "bytes": 11858,
+      "sha256": "502580bf3c7d684833f2ce622f0f1d34425b0aa3842aedb2106816f5fbbd91c5",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/render/wgsl/lighting.js",
+      "bytes": 21504,
+      "sha256": "6f8ed6fa5198ace6c5131429ea356acc8eb2c3de2dbf8761b7954e4c9795f38b",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/scene/Camera.js",
+      "bytes": 7446,
+      "sha256": "041f492248dc5425e89c6e207009a6d8ae19264e68cc8638027fd3de4466a160",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/scene/Group.js",
+      "bytes": 209,
+      "sha256": "c9837f1c2dd612cf94e1a7b7aac46c1f0fe84573b40ddfc21e75cca333dee2a1",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/scene/index.js",
+      "bytes": 321,
+      "sha256": "80fa84e958bb59d407f080aaa0c43ad6a9b6432fe948733b25707467e02b4ee1",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/scene/Layers.js",
+      "bytes": 523,
+      "sha256": "b4f9be617a8ebf912561da0414681b06f9dd4179af60bdce16cfa8de49717977",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/scene/Mesh.js",
+      "bytes": 3539,
+      "sha256": "2ca60839273eca616fb98582aa78f75205ae922a2aafc22bd14c27faad75c2c0",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/scene/Object3D.js",
+      "bytes": 11233,
+      "sha256": "6bf8eb3d3ddc95c3e919cfaf91d62e2761b1dcd97b1c769383dab74a94cc34e0",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/scene/Scene.js",
+      "bytes": 1212,
+      "sha256": "45b6080a68d116088ee45c024216f9d4c7eaa0b33cdd83cadb80ce196d3cb7c3",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/engine/webgpu.js",
+      "bytes": 1312,
+      "sha256": "f5bef1ce79dababfe5e838d77042293102dad18737b144c872867f36e7fdd461",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/fx/AirMotes.js",
+      "bytes": 11780,
+      "sha256": "05b5041f6880e0e90f1bf8764df32ffb41592a4ffd10f1dfbfff20d759241dff",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/fx/MarineSnow.js",
+      "bytes": 7392,
+      "sha256": "ba105047209fe0e25475189cde24864a5b058472971c79f98ecacc2fe18b0332",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/fx/Spray.js",
+      "bytes": 36324,
+      "sha256": "51975ebd991b5262b2f86a37a5c65156f2759cafe24f1e0c72580c17783b68f8",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/Bites.js",
+      "bytes": 2966,
+      "sha256": "c0b22e5e2ac324556950c5829007e550c51bb49cfc929be441653fa196199512",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/CatchDisplay.js",
+      "bytes": 4187,
+      "sha256": "91a9eda3bbcf7c5b08f950bb57fe936d58b93ae97c987c3d71ebe3a6e10420f5",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/CatchMinigame.js",
+      "bytes": 3514,
+      "sha256": "d1d0d6e4db854bdefa5a5b40a7a4ddc210ac52f8fd2396e1c8389cca0619a4d2",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/Chandlery.js",
+      "bytes": 12822,
+      "sha256": "3df4c52307c072f4e2867cbf53f89fd931f3514aceaad059ebdc3118fe4daa5a",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/FishingRod.js",
+      "bytes": 35022,
+      "sha256": "a87aef34f39e2bdde7080f8100d3aec9541f9c8e494a3329ad25f854cf9d01d9",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/FishPortrait.js",
+      "bytes": 14894,
+      "sha256": "e3721e7e91942d5a27cc01e0d103a12507650adf415d1b21562d277037d21912",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/FishStand.js",
+      "bytes": 20290,
+      "sha256": "67cf367257c1f96c8e52af9e9c1b8bbe92ce86d6d46ef97339af5085b4bf391b",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/FishTable.js",
+      "bytes": 5491,
+      "sha256": "d57d3df458aed23488b2d5b15c3ac369009afeb7f9b53d95f646b4ab50ed4b03",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/Game.js",
+      "bytes": 17563,
+      "sha256": "bf802301c87a20916b8fd89069e4a23be5ee0a3a63cd4c0dbc671b4964a91579",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/GameHUD.js",
+      "bytes": 30262,
+      "sha256": "1767fd152b4ed990934800129bc2ffbd2afedbe07edd0229d7e8fd6efd0d59ec",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/GameMaterials.js",
+      "bytes": 9017,
+      "sha256": "db8082c2d493eb85b581f3615f6e96394d59421226b9fb82ece08151097672e9",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/GameState.js",
+      "bytes": 6495,
+      "sha256": "685f094a70be6b576ee2e8d50ff500922a494da27a60444d3915ec2cb91b0c4e",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/Gear.js",
+      "bytes": 2962,
+      "sha256": "e6f013e20ff37e7031bc6c83ffb80b590b786a6ba109093b579e0789825b4284",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/Guide.js",
+      "bytes": 16184,
+      "sha256": "de29d610a636f9c81ce3bfaae42da70fe6b698b7be5f6e03d9ae8b335c7bde9d",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/Minimap.js",
+      "bytes": 16980,
+      "sha256": "cd2a40654801dcdd9a20baaa84d02eabcb11b42c1b59e9fb98c145e8e9de4b1d",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/StallKit.js",
+      "bytes": 29319,
+      "sha256": "61461de0d9a27f9a0bb3fe006725a3b24333655a1ffaf57674229e1c19f29bd8",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/game/Vendor.js",
+      "bytes": 7708,
+      "sha256": "f068139594aa2fcb678b3e920c58c122ee19d030bed9ba92b711a9de249d3fca",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/main.js",
+      "bytes": 2079,
+      "sha256": "09deba7c3d0a6fb156e7cced09d67a2bfa4b50437db8281307033f756dc396cd",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/materials/GroundBounce.js",
+      "bytes": 8837,
+      "sha256": "3db38ccf3612a50944d9d51b1b7ddbb6479bd1e0eab252f8b2953ff5f275d3d4",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/materials/LocalLights.js",
+      "bytes": 12471,
+      "sha256": "a3b97b55d96164566d86b15d6f62145189dcd1c765addaa58663ba0507a0f2f3",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/materials/LODFade.js",
+      "bytes": 2329,
+      "sha256": "de38c6a21eca7b9e159205904492577ff08e9558ac3ca54b1e75f1fe9fe78352",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/materials/Materials.js",
+      "bytes": 5217,
+      "sha256": "b730faeb06d578e4f505ed29f0baa493d32cd250111e8209cbaed0efcbf8a58d",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/materials/SceneLighting.js",
+      "bytes": 987,
+      "sha256": "591e760dd0d0df58fa6c39772766ffffea89c32c912e2d2f4cf5bef2fde406a4",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/Breakers.js",
+      "bytes": 38909,
+      "sha256": "f5d18878e44516e044da29102b963d320f9c77239020bf42fc82cc7a54d4d408",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/Caustics.js",
+      "bytes": 14106,
+      "sha256": "fce47316254ea4ba44c466db852246d5654b5892e18106bb04416f6f81114d81",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/ComputeMips.js",
+      "bytes": 4253,
+      "sha256": "7afb698431dcfb4afeaebbd6e627cf3a4ac6d3c4d7c1a966e3d9491ea692c933",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/FoamTexture.js",
+      "bytes": 4044,
+      "sha256": "12cf8284119111704ad70267110c7906a7ceaa2514864ab96e9f4be6183fbab7",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/OceanFFT.js",
+      "bytes": 23469,
+      "sha256": "0b49481bdd7aaad20d0cadf4ae5a079f6fca71d712f46b281bde44ab0d03f208",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/RefractionPass.js",
+      "bytes": 7364,
+      "sha256": "942f5fe1f66a4ebebf4ed7b670e99c8579f3f1f2961a3435feb8b25b52ed9864",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/SeaDetail.js",
+      "bytes": 6400,
+      "sha256": "d74b20d223a7b7d6964d872f6ee680543aa812676212d6c925d9db1be5e9f931",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/ShoreSim.js",
+      "bytes": 11817,
+      "sha256": "fe121eb60c1929382dbdbf314f0ef2b43b44042ddae6363177711a774ddbe2b0",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/ShoreWaves.js",
+      "bytes": 34685,
+      "sha256": "7640238fbf64b44af094da398d430745ec4bff38108305125c1b8ae8f8d94eee",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/SurfFoam.js",
+      "bytes": 22669,
+      "sha256": "2d6160dc066ffbb73e706a67d646a4499dff01e38febeae3a10d9c28fff980b9",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/UnderwaterLighting.js",
+      "bytes": 14266,
+      "sha256": "4912e064498dc735e9b768e8778a90ddfa9741c8b6e92c30ae9712d1e86aee3d",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/WakeSim.js",
+      "bytes": 41734,
+      "sha256": "4868b0443155f1a96d7f3675ec6ce0c54d28ec79a00c365e03f0d45979fe9c82",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/WaterMaterial.js",
+      "bytes": 36913,
+      "sha256": "3edfa60d4c4066c896f3385362680295873e72ae5a242c7f20f1a02b1744e620",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/WaterQuery.js",
+      "bytes": 7896,
+      "sha256": "6d00c2638c137bf763782c1930477b7a09c94ef4dac08f980200eabb9f46bf76",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/WaterSurface.js",
+      "bytes": 16980,
+      "sha256": "ca52b7c33a90f1539a6f613ebf1d73f3b90b56cffcea0a87bf953d109b690487",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ocean/WhaleWater.js",
+      "bytes": 6157,
+      "sha256": "4a71d51a1e41c6d45cb3e6a0e8fe819fddbc141b86d91907347e462d6974d06e",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/player/BoatController.js",
+      "bytes": 21884,
+      "sha256": "8e63f7858d86493f89ff228373f4a327380eda2b0735e3858651b1e4f999534b",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/player/BoatSpray.js",
+      "bytes": 14633,
+      "sha256": "6a08f56145055b3509c89b35151efda1df5a4cd69bc950333a6b22625fcda49f",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/player/FlyCamera.js",
+      "bytes": 1724,
+      "sha256": "55e4f10ace0966e74e096d085c03468bb673a56580e80805be1e9754f0e062cd",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/player/Player.js",
+      "bytes": 24844,
+      "sha256": "138635c5651c3644748949cfbd906d12c44823690327a8c1628b38d631943413",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/post/AirHaze.js",
+      "bytes": 25101,
+      "sha256": "613cdb3778bdd1148eed012726bc21a78d5343ecd70ed8b97b5308326f77fd92",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/post/AntiAlias.js",
+      "bytes": 13167,
+      "sha256": "89a86f58eda26d9b30ab77e5fbe48a3967594cb9986b6bd63655410974d9c328",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/post/CameraVelocity.js",
+      "bytes": 2044,
+      "sha256": "91055bb99d82d58823f15506a4e2f2983483d9d83d1c6ac778e24a8bee844d3a",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/post/GTAO.js",
+      "bytes": 14549,
+      "sha256": "9dd3f44b50f4a84748414d1626db8949ef3597e51dd0173b62aa4e2b65873d97",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/post/LensDroplets.js",
+      "bytes": 5699,
+      "sha256": "6a0d998c2b0688e242fdafea38aab5fd284a92164343d383351dd8d3da8557d2",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/post/LensFlare.js",
+      "bytes": 10101,
+      "sha256": "298e3660cc066364261e023c2ddf5232049a2b3d1ba7701ba54694fec775d1bb",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/post/MotionBlur.js",
+      "bytes": 12860,
+      "sha256": "34f91d913817f66f223780b9b8aa0f19be035511fc04c536096155e8c76abc68",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/post/PostFX.js",
+      "bytes": 31309,
+      "sha256": "242214049f190d9f73bdc60b1f9c8c42c301b518dcacc9f500aeab94420853f2",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/post/TemporalUpscale.js",
+      "bytes": 30458,
+      "sha256": "315a24a7626a68bc562969efe93f2059ca2d16404b87ff87600599a3b8d87522",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/post/Underwater.js",
+      "bytes": 18287,
+      "sha256": "495880f460f41459bdd2703b905441234e2441055e2cd46b58c7706761e2ec97",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/sky/Atmosphere.js",
+      "bytes": 19141,
+      "sha256": "e39678028b8e1022b7b1372a8046bb8749334e7674fb5c90b38132e990454777",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/sky/Clouds.js",
+      "bytes": 81176,
+      "sha256": "f64d01dfbbb5020b5a00f64b83f6f8b2bcf313d53b13ceced550788513ca9edb",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/sky/Environment.js",
+      "bytes": 12425,
+      "sha256": "4d98dc1ea613673c97ce2062ac8bb9e07e145d4e6c4520b15ca0b17c89420195",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/sky/Sky.js",
+      "bytes": 11385,
+      "sha256": "d235d337d8a287803543e32d932c19030cd9f907d1887e1735fbf178207a50ee",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/sky/SkyProClouds.js",
+      "bytes": 50747,
+      "sha256": "88164592e6f8ca0c8e2d6d6bfa856fad27af22948296bdbdc9c9bb20678a7839",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ui/AppUI.js",
+      "bytes": 16312,
+      "sha256": "8e62b78990d5e7b6f7623ae6a7960d58adc7673026b0bdcad57a30cbd0e1036d",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ui/icons.js",
+      "bytes": 9025,
+      "sha256": "7812fff45015c6a49939f4ebb33ca1a1db3a489d324127da44663be1083f843c",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ui/ui.css",
+      "bytes": 60577,
+      "sha256": "f089ac4428c837c3f390d283e60dcdde11d7c3d1bfdb2c1c74b142a841f4a135",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/ui/UI.js",
+      "bytes": 103983,
+      "sha256": "1fc4b5d0119b790e6d9962c24078ac1656350149ff9053633f4a3e0dcb668c18",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/util/Noise.js",
+      "bytes": 2727,
+      "sha256": "3f12e6968b085bdb4674481480b279b5110848c70999141d6116a3f22626b0b0",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/boat/BoatMaterials.js",
+      "bytes": 28297,
+      "sha256": "9234e169c2eaa34e8331285ddce6916ddb6b17fa9ec8ea84834da2559207da3c",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/boat/DeckGear.js",
+      "bytes": 17689,
+      "sha256": "87ef89c6f8ea82b91a0abdef26d354a4a3d2253773aba8f9d7de743eeb29880c",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/boat/GeoKit.js",
+      "bytes": 16179,
+      "sha256": "aea6fdc8c3576c7d8ff03a7e75ccd3e6fef0ce227c24432b95a04e684874fae7",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/boat/HullBuilder.js",
+      "bytes": 17938,
+      "sha256": "a4d2b5e1f815688805bf22a6af7c9fd963962fe826dae276ae9e17aea008497b",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/boat/HullLines.js",
+      "bytes": 17684,
+      "sha256": "091fd3469f626e3891de60f4e9806a4da89336b245b227aa6227ab4d110ad993",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/boat/Running.js",
+      "bytes": 5313,
+      "sha256": "05c461c66c30af336daea58d782f74856fd774019547dba068ccfd3ed4d97cb9",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/boat/Wheelhouse.js",
+      "bytes": 44587,
+      "sha256": "05051b16f5f65fb1b27b5a96cafedbf23421e1e739255b2251630b10eff4afc7",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/BoatModel.js",
+      "bytes": 14142,
+      "sha256": "52a8997b5d12b2147a026af929e5d5656c6a5a0ba2709cc52c5ebb3a92de9401",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/Colliders.js",
+      "bytes": 4336,
+      "sha256": "110a0a8424099d000a73e050fb2ca4bbfb0546cf86fc546075c207e01fb470b5",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/debris/DebrisPlacement.js",
+      "bytes": 45313,
+      "sha256": "409f20968ea6305a9ac4d982d0147394d6cc919ff431520b25d3144a343e123e",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/debris/DebrisShapes.js",
+      "bytes": 48085,
+      "sha256": "2605d640f5502e8c433972b84479462181f7192afea1c2ed528aab70d0508dc7",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/debris/GLB.js",
+      "bytes": 5441,
+      "sha256": "4b4a3d976e3153e5eccd546b55f03e967c7bb6ea1f0b5f83ab9ce32f131d5137",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/debris/NatureMaterial.js",
+      "bytes": 13837,
+      "sha256": "21c318c6d7b288ca08cf6e4c9c2deb527f17549b3d2de4be19979301374a9a2e",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/debris/PebbleField.js",
+      "bytes": 16119,
+      "sha256": "6a57c4bcd7412dabc6a87083d508d4e6270a5727d44f3112777683b3802e64a0",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/debris/ScannedDebris.js",
+      "bytes": 12691,
+      "sha256": "f83736a71182bd1796d86a6bf008dade4fa71dc32bdef97f8ea22430d4da0101",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/Debris.js",
+      "bytes": 9475,
+      "sha256": "8bb2e283ff146323bc04e43ba7eaed0cd905772c4023bab484fe36122fc73d61",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/fish/CreatureGeometry.js",
+      "bytes": 10094,
+      "sha256": "3ec046a4b3de0193d4d8344693d6a8fe195fcbeae0e035f61e493a5ad7c3bf75",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/fish/FishGeometry.js",
+      "bytes": 25932,
+      "sha256": "3e732fa2398d8c977050ef98995a9e5e811fb6f158ac476da6b2406839c97a0f",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/fish/FishMaterial.js",
+      "bytes": 38035,
+      "sha256": "4c94489b7058f09e26270483506bd28c33f60094a81cc1e5a1278184fbac61fc",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/fish/FishProps.js",
+      "bytes": 18895,
+      "sha256": "a3732adae71f111d3387337acdc74f8b52bd1b7197dd25d025813bbadd4cf19e",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/fish/FishSpecies.js",
+      "bytes": 30168,
+      "sha256": "f0f807f73504193656544f6026b92121faa3ee42c5f7d7107af92049563f3c4f",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/Fish.js",
+      "bytes": 58124,
+      "sha256": "3dad7e2273c411844c7a67c3e3c84fdb1140adc84f294a9f6dc38bdda2f50c4c",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/Gulls.js",
+      "bytes": 5240,
+      "sha256": "d1d652558b868c250c9dabbbfd5f5211fcd02d9c098b1cc7071f35e954cba44b",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/marine/Whale.js",
+      "bytes": 19637,
+      "sha256": "8f5da57d20cc0e679cc5d560595c13ff00c930d59c6c13d2804e29b53e161e1b",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/marine/WhaleBrain.js",
+      "bytes": 17281,
+      "sha256": "8d27d465a7a3d42e8b9bf8480e27c6b1a029fa0d97c2405e9612701c090f9176",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/marine/WhaleTextures.js",
+      "bytes": 2904,
+      "sha256": "a75f3c7ed23915101536ac91bb5bbbbef3a7f628417b851405c40de0e6b5f863",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/Pier.js",
+      "bytes": 29883,
+      "sha256": "bc9ce1914eb261b072667a002f6fe2ea05dc02e8175c1f1bdae7cc45403af26e",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/Props.js",
+      "bytes": 41674,
+      "sha256": "129ba4bc20e10d7dab11452d486c942c5c8b26529c32dd5f09bec2f46df6622e",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/reef/ReefBatch.js",
+      "bytes": 14336,
+      "sha256": "4498a3ff8812ce8d25fa5219edf02de4d23b54a684137af3cfdd0e85959771e3",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/reef/ReefGeometry.js",
+      "bytes": 75861,
+      "sha256": "1caa7bd31ee793642bf775888fea957db06ae12181ed8f5c4527a797cafa2cb4",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/reef/ReefMaterials.js",
+      "bytes": 28807,
+      "sha256": "de1a840471f4aca45c8b13d7f1d0407fafd5a5e03b6083492fff3a911a688cb2",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/reef/ReefNoise.js",
+      "bytes": 3343,
+      "sha256": "ccf35adaf23e3c787e720fb210165cedfc697052a28a3714f231b7f5183a81ec",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/Reef.js",
+      "bytes": 66432,
+      "sha256": "4920159c5232d1456fada71b9e40e6180242300b49c3ca2a74a4900c80b4f90b",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/Rocks.js",
+      "bytes": 17593,
+      "sha256": "7d6f358c86e824a032af50328de4eed217dddb212957fd3e513c0945303a2fa7",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/ShoreField.js",
+      "bytes": 7372,
+      "sha256": "dbbe02102c28ceef4ffeb600044747e1b261bfe356c32418d217553b43cf975b",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/terrain/DetailTextures.js",
+      "bytes": 7992,
+      "sha256": "a6fa4fdade5da92ce155a9f86078a1636f41405773ed0a32cc56364a6a580f44",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/terrain/IslandShape.js",
+      "bytes": 5036,
+      "sha256": "184069a9b9ae45bb30c96ec9a0bfda806a7a0634ecf769de58a8998ee39d8aa1",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/terrain/RockGeometry.js",
+      "bytes": 6194,
+      "sha256": "f7486d779b1efa6497718fcaad6318262f547f6b0b50c3d419dbe8deb23ff830",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/terrain/TerrainBake.js",
+      "bytes": 6989,
+      "sha256": "0c20bd2ee326e9d23495247f2d8ad62f7ec5c7348f8250ad461a16ff5dbdd325",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/terrain/TerrainNoise.js",
+      "bytes": 6479,
+      "sha256": "bbc9e37ab0167ef2444678da359f6ed00a90ef5f839200e9a8817eeb3a1da2f7",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/terrain/TerrainShading.js",
+      "bytes": 13213,
+      "sha256": "2989bd66aa5fb6a63e79724de3e4831561aa3fb5fdfca2cb4ee3c7985f61f049",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/Terrain.js",
+      "bytes": 37140,
+      "sha256": "e2d80b67aa9e778fd563247c6b75dd8b9a6115da0295602c6d10dfb2ee1c724b",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/TerrainData.js",
+      "bytes": 36945,
+      "sha256": "308493fcff750855739d6e5698fef4ffb99ddb5ad92fd1f8e53010f70c9237a2",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/TerrainGPU.js",
+      "bytes": 13140,
+      "sha256": "72b3b8afd3bdf57a6cd8e8ab02a142f9c46108c53c03a562944df942a81a190f",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/vegetation/GeoBuilder.js",
+      "bytes": 2820,
+      "sha256": "e531df08b5685b139ed15c6fdad948c3e881bc539ce49d8d117bb8388af45e76",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/vegetation/GrassField.js",
+      "bytes": 33373,
+      "sha256": "6050411e26b1b842a042743ab6470ab7cabd6a7df69c02daee9e1d532cabee24",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/vegetation/Impostors.js",
+      "bytes": 14701,
+      "sha256": "94b4a1c86ea0330fb481f2bbf4d4d55c9db5352256ec26590b64a17d0d4d288b",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/vegetation/InstanceLOD.js",
+      "bytes": 12084,
+      "sha256": "d503e66c034ffd328cd2afee99ad972d3e80a8507d68a2b013c07ca42c57e564",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/vegetation/LeafTextures.js",
+      "bytes": 6124,
+      "sha256": "cc23dc48cb2140aeb0ae78d4c6c4842897cef55e3191abc5091586d979b47264",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/vegetation/PlantGeometry.js",
+      "bytes": 51097,
+      "sha256": "1e41807104ba8695d5f3b4e352dd9bd679675091e3b4c46e0cae4d227c3fe3b8",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/vegetation/Scatter.js",
+      "bytes": 29908,
+      "sha256": "91a4454609ef298698fdc48a1f8f31bc1a1032df55afe9fe18fa22d728b69017",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/vegetation/VegMaterials.js",
+      "bytes": 41352,
+      "sha256": "3668bcbdc6e83df2283c0732587c3dc82739cb1a29977ba19abf5184b4a17066",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/vegetation/VegNodes.js",
+      "bytes": 13049,
+      "sha256": "1e5f15bff2ed8d0d4c0f7faceb922e1db937780701edd5e6b0a9a526edc89aaf",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/Vegetation.js",
+      "bytes": 13891,
+      "sha256": "084ff3f40be6ddf776c3169833e260ab7fe043825ab76fd256dd83d600aa450a",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/village/Boardwalk.js",
+      "bytes": 5617,
+      "sha256": "4e6582de18f3851ed329303f5b80fa5ecc21dcaecc21ff8c2be376eb75705ced",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/village/Buildings.js",
+      "bytes": 61482,
+      "sha256": "5713c53251d89fce668145171aace57a8363e2dffff878c8b3f4133282121b38",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/village/GeoBuilder.js",
+      "bytes": 26528,
+      "sha256": "698ead0a29ad0911098f8113a856597b131ca15a2fc509490fec23f1e4416f3b",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/village/TextureBaker.js",
+      "bytes": 31087,
+      "sha256": "49c496b23287d0b10f53b1de864a6e3ffec3595a05a1cd4b3b26275b3daecb4b",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/village/VillageMaterials.js",
+      "bytes": 34998,
+      "sha256": "e36ea5f1710852afd146ec76a00f465211c4f951932593bfca4ec5b7ea25aacc",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/Village.js",
+      "bytes": 35690,
+      "sha256": "66e4d1dad33cb25a6bb7357ea7553b991ad4b954112dca279f6379bb4791d872",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/wildlife/BirdBatch.js",
+      "bytes": 17767,
+      "sha256": "d093904890df5eb620ecd5979f6435ff70347e21da6e504c38b696e38d8996d4",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/wildlife/BirdPose.js",
+      "bytes": 6866,
+      "sha256": "da867d016ce2a9a535fa570c0e0eaee15f67b042ccf7982f4721725722d33095",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/wildlife/Birds.js",
+      "bytes": 32732,
+      "sha256": "d34f49dc887da44a683112f0db92d85b67b4db40fe6e946965556349d1f6b0bc",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/wildlife/BirdShapes.js",
+      "bytes": 20042,
+      "sha256": "634709586d1ea086b899f6530116b34af8da5f708c321e0fadd9228f72274433",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/wildlife/Crabs.js",
+      "bytes": 20084,
+      "sha256": "dc8b3a67be30c41f7c7874ec71517159d8f8a087b22169322ab4280cce5691a7",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/wildlife/CritterBatch.js",
+      "bytes": 11665,
+      "sha256": "715bcfe4f8cba4ccc6980ea018e454e3ee5402ae0fb7e6e91b0ff9d6410a331a",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/wildlife/CritterShapes.js",
+      "bytes": 9608,
+      "sha256": "dae648e11e8d6600f9722c70c9be4acf13e2c9f0279889958d2021c300d3b895",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/wildlife/Flight.js",
+      "bytes": 8058,
+      "sha256": "7c1195850811a3c696632e816f947ea006ebcdc4c5b1f51d95c415ea1aa67b05",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/wildlife/Kit.js",
+      "bytes": 5826,
+      "sha256": "56dc35ed00c6ca0ed5a9f8bd569e4835b5f59b2d15c799f572a7ce8af99f6524",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/wildlife/ShadowBlobs.js",
+      "bytes": 3662,
+      "sha256": "bf076590570dcc083013b9ee5a582d31eb2262d738897c6d6149381798e098e9",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/wildlife/Shorebirds.js",
+      "bytes": 12856,
+      "sha256": "a685b68618f5cc19b51236348e6cff9e9216326f874682e9cbafe1e2ab6da01a",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/wildlife/SwashProbe.js",
+      "bytes": 4176,
+      "sha256": "1e9abdffe3576c743729b31257e9c7a1909c9dab5c6d9c872d59ddbe0514acf7",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/wildlife/Wildlife.js",
+      "bytes": 4829,
+      "sha256": "6d7b38c391292baf3e5786bbc14b053991c8305087a962e3780c8e9f5b1551e9",
+      "passed": true
+    },
+    {
+      "path": "web/runtime/src/world/WorldLayout.js",
+      "bytes": 1372,
+      "sha256": "1b25b7df2fe82a66c9656d185ba5871322d6dfa3507ab9034c1c2133f8b97230",
+      "passed": true
+    },
+    {
+      "path": "web/scene-completion-core.js",
+      "bytes": 8120,
+      "sha256": "68dc47927f229c59f96eb924c30a7b6c466f7be132c78805c292bbdeec23a209",
+      "passed": true
+    },
+    {
+      "path": "web/scene-completion.css",
+      "bytes": 5681,
+      "sha256": "45fcc94f549785280b9805fd44dfec04db0d5df05e8959b6f50988d59d3f0bec",
+      "passed": true
+    },
+    {
+      "path": "web/scene-completion.js",
+      "bytes": 35107,
+      "sha256": "658ec047d02bf87e2e5eb6ddd8d3c648b443a4694692fd050ce3f389762efcb3",
+      "passed": true
+    },
+    {
+      "path": "web/scene-core.js",
+      "bytes": 15875,
+      "sha256": "fec61dee46b634a9c56a248a0cf575b29ecc342e9dc959ee25c39256d80f43a4",
+      "passed": true
+    },
+    {
+      "path": "web/scene-delivery-core.js",
+      "bytes": 16205,
+      "sha256": "3e28f021a0d65d8837756f14e37a866f02b472a4571f63ed82bb0b1cd78fa611",
+      "passed": true
+    },
+    {
+      "path": "web/scene-delivery.js",
+      "bytes": 17443,
+      "sha256": "b84136241769cada49978640b3ee659ff27a3ab629ca6871c9a22b6840410507",
+      "passed": true
+    },
+    {
+      "path": "web/styles.css",
+      "bytes": 22992,
+      "sha256": "9ca93ecf0a1d32ae427ff4c0287d5e114db5b69250deada736453c9768dc3cad",
+      "passed": true
+    },
+    {
+      "path": "web/trellis-provider.js",
+      "bytes": 16313,
+      "sha256": "438f0074f6c7030ff75590a47861ee476c66e437b26830c38f94b9449f6cf4d4",
+      "passed": true
+    },
+    {
+      "path": "web/world-generation-core.js",
+      "bytes": 16810,
+      "sha256": "63d0006335b7d56e5bd08eeda25ca0a1e7505f74d45bb4db092a0260ee2272a8",
+      "passed": true
+    },
+    {
+      "path": "web/world-generation.js",
+      "bytes": 27832,
+      "sha256": "d887bc59a20d9cf720ae3e985c97bc2d080755536b0c030468665eed4564bb0e",
+      "passed": true
+    },
+    {
+      "path": "tools/archive-capabilities.mjs",
+      "bytes": 5118,
+      "sha256": "ba45a07eb46c57f2c9a83f333c49e1fee4cb6847ae958462ea44b3f64d0631a1",
+      "passed": true
+    },
+    {
+      "path": "tools/browser-check.mjs",
+      "bytes": 10195,
+      "sha256": "7979285403291f9768165598a672a1ec5a275abe5e44e215c04c0059bce9c16b",
+      "passed": true
+    },
+    {
+      "path": "tools/build-fine-benchmarks.mjs",
+      "bytes": 13470,
+      "sha256": "f1bdc2e4c928539641c2227b901eedae25b66060a774fe0ebf4c6ee7e1e55c88",
+      "passed": true
+    },
+    {
+      "path": "tools/build-research-map.py",
+      "bytes": 30344,
+      "sha256": "49d5decb14e5971ff2eec31efe7655fa3f834c768a447006542ca68f2eee0d65",
+      "passed": true
+    },
+    {
+      "path": "tools/check-fine-scoped-generation.mjs",
+      "bytes": 14249,
+      "sha256": "16a6bf9f04502f90cd60356db4550deb707c09bc739a5a046e2ba50a40f67e2e",
+      "passed": true
+    },
+    {
+      "path": "tools/control-model-runner.mjs",
+      "bytes": 15639,
+      "sha256": "3bfe1a2e9b09aff63f68bceb1415806e098e0427abde106243259d30ae440921",
+      "passed": true
+    },
+    {
+      "path": "tools/control-model-server.mjs",
+      "bytes": 7694,
+      "sha256": "09a67387deab200eb770d3ee57e5f28fb3cb9b07fdeb9f4618df06d41a7d9596",
+      "passed": true
+    },
+    {
+      "path": "tools/creation-browser-check.mjs",
+      "bytes": 17366,
+      "sha256": "fafd1d095909fd90902583744926dadb586120df1a1bc0f597769f2c6e081d19",
+      "passed": true
+    },
+    {
+      "path": "tools/download-realistic-assets.mjs",
+      "bytes": 6535,
+      "sha256": "02d27c9801ec5d60c059c0046eb3179823bce04822103b807e77127b5d164cb9",
+      "passed": true
+    },
+    {
+      "path": "tools/export-model-scene.mjs",
+      "bytes": 10000,
+      "sha256": "7dbf58de324c4a7b39b459bd10eb63f471bccbb75c7d9157be6eca89c8ccc981",
+      "passed": true
+    },
+    {
+      "path": "tools/fine-geometry-runner.mjs",
+      "bytes": 23027,
+      "sha256": "4613081f8cf257e9dea9d62f8557e24786de31c5f054e5b6c0b5effd07c8fef3",
+      "passed": true
+    },
+    {
+      "path": "tools/package.json",
+      "bytes": 187,
+      "sha256": "15a082f44f07856ae5af2d5466896d841eb0aa121c24bd946056d03d9249976a",
+      "passed": true
+    },
+    {
+      "path": "tools/scene-delivery-storage.mjs",
+      "bytes": 12441,
+      "sha256": "9eacb72f5246953769e9c3b302cfada0abe81570312dc76b4eff8afe288252a1",
+      "passed": true
+    },
+    {
+      "path": "tools/serve.mjs",
+      "bytes": 1913,
+      "sha256": "1bf25dd40be39ac62bf1ce043f2fdeb0bc44b92c968cca931be2e9a4b7da6e61",
+      "passed": true
+    },
+    {
+      "path": "tools/test-scene-delivery-storage.mjs",
+      "bytes": 6907,
+      "sha256": "568aabf9cab59a28b5007d8dfb4ddda26ca186185e47cf3da2043812d22eb7b0",
+      "passed": true
+    },
+    {
+      "path": "tools/test-scene-delivery.mjs",
+      "bytes": 9822,
+      "sha256": "d71ca8ad4746a23ae6c8bac35b76e230153e4e2c28104816bb7a4ad44925c7b8",
+      "passed": true
+    },
+    {
+      "path": "tools/verify-fine-delivery.mjs",
+      "bytes": 14823,
+      "sha256": "a7f4b92c98881a8235dc38c51207295aa3bf7a4e3b6fc1ae66063ec5f666d46a",
+      "passed": true
+    },
+    {
+      "path": "tools/verify-fine-delivery.py",
+      "bytes": 4836,
+      "sha256": "80bac76ca45ffc1fded8b08a98eb0671751d05840822026082e994ed64f2328f",
+      "passed": true
+    },
+    {
+      "path": "tools/verify-realistic-assets.mjs",
+      "bytes": 3709,
+      "sha256": "5a7210a7c9cd7596add4a0913d18d5601e01ef330cc631d34d90192e901eb33e",
+      "passed": true
+    },
+    {
+      "path": "tools/verify-upstream.mjs",
+      "bytes": 11002,
+      "sha256": "b9600becd4c662688f1a8a8c2c65208ddc0729766ca1c36f51dca46924abb63e",
+      "passed": true
+    },
+    {
+      "path": "tests/asset-generation-core.test.mjs",
+      "bytes": 10808,
+      "sha256": "ffe6454b80e4b37c3f8b80d1288dd954a46feff1c4823fd34e63ead194da58d8",
+      "passed": true
+    },
+    {
+      "path": "tests/fine-geometry-core.test.mjs",
+      "bytes": 9063,
+      "sha256": "778e431734cca98110d62e8674845e10b64a6b6f78ce960b7f4aa3233bb54e1c",
+      "passed": true
+    },
+    {
+      "path": "tests/fine-geometry-diagnostics.test.mjs",
+      "bytes": 3215,
+      "sha256": "6a7a5537dbe3393f9b75c1fdc8f813b4022d887a77ffb9b156467f4587479db8",
+      "passed": true
+    },
+    {
+      "path": "tests/fine-geometry-refinement.test.mjs",
+      "bytes": 9447,
+      "sha256": "0ed35b08f9019441ad3208398ed780d849f8a9902297e26cab4b576ec263cb8b",
+      "passed": true
+    },
+    {
+      "path": "tests/fine-geometry-renderer.test.mjs",
+      "bytes": 13724,
+      "sha256": "caa7154b37751175e6b6618349b66fd6881d9ff49e4497ef6affe2a58e4f423a",
+      "passed": true
+    },
+    {
+      "path": "tests/fine-geometry-runner.test.mjs",
+      "bytes": 3867,
+      "sha256": "cbd1b7d9b1eb0430d8eb513e5c934037252f895b5dc9b056fb1604ed05db2a66",
+      "passed": true
+    },
+    {
+      "path": "tests/fine-refinement-core.test.mjs",
+      "bytes": 8113,
+      "sha256": "013b84264ed1657403079f9f1b00290fc11eb59e106a501b16b72de97cd17971",
+      "passed": true
+    },
+    {
+      "path": "tests/local-3d-provider.test.mjs",
+      "bytes": 12430,
+      "sha256": "6bb3e1c3691e75927bcb10c3f5b2528f1361e4566ed4712ee05a393c081da2e7",
+      "passed": true
+    },
+    {
+      "path": "tests/scene-completion-core.test.mjs",
+      "bytes": 5075,
+      "sha256": "fe5b73741f58dc35cb425c273d20c257baea3d8d282f4fcb13c219f0f08658f0",
+      "passed": true
+    },
+    {
+      "path": "tests/trellis-provider.test.mjs",
+      "bytes": 8610,
+      "sha256": "91ecf989bc5644125c3829fa680e8c22c3d004c67d026678dc607599c8f4c376",
+      "passed": true
+    },
+    {
+      "path": "tests/world-environment.test.mjs",
+      "bytes": 4412,
+      "sha256": "c89632b6b25fee635c7e9d4853fe25611135aa2a5de656eff958cabfce3ec76f",
+      "passed": true
+    },
+    {
+      "path": "tests/world-generation-core.test.mjs",
+      "bytes": 19537,
+      "sha256": "9fb48482396ca418df3943373dbd10abb2295e4a6f5db67b792a625c41b461b0",
+      "passed": true
+    },
+    {
+      "path": "tests/world-terrain.test.mjs",
+      "bytes": 4457,
+      "sha256": "a1d636d8d2068d15ca62ca580c108152cc0c3836e7b32318d6e3b574adea2961",
+      "passed": true
+    },
+    {
+      "path": "checks/browser-results.json",
+      "bytes": 1634,
+      "sha256": "bf46511f3061db4f6c299f10ce41cc4d2e0e9de6f13beb3397e5eb3809920b69",
+      "passed": true
+    },
+    {
+      "path": "checks/check-scene-completion-evidence.mjs",
+      "bytes": 3761,
+      "sha256": "3fa0a69185f5ac049af3c0c53eb3df81020a54b80e5cd315100515fd7f25e88c",
+      "passed": true
+    },
+    {
+      "path": "checks/check-world-evidence.mjs",
+      "bytes": 5753,
+      "sha256": "3436d17749706d28fcc345b9a0fd639ee77b0c7cd353df1e73dc35d10afc4b29",
+      "passed": true
+    },
+    {
+      "path": "checks/creation-browser-results.json",
+      "bytes": 3957,
+      "sha256": "5b4b16c837046d733d35d960e6f5f42c0fe566e7b9094b31ad7f248b3c53e7fa",
+      "passed": true
+    },
+    {
+      "path": "checks/creation-core.test.mjs",
+      "bytes": 20843,
+      "sha256": "126a595f591d489295e1f584a917f6209c65c1007a3716af1598160dfbbcf18d",
+      "passed": true
+    },
+    {
+      "path": "checks/creation-preview-results.json",
+      "bytes": 1457,
+      "sha256": "9ac52456397271b3f8eeb39f783f90352f8fc8726bbf91002e741769361cfd2b",
+      "passed": true
+    },
+    {
+      "path": "checks/creation-refinement-geometry.test.mjs",
+      "bytes": 5148,
+      "sha256": "f36e58f5f4515e0a5c8bddc245816bafacae8a41fa0f38b7f3a8911c4801a06a",
+      "passed": true
+    },
+    {
+      "path": "checks/creation-refinement.test.mjs",
+      "bytes": 18663,
+      "sha256": "d27f31b486136fd9e603d0ba9264a5ca36f27ee0c8e328ef347a2671dcc32fe0",
+      "passed": true
+    },
+    {
+      "path": "checks/creation-surfaces.test.mjs",
+      "bytes": 8378,
+      "sha256": "12f723ea8eccee9b6703586a4375bfced3b7e094a99e7102fd2752299fde807e",
+      "passed": true
+    },
+    {
+      "path": "checks/fine-benchmark-dual-island-delivery-results.json",
+      "bytes": 15014,
+      "sha256": "11d431a50367ad0d6a17986ce0cc0caca2b621ca739630c1241eeeea3e6b6051",
+      "passed": true
+    },
+    {
+      "path": "checks/fine-geometry-model-results.json",
+      "bytes": 36908,
+      "sha256": "fb76bf0fd28816400428b3ff6b7dc45802242cf2dcdf42a6175c80efef253ecd",
+      "passed": true
+    },
+    {
+      "path": "checks/fine-scene-browser-results.json",
+      "bytes": 1976,
+      "sha256": "440a27a42ab4925a220cfc6d7f620ad4deb43f38f22826ecee0caa9754345ec8",
+      "passed": true
+    },
+    {
+      "path": "checks/fine-scene-delivery-disk-results.json",
+      "bytes": 2208,
+      "sha256": "6619a9f8e724bbb42b2a42af5d490440808586cc7736547aadf6b06a7f1bbde9",
+      "passed": true
+    },
+    {
+      "path": "checks/fine-scoped-browser-results.json",
+      "bytes": 2131,
+      "sha256": "dc7ec4eaafd11fbb653e0beca011c02b395798f01d982edc03ec9ed0f2d26e38",
+      "passed": true
+    },
+    {
+      "path": "checks/fine-scoped-delivery-disk-results.json",
+      "bytes": 19905,
+      "sha256": "631f5d97d11741f0b8f88eda2a04f63584ad39b28d9cf70c937e9ef01bd94d6d",
+      "passed": true
+    },
+    {
+      "path": "checks/fine-scoped-generation-results.json",
+      "bytes": 30461,
+      "sha256": "655ce4f38933c2a78f910451e4e153fcff547a72d4ad74be1c7912e276013b15",
+      "passed": true
+    },
+    {
+      "path": "checks/local-service-smoke-results.json",
+      "bytes": 3313,
+      "sha256": "2824fecbc235b953f3b31e0f99f18d346f8b01f6b86e87000adf70468f38b385",
+      "passed": true
+    },
+    {
+      "path": "checks/local-service-smoke.py",
+      "bytes": 3267,
+      "sha256": "ff96a79ae4e56a7856d701feee881e7a222c4c5ed183dcb9b92e38f93805d99c",
+      "passed": true
+    },
+    {
+      "path": "checks/model-scene-artifact-results.json",
+      "bytes": 1747,
+      "sha256": "b7553f027a32e6c7154d65a28c2efaeb90da9abd0f4f8578131bfb50b43b53b3",
+      "passed": true
+    },
+    {
+      "path": "checks/model-scene-assets.test.mjs",
+      "bytes": 4967,
+      "sha256": "40003f5f92d785aea93d0aa5b14f7c78c7ef831026db2dbb6d9a3369e64669ea",
+      "passed": true
+    },
+    {
+      "path": "checks/model-scene-browser-results.json",
+      "bytes": 1958,
+      "sha256": "e132f9e2e14aa5e8067bebd44f854bf4e4b43ace150f305844945d688301b4b9",
+      "passed": true
+    },
+    {
+      "path": "checks/model-scene-core.test.mjs",
+      "bytes": 15588,
+      "sha256": "b756408bcffe02bdc7d34680a5cf846c325afaf053be5188c21cfbe13345039d",
+      "passed": true
+    },
+    {
+      "path": "checks/model-scene-preview-results.json",
+      "bytes": 1397,
+      "sha256": "b091c5ca18cc600b67b818772c6a048f97a0043ff67448f0536f5e32d5099d1d",
+      "passed": true
+    },
+    {
+      "path": "checks/neural-browser-results.json",
+      "bytes": 3802,
+      "sha256": "2d58f1dfb50bd4997707ab71f005db1a9ab019b22da2612484939736c65c39d5",
+      "passed": true
+    },
+    {
+      "path": "checks/neural-provider-live-failure.json",
+      "bytes": 55187,
+      "sha256": "9730370d8de9938c5eb81f055703d4840749050a8207f70438263bd0cda2b6f3",
+      "passed": true
+    },
+    {
+      "path": "checks/page-description-results.json",
+      "bytes": 3142,
+      "sha256": "2d3023fd2c9f9ee7622d6c0e63b83c6606db0f3b0bcdde8164256bfb73985054",
+      "passed": true
+    },
+    {
+      "path": "checks/realistic-asset-results.json",
+      "bytes": 969,
+      "sha256": "18096fa8f2e1aa44259686cfdb5f34e40f73234932c813633f128f81fc6c2df5",
+      "passed": true
+    },
+    {
+      "path": "checks/realistic-browser-results.json",
+      "bytes": 1437,
+      "sha256": "bb47618f2aaca20f2fc633f16a7660ff70db3953df8171a7362006269aa807ef",
+      "passed": true
+    },
+    {
+      "path": "checks/realistic-terrain.test.mjs",
+      "bytes": 3716,
+      "sha256": "df2e16e470baa6fb6d9c8358fb6b32bfc06cc201e69f5962279b688341f17f75",
+      "passed": true
+    },
+    {
+      "path": "checks/refinement-browser-results.json",
+      "bytes": 1897,
+      "sha256": "d62ec8fcdfacb705c52c7e49fcf159517fb7002decd01fb849631130a0f58da0",
+      "passed": true
+    },
+    {
+      "path": "checks/refinement-preview-results.json",
+      "bytes": 1417,
+      "sha256": "b3aabb92254fbf2c928be45c6aca5e283c94c3e6064f56432ea082c349cfff64",
+      "passed": true
+    },
+    {
+      "path": "checks/scene-completion-browser-results.json",
+      "bytes": 2757,
+      "sha256": "2638897a05ae1ff48f03a23784c136b575cfd0bf4765e7a4f24df28bd72b6335",
+      "passed": true
+    },
+    {
+      "path": "checks/scene-completion-evidence-results.json",
+      "bytes": 1397,
+      "sha256": "b35b59d5cb64083db52a65379690b2b90337a753b2a7c655d0c273c506a987b2",
+      "passed": true
+    },
+    {
+      "path": "checks/scene-core.test.mjs",
+      "bytes": 8900,
+      "sha256": "d51261f58327fa2be90d23e03606751b796633068cd48493160f003f8517165e",
+      "passed": true
+    },
+    {
+      "path": "checks/upstream-manifest.json",
+      "bytes": 87812,
+      "sha256": "458bf4076f333cfca34cd413637132f2d915dbb4bf84b9d13d08b93bb5e88489",
+      "passed": true
+    },
+    {
+      "path": "checks/water-surface-results.json",
+      "bytes": 1439,
+      "sha256": "5ac8f13a58e8d4afb5cb614c5fc4ff9f8485cadb82ffae971505d73eb2490da9",
+      "passed": true
+    },
+    {
+      "path": "checks/world-browser-results.json",
+      "bytes": 2715,
+      "sha256": "d651ea77df50b8dc2b26bf3899c9d887053b8d3e1ef86603ecdca533e86a3985",
+      "passed": true
+    },
+    {
+      "path": "checks/world-ui-observations.json",
+      "bytes": 909,
+      "sha256": "d2282a758ff51254e8bb34c2d9627bc5e5ba9d43c18b652b086f4537b266ab87",
+      "passed": true
+    },
+    {
+      "path": "notes/fine-scene-generation.md",
+      "bytes": 12646,
+      "sha256": "6d8951c4e3c11793f3f3e7c76a21fecc6f518936759b55ff65e53562d4278a33",
+      "passed": true
+    },
+    {
+      "path": "notes/model-scene-experiment.md",
+      "bytes": 2700,
+      "sha256": "04b38de426dfc92fd819b31ac54dad0071aff8ce501654b635f150d54a34fb4b",
+      "passed": true
+    },
+    {
+      "path": "notes/product-design.md",
+      "bytes": 36668,
+      "sha256": "50147097df847bfe64cb176f9d3ef970032340b6860f831b0b9179a6bd9ae159",
+      "passed": true
+    },
+    {
+      "path": "notes/research.md",
+      "bytes": 12161,
+      "sha256": "238164367d9e2b1cd8ba1e130ac93d6cd8604ef9fca9240b72deaac0de9b81b1",
+      "passed": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 41294,
+      "sha256": "50d8698a48b59969d01e1a394ff1b006e7d0df6b73d2254a1a95cb7eca1a8a7a",
+      "passed": true
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 11946,
+      "sha256": "5137dec977297409ea3a85770de779b82d261e4e6451cd4f17aa47f32a2290e8",
+      "passed": true
+    }
+  ],
+  "runtime": [
+    {
+      "path": "creation-core.js",
+      "bytes": 24399,
+      "sha256": "fb346a4f0e80c87d5e8c9b265019609ba56503d281eb5504290953e2f9680f2c",
+      "passed": true
+    },
+    {
+      "path": "creation-surfaces.js",
+      "bytes": 3549,
+      "sha256": "74a38cef48c76492a0085a46d514759c9805b3443e1c9e3e880e48d002c0941e",
+      "passed": true
+    },
+    {
+      "path": "model-scene-core.js",
+      "bytes": 13699,
+      "sha256": "4ce27bcdcf2c2c7a623e376e4f1957ab87a90a91e3596acba7f890c3d2264288",
+      "passed": true
+    },
+    {
+      "path": "asset-generation-core.js",
+      "bytes": 13423,
+      "sha256": "1b507c5f957628585643c4960f2e7ebff8d58a47052ac453e19fd256687b0d71",
+      "passed": true
+    },
+    {
+      "path": "scene-completion-core.js",
+      "bytes": 8120,
+      "sha256": "68dc47927f229c59f96eb924c30a7b6c466f7be132c78805c292bbdeec23a209",
+      "passed": true
+    },
+    {
+      "path": "fine-geometry-core.js",
+      "bytes": 24621,
+      "sha256": "4c984fc9f30d6794ed02ab3e4edc63c82375f022085bc2af482ee8db7262576f",
+      "passed": true
+    },
+    {
+      "path": "fine-refinement-core.js",
+      "bytes": 3514,
+      "sha256": "9a07cd2fcee0c97d7c85c2f8e546737810715d2d5ea52084729c7c8eb3fdce43",
+      "passed": true
+    },
+    {
+      "path": "realistic/scene.js",
+      "bytes": 67319,
+      "sha256": "bfb28857140a8c3e87ad4ef2eeb89fb28f11fc29e18203dacb6384b2ff94839f",
+      "passed": true
+    },
+    {
+      "path": "realistic/terrain.js",
+      "bytes": 6476,
+      "sha256": "1bd368328487d8fa9743d1e1c9d37efc77d6b69210d04ad16d648aa99fdc30fb",
+      "passed": true
+    },
+    {
+      "path": "realistic/world-terrain.js",
+      "bytes": 4995,
+      "sha256": "8e431f9810b61b93eb3bdbe12292e381a11ab6a869674e2c19b19464e98c344e",
+      "passed": true
+    },
+    {
+      "path": "realistic/world-environment.js",
+      "bytes": 11579,
+      "sha256": "a84c7457249fbafc3dbfde8ce894fc0c0fcaf045542b8683d2a5e521c1e855f6",
+      "passed": true
+    },
+    {
+      "path": "realistic/fine-geometry.js",
+      "bytes": 20790,
+      "sha256": "204c9bb575d10022a73e3346bf529d8f78f55e1bcaf1e083f3f86a07e229b5e4",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/three.module.js",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/manifest.json",
+      "bytes": 800,
+      "sha256": "cc8c38725f8b0f51065006b03fe6b4ab264a93afe4b11c5262f7267d81ef6c29",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/addons/controls/OrbitControls.js",
+      "bytes": 38703,
+      "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/addons/loaders/RGBELoader.js",
+      "bytes": 268,
+      "sha256": "6c08f9c441040a61a188ad7711078da4df48f8c5ac3b3725dd6f10ac9ff81162",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/addons/loaders/HDRLoader.js",
+      "bytes": 12456,
+      "sha256": "d7053cfc4019f520335ae07e0fe82b4ef5a66b6766e8b253d066616184995e89",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/addons/loaders/GLTFLoader.js",
+      "bytes": 114739,
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a",
+      "passed": true
+    },
+    {
+      "path": "realistic/vendor/addons/utils/BufferGeometryUtils.js",
+      "bytes": 35539,
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/manifest.json",
+      "bytes": 15565,
+      "sha256": "db8ed0a9d1c54efe2f7a79a64f22961b4417a54c7f38a58413102978d61af691",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/environment/coastal-day.hdr",
+      "bytes": 1435119,
+      "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/environment/coastal-sunset.hdr",
+      "bytes": 1061624,
+      "sha256": "e90f2130848de0364b76d2b3da7a72ce31bbb95d66bd86d5b4f85f0626421b8d",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/coast_sand_01-diff.jpg",
+      "bytes": 960614,
+      "sha256": "58af2e40100f7f405703a86d593af64379f822c4786850def23ecfc921450d54",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/coast_sand_01-nor_gl.jpg",
+      "bytes": 1146826,
+      "sha256": "fe4d045aec99e71e80f682fcf0ad958d2dff1fe614b73178b304d1bac047b54a",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/coast_sand_01-rough.jpg",
+      "bytes": 383892,
+      "sha256": "cbc3e0bf2214e04318a643c9dc81f50f33cc5f7b935a20016c5d9efd9a6d1696",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/grass_ground-diff.jpg",
+      "bytes": 876584,
+      "sha256": "a79cc5ed65af0f80261b39a383b64a8c5272c5144d724deb43dbc29f0e4cd19b",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/grass_ground-nor_gl.jpg",
+      "bytes": 1310516,
+      "sha256": "7000e2ccd479bb7b66dcdf4faef7b47554324566886314ca620cbf03e274e826",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/grass_ground-rough.jpg",
+      "bytes": 328190,
+      "sha256": "111341f948b7e073edf7ac6add8777e1bf10df8959400df3863243e89bbc8c08",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/rocky_terrain-diff.jpg",
+      "bytes": 905179,
+      "sha256": "429315865fd89c150272592f6d93def174c6f69804a565ff08e53627a885579b",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/rocky_terrain-nor_gl.jpg",
+      "bytes": 1059194,
+      "sha256": "a6556e1220c6e6c822e68ceeb9589719e4db8c87340199657cc705fea6ecf391",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/rocky_terrain-rough.jpg",
+      "bytes": 439748,
+      "sha256": "b37dfff29fff10a219bfe73886940625df63b345289ea6b71ec5f6ddadc8adcb",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/painted_plaster_wall-diff.jpg",
+      "bytes": 686726,
+      "sha256": "440310f05af089f2c93353167573403cbc3f805948203237b5d26431eeb9e19c",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/painted_plaster_wall-nor_gl.jpg",
+      "bytes": 900461,
+      "sha256": "8eb01647d126eb5341e2c325821ad48c8ca11349dbef53447c95422c5d91cc9d",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/painted_plaster_wall-rough.jpg",
+      "bytes": 354762,
+      "sha256": "e0564c297b22ab1cf4ef02a82157b84ce3b92eb4fd49d9c64b7256a8b300af82",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/wood_floor-diff.jpg",
+      "bytes": 734493,
+      "sha256": "2a1c07687b6dbb214c4b9213739c6d92d425f1f0fc8ab3ac157f105d78240789",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/wood_floor-nor_gl.jpg",
+      "bytes": 423303,
+      "sha256": "452247f0d0d1b7fc7f8324ff3b6ed60bcc6de1405f4284eeb8d9bce90d4939c2",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/textures/wood_floor-rough.jpg",
+      "bytes": 527754,
+      "sha256": "061f1e1293251b2d28c76e3fac1ea9452b0e8648bb8f9b3728e09db386166e5c",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/rock_moss_set_01/rock_moss_set_01.gltf",
+      "bytes": 9987,
+      "sha256": "c36675aca9c6b2be7785c2534cf413b03ec82a5a2a5407a2b1c0cdb0346c9727",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/rock_moss_set_01/rock_moss_set_01.bin",
+      "bytes": 1466380,
+      "sha256": "de8360e6175879aaf02c171911069cf5f1852547f9ca7f10e440085dbcc3315e",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/rock_moss_set_01/textures/rock_moss_set_01_diff_1k.jpg",
+      "bytes": 168099,
+      "sha256": "40cea65d8aa4ee73a93b04af19963834d061eee9779c3fc2c1cba76eef812ccc",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/rock_moss_set_01/textures/rock_moss_set_01_nor_gl_1k.jpg",
+      "bytes": 209975,
+      "sha256": "eb4aad3f207f1dc5b624d74ae240372171626a66912bd71adf7bd3e518181d6e",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/rock_moss_set_01/textures/rock_moss_set_01_rough_1k.jpg",
+      "bytes": 82624,
+      "sha256": "4d6ec46623abd8e2cdb855f59c7ce31873ad61b36b60e4de579e9e776a497c6b",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/grass_bermuda_01.gltf",
+      "bytes": 32912,
+      "sha256": "a1e5bb7fcf33721dc4844d7acacab80759fccec659f1ea643f8701afc542e207",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/grass_bermuda_01.bin",
+      "bytes": 32260,
+      "sha256": "b98be48b43afb9d57f6c722d918a49996635064b829b16dc14ef4a48c0f04dae",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/textures/grass_bermuda_01_diff_1k.jpg",
+      "bytes": 175425,
+      "sha256": "ef202eeb8f8fb3312446009acecc87e5679a7d612e4dee859d8a849e00af5fcb",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/textures/grass_bermuda_01_nor_gl_1k.jpg",
+      "bytes": 709845,
+      "sha256": "4475b37d6e4d217ce03547216f62d1ef6e65cafda2355fd0cb2aeb6d919b9338",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/textures/grass_bermuda_01_arm_1k.jpg",
+      "bytes": 500088,
+      "sha256": "38190d342fe951c33ff8c37dd2e3de37aca4cc7633e91be8b0d1c1f71057a641",
+      "passed": true
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/textures/grass_bermuda_01_alpha_1k.png",
+      "bytes": 59564,
+      "sha256": "e58b3052aad2f107cdd763e437f80ed8fb5a31bcc43b44023f7f767cb3d9888e",
+      "passed": true
+    },
+    {
+      "path": "index.html",
+      "bytes": 3201,
+      "sha256": "ca7650686ec3c1fa4e382cafc4aa1da966cd45632e98506d5be6260e0be85d9d",
+      "passed": true
+    },
+    {
+      "path": "portable-scene.js",
+      "bytes": 5036,
+      "sha256": "82d6ff9acbc830752ed1ee0ce4fc1bfa4998a1f191a46f4d1a3e6669dd711c98",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-iterations/01/view-1.png",
+      "bytes": 87228,
+      "sha256": "9ce81d878ead99402fb34b0c9db488e358b5ec37b28531937a959e75402ac1ae",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-iterations/01/view-2.png",
+      "bytes": 59733,
+      "sha256": "ad32372567d18a288dc83549f7c876ee4b17fe728e7b21f1c705fb8a224b4172",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-iterations/01/view-3.png",
+      "bytes": 54084,
+      "sha256": "eccb2fe5e3f11c5c5ee0ef14af6257920ac0818fedc0cf7af7218e580517dfda",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-iterations/02/view-1.png",
+      "bytes": 87228,
+      "sha256": "9ce81d878ead99402fb34b0c9db488e358b5ec37b28531937a959e75402ac1ae",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-iterations/02/view-2.png",
+      "bytes": 821036,
+      "sha256": "b92e5d4076b13959bd7379ac64b257f6906439586f68086310854d62f00bd228",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-iterations/02/view-3.png",
+      "bytes": 865563,
+      "sha256": "c209924b6093f55a62a75e21c77e019a0f0e90b57ff3f91cdd6ab6858132005e",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-iterations/02/view-4.png",
+      "bytes": 810866,
+      "sha256": "e34312f169ad11a098631d851af1ac10c969ce2ca75b237f73719cb3bd794740",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-iterations/03/view-1.png",
+      "bytes": 87228,
+      "sha256": "9ce81d878ead99402fb34b0c9db488e358b5ec37b28531937a959e75402ac1ae",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-iterations/03/view-2.png",
+      "bytes": 646899,
+      "sha256": "b73f04619877ff0f350d5db4e33ac57ea5917704b2431e408da77ee224a7766f",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-iterations/03/view-3.png",
+      "bytes": 684164,
+      "sha256": "a76e6c8db384ef1461ef8e1deaa1484c27bd8dc97de7028164a774ae8555077d",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-iterations/03/view-4.png",
+      "bytes": 631253,
+      "sha256": "a635d88eb064112e4c3ea36a264b15c2d5875cfa730e64784053b3ca58faed6b",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-iterations/04/view-1.png",
+      "bytes": 87228,
+      "sha256": "9ce81d878ead99402fb34b0c9db488e358b5ec37b28531937a959e75402ac1ae",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-iterations/04/view-2.png",
+      "bytes": 832002,
+      "sha256": "0baec3587bbeeb584e89ad1c9828e2e10f2dbcb69fbd79e049f32b451443160b",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-iterations/04/view-3.png",
+      "bytes": 808774,
+      "sha256": "99a670ffc0826419c15938dad09df9bae9dec53e5b9f61a53aad296c7d0a2371",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-iterations/04/view-4.png",
+      "bytes": 677014,
+      "sha256": "2bf84d39344172675183609634f3f3e0fae06130b505e47ec15bab69a0d61b73",
+      "passed": true
+    },
+    {
+      "path": "inputs/recipe/view-1.png",
+      "bytes": 87228,
+      "sha256": "9ce81d878ead99402fb34b0c9db488e358b5ec37b28531937a959e75402ac1ae",
+      "passed": true
+    },
+    {
+      "path": "inputs/recipe/view-2.png",
+      "bytes": 59733,
+      "sha256": "ad32372567d18a288dc83549f7c876ee4b17fe728e7b21f1c705fb8a224b4172",
+      "passed": true
+    },
+    {
+      "path": "inputs/recipe/view-3.png",
+      "bytes": 54084,
+      "sha256": "eccb2fe5e3f11c5c5ee0ef14af6257920ac0818fedc0cf7af7218e580517dfda",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-final/view-1.png",
+      "bytes": 87228,
+      "sha256": "9ce81d878ead99402fb34b0c9db488e358b5ec37b28531937a959e75402ac1ae",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-final/view-2.png",
+      "bytes": 841451,
+      "sha256": "1188a6567296ca84644fee06a205458d0c414096e47cdb40f2f6d3d51cfa6f45",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-final/view-3.png",
+      "bytes": 805285,
+      "sha256": "d86936806ab2727055140a09c14661a805ff7e3e8345e884a0f0582ca0237f66",
+      "passed": true
+    },
+    {
+      "path": "inputs/geometry-final/view-4.png",
+      "bytes": 670704,
+      "sha256": "78ea7eed783d5148bfe8ce261b32f4ae5042d22a6127a4a09621dbbe745ba96f",
+      "passed": true
+    },
+    {
+      "path": "scene.json",
+      "bytes": 560926,
+      "sha256": "1f96d47b6b893cfa76c33a707d21134dd1915a31b675985b4ec92734a481104b",
+      "passed": true
+    },
+    {
+      "path": "scene.glb",
+      "bytes": 45279612,
+      "sha256": "c6c1015515b8660734bfb927724a34d64bc8004ca8c867515506099b97b7b516",
+      "passed": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 1829,
+      "sha256": "1fadcfe23674edfafd6b37c1d77fd074b1e5c88fb1c2b890ff03a222441ee57d",
+      "passed": true
+    },
+    {
+      "path": "serve.mjs",
+      "bytes": 1366,
+      "sha256": "9b778b07125c193b5081af5f3f91580af1f7b56e06d0915e9e1bdecf40e1080b",
+      "passed": true
+    },
+    {
+      "path": "start.py",
+      "bytes": 382,
+      "sha256": "4f33f861d587a34f2e2519fc792ee5b246f3ec903893b5560092af2304ba88e0",
+      "passed": true
+    }
+  ]
+}

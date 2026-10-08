@@ -1,0 +1,386 @@
+{
+  "format": "tidewater-realistic-assets.v1",
+  "generatedAt": "2026-10-04T17:44:26.299Z",
+  "runtimeNetwork": "local-only",
+  "origin": "Existing CC0 materials and scanned models selected and assembled by the coding model; these files are not AI-generated assets.",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://polyhaven.com/license",
+  "materials": {
+    "coast_sand_01": {
+      "name": "Coast Sand 01",
+      "page": "https://polyhaven.com/a/coast_sand_01",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "resolution": "1k",
+      "dimensionsMm": [
+        15000,
+        15000
+      ],
+      "paths": {
+        "diff": "textures/coast_sand_01-diff.jpg",
+        "nor_gl": "textures/coast_sand_01-nor_gl.jpg",
+        "rough": "textures/coast_sand_01-rough.jpg"
+      }
+    },
+    "grass_ground": {
+      "name": "Grass Ground",
+      "page": "https://polyhaven.com/a/grass_ground",
+      "authors": {
+        "Charlotte Baglioni": "All"
+      },
+      "resolution": "1k",
+      "dimensionsMm": [
+        2509.999990463257,
+        2509.999990463257
+      ],
+      "paths": {
+        "diff": "textures/grass_ground-diff.jpg",
+        "nor_gl": "textures/grass_ground-nor_gl.jpg",
+        "rough": "textures/grass_ground-rough.jpg"
+      }
+    },
+    "rocky_terrain": {
+      "name": "Rocky Terrain",
+      "page": "https://polyhaven.com/a/rocky_terrain",
+      "authors": {
+        "Amal Kumar": "All"
+      },
+      "resolution": "1k",
+      "dimensionsMm": [
+        90000,
+        90000
+      ],
+      "paths": {
+        "diff": "textures/rocky_terrain-diff.jpg",
+        "nor_gl": "textures/rocky_terrain-nor_gl.jpg",
+        "rough": "textures/rocky_terrain-rough.jpg"
+      }
+    },
+    "painted_plaster_wall": {
+      "name": "Painted Plaster Wall",
+      "page": "https://polyhaven.com/a/painted_plaster_wall",
+      "authors": {
+        "Amal Kumar": "All"
+      },
+      "resolution": "1k",
+      "dimensionsMm": [
+        2000,
+        2000
+      ],
+      "paths": {
+        "diff": "textures/painted_plaster_wall-diff.jpg",
+        "nor_gl": "textures/painted_plaster_wall-nor_gl.jpg",
+        "rough": "textures/painted_plaster_wall-rough.jpg"
+      }
+    },
+    "wood_floor": {
+      "name": "Wood Floor",
+      "page": "https://polyhaven.com/a/wood_floor",
+      "authors": {
+        "Dimitrios Savva": "All"
+      },
+      "resolution": "1k",
+      "dimensionsMm": [
+        1699.9996900558472,
+        1699.9996900558472
+      ],
+      "paths": {
+        "diff": "textures/wood_floor-diff.jpg",
+        "nor_gl": "textures/wood_floor-nor_gl.jpg",
+        "rough": "textures/wood_floor-rough.jpg"
+      }
+    }
+  },
+  "models": {
+    "rock_moss_set_01": {
+      "name": "Rock Moss Set 01",
+      "page": "https://polyhaven.com/a/rock_moss_set_01",
+      "authors": {
+        "Kless Gyzen": "All"
+      },
+      "resolution": "1k",
+      "file": "models/rock_moss_set_01/rock_moss_set_01.gltf"
+    },
+    "grass_bermuda_01": {
+      "name": "Grass Bermuda 01",
+      "page": "https://polyhaven.com/a/grass_bermuda_01",
+      "authors": {
+        "Rico Cilliers": "All"
+      },
+      "resolution": "1k",
+      "file": "models/grass_bermuda_01/grass_bermuda_01.gltf",
+      "alphaMap": "models/grass_bermuda_01/textures/grass_bermuda_01_alpha_1k.png",
+      "alphaTest": 0.45
+    }
+  },
+  "environments": {
+    "coastal-day": {
+      "file": "environment/coastal-day.hdr",
+      "page": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky",
+      "source": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+      "license": "CC0 — Poly Haven, Greg Zaal / Jarod Guest"
+    },
+    "coastal-sunset": {
+      "file": "environment/coastal-sunset.hdr",
+      "page": "https://polyhaven.com/a/qwantani_sunset_puresky",
+      "source": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/qwantani_sunset_puresky_1k.hdr",
+      "license": "CC0 — Poly Haven, Greg Zaal / Jarod Guest"
+    }
+  },
+  "files": [
+    {
+      "file": "textures/coast_sand_01-diff.jpg",
+      "assetId": "coast_sand_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/coast_sand_01/coast_sand_01_diff_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 960614,
+      "sha256": "58af2e40100f7f405703a86d593af64379f822c4786850def23ecfc921450d54"
+    },
+    {
+      "file": "textures/coast_sand_01-nor_gl.jpg",
+      "assetId": "coast_sand_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/coast_sand_01/coast_sand_01_nor_gl_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 1146826,
+      "sha256": "fe4d045aec99e71e80f682fcf0ad958d2dff1fe614b73178b304d1bac047b54a"
+    },
+    {
+      "file": "textures/coast_sand_01-rough.jpg",
+      "assetId": "coast_sand_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/coast_sand_01/coast_sand_01_rough_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 383892,
+      "sha256": "cbc3e0bf2214e04318a643c9dc81f50f33cc5f7b935a20016c5d9efd9a6d1696"
+    },
+    {
+      "file": "textures/grass_ground-diff.jpg",
+      "assetId": "grass_ground",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/grass_ground/grass_ground_diff_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 876584,
+      "sha256": "a79cc5ed65af0f80261b39a383b64a8c5272c5144d724deb43dbc29f0e4cd19b"
+    },
+    {
+      "file": "textures/grass_ground-nor_gl.jpg",
+      "assetId": "grass_ground",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/grass_ground/grass_ground_nor_gl_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 1310516,
+      "sha256": "7000e2ccd479bb7b66dcdf4faef7b47554324566886314ca620cbf03e274e826"
+    },
+    {
+      "file": "textures/grass_ground-rough.jpg",
+      "assetId": "grass_ground",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/grass_ground/grass_ground_rough_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 328190,
+      "sha256": "111341f948b7e073edf7ac6add8777e1bf10df8959400df3863243e89bbc8c08"
+    },
+    {
+      "file": "textures/rocky_terrain-diff.jpg",
+      "assetId": "rocky_terrain",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rocky_terrain/rocky_terrain_diff_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 905179,
+      "sha256": "429315865fd89c150272592f6d93def174c6f69804a565ff08e53627a885579b"
+    },
+    {
+      "file": "textures/rocky_terrain-nor_gl.jpg",
+      "assetId": "rocky_terrain",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rocky_terrain/rocky_terrain_nor_gl_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 1059194,
+      "sha256": "a6556e1220c6e6c822e68ceeb9589719e4db8c87340199657cc705fea6ecf391"
+    },
+    {
+      "file": "textures/rocky_terrain-rough.jpg",
+      "assetId": "rocky_terrain",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rocky_terrain/rocky_terrain_rough_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 439748,
+      "sha256": "b37dfff29fff10a219bfe73886940625df63b345289ea6b71ec5f6ddadc8adcb"
+    },
+    {
+      "file": "textures/painted_plaster_wall-diff.jpg",
+      "assetId": "painted_plaster_wall",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/painted_plaster_wall/painted_plaster_wall_diff_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 686726,
+      "sha256": "440310f05af089f2c93353167573403cbc3f805948203237b5d26431eeb9e19c"
+    },
+    {
+      "file": "textures/painted_plaster_wall-nor_gl.jpg",
+      "assetId": "painted_plaster_wall",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/painted_plaster_wall/painted_plaster_wall_nor_gl_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 900461,
+      "sha256": "8eb01647d126eb5341e2c325821ad48c8ca11349dbef53447c95422c5d91cc9d"
+    },
+    {
+      "file": "textures/painted_plaster_wall-rough.jpg",
+      "assetId": "painted_plaster_wall",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/painted_plaster_wall/painted_plaster_wall_rough_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 354762,
+      "sha256": "e0564c297b22ab1cf4ef02a82157b84ce3b92eb4fd49d9c64b7256a8b300af82"
+    },
+    {
+      "file": "textures/wood_floor-diff.jpg",
+      "assetId": "wood_floor",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_floor/wood_floor_diff_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 734493,
+      "sha256": "2a1c07687b6dbb214c4b9213739c6d92d425f1f0fc8ab3ac157f105d78240789"
+    },
+    {
+      "file": "textures/wood_floor-nor_gl.jpg",
+      "assetId": "wood_floor",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_floor/wood_floor_nor_gl_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 423303,
+      "sha256": "452247f0d0d1b7fc7f8324ff3b6ed60bcc6de1405f4284eeb8d9bce90d4939c2"
+    },
+    {
+      "file": "textures/wood_floor-rough.jpg",
+      "assetId": "wood_floor",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_floor/wood_floor_rough_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 527754,
+      "sha256": "061f1e1293251b2d28c76e3fac1ea9452b0e8648bb8f9b3728e09db386166e5c"
+    },
+    {
+      "file": "models/rock_moss_set_01/rock_moss_set_01.gltf",
+      "assetId": "rock_moss_set_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/rock_moss_set_01/rock_moss_set_01_1k.gltf",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 9987,
+      "sha256": "c36675aca9c6b2be7785c2534cf413b03ec82a5a2a5407a2b1c0cdb0346c9727"
+    },
+    {
+      "file": "models/rock_moss_set_01/textures/rock_moss_set_01_nor_gl_1k.jpg",
+      "assetId": "rock_moss_set_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/rock_moss_set_01/rock_moss_set_01_nor_gl_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 209975,
+      "sha256": "eb4aad3f207f1dc5b624d74ae240372171626a66912bd71adf7bd3e518181d6e"
+    },
+    {
+      "file": "models/rock_moss_set_01/rock_moss_set_01.bin",
+      "assetId": "rock_moss_set_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/rock_moss_set_01/rock_moss_set_01.bin",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 1466380,
+      "sha256": "de8360e6175879aaf02c171911069cf5f1852547f9ca7f10e440085dbcc3315e"
+    },
+    {
+      "file": "models/rock_moss_set_01/textures/rock_moss_set_01_rough_1k.jpg",
+      "assetId": "rock_moss_set_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/rock_moss_set_01/rock_moss_set_01_rough_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 82624,
+      "sha256": "4d6ec46623abd8e2cdb855f59c7ce31873ad61b36b60e4de579e9e776a497c6b"
+    },
+    {
+      "file": "models/rock_moss_set_01/textures/rock_moss_set_01_diff_1k.jpg",
+      "assetId": "rock_moss_set_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/rock_moss_set_01/rock_moss_set_01_diff_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 168099,
+      "sha256": "40cea65d8aa4ee73a93b04af19963834d061eee9779c3fc2c1cba76eef812ccc"
+    },
+    {
+      "file": "models/grass_bermuda_01/grass_bermuda_01.gltf",
+      "assetId": "grass_bermuda_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/grass_bermuda_01/grass_bermuda_01_1k.gltf",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 32912,
+      "sha256": "a1e5bb7fcf33721dc4844d7acacab80759fccec659f1ea643f8701afc542e207"
+    },
+    {
+      "file": "models/grass_bermuda_01/textures/grass_bermuda_01_nor_gl_1k.jpg",
+      "assetId": "grass_bermuda_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/grass_bermuda_01/grass_bermuda_01_nor_gl_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 709845,
+      "sha256": "4475b37d6e4d217ce03547216f62d1ef6e65cafda2355fd0cb2aeb6d919b9338"
+    },
+    {
+      "file": "models/grass_bermuda_01/textures/grass_bermuda_01_diff_1k.jpg",
+      "assetId": "grass_bermuda_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/grass_bermuda_01/grass_bermuda_01_diff_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 175425,
+      "sha256": "ef202eeb8f8fb3312446009acecc87e5679a7d612e4dee859d8a849e00af5fcb"
+    },
+    {
+      "file": "models/grass_bermuda_01/textures/grass_bermuda_01_arm_1k.jpg",
+      "assetId": "grass_bermuda_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/grass_bermuda_01/grass_bermuda_01_arm_1k.jpg",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 500088,
+      "sha256": "38190d342fe951c33ff8c37dd2e3de37aca4cc7633e91be8b0d1c1f71057a641"
+    },
+    {
+      "file": "models/grass_bermuda_01/grass_bermuda_01.bin",
+      "assetId": "grass_bermuda_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/grass_bermuda_01/grass_bermuda_01.bin",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 32260,
+      "sha256": "b98be48b43afb9d57f6c722d918a49996635064b829b16dc14ef4a48c0f04dae"
+    },
+    {
+      "file": "models/grass_bermuda_01/textures/grass_bermuda_01_alpha_1k.png",
+      "assetId": "grass_bermuda_01",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/grass_bermuda_01/grass_bermuda_01_alpha_1k.png",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 59564,
+      "sha256": "e58b3052aad2f107cdd763e437f80ed8fb5a31bcc43b44023f7f767cb3d9888e"
+    },
+    {
+      "file": "environment/coastal-day.hdr",
+      "assetId": "coastal-day.hdr",
+      "source": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 1435119,
+      "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798"
+    },
+    {
+      "file": "environment/coastal-sunset.hdr",
+      "assetId": "coastal-sunset.hdr",
+      "source": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/qwantani_sunset_puresky_1k.hdr",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "bytes": 1061624,
+      "sha256": "e90f2130848de0364b76d2b3da7a72ce31bbb95d66bd86d5b4f85f0626421b8d"
+    }
+  ],
+  "totalBytes": 16982144
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "provider": "Local GPU",
+  "model": "stabilityai/TripoSR",
+  "officialSources": ["https://github.com/VAST-AI-Research/TripoSR", "https://huggingface.co/stabilityai/TripoSR"],
+  "modelLicense": "MIT",
+  "pythonEnvironment": "Project-local .venv; global Python packages are unchanged",
+  "cache": "Project-local model-cache; official checkpoint SHA256 is verified",
+  "startFromRepositoryRootPowerShell": "& ./projects/014-tidewater/assets/neural-service/local-triposr/.venv/Scripts/python.exe ./projects/014-tidewater/assets/neural-service/local-triposr/local-server.py",
+  "startCurrentPreviewFromRepositoryRoot": "node projects/014-tidewater/tools/serve.mjs",
+  "apiOrigin": "http://127.0.0.1:4197",
+  "allowedBrowserOrigins": ["http://127.0.0.1:4196", "http://localhost:4196"],
+  "healthEndpoint": "GET /health",
+  "submitEndpoint": "POST /tasks with multipart fields image and kind",
+  "pollEndpoint": "GET /tasks/{taskId}",
+  "assetKinds": ["cabin", "lighthouse", "palm", "boat"],
+  "limits": {"imageBytes": 8388608, "maxDimension": 8192, "minimumDimension": 32, "queuedJobs": 8, "gpuConcurrency": 1},
+  "supportedInput": "Transparent PNG or WebP. Automatic photo-background segmentation is not installed.",
+  "output": "Self-contained GLB with neural shape and baked neural RGB UV texture. Roughness and metalness are explicit renderer defaults, not predicted PBR maps.",
+  "outputDirectory": "projects/014-tidewater/web/assets/neural/local-jobs/{taskId}",
+  "stops": "Ctrl+C stops the local HTTP service. A remote service is never used as a quota workaround.",
+  "preserves": "The original scene plan is not sent to the model and is never modified by this service. Layout binding and placement remain the frontend's responsibility."
+}

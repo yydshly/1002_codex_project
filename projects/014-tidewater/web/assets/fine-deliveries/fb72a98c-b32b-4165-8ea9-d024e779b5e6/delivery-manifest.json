@@ -1,0 +1,1335 @@
+{
+  "format": "tidewater-scene-delivery.v1",
+  "createdAt": "2026-10-07T14:54:01.964Z",
+  "title": "八棵棕榈茂密羽状树冠精修",
+  "sourceFingerprint": "plan-v1-162afc9e3f46f3aa-22227",
+  "representation": "model-authored-component-meshes",
+  "neuralImageTo3D": false,
+  "glbRepresentation": "static-editable-scene-snapshot",
+  "runtime": {
+    "engine": "Three.js r180 / WebGL 2",
+    "resourcePolicy": "project-local-only",
+    "modelServiceRequired": false,
+    "remoteRuntimeImports": [],
+    "localServerRequired": true,
+    "launch": [
+      "node serve.mjs",
+      "python start.py"
+    ]
+  },
+  "approximations": [
+    {
+      "node": "Mesh",
+      "reason": "自定义材质着色器转换为标准材质；动态水面、泡沫或条纹可能不同。"
+    },
+    {
+      "node": "Mesh",
+      "reason": "自定义材质着色器转换为标准材质；动态水面、泡沫或条纹可能不同。"
+    },
+    {
+      "node": "Mesh",
+      "reason": "自定义材质着色器转换为标准材质；动态水面、泡沫或条纹可能不同。"
+    },
+    {
+      "node": "Mesh",
+      "reason": "自定义材质着色器转换为标准材质；动态水面、泡沫或条纹可能不同。"
+    },
+    {
+      "node": "land-c2191259",
+      "reason": "地形混合改为静态植被/岩石顶点色与原沙地贴图近似。"
+    },
+    {
+      "node": "land-83e66dc9",
+      "reason": "地形混合改为静态植被/岩石顶点色与原沙地贴图近似。"
+    },
+    {
+      "node": "land-e67bfb3a",
+      "reason": "地形混合改为静态植被/岩石顶点色与原沙地贴图近似。"
+    },
+    {
+      "node": "water-dcebf052",
+      "reason": "自定义材质着色器转换为标准材质；动态水面、泡沫或条纹可能不同。"
+    },
+    {
+      "node": "water-6e911087",
+      "reason": "自定义材质着色器转换为标准材质；动态水面、泡沫或条纹可能不同。"
+    },
+    {
+      "node": "water-161bee82",
+      "reason": "自定义材质着色器转换为标准材质；动态水面、泡沫或条纹可能不同。"
+    },
+    {
+      "node": "environment",
+      "reason": "HDR 背景、环境反射与雾不属于标准 GLB 几何资源，完整 Web 项目另行保留。"
+    }
+  ],
+  "checks": {
+    "passed": true,
+    "binaryHeader": true,
+    "embeddedResources": true,
+    "independentGLTFReload": true,
+    "triangleCountPreserved": true,
+    "before": {
+      "meshes": 9815,
+      "triangles": 1062119,
+      "vertices": 930004,
+      "materials": 79,
+      "texturedMaterials": 68,
+      "sourceIds": [
+        "land-c2191259",
+        "land-83e66dc9",
+        "land-e67bfb3a",
+        "water-dcebf052",
+        "water-6e911087",
+        "water-161bee82",
+        "road-8c27df0e",
+        "road-dd4d1e0a",
+        "cabin-eee16daa",
+        "lighthouse-6a3ef8b5",
+        "palm-fcf5655d",
+        "palm-fdc477ab",
+        "palm-ed6868f5",
+        "palm-4c3e36ec",
+        "palm-e4e12d5a",
+        "palm-a5e5d894",
+        "palm-c056ab5b",
+        "palm-b118d524",
+        "boat-0da1d0f1",
+        "boat-036222fc",
+        "boat-295848e5",
+        "boat-e5c7631b",
+        "boat-5ee8e525",
+        "boat-dd2a2b43",
+        "boat-8b32d476"
+      ],
+      "finiteGeometry": true,
+      "validIndices": true,
+      "sourceIdsPreserved": true
+    },
+    "reopened": {
+      "meshes": 9815,
+      "triangles": 1062119,
+      "vertices": 930004,
+      "materials": 79,
+      "texturedMaterials": 68,
+      "sourceIds": [
+        "land-c2191259",
+        "land-83e66dc9",
+        "land-e67bfb3a",
+        "water-dcebf052",
+        "water-6e911087",
+        "water-161bee82",
+        "road-8c27df0e",
+        "road-dd4d1e0a",
+        "cabin-eee16daa",
+        "lighthouse-6a3ef8b5",
+        "palm-fcf5655d",
+        "palm-fdc477ab",
+        "palm-ed6868f5",
+        "palm-4c3e36ec",
+        "palm-e4e12d5a",
+        "palm-a5e5d894",
+        "palm-c056ab5b",
+        "palm-b118d524",
+        "boat-0da1d0f1",
+        "boat-036222fc",
+        "boat-295848e5",
+        "boat-e5c7631b",
+        "boat-5ee8e525",
+        "boat-dd2a2b43",
+        "boat-8b32d476"
+      ],
+      "finiteGeometry": true,
+      "validIndices": true,
+      "sourceIdsPreserved": true
+    },
+    "geometry": {
+      "format": "tidewater-fine-geometry-checks.v1",
+      "sourceFingerprint": "plan-v1-162afc9e3f46f3aa-22227",
+      "entityIds": [
+        "cabin-eee16daa",
+        "lighthouse-6a3ef8b5",
+        "palm-fcf5655d",
+        "palm-fdc477ab",
+        "palm-ed6868f5",
+        "palm-4c3e36ec",
+        "palm-e4e12d5a",
+        "palm-a5e5d894",
+        "palm-c056ab5b",
+        "palm-b118d524",
+        "boat-0da1d0f1",
+        "boat-036222fc",
+        "boat-295848e5",
+        "boat-e5c7631b",
+        "boat-5ee8e525",
+        "boat-dd2a2b43",
+        "boat-8b32d476"
+      ],
+      "templateCount": 4,
+      "partCount": 2368,
+      "vertices": 24084,
+      "triangles": 19738,
+      "placements": [
+        {
+          "entityId": "cabin-eee16daa",
+          "templateId": "cabin_coast",
+          "rotationDeg": -12,
+          "anchor": {
+            "x": 19.8411017885769,
+            "y": 3.12,
+            "z": 6.01674291479476
+          },
+          "bounds": {
+            "min": [
+              16.353947969036888,
+              3.12,
+              2.5167429147947606
+            ],
+            "max": [
+              23.328255608116912,
+              9.078660456082755,
+              9.51674291479476
+            ]
+          },
+          "dimensions": {
+            "width": 6.974307639080024,
+            "height": 5.958660456082755,
+            "depth": 6.999999999999999
+          },
+          "envelope": {
+            "width": 8,
+            "height": 7,
+            "depth": 7
+          },
+          "fitScale": 0.8224514087070743,
+          "waterlineImmersion": 0,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "lighthouse-6a3ef8b5",
+          "templateId": "lighthouse_main",
+          "rotationDeg": 0,
+          "anchor": {
+            "x": -15.487000456667898,
+            "y": 3.12,
+            "z": 10.64419429866954
+          },
+          "bounds": {
+            "min": [
+              -16.919889345556786,
+              3.119999999999999,
+              9.211305409780651
+            ],
+            "max": [
+              -14.05411156777901,
+              21.12,
+              12.077083187558427
+            ]
+          },
+          "dimensions": {
+            "width": 2.865777777777776,
+            "height": 18,
+            "depth": 2.865777777777776
+          },
+          "envelope": {
+            "width": 5.2,
+            "height": 18,
+            "depth": 5.2
+          },
+          "fitScale": 0.8888888888888888,
+          "waterlineImmersion": 0,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "palm-fcf5655d",
+          "templateId": "palm_pinnate_v3",
+          "rotationDeg": -8,
+          "anchor": {
+            "x": 6.634338690396158,
+            "y": 3.12,
+            "z": 29.815116193916168
+          },
+          "bounds": {
+            "min": [
+              1.6343386903961568,
+              3.12,
+              24.815116193916168
+            ],
+            "max": [
+              11.63433869039616,
+              13.847135635409689,
+              34.81511619391617
+            ]
+          },
+          "dimensions": {
+            "width": 10.000000000000004,
+            "height": 10.727135635409688,
+            "depth": 10
+          },
+          "envelope": {
+            "width": 10,
+            "height": 12,
+            "depth": 10
+          },
+          "fitScale": 0.917790524119864,
+          "waterlineImmersion": 0,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "palm-fdc477ab",
+          "templateId": "palm_pinnate_v3",
+          "rotationDeg": 7,
+          "anchor": {
+            "x": 19.180773457733213,
+            "y": 3.12,
+            "z": 29.815116193916168
+          },
+          "bounds": {
+            "min": [
+              14.18077345773321,
+              3.12,
+              24.815116193916168
+            ],
+            "max": [
+              24.18077345773321,
+              13.822860255580274,
+              34.81511619391617
+            ]
+          },
+          "dimensions": {
+            "width": 10,
+            "height": 10.702860255580273,
+            "depth": 10
+          },
+          "envelope": {
+            "width": 10,
+            "height": 12,
+            "depth": 10
+          },
+          "fitScale": 0.9157135751248959,
+          "waterlineImmersion": 0,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "palm-ed6868f5",
+          "templateId": "palm_pinnate_v3",
+          "rotationDeg": 4,
+          "anchor": {
+            "x": 13.89805612730357,
+            "y": 3.12,
+            "z": 24.526578711490366
+          },
+          "bounds": {
+            "min": [
+              8.89805612730357,
+              3.12,
+              19.526578711490362
+            ],
+            "max": [
+              18.89805612730357,
+              13.770046537918335,
+              29.526578711490362
+            ]
+          },
+          "dimensions": {
+            "width": 9.999999999999998,
+            "height": 10.650046537918335,
+            "depth": 10
+          },
+          "envelope": {
+            "width": 10,
+            "height": 12,
+            "depth": 10
+          },
+          "fitScale": 0.9111949476682181,
+          "waterlineImmersion": 0,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "palm-4c3e36ec",
+          "templateId": "palm_pinnate_v3",
+          "rotationDeg": -6,
+          "anchor": {
+            "x": -2.940573246304201,
+            "y": 3.12,
+            "z": 24.857121760765878
+          },
+          "bounds": {
+            "min": [
+              -7.940573246304201,
+              3.12,
+              19.857121760765878
+            ],
+            "max": [
+              2.059426753695799,
+              13.80194097342995,
+              29.857121760765878
+            ]
+          },
+          "dimensions": {
+            "width": 10,
+            "height": 10.681940973429949,
+            "depth": 10
+          },
+          "envelope": {
+            "width": 10,
+            "height": 12,
+            "depth": 10
+          },
+          "fitScale": 0.9139237665887218,
+          "waterlineImmersion": 0,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "palm-e4e12d5a",
+          "templateId": "palm_pinnate_v3",
+          "rotationDeg": -10,
+          "anchor": {
+            "x": -18.128351564909373,
+            "y": 3.12,
+            "z": 30.80671508054622
+          },
+          "bounds": {
+            "min": [
+              -23.128351564909373,
+              3.12,
+              25.80671508054622
+            ],
+            "max": [
+              -13.128351564909373,
+              13.905911160422647,
+              35.80671508054622
+            ]
+          },
+          "dimensions": {
+            "width": 10,
+            "height": 10.785911160422646,
+            "depth": 10
+          },
+          "envelope": {
+            "width": 10,
+            "height": 12,
+            "depth": 10
+          },
+          "fitScale": 0.9228192309191885,
+          "waterlineImmersion": 0,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "palm-a5e5d894",
+          "templateId": "palm_pinnate_v3",
+          "rotationDeg": 6,
+          "anchor": {
+            "x": -21.430046117941227,
+            "y": 3.12,
+            "z": 23.204436775584785
+          },
+          "bounds": {
+            "min": [
+              -26.430046117941227,
+              3.12,
+              18.20443677558479
+            ],
+            "max": [
+              -16.430046117941227,
+              13.80194097342995,
+              28.20443677558479
+            ]
+          },
+          "dimensions": {
+            "width": 10,
+            "height": 10.681940973429949,
+            "depth": 10
+          },
+          "envelope": {
+            "width": 10,
+            "height": 12,
+            "depth": 10
+          },
+          "fitScale": 0.9139237665887218,
+          "waterlineImmersion": 0,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "palm-c056ab5b",
+          "templateId": "palm_pinnate_v3",
+          "rotationDeg": 9,
+          "anchor": {
+            "x": -2.940573246304201,
+            "y": 3.12,
+            "z": 32.78991285380634
+          },
+          "bounds": {
+            "min": [
+              -7.940573246304202,
+              3.12,
+              27.789912853806342
+            ],
+            "max": [
+              2.0594267536957984,
+              13.874804849593895,
+              37.78991285380634
+            ]
+          },
+          "dimensions": {
+            "width": 10,
+            "height": 10.754804849593896,
+            "depth": 10
+          },
+          "envelope": {
+            "width": 10,
+            "height": 12,
+            "depth": 10
+          },
+          "fitScale": 0.9201578422419803,
+          "waterlineImmersion": 0,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "palm-b118d524",
+          "templateId": "palm_pinnate_v3",
+          "rotationDeg": -5,
+          "anchor": {
+            "x": 15.54890718230617,
+            "y": 3.12,
+            "z": 40.722703946846806
+          },
+          "bounds": {
+            "min": [
+              10.54890718230617,
+              3.12,
+              35.722703946846806
+            ],
+            "max": [
+              20.54890718230617,
+              13.784345433376101,
+              45.722703946846806
+            ]
+          },
+          "dimensions": {
+            "width": 10,
+            "height": 10.664345433376102,
+            "depth": 10
+          },
+          "envelope": {
+            "width": 10,
+            "height": 12,
+            "depth": 10
+          },
+          "fitScale": 0.912418330237671,
+          "waterlineImmersion": 0,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "boat-0da1d0f1",
+          "templateId": "boat_open",
+          "rotationDeg": 18,
+          "anchor": {
+            "x": -2.940573246304201,
+            "y": 3.035,
+            "z": 12.296849022654133
+          },
+          "bounds": {
+            "min": [
+              -4.940573246304201,
+              2.854371500519909,
+              10.384841453138868
+            ],
+            "max": [
+              -0.9405732463042011,
+              3.370452927605882,
+              14.208856592169399
+            ]
+          },
+          "dimensions": {
+            "width": 3.9999999999999996,
+            "height": 0.516081427085973,
+            "depth": 3.8240151390305304
+          },
+          "envelope": {
+            "width": 4,
+            "height": 2,
+            "depth": 8
+          },
+          "fitScale": 0.5714468609990583,
+          "waterlineImmersion": 0.18062849948009055,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "boat-036222fc",
+          "templateId": "boat_open",
+          "rotationDeg": -34,
+          "anchor": {
+            "x": 49.22616592952169,
+            "y": 0,
+            "z": 25.848705516797686
+          },
+          "bounds": {
+            "min": [
+              47.22616592952169,
+              -0.18228424996938636,
+              23.779238783642633
+            ],
+            "max": [
+              51.22616592952169,
+              0.33852789280028883,
+              27.91817224995274
+            ]
+          },
+          "dimensions": {
+            "width": 4,
+            "height": 0.5208121427696752,
+            "depth": 4.138933466310107
+          },
+          "envelope": {
+            "width": 4,
+            "height": 2,
+            "depth": 8
+          },
+          "fitScale": 0.5766850898634358,
+          "waterlineImmersion": 0.18228424996938633,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "boat-295848e5",
+          "templateId": "boat_open",
+          "rotationDeg": 24,
+          "anchor": {
+            "x": 64.08378008270503,
+            "y": 0,
+            "z": 29.81510106331793
+          },
+          "bounds": {
+            "min": [
+              62.08378008270503,
+              -0.18669155465973342,
+              27.766359865155263
+            ],
+            "max": [
+              66.08378008270503,
+              0.34671288722521915,
+              31.863842261480592
+            ]
+          },
+          "dimensions": {
+            "width": 4,
+            "height": 0.5334044418849526,
+            "depth": 4.097482396325329
+          },
+          "envelope": {
+            "width": 4,
+            "height": 2,
+            "depth": 8
+          },
+          "fitScale": 0.5906282961570964,
+          "waterlineImmersion": 0.18669155465973342,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "boat-e5c7631b",
+          "templateId": "boat_open",
+          "rotationDeg": -12,
+          "anchor": {
+            "x": 83.89393228694945,
+            "y": 0,
+            "z": 20.560183164970127
+          },
+          "bounds": {
+            "min": [
+              81.89393228694945,
+              -0.17562575559177426,
+              18.764739940119707
+            ],
+            "max": [
+              85.89393228694945,
+              0.32616211752758073,
+              22.355626389820547
+            ]
+          },
+          "dimensions": {
+            "width": 4,
+            "height": 0.501787873119355,
+            "depth": 3.5908864497008395
+          },
+          "envelope": {
+            "width": 4,
+            "height": 2,
+            "depth": 8
+          },
+          "fitScale": 0.5556198885136029,
+          "waterlineImmersion": 0.17562575559177424,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "boat-5ee8e525",
+          "templateId": "boat_open",
+          "rotationDeg": 31,
+          "anchor": {
+            "x": 84.55427573173984,
+            "y": 0,
+            "z": -18.44271646287768
+          },
+          "bounds": {
+            "min": [
+              82.55427573173984,
+              -0.1853228238492358,
+              -20.532259737150362
+            ],
+            "max": [
+              86.55427573173984,
+              0.3441709585771522,
+              -16.353173188604995
+            ]
+          },
+          "dimensions": {
+            "width": 4,
+            "height": 0.529493782426388,
+            "depth": 4.179086548545367
+          },
+          "envelope": {
+            "width": 4,
+            "height": 2,
+            "depth": 8
+          },
+          "fitScale": 0.5862980994967529,
+          "waterlineImmersion": 0.1853228238492358,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "boat-dd2a2b43",
+          "templateId": "boat_open",
+          "rotationDeg": -27,
+          "anchor": {
+            "x": 78.94139423588835,
+            "y": 0,
+            "z": -32.3251008756985
+          },
+          "bounds": {
+            "min": [
+              76.94139423588835,
+              -0.18693161377581885,
+              -34.40441226182351
+            ],
+            "max": [
+              80.94139423588835,
+              0.3471587112979493,
+              -30.245789489573493
+            ]
+          },
+          "dimensions": {
+            "width": 4,
+            "height": 0.5340903250737681,
+            "depth": 4.158622772250016
+          },
+          "envelope": {
+            "width": 4,
+            "height": 2,
+            "depth": 8
+          },
+          "fitScale": 0.5913877611846867,
+          "waterlineImmersion": 0.18693161377581882,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        },
+        {
+          "entityId": "boat-8b32d476",
+          "templateId": "boat_open",
+          "rotationDeg": 14,
+          "anchor": {
+            "x": 63.75361591728319,
+            "y": 0,
+            "z": -39.92734891946345
+          },
+          "bounds": {
+            "min": [
+              61.75361591728319,
+              -0.17704696290735938,
+              -41.752992689088224
+            ],
+            "max": [
+              65.75361591728318,
+              0.32880150254223894,
+              -38.10170514983867
+            ]
+          },
+          "dimensions": {
+            "width": 3.999999999999993,
+            "height": 0.5058484654495984,
+            "depth": 3.6512875392495516
+          },
+          "envelope": {
+            "width": 4,
+            "height": 2,
+            "depth": 8
+          },
+          "fitScale": 0.5601161029075533,
+          "waterlineImmersion": 0.1770469629073594,
+          "preservedAnchor": true,
+          "withinEnvelope": true,
+          "grounded": true
+        }
+      ],
+      "preservedIds": true,
+      "preservedLocks": true,
+      "geometrySource": "control-model-authored-template",
+      "generatedNewGeometry": true,
+      "neuralMeshGenerated": false,
+      "textures": "existing-PBR-resources",
+      "visualQuality": "needs-review",
+      "limitations": [
+        "细几何由控制模型组织部件、曲线和顶点；未调用专用神经网格模型。",
+        "保留原锚点与包络，当前不证明部件无穿插、碰撞可用或写实品质。",
+        "材质参数由模型决定，照片纹理沿用已登记资源。"
+      ]
+    },
+    "geometrySharing": {
+      "method": "exact-attribute-index-byte-sharing",
+      "lossySimplification": false,
+      "geometriesBefore": 2439,
+      "geometriesAfter": 62,
+      "reassignedMeshes": 4577,
+      "attributeBytesBefore": 19931602,
+      "attributeBytesAfter": 12352192,
+      "sharedAttributeBytes": 7579410,
+      "nodesPreserved": true,
+      "transformsPreserved": true,
+      "materialsPreserved": true,
+      "sourceIdsPreserved": true
+    },
+    "binarySharing": {
+      "method": "exact-buffer-view-byte-sharing",
+      "lossyCompression": false,
+      "performed": true,
+      "originalBytes": 104567568,
+      "packedBytes": 45279612,
+      "bytesSaved": 59287956,
+      "bufferViewsPreserved": 330,
+      "uniqueByteBlocks": 249,
+      "reusedBufferViews": 81,
+      "accessorReferencesPreserved": true,
+      "imageReferencesPreserved": true,
+      "nodeReferencesPreserved": true
+    },
+    "fineRefinement": {
+      "sourceFingerprint": "plan-v1-162afc9e3f46f3aa-22227",
+      "scopeIds": [
+        "palm-fcf5655d",
+        "palm-fdc477ab",
+        "palm-ed6868f5",
+        "palm-4c3e36ec",
+        "palm-e4e12d5a",
+        "palm-a5e5d894",
+        "palm-c056ab5b",
+        "palm-b118d524"
+      ],
+      "changedEntityIds": [
+        "palm-fcf5655d",
+        "palm-fdc477ab",
+        "palm-ed6868f5",
+        "palm-4c3e36ec",
+        "palm-e4e12d5a",
+        "palm-a5e5d894",
+        "palm-c056ab5b",
+        "palm-b118d524"
+      ],
+      "unchangedEntityIds": [
+        "cabin-eee16daa",
+        "lighthouse-6a3ef8b5",
+        "boat-0da1d0f1",
+        "boat-036222fc",
+        "boat-295848e5",
+        "boat-e5c7631b",
+        "boat-5ee8e525",
+        "boat-dd2a2b43",
+        "boat-8b32d476"
+      ],
+      "preservedOutsideScope": true
+    },
+    "inputProvenance": {
+      "recipe": {
+        "receiptImageHashesVerified": true,
+        "imageCount": 3,
+        "modelJob": "69400170-d405-441f-adad-2bf894d477e5"
+      },
+      "finalGeometry": {
+        "receiptImageHashesVerified": true,
+        "imageCount": 4,
+        "modelJob": "40f03009-853b-40f3-b8dc-ca55f400e198"
+      },
+      "geometryIterations": [
+        {
+          "receiptImageHashesVerified": true,
+          "imageCount": 3,
+          "modelJob": "09763a9c-7cab-4c4b-8364-fd0170fb4221"
+        },
+        {
+          "receiptImageHashesVerified": true,
+          "imageCount": 4,
+          "modelJob": "d6fe26bb-14f5-477c-9257-52846275ad90"
+        },
+        {
+          "receiptImageHashesVerified": true,
+          "imageCount": 4,
+          "modelJob": "12274295-1a57-4e24-b850-94d4afd1e997"
+        },
+        {
+          "receiptImageHashesVerified": true,
+          "imageCount": 4,
+          "modelJob": "2740da41-5b9a-448d-9198-23c3d0e99e1e"
+        }
+      ]
+    }
+  },
+  "files": [
+    {
+      "path": "creation-core.js",
+      "bytes": 24399,
+      "sha256": "fb346a4f0e80c87d5e8c9b265019609ba56503d281eb5504290953e2f9680f2c"
+    },
+    {
+      "path": "creation-surfaces.js",
+      "bytes": 3549,
+      "sha256": "74a38cef48c76492a0085a46d514759c9805b3443e1c9e3e880e48d002c0941e"
+    },
+    {
+      "path": "model-scene-core.js",
+      "bytes": 13699,
+      "sha256": "4ce27bcdcf2c2c7a623e376e4f1957ab87a90a91e3596acba7f890c3d2264288"
+    },
+    {
+      "path": "asset-generation-core.js",
+      "bytes": 13423,
+      "sha256": "1b507c5f957628585643c4960f2e7ebff8d58a47052ac453e19fd256687b0d71"
+    },
+    {
+      "path": "scene-completion-core.js",
+      "bytes": 8120,
+      "sha256": "68dc47927f229c59f96eb924c30a7b6c466f7be132c78805c292bbdeec23a209"
+    },
+    {
+      "path": "fine-geometry-core.js",
+      "bytes": 24621,
+      "sha256": "4c984fc9f30d6794ed02ab3e4edc63c82375f022085bc2af482ee8db7262576f"
+    },
+    {
+      "path": "fine-refinement-core.js",
+      "bytes": 3514,
+      "sha256": "9a07cd2fcee0c97d7c85c2f8e546737810715d2d5ea52084729c7c8eb3fdce43"
+    },
+    {
+      "path": "realistic/scene.js",
+      "bytes": 67319,
+      "sha256": "bfb28857140a8c3e87ad4ef2eeb89fb28f11fc29e18203dacb6384b2ff94839f"
+    },
+    {
+      "path": "realistic/terrain.js",
+      "bytes": 6476,
+      "sha256": "1bd368328487d8fa9743d1e1c9d37efc77d6b69210d04ad16d648aa99fdc30fb"
+    },
+    {
+      "path": "realistic/world-terrain.js",
+      "bytes": 4995,
+      "sha256": "8e431f9810b61b93eb3bdbe12292e381a11ab6a869674e2c19b19464e98c344e"
+    },
+    {
+      "path": "realistic/world-environment.js",
+      "bytes": 11579,
+      "sha256": "a84c7457249fbafc3dbfde8ce894fc0c0fcaf045542b8683d2a5e521c1e855f6"
+    },
+    {
+      "path": "realistic/fine-geometry.js",
+      "bytes": 20790,
+      "sha256": "204c9bb575d10022a73e3346bf529d8f78f55e1bcaf1e083f3f86a07e229b5e4"
+    },
+    {
+      "path": "realistic/vendor/three.module.js",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    },
+    {
+      "path": "realistic/vendor/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    {
+      "path": "realistic/vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "realistic/vendor/manifest.json",
+      "bytes": 800,
+      "sha256": "cc8c38725f8b0f51065006b03fe6b4ab264a93afe4b11c5262f7267d81ef6c29"
+    },
+    {
+      "path": "realistic/vendor/addons/controls/OrbitControls.js",
+      "bytes": 38703,
+      "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c"
+    },
+    {
+      "path": "realistic/vendor/addons/loaders/RGBELoader.js",
+      "bytes": 268,
+      "sha256": "6c08f9c441040a61a188ad7711078da4df48f8c5ac3b3725dd6f10ac9ff81162"
+    },
+    {
+      "path": "realistic/vendor/addons/loaders/HDRLoader.js",
+      "bytes": 12456,
+      "sha256": "d7053cfc4019f520335ae07e0fe82b4ef5a66b6766e8b253d066616184995e89"
+    },
+    {
+      "path": "realistic/vendor/addons/loaders/GLTFLoader.js",
+      "bytes": 114739,
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a"
+    },
+    {
+      "path": "realistic/vendor/addons/utils/BufferGeometryUtils.js",
+      "bytes": 35539,
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751"
+    },
+    {
+      "path": "realistic/assets/manifest.json",
+      "bytes": 15565,
+      "sha256": "db8ed0a9d1c54efe2f7a79a64f22961b4417a54c7f38a58413102978d61af691"
+    },
+    {
+      "path": "realistic/assets/environment/coastal-day.hdr",
+      "bytes": 1435119,
+      "sha256": "fd94c84997b8a3c353b62c2125a9b44e19509956986a126e472684432a02d798"
+    },
+    {
+      "path": "realistic/assets/environment/coastal-sunset.hdr",
+      "bytes": 1061624,
+      "sha256": "e90f2130848de0364b76d2b3da7a72ce31bbb95d66bd86d5b4f85f0626421b8d"
+    },
+    {
+      "path": "realistic/assets/textures/coast_sand_01-diff.jpg",
+      "bytes": 960614,
+      "sha256": "58af2e40100f7f405703a86d593af64379f822c4786850def23ecfc921450d54"
+    },
+    {
+      "path": "realistic/assets/textures/coast_sand_01-nor_gl.jpg",
+      "bytes": 1146826,
+      "sha256": "fe4d045aec99e71e80f682fcf0ad958d2dff1fe614b73178b304d1bac047b54a"
+    },
+    {
+      "path": "realistic/assets/textures/coast_sand_01-rough.jpg",
+      "bytes": 383892,
+      "sha256": "cbc3e0bf2214e04318a643c9dc81f50f33cc5f7b935a20016c5d9efd9a6d1696"
+    },
+    {
+      "path": "realistic/assets/textures/grass_ground-diff.jpg",
+      "bytes": 876584,
+      "sha256": "a79cc5ed65af0f80261b39a383b64a8c5272c5144d724deb43dbc29f0e4cd19b"
+    },
+    {
+      "path": "realistic/assets/textures/grass_ground-nor_gl.jpg",
+      "bytes": 1310516,
+      "sha256": "7000e2ccd479bb7b66dcdf4faef7b47554324566886314ca620cbf03e274e826"
+    },
+    {
+      "path": "realistic/assets/textures/grass_ground-rough.jpg",
+      "bytes": 328190,
+      "sha256": "111341f948b7e073edf7ac6add8777e1bf10df8959400df3863243e89bbc8c08"
+    },
+    {
+      "path": "realistic/assets/textures/rocky_terrain-diff.jpg",
+      "bytes": 905179,
+      "sha256": "429315865fd89c150272592f6d93def174c6f69804a565ff08e53627a885579b"
+    },
+    {
+      "path": "realistic/assets/textures/rocky_terrain-nor_gl.jpg",
+      "bytes": 1059194,
+      "sha256": "a6556e1220c6e6c822e68ceeb9589719e4db8c87340199657cc705fea6ecf391"
+    },
+    {
+      "path": "realistic/assets/textures/rocky_terrain-rough.jpg",
+      "bytes": 439748,
+      "sha256": "b37dfff29fff10a219bfe73886940625df63b345289ea6b71ec5f6ddadc8adcb"
+    },
+    {
+      "path": "realistic/assets/textures/painted_plaster_wall-diff.jpg",
+      "bytes": 686726,
+      "sha256": "440310f05af089f2c93353167573403cbc3f805948203237b5d26431eeb9e19c"
+    },
+    {
+      "path": "realistic/assets/textures/painted_plaster_wall-nor_gl.jpg",
+      "bytes": 900461,
+      "sha256": "8eb01647d126eb5341e2c325821ad48c8ca11349dbef53447c95422c5d91cc9d"
+    },
+    {
+      "path": "realistic/assets/textures/painted_plaster_wall-rough.jpg",
+      "bytes": 354762,
+      "sha256": "e0564c297b22ab1cf4ef02a82157b84ce3b92eb4fd49d9c64b7256a8b300af82"
+    },
+    {
+      "path": "realistic/assets/textures/wood_floor-diff.jpg",
+      "bytes": 734493,
+      "sha256": "2a1c07687b6dbb214c4b9213739c6d92d425f1f0fc8ab3ac157f105d78240789"
+    },
+    {
+      "path": "realistic/assets/textures/wood_floor-nor_gl.jpg",
+      "bytes": 423303,
+      "sha256": "452247f0d0d1b7fc7f8324ff3b6ed60bcc6de1405f4284eeb8d9bce90d4939c2"
+    },
+    {
+      "path": "realistic/assets/textures/wood_floor-rough.jpg",
+      "bytes": 527754,
+      "sha256": "061f1e1293251b2d28c76e3fac1ea9452b0e8648bb8f9b3728e09db386166e5c"
+    },
+    {
+      "path": "realistic/assets/models/rock_moss_set_01/rock_moss_set_01.gltf",
+      "bytes": 9987,
+      "sha256": "c36675aca9c6b2be7785c2534cf413b03ec82a5a2a5407a2b1c0cdb0346c9727"
+    },
+    {
+      "path": "realistic/assets/models/rock_moss_set_01/rock_moss_set_01.bin",
+      "bytes": 1466380,
+      "sha256": "de8360e6175879aaf02c171911069cf5f1852547f9ca7f10e440085dbcc3315e"
+    },
+    {
+      "path": "realistic/assets/models/rock_moss_set_01/textures/rock_moss_set_01_diff_1k.jpg",
+      "bytes": 168099,
+      "sha256": "40cea65d8aa4ee73a93b04af19963834d061eee9779c3fc2c1cba76eef812ccc"
+    },
+    {
+      "path": "realistic/assets/models/rock_moss_set_01/textures/rock_moss_set_01_nor_gl_1k.jpg",
+      "bytes": 209975,
+      "sha256": "eb4aad3f207f1dc5b624d74ae240372171626a66912bd71adf7bd3e518181d6e"
+    },
+    {
+      "path": "realistic/assets/models/rock_moss_set_01/textures/rock_moss_set_01_rough_1k.jpg",
+      "bytes": 82624,
+      "sha256": "4d6ec46623abd8e2cdb855f59c7ce31873ad61b36b60e4de579e9e776a497c6b"
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/grass_bermuda_01.gltf",
+      "bytes": 32912,
+      "sha256": "a1e5bb7fcf33721dc4844d7acacab80759fccec659f1ea643f8701afc542e207"
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/grass_bermuda_01.bin",
+      "bytes": 32260,
+      "sha256": "b98be48b43afb9d57f6c722d918a49996635064b829b16dc14ef4a48c0f04dae"
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/textures/grass_bermuda_01_diff_1k.jpg",
+      "bytes": 175425,
+      "sha256": "ef202eeb8f8fb3312446009acecc87e5679a7d612e4dee859d8a849e00af5fcb"
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/textures/grass_bermuda_01_nor_gl_1k.jpg",
+      "bytes": 709845,
+      "sha256": "4475b37d6e4d217ce03547216f62d1ef6e65cafda2355fd0cb2aeb6d919b9338"
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/textures/grass_bermuda_01_arm_1k.jpg",
+      "bytes": 500088,
+      "sha256": "38190d342fe951c33ff8c37dd2e3de37aca4cc7633e91be8b0d1c1f71057a641"
+    },
+    {
+      "path": "realistic/assets/models/grass_bermuda_01/textures/grass_bermuda_01_alpha_1k.png",
+      "bytes": 59564,
+      "sha256": "e58b3052aad2f107cdd763e437f80ed8fb5a31bcc43b44023f7f767cb3d9888e"
+    },
+    {
+      "path": "index.html",
+      "bytes": 3201,
+      "sha256": "ca7650686ec3c1fa4e382cafc4aa1da966cd45632e98506d5be6260e0be85d9d"
+    },
+    {
+      "path": "portable-scene.js",
+      "bytes": 5036,
+      "sha256": "82d6ff9acbc830752ed1ee0ce4fc1bfa4998a1f191a46f4d1a3e6669dd711c98"
+    },
+    {
+      "path": "inputs/geometry-iterations/01/view-1.png",
+      "bytes": 87228,
+      "sha256": "9ce81d878ead99402fb34b0c9db488e358b5ec37b28531937a959e75402ac1ae"
+    },
+    {
+      "path": "inputs/geometry-iterations/01/view-2.png",
+      "bytes": 59733,
+      "sha256": "ad32372567d18a288dc83549f7c876ee4b17fe728e7b21f1c705fb8a224b4172"
+    },
+    {
+      "path": "inputs/geometry-iterations/01/view-3.png",
+      "bytes": 54084,
+      "sha256": "eccb2fe5e3f11c5c5ee0ef14af6257920ac0818fedc0cf7af7218e580517dfda"
+    },
+    {
+      "path": "inputs/geometry-iterations/02/view-1.png",
+      "bytes": 87228,
+      "sha256": "9ce81d878ead99402fb34b0c9db488e358b5ec37b28531937a959e75402ac1ae"
+    },
+    {
+      "path": "inputs/geometry-iterations/02/view-2.png",
+      "bytes": 821036,
+      "sha256": "b92e5d4076b13959bd7379ac64b257f6906439586f68086310854d62f00bd228"
+    },
+    {
+      "path": "inputs/geometry-iterations/02/view-3.png",
+      "bytes": 865563,
+      "sha256": "c209924b6093f55a62a75e21c77e019a0f0e90b57ff3f91cdd6ab6858132005e"
+    },
+    {
+      "path": "inputs/geometry-iterations/02/view-4.png",
+      "bytes": 810866,
+      "sha256": "e34312f169ad11a098631d851af1ac10c969ce2ca75b237f73719cb3bd794740"
+    },
+    {
+      "path": "inputs/geometry-iterations/03/view-1.png",
+      "bytes": 87228,
+      "sha256": "9ce81d878ead99402fb34b0c9db488e358b5ec37b28531937a959e75402ac1ae"
+    },
+    {
+      "path": "inputs/geometry-iterations/03/view-2.png",
+      "bytes": 646899,
+      "sha256": "b73f04619877ff0f350d5db4e33ac57ea5917704b2431e408da77ee224a7766f"
+    },
+    {
+      "path": "inputs/geometry-iterations/03/view-3.png",
+      "bytes": 684164,
+      "sha256": "a76e6c8db384ef1461ef8e1deaa1484c27bd8dc97de7028164a774ae8555077d"
+    },
+    {
+      "path": "inputs/geometry-iterations/03/view-4.png",
+      "bytes": 631253,
+      "sha256": "a635d88eb064112e4c3ea36a264b15c2d5875cfa730e64784053b3ca58faed6b"
+    },
+    {
+      "path": "inputs/geometry-iterations/04/view-1.png",
+      "bytes": 87228,
+      "sha256": "9ce81d878ead99402fb34b0c9db488e358b5ec37b28531937a959e75402ac1ae"
+    },
+    {
+      "path": "inputs/geometry-iterations/04/view-2.png",
+      "bytes": 832002,
+      "sha256": "0baec3587bbeeb584e89ad1c9828e2e10f2dbcb69fbd79e049f32b451443160b"
+    },
+    {
+      "path": "inputs/geometry-iterations/04/view-3.png",
+      "bytes": 808774,
+      "sha256": "99a670ffc0826419c15938dad09df9bae9dec53e5b9f61a53aad296c7d0a2371"
+    },
+    {
+      "path": "inputs/geometry-iterations/04/view-4.png",
+      "bytes": 677014,
+      "sha256": "2bf84d39344172675183609634f3f3e0fae06130b505e47ec15bab69a0d61b73"
+    },
+    {
+      "path": "inputs/recipe/view-1.png",
+      "bytes": 87228,
+      "sha256": "9ce81d878ead99402fb34b0c9db488e358b5ec37b28531937a959e75402ac1ae"
+    },
+    {
+      "path": "inputs/recipe/view-2.png",
+      "bytes": 59733,
+      "sha256": "ad32372567d18a288dc83549f7c876ee4b17fe728e7b21f1c705fb8a224b4172"
+    },
+    {
+      "path": "inputs/recipe/view-3.png",
+      "bytes": 54084,
+      "sha256": "eccb2fe5e3f11c5c5ee0ef14af6257920ac0818fedc0cf7af7218e580517dfda"
+    },
+    {
+      "path": "inputs/geometry-final/view-1.png",
+      "bytes": 87228,
+      "sha256": "9ce81d878ead99402fb34b0c9db488e358b5ec37b28531937a959e75402ac1ae"
+    },
+    {
+      "path": "inputs/geometry-final/view-2.png",
+      "bytes": 841451,
+      "sha256": "1188a6567296ca84644fee06a205458d0c414096e47cdb40f2f6d3d51cfa6f45"
+    },
+    {
+      "path": "inputs/geometry-final/view-3.png",
+      "bytes": 805285,
+      "sha256": "d86936806ab2727055140a09c14661a805ff7e3e8345e884a0f0582ca0237f66"
+    },
+    {
+      "path": "inputs/geometry-final/view-4.png",
+      "bytes": 670704,
+      "sha256": "78ea7eed783d5148bfe8ce261b32f4ae5042d22a6127a4a09621dbbe745ba96f"
+    },
+    {
+      "path": "scene.json",
+      "bytes": 560926,
+      "sha256": "1f96d47b6b893cfa76c33a707d21134dd1915a31b675985b4ec92734a481104b"
+    },
+    {
+      "path": "scene.glb",
+      "bytes": 45279612,
+      "sha256": "c6c1015515b8660734bfb927724a34d64bc8004ca8c867515506099b97b7b516"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1829,
+      "sha256": "1fadcfe23674edfafd6b37c1d77fd074b1e5c88fb1c2b890ff03a222441ee57d"
+    },
+    {
+      "path": "serve.mjs",
+      "bytes": 1366,
+      "sha256": "9b778b07125c193b5081af5f3f91580af1f7b56e06d0915e9e1bdecf40e1080b"
+    },
+    {
+      "path": "start.py",
+      "bytes": 382,
+      "sha256": "4f33f861d587a34f2e2519fc792ee5b246f3ec903893b5560092af2304ba88e0"
+    }
+  ],
+  "geometryDiagnostics": {
+    "needsRepair": false,
+    "warnings": []
+  },
+  "visualQuality": "needs-review",
+  "totalFileBytes": 75108712,
+  "provenance": {
+    "sceneJob": "69400170-d405-441f-adad-2bf894d477e5",
+    "geometryJob": "40f03009-853b-40f3-b8dc-ca55f400e198",
+    "geometryVersionCount": 5,
+    "previousGeometryJobs": [
+      "09763a9c-7cab-4c4b-8364-fd0170fb4221",
+      "d6fe26bb-14f5-477c-9257-52846275ad90",
+      "12274295-1a57-4e24-b850-94d4afd1e997",
+      "2740da41-5b9a-448d-9198-23c3d0e99e1e"
+    ],
+    "recipeInputViews": 3,
+    "finalGeometryInputViews": 4
+  },
+  "licenseFiles": [
+    "realistic/vendor/LICENSE",
+    "realistic/assets/manifest.json",
+    "README.md"
+  ]
+}

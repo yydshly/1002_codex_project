@@ -1,0 +1,7 @@
+{
+  "name": "tidewater-studio-checks",
+  "private": true,
+  "type": "module",
+  "scripts": { "browser": "node browser-check.mjs" },
+  "devDependencies": { "puppeteer-core": "25.11.0" }
+}

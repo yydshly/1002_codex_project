@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "id": "triposr-boat-v1",
+  "title": "AI 生成的海岸小船",
+  "provenance": {
+    "method": "neural-image-to-3d",
+    "provider": "Local GPU · Stability AI / Tripo AI",
+    "model": "stabilityai/TripoSR",
+    "source": "https://github.com/VAST-AI-Research/TripoSR",
+    "softwareAndModelLicense": "MIT",
+    "modelRevision": "5b521936b01fbe1890f6f9baed0254ab6351c04a",
+    "generatedAt": "2026-10-05T03:48:16.928675+00:00",
+    "inputImageSha256": "521e9daeec9443c5e8eafcf071a601c6370a0ff82a2e4f8fe0eafdfa1d5ade44",
+    "generationTaskId": "local-triposr-20261005T034717-boat",
+    "inferenceTaskId": "local-triposr-20261005T034717-boat",
+    "execution": "Local CUDA GPU",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpuPeakAllocatedMiB": 2506.53,
+    "settings": {
+      "extractionResolution": 256,
+      "textureResolution": 1024,
+      "chunkSize": 4096,
+      "neuralDensityThreshold": 25.0
+    },
+    "inputMode": "Image only; text brief is recorded outside model inference"
+  },
+  "asset": {
+    "url": "./assets/neural/boat-generated-v1.glb",
+    "referenceUrl": "./assets/neural/boat-reference-v1.png",
+    "bytes": 3067032,
+    "sha256": "39198dded1a7d90d8daa870104f79c2a037d0a55870c7a42f968a7efbc9cfef6",
+    "triangles": 73264,
+    "vertices": 57230,
+    "bounds": {
+      "min": [
+        -0.33031970262527466,
+        -0.2349150776863098,
+        -0.3904780149459839
+      ],
+      "max": [
+        0.3283514976501465,
+        0.24845790863037107,
+        0.4731466472148895
+      ]
+    },
+    "embeddedTextures": 1,
+    "textureFormat": "PNG",
+    "materials": "Neural RGB baseColor; explicit non-neural roughness/metalness defaults",
+    "generatedWholeScene": false,
+    "upAxis": "Y",
+    "textureResolution": [
+      1024,
+      1024
+    ]
+  },
+  "timings": [
+    {
+      "stage": "neuralInferenceSeconds",
+      "seconds": 4.328
+    },
+    {
+      "stage": "surfaceExtractionSeconds",
+      "seconds": 12.453
+    },
+    {
+      "stage": "textureBakeSeconds",
+      "seconds": 41.219
+    }
+  ],
+  "receiptUrl": "./assets/neural/boat-generation-receipt.json",
+  "limitations": [
+    "单物体重建；复用时保留原布局标记的位置和尺寸边界。",
+    "TripoSR 生成形状与 RGB 外观，不生成独立的法线、粗糙度或金属度贴图。",
+    "模型推测单张参考图不可见部分，需要检查树冠、灯室或船舱的背面形态。"
+  ]
+}

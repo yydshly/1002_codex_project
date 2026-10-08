@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5ee">
+  <meta name="description" content="保留已绘制的空间结构，对比编码模型编写的真实 3D 海岸方案，并独立保存、导出 GLB。">
+  <title>Tidewater · 从粗模到 3D 方案</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230d766c'/%3E%3Cpath d='M10 34 Q21 22 32 34 T54 34 M10 44 Q21 32 32 44 T54 44' fill='none' stroke='%23f7f7f1' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="model-scene.css">
+  <script type="module" src="model-scene.js"></script>
+</head>
+<body>
+  <header class="studio-header">
+    <a class="brand" href="index.html"><span aria-hidden="true">≈</span><span><strong>TIDEWATER</strong><small>场景创作实验</small></span></a>
+    <nav aria-label="项目导航"><a href="create.html?entry=layout#refinement-panel">返回布局</a><a href="research.html#model-experiment">实验说明 ↗</a></nav>
+    <span class="experiment-badge">模型方案实验 / 01</span>
+  </header>
+  <main class="model-shell">
+    <section class="intro">
+      <div><p class="eyebrow">05 / 从粗模到视觉方案</p><h1>同一个布局，<br>试一种更完整的 3D。</h1><p>沿用你的陆地轮廓、水面、道路和对象位置，把简单占位几何推进到海岸建筑、植被与材质。</p></div>
+      <aside class="provenance"><span class="model-dot" aria-hidden="true"></span><div><strong>本轮由编码模型编写的 3D 候选</strong><p>网页尚未连接在线模型。这里预览本轮已经写好的几何方案；调整参数会重新构建这套方案。</p></div></aside>
+    </section>
+    <div class="workspace">
+      <aside class="direction-panel" aria-labelledby="direction-heading">
+        <div class="section-label">A / 确定方向</div><h2 id="direction-heading">暖色海岸聚落</h2>
+        <p id="candidate-direction" class="direction-description">正在读取本轮方案…</p>
+        <div id="palette-swatches" class="palette-swatches" aria-label="方案配色"></div>
+        <div class="design-points"><div><span aria-hidden="true">⌂</span><p><strong>从占位体到建筑</strong><small>墙面、屋顶、窗户与木构细节</small></p></div><div><span aria-hidden="true">♧</span><p><strong>丰富空间层次</strong><small>植被、岩岸与沿海细节</small></p></div><div><span aria-hidden="true">◈</span><p><strong>可编辑的真实几何</strong><small>支持旋转、选中和 GLB 导出</small></p></div></div>
+        <div class="recipe-controls"><label for="candidate-lighting">方案光照<select id="candidate-lighting"><option value="warm-day">暖色白天</option><option value="sunset">日落</option></select></label><label for="candidate-detail">细节程度<select id="candidate-detail"><option value="1">标准</option><option value="2">丰富</option></select></label></div>
+        <button id="preview-candidate" class="button primary full-width" type="button" disabled>预览本轮方案 <span aria-hidden="true">↗</span></button>
+        <p class="subtle recipe-note">参数改变后重新预览。轮廓、坐标与高度沿用原方案；锁定对象保留原几何。光照影响整个场景。</p>
+        <details class="model-notes"><summary>这次模型补充了什么？</summary><ul id="candidate-notes"></ul></details>
+      </aside>
+      <section class="scene-panel" aria-labelledby="scene-heading">
+        <div class="scene-heading"><div><span class="section-label">B / 检查空间与效果</span><h2 id="scene-heading">原始粗模</h2></div><span id="render-state" class="state-tag" role="status">正在读取布局…</span></div>
+        <div class="comparison-bar" role="group" aria-label="比较同一布局"><button id="view-coarse" type="button" aria-pressed="true" disabled>原始粗模</button><button id="view-candidate" type="button" aria-pressed="false" disabled>本轮 3D 候选</button><span id="comparison-note">先确认空间，再查看方案。</span></div>
+        <div class="scene-viewport"><iframe id="model-scene-frame" src="model-scene-preview.html" title="当前布局与模型编写方案的真实 3D 预览"></iframe><div id="scene-empty" class="scene-empty"><span aria-hidden="true">◇</span><strong id="empty-heading">正在读取你的布局。</strong><p id="empty-note">从创作实验读取本机已保存的草案。</p><button id="load-demo" class="button outline" type="button" hidden>载入两岛示例</button></div><div id="scene-loading" class="scene-loading" hidden>正在构建真实 3D…</div></div>
+        <div class="scene-tools"><div class="camera-tools" role="group" aria-label="场景镜头"><button data-camera="overview" type="button" disabled>斜视</button><button data-camera="top" type="button" disabled>俯视</button><button data-camera="detail" type="button" disabled>看近一点</button></div><p>拖动旋转 · 滚轮缩放 · 点击选择对象</p><span id="geometry-stats">等待预览</span></div>
+        <div class="review-bar"><div><strong id="accept-state" role="status">候选尚未生成预览</strong><p id="accept-note">比较后独立保存方案，原绘笔草案继续保留。</p></div><div class="review-actions"><button id="apply-candidate" class="button primary" type="button" disabled>保存本轮方案</button><button id="reset-candidate" class="button quiet" type="button" disabled>移除候选</button></div></div>
+      </section>
+    </div>
+    <section class="layout-context" aria-labelledby="context-heading">
+      <div class="context-heading"><div><span class="section-label">C / 这次生成依据</span><h2 id="context-heading">你的空间结构</h2><p id="source-status" role="status">正在读取本地草案…</p></div><div class="context-actions"><button id="refresh-draft" class="button outline" type="button">读取最新布局</button><button id="import-layout" class="button quiet" type="button">导入方案 JSON</button><input id="layout-file" type="file" accept="application/json,.json" hidden></div></div>
+      <div class="context-summary"><div><small>作品</small><strong id="layout-name">—</strong></div><div><small>空间尺寸</small><strong id="layout-size">—</strong></div><div><small>区域 / 对象</small><strong id="layout-count">—</strong></div><div><small>几何锁定</small><strong id="layout-locks">—</strong></div></div>
+      <div id="object-list" class="object-list" aria-label="布局对象与稳定 ID"></div>
+      <p id="selected-object" class="selection-note" role="status">在 3D 中点击对象，核对它的原始 ID。</p>
+      <div class="context-foot"><p>生成上下文包含布局、尺寸、原始 ID、锁定要求和参考说明。所有读取与保存都在本机，尚未发送给在线模型。</p><button id="show-context" class="text-button" type="button" disabled>查看 / 复制生成上下文 ↗</button></div>
+    </section>
+    <section class="delivery"><div><span class="section-label">D / 保留结果</span><h2>把候选带到下一步。</h2><p>导出可在 3D 工具中打开的 GLB，或保存包含原布局与候选配置的 JSON。</p><a id="ready-download" class="text-button" href="#" download hidden>文件已准备好，点击下载 ↓</a></div><div><button id="export-glb" class="button primary" type="button" disabled>导出当前视图 GLB ↓</button><button id="export-candidate" class="button outline" type="button" disabled>导出方案 JSON ↓</button></div></section>
+    <footer class="model-footer"><a href="create.html?entry=layout">继续编辑布局 ↗</a><p>本轮是编码模型编写的固定方案试验。在线模型生成、真实资产生成与自由风格切换仍待接入。</p></footer>
+  </main>
+  <div id="model-toast" class="toast" role="status" hidden></div>
+  <dialog id="context-dialog" aria-labelledby="context-dialog-heading"><div class="dialog-heading"><h2 id="context-dialog-heading">生成上下文</h2><button id="close-context" type="button" aria-label="关闭生成上下文">×</button></div><p>这份上下文可交给下一轮模型继续设计；网页尚未发送任何请求。</p><textarea id="context-text" rows="16" readonly aria-label="当前布局生成上下文"></textarea><div class="dialog-actions"><span id="copy-status" role="status"></span><button id="copy-context" class="button primary" type="button">复制上下文</button><button id="download-context" class="button outline" type="button">下载上下文</button></div></dialog>
+</body>
+</html>

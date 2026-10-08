@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-04T14:11:51.674Z",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "renderer": "Chrome WebGPU",
+  "backend": "default",
+  "checks": [
+    {
+      "name": "六个对象与原渲染器就绪",
+      "pass": true
+    },
+    {
+      "name": "文字修改真实环境",
+      "pass": true
+    },
+    {
+      "name": "对象指令改变真实几何",
+      "pass": true
+    },
+    {
+      "name": "撤销恢复对象",
+      "pass": true
+    },
+    {
+      "name": "重做恢复修改",
+      "pass": true
+    },
+    {
+      "name": "锁定禁用表单并拒绝修改",
+      "pass": true
+    },
+    {
+      "name": "未知复合指令原子拒绝",
+      "pass": true
+    },
+    {
+      "name": "镜头控制生效",
+      "pass": true
+    },
+    {
+      "name": "浏览器保存与JSON往返",
+      "pass": true
+    },
+    {
+      "name": "导出实际JSON文件",
+      "pass": true
+    },
+    {
+      "name": "导入场景并可撤销",
+      "pass": true
+    },
+    {
+      "name": "无效导入不破坏场景",
+      "pass": true
+    },
+    {
+      "name": "新建场景可恢复旧布局",
+      "pass": true
+    },
+    {
+      "name": "真实GPU截图读回",
+      "pass": true
+    },
+    {
+      "name": "属性面板连接真实对象",
+      "pass": true
+    },
+    {
+      "name": "属性撤销恢复位置",
+      "pass": true
+    },
+    {
+      "name": "画面拾取选择真实对象",
+      "pass": true
+    },
+    {
+      "name": "移动页面无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "无网页异常或缺失资源",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "requests": []
+}
