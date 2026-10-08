@@ -1,0 +1,6 @@
+# Frozen runtimes and saved projects keep the bytes recorded in their manifests.
+web/assets/camp-proposals/** -text -eol
+web/assets/fine-deliveries/** -text -eol
+web/versions/** -text -eol
+web/runtime/** -text -eol
+web/realistic/assets/** -text -eol

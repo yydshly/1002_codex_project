@@ -20,6 +20,9 @@ assert.deepEqual(source.sourcePlan,published.sourcePlan);
 assert.deepEqual(source.variants[0].candidate.geometry,published.variants[0].candidate.geometry);
 assert.equal(source.objects.length,25);
 assert.equal(source.variants[0].candidate.geometry.instances.length,17);
+for(const id of [original,example]){const folder=path.join(web,'assets/camp-proposals',id),manifest=JSON.parse(await fs.readFile(path.join(folder,'delivery-manifest.json'),'utf8'));
+  for(const file of manifest.files){assert.ok(!path.isAbsolute(file.path)&&!file.path.split('/').includes('..'));const bytes=await fs.readFile(path.join(folder,file.path));assert.equal(bytes.length,file.bytes,`Saved project byte size: ${id}/${file.path}`);assert.equal(createHash('sha256').update(bytes).digest('hex'),file.sha256,`Saved project SHA-256: ${id}/${file.path}`);}
+}
 
 // Only this generated directory is replaced. Original archives remain intact.
 assert.equal(path.dirname(output),path.resolve(projectRoot));
