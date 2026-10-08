@@ -1,5 +1,7 @@
 import { readFile, writeFile, mkdir, stat, lstat, readdir, cp, rm, realpath } from 'node:fs/promises';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
+import { collectWebPages, renderWebIndex, addReturnNavigation, checkPageLinks, excluded, pageGroups } from './web-index.mjs';
 
 export const statuses = ['待研究', '研究中', '已完成', '已归档'];
 const startMarker = '<!-- PROJECTS:START -->';
@@ -99,6 +101,26 @@ export async function readCatalog(root) {
       await validatePublishFiles(publishDirectory);
     }
     if (project.demo != null) httpsUrl(project.demo, `${project.id} demo`);
+    for (const relative of [...(project.publishExclude ?? []), ...Object.keys(project.publishDownloads ?? {})]) {
+      requireValue(typeof relative === 'string' && relative.length > 0 && !relative.includes('\\') && !relative.startsWith('/') && !relative.split('/').includes('..') && path.posix.normalize(relative) === relative, `${project.id} 发布排除路径不正确`);
+    }
+    for (const url of Object.values(project.publishDownloads ?? {})) httpsUrl(url, `${project.id} publishDownloads`);
+    const pages = new Set();
+    for (const page of project.webPages ?? []) {
+      requireValue(project.publishDir && typeof page.path === 'string' && !pages.has(page.path), `${project.id} webPages 需要发布目录及唯一页面路径`);
+      pages.add(page.path);
+      const file = page.path.split(/[?#]/u)[0];
+      await projectPath(root, `${project.publishDir}/${file}`, project, `${project.id} webPages`);
+      requireValue(file.endsWith('.html') && !excluded(project, file), `${project.id} webPages 必须指向发布的 HTML`);
+      plainText(page.title, `${project.id} webPages title`);
+      if (page.group !== undefined) requireValue(pageGroups.includes(page.group), `${project.id} webPages group 不正确`);
+      if (page.note !== undefined) plainText(page.note, `${project.id} webPages note`);
+    }
+    for (const page of project.localPages ?? []) {
+      await projectPath(root, page.path, project, `${project.id} localPages`);
+      plainText(page.title, `${project.id} localPages title`);
+      plainText(page.note, `${project.id} localPages note`);
+    }
   }
   // Detect unregistered numbered directories before assigning a new number.
   for (const entry of await readdir(path.join(root, 'projects'), { withFileTypes: true })) {
@@ -166,7 +188,7 @@ export async function synchronize(root, check = false) {
   return catalog;
 }
 
-function renderSite(catalog) {
+function renderSite(catalog, webProjects) {
   const projects = catalog.projects;
   const done = projects.filter(project => project.status === '已完成').length;
   const demos = projects.filter(project => demoUrl(catalog, project)).length;
@@ -186,20 +208,22 @@ function renderSite(catalog) {
 <html lang="zh-CN">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="按固定编号整理优秀 GitHub 项目的研究、复现、图片与 Web 演示。"><title>GitHub 项目研究库</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2321654e'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia' font-size='44' fill='white'%3ER%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="styles.css"></head>
 <body>
-  <header class="site-header"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">R</span> GitHub 项目研究库</a><a href="${html(catalog.repository)}">仓库与文档 ↗</a></header>
+  <header class="site-header"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">R</span> GitHub 项目研究库</a><nav aria-label="总站导航"><a href="#web-index">全部网页</a><a href="#catalog-title">研究摘要</a><a href="${html(catalog.repository)}">仓库与文档 ↗</a></nav></header>
   <main>
-    <section class="hero"><p class="eyebrow">RESEARCH / BUILD / RECORD</p><h1>发现好项目，<br>研究它如何工作。</h1><p class="hero-description">记录优秀开源项目的设计思路、复现过程与研究结论。<br>按固定编号持续积累，让每一次探索都有迹可循。</p>
+    <section class="hero"><p class="eyebrow">RESEARCH / BUILD / RECORD</p><h1>项目研究与网页总入口</h1><p class="hero-description">从这里进入全部研究网页、交互工作台与历史回放。<br>按项目编号查找，查看能力、运行条件与研究结论。</p>
     <div class="stats"><div><strong>${projects.length}</strong><span>研究项目</span></div><div><strong>${done}</strong><span>完成研究</span></div><div><strong>${demos}</strong><span>演示入口</span></div></div></section>
-    <section class="catalog" aria-labelledby="catalog-title"><div class="section-heading"><div><p class="eyebrow">PROJECT INDEX</p><h2 id="catalog-title">项目索引</h2></div><span class="sort-note">按加入顺序 · 固定编号</span></div>
+    ${renderWebIndex(webProjects)}
+    <section class="catalog" aria-labelledby="catalog-title"><div class="section-heading"><div><p class="eyebrow">PROJECT INDEX</p><h2 id="catalog-title">项目研究摘要</h2></div><span class="sort-note">按加入顺序 · 固定编号</span></div>
     ${projects.length ? `<div class="project-grid">${cards}</div>` : `<div class="empty-state"><span class="empty-number" aria-hidden="true">001</span><div><h3>从第一个值得研究的项目开始</h3><p>这里将展示项目摘要、研究状态、截图和 Web 演示。</p><a href="${html(catalog.repository)}/blob/HEAD/docs/project-guide.md">查看项目管理指南 ↗</a></div></div>`}
     </section>
   </main>
   <footer><span>持续研究 · 持续记录</span><a href="${html(catalog.repository)}">查看完整研究文档 ↗</a></footer>
-</body></html>\n`;
+<script type="module" src="hub.js"></script></body></html>\n`;
 }
 
 export async function buildSite(root) {
   const catalog = await synchronize(root, true);
+  const webProjects = await collectWebPages(root, catalog);
   const output = path.resolve(root, '_site');
   requireValue(inside(path.resolve(root), output) && path.basename(output) === '_site', '构建输出必须是仓库内的 _site/');
   // Verify the exact resolved target before replacing previous build output.
@@ -207,14 +231,95 @@ export async function buildSite(root) {
   catch (error) { if (error.code !== 'ENOENT') throw error; }
   await rm(output, { recursive: true, force: true });
   await mkdir(path.join(output, 'assets'), { recursive: true });
-  await writeFile(path.join(output, 'index.html'), renderSite(catalog));
+  await writeFile(path.join(output, 'index.html'), renderSite(catalog, webProjects));
   await cp(path.join(root, 'site/styles.css'), path.join(output, 'styles.css'));
+  await cp(path.join(root, 'site/hub.js'), path.join(output, 'hub.js'));
+  await cp(path.join(root, 'site/hub-return.css'), path.join(output, 'hub-return.css'));
+  await writeFile(path.join(output, 'web-index.json'), `${JSON.stringify(webProjects, null, 2)}\n`);
   await writeFile(path.join(output, '.nojekyll'), '');
   for (const project of catalog.projects) {
     const directory = directoryOf(project);
     if (project.cover) await cp(path.join(root, project.cover), path.join(output, 'assets', `${directory}${path.extname(project.cover).toLowerCase()}`));
-    if (project.publishDir) await cp(path.join(root, project.publishDir), path.join(output, 'projects', directory), { recursive: true });
+    if (project.publishDir) {
+      const sourceRoot = path.join(root, project.publishDir);
+      const destination = path.join(output, 'projects', directory);
+      await cp(sourceRoot, destination, { recursive: true, filter: source => !excluded(project, path.relative(sourceRoot, source).split(path.sep).join('/')) });
+      if (project.slug === 'tidewater') {
+        // Frozen snapshots retain their source bytes; repair navigation only in published copies.
+        async function repairArchive(folder) {
+          for (const item of await readdir(folder, {withFileTypes:true})) {
+            const file = path.join(folder,item.name);
+            if (item.isDirectory()) await repairArchive(file);
+            else if (item.name.endsWith('.html')) {
+              const source = await readFile(file,'utf8');
+              const updated = source.replace(/href="versions\/([^"]+)"/gu, (match, target) => {
+                const link = path.posix.relative(path.relative(destination,path.dirname(file)).split(path.sep).join('/'), `versions/${target}`);
+                return `href="${link}"`;
+              });
+              if (updated !== source) await writeFile(file,updated);
+            }
+          }
+        }
+        await repairArchive(path.join(destination,'versions'));
+        const incremental = path.join(destination,'versions/2026-10-07-before-fine-scene/web/create.html');
+        await writeFile(incremental, `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>精细场景改进前 · 增量源码归档</title><link rel="stylesheet" href="../../../../../styles.css"></head><body><main><section class="hero"><h1>精细场景改进前的源文件</h1><p>这个版本保存了创作页面及生成模块的增量源文件，未冻结全部运行依赖。可查看原始代码，或打开依赖完整的只读场景。</p><p><a href="${html(catalog.repository)}/blob/HEAD/projects/${directory}/web/versions/2026-10-07-before-fine-scene/web/create.html">查看原始源码 ↗</a></p><p><a href="../../2026-10-05-scene-assembly-v1/snapshot.html">打开完整场景组装回放 ↗</a></p><p><a href="../../2026-10-07-fine-components-v5/index.html">打开已保存的精修场景 v5 ↗</a></p></section></main></body></html>`);
+      }
+      // Keep large, optional downloads available through Releases without copying them into Pages.
+      if (project.publishDownloads) {
+        async function rewriteDownloads(folder) {
+          for (const item of await readdir(folder, { withFileTypes: true })) {
+            const file = path.join(folder, item.name);
+            if (item.isDirectory()) await rewriteDownloads(file);
+            else if (item.name.endsWith('.html')) {
+              const relative = path.relative(destination, file).split(path.sep).join('/');
+              const source = await readFile(file, 'utf8');
+              const updated = source.replace(/\bhref="([^"]+)"/gu, (match, href) => {
+                const url = new URL(href, `https://hub.test/${relative}`);
+                return project.publishDownloads[url.pathname.slice(1)] ? `href="${html(project.publishDownloads[url.pathname.slice(1)])}"` : match;
+              });
+              if (updated !== source) await writeFile(file, updated);
+            }
+          }
+        }
+        await rewriteDownloads(destination);
+      }
+    }
   }
+  await addReturnNavigation(output, webProjects);
+  await checkPageLinks(output);
+  let totalBytes = 0;
+  async function sizeOf(directory) {
+    let bytes = 0;
+    for (const item of await readdir(directory, {withFileTypes:true})) {
+      const file = path.join(directory,item.name);
+      bytes += item.isDirectory() ? await sizeOf(file) : (await stat(file)).size;
+    }
+    return bytes;
+  }
+  for (const project of catalog.projects.filter(p => p.publishDir)) {
+    const directory = path.join(output,'projects',directoryOf(project));
+    const manifestFile = path.join(directory,'publication-manifest.json');
+    try {
+      const manifest = JSON.parse(await readFile(manifestFile,'utf8'));
+      const files = [];
+      async function inventory(folder) {
+        for (const item of await readdir(folder,{withFileTypes:true})) {
+          const file = path.join(folder,item.name);
+          if (item.isDirectory()) await inventory(file);
+          else if (file !== manifestFile) {
+            const bytes = await readFile(file);
+            files.push({path:path.relative(directory,file).split(path.sep).join('/'),bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')});
+          }
+        }
+      }
+      await inventory(directory);
+      manifest.files = files.sort((a,b) => a.path.localeCompare(b.path));
+      manifest.totalBytes = files.reduce((n,f) => n + f.bytes,0);
+      await writeFile(manifestFile,`${JSON.stringify(manifest,null,2)}\n`);
+    } catch (error) { if (error.code !== 'ENOENT') throw error; }
+  }
+  totalBytes = await sizeOf(output);
+  requireValue(totalBytes < 1_000_000_000, `Pages 发布包超过 1 GB：${totalBytes} 字节`);
   return catalog;
 }
 

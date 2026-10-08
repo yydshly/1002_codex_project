@@ -1,0 +1,4 @@
+nav.hub-return { position: fixed; right: 12px; bottom: 12px; z-index: 10000; width: auto; height: auto; margin: 0; padding: 0; border: 0; background: transparent; }
+nav.hub-return a { display: block; padding: 7px 11px; border: 1px solid #b7cbbf; border-radius: 8px; background: #fffffff2; color: #21654e; font: 600 12px/1.5 system-ui, sans-serif; text-decoration: none; box-shadow: 0 2px 10px #102c1820; }
+nav.hub-return a:hover { text-decoration: underline; }
+nav.hub-return a:focus-visible { outline: 3px solid #21654e; outline-offset: 3px; }

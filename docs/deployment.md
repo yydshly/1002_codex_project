@@ -5,6 +5,12 @@
 | 内容 | 发布后地址 |
 | --- | --- |
 | 总索引 | `https://yydshly.github.io/1002_codex_project/` |
+| 全部网页索引 | `https://yydshly.github.io/1002_codex_project/#web-index` |
+| 002 · Upscayl 静态引导图 | `https://yydshly.github.io/1002_codex_project/projects/002-upscayl/` |
+| 003 · sprite-gen | `https://yydshly.github.io/1002_codex_project/projects/003-sprite-gen/` |
+| 004 · Three.js 海岸花园 | `https://yydshly.github.io/1002_codex_project/projects/004-threejs-worlds/` |
+| 010 · Ix | `https://yydshly.github.io/1002_codex_project/projects/010-ix/` |
+| 011 · ATELIER | `https://yydshly.github.io/1002_codex_project/projects/011-solaris/` |
 | 001 · Cult UI | `https://yydshly.github.io/1002_codex_project/projects/001-cult-ui/` |
 | 006 · text-to-cad | `https://yydshly.github.io/1002_codex_project/projects/006-text-to-cad/` |
 | 008 · PDoomVideo | `https://yydshly.github.io/1002_codex_project/projects/008-pdoom-video/` |
@@ -13,9 +19,8 @@
 | 013 · OmniVoice 中文研究网页 | `https://yydshly.github.io/1002_codex_project/projects/013-omnivoice/` |
 | 014 · Tidewater 当前成果与产品思路 | `https://yydshly.github.io/1002_codex_project/projects/014-tidewater/release.html` |
 | 014 · 原场景提案工作室 | `https://yydshly.github.io/1002_codex_project/projects/014-tidewater/camp.html` |
-| 002 项目 | `https://yydshly.github.io/1002_codex_project/projects/002-slug/` |
 
-总入口、001、006、008 和 009 项目是站点的配置地址；002 行展示后续项目的路径格式。006 发布可独立阅读的静态理解总览、生成的引导图和实测报告；实时 CAD 查看与运动操作按页面说明在本机启动。008 发布完整能力实验室、理解总览与引导图、元素驱动控制台和六秒真实场景样例。009 发布 shadcn-admin 的八类模块、复用原理、业务适配、后续价值与边界说明，并沿用我们整理的理解引导图，提供 PNG / SVG 下载。仓库 Pages 已配置为 GitHub Actions 发布。GitHub Pages 每个仓库只有一个站点，因此这里使用多个子目录承载各项目的静态输出。参考 [GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)。
+上表为当前配置的项目入口，全部子页面以自动生成的总站索引为准。006 发布可独立阅读的静态理解总览、生成的引导图和实测报告；实时 CAD 查看与运动操作按页面说明在本机启动。008 发布完整能力实验室、理解总览与引导图、元素驱动控制台和六秒真实场景样例。009 发布 shadcn-admin 的八类模块、复用原理、业务适配、后续价值与边界说明，并沿用我们整理的理解引导图，提供 PNG / SVG 下载。仓库 Pages 已配置为 GitHub Actions 发布。GitHub Pages 每个仓库只有一个站点，因此这里使用多个子目录承载各项目的静态输出。参考 [GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)。
 
 ## 配置子项目
 
@@ -55,5 +60,9 @@ npm run preview
 4. 工作流完成后，使用部署记录提供的实际 URL 验证总索引、能力图、子项目与组件预览。
 
 部署工作流采用手动触发。后续更新清单、截图或 Web 后，重新运行该工作流即可发布。普通 push 和 PR 只运行检查。
+
+总站从发布目录自动发现网页，并提供用途分组、关键词搜索和项目快速定位。`npm run build` 会核验发布后的相对页面链接，`npm run check:web` 可单独复查；`npm run preview` 先构建再启动，避免预览旧 `_site`。每次发布后核对 `web-index.json` 中的在线入口，并确认 GitHub About 的 Website 与 `catalog.siteUrl` 相同。仅有文档的项目不显示在线演示；本机 CAD、模型任务等功能在入口旁标出启动条件。
+
+014 的完整离线提案 ZIP 与 v3/v5 GLB 下载资产位于 [Tidewater 资产发布](https://github.com/yydshly/1002_codex_project/releases/tag/tidewater-assets-2026-10-08)。网页保留渲染所需资源，大文件下载通过 `publishDownloads` 指向 Releases；原始本机数据和历史源码保留，不随构建删除。
 
 官方配置说明：[使用 GitHub Actions 发布 Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。

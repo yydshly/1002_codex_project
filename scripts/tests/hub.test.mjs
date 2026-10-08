@@ -5,6 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readCatalog, renderReadmeIndex, synchronize, buildSite, createProject, directoryOf } from '../lib/hub.mjs';
+import { checkPageLinks } from '../lib/web-index.mjs';
 
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 
@@ -262,4 +263,54 @@ test('published output rejects environment files', async t => {
   await writeFile(path.join(root, 'projects/001-example/web/.env'), 'EXAMPLE=fixture');
   await mutate(root, catalog => { catalog.projects[0].publishDir = 'projects/001-example/web'; });
   await assert.rejects(readCatalog(root), /不应发布/u);
+});
+
+test('web index discovers new pages, preserves query entries, labels local tools and adds return navigation', async t => {
+  const root = await fixture(t);
+  await createProject(root, options());
+  const web = path.join(root, 'projects/001-example/web');
+  await writeFile(path.join(web, 'index.html'), '<html><head><title>Home</title></head><body><a href="research.html">Research</a></body></html>');
+  await writeFile(path.join(web, 'research.html'), '<html><head><title>Research &amp; evidence</title></head><body>Evidence</body></html>');
+  await mkdir(path.join(web, 'previous'));
+  await writeFile(path.join(web, 'previous/index.html'), '<html><head><title>History</title></head><body>Old</body></html>');
+  const saved = '<html><head><title>Saved delivery</title></head><body>Original bytes</body></html>';
+  await mkdir(path.join(web, 'assets/camp-proposals/saved'), {recursive:true});
+  await writeFile(path.join(web, 'assets/camp-proposals/saved/index.html'), saved);
+  await mutate(root, catalog => {
+    Object.assign(catalog.projects[0], {
+      publishDir: 'projects/001-example/web',
+      webPages: [{path:'index.html?entry=image', title:'Image entry', note:'Shared draft'}],
+      localPages: [{title:'Local tool', path:'projects/001-example/web/README.md', note:'Start the local service'}],
+    });
+  });
+  await synchronize(root);
+  await buildSite(root);
+  const index = JSON.parse(await readFile(path.join(root,'_site/web-index.json'),'utf8'));
+  assert.equal(index[0].entries.length, 6);
+  assert.equal(index[0].entries.find(e => e.path === 'research.html').title, 'Research & evidence');
+  assert.equal(await readFile(path.join(root,'_site/projects/001-example/assets/camp-proposals/saved/index.html'),'utf8'), saved);
+  assert.equal(index[0].entries.find(e => e.path === 'previous/index.html').group, '历史回放');
+  assert.ok(index[0].entries.some(e => e.href.endsWith('index.html?entry=image')));
+  assert.match(await readFile(path.join(root,'_site/projects/001-example/research.html'),'utf8'), /href="\.\.\/\.\.\/#web-project-001"/u);
+  assert.match(await readFile(path.join(root,'_site/projects/001-example/previous/index.html'),'utf8'), /href="\.\.\/\.\.\/\.\.\/#web-project-001"/u);
+  assert.match(await readFile(path.join(root,'_site/index.html'),'utf8'), /本机启动说明/u);
+  await checkPageLinks(path.join(root,'_site'));
+  await writeFile(path.join(root,'_site/projects/001-example/research.html'), '<a href="missing.html">Broken</a>');
+  await assert.rejects(checkPageLinks(path.join(root,'_site')), /missing\.html/u);
+});
+
+test('optional large downloads are excluded from Pages and point to release assets', async t => {
+  const root = await fixture(t);
+  await createProject(root, options());
+  const web = path.join(root,'projects/001-example/web');
+  await writeFile(path.join(web,'index.html'), '<html><head><title>Home</title></head><body><a href="scene.glb" download>Download</a></body></html>');
+  await writeFile(path.join(web,'scene.glb'), 'fixture');
+  await mkdir(path.join(web,'local-receipts'));
+  await writeFile(path.join(web,'local-receipts/record.json'),'{}');
+  await mutate(root, catalog => Object.assign(catalog.projects[0], {publishDir:'projects/001-example/web', publishExclude:['local-receipts'], publishDownloads:{'scene.glb':'https://github.com/owner/research/releases/download/assets/scene.glb'}}));
+  await synchronize(root);
+  await buildSite(root);
+  assert.match(await readFile(path.join(root,'_site/projects/001-example/index.html'),'utf8'), /href="https:\/\/github\.com\/owner\/research\/releases\/download\/assets\/scene\.glb"/u);
+  await assert.rejects(readFile(path.join(root,'_site/projects/001-example/scene.glb')), /ENOENT/u);
+  await assert.rejects(readFile(path.join(root,'_site/projects/001-example/local-receipts/record.json')), /ENOENT/u);
 });

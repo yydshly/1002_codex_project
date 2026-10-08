@@ -12,6 +12,8 @@
     "build": "node projects/014-tidewater/tools/build-publication.mjs && npm --prefix projects/001-cult-ui/web run build && node scripts/catalog.mjs build",
     "dev:cult": "npm --prefix projects/001-cult-ui/web run dev",
     "preview": "node scripts/serve.mjs",
+    "prepreview": "npm run build",
+    "check:web": "node scripts/check-web.mjs",
     "test": "node --test scripts/tests/*.test.mjs"
   }
 }

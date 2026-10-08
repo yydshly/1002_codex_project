@@ -27,8 +27,14 @@
 | `coverAlt` | 封面说明，有封面时必填 |
 | `publishDir` | 项目内静态 Web 输出目录，未启用时为 `null` |
 | `demo` | 已部署的外部演示地址，未提供时为 `null`；优先于 `publishDir` 用于索引链接 |
+| `webPages` | 可选的页面说明/逻辑入口数组：`path` 为发布目录内 HTML 路径，可含 query/hash；`title` 为名称，`group` 为用途，`note` 为运行条件 |
+| `localPages` | 依赖本机服务的入口说明数组：`title`、项目内文档 `path`、运行条件 `note`；总站链接到启动说明 |
+| `publishExclude` | 发布目录内保留在本机、无需复制到 Pages 的路径；不删除源文件 |
+| `publishDownloads` | 大文件的路径与 HTTPS 下载地址映射；构建排除本体并将 HTML 下载链接改为远端资产地址 |
 
 `directory` 由 `id` 与 `slug` 自动计算，无需填写。清单顶层 `repository` 是本库的 GitHub URL，`siteUrl` 是未来的 Pages 基础地址；如更换仓库或域名，修改这两项并重新同步、构建。
+
+总站构建时自动发现发布目录中的独立 HTML，生成“正式网页、辅助与验证、历史回放、本机工具”四组入口及 `web-index.json`。素材许可证镜像不作为网页入口，已保存提案的独立查看页会保留。新增网页无需手工抄写目录；通过 `webPages` 补充名称、用途、运行条件和图片/绘笔等查询参数入口。正式网页与历史页会加入返回总站导航。发布构建会检查全部相对 HTML/目录链接，失效时阻止发布。
 
 ## 摘要阅读格式
 
