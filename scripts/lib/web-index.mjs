@@ -62,7 +62,7 @@ export function renderWebIndex(projects) {
     ${projects.map(project => `<section class="web-project" id="web-project-${project.id}"><h3><span>${project.id}</span> ${escape(project.name)}</h3>${project.entries.length ? pageGroups.map(group => {
       const pages = project.entries.filter(e => e.group === group);
       if (!pages.length) return '';
-      return `<details class="web-group"${group === '正式网页' ? ' open' : ''}><summary>${group} <span>${pages.length}</span></summary><ul>${pages.map(entry => `<li class="web-entry" data-search="${escape(`${project.id} ${project.name} ${entry.title} ${entry.path ?? ''} ${entry.note}`.toLowerCase())}"><a href="${escape(entry.href)}">${escape(entry.title)} ↗</a>${entry.note ? `<span>${escape(entry.note)}</span>` : ''}${entry.group === '本机工具' ? '<small>本机启动说明</small>' : ''}</li>`).join('')}</ul></details>`;
+      return `<details class="web-group"${group === '正式网页' ? ' open' : ''}><summary>${group} <span>${pages.length}</span></summary><ul>${pages.map(entry => `<li class="web-entry" data-project="${project.id}" data-search="${escape(`${project.id} ${project.name} ${entry.title} ${entry.path ?? ''} ${entry.note}`.toLowerCase())}"><a href="${escape(entry.href)}">${escape(entry.title)} ↗</a>${entry.note ? `<span>${escape(entry.note)}</span>` : ''}${entry.group === '本机工具' ? '<small>本机启动说明</small>' : ''}</li>`).join('')}</ul></details>`;
     }).join('') : '<p class="no-web">当前仅有研究文档，尚未制作独立网页。</p>'}</section>`).join('')}</section>`;
 }
 

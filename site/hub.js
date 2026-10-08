@@ -4,9 +4,11 @@ const groups = [...document.querySelectorAll('.web-group')];
 const initialOpen = new Map(groups.map(group => [group, group.open]));
 input.addEventListener('input', () => {
   const query = input.value.trim().toLowerCase();
+  const projectQuery = [...document.querySelectorAll('.web-project')].some(project => project.id === `web-project-${query}`);
   let count = 0;
   for (const entry of document.querySelectorAll('.web-entry')) {
-    entry.hidden = query !== '' && !entry.dataset.search.includes(query);
+    const matches = projectQuery ? entry.dataset.project === query : entry.dataset.search.includes(query);
+    entry.hidden = query !== '' && !matches;
     if (!entry.hidden) count++;
   }
   for (const group of groups) {
