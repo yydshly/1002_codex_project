@@ -1,0 +1,230 @@
+{
+  "date": "2026-10-09",
+  "baseline": "0.18.2",
+  "scope": "首页导航与场景目录；不增加能力、场景或变更原控制规则",
+  "problem": "11场景入口位于两层默认关闭的折叠中；900px以下其所在library默认隐藏；原场景按钮实际仅切换客厅预设。",
+  "changes": [
+    "顶部全部场景、始终可见的左栏演示及侧栏快捷入口共同打开一个目录",
+    "11张既有实景预览，每张附场景操作说明与直接跳转链接",
+    "目录同时提供全部项目库、理解总览、逐场景验证说明和三个补充研究入口",
+    "客厅场景按钮改名方案；原客厅项目文件、保存和编辑绑定保留",
+    "独立导航模块负责原生dialog的打开、关闭和焦点返回，不修改工作区状态"
+  ],
+  "checks": {
+    "fullPublicationBuild": {
+      "command": "npm run build",
+      "passed": true,
+      "projects": 14
+    },
+    "catalog": {
+      "command": "node scripts/catalog.mjs check",
+      "passed": true,
+      "projects": 14
+    },
+    "repositoryTests": {
+      "command": "node --test scripts/tests/*.test.mjs",
+      "passed": 18,
+      "failed": 0
+    },
+    "integration": {
+      "command": "node projects/011-solaris/scripts/integration.mjs --check",
+      "passed": true,
+      "baseline": "0.18.2",
+      "mappedCapabilities": 35,
+      "totalCapabilities": 36,
+      "scenes": 11
+    },
+    "localUrlsAndFragments": {
+      "pages": [
+        "index.html",
+        "overview.html"
+      ],
+      "checked": 216,
+      "passed": true
+    },
+    "originalUiIds": {
+      "previous": 113,
+      "current": 115,
+      "allPreserved": true,
+      "unique": true
+    },
+    "currentGuideCopiesIdentical": true,
+    "browser": {
+      "desktop": {
+        "dimensions": [
+          "2.65",
+          "1.20",
+          "1.04"
+        ],
+        "documentWidth": 1280,
+        "height": 720,
+        "position": [
+          "0.41",
+          "-1.46"
+        ],
+        "selected": "弧线沙发",
+        "topbarWidth": 1280,
+        "undoDisabled": true,
+        "width": 1280
+      },
+      "directory": {
+        "cards": [
+          {
+            "href": "./",
+            "loaded": true,
+            "name": "客厅设计 当前"
+          },
+          {
+            "href": "./showroom.html",
+            "loaded": true,
+            "name": "汽车展厅 ↗"
+          },
+          {
+            "href": "./imaging.html",
+            "loaded": true,
+            "name": "影像工作台 ↗"
+          },
+          {
+            "href": "./landmark.html",
+            "loaded": true,
+            "name": "地标探索 ↗"
+          },
+          {
+            "href": "./kitchen.html",
+            "loaded": true,
+            "name": "料理备料 ↗"
+          },
+          {
+            "href": "./creative.html",
+            "loaded": true,
+            "name": "创作台 ↗"
+          },
+          {
+            "href": "./collection.html",
+            "loaded": true,
+            "name": "精选陈列 ↗"
+          },
+          {
+            "href": "./skate.html",
+            "loaded": true,
+            "name": "滑板练习 ↗"
+          },
+          {
+            "href": "./materials.html",
+            "loaded": true,
+            "name": "材料教学 ↗"
+          },
+          {
+            "href": "./underwater.html",
+            "loaded": true,
+            "name": "水下拖动 ↗"
+          },
+          {
+            "href": "./fitting.html",
+            "loaded": true,
+            "name": "试衣间 ↗"
+          }
+        ],
+        "directoryClient": 983,
+        "directoryScroll": 983,
+        "open": true
+      },
+      "responsive": [
+        {
+          "documentWidth": 920,
+          "headerWidth": 920,
+          "height": 720,
+          "libraryVisible": true,
+          "railEntry": {
+            "bottom": 142,
+            "width": 48
+          },
+          "saveRight": 903.0000228881836,
+          "topEntryVisible": true,
+          "width": 920
+        },
+        {
+          "documentWidth": 768,
+          "headerWidth": 768,
+          "height": 720,
+          "libraryVisible": false,
+          "railEntry": {
+            "bottom": 140,
+            "width": 42
+          },
+          "saveRight": 751.0000228881836,
+          "topEntryVisible": true,
+          "width": 768
+        },
+        {
+          "documentWidth": 375,
+          "headerWidth": 375,
+          "height": 720,
+          "libraryVisible": false,
+          "railEntry": {
+            "bottom": 124,
+            "width": 36
+          },
+          "saveRight": 364.6666793823242,
+          "topEntryVisible": false,
+          "width": 390
+        }
+      ],
+      "mobile": {
+        "cardCount": 11,
+        "clientWidth": 375,
+        "columns": "140.5px 140.5px",
+        "directoryScrollWidth": 326,
+        "directoryWidth": 326,
+        "open": true,
+        "width": 390
+      },
+      "carNavigation": {
+        "url": "http://localhost:4189/projects/011-solaris/showroom.html",
+        "title": "ATELIER · 汽车展厅",
+        "loaded": true
+      },
+      "hubNavigation": {
+        "url": "http://localhost:4189/",
+        "title": "GitHub 项目研究库",
+        "projects": 14
+      },
+      "keyboard": {
+        "focusedInDirectory": true,
+        "focusedText": "← 全部项目库"
+      },
+      "editorValuesUnchanged": true,
+      "desktopReturnedToDefault": true,
+      "consoleErrorsAndWarnings": [],
+      "additionalBreakpoint": {
+        "requestedWidth": 1152,
+        "actualWidth": 1152,
+        "documentWidth": 1152,
+        "headerWidth": 1152,
+        "saveRight": 1127.000030517578
+      }
+    }
+  },
+  "evidence": [
+    {
+      "path": "assets/atelier-home-navigation.jpg",
+      "bytes": 84376,
+      "sha256": "ebda25bcfb4ebea9362e78a0d6ebb2745fac2867cf92f38ca4d9bced9ea5a920"
+    },
+    {
+      "path": "assets/atelier-home-scene-directory.jpg",
+      "bytes": 89850,
+      "sha256": "6cbe5b5068414e0a72e73be201f86ef8ede27c68cc2ed5d2b57d22e4a6453027"
+    },
+    {
+      "path": "assets/atelier-home-navigation-mobile.jpg",
+      "bytes": 39286,
+      "sha256": "07f9984acbab2a45d476c4e6189ab67e5ab116fc29f83d15bf9f91297ca959fd"
+    }
+  ],
+  "limits": [
+    "浏览器实际完成目录打开/关闭、汽车展厅加载、返回总站与客厅方案面板切换；其他场景核对入口和预览图片，没有重新执行全部交互验收",
+    "390px是桌面浏览器视口模拟，实际布局客户宽375px；没有验证真实手机触控",
+    "386项产品历史测试及旧版本证据继续按原轮次阅读；本轮18项仓库测试是当前结果"
+  ]
+}

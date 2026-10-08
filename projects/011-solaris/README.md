@@ -18,6 +18,8 @@
 
 [先看完整理解网页](http://localhost:4189/projects/011-solaris/overview.html) · [看源与我们的效果对照](http://localhost:4189/projects/011-solaris/overview.html#project-map) · [体验客厅](http://localhost:4189/projects/011-solaris/) · [查能力与范围](http://localhost:4189/projects/011-solaris/integration.html#inventory)
 
+**从客厅进入其他内容：** 顶部“全部场景”或左栏“演示”可直接打开带实景预览的11场景目录；窄屏保留左栏入口。目录同时关联项目总览、逐场景验证说明、独立桌灯与真人参考研究，并提供“全部项目库”返回整个研究库。客厅原“场景”按钮改名“方案”，仍用于切换客厅氛围预设。此次只改善入口，不增加场景或改变0.18.2能力范围；[首页导航核查记录](notes/home-navigation-validation.json)单独记录此次验证。
+
 ![Solaris与ATELIER完整理解图：源能力、功能、原理、自主实现、十一场景、支撑研究、用途、个人价值与边界](assets/atelier-understanding-map.png)
 
 新理解图为 **4800×10105**，提供[可放大矢量原图](assets/atelier-understanding-map.svg)和[完整PNG](assets/atelier-understanding-map.png)。左侧完整列出13个有公开画面的源场景，采用14份论文原过程图或官方封面：主要场景分别放大起始与变化帧，并保留完整原过程图；只有文字的工具/适配条目单独列出。右侧展示我们全部11个场景及独立桌灯、真人参考两个补充入口，用实际操作结果截图说明功能和限制。照片保持原始字节，文字放在照片外；原理、36项清单、用途、个人价值和阶段结论仍在同一张图中。
